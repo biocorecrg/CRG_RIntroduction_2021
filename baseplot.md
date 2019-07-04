@@ -280,7 +280,7 @@ hist(x,
 
 
 
-Go to [how to save plots](https://sbcrg.github.io/CRG_RIntroduction/io_plots)
+Go to [how to save plots](https://sarahbonnin.github.io/CRG_RIntroduction/io_plots)
 <br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 

@@ -10,8 +10,8 @@ With the **list** function:
 
 ```{r}
 ```
-> Go to [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
+> Go to [Basic plotting](https://sarahbonnin.github.io/CRG_RIntroduction/baseplot)
 <br>
 
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 

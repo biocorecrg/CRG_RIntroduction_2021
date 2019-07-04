@@ -22,7 +22,7 @@
 	+ top-right: objects, history and environment
 	+ bottom-right: tree of folders, graph window, packages, help window, viewer
 
-<a href="https://sbcrg.github.io/CRG_RIntroduction/images/rstudio_interface.png"><img src="images/rstudio_interface.png" alt="rstudio logo" width="1000"/></a>
+<a href="https://sarahbonnin.github.io/CRG_RIntroduction/images/rstudio_interface.png"><img src="images/rstudio_interface.png" alt="rstudio logo" width="1000"/></a>
 
 <h2>Setting up the folder structure for the course</h2>
 Rcourse<br>
@@ -33,7 +33,7 @@ Rcourse<br>
 
 ![](images/rstudio_folder.png "RStudio create folder")
 
- > Go to [Paths and directories](https://sbcrg.github.io/CRG_RIntroduction/pathdirectories)
+ > Go to [Paths and directories](https://sarahbonnin.github.io/CRG_RIntroduction/pathdirectories)
 <br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 

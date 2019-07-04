@@ -19,7 +19,7 @@
 ![](images/rterminal.png "R command line")
 
 
-> Go to [RStudio](https://sbcrg.github.io/CRG_RIntroduction/rstudio)
+> Go to [RStudio](https://sarahbonnin.github.io/CRG_RIntroduction/rstudio)
 <br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 

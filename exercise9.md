@@ -76,6 +76,6 @@ for(j in 1:nrow(mat1)){
 </details>
 
 
-> Go to [Conditional statement](https://sbcrg.github.io/CRG_RIntroduction/conditional).
+> Go to [Conditional statement](https://sarahbonnin.github.io/CRG_RIntroduction/conditional).
 
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)

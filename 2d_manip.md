@@ -157,8 +157,8 @@ apply(X=b, MARGIN=1, FUN=median)
 apply(X=b, MARGIN=2, FUN=median)
 ```
 
-> Time to go to [Exercise 4](https://sbcrg.github.io/CRG_RIntroduction/exercise4): Matrix manipulation
+> Time to go to [Exercise 4](https://sarahbonnin.github.io/CRG_RIntroduction/exercise4): Matrix manipulation
 <br>
 
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 

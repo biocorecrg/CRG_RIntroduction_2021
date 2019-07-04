@@ -687,7 +687,7 @@ legend(&quot;bottomright&quot;,legend = c(&quot;Females&quot;, &quot;Males&quot;
 <p><br /></p>
 <div id="read-data-from-the-file" class="section level4">
 <h4>Read data from the file</h4>
-<pre class="r"><code>system(command=&quot;svn export https://github.com/sbcrg/CRG_RIntroduction/trunk/i_o_files&quot;)
+<pre class="r"><code>system(command=&quot;svn export https://github.com/sarahbonnin/CRG_RIntroduction/trunk/i_o_files&quot;)
 
 conn &lt;- file(&quot;./i_o_files/example_data.txt&quot;, &quot;r&quot;)
 DATA &lt;- as.data.frame(read.table(conn, header = TRUE, sep = &quot;\t&quot;))

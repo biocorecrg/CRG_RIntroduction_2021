@@ -108,7 +108,7 @@ venn.diagram(vlist,
 
 
 
-Go to [ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
+Go to [ggplot2](https://sarahbonnin.github.io/CRG_RIntroduction/ggplot2)
 <br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 

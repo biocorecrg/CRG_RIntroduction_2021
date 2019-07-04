@@ -244,9 +244,9 @@ m[m != "exon"]
 <br>
 
 <br>
-Go to [Exercise 2](https://sbcrg.github.io/CRG_RIntroduction/exercise2): Numeric vector manipulation !
+Go to [Exercise 2](https://sarahbonnin.github.io/CRG_RIntroduction/exercise2): Numeric vector manipulation !
 <br>
 
 
- > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+ > [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 

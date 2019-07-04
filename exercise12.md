@@ -34,7 +34,7 @@ library(ggplot2)
 **2- Download the data we will use for plotting:**
 
 ```{r}
-download.file("https://raw.githubusercontent.com/sbcrg/CRG_RIntroduction/master/ex12_normalized_intensities.csv", "ex12_normalized_intensities.csv", method="curl")
+download.file("https://raw.githubusercontent.com/sarahbonnin/CRG_RIntroduction/master/ex12_normalized_intensities.csv", "ex12_normalized_intensities.csv", method="curl")
 ```
 
 **3- Read file into object "project1"**
@@ -403,6 +403,6 @@ ggsave(filename="myhistograms.png", plot=hist5, device="png", width=20)
 
 </details>
 
-Go back to [ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
+Go back to [ggplot2](https://sarahbonnin.github.io/CRG_RIntroduction/ggplot2)
 
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)

@@ -23,7 +23,7 @@ typeof(b)
 str(b)
 ```
 
- > Go to [data structures](https://sbcrg.github.io/CRG_RIntroduction/datastructure)
+ > Go to [data structures](https://sarahbonnin.github.io/CRG_RIntroduction/datastructure)
 <br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 

@@ -111,7 +111,7 @@ dev.off()
 <img src="images/plots/myfile_multi4.jpeg" width="500/" >
 
 
-> Go to [Exercise 11](https://sbcrg.github.io/CRG_RIntroduction/exercise11).
+> Go to [Exercise 11](https://sarahbonnin.github.io/CRG_RIntroduction/exercise11).
 <br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 

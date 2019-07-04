@@ -21,7 +21,7 @@ setwd("~/Rcourse/Module2")
 
 ```{r}
 # system invokes the OS command specified by the "command" argument.
-system(command="svn export https://github.com/sbcrg/CRG_RIntroduction/trunk/i_o_files")
+system(command="svn export https://github.com/sarahbonnin/CRG_RIntroduction/trunk/i_o_files")
 ```
 
 All files that will be used for exercise 6 are found in the **i_o_files** folder ! 
@@ -530,8 +530,8 @@ write.table(ex6, file="ex6c_output.txt",
 
 </details>
 
-> Go to [Library and packages](https://sbcrg.github.io/CRG_RIntroduction/libpackages)
+> Go to [Library and packages](https://sarahbonnin.github.io/CRG_RIntroduction/libpackages)
 
 <br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
 
