@@ -36,8 +36,8 @@ e_ord <- factor(e, levels=c("low", "medium", "high"), ordered=TRUE)
 max(e_ord) # outputs "high"
 ```
 
-> Go to [Matrix](https://sarahbonnin.github.io/CRG_RIntroduction/matrix)
+> Go to [Matrix](https://biocorecrg.github.io/CRG_RIntroduction/matrix)
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 
 

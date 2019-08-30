@@ -112,7 +112,7 @@ for(i in 1:nrow(mymat)){
 }
 ```
 
-Go to [Exercise 10](https://sarahbonnin.github.io/CRG_RIntroduction/exercise10): "If" statement.
+Go to [Exercise 10](https://biocorecrg.github.io/CRG_RIntroduction/exercise10): "If" statement.
 <br>
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)

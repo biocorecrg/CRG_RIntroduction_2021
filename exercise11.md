@@ -299,6 +299,6 @@ dev.off()
 
 </details>
 
-> Go to [Extra plots](https://sarahbonnin.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams !
+> Go to [Extra plots](https://biocorecrg.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams !
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)

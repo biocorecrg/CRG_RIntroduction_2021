@@ -111,7 +111,7 @@ dir.create("R_packages")
 .libPaths("~/R_packages/")
 ```
 
-> Go to [Exercise 7](https://sarahbonnin.github.io/CRG_RIntroduction/exercise7): Library and packages.
+> Go to [Exercise 7](https://biocorecrg.github.io/CRG_RIntroduction/exercise7): Library and packages.
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

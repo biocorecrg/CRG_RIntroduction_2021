@@ -7,7 +7,7 @@
 
 <h2>Tree of directories</h2>
 
-<a href="https://sarahbonnin.github.io/CRG_RIntroduction/images/tree_directories.png"><img src="images/tree_directories.png" alt="rstudio logo" width="1000"/></a>
+<a href="https://biocorecrg.github.io/CRG_RIntroduction/images/tree_directories.png"><img src="images/tree_directories.png" alt="rstudio logo" width="1000"/></a>
 <br>
 <font size="12"> <b>~</b></font>: shortcut to the home directory
 <br>
@@ -40,8 +40,8 @@ setwd("..")
 ```
 You are now in: "~/Rcourse"
 
- > Go to [R basics](https://sarahbonnin.github.io/CRG_RIntroduction/Rbasics)
+ > Go to [R basics](https://biocorecrg.github.io/CRG_RIntroduction/Rbasics)
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 
 

@@ -77,8 +77,8 @@ b[1, ] <- b[1, ] - 2
 b[ b>3 ] <- NA
 ```
 
-> Go to [Data frames](https://sarahbonnin.github.io/CRG_RIntroduction/dataframe)
+> Go to [Data frames](https://biocorecrg.github.io/CRG_RIntroduction/dataframe)
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 
 

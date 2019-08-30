@@ -134,6 +134,6 @@ WriteXLS(x=diams,
 </details>
 
 
-> Go to [Regular expressions](https://sarahbonnin.github.io/CRG_RIntroduction/regex).
+> Go to [Regular expressions](https://biocorecrg.github.io/CRG_RIntroduction/regex).
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)

@@ -69,7 +69,7 @@ B <- B + 10
 
 * You can see the objects you created in the upper right panel in RStudio: the environment.
 
- > Go to [Functions in R](https://sarahbonnin.github.io/CRG_RIntroduction/functionsbasics)
+ > Go to [Functions in R](https://biocorecrg.github.io/CRG_RIntroduction/functionsbasics)
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

@@ -117,7 +117,7 @@ mydiv <- myobject / mysqrt
 
 </details>
 
- > Got to [Data types](https://sarahbonnin.github.io/CRG_RIntroduction/datatype)
+ > Got to [Data types](https://biocorecrg.github.io/CRG_RIntroduction/datatype)
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

@@ -35,7 +35,7 @@ Ctrl + cmd + <img src="images/arrow_up.png" width="40"/> : Browse command histor
 <img src="images/tab_functions.png" width="350"/>
 
 <br>
-Time for [Exercise 1](https://sarahbonnin.github.io/CRG_RIntroduction/exercise1): Getting started!
+Time for [Exercise 1](https://biocorecrg.github.io/CRG_RIntroduction/exercise1): Getting started!
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

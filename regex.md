@@ -180,7 +180,7 @@ grep(pattern="^expression",
 df_regex[, grep(pattern="^expression", colnames(df_regex))]
 ```
 
-Go to [Exercise 8](https://sarahbonnin.github.io/CRG_RIntroduction/exercise8): Regular expressions.
+Go to [Exercise 8](https://biocorecrg.github.io/CRG_RIntroduction/exercise8): Regular expressions.
 <br>
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)

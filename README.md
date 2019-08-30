@@ -18,55 +18,55 @@
 from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460, 4th floor hotel side)
 
 <h2>Learning objectives</h2>
-<a href="https://sarahbonnin.github.io/CRG_RIntroduction/images/learningobjectives.png"><img src="images/learningobjectives.png"  width="600"/></a>
+<a href="https://biocorecrg.github.io/CRG_RIntroduction/images/learningobjectives.png"><img src="images/learningobjectives.png"  width="600"/></a>
 
 <h2> Program </h2>
 
 <h3>Module 1</h3>
-* [Introduction to R language](https://sarahbonnin.github.io/CRG_RIntroduction/Rintro)
-* [R Studio](https://sarahbonnin.github.io/CRG_RIntroduction/rstudio)
-* [Paths and directories](https://sarahbonnin.github.io/CRG_RIntroduction/pathdirectories)
-* [R basics](https://sarahbonnin.github.io/CRG_RIntroduction/Rbasics)
-* [Functions (usage of)](https://sarahbonnin.github.io/CRG_RIntroduction/functionsbasics)
-* [R scripts](https://sarahbonnin.github.io/CRG_RIntroduction/Rscripts)
-	+ [Exercise 1](https://sarahbonnin.github.io/CRG_RIntroduction/exercise1): R basics.
-* [Data types](https://sarahbonnin.github.io/CRG_RIntroduction/datatype)
-* [Data structures](https://sarahbonnin.github.io/CRG_RIntroduction/datastructure)
-  + [Vector](https://sarahbonnin.github.io/CRG_RIntroduction/vector)
-	+ [Exercise 2](https://sarahbonnin.github.io/CRG_RIntroduction/exercise2): Numeric vectors.
-	+ [Exercise 3](https://sarahbonnin.github.io/CRG_RIntroduction/exercise3): Character vectors.
-  + [Factor](https://sarahbonnin.github.io/CRG_RIntroduction/factor)
-  + [Matrix](https://sarahbonnin.github.io/CRG_RIntroduction/matrix)
-  + [Data frame](https://sarahbonnin.github.io/CRG_RIntroduction/dataframe)
-  + [2D structure manipulation](https://sarahbonnin.github.io/CRG_RIntroduction/2d_manip)
-	+ [Exercise 4](https://sarahbonnin.github.io/CRG_RIntroduction/exercise4): Matrices.
-	+ [Exercise 5](https://sarahbonnin.github.io/CRG_RIntroduction/exercise5): Data frames.
+* [Introduction to R language](https://biocorecrg.github.io/CRG_RIntroduction/Rintro)
+* [R Studio](https://biocorecrg.github.io/CRG_RIntroduction/rstudio)
+* [Paths and directories](https://biocorecrg.github.io/CRG_RIntroduction/pathdirectories)
+* [R basics](https://biocorecrg.github.io/CRG_RIntroduction/Rbasics)
+* [Functions (usage of)](https://biocorecrg.github.io/CRG_RIntroduction/functionsbasics)
+* [R scripts](https://biocorecrg.github.io/CRG_RIntroduction/Rscripts)
+	+ [Exercise 1](https://biocorecrg.github.io/CRG_RIntroduction/exercise1): R basics.
+* [Data types](https://biocorecrg.github.io/CRG_RIntroduction/datatype)
+* [Data structures](https://biocorecrg.github.io/CRG_RIntroduction/datastructure)
+  + [Vector](https://biocorecrg.github.io/CRG_RIntroduction/vector)
+	+ [Exercise 2](https://biocorecrg.github.io/CRG_RIntroduction/exercise2): Numeric vectors.
+	+ [Exercise 3](https://biocorecrg.github.io/CRG_RIntroduction/exercise3): Character vectors.
+  + [Factor](https://biocorecrg.github.io/CRG_RIntroduction/factor)
+  + [Matrix](https://biocorecrg.github.io/CRG_RIntroduction/matrix)
+  + [Data frame](https://biocorecrg.github.io/CRG_RIntroduction/dataframe)
+  + [2D structure manipulation](https://biocorecrg.github.io/CRG_RIntroduction/2d_manip)
+	+ [Exercise 4](https://biocorecrg.github.io/CRG_RIntroduction/exercise4): Matrices.
+	+ [Exercise 5](https://biocorecrg.github.io/CRG_RIntroduction/exercise5): Data frames.
 <h3>Module 2</h3>
-* [Missing values](https://sarahbonnin.github.io/CRG_RIntroduction/na)
-* [Input / Output](https://sarahbonnin.github.io/CRG_RIntroduction/inout)
-	+ [Exercise 6](https://sarahbonnin.github.io/CRG_RIntroduction/exercise6): Input / Output.
-* [Library and packages](https://sarahbonnin.github.io/CRG_RIntroduction/libpackages)
-	+ [Exercise 7](https://sarahbonnin.github.io/CRG_RIntroduction/exercise7): Packages.
-* [Regular expressions](https://sarahbonnin.github.io/CRG_RIntroduction/regex) (Regex).
-	+ [Exercise 8](https://sarahbonnin.github.io/CRG_RIntroduction/exercise8): Regular expressions.
-* [For loops](https://sarahbonnin.github.io/CRG_RIntroduction/forloop)
-	+ [Exercise 9](https://sarahbonnin.github.io/CRG_RIntroduction/exercise9): For loops.
-* [Conditional statement](https://sarahbonnin.github.io/CRG_RIntroduction/conditional): "if" statement.
-	+ [Exercise 10](https://sarahbonnin.github.io/CRG_RIntroduction/exercise10): "if" statement .
+* [Missing values](https://biocorecrg.github.io/CRG_RIntroduction/na)
+* [Input / Output](https://biocorecrg.github.io/CRG_RIntroduction/inout)
+	+ [Exercise 6](https://biocorecrg.github.io/CRG_RIntroduction/exercise6): Input / Output.
+* [Library and packages](https://biocorecrg.github.io/CRG_RIntroduction/libpackages)
+	+ [Exercise 7](https://biocorecrg.github.io/CRG_RIntroduction/exercise7): Packages.
+* [Regular expressions](https://biocorecrg.github.io/CRG_RIntroduction/regex) (Regex).
+	+ [Exercise 8](https://biocorecrg.github.io/CRG_RIntroduction/exercise8): Regular expressions.
+* [For loops](https://biocorecrg.github.io/CRG_RIntroduction/forloop)
+	+ [Exercise 9](https://biocorecrg.github.io/CRG_RIntroduction/exercise9): For loops.
+* [Conditional statement](https://biocorecrg.github.io/CRG_RIntroduction/conditional): "if" statement.
+	+ [Exercise 10](https://biocorecrg.github.io/CRG_RIntroduction/exercise10): "if" statement .
 
 <h3>Module 3</h3>
-* ["Base" plots](https://sarahbonnin.github.io/CRG_RIntroduction/baseplot)
-* [Saving plots in file](https://sarahbonnin.github.io/CRG_RIntroduction/io_plots)
-	+ [Exercise 11](https://sarahbonnin.github.io/CRG_RIntroduction/exercise11): "Base" plots.
-* [Extra plots](https://sarahbonnin.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams.
-* [Graphing with ggplot2](https://sarahbonnin.github.io/CRG_RIntroduction/ggplot2)
-	+ [Exercise 12](https://sarahbonnin.github.io/CRG_RIntroduction/exercise12): ggplot2.
+* ["Base" plots](https://biocorecrg.github.io/CRG_RIntroduction/baseplot)
+* [Saving plots in file](https://biocorecrg.github.io/CRG_RIntroduction/io_plots)
+	+ [Exercise 11](https://biocorecrg.github.io/CRG_RIntroduction/exercise11): "Base" plots.
+* [Extra plots](https://biocorecrg.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams.
+* [Graphing with ggplot2](https://biocorecrg.github.io/CRG_RIntroduction/ggplot2)
+	+ [Exercise 12](https://biocorecrg.github.io/CRG_RIntroduction/exercise12): ggplot2.
 
 <h3>Module 4</h3>
-* [Exploratory data analysis](https://rawgit.com/sarahbonnin/CRG_RIntroduction/master/Module4_2_EDA_Mar_2019.html)
+* [Exploratory data analysis](https://rawgit.com/biocorecrg/CRG_RIntroduction/master/Module4_2_EDA_Mar_2019.html)
 
 <h2>Resources</h2>
 
-You can find [here](https://sarahbonnin.github.io/CRG_RIntroduction/resources) a list of useful resources.
+You can find [here](https://biocorecrg.github.io/CRG_RIntroduction/resources) a list of useful resources.
 
 

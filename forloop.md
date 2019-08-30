@@ -57,7 +57,7 @@ for(i in 1:nrow(mymat)){
 }
 ```
 
-Go to [Exercise 9](https://sarahbonnin.github.io/CRG_RIntroduction/exercise9): For loops.
+Go to [Exercise 9](https://biocorecrg.github.io/CRG_RIntroduction/exercise9): For loops.
 <br>
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)

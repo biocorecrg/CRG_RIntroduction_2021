@@ -279,7 +279,7 @@ apply(mat4, 2, min)
 
 </details>
 
-> Go to [Exercise 5](https://sarahbonnin.github.io/CRG_RIntroduction/exercise5): Data frame manipulation
+> Go to [Exercise 5](https://biocorecrg.github.io/CRG_RIntroduction/exercise5): Data frame manipulation
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

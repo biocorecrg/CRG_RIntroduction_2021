@@ -231,7 +231,7 @@ any( y2 == 3 )
 <br>
 **If you have time**, continue with Exercise 2b below.<br>
 If not:<br>
-Go to [Exercise 3](https://sarahbonnin.github.io/CRG_RIntroduction/exercise3): Character vector manipulation !
+Go to [Exercise 3](https://biocorecrg.github.io/CRG_RIntroduction/exercise3): Character vector manipulation !
 <br>
 
 ## Exercise 2b.
@@ -314,7 +314,7 @@ myvector <- c(myvector, newvector)
 
 <br>
 
-Go to [Exercise 3](https://sarahbonnin.github.io/CRG_RIntroduction/exercise3): Character vector manipulation !
+Go to [Exercise 3](https://biocorecrg.github.io/CRG_RIntroduction/exercise3): Character vector manipulation !
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

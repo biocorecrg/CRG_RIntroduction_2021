@@ -370,7 +370,7 @@ grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
 dev.off()
 ```
 
-Got to [Exercise 12](https://sarahbonnin.github.io/CRG_RIntroduction/exercise12) !
+Got to [Exercise 12](https://biocorecrg.github.io/CRG_RIntroduction/exercise12) !
 
 <h3>More about the theme() function</h3>
 
@@ -419,7 +419,7 @@ A volcano plot is a type of scatter plot represents differential expression of f
 
 ```{r}
 # Download the data we will use for plotting
-download.file("https://raw.githubusercontent.com/sarahbonnin/CRG_RIntroduction/master/de_df_for_volcano.rds", "de_df_for_volcano.rds", method="curl")
+download.file("https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/master/de_df_for_volcano.rds", "de_df_for_volcano.rds", method="curl")
 
 # The RDS format is used to save a single R object to a file, and to restore it.
 # Extract that object in the current session:
@@ -527,5 +527,5 @@ ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label
 <img src="images/plots/volcano8_gg.png" width="450"/>
 
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

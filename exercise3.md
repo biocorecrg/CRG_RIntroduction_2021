@@ -200,7 +200,7 @@ gsub(pattern="Introduction to R", replacement="", x=tt)
 
 </details>
 
-> Go to [Factors](https://sarahbonnin.github.io/CRG_RIntroduction/factor)
+> Go to [Factors](https://biocorecrg.github.io/CRG_RIntroduction/factor)
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

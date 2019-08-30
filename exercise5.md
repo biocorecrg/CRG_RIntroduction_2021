@@ -233,7 +233,7 @@ correction
 </summary>
 
 ```{r}
-# failing: download.file("https://github.com/sarahbonnin/CRG_RIntroduction/blob/master/genes_dataframe.RData", "genes_dataframe.RData")
+# failing: download.file("https://github.com/biocorecrg/CRG_RIntroduction/blob/master/genes_dataframe.RData", "genes_dataframe.RData")
 download.file("https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData", "genes_dataframe.RData")
 ```
 
@@ -370,8 +370,8 @@ diff_genes <- df_genes[df_genes$pvalue_KOvsWT < 0.05 &
 
 How many rows (genes) were selected?
 
-> Go to [Missing values](https://sarahbonnin.github.io/CRG_RIntroduction/na).
+> Go to [Missing values](https://biocorecrg.github.io/CRG_RIntroduction/na).
 
 <br>
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

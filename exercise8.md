@@ -72,6 +72,6 @@ gsub(pattern="L[124]{1}_|_[ATGC]{6}.fastq.gz",
 
 </details>
 
-> Go to [For loops](https://sarahbonnin.github.io/CRG_RIntroduction/forloop).
+> Go to [For loops](https://biocorecrg.github.io/CRG_RIntroduction/forloop).
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)

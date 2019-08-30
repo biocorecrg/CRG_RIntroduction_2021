@@ -55,8 +55,8 @@ Very similar to matrix manipulation.
 <img src="images/df_fetch.png" width="450"/>
 
 
-> Go to [2-dimension objects manipulation](https://sarahbonnin.github.io/CRG_RIntroduction/2d_manip)
+> Go to [2-dimension objects manipulation](https://biocorecrg.github.io/CRG_RIntroduction/2d_manip)
 <br>
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
 

@@ -43,7 +43,7 @@ na.omit(mydata)
 <br>
 Check this [R blogger post on missing/null values](https://www.r-bloggers.com/r-null-values-null-na-nan-inf/)
 
-> Go to [Input/Output](https://sarahbonnin.github.io/CRG_RIntroduction/inout)
+> Go to [Input/Output](https://biocorecrg.github.io/CRG_RIntroduction/inout)
 <br>
 
-> [back to home page](https://sarahbonnin.github.io/CRG_RIntroduction)
+> [back to home page](https://biocorecrg.github.io/CRG_RIntroduction)
