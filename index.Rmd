@@ -1,0 +1,36 @@
+--- 
+title: "Introduction to R"
+author: "Sarah Bonnin"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+---
+
+# Welcome
+
+<h3> Dates, time & location </h3>
+
+* Dates:
+	* Module 1: 
+	* Module 2: 
+	* Module 3: 
+	* Module 4: 
+
+* Time:
+	* 10:00-13:30 <br>
+
+* Location:
+	* CRG Training center
+
+<h3> Instructors </h3>
+ 
+[Sarah Bonnin](mailto:sarah.bonnin@crg.eu) (Module 1, 2, 3)<br>
+[Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu) (Module 4)<br>
+from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460, 4th floor hotel side)
+
+<h3> Learning objectives </h3>
+<a href="https://sarahbonnin.github.io/CRG_RIntroduction/images/learningobjectives.png"><img src="images/learningobjectives.png"  width="600"/></a>
