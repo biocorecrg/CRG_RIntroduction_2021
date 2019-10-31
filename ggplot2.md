@@ -1,5 +1,6 @@
 <h2>ggplot2 package</h2>
 
+
 * Graphing package inspired by the **G**rammar of **G**raphics work of Leland Wilkinson.
 
 * A tool that enables to concisely describe the components of a graphic.
