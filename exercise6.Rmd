@@ -274,7 +274,7 @@ dim(cl)
 
 **4- final**
 
-* Read ex6b_IO_final.txt in object fin.
+* Read ex6b_IO_final.txt in object "fin".
 
 <details>
 <summary>
@@ -513,20 +513,6 @@ write.table(ex6, file="ex6c_output.txt",
             row.names = FALSE,
             quote = FALSE,
             sep="\t")
-```
-
-</details>
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-write.table(ex6, file="ex6c_output.txt", 
-            row.names = FALSE,
-            quote = FALSE,
-            sep=",")
 ```
 
 </details>

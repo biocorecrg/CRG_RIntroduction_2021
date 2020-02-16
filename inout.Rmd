@@ -1,6 +1,7 @@
 # Input / Output
 
 We will learn how to:
+
 * Read in a file
 * Write out a file
 * Save a graph in a file (Module 3)
@@ -88,6 +89,6 @@ Useful arguments:
 
 <a href="https://sbcrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/writetable.png" width="550/"></a>
 
-* Note that "\t" stands for tab-delimitation
+* Note that **\\t** stands for tab-delimitation
 
 

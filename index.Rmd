@@ -14,12 +14,23 @@ link-citations: yes
 
 <h3> Dates, time & location </h3>
 
-* Dates:
-	* Module 1: 
-	* Module 2: 
-	* Module 3: 
-	* Module 4: 
-
+* Dates (2020):
+	* Module 1: February 17,18
+	  * Introduction to R and RStudio
+	  * Paths and directories
+	  * R basics
+	  * Functions in R
+	  * R scripts
+	  * Data types & data structures
+	* Module 2: February 20,March 2
+	  * Input / output
+	  * Library and packages
+	  * Regular expressions
+	  * Conditional statement
+	  * Repetitive execution
+	* Module 3: March 3,5:
+	  * basic plotting
+	  * plotting with ggplot2
 * Time:
 	* 10:00-13:30 <br>
 
@@ -28,8 +39,8 @@ link-citations: yes
 
 <h3> Instructors </h3>
  
-[Sarah Bonnin](mailto:sarah.bonnin@crg.eu) (Module 1, 2, 3)<br>
-[Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu) (Module 4)<br>
+[Sarah Bonnin](mailto:sarah.bonnin@crg.eu)<br>
+[Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu)<br>
 from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460, 4th floor hotel side)
 
 <h3> Learning objectives </h3>

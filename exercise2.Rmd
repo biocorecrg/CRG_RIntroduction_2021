@@ -23,7 +23,7 @@ setwd("~/Rcourse/Module1")
 </details>
 
 
-**2- Create a numeric vector y which contains the numbers from 2 to 11, both included.** 
+**2- Create a numeric vector "y" which contains the numbers from 2 to 11, both included.** 
 <br>Show y in the terminal.
 
 <details>
@@ -96,7 +96,7 @@ length(y)
 
 </details>
 
-**7- Show all elements of y that are less than 7.**
+**7- Show all elements of y that are inferior to 7.**
 
 <details>
 <summary>
@@ -112,7 +112,7 @@ y[ y < 7 ]
 
 </details>
 
-**8- Show all elements of y that are greater or equal to 4 and less than 9.**
+**8- Show all elements of y that are superior or equal to 4 and inferior to 9.**
 
 <details>
 <summary>
@@ -188,8 +188,7 @@ sum(y2)
 
 </details>
 
-**14- Which elements of y2 are also present in y ? 
-<br>Note: remember the %in% operator.**
+**14- Which elements of y2 are also present in y ?<br>Note: remember the %in% operator.**
 
 <details>
 <summary>
@@ -216,7 +215,7 @@ y2 <- y2 * 1.5
 </details>
 
 
-**16- Use the function any() to check if the number 3 is present.**
+**16- Use the function any() to check if the number 3 is present.<br>Check the help page of any()!**
 
 <details>
 <summary>
@@ -271,8 +270,7 @@ myvector[5:7] <- c(8, 12, 32)
 
 </details>
 
-**3- Calculate the fraction/percentage of each element of myvector (relative to the sum of all elements of the vector).
-<br>sum() can be useful.**
+**3- Calculate the fraction/percentage of each element of myvector (relative to the sum of all elements of the vector).<br>Note:sum() can be useful...**
 
 
 <details>

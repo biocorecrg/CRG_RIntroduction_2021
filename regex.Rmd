@@ -2,6 +2,10 @@
 
 Regular expressions are tools to **describe patterns in strings**.
 
+```{r, include=FALSE, eval=TRUE}
+knitr::opts_chunk$set(eval = FALSE, echo = TRUE)
+```
+
 ## Find simple matches with grep
 
 * Find a pattern anywhere in the string (outputs the index of the element):
@@ -46,6 +50,7 @@ grep(pattern="gen",
 
 <h4>Special characters used for pattern recognition:</h4>
 
+|:----:|:-------:|
 | $ | Find pattern at the end of the string |
 | ^ | Find pattern at the beginning of the string |
 | {n} | The previous pattern should be found exactly n times |
@@ -56,15 +61,15 @@ grep(pattern="gen",
 
 <h4>Match your own pattern inside **[]**</h4>
 
-\[abc\]: matches a, b, or c.<br>
-^\[abc\]: matches a, b or c at the beginning of the element.<br>
-^A\[abc\]+: matches A as the first character of the element, then either a, b or c<br>
-^A\[abc\]*: matches A as the first character of the element, then optionally either a, b or c<br>
-^A\[abc\]{1}_: matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore<br>
-
-\[a-z\]: matches every character between a and z.<br>
-\[A-Z\]: matches every character between A and Z.<br>
-\[0-9\]: matches every number between 0 and 9.<br>
+|:----:|:-------:|
+|\[abc\] | matches a, b, or c|
+|^\[abc\] | matches a, b or c at the beginning of the element|
+^A\[abc\]+ | matches A as the first character of the element, then either a, b or c|
+|^A\[abc\]* | matches A as the first character of the element, then optionally either a, b or c|
+|^A\[abc\]{1}_ | matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore |
+|\[a-z\] | matches every character between a and z |
+|\[A-Z\] | matches every character between A and Z |
+|\[0-9\] | matches every number between 0 and 9 |
 
 
 * Match anything contained between brackets (here either g or t) at least once:
@@ -128,6 +133,7 @@ gsub(pattern="es$|it$",
 
 ## Predefined variables to use in regular expressions:
 
+|:---:|:---:|
 | [:lower:] | Lower-case letters |
 | [:upper:] | Upper-case letters |
 | [:alpha:] | Alphabetic characters: [:lower:] and [:upper:] |

@@ -21,6 +21,7 @@ setwd("~/Rcourse/Module1")
 
 **1- Create the following data frame:**
 
+|:---:|:---:|:---:|
 |43|181|M|
 |34|172|F|
 |22|189|M|
@@ -62,6 +63,7 @@ str(df)
 **3- Calculate the average age and height in df**
 
 Try different approaches:
+
 * Calculate the average for each column separately.
 
 <details>
@@ -162,6 +164,7 @@ df3 <- df[df$Sex=="M" & df$Height > 170,]
 
 mydf1:
 
+|:---:|:---:|
 |1|14|
 |2|12|
 |3|15|
@@ -169,6 +172,7 @@ mydf1:
 
 mydf2:
 
+|:---:|:---:|
 |1|paul|
 |2|helen|
 |3|emily|

@@ -4,6 +4,22 @@ The **theme()** allows a precise control of graphical parameters such as axis te
 <br>
 More details [here](https://ggplot2.tidyverse.org/reference/theme.html)
 
+```{r, eval=T, echo=F, message=F, warning=F}
+project1 <- read.table("ex12_normalized_intensities.csv", 
+  sep=",", 
+  header=TRUE, 
+  row.names = 1)
+# Initialize all values to "normal"
+project1$expr_limits <- "normal"
+# "high" if project1$sampleB > 13 and project1$sampleH > 13
+project1$expr_limits[project1$sampleB > 13 & project1$sampleH > 13] <- "high"
+# "low" if project1$sampleB < 6 and project1$sampleH < 6
+project1$expr_limits[project1$sampleB < 6 & project1$sampleH < 6] <- "low"
+
+library(reshape2)
+project_long <- melt(data=project1)
+```
+
 ```{r, eval=T}
 # Let's the project_long object from exercise 12, and plot boxplots
 boxp <- ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) + 

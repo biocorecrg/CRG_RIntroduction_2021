@@ -1,11 +1,11 @@
 # Data types
 
 Each object has a data type:
-* Numeric (number - integer or double)
-* Character (text)
-* Logical (TRUE / FALSE)
+  * Numeric (number - integer or double)
+  * Character (text)
+  * Logical (TRUE / FALSE)
 
-##Checking data types
+## Checking data types
 
 Number:
 ```{r}

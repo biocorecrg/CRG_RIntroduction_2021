@@ -6,9 +6,11 @@
   + File -> New File -> R Script
   + Once the file has opened: File -> Save 
   + Specify a name: ***the extension .R is automatically added***
+  
   <img src="images/rscript_rstudio.png" width="500"/>
-
+<br>
 * Execute commands or blocks of commands from RStudio:
+
 <img src="images/rscript_rstudio_cmd.png" width="500"/>
 
 ## R syntax

@@ -40,10 +40,8 @@ What is the percentage of miRNA?
 ## Objects in R
 
 Everything that stores any kind of data in R is an **object**:
-<img src="images/objects_box.png" alt="rstudio logo" width="300"/>
-
-#R syntax
-<img src="images/rsyntax1.png" alt="rstudio logo" width="350"/>
+<br>
+<img src="images/objects_box.png" alt="rstudio logo" width="300" align="middle"/>
 
 ## Assignment operators
 
@@ -53,6 +51,8 @@ Everything that stores any kind of data in R is an **object**:
   + Keep **=** for functions arguments
 
 ## Assigning data to an object
+
+<img src="images/rsyntax1.png" alt="rstudio logo" width="350"/>
 
 * Assigning a value to the object **B**:
 B <- 10

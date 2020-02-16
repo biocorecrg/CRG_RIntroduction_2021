@@ -26,6 +26,12 @@ knitr::opts_chunk$set(fig.width=5, fig.height=4,
 
 ## Getting started
 
+Load package:
+
+```{r, eval=TRUE, echo=TRUE, warning=F, message=F}
+library(ggplot2)
+```
+
 * All ggplots start with a **base layer** created with the **ggplot()** function:
 
 ```{r, eval=F, echo=TRUE}
