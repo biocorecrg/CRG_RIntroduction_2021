@@ -32,7 +32,6 @@ Rcourse<br>
   |-Module1<br>
   |-Module2<br>
   |-Module3<br>
-  |-Module4<br>
 
 ![](images/rstudio_folder.png "RStudio create folder")
 

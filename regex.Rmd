@@ -50,6 +50,7 @@ grep(pattern="gen",
 
 <h4>Special characters used for pattern recognition:</h4>
 
+| Character | Description |
 |:----:|:-------:|
 | $ | Find pattern at the end of the string |
 | ^ | Find pattern at the beginning of the string |
@@ -61,6 +62,7 @@ grep(pattern="gen",
 
 <h4>Match your own pattern inside **[]**</h4>
 
+| Pattern | Description |
 |:----:|:-------:|
 |\[abc\] | matches a, b, or c|
 |^\[abc\] | matches a, b or c at the beginning of the element|
@@ -133,6 +135,7 @@ gsub(pattern="es$|it$",
 
 ## Predefined variables to use in regular expressions:
 
+| | |
 |:---:|:---:|
 | [:lower:] | Lower-case letters |
 | [:upper:] | Upper-case letters |

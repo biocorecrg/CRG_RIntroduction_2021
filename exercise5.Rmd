@@ -21,6 +21,7 @@ setwd("~/Rcourse/Module1")
 
 **1- Create the following data frame:**
 
+| | | |
 |:---:|:---:|:---:|
 |43|181|M|
 |34|172|F|
@@ -164,6 +165,7 @@ df3 <- df[df$Sex=="M" & df$Height > 170,]
 
 mydf1:
 
+| | |
 |:---:|:---:|
 |1|14|
 |2|12|
@@ -172,6 +174,7 @@ mydf1:
 
 mydf2:
 
+| | |
 |:---:|:---:|
 |1|paul|
 |2|helen|

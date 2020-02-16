@@ -290,26 +290,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4>
 Special characters used for pattern recognition:
 </h4>
-<p>|:—-:|:——-:|
-| $ | Find pattern at the end of the string |
-| ^ | Find pattern at the beginning of the string |
-| {n} | The previous pattern should be found exactly n times |
-| {n,m} | The previous pattern should be found between n and m times|
-| + | The previous pattern should be found at least 1 time |
-| * | One or more allowed, but optional |
-| ? | One allowed, but optional |</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Character</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">$</td>
+<td align="center">Find pattern at the end of the string</td>
+</tr>
+<tr class="even">
+<td align="center">^</td>
+<td align="center">Find pattern at the beginning of the string</td>
+</tr>
+<tr class="odd">
+<td align="center">{n}</td>
+<td align="center">The previous pattern should be found exactly n times</td>
+</tr>
+<tr class="even">
+<td align="center">{n,m}</td>
+<td align="center">The previous pattern should be found between n and m times</td>
+</tr>
+<tr class="odd">
+<td align="center">+</td>
+<td align="center">The previous pattern should be found at least 1 time</td>
+</tr>
+<tr class="even">
+<td align="center">*</td>
+<td align="center">One or more allowed, but optional</td>
+</tr>
+<tr class="odd">
+<td align="center">?</td>
+<td align="center">One allowed, but optional</td>
+</tr>
+</tbody>
+</table>
 <h4>
 Match your own pattern inside <strong>[]</strong>
 </h4>
-<p>|:—-:|:——-:|
-|<span class="math display">\[abc\]</span> | matches a, b, or c|
-|^<span class="math display">\[abc\]</span> | matches a, b or c at the beginning of the element|
-^A<span class="math display">\[abc\]</span>+ | matches A as the first character of the element, then either a, b or c|
-|^A<span class="math display">\[abc\]</span>* | matches A as the first character of the element, then optionally either a, b or c|
-|^A<span class="math display">\[abc\]</span>{1}_ | matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore |
-|<span class="math display">\[a-z\]</span> | matches every character between a and z |
-|<span class="math display">\[A-Z\]</span> | matches every character between A and Z |
-|<span class="math display">\[0-9\]</span> | matches every number between 0 and 9 |</p>
+<table>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Pattern</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math display">\[abc\]</span></td>
+<td align="center">matches a, b, or c</td>
+</tr>
+<tr class="even">
+<td align="center">^<span class="math display">\[abc\]</span></td>
+<td align="center">matches a, b or c at the beginning of the element</td>
+</tr>
+<tr class="odd">
+<td align="center">^A<span class="math display">\[abc\]</span>+</td>
+<td align="center">matches A as the first character of the element, then either a, b or c</td>
+</tr>
+<tr class="even">
+<td align="center">^A<span class="math display">\[abc\]</span>*</td>
+<td align="center">matches A as the first character of the element, then optionally either a, b or c</td>
+</tr>
+<tr class="odd">
+<td align="center">^A<span class="math display">\[abc\]</span>{1}_</td>
+<td align="center">matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math display">\[a-z\]</span></td>
+<td align="center">matches every character between a and z</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math display">\[A-Z\]</span></td>
+<td align="center">matches every character between A and Z</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math display">\[0-9\]</span></td>
+<td align="center">matches every number between 0 and 9</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>Match anything contained between brackets (here either g or t) at least once:</li>
 </ul>

@@ -56,3 +56,22 @@ for(i in 1:nrow(mymat)){
 	print(min(mymat[i,]))
 }
 ```
+
+* **If statement** in **For loop**:
+
+```{r, eval=F}
+# Matrix
+mymat <- matrix(rnorm(800), 
+        nrow=50)
+	
+# Loop over rows of mymat and print row if its median value is > 0
+for(i in 1:nrow(mymat)){
+	# extract the current row
+	rowi <- mymat[i,]
+	# if median of row is > 0, print row
+	if(median(rowi) > 0){
+		print(rowi)
+	}
+}
+```
+
