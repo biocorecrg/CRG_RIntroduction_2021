@@ -102,7 +102,7 @@ diams <- sample_n(tbl=diams1, size=200)
 
 </details>
 
-**-6.Save diams into 2 files:**
+**6- Save diams into 2 files (different file formats):**
 
 * diamonds200.txt with write.table
 * diamonds200.xls with WriteXLS 

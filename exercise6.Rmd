@@ -46,7 +46,7 @@ length(z)
 
 </details>
 
-**3- Sort z: save sorted vector in object "zsorted".**
+**3- Sort z: save sorted vector in object "zsorted". ?sort**
 
 <details>
 <summary>
@@ -59,7 +59,7 @@ zsorted <- sort(z)
 
 </details>
 
-**4- Write zsorted content into file ex6a_output.txt.**
+**4- Write zsorted content into file ex6a_output.txt. ?write**
 
 <details>
 <summary>
@@ -72,7 +72,7 @@ write(zsorted, "ex6a_output.txt")
 
 </details>
 
-**5- Check the file you produced in the RStudio file browser (click on the file in bottom-right panel "Files" tab). Save the content of zsorted again but this time setting the argument "ncolumns" to 1: how is the file different?**
+**5- Check the file you produced in the RStudio file browser (click on the file in bottom-right panel, "Files" tab). Save the content of zsorted again but this time setting the argument "ncolumns" to 1: how does the file look now?**
 
 <details>
 <summary>
@@ -85,12 +85,12 @@ write(zsorted, "ex6a_output.txt", ncolumns=1)
 
 </details>
 
-### Exercise 6b - I/O on data frame: play with the arguments of read.table
+### Exercise 6b - I/O on data frames: play with the arguments of read.table
   
 **1- field separator**
 
-* Read ex6b_IO_commas_noheader.txt in object fs.
-What are the dimensions of fs?
+* **Read ex6b_IO_commas_noheader.txt in object fs. ?read.table.
+What are the dimensions of fs?**
 
 <details>
 <summary>
@@ -105,8 +105,8 @@ dim(fs)
 
 </details>
 
-* Fields/columns are separated by commas: change the default value of the "sep" argument and read in the file again.
-What are now the dimensions of fs?
+* **Fields/columns are separated by commas: change the default value of the "sep" argument and read in the file again.
+What are now the dimensions of fs?**
 
 <details>
 <summary>
@@ -124,8 +124,8 @@ dim(fs)
 
 **2- field separator + header**
 
-* Read ex6b_IO_commas_header.txt in object fs_c.
-What are the dimensions of fs_c ?
+* **Read ex6b_IO_commas_header.txt in object fs_c.
+What are the dimensions of fs_c ?**
 
 <details>
 <summary>
@@ -139,7 +139,7 @@ dim(fs_c)
 
 </details>
 
-* Check head(fs_c) and change the default field separator to an appropriate one.
+* **Check head(fs_c) and change the default field separator to the appropriate one.**
 
 <details>
 <summary>
@@ -153,7 +153,7 @@ fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt",
 
 </details>
 
-* The first row should to be the header (column names): change the default value of the header parameter and read in the file again.
+* **The first row should to be the header (column names)! Change the default value of the header parameter and read in the file again.**
 What are now the dimensions of fs_c ?
 
 <details>
@@ -171,24 +171,24 @@ fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt",
 
 **3- skipping lines**
 
-* Read ex6b_IO_skip.txt in object sk.
+* **Read ex6b_IO_skip.txt in object sk.**
 
 <details>
 <summary>
 correction
 </summary>
 
-```{r, eval=F}
+```{r, eval=F, message=F, warning=F, error=F}
 sk <- read.table("i_o_files/ex6b_IO_skip.txt")
 ```
 
 </details>
 
-Is R complaining ?<br>
+**Is R complaining ?**<br>
  
-Check "manually" the file (in the R Studio file browser).<br>
+Check "manually" the file (open it in the R Studio file browser).<br>
 
-* The skip argument allows you to ignore one or more line(s) before reading in a file. Introduce this argument with the appropriate number of lines to skip, and read the file again.<br>
+* The "skip" argument allows you to ignore one or more line(s) before reading in a file. **Introduce this argument with the appropriate number of lines to skip, and read in the file again.**<br>
 
 <details>
 <summary>
@@ -206,7 +206,7 @@ dim(sk)
 * Is R still complaining? 
 What are now the dimensions of sk ?
 
-* Change the default field separator.
+* **Change the default field separator.**
 What are now the dimensions of sk ?
 
 <details>
@@ -225,22 +225,22 @@ sk <- read.table("i_o_files/ex6b_IO_skip.txt",
 
 **4- Comment lines**
 
-* Read ex6b_IO_comment.txt in object cl.
+* **Read ex6b_IO_comment.txt in object cl.**
 
 <details>
 <summary>
 correction
 </summary>
 
-```{r, eval=F}
+```{r, eval=F, warning=F, message=F, error=F}
 cl <- read.table("i_o_files/ex6b_IO_comment.txt")
 ```
 
 </details>
 
-Is R complaining again ? Check manually the file and try to find out what is wrong...<br>
+Is R complaining again ? **Check manually the file and try to find out what is wrong...**<br>
 
-What os the comment.char argument used for ? Adjust the comment.char argument and read the file again.
+What is the "comment.char" argument used for ? **Adjust the comment.char argument and read in the file again.**
 
 <details>
 <summary>
@@ -254,7 +254,7 @@ cl <- read.table("i_o_files/ex6b_IO_comment.txt",
 
 </details>
 
-* Adjust also the header and sep arguments to read in the file correctly.
+* **Adjust also the header and sep arguments to read in the file correctly.**
 What are now the dimensions of cl?
 
 <details>
@@ -274,20 +274,20 @@ dim(cl)
 
 **4- final**
 
-* Read ex6b_IO_final.txt in object "fin".
+* **Read ex6b_IO_final.txt in object "fin".**
 
 <details>
 <summary>
 correction
 </summary>
 
-```{r, eval=F}
+```{r, eval=F, warning=F, error=F, message=F}
 fin <- read.table("i_o_files/ex6b_IO_final.txt")
 ```
 
 </details>
 
-* Adjust the appropriate parameters according to what you have learnt, in order to obtain the data frame "fin" of dimensions 167 x 4.
+* **Adjust the appropriate arguments of "write.table" according to what you have learnt so far, in order to obtain the data frame "fin" of dimensions 167 x 4.**
 
 <details>
 <summary>
@@ -305,217 +305,6 @@ fin <- read.table("i_o_files/ex6b_IO_final.txt",
 
 </details>
 
-### Exercice 6c - I/O on a data frame
-
-**1- Read in file ex6c_input.txt in ex6 object**
-
-Warning: the file has a header !
-<br>
-Check the structure of ex6 (remember the **str** command).
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-ex6 <- read.table("i_o_files/ex6c_input.txt", 
-                  header=TRUE)
-str(ex6)
-```
-
-</details>
-
-
-**2- Now read in the same file but, this time, set the argument as.is to TRUE.**
-
-Check again the structure: what has changed ?
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-ex6 <- read.table("i_o_files/ex6c_input.txt", 
-                  header=TRUE,
-                  as.is=TRUE)
-str(ex6)
-```
-
-</details>
-
-**3- What are the column names of ex6 ?**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-colnames(ex6)
-```
-
-</details>
-
-**4- Change the name of the first column of ex6 from "State" to "Country".**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-# extract all column names of ex6
-colnames(ex6)
-# extract the name of the first column only
-colnames(ex6)[1]
-# reassign name of the first column only
-colnames(ex6)[1] <- "Country"
-```
-
-</details>
-
-**5- How many countries are in the Eurozone, according to ex6 ?**
-
-Remember the table function.
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-table(ex6$Eurozone)
-```
-
-</details>
-
-**6- In the Eurozone column: change "TRUE" with "yes" and "FALSE" with "no".**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-# select the Eurozone column
-ex6$Eurozone
-# elements of the Eurozone column that are exactly TRUE
-ex6$Eurozone==TRUE
-# extract actual values that are TRUE
-ex6$Eurozone[ex6$Eurozone==TRUE]
-# reassign all elements that are TRUE with "yes"
-ex6$Eurozone[ex6$Eurozone==TRUE] <- "yes"
-# same with FALSE
-ex6$Eurozone[ex6$Eurozone==FALSE] <- "no"
-```
-
-</details>
-
-**7- In the column Country: how many country names from the list contain the letter "c" (capital- or lower-case) ?**
-
-Remember the grep function. Check the help page.
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-# country names with "c" (lower-case)
-grep("c", ex6$Country)
-# country names with "c" or "C" (ignoring case)
-grep("c", ex6$Country, ignore.case = TRUE)
-# show actual country names
-grep("c", ex6$Country, value=TRUE, ignore.case = TRUE)
-```
-
-</details>
-
-**8- According to that data frame: how many people live:**
-+ in the European union (whole table) ?
-+ in the Eurozone ?
-
-<details>
-<summary>
-correction
-</summary>
-  
-```{r, eval=F}
-# sum the whole population column
-sum(ex6$Population)
-# select elements of ex6 where Eurozone is "yes"
-ex6$Eurozone == "yes"
-# select only elements in Population for which the corresponding Eurozone elements are "yes"
-ex6$Population[ex6$Eurozone == "yes"]
-# sum that selection
-sum(ex6$Population[ex6$Eurozone == "yes"])
-```
-
-</details>
-
-**9- Write ex6 into file ex6c_output.txt**
-
-*After each of the following steps, check the output file in the RStudio file browser (lower-right panel).*
-
-* Try with the default arguments.
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-write.table(ex6, file="ex6c_output.txt")
-```
-
-</details>
-
-* Add the argument "row.names" set to FALSE.
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-write.table(ex6, file="ex6c_output.txt", 
-            row.names = FALSE)
-```
-
-</details>
-
-* Add the argument "quote" set to FALSE.
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-write.table(ex6, file="ex6c_output.txt", 
-            row.names = FALSE,
-            quote = FALSE)
-```
-
-</details>
-
-* Add the argument "sep" set to "\t" or to ","
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-write.table(ex6, file="ex6c_output.txt", 
-            row.names = FALSE,
-            quote = FALSE,
-            sep="\t")
-```
-
-</details>
 
 
 

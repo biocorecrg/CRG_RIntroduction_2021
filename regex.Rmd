@@ -148,19 +148,19 @@ gsub(pattern="es$|it$",
 
 
 * Take the previous character vector containing email addresses:
-	* Remove the @ and the email provider from each address
+  + Remove the @ and the email provider from each address
 ```{r}
 gsub(pattern="@[[:lower:][:punct:]]+", 
 	replacement="", 
 	x=vec_ad)
 ```
-	* Same thing but remove additionally any number(s) BEFORE the @ (if any):
+  + Same thing but remove additionally any number(s) BEFORE the @ (if any):
 ```{r}
 gsub(pattern="[[:digit:]]*@[[:lower:][:punct:]]+",
         replacement="",
         x=vec_ad)
 ```
-	* Same but simplified:
+  + Same but simplified:
 ```{r}
 gsub(pattern="[[:digit:]]*@[[:print:]]+",
         replacement="",

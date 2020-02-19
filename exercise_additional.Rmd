@@ -1,0 +1,212 @@
+## Extra Exercise 
+
+**1- Read in file ex6c_input.txt (that is in folder downloaded for exercice 6 "i_o_files") in object "extra"**
+  
+  Warning: the file has a header !
+  <br>
+  Check the structure of extra (remember the **str** command).
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+extra <- read.table("i_o_files/ex6c_input.txt", 
+                  header=TRUE)
+str(extra)
+```
+
+</details>
+  
+  
+  **2- Read in the same file but, this time, set the argument as.is to TRUE.**
+  
+  Check again the structure: what has changed ?
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+extra <- read.table("i_o_files/ex6c_input.txt", 
+                  header=TRUE,
+                  as.is=TRUE)
+str(extra)
+```
+
+</details>
+  
+  **3- What are the column names of extra ?**
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+colnames(extra)
+```
+
+</details>
+  
+  **4- Change the name of the first column of extra from "State" to "Country".**
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+# ex6ct all column names of extra
+colnames(extra)
+# ex6ct the name of the first column only
+colnames(extra)[1]
+# reassign name of the first column only
+colnames(extra)[1] <- "Country"
+```
+
+</details>
+  
+  **5- How many countries are in the Eurozone, according to extra ?**
+  
+  *Remember the table function. ?table*
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+table(extra$Eurozone)
+```
+
+</details>
+  
+  **6- In the Eurozone column: change "TRUE" with "yes" and "FALSE" with "no".**
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+# select the Eurozone column
+extra$Eurozone
+# elements of the Eurozone column that are exactly TRUE
+extra$Eurozone==TRUE
+# ex6ct actual values that are TRUE
+extra$Eurozone[extra$Eurozone==TRUE]
+# reassign all elements that are TRUE with "yes"
+extra$Eurozone[extra$Eurozone==TRUE] <- "yes"
+# same with FALSE
+extra$Eurozone[extra$Eurozone==FALSE] <- "no"
+```
+
+</details>
+  
+  **7- In the column Country: how many country names from the list contain the letter "c" (capital- or lower-case) ?**
+  
+  Remember the grep function. Check the help page.
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+# country names with "c" (lower-case)
+grep("c", extra$Country)
+# country names with "c" or "C" (ignoring case)
+grep("c", extra$Country, ignore.case = TRUE)
+# show actual country names
+grep("c", extra$Country, value=TRUE, ignore.case = TRUE)
+```
+
+</details>
+  
+  **8- According to that data frame: how many people live:**
+  + in the European union (whole table) ?
+  + in the Eurozone ?
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+# sum the whole population column
+sum(extra$Population)
+# select elements of extra where Eurozone is "yes"
+extra$Eurozone == "yes"
+# select only elements in Population for which the corresponding Eurozone elements are "yes"
+extra$Population[extra$Eurozone == "yes"]
+# sum that selection
+sum(extra$Population[extra$Eurozone == "yes"])
+```
+
+</details>
+  
+  **9- Write extra into file ex6c_output.txt**
+  
+  *After each of the following steps, check the output file in the RStudio file browser (lower-right panel).*
+  
+  * Try with the default arguments.
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+write.table(extra, file="ex6c_output.txt")
+```
+
+</details>
+  
+  * Add the argument "row.names" set to FALSE.
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+write.table(extra, file="ex6c_output.txt", 
+            row.names = FALSE)
+```
+
+</details>
+  
+  * Add the argument "quote" set to FALSE.
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+write.table(extra, file="ex6c_output.txt", 
+            row.names = FALSE,
+            quote = FALSE)
+```
+
+</details>
+  
+  * Add the argument "sep" set to "\t" or to ","
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+write.table(extra, file="ex6c_output.txt", 
+            row.names = FALSE,
+            quote = FALSE,
+            sep="\t")
+```
+
+</details>
+  
