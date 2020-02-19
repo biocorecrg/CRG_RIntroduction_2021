@@ -24,7 +24,7 @@ setwd(dir="Rcourse")
 
 * Getting help: <br>
 
-From the terminal:
+From the console:
 
 ```{r}
 help(getwd)

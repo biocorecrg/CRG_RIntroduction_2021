@@ -10,7 +10,7 @@
 |     *     | multiplication|
 |  ^ or **  | exponential   |
 
-In the R terminal:
+In the R console:
 ```{r}
 10 - 2
 ```

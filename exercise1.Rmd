@@ -1,9 +1,9 @@
-## Exercice 1. Getting started.
+## Exercice 1. Getting started ~ 15 minutes
 
 Create the script "exercise1.R" (in R Studio: File -> New File) and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 1 in that  script.
 <br>Remember you can comment the code using #.
 
-**1- From the terminal, go to Rcourse/Module1.
+**1- From the console, go to Rcourse/Module1.
 First check where you currently are with getwd(); 
 then go to Rcourse/Module1 with setwd()**
 
@@ -21,7 +21,7 @@ setwd("~/Rcourse/Module1")
 </details>
 
 
-**2- Using R as a calculator, calculate the square root of 654.**
+**2- Using R as a calculator, calculate the square root of 654 (don't know the function? Search the internet!).**
 
 <details>
 <summary>
@@ -51,7 +51,7 @@ correction
 </details>
 
 **4- Create a new object "myobject" with value 60.
-Show "myobject" in the terminal.**
+Show "myobject" in the console.**
 
 <details>
 <summary>

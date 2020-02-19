@@ -12,6 +12,8 @@ All columns in a data frame:
 * can be of different **types** (numeric, character or logical)
 * must have the same **length**
 
+A data frame is organized by **column**: columns are **variables** and rows are **observations** of each variable.
+
 ### Create a data frame 
 
 * With the **data.frame** function:
@@ -35,7 +37,7 @@ df[2,1] <- "yes"
 ```
 
 ```{r}
-# Create a data frame with 
+# Create a data frame with:
 df2 <- data.frame(label=rep("test",5), column2=1:5, stringsAsFactors = FALSE)
 # Replace one value
 df2[2,1] <- "yes"

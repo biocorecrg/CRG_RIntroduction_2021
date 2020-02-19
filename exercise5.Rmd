@@ -95,7 +95,7 @@ apply(df[,-grep("Sex", colnames(df))], 2, mean)
 
 </details>
 
-**4- Add one row to df2: Georges who is 53 years old and 168 tall.**
+**4- Add one row to df: Georges who is 53 years old and 168cm tall.**
 
 <details>
 <summary>
@@ -125,7 +125,7 @@ rownames(df) <- paste("Patient", 1:5, sep="")
 
 </details>
 
-**6- Create the data frame df2 that is a subset of df which will contain only the female entries.**
+**6- Create the data frame df2 that is a subset of df containing only the female entries.**
  
 <details>
 <summary>
@@ -141,7 +141,7 @@ df2 <- df[df$Sex=="F",]
 
 </details>
 
-**7- Create the data frame df3 that is a subset of df which will contain only entries of males taller than 170.**
+**7- Create the data frame df3 that is a subset of df containing only entries of males taller than 170.**
  
 <details>
 <summary>

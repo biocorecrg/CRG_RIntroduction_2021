@@ -24,7 +24,7 @@ setwd("~/Rcourse/Module1")
 
 
 **2- Create a numeric vector "y" which contains the numbers from 2 to 11, both included.** 
-<br>Show y in the terminal.
+<br>Show y in the console.
 
 <details>
 <summary>
@@ -35,7 +35,7 @@ correction
 y <- c(2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
 # same as
 y <- 2:11
-# show in terminal:
+# show in console:
 y
 ```
 
@@ -175,20 +175,7 @@ summary(x)
 y2 <- c(1, 11, 5, 62,  18, 2, 8)
 ```
 
-**13. What is the sum of all elements in y2 ?**
-
-<details>
-<summary>
-correction 
-</summary>
-
-```{r}
-sum(y2)
-```
-
-</details>
-
-**14- Which elements of y2 are also present in y ?<br>Note: remember the %in% operator.**
+**13- Which elements of y2 are also present in y ?<br>Note: remember the %in% operator.**
 
 <details>
 <summary>
@@ -201,7 +188,7 @@ y2[ y2 %in% y ]
 
 </details>
 
-**15- Multiply each element of y2 by 1.5: reassign.**
+**14- Multiply each element of y2 by 1.5: reassign.**
 
 <details>
 <summary>
@@ -215,7 +202,7 @@ y2 <- y2 * 1.5
 </details>
 
 
-**16- Use the function any() to check if the number 3 is present.<br>Check the help page of any()!**
+**15- Use the function any() to check if the number 3 is present.<br>Check the help page of any()!**
 
 <details>
 <summary>
@@ -238,7 +225,7 @@ any( y2 == 3 )
 myvector <- c(1, 2, 3, 1, 2, 3, 1, 2, 3)
 ```
 
-**Create the same vector using the rep() function (?rep)**
+**Create the same vector using the rep.int() function (?rep.int)**
 
 <details>
 <summary>
@@ -246,7 +233,7 @@ correction
 </summary>
 
 ```{r}
-myvector <- rep(1:3, 3)
+myvector <- rep.int(x=1:3, times=3)
 ```
 
 </details>
@@ -306,6 +293,4 @@ myvector <- c(myvector, newvector)
 ```
 
 </details>
-
-
 

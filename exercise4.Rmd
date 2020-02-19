@@ -44,7 +44,7 @@ mat <- rbind(x, y, z)
 
 </details>
 
-**2- Create the same matrix now using the matrix function.**
+**2- Create the same matrix now using the matrix function. Repeat the same using the byrow=TRUE parameter: what is different?**
 
 <details>
 <summary>
@@ -53,8 +53,8 @@ correction
 
 ```{r}
 mat <- matrix(data=c(x, y, z), nrow=3, ncol=4)
-# Try with the "byrow=TRUE" parameter: what is different ?
-mat <- matrix(data=c(x, y, z), nrow=3, ncol=4, byrow=TRUE)
+# "byrow=TRUE": what is different in the output ?
+mat_byrow <- matrix(data=c(x, y, z), nrow=3, ncol=4, byrow=TRUE)
 ```
 
 </details>

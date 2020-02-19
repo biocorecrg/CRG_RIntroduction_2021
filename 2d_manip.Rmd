@@ -75,23 +75,7 @@ Same principle as vectors... but in 2 dimensions!
 
 #### Examples
 
- + select the columns of b if **at least one element in the 3rd row is less than or equal to 4**:
-
-```{r}
-# create b
-b <- matrix(c(1, 0, 34, 44, 12, 4), 
-	nrow=3, 
-	ncol=2)
-# third row of b:
-b[3, ]
-# element(s) in the third row of b that is (are) less than or equal to 4
-b[3, ] <= 4
-# retrieve the corresponding sub-matrix
-b[ ,b[3, ] <= 4]
-```
- 
- + Select rows of b if **at least one element in column 2 is greater than 24**:
-
+ + Select rows of b if **at least one element in column 2 is greater than 24** (i.e. select patients if they are older than 24):
 ```{r}
 # build data frame d
 d <- data.frame(Name=c("Maria", "Juan", "Alba"), 
@@ -108,12 +92,26 @@ d[d$Age > 24, ]
 <img src="images/df_col2.png" width="450"/>
 
  + Select patients (rows) based on 2 criteria: age of the patient (column 2) should be great than or equal to 25, and the patient should be vegetarian (column 3):
-
 ```{r}
 d[ d$Age >= 25 & d$Vegetarian == TRUE, ]
 ```
 
 <img src="images/df_col2_col3.png" width="650"/>
+
+ + Select the columns of b if **at least one element in the 3rd row is less than or equal to 4**:
+```{r}
+# create b
+b <- matrix(c(1, 0, 34, 44, 12, 4), 
+	nrow=3, 
+	ncol=2)
+# third row of b:
+b[3, ]
+# element(s) in the third row of b that is (are) less than or equal to 4
+b[3, ] <= 4
+# retrieve the corresponding sub-matrix
+b[ ,b[3, ] <= 4]
+```
+
 
 #### More useful commands
 
@@ -148,10 +146,11 @@ Powerful tool to apply a command to all rows or all columns of a data frame or a
 For example, instead of calculating the sum of each row, you might be interested in calculating the median ? But rowMedians doesn't exist !
 <br><br>
 **apply** takes 3 arguments:
+
 * first argument **X**: 2-dimensional object
 * second argument **MARGIN**: apply by row or by column?
-  + 1: by row
-  + 2: by column
+	+ 1: by row
+	+ 2: by column
 * third argument **FUN**: function to apply to either rows or columns
 
 ```{r}

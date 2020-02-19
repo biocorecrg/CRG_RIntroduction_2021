@@ -16,7 +16,7 @@
 <font size="12"> <b>..</b></font>: one directory up the tree
 
 
-## Navigate the tree of directory with the R terminal
+## Navigate the tree of directory with the R console
 
 * Get the path of the current directory (know where you are working at the moment) with <b>getwd</b> (get working directory):
 ```{r, eval=FALSE}	
