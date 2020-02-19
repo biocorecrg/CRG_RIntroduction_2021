@@ -199,9 +199,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
 <li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
 <li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
-<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
-<li class="chapter" data-level="11.3.3" data-path="exercise-6-.html"><a href="exercise-6-.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
+<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frames-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frames: play with the arguments of read.table</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="extra-exercise.html"><a href="extra-exercise.html"><i class="fa fa-check"></i><b>11.4</b> Extra Exercise</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
 <li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
@@ -290,27 +290,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><em>A Venn diagram shows all possible logical relations between data sets.</em>
 <br>
 The <strong>venn.diagram</strong> function from the <strong>VennDiagram</strong> package allows to create up to a 5-way Venn Diagram (i.e. 5 circles representing 5 data sets).</p>
-<div class="sourceCode" id="cb398"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb398-1" data-line-number="1"><span class="co"># load package</span></a>
-<a class="sourceLine" id="cb398-2" data-line-number="2"><span class="kw">library</span>(VennDiagram)</a>
-<a class="sourceLine" id="cb398-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb398-4" data-line-number="4"><span class="co"># Prepare character vectors</span></a>
-<a class="sourceLine" id="cb398-5" data-line-number="5">v1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;NPC1&quot;</span>, <span class="st">&quot;NAPG&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;VHL&quot;</span>, <span class="st">&quot;BTD&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;HAUS1&quot;</span>)</a>
-<a class="sourceLine" id="cb398-6" data-line-number="6">v2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;SMAD4&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;ASXL3&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;CKLF&quot;</span>, <span class="st">&quot;TIAM1&quot;</span>, <span class="st">&quot;VHL&quot;</span>, <span class="st">&quot;BTD&quot;</span>, <span class="st">&quot;EMP1&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;PAX3&quot;</span>)</a>
-<a class="sourceLine" id="cb398-7" data-line-number="7">v3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;PAX3&quot;</span>, <span class="st">&quot;SMAD4&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;CDKN2A&quot;</span>, <span class="st">&quot;DENR&quot;</span>, <span class="st">&quot;NPC1&quot;</span>, <span class="st">&quot;NAPG&quot;</span>)</a>
-<a class="sourceLine" id="cb398-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb398-9" data-line-number="9"><span class="co"># Create a list of vectors</span></a>
-<a class="sourceLine" id="cb398-10" data-line-number="10">vlist &lt;-<span class="st"> </span><span class="kw">list</span>(v1, v2, v3)</a>
-<a class="sourceLine" id="cb398-11" data-line-number="11"><span class="kw">names</span>(vlist) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;list1&quot;</span>, <span class="st">&quot;list2&quot;</span>, <span class="st">&quot;list3&quot;</span>)</a>
-<a class="sourceLine" id="cb398-12" data-line-number="12"></a>
-<a class="sourceLine" id="cb398-13" data-line-number="13"><span class="co"># 2-way Venn</span></a>
-<a class="sourceLine" id="cb398-14" data-line-number="14"><span class="kw">venn.diagram</span>(vlist[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>], </a>
-<a class="sourceLine" id="cb398-15" data-line-number="15">    <span class="dt">filename=</span><span class="st">&quot;Venn_2way.png&quot;</span>,</a>
-<a class="sourceLine" id="cb398-16" data-line-number="16">    <span class="dt">imagetype=</span><span class="st">&quot;png&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb395"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb395-1" data-line-number="1"><span class="co"># load package</span></a>
+<a class="sourceLine" id="cb395-2" data-line-number="2"><span class="kw">library</span>(VennDiagram)</a>
+<a class="sourceLine" id="cb395-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb395-4" data-line-number="4"><span class="co"># Prepare character vectors</span></a>
+<a class="sourceLine" id="cb395-5" data-line-number="5">v1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;NPC1&quot;</span>, <span class="st">&quot;NAPG&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;VHL&quot;</span>, <span class="st">&quot;BTD&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;HAUS1&quot;</span>)</a>
+<a class="sourceLine" id="cb395-6" data-line-number="6">v2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;SMAD4&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;ASXL3&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;CKLF&quot;</span>, <span class="st">&quot;TIAM1&quot;</span>, <span class="st">&quot;VHL&quot;</span>, <span class="st">&quot;BTD&quot;</span>, <span class="st">&quot;EMP1&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;PAX3&quot;</span>)</a>
+<a class="sourceLine" id="cb395-7" data-line-number="7">v3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;PAX3&quot;</span>, <span class="st">&quot;SMAD4&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;CDKN2A&quot;</span>, <span class="st">&quot;DENR&quot;</span>, <span class="st">&quot;NPC1&quot;</span>, <span class="st">&quot;NAPG&quot;</span>)</a>
+<a class="sourceLine" id="cb395-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb395-9" data-line-number="9"><span class="co"># Create a list of vectors</span></a>
+<a class="sourceLine" id="cb395-10" data-line-number="10">vlist &lt;-<span class="st"> </span><span class="kw">list</span>(v1, v2, v3)</a>
+<a class="sourceLine" id="cb395-11" data-line-number="11"><span class="kw">names</span>(vlist) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;list1&quot;</span>, <span class="st">&quot;list2&quot;</span>, <span class="st">&quot;list3&quot;</span>)</a>
+<a class="sourceLine" id="cb395-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb395-13" data-line-number="13"><span class="co"># 2-way Venn</span></a>
+<a class="sourceLine" id="cb395-14" data-line-number="14"><span class="kw">venn.diagram</span>(vlist[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>], </a>
+<a class="sourceLine" id="cb395-15" data-line-number="15">    <span class="dt">filename=</span><span class="st">&quot;Venn_2way.png&quot;</span>,</a>
+<a class="sourceLine" id="cb395-16" data-line-number="16">    <span class="dt">imagetype=</span><span class="st">&quot;png&quot;</span>)</a></code></pre></div>
 <p><img src="images/plots/Venn_2way.png" width="450"/></p>
-<div class="sourceCode" id="cb399"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb399-1" data-line-number="1"><span class="co"># 3-way Venn</span></a>
-<a class="sourceLine" id="cb399-2" data-line-number="2"><span class="kw">venn.diagram</span>(vlist, </a>
-<a class="sourceLine" id="cb399-3" data-line-number="3">        <span class="dt">filename=</span><span class="st">&quot;Venn_3way.png&quot;</span>,</a>
-<a class="sourceLine" id="cb399-4" data-line-number="4">        <span class="dt">imagetype=</span><span class="st">&quot;png&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb396-1" data-line-number="1"><span class="co"># 3-way Venn</span></a>
+<a class="sourceLine" id="cb396-2" data-line-number="2"><span class="kw">venn.diagram</span>(vlist, </a>
+<a class="sourceLine" id="cb396-3" data-line-number="3">        <span class="dt">filename=</span><span class="st">&quot;Venn_3way.png&quot;</span>,</a>
+<a class="sourceLine" id="cb396-4" data-line-number="4">        <span class="dt">imagetype=</span><span class="st">&quot;png&quot;</span>)</a></code></pre></div>
 <p><img src="images/plots/Venn_3way.png" width="450"/></p>
 <ul>
 <li>More arguments:
@@ -323,15 +323,15 @@ The <strong>venn.diagram</strong> function from the <strong>VennDiagram</strong>
 <li>cat.col : color of category labels</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb400"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb400-1" data-line-number="1"><span class="kw">venn.diagram</span>(vlist,     </a>
-<a class="sourceLine" id="cb400-2" data-line-number="2">        <span class="dt">filename=</span><span class="st">&quot;Venn_3way_more.png&quot;</span>,</a>
-<a class="sourceLine" id="cb400-3" data-line-number="3">        <span class="dt">imagetype=</span><span class="st">&quot;png&quot;</span>,</a>
-<a class="sourceLine" id="cb400-4" data-line-number="4">    <span class="dt">main=</span><span class="st">&quot;Venn diagram&quot;</span>,</a>
-<a class="sourceLine" id="cb400-5" data-line-number="5">    <span class="dt">sub=</span><span class="st">&quot;3-way&quot;</span>,</a>
-<a class="sourceLine" id="cb400-6" data-line-number="6">    <span class="dt">main.col=</span><span class="st">&quot;red&quot;</span>,</a>
-<a class="sourceLine" id="cb400-7" data-line-number="7">    <span class="dt">fill=</span><span class="kw">c</span>(<span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;lightsalmon&quot;</span>),</a>
-<a class="sourceLine" id="cb400-8" data-line-number="8">    <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;lightsalmon&quot;</span>),</a>
-<a class="sourceLine" id="cb400-9" data-line-number="9">    <span class="dt">cat.col=</span><span class="kw">c</span>(<span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;salmon&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb397"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb397-1" data-line-number="1"><span class="kw">venn.diagram</span>(vlist,     </a>
+<a class="sourceLine" id="cb397-2" data-line-number="2">        <span class="dt">filename=</span><span class="st">&quot;Venn_3way_more.png&quot;</span>,</a>
+<a class="sourceLine" id="cb397-3" data-line-number="3">        <span class="dt">imagetype=</span><span class="st">&quot;png&quot;</span>,</a>
+<a class="sourceLine" id="cb397-4" data-line-number="4">    <span class="dt">main=</span><span class="st">&quot;Venn diagram&quot;</span>,</a>
+<a class="sourceLine" id="cb397-5" data-line-number="5">    <span class="dt">sub=</span><span class="st">&quot;3-way&quot;</span>,</a>
+<a class="sourceLine" id="cb397-6" data-line-number="6">    <span class="dt">main.col=</span><span class="st">&quot;red&quot;</span>,</a>
+<a class="sourceLine" id="cb397-7" data-line-number="7">    <span class="dt">fill=</span><span class="kw">c</span>(<span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;lightsalmon&quot;</span>),</a>
+<a class="sourceLine" id="cb397-8" data-line-number="8">    <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;lightsalmon&quot;</span>),</a>
+<a class="sourceLine" id="cb397-9" data-line-number="9">    <span class="dt">cat.col=</span><span class="kw">c</span>(<span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;salmon&quot;</span>))</a></code></pre></div>
 <p><img src="images/plots/Venn_3way_more.png" width="500"/></p>
 
 </div>

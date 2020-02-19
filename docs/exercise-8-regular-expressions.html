@@ -199,9 +199,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
 <li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
 <li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
-<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
-<li class="chapter" data-level="11.3.3" data-path="exercise-6-.html"><a href="exercise-6-.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
+<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frames-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frames: play with the arguments of read.table</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="extra-exercise.html"><a href="extra-exercise.html"><i class="fa fa-check"></i><b>11.4</b> Extra Exercise</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
 <li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
@@ -293,34 +293,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb319-1" data-line-number="1"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb319-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb317-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb317-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>1- Play with grep</strong></p>
 <ul>
 <li>Create the following data frame</li>
 </ul>
-<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb320-1" data-line-number="1">df2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span><span class="kw">c</span>(<span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">67</span>, <span class="dv">40</span>, <span class="dv">27</span>), </a>
-<a class="sourceLine" id="cb320-2" data-line-number="2">    <span class="dt">citizenship=</span><span class="kw">c</span>(<span class="st">&quot;England&quot;</span>, <span class="st">&quot;India&quot;</span>, <span class="st">&quot;Spain&quot;</span>, <span class="st">&quot;Brasil&quot;</span>, <span class="st">&quot;Tunisia&quot;</span>, <span class="st">&quot;Poland&quot;</span>), </a>
-<a class="sourceLine" id="cb320-3" data-line-number="3">    <span class="dt">row.names=</span><span class="kw">paste</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;Patient&quot;</span>, <span class="st">&quot;Doctor&quot;</span>), <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">2</span>)), <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>),</a>
-<a class="sourceLine" id="cb320-4" data-line-number="4">    <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)</a></code></pre></div>
-<p>Using grep: create a smaller data frame df3 that contains only the Patient but NOT the Doctor information.</p>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb318-1" data-line-number="1">df2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span><span class="kw">c</span>(<span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">67</span>, <span class="dv">40</span>, <span class="dv">27</span>), </a>
+<a class="sourceLine" id="cb318-2" data-line-number="2">    <span class="dt">citizenship=</span><span class="kw">c</span>(<span class="st">&quot;England&quot;</span>, <span class="st">&quot;India&quot;</span>, <span class="st">&quot;Spain&quot;</span>, <span class="st">&quot;Brasil&quot;</span>, <span class="st">&quot;Tunisia&quot;</span>, <span class="st">&quot;Poland&quot;</span>), </a>
+<a class="sourceLine" id="cb318-3" data-line-number="3">    <span class="dt">row.names=</span><span class="kw">paste</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;Patient&quot;</span>, <span class="st">&quot;Doctor&quot;</span>), <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">2</span>)), <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>),</a>
+<a class="sourceLine" id="cb318-4" data-line-number="4">    <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)</a></code></pre></div>
+<p>Using grep: create the smaller data frame df3 that contains only the Patient’s but NOT the Doctor’s information.</p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb321-1" data-line-number="1"><span class="co"># Select row names</span></a>
-<a class="sourceLine" id="cb321-2" data-line-number="2"><span class="kw">rownames</span>(df2)</a>
-<a class="sourceLine" id="cb321-3" data-line-number="3"><span class="co"># Select only rownames that correspond to patients</span></a>
-<a class="sourceLine" id="cb321-4" data-line-number="4"><span class="kw">grep</span>(<span class="st">&quot;Patient&quot;</span>, <span class="kw">rownames</span>(df2))</a>
-<a class="sourceLine" id="cb321-5" data-line-number="5"><span class="co"># Create data frame that contains only those rows</span></a>
-<a class="sourceLine" id="cb321-6" data-line-number="6">df3 &lt;-<span class="st"> </span>df2[<span class="kw">grep</span>(<span class="st">&quot;Patient&quot;</span>, <span class="kw">rownames</span>(df2)), ]</a></code></pre></div>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb319-1" data-line-number="1"><span class="co"># Select row names</span></a>
+<a class="sourceLine" id="cb319-2" data-line-number="2"><span class="kw">rownames</span>(df2)</a>
+<a class="sourceLine" id="cb319-3" data-line-number="3"><span class="co"># Select only rownames that correspond to patients</span></a>
+<a class="sourceLine" id="cb319-4" data-line-number="4"><span class="kw">grep</span>(<span class="st">&quot;Patient&quot;</span>, <span class="kw">rownames</span>(df2))</a>
+<a class="sourceLine" id="cb319-5" data-line-number="5"><span class="co"># Create data frame that contains only those rows</span></a>
+<a class="sourceLine" id="cb319-6" data-line-number="6">df3 &lt;-<span class="st"> </span>df2[<span class="kw">grep</span>(<span class="st">&quot;Patient&quot;</span>, <span class="kw">rownames</span>(df2)), ]</a></code></pre></div>
+</details>
+<ul>
+<li>Use <strong>grep</strong> and <strong><em>one</em></strong> regular expression to retrieve from df2 patients/doctors coming from either <strong>Brasil</strong> or <strong>Spain</strong>. Brainstorm a bit!</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb320-1" data-line-number="1">df2[<span class="kw">grep</span>(<span class="st">&quot;a[a-z]*i&quot;</span>, df2<span class="op">$</span>citizenship),]</a></code></pre></div>
+</details>
+<ul>
+<li>Use <strong>grep</strong> and <strong><em>one</em></strong> regular expression to retrieve from df2 patients/doctors coming from either <strong>Brasil</strong> or <strong>England</strong>.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb321-1" data-line-number="1">df2[<span class="kw">grep</span>(<span class="st">&quot;[gi]l&quot;</span>, df2<span class="op">$</span>citizenship),]</a></code></pre></div>
 </details>
 <p><strong>2- Play with gsub</strong></p>
 <p>Build this vector of file names:</p>
 <div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb322-1" data-line-number="1">vector1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;L2_sample1_GTAGCG.fastq.gz&quot;</span>, <span class="st">&quot;L1_sample2_ATTGCC.fastq.gz&quot;</span>, </a>
 <a class="sourceLine" id="cb322-2" data-line-number="2">    <span class="st">&quot;L1_sample3_TGTTAC.fastq.gz&quot;</span>, <span class="st">&quot;L4_sample4_ATGGTA.fastq.gz&quot;</span>)</a></code></pre></div>
-<p>Use gsub and an appropriate regular expression to remove all but “sample1”, “sample2”, “sample3” and “sample4” from vector1.</p>
+<p>Use <strong>gsub</strong> and an appropriate <strong>regular expression</strong> on <strong>vector1</strong> to retrieve only “sample1”, “sample2”, “sample3” and “sample4”.</p>
 <details>
 <p><summary>
 correction

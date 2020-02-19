@@ -199,9 +199,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
 <li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
 <li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
-<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
-<li class="chapter" data-level="11.3.3" data-path="exercise-6-.html"><a href="exercise-6-.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
+<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frames-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frames: play with the arguments of read.table</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="extra-exercise.html"><a href="extra-exercise.html"><i class="fa fa-check"></i><b>11.4</b> Extra Exercise</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
 <li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
@@ -290,44 +290,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Simple boxplot showing the data distribution of sample 1:</li>
 </ul>
-<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb409-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span><span class="st">&quot;&quot;</span>, <span class="dt">y=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb406-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span><span class="st">&quot;&quot;</span>, <span class="dt">y=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <ul>
 <li>Split the data into 2 boxes:</li>
 </ul>
-<div class="sourceCode" id="cb410"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb410-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>grouping, <span class="dt">y=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb407-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>grouping, <span class="dt">y=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <ul>
 <li>What if you want to plot both sample1 and sample2 ?<br>
 <em>You need to convert into a <strong>long</strong> format</em></li>
 </ul>
 <p>Plotting both sample1 and sample2:</p>
-<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb411-1" data-line-number="1"><span class="co"># install package reshape2</span></a>
-<a class="sourceLine" id="cb411-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;reshape2&quot;</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb412-1" data-line-number="1"><span class="co"># load package</span></a>
-<a class="sourceLine" id="cb412-2" data-line-number="2"><span class="kw">library</span>(<span class="st">&quot;reshape2&quot;</span>)</a>
-<a class="sourceLine" id="cb412-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb412-4" data-line-number="4"><span class="co"># convert to long format</span></a>
-<a class="sourceLine" id="cb412-5" data-line-number="5">df_long &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="dt">data=</span>df2)</a>
-<a class="sourceLine" id="cb412-6" data-line-number="6">    <span class="co"># all numeric values are organized into only one column: value</span></a>
-<a class="sourceLine" id="cb412-7" data-line-number="7"><span class="co"># plot:</span></a>
-<a class="sourceLine" id="cb412-8" data-line-number="8"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb412-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb408-1" data-line-number="1"><span class="co"># install package reshape2</span></a>
+<a class="sourceLine" id="cb408-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;reshape2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb409-1" data-line-number="1"><span class="co"># load package</span></a>
+<a class="sourceLine" id="cb409-2" data-line-number="2"><span class="kw">library</span>(<span class="st">&quot;reshape2&quot;</span>)</a>
+<a class="sourceLine" id="cb409-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb409-4" data-line-number="4"><span class="co"># convert to long format</span></a>
+<a class="sourceLine" id="cb409-5" data-line-number="5">df_long &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="dt">data=</span>df2)</a>
+<a class="sourceLine" id="cb409-6" data-line-number="6">    <span class="co"># all numeric values are organized into only one column: value</span></a>
+<a class="sourceLine" id="cb409-7" data-line-number="7"><span class="co"># plot:</span></a>
+<a class="sourceLine" id="cb409-8" data-line-number="8"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb409-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <ul>
 <li>What if now you also want to see the distribution of “yes” and “no” in both sample1 and sample2 ?<br>
 <em>Integrate a parameter to the <strong>aes()</strong></em></li>
 </ul>
-<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb413-1" data-line-number="1"><span class="co"># Either color (color of the box border)</span></a>
-<a class="sourceLine" id="cb413-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">color=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb413-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
-<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb414-1" data-line-number="1"><span class="co"># Or fill (color inside the box)</span></a>
-<a class="sourceLine" id="cb414-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb414-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb410"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb410-1" data-line-number="1"><span class="co"># Either color (color of the box border)</span></a>
+<a class="sourceLine" id="cb410-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">color=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb410-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb411-1" data-line-number="1"><span class="co"># Or fill (color inside the box)</span></a>
+<a class="sourceLine" id="cb411-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb411-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <p>Do you want to change the default colors?<br>
 * Integrate either layer:
 * <strong>scale_color_manual()</strong>
 * <strong>scale_fill_manual</strong></p>
-<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb415-1" data-line-number="1">pbox &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb415-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb415-3" data-line-number="3"><span class="st">    </span><span class="kw">scale_fill_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb412-1" data-line-number="1">pbox &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb412-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb412-3" data-line-number="3"><span class="st">    </span><span class="kw">scale_fill_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</a></code></pre></div>
 </div>
             </section>
 

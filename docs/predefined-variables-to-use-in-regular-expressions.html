@@ -199,9 +199,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
 <li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
 <li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
-<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
-<li class="chapter" data-level="11.3.3" data-path="exercise-6-.html"><a href="exercise-6-.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
+<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frames-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frames: play with the arguments of read.table</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="extra-exercise.html"><a href="extra-exercise.html"><i class="fa fa-check"></i><b>11.4</b> Extra Exercise</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
 <li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
@@ -336,14 +336,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb313-1" data-line-number="1"><span class="kw">gsub</span>(<span class="dt">pattern=</span><span class="st">&quot;@[[:lower:][:punct:]]+&quot;</span>, </a>
 <a class="sourceLine" id="cb313-2" data-line-number="2">    <span class="dt">replacement=</span><span class="st">&quot;&quot;</span>, </a>
 <a class="sourceLine" id="cb313-3" data-line-number="3">    <span class="dt">x=</span>vec_ad)</a></code></pre></div>
-<pre><code>* Same thing but remove additionally any number(s) BEFORE the @ (if any):</code></pre>
-<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb315-1" data-line-number="1"><span class="kw">gsub</span>(<span class="dt">pattern=</span><span class="st">&quot;[[:digit:]]*@[[:lower:][:punct:]]+&quot;</span>,</a>
+<ul>
+<li>Same thing but remove additionally any number(s) BEFORE the @ (if any):</li>
+</ul>
+<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb314-1" data-line-number="1"><span class="kw">gsub</span>(<span class="dt">pattern=</span><span class="st">&quot;[[:digit:]]*@[[:lower:][:punct:]]+&quot;</span>,</a>
+<a class="sourceLine" id="cb314-2" data-line-number="2">        <span class="dt">replacement=</span><span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb314-3" data-line-number="3">        <span class="dt">x=</span>vec_ad)</a></code></pre></div>
+<ul>
+<li>Same but simplified:</li>
+</ul>
+<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb315-1" data-line-number="1"><span class="kw">gsub</span>(<span class="dt">pattern=</span><span class="st">&quot;[[:digit:]]*@[[:print:]]+&quot;</span>,</a>
 <a class="sourceLine" id="cb315-2" data-line-number="2">        <span class="dt">replacement=</span><span class="st">&quot;&quot;</span>,</a>
 <a class="sourceLine" id="cb315-3" data-line-number="3">        <span class="dt">x=</span>vec_ad)</a></code></pre></div>
-<pre><code>* Same but simplified:</code></pre>
-<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb317-1" data-line-number="1"><span class="kw">gsub</span>(<span class="dt">pattern=</span><span class="st">&quot;[[:digit:]]*@[[:print:]]+&quot;</span>,</a>
-<a class="sourceLine" id="cb317-2" data-line-number="2">        <span class="dt">replacement=</span><span class="st">&quot;&quot;</span>,</a>
-<a class="sourceLine" id="cb317-3" data-line-number="3">        <span class="dt">x=</span>vec_ad)</a></code></pre></div>
 </div>
             </section>
 
