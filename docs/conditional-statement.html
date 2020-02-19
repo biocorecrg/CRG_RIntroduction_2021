@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -292,45 +292,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 “if” statement
 </h3>
 <p>Structure of the <strong>if statement</strong>:</p>
-<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb326-1" data-line-number="1"><span class="cf">if</span>(condition){</a>
-<a class="sourceLine" id="cb326-2" data-line-number="2">    action_command</a>
-<a class="sourceLine" id="cb326-3" data-line-number="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb324-1" data-line-number="1"><span class="cf">if</span>(condition){</a>
+<a class="sourceLine" id="cb324-2" data-line-number="2">    action_command</a>
+<a class="sourceLine" id="cb324-3" data-line-number="3">}</a></code></pre></div>
 <p>If the <strong>condition</strong> is TRUE, then proceed to the <strong>action_command</strong>; if it is FALSE, nothing happens.
 <br></p>
-<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb327-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">10</span></a>
-<a class="sourceLine" id="cb327-2" data-line-number="2"><span class="co"># print if value is &gt; 3</span></a>
-<a class="sourceLine" id="cb327-3" data-line-number="3"><span class="cf">if</span>(k <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>){</a>
-<a class="sourceLine" id="cb327-4" data-line-number="4">  <span class="kw">print</span>(k)</a>
-<a class="sourceLine" id="cb327-5" data-line-number="5">}</a>
-<a class="sourceLine" id="cb327-6" data-line-number="6"><span class="co"># print if value is &lt; 3</span></a>
-<a class="sourceLine" id="cb327-7" data-line-number="7"><span class="cf">if</span>(k <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>){</a>
-<a class="sourceLine" id="cb327-8" data-line-number="8">  <span class="kw">print</span>(k)</a>
-<a class="sourceLine" id="cb327-9" data-line-number="9">}</a></code></pre></div>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb325-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">10</span></a>
+<a class="sourceLine" id="cb325-2" data-line-number="2"><span class="co"># print if value is &gt; 3</span></a>
+<a class="sourceLine" id="cb325-3" data-line-number="3"><span class="cf">if</span>(k <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>){</a>
+<a class="sourceLine" id="cb325-4" data-line-number="4">  <span class="kw">print</span>(k)</a>
+<a class="sourceLine" id="cb325-5" data-line-number="5">}</a>
+<a class="sourceLine" id="cb325-6" data-line-number="6"><span class="co"># print if value is &lt; 3</span></a>
+<a class="sourceLine" id="cb325-7" data-line-number="7"><span class="cf">if</span>(k <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>){</a>
+<a class="sourceLine" id="cb325-8" data-line-number="8">  <span class="kw">print</span>(k)</a>
+<a class="sourceLine" id="cb325-9" data-line-number="9">}</a></code></pre></div>
 <h4>
 With <strong>else</strong>
 </h4>
-<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb328-1" data-line-number="1"><span class="cf">if</span>(condition){</a>
-<a class="sourceLine" id="cb328-2" data-line-number="2">    action_command1</a>
-<a class="sourceLine" id="cb328-3" data-line-number="3">}<span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb328-4" data-line-number="4">    action_command2</a>
-<a class="sourceLine" id="cb328-5" data-line-number="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb326-1" data-line-number="1"><span class="cf">if</span>(condition){</a>
+<a class="sourceLine" id="cb326-2" data-line-number="2">    action_command1</a>
+<a class="sourceLine" id="cb326-3" data-line-number="3">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb326-4" data-line-number="4">    action_command2</a>
+<a class="sourceLine" id="cb326-5" data-line-number="5">}</a></code></pre></div>
 <p>If the <strong>condition</strong> is TRUE, then proceed to the <strong>action_command1</strong>; if the <strong>condition</strong> is FALSE, proceed to <strong>action_command2</strong>.</p>
-<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb329-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">3</span></a>
-<a class="sourceLine" id="cb329-2" data-line-number="2"><span class="cf">if</span>(k <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>){</a>
-<a class="sourceLine" id="cb329-3" data-line-number="3">  <span class="kw">print</span>(<span class="st">&quot;greater than 3&quot;</span>)</a>
-<a class="sourceLine" id="cb329-4" data-line-number="4">}<span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb329-5" data-line-number="5">  <span class="kw">print</span>(<span class="st">&quot;less than 3&quot;</span>)</a>
-<a class="sourceLine" id="cb329-6" data-line-number="6">}</a></code></pre></div>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb327-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb327-2" data-line-number="2"><span class="cf">if</span>(k <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>){</a>
+<a class="sourceLine" id="cb327-3" data-line-number="3">  <span class="kw">print</span>(<span class="st">&quot;greater than 3&quot;</span>)</a>
+<a class="sourceLine" id="cb327-4" data-line-number="4">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb327-5" data-line-number="5">  <span class="kw">print</span>(<span class="st">&quot;less than 3&quot;</span>)</a>
+<a class="sourceLine" id="cb327-6" data-line-number="6">}</a></code></pre></div>
 <h4>
 With <strong>else if</strong>
 </h4>
-<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb330-1" data-line-number="1"><span class="cf">if</span>(condition1){</a>
-<a class="sourceLine" id="cb330-2" data-line-number="2">    action_command1</a>
-<a class="sourceLine" id="cb330-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(condition2){</a>
-<a class="sourceLine" id="cb330-4" data-line-number="4">    action_command2</a>
-<a class="sourceLine" id="cb330-5" data-line-number="5">}<span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb330-6" data-line-number="6">    action_command3</a>
-<a class="sourceLine" id="cb330-7" data-line-number="7">}</a></code></pre></div>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb328-1" data-line-number="1"><span class="cf">if</span>(condition1){</a>
+<a class="sourceLine" id="cb328-2" data-line-number="2">    action_command1</a>
+<a class="sourceLine" id="cb328-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(condition2){</a>
+<a class="sourceLine" id="cb328-4" data-line-number="4">    action_command2</a>
+<a class="sourceLine" id="cb328-5" data-line-number="5">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb328-6" data-line-number="6">    action_command3</a>
+<a class="sourceLine" id="cb328-7" data-line-number="7">}</a></code></pre></div>
 <p><img src="images/ifelseif.png" width="450"/></p>
 <p>If the <strong>condition1</strong> is TRUE, then proceed to the <strong>action_command1</strong>; if the <strong>condition1</strong> is FALSE, test for <strong>condition2</strong>: if the <strong>condition2</strong> is TRUE, proceed to the <strong>action_command2</strong>; if neither <strong>condition1</strong> nor <strong>condition2</strong> are TRUE, then proceed to the <strong>action_command3</strong>.
 <br><br>
@@ -338,28 +338,28 @@ With <strong>else if</strong>
 <ul>
 <li>Example without <strong>else</strong></li>
 </ul>
-<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb331-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">-2</span></a>
-<a class="sourceLine" id="cb331-2" data-line-number="2"><span class="co"># Test whether k is positive or negative or equal to 0</span></a>
-<a class="sourceLine" id="cb331-3" data-line-number="3"><span class="cf">if</span>(k <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>){</a>
-<a class="sourceLine" id="cb331-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;negative&quot;</span>)</a>
-<a class="sourceLine" id="cb331-5" data-line-number="5">}<span class="cf">else</span> <span class="cf">if</span>(k <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</a>
-<a class="sourceLine" id="cb331-6" data-line-number="6">    <span class="kw">print</span>(<span class="st">&quot;positive&quot;</span>)</a>
-<a class="sourceLine" id="cb331-7" data-line-number="7">}<span class="cf">else</span> <span class="cf">if</span>(k <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</a>
-<a class="sourceLine" id="cb331-8" data-line-number="8">    <span class="kw">print</span>(<span class="st">&quot;is 0&quot;</span>)</a>
-<a class="sourceLine" id="cb331-9" data-line-number="9">}</a></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb329-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">-2</span></a>
+<a class="sourceLine" id="cb329-2" data-line-number="2"><span class="co"># Test whether k is positive or negative or equal to 0</span></a>
+<a class="sourceLine" id="cb329-3" data-line-number="3"><span class="cf">if</span>(k <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb329-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;negative&quot;</span>)</a>
+<a class="sourceLine" id="cb329-5" data-line-number="5">}<span class="cf">else</span> <span class="cf">if</span>(k <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb329-6" data-line-number="6">    <span class="kw">print</span>(<span class="st">&quot;positive&quot;</span>)</a>
+<a class="sourceLine" id="cb329-7" data-line-number="7">}<span class="cf">else</span> <span class="cf">if</span>(k <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb329-8" data-line-number="8">    <span class="kw">print</span>(<span class="st">&quot;is 0&quot;</span>)</a>
+<a class="sourceLine" id="cb329-9" data-line-number="9">}</a></code></pre></div>
 <ul>
 <li>Example with <strong>else</strong></li>
 </ul>
-<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb332-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">10</span></a>
-<a class="sourceLine" id="cb332-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb332-3" data-line-number="3"><span class="co"># print if value is &lt;= 3</span></a>
-<a class="sourceLine" id="cb332-4" data-line-number="4"><span class="cf">if</span>(k <span class="op">&lt;=</span><span class="st"> </span><span class="dv">3</span>){</a>
-<a class="sourceLine" id="cb332-5" data-line-number="5">  <span class="kw">print</span>(<span class="st">&quot;less than or equal to 3&quot;</span>)</a>
-<a class="sourceLine" id="cb332-6" data-line-number="6">}<span class="cf">else</span> <span class="cf">if</span>(k <span class="op">&gt;=</span><span class="st"> </span><span class="dv">8</span>){</a>
-<a class="sourceLine" id="cb332-7" data-line-number="7">  <span class="kw">print</span>(<span class="st">&quot;greater than or equal to 8&quot;</span>)</a>
-<a class="sourceLine" id="cb332-8" data-line-number="8">}<span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb332-9" data-line-number="9">  <span class="kw">print</span>(<span class="st">&quot;greater than 3 and less than 8&quot;</span>)</a>
-<a class="sourceLine" id="cb332-10" data-line-number="10">}</a></code></pre></div>
+<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb330-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">10</span></a>
+<a class="sourceLine" id="cb330-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb330-3" data-line-number="3"><span class="co"># print if value is &lt;= 3</span></a>
+<a class="sourceLine" id="cb330-4" data-line-number="4"><span class="cf">if</span>(k <span class="op">&lt;=</span><span class="st"> </span><span class="dv">3</span>){</a>
+<a class="sourceLine" id="cb330-5" data-line-number="5">  <span class="kw">print</span>(<span class="st">&quot;less than or equal to 3&quot;</span>)</a>
+<a class="sourceLine" id="cb330-6" data-line-number="6">}<span class="cf">else</span> <span class="cf">if</span>(k <span class="op">&gt;=</span><span class="st"> </span><span class="dv">8</span>){</a>
+<a class="sourceLine" id="cb330-7" data-line-number="7">  <span class="kw">print</span>(<span class="st">&quot;greater than or equal to 8&quot;</span>)</a>
+<a class="sourceLine" id="cb330-8" data-line-number="8">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb330-9" data-line-number="9">  <span class="kw">print</span>(<span class="st">&quot;greater than 3 and less than 8&quot;</span>)</a>
+<a class="sourceLine" id="cb330-10" data-line-number="10">}</a></code></pre></div>
 <!--chapter:end:conditional.Rmd--> 
 </div>
             </section>

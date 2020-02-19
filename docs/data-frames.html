@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -295,38 +295,39 @@ All columns in a data frame:</p>
 <li>can be of different <strong>types</strong> (numeric, character or logical)</li>
 <li>must have the same <strong>length</strong></li>
 </ul>
+<p>A data frame is organized by <strong>column</strong>: columns are <strong>variables</strong> and rows are <strong>observations</strong> of each variable.</p>
 <div id="create-a-data-frame" class="section level3">
 <h3><span class="header-section-number">9.6.1</span> Create a data frame</h3>
 <ul>
 <li>With the <strong>data.frame</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb192-1" data-line-number="1"><span class="co"># stringsAsFactors: ensures that characters are treated as characters and not as factors</span></a>
-<a class="sourceLine" id="cb192-2" data-line-number="2">d &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </a>
-<a class="sourceLine" id="cb192-3" data-line-number="3">    <span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</a>
-<a class="sourceLine" id="cb192-4" data-line-number="4">    <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</a>
-<a class="sourceLine" id="cb192-5" data-line-number="5">    <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb190-1" data-line-number="1"><span class="co"># stringsAsFactors: ensures that characters are treated as characters and not as factors</span></a>
+<a class="sourceLine" id="cb190-2" data-line-number="2">d &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </a>
+<a class="sourceLine" id="cb190-3" data-line-number="3">    <span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</a>
+<a class="sourceLine" id="cb190-4" data-line-number="4">    <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</a>
+<a class="sourceLine" id="cb190-5" data-line-number="5">    <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
 <ul>
 <li>Example why “stringsAsFactors = FALSE” is useful</li>
 </ul>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb193-1" data-line-number="1"><span class="co"># Create a data frame with default parameters</span></a>
-<a class="sourceLine" id="cb193-2" data-line-number="2">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">label=</span><span class="kw">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="dt">column2=</span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb193-3" data-line-number="3"><span class="co"># Replace one value</span></a>
-<a class="sourceLine" id="cb193-4" data-line-number="4">df[<span class="dv">2</span>,<span class="dv">1</span>] &lt;-<span class="st"> &quot;yes&quot;</span></a>
-<a class="sourceLine" id="cb193-5" data-line-number="5"><span class="co"># Throws an error and doesn&#39;t replace the value !</span></a></code></pre></div>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb194-1" data-line-number="1"><span class="co"># Create a data frame with </span></a>
-<a class="sourceLine" id="cb194-2" data-line-number="2">df2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">label=</span><span class="kw">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="dt">column2=</span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb194-3" data-line-number="3"><span class="co"># Replace one value</span></a>
-<a class="sourceLine" id="cb194-4" data-line-number="4">df2[<span class="dv">2</span>,<span class="dv">1</span>] &lt;-<span class="st"> &quot;yes&quot;</span></a>
-<a class="sourceLine" id="cb194-5" data-line-number="5"><span class="co"># Works!</span></a></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb191-1" data-line-number="1"><span class="co"># Create a data frame with default parameters</span></a>
+<a class="sourceLine" id="cb191-2" data-line-number="2">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">label=</span><span class="kw">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="dt">column2=</span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb191-3" data-line-number="3"><span class="co"># Replace one value</span></a>
+<a class="sourceLine" id="cb191-4" data-line-number="4">df[<span class="dv">2</span>,<span class="dv">1</span>] &lt;-<span class="st"> &quot;yes&quot;</span></a>
+<a class="sourceLine" id="cb191-5" data-line-number="5"><span class="co"># Throws an error and doesn&#39;t replace the value !</span></a></code></pre></div>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb192-1" data-line-number="1"><span class="co"># Create a data frame with:</span></a>
+<a class="sourceLine" id="cb192-2" data-line-number="2">df2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">label=</span><span class="kw">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="dt">column2=</span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb192-3" data-line-number="3"><span class="co"># Replace one value</span></a>
+<a class="sourceLine" id="cb192-4" data-line-number="4">df2[<span class="dv">2</span>,<span class="dv">1</span>] &lt;-<span class="st"> &quot;yes&quot;</span></a>
+<a class="sourceLine" id="cb192-5" data-line-number="5"><span class="co"># Works!</span></a></code></pre></div>
 <ul>
 <li>Converting a matrix into a data frame:</li>
 </ul>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb195-1" data-line-number="1"><span class="co"># create a matrix</span></a>
-<a class="sourceLine" id="cb195-2" data-line-number="2">b &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </a>
-<a class="sourceLine" id="cb195-3" data-line-number="3">        <span class="dt">nrow=</span><span class="dv">3</span>,</a>
-<a class="sourceLine" id="cb195-4" data-line-number="4">        <span class="dt">ncol=</span><span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb195-5" data-line-number="5"><span class="co"># convert as data frame</span></a>
-<a class="sourceLine" id="cb195-6" data-line-number="6">b_df &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(b)</a></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb193-1" data-line-number="1"><span class="co"># create a matrix</span></a>
+<a class="sourceLine" id="cb193-2" data-line-number="2">b &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </a>
+<a class="sourceLine" id="cb193-3" data-line-number="3">        <span class="dt">nrow=</span><span class="dv">3</span>,</a>
+<a class="sourceLine" id="cb193-4" data-line-number="4">        <span class="dt">ncol=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb193-5" data-line-number="5"><span class="co"># convert as data frame</span></a>
+<a class="sourceLine" id="cb193-6" data-line-number="6">b_df &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(b)</a></code></pre></div>
 </div>
 <div id="data-frame-manipulation" class="section level3">
 <h3><span class="header-section-number">9.6.2</span> Data frame manipulation:</h3>

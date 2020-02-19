@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -291,14 +291,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>A simple bar plot :</li>
 </ul>
-<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb358-1" data-line-number="1"><span class="co"># Create a vector</span></a>
-<a class="sourceLine" id="cb358-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb358-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb358-4" data-line-number="4"><span class="co"># Count number of occurences of each character string</span></a>
-<a class="sourceLine" id="cb358-5" data-line-number="5">mytable &lt;-<span class="st"> </span><span class="kw">table</span>(x)</a>
-<a class="sourceLine" id="cb358-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb358-7" data-line-number="7"><span class="co"># Bar plot using that table</span></a>
-<a class="sourceLine" id="cb358-8" data-line-number="8"><span class="kw">barplot</span>(mytable)</a></code></pre></div>
+<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb356-1" data-line-number="1"><span class="co"># Create a vector</span></a>
+<a class="sourceLine" id="cb356-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb356-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb356-4" data-line-number="4"><span class="co"># Count number of occurences of each character string</span></a>
+<a class="sourceLine" id="cb356-5" data-line-number="5">mytable &lt;-<span class="st"> </span><span class="kw">table</span>(x)</a>
+<a class="sourceLine" id="cb356-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb356-7" data-line-number="7"><span class="co"># Bar plot using that table</span></a>
+<a class="sourceLine" id="cb356-8" data-line-number="8"><span class="kw">barplot</span>(mytable)</a></code></pre></div>
 <p><img src="images/plots/barplot1.png" width="450"/></p>
 <ul>
 <li>Customize a bit :
@@ -308,57 +308,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>las : orientation of x-axis labels: “2”: perpendicular to axis</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb359-1" data-line-number="1"><span class="kw">barplot</span>(mytable,</a>
-<a class="sourceLine" id="cb359-2" data-line-number="2">    <span class="dt">col=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,</a>
-<a class="sourceLine" id="cb359-3" data-line-number="3">    <span class="dt">main=</span><span class="st">&quot;bar plot&quot;</span>,</a>
-<a class="sourceLine" id="cb359-4" data-line-number="4">    <span class="dt">las=</span><span class="dv">2</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb357-1" data-line-number="1"><span class="kw">barplot</span>(mytable,</a>
+<a class="sourceLine" id="cb357-2" data-line-number="2">    <span class="dt">col=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,</a>
+<a class="sourceLine" id="cb357-3" data-line-number="3">    <span class="dt">main=</span><span class="st">&quot;bar plot&quot;</span>,</a>
+<a class="sourceLine" id="cb357-4" data-line-number="4">    <span class="dt">las=</span><span class="dv">2</span>)</a></code></pre></div>
 <p><img src="images/plots/barplot2.png" width="450"/></p>
 <ul>
 <li>Customize the ordering of the bars :</li>
 </ul>
 <p>By default, the bars are organized in alphabetical order. You can change it with the factors.</p>
-<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb360-1" data-line-number="1"><span class="co"># Create an ordered factor out of x</span></a>
-<a class="sourceLine" id="cb360-2" data-line-number="2">xfact &lt;-<span class="st"> </span><span class="kw">factor</span>(x, </a>
-<a class="sourceLine" id="cb360-3" data-line-number="3">    <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), </a>
-<a class="sourceLine" id="cb360-4" data-line-number="4">    <span class="dt">ordered=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb360-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb360-6" data-line-number="6"><span class="co"># Produce the table</span></a>
-<a class="sourceLine" id="cb360-7" data-line-number="7">xfacttable &lt;-<span class="st"> </span><span class="kw">table</span>(xfact)</a>
-<a class="sourceLine" id="cb360-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb360-9" data-line-number="9"><span class="co"># Plot the same way</span></a>
-<a class="sourceLine" id="cb360-10" data-line-number="10"><span class="kw">barplot</span>(xfacttable,</a>
-<a class="sourceLine" id="cb360-11" data-line-number="11">    <span class="dt">col=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,</a>
-<a class="sourceLine" id="cb360-12" data-line-number="12">        <span class="dt">main=</span><span class="st">&quot;reorganized bar plot&quot;</span>,</a>
-<a class="sourceLine" id="cb360-13" data-line-number="13">        <span class="dt">las=</span><span class="dv">2</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb358-1" data-line-number="1"><span class="co"># Create an ordered factor out of x</span></a>
+<a class="sourceLine" id="cb358-2" data-line-number="2">xfact &lt;-<span class="st"> </span><span class="kw">factor</span>(x, </a>
+<a class="sourceLine" id="cb358-3" data-line-number="3">    <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), </a>
+<a class="sourceLine" id="cb358-4" data-line-number="4">    <span class="dt">ordered=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb358-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb358-6" data-line-number="6"><span class="co"># Produce the table</span></a>
+<a class="sourceLine" id="cb358-7" data-line-number="7">xfacttable &lt;-<span class="st"> </span><span class="kw">table</span>(xfact)</a>
+<a class="sourceLine" id="cb358-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb358-9" data-line-number="9"><span class="co"># Plot the same way</span></a>
+<a class="sourceLine" id="cb358-10" data-line-number="10"><span class="kw">barplot</span>(xfacttable,</a>
+<a class="sourceLine" id="cb358-11" data-line-number="11">    <span class="dt">col=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,</a>
+<a class="sourceLine" id="cb358-12" data-line-number="12">        <span class="dt">main=</span><span class="st">&quot;reorganized bar plot&quot;</span>,</a>
+<a class="sourceLine" id="cb358-13" data-line-number="13">        <span class="dt">las=</span><span class="dv">2</span>)</a></code></pre></div>
 <p><img src="images/plots/barplot3.png" width="450"/></p>
 <ul>
 <li>Let’s make a stacked barplot :</li>
 </ul>
-<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb361-1" data-line-number="1"><span class="co"># Create a matrix of number of type of employees per research program :</span></a>
-<a class="sourceLine" id="cb361-2" data-line-number="2">barmat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">14</span>, <span class="dv">13</span>, <span class="dv">16</span>, <span class="dv">4</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">5</span>),</a>
-<a class="sourceLine" id="cb361-3" data-line-number="3">    <span class="dt">nrow=</span><span class="dv">4</span>,</a>
-<a class="sourceLine" id="cb361-4" data-line-number="4">    <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;PostDoc&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;BG&quot;</span>, <span class="st">&quot;CDB&quot;</span>, <span class="st">&quot;GRSCC&quot;</span>, <span class="st">&quot;SB&quot;</span>)))</a>
-<a class="sourceLine" id="cb361-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb361-6" data-line-number="6"><span class="co"># Plot barplot</span></a>
-<a class="sourceLine" id="cb361-7" data-line-number="7"><span class="kw">barplot</span>(barmat, <span class="dt">col=</span><span class="kw">sample</span>(<span class="kw">colors</span>(), <span class="dv">4</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb359-1" data-line-number="1"><span class="co"># Create a matrix of number of type of employees per research program :</span></a>
+<a class="sourceLine" id="cb359-2" data-line-number="2">barmat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">14</span>, <span class="dv">13</span>, <span class="dv">16</span>, <span class="dv">4</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb359-3" data-line-number="3">    <span class="dt">nrow=</span><span class="dv">4</span>,</a>
+<a class="sourceLine" id="cb359-4" data-line-number="4">    <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;PostDoc&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;BG&quot;</span>, <span class="st">&quot;CDB&quot;</span>, <span class="st">&quot;GRSCC&quot;</span>, <span class="st">&quot;SB&quot;</span>)))</a>
+<a class="sourceLine" id="cb359-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb359-6" data-line-number="6"><span class="co"># Plot barplot</span></a>
+<a class="sourceLine" id="cb359-7" data-line-number="7"><span class="kw">barplot</span>(barmat, <span class="dt">col=</span><span class="kw">sample</span>(<span class="kw">colors</span>(), <span class="dv">4</span>))</a></code></pre></div>
 <ul>
 <li>Add some parameters:</li>
 </ul>
-<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb362-1" data-line-number="1"><span class="co"># set a random color vector</span></a>
-<a class="sourceLine" id="cb362-2" data-line-number="2">mycolors &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">colors</span>(), <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb362-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb362-4" data-line-number="4"><span class="co"># plot barplot</span></a>
-<a class="sourceLine" id="cb362-5" data-line-number="5"><span class="co"># ylim sets the lower and upper limit of the y-axis: here it allows us to fit the legend !</span></a>
-<a class="sourceLine" id="cb362-6" data-line-number="6"><span class="kw">barplot</span>(barmat, </a>
-<a class="sourceLine" id="cb362-7" data-line-number="7">    <span class="dt">col=</span>mycolors, </a>
-<a class="sourceLine" id="cb362-8" data-line-number="8">    <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">50</span>),</a>
-<a class="sourceLine" id="cb362-9" data-line-number="9">    <span class="dt">main=</span><span class="st">&quot;stacked barplot&quot;</span>)</a>
-<a class="sourceLine" id="cb362-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb362-11" data-line-number="11"><span class="co"># add a legend</span></a>
-<a class="sourceLine" id="cb362-12" data-line-number="12"><span class="co"># first argument is the legend position</span></a>
-<a class="sourceLine" id="cb362-13" data-line-number="13"><span class="kw">legend</span>(<span class="st">&quot;topleft&quot;</span>, </a>
-<a class="sourceLine" id="cb362-14" data-line-number="14">    <span class="dt">legend=</span><span class="kw">c</span>(<span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;PostDoc&quot;</span>, <span class="st">&quot;PI&quot;</span>),</a>
-<a class="sourceLine" id="cb362-15" data-line-number="15">    <span class="dt">fill=</span>mycolors)</a></code></pre></div>
+<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb360-1" data-line-number="1"><span class="co"># set a random color vector</span></a>
+<a class="sourceLine" id="cb360-2" data-line-number="2">mycolors &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">colors</span>(), <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb360-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb360-4" data-line-number="4"><span class="co"># plot barplot</span></a>
+<a class="sourceLine" id="cb360-5" data-line-number="5"><span class="co"># ylim sets the lower and upper limit of the y-axis: here it allows us to fit the legend !</span></a>
+<a class="sourceLine" id="cb360-6" data-line-number="6"><span class="kw">barplot</span>(barmat, </a>
+<a class="sourceLine" id="cb360-7" data-line-number="7">    <span class="dt">col=</span>mycolors, </a>
+<a class="sourceLine" id="cb360-8" data-line-number="8">    <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">50</span>),</a>
+<a class="sourceLine" id="cb360-9" data-line-number="9">    <span class="dt">main=</span><span class="st">&quot;stacked barplot&quot;</span>)</a>
+<a class="sourceLine" id="cb360-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb360-11" data-line-number="11"><span class="co"># add a legend</span></a>
+<a class="sourceLine" id="cb360-12" data-line-number="12"><span class="co"># first argument is the legend position</span></a>
+<a class="sourceLine" id="cb360-13" data-line-number="13"><span class="kw">legend</span>(<span class="st">&quot;topleft&quot;</span>, </a>
+<a class="sourceLine" id="cb360-14" data-line-number="14">    <span class="dt">legend=</span><span class="kw">c</span>(<span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;PostDoc&quot;</span>, <span class="st">&quot;PI&quot;</span>),</a>
+<a class="sourceLine" id="cb360-15" data-line-number="15">    <span class="dt">fill=</span>mycolors)</a></code></pre></div>
 <p><img src="images/plots/barplot4.png" width="450"/></p>
 </div>
             </section>

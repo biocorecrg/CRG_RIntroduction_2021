@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -292,24 +292,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <img src="images/bioc_install.png" width="550"/></p></li>
 <li><p>From the console:</p></li>
 </ul>
-<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb290-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;BiocManager&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb288-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;BiocManager&quot;</span>)</a></code></pre></div>
 <ul>
 <li>Install a bioconductor package:
 <ul>
 <li>For R version &gt;= 3.5.0</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb291-1" data-line-number="1"><span class="co"># Install Bioconductor package manager</span></a>
-<a class="sourceLine" id="cb291-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;BiocManager&quot;</span>)</a>
-<a class="sourceLine" id="cb291-3" data-line-number="3"><span class="co"># Install Bioconductor package</span></a>
-<a class="sourceLine" id="cb291-4" data-line-number="4">BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="st">&quot;DESeq2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb289-1" data-line-number="1"><span class="co"># Install Bioconductor package manager</span></a>
+<a class="sourceLine" id="cb289-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;BiocManager&quot;</span>)</a>
+<a class="sourceLine" id="cb289-3" data-line-number="3"><span class="co"># Install Bioconductor package</span></a>
+<a class="sourceLine" id="cb289-4" data-line-number="4">BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="st">&quot;DESeq2&quot;</span>)</a></code></pre></div>
 <ul>
 <li>For older R versions</li>
 </ul>
-<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb292-1" data-line-number="1"><span class="co"># Source (load into environment) script containing biocLite function</span></a>
-<a class="sourceLine" id="cb292-2" data-line-number="2"><span class="kw">source</span>(<span class="st">&quot;http://www.bioconductor.org/biocLite.R&quot;</span>)</a>
-<a class="sourceLine" id="cb292-3" data-line-number="3"><span class="co"># Use biocLite function to install Bioconductor package</span></a>
-<a class="sourceLine" id="cb292-4" data-line-number="4"><span class="kw">biocLite</span>(<span class="st">&quot;DESeq2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb290-1" data-line-number="1"><span class="co"># Source (load into environment) script containing biocLite function</span></a>
+<a class="sourceLine" id="cb290-2" data-line-number="2"><span class="kw">source</span>(<span class="st">&quot;http://www.bioconductor.org/biocLite.R&quot;</span>)</a>
+<a class="sourceLine" id="cb290-3" data-line-number="3"><span class="co"># Use biocLite function to install Bioconductor package</span></a>
+<a class="sourceLine" id="cb290-4" data-line-number="4"><span class="kw">biocLite</span>(<span class="st">&quot;DESeq2&quot;</span>)</a></code></pre></div>
 </div>
             </section>
 

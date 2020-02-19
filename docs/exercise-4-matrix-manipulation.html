@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -293,51 +293,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb210-1" data-line-number="1"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb210-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</a>
-<a class="sourceLine" id="cb210-3" data-line-number="3"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb208-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb208-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</a>
+<a class="sourceLine" id="cb208-3" data-line-number="3"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>1- Create three numeric vectors x, y, z, each of 4 elements of your choice.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb211-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">:</span><span class="dv">5</span></a>
-<a class="sourceLine" id="cb211-2" data-line-number="2">y &lt;-<span class="st"> </span><span class="dv">6</span><span class="op">:</span><span class="dv">9</span></a>
-<a class="sourceLine" id="cb211-3" data-line-number="3">z &lt;-<span class="st"> </span><span class="dv">7</span><span class="op">:</span><span class="dv">4</span></a></code></pre></div>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb209-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">:</span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb209-2" data-line-number="2">y &lt;-<span class="st"> </span><span class="dv">6</span><span class="op">:</span><span class="dv">9</span></a>
+<a class="sourceLine" id="cb209-3" data-line-number="3">z &lt;-<span class="st"> </span><span class="dv">7</span><span class="op">:</span><span class="dv">4</span></a></code></pre></div>
 </details>
 <p>Use rbind() to create a matrix <strong>mat</strong> (3 rows and 4 columns) out of x, y and z.</p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb212-1" data-line-number="1">mat &lt;-<span class="st"> </span><span class="kw">rbind</span>(x, y, z)</a></code></pre></div>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb210-1" data-line-number="1">mat &lt;-<span class="st"> </span><span class="kw">rbind</span>(x, y, z)</a></code></pre></div>
 </details>
-<p><strong>2- Create the same matrix now using the matrix function.</strong></p>
+<p><strong>2- Create the same matrix now using the matrix function. Repeat the same using the byrow=TRUE parameter: what is different?</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb213-1" data-line-number="1">mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data=</span><span class="kw">c</span>(x, y, z), <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb213-2" data-line-number="2"><span class="co"># Try with the &quot;byrow=TRUE&quot; parameter: what is different ?</span></a>
-<a class="sourceLine" id="cb213-3" data-line-number="3">mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data=</span><span class="kw">c</span>(x, y, z), <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb211-1" data-line-number="1">mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data=</span><span class="kw">c</span>(x, y, z), <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb211-2" data-line-number="2"><span class="co"># &quot;byrow=TRUE&quot;: what is different in the output ?</span></a>
+<a class="sourceLine" id="cb211-3" data-line-number="3">mat_byrow &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data=</span><span class="kw">c</span>(x, y, z), <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 </details>
 <p><strong>3- Add names to mat’s columns: “a”, “b”, “c”, “d”, respectively.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb214-1" data-line-number="1"><span class="kw">colnames</span>(mat) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb212-1" data-line-number="1"><span class="kw">colnames</span>(mat) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>4- Calculate the sum of each row, and the sum of each column</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb215-1" data-line-number="1"><span class="kw">rowSums</span>(mat); <span class="kw">colSums</span>(mat)</a></code></pre></div>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb213-1" data-line-number="1"><span class="kw">rowSums</span>(mat); <span class="kw">colSums</span>(mat)</a></code></pre></div>
 </details>
 <p><strong>5- Create the matrix mat2 as:</strong></p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb216-1" data-line-number="1">mat2 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="kw">seq</span>(<span class="dt">from=</span><span class="dv">1</span>, <span class="dt">to=</span><span class="dv">10</span>, <span class="dt">by=</span><span class="dv">2</span>), <span class="dv">5</span><span class="op">:</span><span class="dv">1</span>, <span class="kw">rep</span>(<span class="dt">x=</span><span class="dv">2017</span>, <span class="dt">times=</span><span class="dv">5</span>)), <span class="dt">ncol=</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb214-1" data-line-number="1">mat2 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="kw">seq</span>(<span class="dt">from=</span><span class="dv">1</span>, <span class="dt">to=</span><span class="dv">10</span>, <span class="dt">by=</span><span class="dv">2</span>), <span class="dv">5</span><span class="op">:</span><span class="dv">1</span>, <span class="kw">rep</span>(<span class="dt">x=</span><span class="dv">2017</span>, <span class="dt">times=</span><span class="dv">5</span>)), <span class="dt">ncol=</span><span class="dv">3</span>)</a></code></pre></div>
 <p>What does function seq() do?</p>
 <details>
 <p><summary>
@@ -350,87 +350,87 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb217-1" data-line-number="1"><span class="co"># number of rows</span></a>
-<a class="sourceLine" id="cb217-2" data-line-number="2"><span class="kw">nrow</span>(mat2)</a>
-<a class="sourceLine" id="cb217-3" data-line-number="3"><span class="co"># number of columns</span></a>
-<a class="sourceLine" id="cb217-4" data-line-number="4"><span class="kw">ncol</span>(mat2)</a>
-<a class="sourceLine" id="cb217-5" data-line-number="5"><span class="co"># dimensions: number of rows, number of columns</span></a>
-<a class="sourceLine" id="cb217-6" data-line-number="6"><span class="kw">dim</span>(mat2)</a></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb215-1" data-line-number="1"><span class="co"># number of rows</span></a>
+<a class="sourceLine" id="cb215-2" data-line-number="2"><span class="kw">nrow</span>(mat2)</a>
+<a class="sourceLine" id="cb215-3" data-line-number="3"><span class="co"># number of columns</span></a>
+<a class="sourceLine" id="cb215-4" data-line-number="4"><span class="kw">ncol</span>(mat2)</a>
+<a class="sourceLine" id="cb215-5" data-line-number="5"><span class="co"># dimensions: number of rows, number of columns</span></a>
+<a class="sourceLine" id="cb215-6" data-line-number="6"><span class="kw">dim</span>(mat2)</a></code></pre></div>
 </details>
 <p><strong>7- Add column names to mat2: “day”, “month” and “year”, respectively.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb218-1" data-line-number="1"><span class="kw">colnames</span>(mat2) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;day&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;year&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb216-1" data-line-number="1"><span class="kw">colnames</span>(mat2) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;day&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;year&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>8- Add row names to mat2: letters “A” to “E”</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb219-1" data-line-number="1"><span class="kw">rownames</span>(mat2) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;E&quot;</span>)</a>
-<a class="sourceLine" id="cb219-2" data-line-number="2"><span class="kw">rownames</span>(mat2) &lt;-<span class="st"> </span>LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb217-1" data-line-number="1"><span class="kw">rownames</span>(mat2) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;E&quot;</span>)</a>
+<a class="sourceLine" id="cb217-2" data-line-number="2"><span class="kw">rownames</span>(mat2) &lt;-<span class="st"> </span>LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</a></code></pre></div>
 </details>
 <p><strong>9- Shows row(s) of mat2 where the month column is greater than or equal to 3.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb220-1" data-line-number="1"><span class="co"># select column month</span></a>
-<a class="sourceLine" id="cb220-2" data-line-number="2">mat2[, <span class="st">&quot;month&quot;</span>]</a>
-<a class="sourceLine" id="cb220-3" data-line-number="3"><span class="co"># element(s) of column month that is (are) greater than or equal to 3</span></a>
-<a class="sourceLine" id="cb220-4" data-line-number="4">mat2[,<span class="st">&quot;month&quot;</span>] <span class="op">&gt;=</span><span class="st"> </span><span class="dv">3</span></a>
-<a class="sourceLine" id="cb220-5" data-line-number="5"><span class="co"># finally select row(s) where the month columns is greater than or equal to 3</span></a>
-<a class="sourceLine" id="cb220-6" data-line-number="6">mat2[mat2[,<span class="st">&quot;month&quot;</span>] <span class="op">&gt;=</span><span class="st"> </span><span class="dv">3</span>,]</a></code></pre></div>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb218-1" data-line-number="1"><span class="co"># select column month</span></a>
+<a class="sourceLine" id="cb218-2" data-line-number="2">mat2[, <span class="st">&quot;month&quot;</span>]</a>
+<a class="sourceLine" id="cb218-3" data-line-number="3"><span class="co"># element(s) of column month that is (are) greater than or equal to 3</span></a>
+<a class="sourceLine" id="cb218-4" data-line-number="4">mat2[,<span class="st">&quot;month&quot;</span>] <span class="op">&gt;=</span><span class="st"> </span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb218-5" data-line-number="5"><span class="co"># finally select row(s) where the month columns is greater than or equal to 3</span></a>
+<a class="sourceLine" id="cb218-6" data-line-number="6">mat2[mat2[,<span class="st">&quot;month&quot;</span>] <span class="op">&gt;=</span><span class="st"> </span><span class="dv">3</span>,]</a></code></pre></div>
 </details>
 <p><strong>10- Replace all elements of mat2 that are equal to 2017 with 2018.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb221-1" data-line-number="1"><span class="co"># which elements of mat2 that are exactly equal to 2017</span></a>
-<a class="sourceLine" id="cb221-2" data-line-number="2">mat2<span class="op">==</span><span class="dv">2017</span></a>
-<a class="sourceLine" id="cb221-3" data-line-number="3"><span class="co"># retrieve actual elements</span></a>
-<a class="sourceLine" id="cb221-4" data-line-number="4">mat2[mat2<span class="op">==</span><span class="dv">2017</span>]</a>
-<a class="sourceLine" id="cb221-5" data-line-number="5"><span class="co"># replace all 2017 with 2018</span></a>
-<a class="sourceLine" id="cb221-6" data-line-number="6">mat2[mat2<span class="op">==</span><span class="dv">2017</span>] &lt;-<span class="st"> </span><span class="dv">2018</span></a></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb219-1" data-line-number="1"><span class="co"># which elements of mat2 that are exactly equal to 2017</span></a>
+<a class="sourceLine" id="cb219-2" data-line-number="2">mat2<span class="op">==</span><span class="dv">2017</span></a>
+<a class="sourceLine" id="cb219-3" data-line-number="3"><span class="co"># retrieve actual elements</span></a>
+<a class="sourceLine" id="cb219-4" data-line-number="4">mat2[mat2<span class="op">==</span><span class="dv">2017</span>]</a>
+<a class="sourceLine" id="cb219-5" data-line-number="5"><span class="co"># replace all 2017 with 2018</span></a>
+<a class="sourceLine" id="cb219-6" data-line-number="6">mat2[mat2<span class="op">==</span><span class="dv">2017</span>] &lt;-<span class="st"> </span><span class="dv">2018</span></a></code></pre></div>
 </details>
 <p><strong>11- Multiply all elements of the 2nd column of mat2 by 7. Reassign mat2!</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb222-1" data-line-number="1"><span class="co"># multiply all elements of the 2nd column of mat2 by 7</span></a>
-<a class="sourceLine" id="cb222-2" data-line-number="2">mat2[,<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span><span class="dv">7</span></a>
-<a class="sourceLine" id="cb222-3" data-line-number="3"><span class="co"># reassign mat2 with the new values of column 2</span></a>
-<a class="sourceLine" id="cb222-4" data-line-number="4">mat2[,<span class="dv">2</span>] &lt;-<span class="st"> </span>mat2[,<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span><span class="dv">7</span></a></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb220-1" data-line-number="1"><span class="co"># multiply all elements of the 2nd column of mat2 by 7</span></a>
+<a class="sourceLine" id="cb220-2" data-line-number="2">mat2[,<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span><span class="dv">7</span></a>
+<a class="sourceLine" id="cb220-3" data-line-number="3"><span class="co"># reassign mat2 with the new values of column 2</span></a>
+<a class="sourceLine" id="cb220-4" data-line-number="4">mat2[,<span class="dv">2</span>] &lt;-<span class="st"> </span>mat2[,<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span><span class="dv">7</span></a></code></pre></div>
 </details>
 <p><strong>12- Add the column named “time” to mat2, that contains values 8, 12, 11, 10, 8. Save in the new object mat3.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb223-1" data-line-number="1">mat3 &lt;-<span class="st"> </span><span class="kw">cbind</span>(mat2, <span class="dt">time=</span><span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb221-1" data-line-number="1">mat3 &lt;-<span class="st"> </span><span class="kw">cbind</span>(mat2, <span class="dt">time=</span><span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>))</a></code></pre></div>
 </details>
 <p><strong>13- Replace all elements of mat3 that are less than 3 with NA.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb224-1" data-line-number="1"><span class="co"># which elements of mat3 that are less than 3</span></a>
-<a class="sourceLine" id="cb224-2" data-line-number="2">mat3 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span></a>
-<a class="sourceLine" id="cb224-3" data-line-number="3"><span class="co"># actually elements of mat3 that are less than 3</span></a>
-<a class="sourceLine" id="cb224-4" data-line-number="4">mat3[mat3 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>]</a>
-<a class="sourceLine" id="cb224-5" data-line-number="5"><span class="co"># reassign elements of mat3 that are less than 3 with NA</span></a>
-<a class="sourceLine" id="cb224-6" data-line-number="6">mat3[mat3 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a></code></pre></div>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb222-1" data-line-number="1"><span class="co"># which elements of mat3 that are less than 3</span></a>
+<a class="sourceLine" id="cb222-2" data-line-number="2">mat3 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb222-3" data-line-number="3"><span class="co"># actually elements of mat3 that are less than 3</span></a>
+<a class="sourceLine" id="cb222-4" data-line-number="4">mat3[mat3 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb222-5" data-line-number="5"><span class="co"># reassign elements of mat3 that are less than 3 with NA</span></a>
+<a class="sourceLine" id="cb222-6" data-line-number="6">mat3[mat3 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a></code></pre></div>
 </details>
 <p><strong>14- Remove rows from mat3 if a NA is present. Save in the new object mat4.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb225-1" data-line-number="1">mat4 &lt;-<span class="st"> </span><span class="kw">na.omit</span>(mat3)</a></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb223-1" data-line-number="1">mat4 &lt;-<span class="st"> </span><span class="kw">na.omit</span>(mat3)</a></code></pre></div>
 </details>
 <p><strong>15- Retrieve the smaller value of each column of mat4.</strong></p>
 <p>Try different approaches:</p>
@@ -441,10 +441,10 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb226-1" data-line-number="1"><span class="kw">min</span>(mat4[,<span class="st">&quot;day&quot;</span>])</a>
-<a class="sourceLine" id="cb226-2" data-line-number="2"><span class="kw">min</span>(mat4[,<span class="st">&quot;month&quot;</span>])</a>
-<a class="sourceLine" id="cb226-3" data-line-number="3"><span class="kw">min</span>(mat4[,<span class="st">&quot;year&quot;</span>])</a>
-<a class="sourceLine" id="cb226-4" data-line-number="4"><span class="kw">min</span>(mat4[,<span class="st">&quot;time&quot;</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb224-1" data-line-number="1"><span class="kw">min</span>(mat4[,<span class="st">&quot;day&quot;</span>])</a>
+<a class="sourceLine" id="cb224-2" data-line-number="2"><span class="kw">min</span>(mat4[,<span class="st">&quot;month&quot;</span>])</a>
+<a class="sourceLine" id="cb224-3" data-line-number="3"><span class="kw">min</span>(mat4[,<span class="st">&quot;year&quot;</span>])</a>
+<a class="sourceLine" id="cb224-4" data-line-number="4"><span class="kw">min</span>(mat4[,<span class="st">&quot;time&quot;</span>])</a></code></pre></div>
 </details>
 <ul>
 <li>Retrieve the minimum of all columns simultaneously using the apply() function.</li>
@@ -453,10 +453,10 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb227-1" data-line-number="1"><span class="co"># mat4: object</span></a>
-<a class="sourceLine" id="cb227-2" data-line-number="2"><span class="co"># 2: by column</span></a>
-<a class="sourceLine" id="cb227-3" data-line-number="3"><span class="co"># min: function to apply</span></a>
-<a class="sourceLine" id="cb227-4" data-line-number="4"><span class="kw">apply</span>(mat4, <span class="dv">2</span>, min)</a></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb225-1" data-line-number="1"><span class="co"># mat4: object</span></a>
+<a class="sourceLine" id="cb225-2" data-line-number="2"><span class="co"># 2: by column</span></a>
+<a class="sourceLine" id="cb225-3" data-line-number="3"><span class="co"># min: function to apply</span></a>
+<a class="sourceLine" id="cb225-4" data-line-number="4"><span class="kw">apply</span>(mat4, <span class="dv">2</span>, min)</a></code></pre></div>
 </details>
 
 </div>

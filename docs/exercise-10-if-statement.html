@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -293,11 +293,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb333-1" data-line-number="1"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb333-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb331-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb331-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>1- Create vector vec2 as:</strong></p>
-<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb334-1" data-line-number="1">vec2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb332-1" data-line-number="1">vec2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</a></code></pre></div>
 <ul>
 <li>Use an if statement and the %in% function to check whether “apple” is present in vec2 (in such case print “there is an apple!”)</li>
 </ul>
@@ -305,9 +305,9 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb335-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;apple&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb335-2" data-line-number="2">    <span class="kw">print</span>(<span class="st">&quot;there is an apple there&quot;</span>)</a>
-<a class="sourceLine" id="cb335-3" data-line-number="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb333-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;apple&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb333-2" data-line-number="2">    <span class="kw">print</span>(<span class="st">&quot;there is an apple there&quot;</span>)</a>
+<a class="sourceLine" id="cb333-3" data-line-number="3">}</a></code></pre></div>
 </details>
 <ul>
 <li>Use an if statement and the %in% function to check whether “grapefruit” is present in vec2: if “grapefruit” is not found, test for a second condition (using <strong>else if</strong>) that checks if “pear” is found.</li>
@@ -316,50 +316,50 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb336-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb336-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit there&quot;</span>)</a>
-<a class="sourceLine" id="cb336-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb336-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit but there is a pear&quot;</span>)</a>
-<a class="sourceLine" id="cb336-5" data-line-number="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb334-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb334-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit there&quot;</span>)</a>
+<a class="sourceLine" id="cb334-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb334-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit but there is a pear&quot;</span>)</a>
+<a class="sourceLine" id="cb334-5" data-line-number="5">}</a></code></pre></div>
 </details>
 <ul>
 <li>Add an <strong>else</strong> section in case neither grapefruit nor pear is found in vec2.<br>
 Test your <strong>if</strong> statement also on vec3:</li>
 </ul>
-<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb337-1" data-line-number="1">vec3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;strawberry&quot;</span>, <span class="st">&quot;blueberry&quot;</span>, <span class="st">&quot;peach&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb335-1" data-line-number="1">vec3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;strawberry&quot;</span>, <span class="st">&quot;blueberry&quot;</span>, <span class="st">&quot;peach&quot;</span>)</a></code></pre></div>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb338-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb338-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit there&quot;</span>)</a>
-<a class="sourceLine" id="cb338-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb338-4" data-line-number="4">        <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit but there is a pear&quot;</span>)</a>
-<a class="sourceLine" id="cb338-5" data-line-number="5">}<span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb338-6" data-line-number="6">    <span class="kw">print</span>(<span class="st">&quot;no grapefruit and no pear&quot;</span>)</a>
-<a class="sourceLine" id="cb338-7" data-line-number="7">}</a></code></pre></div>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb336-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb336-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit there&quot;</span>)</a>
+<a class="sourceLine" id="cb336-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb336-4" data-line-number="4">        <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit but there is a pear&quot;</span>)</a>
+<a class="sourceLine" id="cb336-5" data-line-number="5">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb336-6" data-line-number="6">    <span class="kw">print</span>(<span class="st">&quot;no grapefruit and no pear&quot;</span>)</a>
+<a class="sourceLine" id="cb336-7" data-line-number="7">}</a></code></pre></div>
 </details>
 <p><strong>2- If statement in for loop</strong></p>
 <p>Create the following matrix:</p>
-<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb339-1" data-line-number="1">mat4 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">34</span>, <span class="dv">1</span>, <span class="ot">NA</span>, <span class="dv">89</span>, <span class="dv">7</span>, <span class="dv">12</span>, <span class="ot">NA</span>, <span class="dv">0</span>, <span class="dv">38</span>),</a>
-<a class="sourceLine" id="cb339-2" data-line-number="2">    <span class="dt">nrow=</span><span class="dv">5</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb337-1" data-line-number="1">mat4 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">34</span>, <span class="dv">1</span>, <span class="ot">NA</span>, <span class="dv">89</span>, <span class="dv">7</span>, <span class="dv">12</span>, <span class="ot">NA</span>, <span class="dv">0</span>, <span class="dv">38</span>),</a>
+<a class="sourceLine" id="cb337-2" data-line-number="2">    <span class="dt">nrow=</span><span class="dv">5</span>)</a></code></pre></div>
 <p>Loop over rows with <strong>for</strong> of mat4 and print row number and entire row <strong>if</strong> you find an NA.</p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb340-1" data-line-number="1"><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mat4)){</a>
-<a class="sourceLine" id="cb340-2" data-line-number="2">    <span class="co"># extract row</span></a>
-<a class="sourceLine" id="cb340-3" data-line-number="3">    rowk &lt;-<span class="st"> </span>mat4[k,]</a>
-<a class="sourceLine" id="cb340-4" data-line-number="4">    <span class="cf">if</span>(<span class="kw">any</span>(<span class="kw">is.na</span>(rowk))){</a>
-<a class="sourceLine" id="cb340-5" data-line-number="5">        <span class="kw">print</span>(k)</a>
-<a class="sourceLine" id="cb340-6" data-line-number="6">        <span class="kw">print</span>(rowk)</a>
-<a class="sourceLine" id="cb340-7" data-line-number="7">    }</a>
-<a class="sourceLine" id="cb340-8" data-line-number="8">}</a></code></pre></div>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb338-1" data-line-number="1"><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mat4)){</a>
+<a class="sourceLine" id="cb338-2" data-line-number="2">    <span class="co"># extract row</span></a>
+<a class="sourceLine" id="cb338-3" data-line-number="3">    rowk &lt;-<span class="st"> </span>mat4[k,]</a>
+<a class="sourceLine" id="cb338-4" data-line-number="4">    <span class="cf">if</span>(<span class="kw">any</span>(<span class="kw">is.na</span>(rowk))){</a>
+<a class="sourceLine" id="cb338-5" data-line-number="5">        <span class="kw">print</span>(k)</a>
+<a class="sourceLine" id="cb338-6" data-line-number="6">        <span class="kw">print</span>(rowk)</a>
+<a class="sourceLine" id="cb338-7" data-line-number="7">    }</a>
+<a class="sourceLine" id="cb338-8" data-line-number="8">}</a></code></pre></div>
 </details>
 <p><strong>3- For loop, if statement and regular expression</strong></p>
 <p>Create vector vec4 as:</p>
-<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb341-1" data-line-number="1">vec4 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Oct4&quot;</span>, <span class="st">&quot;DEPP&quot;</span>, <span class="st">&quot;RSU1&quot;</span>, <span class="st">&quot;Hk2&quot;</span>, <span class="st">&quot;ZNF37A&quot;</span>, <span class="st">&quot;C1QL1&quot;</span>, <span class="st">&quot;Shh&quot;</span>, <span class="st">&quot;Cdkn2a&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb339-1" data-line-number="1">vec4 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Oct4&quot;</span>, <span class="st">&quot;DEPP&quot;</span>, <span class="st">&quot;RSU1&quot;</span>, <span class="st">&quot;Hk2&quot;</span>, <span class="st">&quot;ZNF37A&quot;</span>, <span class="st">&quot;C1QL1&quot;</span>, <span class="st">&quot;Shh&quot;</span>, <span class="st">&quot;Cdkn2a&quot;</span>)</a></code></pre></div>
 <p>Loop over each element of “vec4”:
 * If the element is a <strong>human gene (all upper-case characters)</strong>, print a vector of two elements: the name of the gene and “human gene”.<br>
 * If the element is a <strong>mouse gene (only the first character is in upper-case)</strong>, print a vector of two elements: the name of the gene and “mouse gene”.<br></p>
@@ -373,22 +373,22 @@ Tip 3: <em>You can also use grepl: check the help page</em>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb342-1" data-line-number="1"><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</a>
-<a class="sourceLine" id="cb342-2" data-line-number="2">    <span class="cf">if</span>(<span class="kw">length</span>(<span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)) <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>){</a>
-<a class="sourceLine" id="cb342-3" data-line-number="3">        <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</a>
-<a class="sourceLine" id="cb342-4" data-line-number="4">    }<span class="cf">else</span> <span class="cf">if</span>(<span class="kw">length</span>(<span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)) <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>){</a>
-<a class="sourceLine" id="cb342-5" data-line-number="5">        <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</a>
-<a class="sourceLine" id="cb342-6" data-line-number="6">    }</a>
-<a class="sourceLine" id="cb342-7" data-line-number="7">}</a>
-<a class="sourceLine" id="cb342-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb342-9" data-line-number="9"><span class="co"># With grepl</span></a>
-<a class="sourceLine" id="cb342-10" data-line-number="10"><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</a>
-<a class="sourceLine" id="cb342-11" data-line-number="11">        <span class="cf">if</span>(<span class="kw">grepl</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)){</a>
-<a class="sourceLine" id="cb342-12" data-line-number="12">                <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</a>
-<a class="sourceLine" id="cb342-13" data-line-number="13">        }<span class="cf">else</span> <span class="cf">if</span>(<span class="kw">grepl</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)){</a>
-<a class="sourceLine" id="cb342-14" data-line-number="14">                <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</a>
-<a class="sourceLine" id="cb342-15" data-line-number="15">        }</a>
-<a class="sourceLine" id="cb342-16" data-line-number="16">}</a></code></pre></div>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb340-1" data-line-number="1"><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</a>
+<a class="sourceLine" id="cb340-2" data-line-number="2">    <span class="cf">if</span>(<span class="kw">length</span>(<span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)) <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb340-3" data-line-number="3">        <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</a>
+<a class="sourceLine" id="cb340-4" data-line-number="4">    }<span class="cf">else</span> <span class="cf">if</span>(<span class="kw">length</span>(<span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)) <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb340-5" data-line-number="5">        <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</a>
+<a class="sourceLine" id="cb340-6" data-line-number="6">    }</a>
+<a class="sourceLine" id="cb340-7" data-line-number="7">}</a>
+<a class="sourceLine" id="cb340-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb340-9" data-line-number="9"><span class="co"># With grepl</span></a>
+<a class="sourceLine" id="cb340-10" data-line-number="10"><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</a>
+<a class="sourceLine" id="cb340-11" data-line-number="11">        <span class="cf">if</span>(<span class="kw">grepl</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)){</a>
+<a class="sourceLine" id="cb340-12" data-line-number="12">                <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</a>
+<a class="sourceLine" id="cb340-13" data-line-number="13">        }<span class="cf">else</span> <span class="cf">if</span>(<span class="kw">grepl</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)){</a>
+<a class="sourceLine" id="cb340-14" data-line-number="14">                <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</a>
+<a class="sourceLine" id="cb340-15" data-line-number="15">        }</a>
+<a class="sourceLine" id="cb340-16" data-line-number="16">}</a></code></pre></div>
 </details>
 
 </div>

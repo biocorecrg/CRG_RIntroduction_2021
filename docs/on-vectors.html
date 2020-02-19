@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -290,37 +290,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Read a file as a vector with the <strong>scan</strong> function</li>
 </ul>
-<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb251-1" data-line-number="1"><span class="co"># Read in file</span></a>
-<a class="sourceLine" id="cb251-2" data-line-number="2"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>)</a>
-<a class="sourceLine" id="cb251-3" data-line-number="3"><span class="co"># Save in  object</span></a>
-<a class="sourceLine" id="cb251-4" data-line-number="4">k &lt;-<span class="st"> </span><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb249-1" data-line-number="1"><span class="co"># Read in file</span></a>
+<a class="sourceLine" id="cb249-2" data-line-number="2"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb249-3" data-line-number="3"><span class="co"># Save in  object</span></a>
+<a class="sourceLine" id="cb249-4" data-line-number="4">k &lt;-<span class="st"> </span><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>)</a></code></pre></div>
 <p>By default, scans “double” (numeric) elements: it fails if the input contains characters.<br>
 If non-numeric, you need to specify the type of data contained in the file:</p>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb252-1" data-line-number="1"><span class="co"># specify the type of data to scan</span></a>
-<a class="sourceLine" id="cb252-2" data-line-number="2"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>, </a>
-<a class="sourceLine" id="cb252-3" data-line-number="3">    <span class="dt">what=</span><span class="st">&quot;character&quot;</span>)</a>
-<a class="sourceLine" id="cb252-4" data-line-number="4"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </a>
-<a class="sourceLine" id="cb252-5" data-line-number="5">    <span class="dt">what=</span><span class="st">&quot;character&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" data-line-number="1"><span class="co"># specify the type of data to scan</span></a>
+<a class="sourceLine" id="cb250-2" data-line-number="2"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb250-3" data-line-number="3">    <span class="dt">what=</span><span class="st">&quot;character&quot;</span>)</a>
+<a class="sourceLine" id="cb250-4" data-line-number="4"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb250-5" data-line-number="5">    <span class="dt">what=</span><span class="st">&quot;character&quot;</span>)</a></code></pre></div>
 <p>Regarding paths of files:<br>
 If the file is not in the current directory, you can provide a full or relative path. For example, if located in the home directory, read it as:</p>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb253-1" data-line-number="1"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </a>
-<a class="sourceLine" id="cb253-2" data-line-number="2">    <span class="dt">what=</span><span class="st">&quot;character&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb251-1" data-line-number="1"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb251-2" data-line-number="2">    <span class="dt">what=</span><span class="st">&quot;character&quot;</span>)</a></code></pre></div>
 <ul>
 <li>Write the content of a vector in a file:</li>
 </ul>
-<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb254-1" data-line-number="1"><span class="co"># create a vector</span></a>
-<a class="sourceLine" id="cb254-2" data-line-number="2">mygenes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;SMAD4&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;ASXL3&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;CKLF&quot;</span>, <span class="st">&quot;TIAM1&quot;</span>, <span class="st">&quot;VHL&quot;</span>, <span class="st">&quot;BTD&quot;</span>, <span class="st">&quot;EMP1&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;PAX3&quot;</span>)</a>
-<a class="sourceLine" id="cb254-3" data-line-number="3"><span class="co"># write in a file</span></a>
-<a class="sourceLine" id="cb254-4" data-line-number="4"><span class="kw">write</span>(<span class="dt">x=</span>mygenes, </a>
-<a class="sourceLine" id="cb254-5" data-line-number="5">    <span class="dt">file=</span><span class="st">&quot;gene_list.txt&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb252-1" data-line-number="1"><span class="co"># create a vector</span></a>
+<a class="sourceLine" id="cb252-2" data-line-number="2">mygenes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;SMAD4&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;ASXL3&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;CKLF&quot;</span>, <span class="st">&quot;TIAM1&quot;</span>, <span class="st">&quot;VHL&quot;</span>, <span class="st">&quot;BTD&quot;</span>, <span class="st">&quot;EMP1&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;PAX3&quot;</span>)</a>
+<a class="sourceLine" id="cb252-3" data-line-number="3"><span class="co"># write in a file</span></a>
+<a class="sourceLine" id="cb252-4" data-line-number="4"><span class="kw">write</span>(<span class="dt">x=</span>mygenes, </a>
+<a class="sourceLine" id="cb252-5" data-line-number="5">    <span class="dt">file=</span><span class="st">&quot;gene_list.txt&quot;</span>)</a></code></pre></div>
 <p>Regarding paths of files:<br>
 When you write a file, you can also specify a full or relative path:</p>
-<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb255-1" data-line-number="1"><span class="co"># Write to home directory</span></a>
-<a class="sourceLine" id="cb255-2" data-line-number="2"><span class="kw">write</span>(<span class="dt">x=</span>mygenes,</a>
-<a class="sourceLine" id="cb255-3" data-line-number="3">        <span class="dt">file=</span><span class="st">&quot;~/gene_list.txt&quot;</span>)</a>
-<a class="sourceLine" id="cb255-4" data-line-number="4"><span class="co"># Write to one directory up</span></a>
-<a class="sourceLine" id="cb255-5" data-line-number="5"><span class="kw">write</span>(<span class="dt">x=</span>mygenes,</a>
-<a class="sourceLine" id="cb255-6" data-line-number="6">        <span class="dt">file=</span><span class="st">&quot;../gene_list.txt&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb253-1" data-line-number="1"><span class="co"># Write to home directory</span></a>
+<a class="sourceLine" id="cb253-2" data-line-number="2"><span class="kw">write</span>(<span class="dt">x=</span>mygenes,</a>
+<a class="sourceLine" id="cb253-3" data-line-number="3">        <span class="dt">file=</span><span class="st">&quot;~/gene_list.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb253-4" data-line-number="4"><span class="co"># Write to one directory up</span></a>
+<a class="sourceLine" id="cb253-5" data-line-number="5"><span class="kw">write</span>(<span class="dt">x=</span>mygenes,</a>
+<a class="sourceLine" id="cb253-6" data-line-number="6">        <span class="dt">file=</span><span class="st">&quot;../gene_list.txt&quot;</span>)</a></code></pre></div>
 </div>
             </section>
 

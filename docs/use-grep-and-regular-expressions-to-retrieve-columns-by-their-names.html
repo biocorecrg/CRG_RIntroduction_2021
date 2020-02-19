@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -288,21 +288,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names" class="section level2">
 <h2><span class="header-section-number">13.5</span> Use grep and regular expressions to retrieve columns by their names</h2>
 <p>Example of a data frame:</p>
-<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb320-1" data-line-number="1"><span class="co"># Build data frame</span></a>
-<a class="sourceLine" id="cb320-2" data-line-number="2">df_regex &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">expression1=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, </a>
-<a class="sourceLine" id="cb320-3" data-line-number="3">    <span class="dt">expression2=</span><span class="dv">2</span><span class="op">:</span><span class="dv">5</span>, </a>
-<a class="sourceLine" id="cb320-4" data-line-number="4">    <span class="dt">expression3=</span><span class="dv">4</span><span class="op">:</span><span class="dv">7</span>, </a>
-<a class="sourceLine" id="cb320-5" data-line-number="5">    <span class="dt">annotation=</span>LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], </a>
-<a class="sourceLine" id="cb320-6" data-line-number="6">    <span class="dt">expression4=</span><span class="dv">6</span><span class="op">:</span><span class="dv">3</span>, </a>
-<a class="sourceLine" id="cb320-7" data-line-number="7">    <span class="dt">average_expression=</span><span class="kw">c</span>(<span class="fl">3.25</span>, <span class="fl">3.75</span>, <span class="fl">4.25</span>, <span class="fl">4.75</span>),</a>
-<a class="sourceLine" id="cb320-8" data-line-number="8">    <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb320-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb320-10" data-line-number="10"><span class="co"># Select column names that start with &quot;expression&quot;</span></a>
-<a class="sourceLine" id="cb320-11" data-line-number="11"><span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^expression&quot;</span>, </a>
-<a class="sourceLine" id="cb320-12" data-line-number="12">    <span class="dt">x=</span><span class="kw">colnames</span>(df_regex))</a>
-<a class="sourceLine" id="cb320-13" data-line-number="13"></a>
-<a class="sourceLine" id="cb320-14" data-line-number="14"><span class="co"># Select columns from df_regex if their names start with &quot;expression&quot;</span></a>
-<a class="sourceLine" id="cb320-15" data-line-number="15">df_regex[, <span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^expression&quot;</span>, <span class="kw">colnames</span>(df_regex))]</a></code></pre></div>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb318-1" data-line-number="1"><span class="co"># Build data frame</span></a>
+<a class="sourceLine" id="cb318-2" data-line-number="2">df_regex &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">expression1=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, </a>
+<a class="sourceLine" id="cb318-3" data-line-number="3">    <span class="dt">expression2=</span><span class="dv">2</span><span class="op">:</span><span class="dv">5</span>, </a>
+<a class="sourceLine" id="cb318-4" data-line-number="4">    <span class="dt">expression3=</span><span class="dv">4</span><span class="op">:</span><span class="dv">7</span>, </a>
+<a class="sourceLine" id="cb318-5" data-line-number="5">    <span class="dt">annotation=</span>LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], </a>
+<a class="sourceLine" id="cb318-6" data-line-number="6">    <span class="dt">expression4=</span><span class="dv">6</span><span class="op">:</span><span class="dv">3</span>, </a>
+<a class="sourceLine" id="cb318-7" data-line-number="7">    <span class="dt">average_expression=</span><span class="kw">c</span>(<span class="fl">3.25</span>, <span class="fl">3.75</span>, <span class="fl">4.25</span>, <span class="fl">4.75</span>),</a>
+<a class="sourceLine" id="cb318-8" data-line-number="8">    <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb318-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb318-10" data-line-number="10"><span class="co"># Select column names that start with &quot;expression&quot;</span></a>
+<a class="sourceLine" id="cb318-11" data-line-number="11"><span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^expression&quot;</span>, </a>
+<a class="sourceLine" id="cb318-12" data-line-number="12">    <span class="dt">x=</span><span class="kw">colnames</span>(df_regex))</a>
+<a class="sourceLine" id="cb318-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb318-14" data-line-number="14"><span class="co"># Select columns from df_regex if their names start with &quot;expression&quot;</span></a>
+<a class="sourceLine" id="cb318-15" data-line-number="15">df_regex[, <span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^expression&quot;</span>, <span class="kw">colnames</span>(df_regex))]</a></code></pre></div>
 
 </div>
             </section>

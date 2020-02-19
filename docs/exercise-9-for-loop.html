@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -293,30 +293,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb348-1" data-line-number="1"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb348-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb346-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb346-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>1- Write a for loop that iterates over 2 to 10 and prints the square root of each number (function sqrt()).</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb349-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="dv">10</span>){</a>
-<a class="sourceLine" id="cb349-2" data-line-number="2">    <span class="kw">print</span>(<span class="kw">sqrt</span>(i))</a>
-<a class="sourceLine" id="cb349-3" data-line-number="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb347-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="dv">10</span>){</a>
+<a class="sourceLine" id="cb347-2" data-line-number="2">    <span class="kw">print</span>(<span class="kw">sqrt</span>(i))</a>
+<a class="sourceLine" id="cb347-3" data-line-number="3">}</a></code></pre></div>
 </details>
 <p><strong>2- Write a for loop that iterates over 5 to 15 and prints a vector of 2 elements containing each number and its square root</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb350-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="op">:</span><span class="dv">15</span>){</a>
-<a class="sourceLine" id="cb350-2" data-line-number="2">    veci &lt;-<span class="st"> </span><span class="kw">c</span>(i, <span class="kw">sqrt</span>(i))</a>
-<a class="sourceLine" id="cb350-3" data-line-number="3">        <span class="kw">print</span>(veci)</a>
-<a class="sourceLine" id="cb350-4" data-line-number="4">}</a></code></pre></div>
+<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb348-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="op">:</span><span class="dv">15</span>){</a>
+<a class="sourceLine" id="cb348-2" data-line-number="2">    veci &lt;-<span class="st"> </span><span class="kw">c</span>(i, <span class="kw">sqrt</span>(i))</a>
+<a class="sourceLine" id="cb348-3" data-line-number="3">        <span class="kw">print</span>(veci)</a>
+<a class="sourceLine" id="cb348-4" data-line-number="4">}</a></code></pre></div>
 </details>
 <p><strong>3- Create the following matrix</strong></p>
-<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb351-1" data-line-number="1">mat1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">40</span>), <span class="dt">nrow=</span><span class="dv">20</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb349-1" data-line-number="1">mat1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">40</span>), <span class="dt">nrow=</span><span class="dv">20</span>)</a></code></pre></div>
 <ul>
 <li>Write a for loop that iterates over each row of mat1 and prints the median value of each row.</li>
 </ul>
@@ -324,14 +324,14 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb352-1" data-line-number="1"><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mat1)){</a>
-<a class="sourceLine" id="cb352-2" data-line-number="2">    <span class="co"># extract the row</span></a>
-<a class="sourceLine" id="cb352-3" data-line-number="3">    rowj &lt;-<span class="st"> </span>mat1[j,]</a>
-<a class="sourceLine" id="cb352-4" data-line-number="4">    <span class="co"># print rowj</span></a>
-<a class="sourceLine" id="cb352-5" data-line-number="5">    <span class="kw">print</span>(rowj)</a>
-<a class="sourceLine" id="cb352-6" data-line-number="6">    <span class="co"># print median value in row</span></a>
-<a class="sourceLine" id="cb352-7" data-line-number="7">    <span class="kw">print</span>(<span class="kw">median</span>(rowj))</a>
-<a class="sourceLine" id="cb352-8" data-line-number="8">}       </a></code></pre></div>
+<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb350-1" data-line-number="1"><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mat1)){</a>
+<a class="sourceLine" id="cb350-2" data-line-number="2">    <span class="co"># extract the row</span></a>
+<a class="sourceLine" id="cb350-3" data-line-number="3">    rowj &lt;-<span class="st"> </span>mat1[j,]</a>
+<a class="sourceLine" id="cb350-4" data-line-number="4">    <span class="co"># print rowj</span></a>
+<a class="sourceLine" id="cb350-5" data-line-number="5">    <span class="kw">print</span>(rowj)</a>
+<a class="sourceLine" id="cb350-6" data-line-number="6">    <span class="co"># print median value in row</span></a>
+<a class="sourceLine" id="cb350-7" data-line-number="7">    <span class="kw">print</span>(<span class="kw">median</span>(rowj))</a>
+<a class="sourceLine" id="cb350-8" data-line-number="8">}       </a></code></pre></div>
 </details>
 
 </div>

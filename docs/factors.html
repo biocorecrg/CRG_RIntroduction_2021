@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -292,32 +292,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Factors are mainly used for <strong>statistical modeling</strong>, and can also be useful for graphing.</p></li>
 <li><p>You can create factors with the <strong>factor</strong> function, for example:</p></li>
 </ul>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb178-1" data-line-number="1">e &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</a>
-<a class="sourceLine" id="cb178-2" data-line-number="2"><span class="co"># check the structure of e</span></a>
-<a class="sourceLine" id="cb178-3" data-line-number="3"><span class="kw">str</span>(e)</a></code></pre></div>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb176-1" data-line-number="1">e &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</a>
+<a class="sourceLine" id="cb176-2" data-line-number="2"><span class="co"># check the structure of e</span></a>
+<a class="sourceLine" id="cb176-3" data-line-number="3"><span class="kw">str</span>(e)</a></code></pre></div>
 <pre><code>##  Factor w/ 3 levels &quot;high&quot;,&quot;low&quot;,&quot;medium&quot;: 1 2 3 2</code></pre>
 <ul>
 <li>Example of a character vector versus a factor</li>
 </ul>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb180-1" data-line-number="1"><span class="co"># factor</span></a>
-<a class="sourceLine" id="cb180-2" data-line-number="2">e &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</a>
-<a class="sourceLine" id="cb180-3" data-line-number="3"><span class="co"># character vector</span></a>
-<a class="sourceLine" id="cb180-4" data-line-number="4">e2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>)</a>
-<a class="sourceLine" id="cb180-5" data-line-number="5"><span class="co"># Check the structure of both objects</span></a>
-<a class="sourceLine" id="cb180-6" data-line-number="6"><span class="kw">str</span>(e)</a></code></pre></div>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb178-1" data-line-number="1"><span class="co"># factor</span></a>
+<a class="sourceLine" id="cb178-2" data-line-number="2">e &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</a>
+<a class="sourceLine" id="cb178-3" data-line-number="3"><span class="co"># character vector</span></a>
+<a class="sourceLine" id="cb178-4" data-line-number="4">e2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>)</a>
+<a class="sourceLine" id="cb178-5" data-line-number="5"><span class="co"># Check the structure of both objects</span></a>
+<a class="sourceLine" id="cb178-6" data-line-number="6"><span class="kw">str</span>(e)</a></code></pre></div>
 <pre><code>##  Factor w/ 3 levels &quot;high&quot;,&quot;low&quot;,&quot;medium&quot;: 1 2 3 2</code></pre>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb182-1" data-line-number="1"><span class="kw">str</span>(e2)</a></code></pre></div>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb180-1" data-line-number="1"><span class="kw">str</span>(e2)</a></code></pre></div>
 <pre><code>##  chr [1:4] &quot;high&quot; &quot;low&quot; &quot;medium&quot; &quot;low&quot;</code></pre>
 <ul>
 <li>Groups in factors are called <strong>levels</strong>.<br>
 Levels can be <strong>ordered</strong>. Then, some operations applied on numeric vectors can be used:</li>
 </ul>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb184-1" data-line-number="1"><span class="co"># unordered factor:</span></a>
-<a class="sourceLine" id="cb184-2" data-line-number="2">e &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</a>
-<a class="sourceLine" id="cb184-3" data-line-number="3"><span class="kw">max</span>(e) <span class="co"># throws an error</span></a>
-<a class="sourceLine" id="cb184-4" data-line-number="4"><span class="co"># ordered factor</span></a>
-<a class="sourceLine" id="cb184-5" data-line-number="5">e_ord &lt;-<span class="st"> </span><span class="kw">factor</span>(e, <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;high&quot;</span>), <span class="dt">ordered=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb184-6" data-line-number="6"><span class="kw">max</span>(e_ord) <span class="co"># outputs &quot;high&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb182-1" data-line-number="1"><span class="co"># unordered factor:</span></a>
+<a class="sourceLine" id="cb182-2" data-line-number="2">e &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</a>
+<a class="sourceLine" id="cb182-3" data-line-number="3"><span class="kw">max</span>(e) <span class="co"># throws an error</span></a>
+<a class="sourceLine" id="cb182-4" data-line-number="4"><span class="co"># ordered factor</span></a>
+<a class="sourceLine" id="cb182-5" data-line-number="5">e_ord &lt;-<span class="st"> </span><span class="kw">factor</span>(e, <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;high&quot;</span>), <span class="dt">ordered=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb182-6" data-line-number="6"><span class="kw">max</span>(e_ord) <span class="co"># outputs &quot;high&quot;</span></a></code></pre></div>
 
 </div>
             </section>

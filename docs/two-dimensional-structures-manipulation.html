@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -292,50 +292,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Get the number of rows and the number of columns:</li>
 </ul>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb196-1" data-line-number="1"><span class="co"># Create a data frame</span></a>
-<a class="sourceLine" id="cb196-2" data-line-number="2">d &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>),</a>
-<a class="sourceLine" id="cb196-3" data-line-number="3">    <span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</a>
-<a class="sourceLine" id="cb196-4" data-line-number="4">    <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</a>
-<a class="sourceLine" id="cb196-5" data-line-number="5">    <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb196-6" data-line-number="6"><span class="co"># number of rows</span></a>
-<a class="sourceLine" id="cb196-7" data-line-number="7"><span class="kw">nrow</span>(d)</a>
-<a class="sourceLine" id="cb196-8" data-line-number="8"><span class="co"># number of columns</span></a>
-<a class="sourceLine" id="cb196-9" data-line-number="9"><span class="kw">ncol</span>(d)</a></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb194-1" data-line-number="1"><span class="co"># Create a data frame</span></a>
+<a class="sourceLine" id="cb194-2" data-line-number="2">d &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>),</a>
+<a class="sourceLine" id="cb194-3" data-line-number="3">    <span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</a>
+<a class="sourceLine" id="cb194-4" data-line-number="4">    <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</a>
+<a class="sourceLine" id="cb194-5" data-line-number="5">    <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb194-6" data-line-number="6"><span class="co"># number of rows</span></a>
+<a class="sourceLine" id="cb194-7" data-line-number="7"><span class="kw">nrow</span>(d)</a>
+<a class="sourceLine" id="cb194-8" data-line-number="8"><span class="co"># number of columns</span></a>
+<a class="sourceLine" id="cb194-9" data-line-number="9"><span class="kw">ncol</span>(d)</a></code></pre></div>
 <ul>
 <li>Check the dimensions of the object: both number of rows and number of columns:</li>
 </ul>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb197-1" data-line-number="1"><span class="co"># first element: number of rows</span></a>
-<a class="sourceLine" id="cb197-2" data-line-number="2"><span class="co"># second element: number of columns</span></a>
-<a class="sourceLine" id="cb197-3" data-line-number="3"><span class="kw">dim</span>(d)</a></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb195-1" data-line-number="1"><span class="co"># first element: number of rows</span></a>
+<a class="sourceLine" id="cb195-2" data-line-number="2"><span class="co"># second element: number of columns</span></a>
+<a class="sourceLine" id="cb195-3" data-line-number="3"><span class="kw">dim</span>(d)</a></code></pre></div>
 <ul>
 <li>Dimension names</li>
 </ul>
 <p>Column and/or row names can be added to matrices and data frames</p>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb198-1" data-line-number="1"><span class="kw">colnames</span>(d) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Name&quot;</span>, <span class="st">&quot;Age&quot;</span>, <span class="st">&quot;Vegetarian&quot;</span>)</a>
-<a class="sourceLine" id="cb198-2" data-line-number="2"><span class="kw">rownames</span>(d) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb196-1" data-line-number="1"><span class="kw">colnames</span>(d) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Name&quot;</span>, <span class="st">&quot;Age&quot;</span>, <span class="st">&quot;Vegetarian&quot;</span>)</a>
+<a class="sourceLine" id="cb196-2" data-line-number="2"><span class="kw">rownames</span>(d) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>)</a></code></pre></div>
 <p>Column and/or row names can be used to retrieve elements or sets of elements from a 2-dimensional object:</p>
 <p><img src="images/df_names.png" width="450"/></p>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb199-1" data-line-number="1">d[,<span class="st">&quot;Name&quot;</span>]</a>
-<a class="sourceLine" id="cb199-2" data-line-number="2"><span class="co"># same as:</span></a>
-<a class="sourceLine" id="cb199-3" data-line-number="3">d[,<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb199-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb199-5" data-line-number="5">d[<span class="st">&quot;Patient3&quot;</span>, <span class="st">&quot;Age&quot;</span>]</a>
-<a class="sourceLine" id="cb199-6" data-line-number="6"><span class="co"># same as:</span></a>
-<a class="sourceLine" id="cb199-7" data-line-number="7">d[<span class="dv">3</span>,<span class="dv">2</span>]</a>
-<a class="sourceLine" id="cb199-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb199-9" data-line-number="9"><span class="co"># for data frames only, the $ sign can be used to retrieve columns:</span></a>
-<a class="sourceLine" id="cb199-10" data-line-number="10"><span class="co"># d$Name is d[,1] is d[, &quot;Name&quot;]</span></a></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb197-1" data-line-number="1">d[,<span class="st">&quot;Name&quot;</span>]</a>
+<a class="sourceLine" id="cb197-2" data-line-number="2"><span class="co"># same as:</span></a>
+<a class="sourceLine" id="cb197-3" data-line-number="3">d[,<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb197-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb197-5" data-line-number="5">d[<span class="st">&quot;Patient3&quot;</span>, <span class="st">&quot;Age&quot;</span>]</a>
+<a class="sourceLine" id="cb197-6" data-line-number="6"><span class="co"># same as:</span></a>
+<a class="sourceLine" id="cb197-7" data-line-number="7">d[<span class="dv">3</span>,<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb197-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb197-9" data-line-number="9"><span class="co"># for data frames only, the $ sign can be used to retrieve columns:</span></a>
+<a class="sourceLine" id="cb197-10" data-line-number="10"><span class="co"># d$Name is d[,1] is d[, &quot;Name&quot;]</span></a></code></pre></div>
 <ul>
 <li>Include names as you create objects:
 <ul>
 <li>Matrix:</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb200-1" data-line-number="1">m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="dt">ncol=</span><span class="dv">2</span>, </a>
-<a class="sourceLine" id="cb200-2" data-line-number="2">    <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;row1&quot;</span>, <span class="st">&quot;row2&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;col1&quot;</span>, <span class="st">&quot;col2&quot;</span>)))</a></code></pre></div>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb198-1" data-line-number="1">m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="dt">ncol=</span><span class="dv">2</span>, </a>
+<a class="sourceLine" id="cb198-2" data-line-number="2">    <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;row1&quot;</span>, <span class="st">&quot;row2&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;col1&quot;</span>, <span class="st">&quot;col2&quot;</span>)))</a></code></pre></div>
 <pre><code>+ Data frame:</code></pre>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb202-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col1=</span><span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dt">col2=</span><span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, </a>
-<a class="sourceLine" id="cb202-2" data-line-number="2">    <span class="dt">row.names=</span><span class="kw">c</span>(<span class="st">&quot;row1&quot;</span>, <span class="st">&quot;row2&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb200-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col1=</span><span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dt">col2=</span><span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, </a>
+<a class="sourceLine" id="cb200-2" data-line-number="2">    <span class="dt">row.names=</span><span class="kw">c</span>(<span class="st">&quot;row1&quot;</span>, <span class="st">&quot;row2&quot;</span>))</a></code></pre></div>
 </div>
 <div id="manipulation" class="section level3">
 <h3><span class="header-section-number">9.7.2</span> Manipulation</h3>
@@ -344,7 +344,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="examples" class="section level4">
 <h4><span class="header-section-number">9.7.2.1</span> Examples</h4>
 <ul>
-<li>select the columns of b if <strong>at least one element in the 3rd row is less than or equal to 4</strong>:</li>
+<li>Select rows of b if <strong>at least one element in column 2 is greater than 24</strong> (i.e. select patients if they are older than 24):</li>
+</ul>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb201-1" data-line-number="1"><span class="co"># build data frame d</span></a>
+<a class="sourceLine" id="cb201-2" data-line-number="2">d &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Name=</span><span class="kw">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </a>
+<a class="sourceLine" id="cb201-3" data-line-number="3">        <span class="dt">Age=</span><span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</a>
+<a class="sourceLine" id="cb201-4" data-line-number="4">        <span class="dt">Vegetarian=</span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</a>
+<a class="sourceLine" id="cb201-5" data-line-number="5">        <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb201-6" data-line-number="6"><span class="kw">rownames</span>(d) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>)</a>
+<a class="sourceLine" id="cb201-7" data-line-number="7"><span class="co"># The following commands all output the same result:</span></a>
+<a class="sourceLine" id="cb201-8" data-line-number="8">d[d[,<span class="dv">2</span>] <span class="op">&gt;</span><span class="st"> </span><span class="dv">24</span>, ]</a>
+<a class="sourceLine" id="cb201-9" data-line-number="9">d[d[,<span class="st">&quot;Age&quot;</span>] <span class="op">&gt;</span><span class="st"> </span><span class="dv">24</span>, ]</a>
+<a class="sourceLine" id="cb201-10" data-line-number="10">d[d<span class="op">$</span>Age <span class="op">&gt;</span><span class="st"> </span><span class="dv">24</span>, ]</a></code></pre></div>
+<p><img src="images/df_col2.png" width="450"/></p>
+<ul>
+<li>Select patients (rows) based on 2 criteria: age of the patient (column 2) should be great than or equal to 25, and the patient should be vegetarian (column 3):</li>
+</ul>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb202-1" data-line-number="1">d[ d<span class="op">$</span>Age <span class="op">&gt;=</span><span class="st"> </span><span class="dv">25</span> <span class="op">&amp;</span><span class="st"> </span>d<span class="op">$</span>Vegetarian <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>, ]</a></code></pre></div>
+<p><img src="images/df_col2_col3.png" width="650"/></p>
+<ul>
+<li>Select the columns of b if <strong>at least one element in the 3rd row is less than or equal to 4</strong>:</li>
 </ul>
 <div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb203-1" data-line-number="1"><span class="co"># create b</span></a>
 <a class="sourceLine" id="cb203-2" data-line-number="2">b &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </a>
@@ -356,61 +375,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb203-8" data-line-number="8">b[<span class="dv">3</span>, ] <span class="op">&lt;=</span><span class="st"> </span><span class="dv">4</span></a>
 <a class="sourceLine" id="cb203-9" data-line-number="9"><span class="co"># retrieve the corresponding sub-matrix</span></a>
 <a class="sourceLine" id="cb203-10" data-line-number="10">b[ ,b[<span class="dv">3</span>, ] <span class="op">&lt;=</span><span class="st"> </span><span class="dv">4</span>]</a></code></pre></div>
-<ul>
-<li>Select rows of b if <strong>at least one element in column 2 is greater than 24</strong>:</li>
-</ul>
-<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb204-1" data-line-number="1"><span class="co"># build data frame d</span></a>
-<a class="sourceLine" id="cb204-2" data-line-number="2">d &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Name=</span><span class="kw">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </a>
-<a class="sourceLine" id="cb204-3" data-line-number="3">        <span class="dt">Age=</span><span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</a>
-<a class="sourceLine" id="cb204-4" data-line-number="4">        <span class="dt">Vegetarian=</span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</a>
-<a class="sourceLine" id="cb204-5" data-line-number="5">        <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb204-6" data-line-number="6"><span class="kw">rownames</span>(d) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>)</a>
-<a class="sourceLine" id="cb204-7" data-line-number="7"><span class="co"># The following commands all output the same result:</span></a>
-<a class="sourceLine" id="cb204-8" data-line-number="8">d[d[,<span class="dv">2</span>] <span class="op">&gt;</span><span class="st"> </span><span class="dv">24</span>, ]</a>
-<a class="sourceLine" id="cb204-9" data-line-number="9">d[d[,<span class="st">&quot;Age&quot;</span>] <span class="op">&gt;</span><span class="st"> </span><span class="dv">24</span>, ]</a>
-<a class="sourceLine" id="cb204-10" data-line-number="10">d[d<span class="op">$</span>Age <span class="op">&gt;</span><span class="st"> </span><span class="dv">24</span>, ]</a></code></pre></div>
-<p><img src="images/df_col2.png" width="450"/></p>
-<ul>
-<li>Select patients (rows) based on 2 criteria: age of the patient (column 2) should be great than or equal to 25, and the patient should be vegetarian (column 3):</li>
-</ul>
-<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb205-1" data-line-number="1">d[ d<span class="op">$</span>Age <span class="op">&gt;=</span><span class="st"> </span><span class="dv">25</span> <span class="op">&amp;</span><span class="st"> </span>d<span class="op">$</span>Vegetarian <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>, ]</a></code></pre></div>
-<p><img src="images/df_col2_col3.png" width="650"/></p>
 </div>
 <div id="more-useful-commands" class="section level4">
 <h4><span class="header-section-number">9.7.2.2</span> More useful commands</h4>
 <ul>
 <li>Add a row or a column with <strong>rbind</strong> and <strong>cbind</strong>, respectively</li>
 </ul>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb206-1" data-line-number="1"><span class="co"># add a column</span></a>
-<a class="sourceLine" id="cb206-2" data-line-number="2"><span class="kw">cbind</span>(d, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb206-3" data-line-number="3"><span class="co"># add a row</span></a>
-<a class="sourceLine" id="cb206-4" data-line-number="4"><span class="kw">rbind</span>(d, <span class="dv">4</span><span class="op">:</span><span class="dv">6</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb204-1" data-line-number="1"><span class="co"># add a column</span></a>
+<a class="sourceLine" id="cb204-2" data-line-number="2"><span class="kw">cbind</span>(d, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb204-3" data-line-number="3"><span class="co"># add a row</span></a>
+<a class="sourceLine" id="cb204-4" data-line-number="4"><span class="kw">rbind</span>(d, <span class="dv">4</span><span class="op">:</span><span class="dv">6</span>)</a></code></pre></div>
 <p>Add a patient to our data frame <strong>d</strong>:</p>
-<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb207-1" data-line-number="1">d &lt;-<span class="st"> </span><span class="kw">rbind</span>(d, <span class="kw">c</span>(<span class="st">&quot;Jordi&quot;</span>, <span class="dv">33</span>, <span class="ot">FALSE</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb205-1" data-line-number="1">d &lt;-<span class="st"> </span><span class="kw">rbind</span>(d, <span class="kw">c</span>(<span class="st">&quot;Jordi&quot;</span>, <span class="dv">33</span>, <span class="ot">FALSE</span>))</a></code></pre></div>
 <ul>
 <li>Process the sum of all rows or all columns with <strong>rowSums</strong> and <strong>colSums</strong>, respectively.</li>
 </ul>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb208-1" data-line-number="1"><span class="co"># create a matrix</span></a>
-<a class="sourceLine" id="cb208-2" data-line-number="2">b &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, <span class="dt">ncol=</span><span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb208-3" data-line-number="3"><span class="co"># process sum of rows and sum of cols</span></a>
-<a class="sourceLine" id="cb208-4" data-line-number="4"><span class="kw">rowSums</span>(b)</a>
-<a class="sourceLine" id="cb208-5" data-line-number="5"><span class="kw">colSums</span>(b)</a></code></pre></div>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb206-1" data-line-number="1"><span class="co"># create a matrix</span></a>
+<a class="sourceLine" id="cb206-2" data-line-number="2">b &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, <span class="dt">ncol=</span><span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb206-3" data-line-number="3"><span class="co"># process sum of rows and sum of cols</span></a>
+<a class="sourceLine" id="cb206-4" data-line-number="4"><span class="kw">rowSums</span>(b)</a>
+<a class="sourceLine" id="cb206-5" data-line-number="5"><span class="kw">colSums</span>(b)</a></code></pre></div>
 <ul>
 <li>The <strong>apply</strong> function</li>
 </ul>
 <p>Powerful tool to apply a command to all rows or all columns of a data frame or a matrix.<br>
 For example, instead of calculating the sum of each row, you might be interested in calculating the median ? But rowMedians doesn’t exist !
 <br><br>
-<strong>apply</strong> takes 3 arguments:
-* first argument <strong>X</strong>: 2-dimensional object
-* second argument <strong>MARGIN</strong>: apply by row or by column?
-+ 1: by row
-+ 2: by column
-* third argument <strong>FUN</strong>: function to apply to either rows or columns</p>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb209-1" data-line-number="1"><span class="co"># median value of each row of b</span></a>
-<a class="sourceLine" id="cb209-2" data-line-number="2"><span class="kw">apply</span>(<span class="dt">X=</span>b, <span class="dt">MARGIN=</span><span class="dv">1</span>, <span class="dt">FUN=</span>median)</a>
-<a class="sourceLine" id="cb209-3" data-line-number="3"><span class="co"># median value of each column of b</span></a>
-<a class="sourceLine" id="cb209-4" data-line-number="4"><span class="kw">apply</span>(<span class="dt">X=</span>b, <span class="dt">MARGIN=</span><span class="dv">2</span>, <span class="dt">FUN=</span>median)</a></code></pre></div>
+<strong>apply</strong> takes 3 arguments:</p>
+<ul>
+<li>first argument <strong>X</strong>: 2-dimensional object</li>
+<li>second argument <strong>MARGIN</strong>: apply by row or by column?
+<ul>
+<li>1: by row</li>
+<li>2: by column</li>
+</ul></li>
+<li>third argument <strong>FUN</strong>: function to apply to either rows or columns</li>
+</ul>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb207-1" data-line-number="1"><span class="co"># median value of each row of b</span></a>
+<a class="sourceLine" id="cb207-2" data-line-number="2"><span class="kw">apply</span>(<span class="dt">X=</span>b, <span class="dt">MARGIN=</span><span class="dv">1</span>, <span class="dt">FUN=</span>median)</a>
+<a class="sourceLine" id="cb207-3" data-line-number="3"><span class="co"># median value of each column of b</span></a>
+<a class="sourceLine" id="cb207-4" data-line-number="4"><span class="kw">apply</span>(<span class="dt">X=</span>b, <span class="dt">MARGIN=</span><span class="dv">2</span>, <span class="dt">FUN=</span>median)</a></code></pre></div>
 
 </div>
 </div>

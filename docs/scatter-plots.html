@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -291,12 +291,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Simple scatter plot</li>
 </ul>
-<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb353-1" data-line-number="1"><span class="co"># Create 2 vectors</span></a>
-<a class="sourceLine" id="cb353-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span></a>
-<a class="sourceLine" id="cb353-3" data-line-number="3">y &lt;-<span class="st"> </span>x<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb353-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb353-5" data-line-number="5"><span class="co"># Plot x against y</span></a>
-<a class="sourceLine" id="cb353-6" data-line-number="6"><span class="kw">plot</span>(x, y)</a></code></pre></div>
+<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb351-1" data-line-number="1"><span class="co"># Create 2 vectors</span></a>
+<a class="sourceLine" id="cb351-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span></a>
+<a class="sourceLine" id="cb351-3" data-line-number="3">y &lt;-<span class="st"> </span>x<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb351-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb351-5" data-line-number="5"><span class="co"># Plot x against y</span></a>
+<a class="sourceLine" id="cb351-6" data-line-number="6"><span class="kw">plot</span>(x, y)</a></code></pre></div>
 <p><img src="images/plots/scatter1.png" width="450"/></p>
 <p><em>Note that if one vector only is given as an input, it will be plotted against the indices of each element</em></p>
 <ul>
@@ -308,21 +308,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>main: title of the plot</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb354-1" data-line-number="1"><span class="kw">plot</span>(x, y, </a>
-<a class="sourceLine" id="cb354-2" data-line-number="2">    <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, </a>
-<a class="sourceLine" id="cb354-3" data-line-number="3">    <span class="dt">pch=</span><span class="dv">2</span>, </a>
-<a class="sourceLine" id="cb354-4" data-line-number="4">    <span class="dt">type=</span><span class="st">&quot;b&quot;</span>, </a>
-<a class="sourceLine" id="cb354-5" data-line-number="5">    <span class="dt">main=</span><span class="st">&quot;a pretty scatter plot&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb352-1" data-line-number="1"><span class="kw">plot</span>(x, y, </a>
+<a class="sourceLine" id="cb352-2" data-line-number="2">    <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, </a>
+<a class="sourceLine" id="cb352-3" data-line-number="3">    <span class="dt">pch=</span><span class="dv">2</span>, </a>
+<a class="sourceLine" id="cb352-4" data-line-number="4">    <span class="dt">type=</span><span class="st">&quot;b&quot;</span>, </a>
+<a class="sourceLine" id="cb352-5" data-line-number="5">    <span class="dt">main=</span><span class="st">&quot;a pretty scatter plot&quot;</span>)</a></code></pre></div>
 <p><img src="images/plots/scatter2.png" width="450"/></p>
 <ul>
 <li>You can play a bit:</li>
 </ul>
-<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb355-1" data-line-number="1"><span class="kw">plot</span>(x, y, </a>
-<a class="sourceLine" id="cb355-2" data-line-number="2">    <span class="dt">col=</span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
-<a class="sourceLine" id="cb355-3" data-line-number="3">    <span class="dt">pch=</span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
-<a class="sourceLine" id="cb355-4" data-line-number="4">    <span class="dt">cex=</span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
-<a class="sourceLine" id="cb355-5" data-line-number="5">    <span class="dt">type=</span><span class="st">&quot;b&quot;</span>, </a>
-<a class="sourceLine" id="cb355-6" data-line-number="6">    <span class="dt">main=</span><span class="st">&quot;an even prettier scatter plot&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb353-1" data-line-number="1"><span class="kw">plot</span>(x, y, </a>
+<a class="sourceLine" id="cb353-2" data-line-number="2">    <span class="dt">col=</span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
+<a class="sourceLine" id="cb353-3" data-line-number="3">    <span class="dt">pch=</span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
+<a class="sourceLine" id="cb353-4" data-line-number="4">    <span class="dt">cex=</span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
+<a class="sourceLine" id="cb353-5" data-line-number="5">    <span class="dt">type=</span><span class="st">&quot;b&quot;</span>, </a>
+<a class="sourceLine" id="cb353-6" data-line-number="6">    <span class="dt">main=</span><span class="st">&quot;an even prettier scatter plot&quot;</span>)</a></code></pre></div>
 <p><img src="images/plots/scatter3.png" width="450"/></p>
 <h4>
 Different type of points that you can use:
@@ -334,16 +334,16 @@ About colors
 <ul>
 <li>Color codes 1 to 8 are taken from the <strong>palette()</strong> function and respectively code for: “black”, “red”, “green3”, “blue”, “cyan”, “magenta”, “yellow”, “gray”.</li>
 </ul>
-<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb356-1" data-line-number="1"><span class="co"># see the 8-color palette:</span></a>
-<a class="sourceLine" id="cb356-2" data-line-number="2"><span class="kw">palette</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb354-1" data-line-number="1"><span class="co"># see the 8-color palette:</span></a>
+<a class="sourceLine" id="cb354-2" data-line-number="2"><span class="kw">palette</span>()</a></code></pre></div>
 <ul>
 <li>There is a larger set of build-in colors that you can use:</li>
 </ul>
-<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb357-1" data-line-number="1"><span class="co"># see all 657 possible build-in colors:</span></a>
-<a class="sourceLine" id="cb357-2" data-line-number="2"><span class="kw">colors</span>()</a>
-<a class="sourceLine" id="cb357-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb357-4" data-line-number="4"><span class="co"># looking for blue only? You can pick from 66 blueish options:</span></a>
-<a class="sourceLine" id="cb357-5" data-line-number="5"><span class="kw">grep</span>(<span class="st">&quot;blue&quot;</span>, <span class="kw">colors</span>(), <span class="dt">value=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb355-1" data-line-number="1"><span class="co"># see all 657 possible build-in colors:</span></a>
+<a class="sourceLine" id="cb355-2" data-line-number="2"><span class="kw">colors</span>()</a>
+<a class="sourceLine" id="cb355-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb355-4" data-line-number="4"><span class="co"># looking for blue only? You can pick from 66 blueish options:</span></a>
+<a class="sourceLine" id="cb355-5" data-line-number="5"><span class="kw">grep</span>(<span class="st">&quot;blue&quot;</span>, <span class="kw">colors</span>(), <span class="dt">value=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 <p>You can also find them <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">here</a>.</p>
 </div>
             </section>

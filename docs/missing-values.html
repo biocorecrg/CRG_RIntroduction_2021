@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -291,35 +291,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Finding missing values in a vector</li>
 </ul>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" data-line-number="1"><span class="co"># Create vector</span></a>
-<a class="sourceLine" id="cb248-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="ot">NA</span>)</a>
-<a class="sourceLine" id="cb248-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb248-4" data-line-number="4"><span class="co"># Find missing values in vector:</span></a>
-<a class="sourceLine" id="cb248-5" data-line-number="5"><span class="kw">is.na</span>(x)</a>
-<a class="sourceLine" id="cb248-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb248-7" data-line-number="7"><span class="co"># Remove missing values</span></a>
-<a class="sourceLine" id="cb248-8" data-line-number="8"><span class="kw">na.omit</span>(x)</a>
-<a class="sourceLine" id="cb248-9" data-line-number="9">x[ <span class="op">!</span><span class="kw">is.na</span>(x) ]</a></code></pre></div>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb246-1" data-line-number="1"><span class="co"># Create vector</span></a>
+<a class="sourceLine" id="cb246-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="ot">NA</span>)</a>
+<a class="sourceLine" id="cb246-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb246-4" data-line-number="4"><span class="co"># Find missing values in vector:</span></a>
+<a class="sourceLine" id="cb246-5" data-line-number="5"><span class="kw">is.na</span>(x)</a>
+<a class="sourceLine" id="cb246-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb246-7" data-line-number="7"><span class="co"># Remove missing values</span></a>
+<a class="sourceLine" id="cb246-8" data-line-number="8"><span class="kw">na.omit</span>(x)</a>
+<a class="sourceLine" id="cb246-9" data-line-number="9">x[ <span class="op">!</span><span class="kw">is.na</span>(x) ]</a></code></pre></div>
 <ul>
 <li>Some functions can deal with NAs, either by default, or with specific arguments:</li>
 </ul>
-<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb249-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="ot">NA</span>)</a>
-<a class="sourceLine" id="cb249-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb249-3" data-line-number="3"><span class="co"># default arguments</span></a>
-<a class="sourceLine" id="cb249-4" data-line-number="4"><span class="kw">mean</span>(x)</a>
-<a class="sourceLine" id="cb249-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb249-6" data-line-number="6"><span class="co"># set na.rm=TRUE</span></a>
-<a class="sourceLine" id="cb249-7" data-line-number="7"><span class="kw">mean</span>(x, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb247-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="ot">NA</span>)</a>
+<a class="sourceLine" id="cb247-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb247-3" data-line-number="3"><span class="co"># default arguments</span></a>
+<a class="sourceLine" id="cb247-4" data-line-number="4"><span class="kw">mean</span>(x)</a>
+<a class="sourceLine" id="cb247-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb247-6" data-line-number="6"><span class="co"># set na.rm=TRUE</span></a>
+<a class="sourceLine" id="cb247-7" data-line-number="7"><span class="kw">mean</span>(x, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 <ul>
 <li>In a matrix or a data frame, keep only rows where there are no NA values:</li>
 </ul>
-<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" data-line-number="1"><span class="co"># Create matrix with some NA values</span></a>
-<a class="sourceLine" id="cb250-2" data-line-number="2">mydata &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="ot">NA</span>, <span class="dv">12</span><span class="op">:</span><span class="dv">2</span>, <span class="ot">NA</span>, <span class="dv">15</span><span class="op">:</span><span class="dv">20</span>, <span class="ot">NA</span>), <span class="dt">ncol=</span><span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb250-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb250-4" data-line-number="4"><span class="co"># Keep only rows without NAs</span></a>
-<a class="sourceLine" id="cb250-5" data-line-number="5">mydata[<span class="kw">complete.cases</span>(mydata), ]</a>
-<a class="sourceLine" id="cb250-6" data-line-number="6"><span class="co"># or</span></a>
-<a class="sourceLine" id="cb250-7" data-line-number="7"><span class="kw">na.omit</span>(mydata)</a></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" data-line-number="1"><span class="co"># Create matrix with some NA values</span></a>
+<a class="sourceLine" id="cb248-2" data-line-number="2">mydata &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="ot">NA</span>, <span class="dv">12</span><span class="op">:</span><span class="dv">2</span>, <span class="ot">NA</span>, <span class="dv">15</span><span class="op">:</span><span class="dv">20</span>, <span class="ot">NA</span>), <span class="dt">ncol=</span><span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb248-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb248-4" data-line-number="4"><span class="co"># Keep only rows without NAs</span></a>
+<a class="sourceLine" id="cb248-5" data-line-number="5">mydata[<span class="kw">complete.cases</span>(mydata), ]</a>
+<a class="sourceLine" id="cb248-6" data-line-number="6"><span class="co"># or</span></a>
+<a class="sourceLine" id="cb248-7" data-line-number="7"><span class="kw">na.omit</span>(mydata)</a></code></pre></div>
 <p><br>
 Check this <a href="https://www.r-bloggers.com/r-null-values-null-na-nan-inf/">R blogger post on missing/null values</a></p>
 

@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -293,22 +293,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb375-1" data-line-number="1"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb375-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module3&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb373-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb373-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module3&quot;</span>)</a></code></pre></div>
 </details>
 <div id="exercise-11a--scatter-plot" class="section level3">
 <h3><span class="header-section-number">17.3.1</span> Exercise 11a- scatter plot</h3>
 <p><strong>1- Create the following data frame</strong></p>
-<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb376-1" data-line-number="1">genes &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">sample1=</span><span class="kw">rnorm</span>(<span class="dv">300</span>),</a>
-<a class="sourceLine" id="cb376-2" data-line-number="2">                    <span class="dt">sample2=</span><span class="kw">rnorm</span>(<span class="dv">300</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb374-1" data-line-number="1">genes &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">sample1=</span><span class="kw">rnorm</span>(<span class="dv">300</span>),</a>
+<a class="sourceLine" id="cb374-2" data-line-number="2">                    <span class="dt">sample2=</span><span class="kw">rnorm</span>(<span class="dv">300</span>))</a></code></pre></div>
 <p><strong>2- Create a scatter plot showing sample1 (x-axis) vs sample2 (y-axis) of genes.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb377-1" data-line-number="1"><span class="kw">plot</span>(genes<span class="op">$</span>sample1, genes<span class="op">$</span>sample2)</a></code></pre></div>
+<div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb375-1" data-line-number="1"><span class="kw">plot</span>(genes<span class="op">$</span>sample1, genes<span class="op">$</span>sample2)</a></code></pre></div>
 </details>
 <p><strong>3- Change the point type and color.</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb376-1" data-line-number="1"><span class="kw">plot</span>(genes<span class="op">$</span>sample1, </a>
+<a class="sourceLine" id="cb376-2" data-line-number="2">     genes<span class="op">$</span>sample2, </a>
+<a class="sourceLine" id="cb376-3" data-line-number="3">     <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>, </a>
+<a class="sourceLine" id="cb376-4" data-line-number="4">     <span class="dt">pch=</span><span class="dv">3</span>)</a></code></pre></div>
+</details>
+<p><strong>4- Change x-axis and y-axis labels to “Sample 1” and “Sample 2”, respectively.</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb377-1" data-line-number="1"><span class="kw">plot</span>(genes<span class="op">$</span>sample1, </a>
+<a class="sourceLine" id="cb377-2" data-line-number="2">     genes<span class="op">$</span>sample2, </a>
+<a class="sourceLine" id="cb377-3" data-line-number="3">     <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>, </a>
+<a class="sourceLine" id="cb377-4" data-line-number="4">     <span class="dt">pch=</span><span class="dv">3</span>,</a>
+<a class="sourceLine" id="cb377-5" data-line-number="5">     <span class="dt">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </a>
+<a class="sourceLine" id="cb377-6" data-line-number="6">     <span class="dt">ylab=</span><span class="st">&quot;Sample 2&quot;</span>)</a></code></pre></div>
+</details>
+<p><strong>5- Add a title to the plot.</strong></p>
 <details>
 <p><summary>
 correction
@@ -316,32 +338,10 @@ correction
 <div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb378-1" data-line-number="1"><span class="kw">plot</span>(genes<span class="op">$</span>sample1, </a>
 <a class="sourceLine" id="cb378-2" data-line-number="2">     genes<span class="op">$</span>sample2, </a>
 <a class="sourceLine" id="cb378-3" data-line-number="3">     <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>, </a>
-<a class="sourceLine" id="cb378-4" data-line-number="4">     <span class="dt">pch=</span><span class="dv">3</span>)</a></code></pre></div>
-</details>
-<p><strong>4- Change x-axis and y-axis labels to “Sample 1” and “Sample 2”, respectively.</strong></p>
-<details>
-<p><summary>
-correction
-</summary></p>
-<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb379-1" data-line-number="1"><span class="kw">plot</span>(genes<span class="op">$</span>sample1, </a>
-<a class="sourceLine" id="cb379-2" data-line-number="2">     genes<span class="op">$</span>sample2, </a>
-<a class="sourceLine" id="cb379-3" data-line-number="3">     <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>, </a>
-<a class="sourceLine" id="cb379-4" data-line-number="4">     <span class="dt">pch=</span><span class="dv">3</span>,</a>
-<a class="sourceLine" id="cb379-5" data-line-number="5">     <span class="dt">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </a>
-<a class="sourceLine" id="cb379-6" data-line-number="6">     <span class="dt">ylab=</span><span class="st">&quot;Sample 2&quot;</span>)</a></code></pre></div>
-</details>
-<p><strong>5- Add a title to the plot.</strong></p>
-<details>
-<p><summary>
-correction
-</summary></p>
-<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb380-1" data-line-number="1"><span class="kw">plot</span>(genes<span class="op">$</span>sample1, </a>
-<a class="sourceLine" id="cb380-2" data-line-number="2">     genes<span class="op">$</span>sample2, </a>
-<a class="sourceLine" id="cb380-3" data-line-number="3">     <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>, </a>
-<a class="sourceLine" id="cb380-4" data-line-number="4">     <span class="dt">pch=</span><span class="dv">3</span>,</a>
-<a class="sourceLine" id="cb380-5" data-line-number="5">     <span class="dt">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </a>
-<a class="sourceLine" id="cb380-6" data-line-number="6">     <span class="dt">ylab=</span><span class="st">&quot;Sample 2&quot;</span>,</a>
-<a class="sourceLine" id="cb380-7" data-line-number="7">     <span class="dt">main=</span><span class="st">&quot;scatter plot&quot;</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb378-4" data-line-number="4">     <span class="dt">pch=</span><span class="dv">3</span>,</a>
+<a class="sourceLine" id="cb378-5" data-line-number="5">     <span class="dt">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </a>
+<a class="sourceLine" id="cb378-6" data-line-number="6">     <span class="dt">ylab=</span><span class="st">&quot;Sample 2&quot;</span>,</a>
+<a class="sourceLine" id="cb378-7" data-line-number="7">     <span class="dt">main=</span><span class="st">&quot;scatter plot&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>6- Add a vertical red line that starts at the median expression value of sample 1. Do it in two steps:</strong><br>
 a. calculate the median expression of genes in sample 1.<br>
@@ -350,41 +350,41 @@ b. plot a vertical line using abline().</p>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb381-1" data-line-number="1"><span class="co"># median expression of sample1</span></a>
-<a class="sourceLine" id="cb381-2" data-line-number="2">med1 &lt;-<span class="st"> </span><span class="kw">median</span>(genes<span class="op">$</span>sample1)</a>
-<a class="sourceLine" id="cb381-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb381-4" data-line-number="4"><span class="co"># plot</span></a>
-<a class="sourceLine" id="cb381-5" data-line-number="5"><span class="kw">plot</span>(genes<span class="op">$</span>sample1, </a>
-<a class="sourceLine" id="cb381-6" data-line-number="6">     genes<span class="op">$</span>sample2, </a>
-<a class="sourceLine" id="cb381-7" data-line-number="7">     <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>, </a>
-<a class="sourceLine" id="cb381-8" data-line-number="8">     <span class="dt">pch=</span><span class="dv">3</span>,</a>
-<a class="sourceLine" id="cb381-9" data-line-number="9">     <span class="dt">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </a>
-<a class="sourceLine" id="cb381-10" data-line-number="10">     <span class="dt">ylab=</span><span class="st">&quot;Sample 2&quot;</span>,</a>
-<a class="sourceLine" id="cb381-11" data-line-number="11">     <span class="dt">main=</span><span class="st">&quot;scatter plot&quot;</span>)</a>
-<a class="sourceLine" id="cb381-12" data-line-number="12"></a>
-<a class="sourceLine" id="cb381-13" data-line-number="13"><span class="co"># vertical line</span></a>
-<a class="sourceLine" id="cb381-14" data-line-number="14"><span class="kw">abline</span>(<span class="dt">v=</span>med1, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb379-1" data-line-number="1"><span class="co"># median expression of sample1</span></a>
+<a class="sourceLine" id="cb379-2" data-line-number="2">med1 &lt;-<span class="st"> </span><span class="kw">median</span>(genes<span class="op">$</span>sample1)</a>
+<a class="sourceLine" id="cb379-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb379-4" data-line-number="4"><span class="co"># plot</span></a>
+<a class="sourceLine" id="cb379-5" data-line-number="5"><span class="kw">plot</span>(genes<span class="op">$</span>sample1, </a>
+<a class="sourceLine" id="cb379-6" data-line-number="6">     genes<span class="op">$</span>sample2, </a>
+<a class="sourceLine" id="cb379-7" data-line-number="7">     <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>, </a>
+<a class="sourceLine" id="cb379-8" data-line-number="8">     <span class="dt">pch=</span><span class="dv">3</span>,</a>
+<a class="sourceLine" id="cb379-9" data-line-number="9">     <span class="dt">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </a>
+<a class="sourceLine" id="cb379-10" data-line-number="10">     <span class="dt">ylab=</span><span class="st">&quot;Sample 2&quot;</span>,</a>
+<a class="sourceLine" id="cb379-11" data-line-number="11">     <span class="dt">main=</span><span class="st">&quot;scatter plot&quot;</span>)</a>
+<a class="sourceLine" id="cb379-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb379-13" data-line-number="13"><span class="co"># vertical line</span></a>
+<a class="sourceLine" id="cb379-14" data-line-number="14"><span class="kw">abline</span>(<span class="dt">v=</span>med1, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
 </details>
 </div>
 <div id="exercise-11b--bar-plot-pie-chart" class="section level3">
 <h3><span class="header-section-number">17.3.2</span> Exercise 11b- bar plot + pie chart</h3>
 <p><strong>1- Create the following vector</strong></p>
-<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb382-1" data-line-number="1">genes_significance &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;enriched&quot;</span>, <span class="st">&quot;depleted&quot;</span>, <span class="st">&quot;none&quot;</span>), <span class="kw">c</span>(<span class="dv">20</span>, <span class="dv">32</span>, <span class="dv">248</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb380-1" data-line-number="1">genes_significance &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;enriched&quot;</span>, <span class="st">&quot;depleted&quot;</span>, <span class="st">&quot;none&quot;</span>), <span class="kw">c</span>(<span class="dv">20</span>, <span class="dv">32</span>, <span class="dv">248</span>))</a></code></pre></div>
 <p><strong>2- The vector describes whether a gene is up- (enriched) or down- (depleted) regulated, or not regulated (none).</strong><br>
 Produce a barplot that displays this information: how many genes are enriched, depleted, or not regulated.</p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb383-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(genes_significance))</a></code></pre></div>
+<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb381-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(genes_significance))</a></code></pre></div>
 </details>
 <p><strong>3- Color the bars of the boxplot, each in a different color (3 colors of your choice)</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb384-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(genes_significance), </a>
-<a class="sourceLine" id="cb384-2" data-line-number="2">  <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb382-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(genes_significance), </a>
+<a class="sourceLine" id="cb382-2" data-line-number="2">  <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>))</a></code></pre></div>
 </details>
 <p><strong>4- Use the argument “names.arg” in barplot() to rename the bars:</strong>
 Change depleted to “Down”, enriched to “Up”, none to “Not significant”</p>
@@ -392,9 +392,9 @@ Change depleted to “Down”, enriched to “Up”, none to “Not significant�
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb385-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(genes_significance), </a>
-<a class="sourceLine" id="cb385-2" data-line-number="2">  <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </a>
-<a class="sourceLine" id="cb385-3" data-line-number="3">  <span class="dt">names.arg=</span><span class="kw">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb383-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(genes_significance), </a>
+<a class="sourceLine" id="cb383-2" data-line-number="2">  <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </a>
+<a class="sourceLine" id="cb383-3" data-line-number="3">  <span class="dt">names.arg=</span><span class="kw">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>))</a></code></pre></div>
 </details>
 <p><strong>5- The “las” argument allow to rotate the x-axis labels for a better visibility.</strong>
 Try value 2 for las: what happens?</p>
@@ -402,27 +402,27 @@ Try value 2 for las: what happens?</p>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb386-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(genes_significance), </a>
-<a class="sourceLine" id="cb386-2" data-line-number="2">  <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </a>
-<a class="sourceLine" id="cb386-3" data-line-number="3">  <span class="dt">names.arg=</span><span class="kw">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>), </a>
-<a class="sourceLine" id="cb386-4" data-line-number="4">  <span class="dt">las=</span><span class="dv">2</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb384-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(genes_significance), </a>
+<a class="sourceLine" id="cb384-2" data-line-number="2">  <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </a>
+<a class="sourceLine" id="cb384-3" data-line-number="3">  <span class="dt">names.arg=</span><span class="kw">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>), </a>
+<a class="sourceLine" id="cb384-4" data-line-number="4">  <span class="dt">las=</span><span class="dv">2</span>)</a></code></pre></div>
 </details>
 <p><strong>6- Create a pie chart of the same information (Enriched, Depleted, None)</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb387-1" data-line-number="1"><span class="kw">pie</span>(<span class="kw">table</span>(genes_significance))</a></code></pre></div>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb385-1" data-line-number="1"><span class="kw">pie</span>(<span class="kw">table</span>(genes_significance))</a></code></pre></div>
 </details>
 <p>Change the color of the slices, modify the labels, and add a title.</p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb388"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb388-1" data-line-number="1"><span class="kw">pie</span>(<span class="kw">table</span>(genes_significance), </a>
-<a class="sourceLine" id="cb388-2" data-line-number="2">    <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </a>
-<a class="sourceLine" id="cb388-3" data-line-number="3">    <span class="dt">main=</span><span class="st">&quot;pie chart&quot;</span>, </a>
-<a class="sourceLine" id="cb388-4" data-line-number="4">    <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb386-1" data-line-number="1"><span class="kw">pie</span>(<span class="kw">table</span>(genes_significance), </a>
+<a class="sourceLine" id="cb386-2" data-line-number="2">    <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </a>
+<a class="sourceLine" id="cb386-3" data-line-number="3">    <span class="dt">main=</span><span class="st">&quot;pie chart&quot;</span>, </a>
+<a class="sourceLine" id="cb386-4" data-line-number="4">    <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>))</a></code></pre></div>
 </details>
 </div>
 <div id="exercise-11c--histogram" class="section level3">
@@ -432,7 +432,7 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb389-1" data-line-number="1"><span class="kw">hist</span>(genes<span class="op">$</span>sample1)</a></code></pre></div>
+<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb387-1" data-line-number="1"><span class="kw">hist</span>(genes<span class="op">$</span>sample1)</a></code></pre></div>
 </details>
 <p><strong>2- Repeat the histogram but change argument breaks to 50.</strong><br>
 What is the difference ?</p>
@@ -440,41 +440,41 @@ What is the difference ?</p>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb390"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb390-1" data-line-number="1"><span class="kw">hist</span>(genes<span class="op">$</span>sample1, </a>
-<a class="sourceLine" id="cb390-2" data-line-number="2">  <span class="dt">breaks=</span><span class="dv">50</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb388"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb388-1" data-line-number="1"><span class="kw">hist</span>(genes<span class="op">$</span>sample1, </a>
+<a class="sourceLine" id="cb388-2" data-line-number="2">  <span class="dt">breaks=</span><span class="dv">50</span>)</a></code></pre></div>
 </details>
 <p><strong>3- Color this histogram in light blue.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb391-1" data-line-number="1"><span class="kw">hist</span>(genes<span class="op">$</span>sample1, </a>
-<a class="sourceLine" id="cb391-2" data-line-number="2">  <span class="dt">breaks=</span><span class="dv">50</span>, </a>
-<a class="sourceLine" id="cb391-3" data-line-number="3">  <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb389-1" data-line-number="1"><span class="kw">hist</span>(genes<span class="op">$</span>sample1, </a>
+<a class="sourceLine" id="cb389-2" data-line-number="2">  <span class="dt">breaks=</span><span class="dv">50</span>, </a>
+<a class="sourceLine" id="cb389-3" data-line-number="3">  <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>4- Zoom in the histogram: show only the distribution of expression values from 0 to 2 (x-axis) using the xlim argument.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb392"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb392-1" data-line-number="1"><span class="kw">hist</span>(genes<span class="op">$</span>sample1, </a>
-<a class="sourceLine" id="cb392-2" data-line-number="2">  <span class="dt">breaks=</span><span class="dv">50</span>, </a>
-<a class="sourceLine" id="cb392-3" data-line-number="3">  <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>,</a>
-<a class="sourceLine" id="cb392-4" data-line-number="4">  <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">2</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb390"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb390-1" data-line-number="1"><span class="kw">hist</span>(genes<span class="op">$</span>sample1, </a>
+<a class="sourceLine" id="cb390-2" data-line-number="2">  <span class="dt">breaks=</span><span class="dv">50</span>, </a>
+<a class="sourceLine" id="cb390-3" data-line-number="3">  <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>,</a>
+<a class="sourceLine" id="cb390-4" data-line-number="4">  <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">2</span>))</a></code></pre></div>
 </details>
 <p><strong>5- Save the histogram in a pdf file.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb393-1" data-line-number="1"><span class="kw">pdf</span>(<span class="st">&quot;myhistogram.pdf&quot;</span>)</a>
-<a class="sourceLine" id="cb393-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb393-3" data-line-number="3"><span class="kw">hist</span>(genes<span class="op">$</span>sample1, </a>
-<a class="sourceLine" id="cb393-4" data-line-number="4">    <span class="dt">breaks=</span><span class="dv">50</span>, </a>
-<a class="sourceLine" id="cb393-5" data-line-number="5">    <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>, </a>
-<a class="sourceLine" id="cb393-6" data-line-number="6">    <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb393-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb393-8" data-line-number="8"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb391-1" data-line-number="1"><span class="kw">pdf</span>(<span class="st">&quot;myhistogram.pdf&quot;</span>)</a>
+<a class="sourceLine" id="cb391-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb391-3" data-line-number="3"><span class="kw">hist</span>(genes<span class="op">$</span>sample1, </a>
+<a class="sourceLine" id="cb391-4" data-line-number="4">    <span class="dt">breaks=</span><span class="dv">50</span>, </a>
+<a class="sourceLine" id="cb391-5" data-line-number="5">    <span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>, </a>
+<a class="sourceLine" id="cb391-6" data-line-number="6">    <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb391-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb391-8" data-line-number="8"><span class="kw">dev.off</span>()</a></code></pre></div>
 </details>
 
 </div>

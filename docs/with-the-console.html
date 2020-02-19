@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -287,86 +287,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="with-the-console" class="section level2">
 <h2><span class="header-section-number">17.2</span> With the console</h2>
-<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb369-1" data-line-number="1"><span class="co"># Open the file that will contain your plot (the name is up to you)</span></a>
-<a class="sourceLine" id="cb369-2" data-line-number="2"><span class="kw">pdf</span>(<span class="dt">file=</span><span class="st">&quot;myplot.pdf&quot;</span>)</a>
-<a class="sourceLine" id="cb369-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb369-4" data-line-number="4"><span class="co"># execute the plot</span></a>
-<a class="sourceLine" id="cb369-5" data-line-number="5"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb369-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb369-7" data-line-number="7"><span class="co"># Close the file that will contain the plot</span></a>
-<a class="sourceLine" id="cb369-8" data-line-number="8"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb367-1" data-line-number="1"><span class="co"># Open the file that will contain your plot (the name is up to you)</span></a>
+<a class="sourceLine" id="cb367-2" data-line-number="2"><span class="kw">pdf</span>(<span class="dt">file=</span><span class="st">&quot;myplot.pdf&quot;</span>)</a>
+<a class="sourceLine" id="cb367-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb367-4" data-line-number="4"><span class="co"># execute the plot</span></a>
+<a class="sourceLine" id="cb367-5" data-line-number="5"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb367-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb367-7" data-line-number="7"><span class="co"># Close the file that will contain the plot</span></a>
+<a class="sourceLine" id="cb367-8" data-line-number="8"><span class="kw">dev.off</span>()</a></code></pre></div>
 <h4>
 Formats
 </h4>
 <p>R supports a variety of file formats for figures: pdf, png, jpeg, tiff, bmp, svg, ps.<br>
 They all come with their own function, for example:</p>
-<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb370-1" data-line-number="1"><span class="co"># TIFF</span></a>
-<a class="sourceLine" id="cb370-2" data-line-number="2"><span class="kw">tiff</span>(<span class="dt">file=</span><span class="st">&quot;myfile.tiff&quot;</span>)</a>
-<a class="sourceLine" id="cb370-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb370-4" data-line-number="4">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb370-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb370-6" data-line-number="6"><span class="kw">dev.off</span>()</a>
-<a class="sourceLine" id="cb370-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb370-8" data-line-number="8"><span class="co"># JPEG</span></a>
-<a class="sourceLine" id="cb370-9" data-line-number="9"><span class="kw">jpeg</span>(<span class="dt">file=</span><span class="st">&quot;myfile.jpeg&quot;</span>)</a>
-<a class="sourceLine" id="cb370-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb370-11" data-line-number="11">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb370-12" data-line-number="12"></a>
-<a class="sourceLine" id="cb370-13" data-line-number="13"><span class="kw">dev.off</span>()</a>
-<a class="sourceLine" id="cb370-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb370-15" data-line-number="15"><span class="co"># etc.</span></a></code></pre></div>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb368-1" data-line-number="1"><span class="co"># TIFF</span></a>
+<a class="sourceLine" id="cb368-2" data-line-number="2"><span class="kw">tiff</span>(<span class="dt">file=</span><span class="st">&quot;myfile.tiff&quot;</span>)</a>
+<a class="sourceLine" id="cb368-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb368-4" data-line-number="4">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb368-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb368-6" data-line-number="6"><span class="kw">dev.off</span>()</a>
+<a class="sourceLine" id="cb368-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb368-8" data-line-number="8"><span class="co"># JPEG</span></a>
+<a class="sourceLine" id="cb368-9" data-line-number="9"><span class="kw">jpeg</span>(<span class="dt">file=</span><span class="st">&quot;myfile.jpeg&quot;</span>)</a>
+<a class="sourceLine" id="cb368-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb368-11" data-line-number="11">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb368-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb368-13" data-line-number="13"><span class="kw">dev.off</span>()</a>
+<a class="sourceLine" id="cb368-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb368-15" data-line-number="15"><span class="co"># etc.</span></a></code></pre></div>
 <p>The size of the output file can be changed:</p>
-<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb371-1" data-line-number="1"><span class="co"># Default: 7 inches (both width and height) for svg, pdf, ps.</span></a>
-<a class="sourceLine" id="cb371-2" data-line-number="2"><span class="kw">svg</span>(<span class="dt">file=</span><span class="st">&quot;myfile.svg&quot;</span>, <span class="dt">width=</span><span class="dv">8</span>, <span class="dt">height=</span><span class="dv">12</span>)</a>
-<a class="sourceLine" id="cb371-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb371-4" data-line-number="4">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb371-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb371-6" data-line-number="6"><span class="kw">dev.off</span>()</a>
-<a class="sourceLine" id="cb371-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb371-8" data-line-number="8"><span class="co"># Default: 480 pixels (both width and height) for jpeg, tiff, png, bmp.</span></a>
-<a class="sourceLine" id="cb371-9" data-line-number="9"><span class="kw">png</span>(<span class="dt">file=</span><span class="st">&quot;myfile.png&quot;</span>, <span class="dt">width=</span><span class="dv">500</span>, <span class="dt">height=</span><span class="dv">600</span>)</a>
-<a class="sourceLine" id="cb371-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb371-11" data-line-number="11">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb371-12" data-line-number="12"></a>
-<a class="sourceLine" id="cb371-13" data-line-number="13"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb369-1" data-line-number="1"><span class="co"># Default: 7 inches (both width and height) for svg, pdf, ps.</span></a>
+<a class="sourceLine" id="cb369-2" data-line-number="2"><span class="kw">svg</span>(<span class="dt">file=</span><span class="st">&quot;myfile.svg&quot;</span>, <span class="dt">width=</span><span class="dv">8</span>, <span class="dt">height=</span><span class="dv">12</span>)</a>
+<a class="sourceLine" id="cb369-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb369-4" data-line-number="4">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb369-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb369-6" data-line-number="6"><span class="kw">dev.off</span>()</a>
+<a class="sourceLine" id="cb369-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb369-8" data-line-number="8"><span class="co"># Default: 480 pixels (both width and height) for jpeg, tiff, png, bmp.</span></a>
+<a class="sourceLine" id="cb369-9" data-line-number="9"><span class="kw">png</span>(<span class="dt">file=</span><span class="st">&quot;myfile.png&quot;</span>, <span class="dt">width=</span><span class="dv">500</span>, <span class="dt">height=</span><span class="dv">600</span>)</a>
+<a class="sourceLine" id="cb369-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb369-11" data-line-number="11">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb369-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb369-13" data-line-number="13"><span class="kw">dev.off</span>()</a></code></pre></div>
 <p><em>Note that pdf is the only format that supports saving several pages</em>:</p>
-<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb372-1" data-line-number="1"><span class="kw">pdf</span>(<span class="dt">file=</span><span class="st">&quot;myfile_pages.pdf&quot;</span>)</a>
-<a class="sourceLine" id="cb372-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb372-3" data-line-number="3">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb372-4" data-line-number="4">    <span class="kw">plot</span>(<span class="dv">2</span><span class="op">:</span><span class="dv">20</span>)</a>
-<a class="sourceLine" id="cb372-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb372-6" data-line-number="6"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb370-1" data-line-number="1"><span class="kw">pdf</span>(<span class="dt">file=</span><span class="st">&quot;myfile_pages.pdf&quot;</span>)</a>
+<a class="sourceLine" id="cb370-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb370-3" data-line-number="3">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb370-4" data-line-number="4">    <span class="kw">plot</span>(<span class="dv">2</span><span class="op">:</span><span class="dv">20</span>)</a>
+<a class="sourceLine" id="cb370-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb370-6" data-line-number="6"><span class="kw">dev.off</span>()</a></code></pre></div>
 <h4>
 Plot several figures in one page
 </h4>
 <p>You can output more than one plot per page using the <strong>par()</strong> function (sets graphical parameters) and the <strong>mfrow</strong> argument.</p>
-<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb373-1" data-line-number="1"><span class="kw">jpeg</span>(<span class="dt">file=</span><span class="st">&quot;myfile_multi.jpeg&quot;</span>)</a>
-<a class="sourceLine" id="cb373-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb373-3" data-line-number="3"><span class="co"># organize the plot in 1 row and 2 columns:</span></a>
-<a class="sourceLine" id="cb373-4" data-line-number="4">    <span class="co"># nr: number of rows</span></a>
-<a class="sourceLine" id="cb373-5" data-line-number="5">    <span class="co"># nc: number of columns</span></a>
-<a class="sourceLine" id="cb373-6" data-line-number="6"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dt">nr=</span><span class="dv">1</span>, <span class="dt">nc=</span><span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb373-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb373-8" data-line-number="8">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb373-9" data-line-number="9">    <span class="kw">plot</span>(<span class="dv">2</span><span class="op">:</span><span class="dv">20</span>)</a>
-<a class="sourceLine" id="cb373-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb373-11" data-line-number="11"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb371-1" data-line-number="1"><span class="kw">jpeg</span>(<span class="dt">file=</span><span class="st">&quot;myfile_multi.jpeg&quot;</span>)</a>
+<a class="sourceLine" id="cb371-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb371-3" data-line-number="3"><span class="co"># organize the plot in 1 row and 2 columns:</span></a>
+<a class="sourceLine" id="cb371-4" data-line-number="4">    <span class="co"># nr: number of rows</span></a>
+<a class="sourceLine" id="cb371-5" data-line-number="5">    <span class="co"># nc: number of columns</span></a>
+<a class="sourceLine" id="cb371-6" data-line-number="6"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dt">nr=</span><span class="dv">1</span>, <span class="dt">nc=</span><span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb371-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb371-8" data-line-number="8">    <span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb371-9" data-line-number="9">    <span class="kw">plot</span>(<span class="dv">2</span><span class="op">:</span><span class="dv">20</span>)</a>
+<a class="sourceLine" id="cb371-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb371-11" data-line-number="11"><span class="kw">dev.off</span>()</a></code></pre></div>
 <p><img src="images/plots/myfile_multi.jpeg" width="350/" ></p>
-<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb374-1" data-line-number="1"><span class="kw">jpeg</span>(<span class="dt">file=</span><span class="st">&quot;myfile_multi4.jpeg&quot;</span>)</a>
-<a class="sourceLine" id="cb374-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb374-3" data-line-number="3"><span class="co"># organize the plot in 2 rows and 2 columns</span></a>
-<a class="sourceLine" id="cb374-4" data-line-number="4"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dt">nr=</span><span class="dv">2</span>, <span class="dt">nc=</span><span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb374-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb374-6" data-line-number="6"><span class="co"># top-left</span></a>
-<a class="sourceLine" id="cb374-7" data-line-number="7"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb374-8" data-line-number="8"><span class="co"># top-right</span></a>
-<a class="sourceLine" id="cb374-9" data-line-number="9"><span class="kw">barplot</span>(<span class="kw">table</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))))</a>
-<a class="sourceLine" id="cb374-10" data-line-number="10"><span class="co"># bottom-left</span></a>
-<a class="sourceLine" id="cb374-11" data-line-number="11"><span class="kw">pie</span>(<span class="kw">table</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))))</a>
-<a class="sourceLine" id="cb374-12" data-line-number="12"><span class="co"># bottom-right</span></a>
-<a class="sourceLine" id="cb374-13" data-line-number="13"><span class="kw">hist</span>(<span class="kw">rnorm</span>(<span class="dv">2000</span>))</a>
-<a class="sourceLine" id="cb374-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb374-15" data-line-number="15"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb372-1" data-line-number="1"><span class="kw">jpeg</span>(<span class="dt">file=</span><span class="st">&quot;myfile_multi4.jpeg&quot;</span>)</a>
+<a class="sourceLine" id="cb372-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb372-3" data-line-number="3"><span class="co"># organize the plot in 2 rows and 2 columns</span></a>
+<a class="sourceLine" id="cb372-4" data-line-number="4"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dt">nr=</span><span class="dv">2</span>, <span class="dt">nc=</span><span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb372-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb372-6" data-line-number="6"><span class="co"># top-left</span></a>
+<a class="sourceLine" id="cb372-7" data-line-number="7"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb372-8" data-line-number="8"><span class="co"># top-right</span></a>
+<a class="sourceLine" id="cb372-9" data-line-number="9"><span class="kw">barplot</span>(<span class="kw">table</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))))</a>
+<a class="sourceLine" id="cb372-10" data-line-number="10"><span class="co"># bottom-left</span></a>
+<a class="sourceLine" id="cb372-11" data-line-number="11"><span class="kw">pie</span>(<span class="kw">table</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))))</a>
+<a class="sourceLine" id="cb372-12" data-line-number="12"><span class="co"># bottom-right</span></a>
+<a class="sourceLine" id="cb372-13" data-line-number="13"><span class="kw">hist</span>(<span class="kw">rnorm</span>(<span class="dv">2000</span>))</a>
+<a class="sourceLine" id="cb372-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb372-15" data-line-number="15"><span class="kw">dev.off</span>()</a></code></pre></div>
 <p><img src="images/plots/myfile_multi4.jpeg" width="500/" ></p>
 
 </div>

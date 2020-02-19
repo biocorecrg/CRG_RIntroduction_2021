@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-16" />
+<meta name="date" content="2020-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
@@ -288,16 +288,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="about-themes" class="section level2">
 <h2><span class="header-section-number">19.7</span> About themes</h2>
 <p>You can change the default global <strong>theme</strong> (background color, grid lines etc. all non-data display):</p>
-<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb423-1" data-line-number="1"><span class="co"># go back to a previous plot</span></a>
-<a class="sourceLine" id="cb423-2" data-line-number="2">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a>
-<a class="sourceLine" id="cb423-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb423-4" data-line-number="4"><span class="co"># Try different themes</span></a>
-<a class="sourceLine" id="cb423-5" data-line-number="5">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_bw</span>()</a>
-<a class="sourceLine" id="cb423-6" data-line-number="6">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</a>
-<a class="sourceLine" id="cb423-7" data-line-number="7">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_void</span>()</a>
-<a class="sourceLine" id="cb423-8" data-line-number="8">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_grey</span>()</a>
-<a class="sourceLine" id="cb423-9" data-line-number="9">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_dark</span>()</a>
-<a class="sourceLine" id="cb423-10" data-line-number="10">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_light</span>() </a></code></pre></div>
+<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb424-1" data-line-number="1"><span class="co"># go back to a previous plot</span></a>
+<a class="sourceLine" id="cb424-2" data-line-number="2">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a>
+<a class="sourceLine" id="cb424-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb424-4" data-line-number="4"><span class="co"># Try different themes</span></a>
+<a class="sourceLine" id="cb424-5" data-line-number="5">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_bw</span>()</a>
+<a class="sourceLine" id="cb424-6" data-line-number="6">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</a>
+<a class="sourceLine" id="cb424-7" data-line-number="7">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_void</span>()</a>
+<a class="sourceLine" id="cb424-8" data-line-number="8">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_grey</span>()</a>
+<a class="sourceLine" id="cb424-9" data-line-number="9">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_dark</span>()</a>
+<a class="sourceLine" id="cb424-10" data-line-number="10">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_light</span>() </a></code></pre></div>
 </div>
             </section>
 
