@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-19" />
+<meta name="date" content="2020-02-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="rstudio-server-at-crg.html">
-<link rel="next" href="regular-expressions.html">
+<link rel="next" href="exercise-to-do-at-home.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -201,7 +201,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
 <li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frames-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frames: play with the arguments of read.table</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="extra-exercise.html"><a href="extra-exercise.html"><i class="fa fa-check"></i><b>11.4</b> Extra Exercise</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
 <li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
@@ -212,6 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.9" data-path="exercise-to-do-at-home.html"><a href="exercise-to-do-at-home.html"><i class="fa fa-check"></i><b>12.9</b> Exercise (to do at home)</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a><ul>
 <li class="chapter" data-level="13.1" data-path="find-simple-matches-with-grep.html"><a href="find-simple-matches-with-grep.html"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
@@ -293,20 +293,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb295-1" data-line-number="1"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb295-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;Rcourse/Module2&quot;</span>)</a>
-<a class="sourceLine" id="cb295-3" data-line-number="3"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb283-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb283-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;Rcourse/Module2&quot;</span>)</a>
+<a class="sourceLine" id="cb283-3" data-line-number="3"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>1- Install and load the packages ggplot2 and WriteXLS</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb296-1" data-line-number="1"><span class="co"># Install the 2 packages at once</span></a>
-<a class="sourceLine" id="cb296-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="kw">c</span>(<span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;WriteXLS&quot;</span>))</a>
-<a class="sourceLine" id="cb296-3" data-line-number="3"><span class="co"># Load in the environment (one by one)</span></a>
-<a class="sourceLine" id="cb296-4" data-line-number="4"><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</a>
-<a class="sourceLine" id="cb296-5" data-line-number="5"><span class="kw">library</span>(<span class="st">&quot;WriteXLS&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb284-1" data-line-number="1"><span class="co"># Install the 2 packages at once</span></a>
+<a class="sourceLine" id="cb284-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="kw">c</span>(<span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;WriteXLS&quot;</span>))</a>
+<a class="sourceLine" id="cb284-3" data-line-number="3"><span class="co"># Load in the environment (one by one)</span></a>
+<a class="sourceLine" id="cb284-4" data-line-number="4"><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</a>
+<a class="sourceLine" id="cb284-5" data-line-number="5"><span class="kw">library</span>(<span class="st">&quot;WriteXLS&quot;</span>)</a></code></pre></div>
 <p>Check with sessionInfo() that the packages were loaded.</p>
 </details>
 <p><strong>2- ggplot2 loads automatically the diamonds dataset in the working environment: you can use it as an object after ggplot2 is loaded.</strong></p>
@@ -315,10 +315,10 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb297-1" data-line-number="1"><span class="co"># Dimensions of diamonds</span></a>
-<a class="sourceLine" id="cb297-2" data-line-number="2"><span class="kw">dim</span>(diamonds)</a>
-<a class="sourceLine" id="cb297-3" data-line-number="3"><span class="co"># Column names of diamonds</span></a>
-<a class="sourceLine" id="cb297-4" data-line-number="4"><span class="kw">colnames</span>(diamonds)</a></code></pre></div>
+<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb285-1" data-line-number="1"><span class="co"># Dimensions of diamonds</span></a>
+<a class="sourceLine" id="cb285-2" data-line-number="2"><span class="kw">dim</span>(diamonds)</a>
+<a class="sourceLine" id="cb285-3" data-line-number="3"><span class="co"># Column names of diamonds</span></a>
+<a class="sourceLine" id="cb285-4" data-line-number="4"><span class="kw">colnames</span>(diamonds)</a></code></pre></div>
 </details>
 <p>You can read the help page of the diamonds dataset to understand what it contains!<br></p>
 <p>Note: diamonds is a data frame: you can test it with is.data.frame(diamonds) (returns TRUE).</p>
@@ -327,26 +327,26 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb298-1" data-line-number="1"><span class="co"># Select columns</span></a>
-<a class="sourceLine" id="cb298-2" data-line-number="2">diams1 &lt;-<span class="st"> </span>diamonds[,<span class="kw">c</span>(<span class="st">&quot;carat&quot;</span>, <span class="st">&quot;cut&quot;</span>, <span class="st">&quot;color&quot;</span>, <span class="st">&quot;price&quot;</span>)]</a></code></pre></div>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb286-1" data-line-number="1"><span class="co"># Select columns</span></a>
+<a class="sourceLine" id="cb286-2" data-line-number="2">diams1 &lt;-<span class="st"> </span>diamonds[,<span class="kw">c</span>(<span class="st">&quot;carat&quot;</span>, <span class="st">&quot;cut&quot;</span>, <span class="st">&quot;color&quot;</span>, <span class="st">&quot;price&quot;</span>)]</a></code></pre></div>
 </details>
 <p><strong>4- Install and load the package dplyr from the Console.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb299-1" data-line-number="1"><span class="co"># Install package</span></a>
-<a class="sourceLine" id="cb299-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;dplyr&quot;</span>)</a>
-<a class="sourceLine" id="cb299-3" data-line-number="3"><span class="co"># Load package</span></a>
-<a class="sourceLine" id="cb299-4" data-line-number="4"><span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb287-1" data-line-number="1"><span class="co"># Install package</span></a>
+<a class="sourceLine" id="cb287-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;dplyr&quot;</span>)</a>
+<a class="sourceLine" id="cb287-3" data-line-number="3"><span class="co"># Load package</span></a>
+<a class="sourceLine" id="cb287-4" data-line-number="4"><span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>5- Use the function “sample_n” from the dplyr package to randomly sample 200 lines of diams1: save in diams object.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb300-1" data-line-number="1"><span class="co"># Subset data frame</span></a>
-<a class="sourceLine" id="cb300-2" data-line-number="2">diams &lt;-<span class="st"> </span><span class="kw">sample_n</span>(<span class="dt">tbl=</span>diams1, <span class="dt">size=</span><span class="dv">200</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb288-1" data-line-number="1"><span class="co"># Subset data frame</span></a>
+<a class="sourceLine" id="cb288-2" data-line-number="2">diams &lt;-<span class="st"> </span><span class="kw">sample_n</span>(<span class="dt">tbl=</span>diams1, <span class="dt">size=</span><span class="dv">200</span>)</a></code></pre></div>
 </details>
 <p><strong>6- Save diams into 2 files (different file formats):</strong></p>
 <ul>
@@ -358,30 +358,29 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb301-1" data-line-number="1"><span class="co"># Write a text file with write.table</span></a>
-<a class="sourceLine" id="cb301-2" data-line-number="2"><span class="kw">write.table</span>(<span class="dt">x=</span>diams, </a>
-<a class="sourceLine" id="cb301-3" data-line-number="3">    <span class="dt">file=</span><span class="st">&quot;diamonds200.txt&quot;</span>,</a>
-<a class="sourceLine" id="cb301-4" data-line-number="4">        <span class="dt">row.names=</span><span class="ot">FALSE</span>,</a>
-<a class="sourceLine" id="cb301-5" data-line-number="5">        <span class="dt">quote=</span><span class="ot">FALSE</span>,</a>
-<a class="sourceLine" id="cb301-6" data-line-number="6">        <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a>
-<a class="sourceLine" id="cb301-7" data-line-number="7"><span class="co"># Write an Excel file with WriteXLS</span></a>
-<a class="sourceLine" id="cb301-8" data-line-number="8"><span class="kw">WriteXLS</span>(<span class="dt">x=</span>diams, </a>
-<a class="sourceLine" id="cb301-9" data-line-number="9">    <span class="dt">ExcelFileName=</span><span class="st">&quot;diamonds200.xls&quot;</span>, </a>
-<a class="sourceLine" id="cb301-10" data-line-number="10">    <span class="dt">row.names=</span><span class="ot">FALSE</span>, </a>
-<a class="sourceLine" id="cb301-11" data-line-number="11">    <span class="dt">col.names=</span><span class="ot">TRUE</span>, </a>
-<a class="sourceLine" id="cb301-12" data-line-number="12">    <span class="dt">FreezeRow=</span><span class="dv">1</span>, </a>
-<a class="sourceLine" id="cb301-13" data-line-number="13">    <span class="dt">BoldHeaderRow=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb289-1" data-line-number="1"><span class="co"># Write a text file with write.table</span></a>
+<a class="sourceLine" id="cb289-2" data-line-number="2"><span class="kw">write.table</span>(<span class="dt">x=</span>diams, </a>
+<a class="sourceLine" id="cb289-3" data-line-number="3">    <span class="dt">file=</span><span class="st">&quot;diamonds200.txt&quot;</span>,</a>
+<a class="sourceLine" id="cb289-4" data-line-number="4">        <span class="dt">row.names=</span><span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb289-5" data-line-number="5">        <span class="dt">quote=</span><span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb289-6" data-line-number="6">        <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb289-7" data-line-number="7"><span class="co"># Write an Excel file with WriteXLS</span></a>
+<a class="sourceLine" id="cb289-8" data-line-number="8"><span class="kw">WriteXLS</span>(<span class="dt">x=</span>diams, </a>
+<a class="sourceLine" id="cb289-9" data-line-number="9">    <span class="dt">ExcelFileName=</span><span class="st">&quot;diamonds200.xls&quot;</span>, </a>
+<a class="sourceLine" id="cb289-10" data-line-number="10">    <span class="dt">row.names=</span><span class="ot">FALSE</span>, </a>
+<a class="sourceLine" id="cb289-11" data-line-number="11">    <span class="dt">col.names=</span><span class="ot">TRUE</span>, </a>
+<a class="sourceLine" id="cb289-12" data-line-number="12">    <span class="dt">FreezeRow=</span><span class="dv">1</span>, </a>
+<a class="sourceLine" id="cb289-13" data-line-number="13">    <span class="dt">BoldHeaderRow=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 </details>
 
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
 <a href="rstudio-server-at-crg.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="regular-expressions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-to-do-at-home.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

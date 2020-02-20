@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-19" />
+<meta name="date" content="2020-02-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -201,7 +201,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
 <li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frames-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frames: play with the arguments of read.table</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="extra-exercise.html"><a href="extra-exercise.html"><i class="fa fa-check"></i><b>11.4</b> Extra Exercise</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
 <li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
@@ -212,6 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.9" data-path="exercise-to-do-at-home.html"><a href="exercise-to-do-at-home.html"><i class="fa fa-check"></i><b>12.9</b> Exercise (to do at home)</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a><ul>
 <li class="chapter" data-level="13.1" data-path="find-simple-matches-with-grep.html"><a href="find-simple-matches-with-grep.html"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
@@ -292,24 +292,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <img src="images/bioc_install.png" width="550"/></p></li>
 <li><p>From the console:</p></li>
 </ul>
-<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb288-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;BiocManager&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb276-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;BiocManager&quot;</span>)</a></code></pre></div>
 <ul>
 <li>Install a bioconductor package:
 <ul>
 <li>For R version &gt;= 3.5.0</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb289-1" data-line-number="1"><span class="co"># Install Bioconductor package manager</span></a>
-<a class="sourceLine" id="cb289-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;BiocManager&quot;</span>)</a>
-<a class="sourceLine" id="cb289-3" data-line-number="3"><span class="co"># Install Bioconductor package</span></a>
-<a class="sourceLine" id="cb289-4" data-line-number="4">BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="st">&quot;DESeq2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb277-1" data-line-number="1"><span class="co"># Install Bioconductor package manager</span></a>
+<a class="sourceLine" id="cb277-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="dt">pkgs=</span><span class="st">&quot;BiocManager&quot;</span>)</a>
+<a class="sourceLine" id="cb277-3" data-line-number="3"><span class="co"># Install Bioconductor package</span></a>
+<a class="sourceLine" id="cb277-4" data-line-number="4">BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="st">&quot;DESeq2&quot;</span>)</a></code></pre></div>
 <ul>
 <li>For older R versions</li>
 </ul>
-<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb290-1" data-line-number="1"><span class="co"># Source (load into environment) script containing biocLite function</span></a>
-<a class="sourceLine" id="cb290-2" data-line-number="2"><span class="kw">source</span>(<span class="st">&quot;http://www.bioconductor.org/biocLite.R&quot;</span>)</a>
-<a class="sourceLine" id="cb290-3" data-line-number="3"><span class="co"># Use biocLite function to install Bioconductor package</span></a>
-<a class="sourceLine" id="cb290-4" data-line-number="4"><span class="kw">biocLite</span>(<span class="st">&quot;DESeq2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb278-1" data-line-number="1"><span class="co"># Source (load into environment) script containing biocLite function</span></a>
+<a class="sourceLine" id="cb278-2" data-line-number="2"><span class="kw">source</span>(<span class="st">&quot;http://www.bioconductor.org/biocLite.R&quot;</span>)</a>
+<a class="sourceLine" id="cb278-3" data-line-number="3"><span class="co"># Use biocLite function to install Bioconductor package</span></a>
+<a class="sourceLine" id="cb278-4" data-line-number="4"><span class="kw">biocLite</span>(<span class="st">&quot;DESeq2&quot;</span>)</a></code></pre></div>
 </div>
             </section>
 

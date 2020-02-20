@@ -1,4 +1,4 @@
-## Extra Exercise 
+## Exercise (to do at home)
 
 **1- Read in file ex6c_input.txt (that is in folder downloaded for exercice 6 "i_o_files") in object "extra"**
   
