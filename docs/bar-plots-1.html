@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-20" />
+<meta name="date" content="2020-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,7 +133,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
 <li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
-<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
+<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html#note-on-files-and-folders-names"><i class="fa fa-check"></i><b>3.3.1</b> Note on files and folders names</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
@@ -145,6 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
 <li class="chapter" data-level="5.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
 <li class="chapter" data-level="5.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="5.6" data-path="names-of-objects.html"><a href="names-of-objects.html"><i class="fa fa-check"></i><b>5.6</b> Names of objects</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
 <li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
@@ -287,8 +290,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="bar-plots-1" class="section level2">
 <h2><span class="header-section-number">19.5</span> Bar plots</h2>
-<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb415-1" data-line-number="1"><span class="co"># A simple bar plot</span></a>
-<a class="sourceLine" id="cb415-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>grouping)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb418-1" data-line-number="1"><span class="co"># A simple bar plot</span></a>
+<a class="sourceLine" id="cb418-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>grouping)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>()</a></code></pre></div>
 <ul>
 <li>Customize:
 <ul>
@@ -296,24 +299,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>coord_flip</strong> swaps the x and y axis</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb416-1" data-line-number="1"><span class="co"># Save the plot in the object &quot;p&quot;</span></a>
-<a class="sourceLine" id="cb416-2" data-line-number="2">pbar &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>grouping, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb416-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_bar</span>()</a>
-<a class="sourceLine" id="cb416-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb416-5" data-line-number="5"><span class="co"># Change x axis label with scale_x_discrete and change order of the bars:</span></a>
-<a class="sourceLine" id="cb416-6" data-line-number="6">p2 &lt;-<span class="st"> </span>pbar <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_discrete</span>(<span class="dt">name=</span><span class="st">&quot;counts of yes / no&quot;</span>, <span class="dt">limits=</span><span class="kw">c</span>(<span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>))</a>
-<a class="sourceLine" id="cb416-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb416-8" data-line-number="8"><span class="co"># Swapping x and y axis with coord_flip():</span></a>
-<a class="sourceLine" id="cb416-9" data-line-number="9">p3 &lt;-<span class="st"> </span>p2 <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a>
-<a class="sourceLine" id="cb416-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb416-11" data-line-number="11"><span class="co"># Change fill</span></a>
-<a class="sourceLine" id="cb416-12" data-line-number="12">p4 &lt;-<span class="st"> </span>p3 <span class="op">+</span><span class="st"> </span><span class="kw">scale_fill_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;cyan&quot;</span>))</a>
-<a class="sourceLine" id="cb416-13" data-line-number="13"></a>
-<a class="sourceLine" id="cb416-14" data-line-number="14"><span class="co"># Show intermediary and final plots</span></a>
-<a class="sourceLine" id="cb416-15" data-line-number="15">pbar</a>
-<a class="sourceLine" id="cb416-16" data-line-number="16">p2</a>
-<a class="sourceLine" id="cb416-17" data-line-number="17">p3</a>
-<a class="sourceLine" id="cb416-18" data-line-number="18">p4</a></code></pre></div>
+<div class="sourceCode" id="cb419"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb419-1" data-line-number="1"><span class="co"># Save the plot in the object &quot;p&quot;</span></a>
+<a class="sourceLine" id="cb419-2" data-line-number="2">pbar &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>grouping, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb419-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_bar</span>()</a>
+<a class="sourceLine" id="cb419-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb419-5" data-line-number="5"><span class="co"># Change x axis label with scale_x_discrete and change order of the bars:</span></a>
+<a class="sourceLine" id="cb419-6" data-line-number="6">p2 &lt;-<span class="st"> </span>pbar <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_discrete</span>(<span class="dt">name=</span><span class="st">&quot;counts of yes / no&quot;</span>, <span class="dt">limits=</span><span class="kw">c</span>(<span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>))</a>
+<a class="sourceLine" id="cb419-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb419-8" data-line-number="8"><span class="co"># Swapping x and y axis with coord_flip():</span></a>
+<a class="sourceLine" id="cb419-9" data-line-number="9">p3 &lt;-<span class="st"> </span>p2 <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a>
+<a class="sourceLine" id="cb419-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb419-11" data-line-number="11"><span class="co"># Change fill</span></a>
+<a class="sourceLine" id="cb419-12" data-line-number="12">p4 &lt;-<span class="st"> </span>p3 <span class="op">+</span><span class="st"> </span><span class="kw">scale_fill_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;cyan&quot;</span>))</a>
+<a class="sourceLine" id="cb419-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb419-14" data-line-number="14"><span class="co"># Show intermediary and final plots</span></a>
+<a class="sourceLine" id="cb419-15" data-line-number="15">pbar</a>
+<a class="sourceLine" id="cb419-16" data-line-number="16">p2</a>
+<a class="sourceLine" id="cb419-17" data-line-number="17">p3</a>
+<a class="sourceLine" id="cb419-18" data-line-number="18">p4</a></code></pre></div>
 </div>
             </section>
 

@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-20" />
+<meta name="date" content="2020-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,7 +133,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
 <li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
-<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
+<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html#note-on-files-and-folders-names"><i class="fa fa-check"></i><b>3.3.1</b> Note on files and folders names</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
@@ -145,6 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
 <li class="chapter" data-level="5.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
 <li class="chapter" data-level="5.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="5.6" data-path="names-of-objects.html"><a href="names-of-objects.html"><i class="fa fa-check"></i><b>5.6</b> Names of objects</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
 <li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
@@ -301,7 +304,11 @@ correction
 <h3><span class="header-section-number">11.3.1</span> Exercise 6a. Input / output</h3>
 <p><strong>1- Download folder “i_o_files” in your current directory with:</strong></p>
 <div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb258-1" data-line-number="1"><span class="co"># system invokes the OS command specified by the &quot;command&quot; argument.</span></a>
-<a class="sourceLine" id="cb258-2" data-line-number="2"><span class="kw">system</span>(<span class="dt">command=</span><span class="st">&quot;svn export https://github.com/biocorecrg/CRG_RIntroduction/trunk/i_o_files&quot;</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb258-2" data-line-number="2"><span class="kw">system</span>(<span class="dt">command=</span><span class="st">&quot;svn export https://github.com/biocorecrg/CRG_RIntroduction/trunk/i_o_files.tar.gz&quot;</span>)</a>
+<a class="sourceLine" id="cb258-3" data-line-number="3"><span class="co"># extract archive (tar: archive, gz: compressed)</span></a>
+<a class="sourceLine" id="cb258-4" data-line-number="4"><span class="kw">system</span>(<span class="dt">command=</span><span class="st">&quot;tar -xvzf i_o_files.tar.gz&quot;</span>)</a>
+<a class="sourceLine" id="cb258-5" data-line-number="5"><span class="co"># list files present in i_o_files</span></a>
+<a class="sourceLine" id="cb258-6" data-line-number="6"><span class="kw">dir</span>(<span class="st">&quot;i_o_files&quot;</span>)</a></code></pre></div>
 <p>All files that will be used for exercise 6 are found in the <strong>i_o_files</strong> folder !</p>
 <p><strong>2- Read in the content of ex6a_input.txt using the scan command; save in object z</strong></p>
 <p>How many elements are in z?</p>

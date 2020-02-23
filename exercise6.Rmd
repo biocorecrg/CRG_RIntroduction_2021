@@ -23,7 +23,11 @@ setwd("~/Rcourse/Module2")
 
 ```{r, eval=F}
 # system invokes the OS command specified by the "command" argument.
-system(command="svn export https://github.com/biocorecrg/CRG_RIntroduction/trunk/i_o_files")
+system(command="svn export https://github.com/biocorecrg/CRG_RIntroduction/trunk/i_o_files.tar.gz")
+# extract archive (tar: archive, gz: compressed)
+system(command="tar -xvzf i_o_files.tar.gz")
+# list files present in i_o_files
+dir("i_o_files")
 ```
 
 All files that will be used for exercise 6 are found in the **i_o_files** folder ! 

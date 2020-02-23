@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-20" />
+<meta name="date" content="2020-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,7 +133,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
 <li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
-<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
+<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html#note-on-files-and-folders-names"><i class="fa fa-check"></i><b>3.3.1</b> Note on files and folders names</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
@@ -145,6 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
 <li class="chapter" data-level="5.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
 <li class="chapter" data-level="5.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="5.6" data-path="names-of-objects.html"><a href="names-of-objects.html"><i class="fa fa-check"></i><b>5.6</b> Names of objects</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
 <li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
@@ -332,20 +335,20 @@ And Column names: Age, Height, Sex.</p>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb227-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Age=</span><span class="kw">c</span>(<span class="dv">43</span>, <span class="dv">34</span>, <span class="dv">22</span>, <span class="dv">27</span>), </a>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb227-1" data-line-number="1">mydf &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Age=</span><span class="kw">c</span>(<span class="dv">43</span>, <span class="dv">34</span>, <span class="dv">22</span>, <span class="dv">27</span>), </a>
 <a class="sourceLine" id="cb227-2" data-line-number="2">                 <span class="dt">Height=</span><span class="kw">c</span>(<span class="dv">181</span>, <span class="dv">172</span>, <span class="dv">189</span>, <span class="dv">167</span>),</a>
 <a class="sourceLine" id="cb227-3" data-line-number="3">                 <span class="dt">Sex=</span><span class="kw">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>),</a>
 <a class="sourceLine" id="cb227-4" data-line-number="4">                 <span class="dt">row.names =</span> <span class="kw">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Jessica&quot;</span>, <span class="st">&quot;Steve&quot;</span>, <span class="st">&quot;Rachel&quot;</span>),</a>
 <a class="sourceLine" id="cb227-5" data-line-number="5">                 <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)</a></code></pre></div>
 </details>
-<p><strong>2- Check the structure of df with str().</strong></p>
+<p><strong>2- Check the structure of mydf with str().</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb228-1" data-line-number="1"><span class="kw">str</span>(df)</a></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb228-1" data-line-number="1"><span class="kw">str</span>(mydf)</a></code></pre></div>
 </details>
-<p><strong>3- Calculate the average age and height in df</strong></p>
+<p><strong>3- Calculate the average age and height in mydf</strong></p>
 <p>Try different approaches:</p>
 <ul>
 <li>Calculate the average for each column separately.</li>
@@ -354,8 +357,8 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb229-1" data-line-number="1"><span class="kw">mean</span>(df<span class="op">$</span>Age)</a>
-<a class="sourceLine" id="cb229-2" data-line-number="2"><span class="kw">mean</span>(df<span class="op">$</span>Height)</a></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb229-1" data-line-number="1"><span class="kw">mean</span>(mydf<span class="op">$</span>Age)</a>
+<a class="sourceLine" id="cb229-2" data-line-number="2"><span class="kw">mean</span>(mydf<span class="op">$</span>Height)</a></code></pre></div>
 </details>
 <ul>
 <li>Calculate the average of both columns simultaneously using the apply() function.</li>
@@ -365,49 +368,49 @@ correction
 correction
 </summary></p>
 <div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb230-1" data-line-number="1"><span class="co"># we have to remove the Sex column: we can calculate the average only with numbers</span></a>
-<a class="sourceLine" id="cb230-2" data-line-number="2"><span class="kw">apply</span>(df[,<span class="op">-</span><span class="dv">3</span>], <span class="dv">2</span>, mean)</a>
-<a class="sourceLine" id="cb230-3" data-line-number="3"><span class="kw">apply</span>(df[,<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>], <span class="dv">2</span>, mean)</a>
-<a class="sourceLine" id="cb230-4" data-line-number="4"><span class="kw">apply</span>(df[,<span class="op">-</span><span class="kw">grep</span>(<span class="st">&quot;Sex&quot;</span>, <span class="kw">colnames</span>(df))], <span class="dv">2</span>, mean)</a></code></pre></div>
+<a class="sourceLine" id="cb230-2" data-line-number="2"><span class="kw">apply</span>(mydf[,<span class="op">-</span><span class="dv">3</span>], <span class="dv">2</span>, mean)</a>
+<a class="sourceLine" id="cb230-3" data-line-number="3"><span class="kw">apply</span>(mydf[,<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>], <span class="dv">2</span>, mean)</a>
+<a class="sourceLine" id="cb230-4" data-line-number="4"><span class="kw">apply</span>(mydf[,<span class="op">-</span><span class="kw">grep</span>(<span class="st">&quot;Sex&quot;</span>, <span class="kw">colnames</span>(mydf))], <span class="dv">2</span>, mean)</a></code></pre></div>
 </details>
-<p><strong>4- Add one row to df: Georges who is 53 years old and 168cm tall.</strong></p>
+<p><strong>4- Add one row to mydf: Georges who is 53 years old and 168cm tall.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
 <div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb231-1" data-line-number="1"><span class="co"># Georges= allows us to enter the row name at the same time as we add a row</span></a>
-<a class="sourceLine" id="cb231-2" data-line-number="2">df &lt;-<span class="st"> </span><span class="kw">rbind</span>(df, <span class="dt">Georges=</span><span class="kw">c</span>(<span class="dv">53</span>, <span class="dv">168</span>, <span class="st">&quot;M&quot;</span>))</a></code></pre></div>
+<a class="sourceLine" id="cb231-2" data-line-number="2">mydf &lt;-<span class="st"> </span><span class="kw">rbind</span>(mydf, <span class="dt">Georges=</span><span class="kw">c</span>(<span class="dv">53</span>, <span class="dv">168</span>, <span class="st">&quot;M&quot;</span>))</a></code></pre></div>
 </details>
-<p><strong>5- Change the row names of df so the data becomes anonymous:</strong>
+<p><strong>5- Change the row names of mydf so the data becomes anonymous:</strong>
 Use Patient1, Patient2, etc. instead of actual names.</p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb232-1" data-line-number="1"><span class="kw">rownames</span>(df) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>, <span class="st">&quot;Patient4&quot;</span>, <span class="st">&quot;Patient5&quot;</span>)</a>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb232-1" data-line-number="1"><span class="kw">rownames</span>(mydf) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>, <span class="st">&quot;Patient4&quot;</span>, <span class="st">&quot;Patient5&quot;</span>)</a>
 <a class="sourceLine" id="cb232-2" data-line-number="2"><span class="co"># try also the paste function!</span></a>
-<a class="sourceLine" id="cb232-3" data-line-number="3"><span class="kw">rownames</span>(df) &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;Patient&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb232-3" data-line-number="3"><span class="kw">rownames</span>(mydf) &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;Patient&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</a></code></pre></div>
 </details>
-<p><strong>6- Create the data frame df2 that is a subset of df containing only the female entries.</strong></p>
+<p><strong>6- Create the data frame mydf2 that is a subset of mydf containing only the female entries.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
 <div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb233-1" data-line-number="1"><span class="co"># which elements are female (&quot;F&quot; in the &quot;Sex&quot; colum)</span></a>
-<a class="sourceLine" id="cb233-2" data-line-number="2">df<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;F&quot;</span></a>
-<a class="sourceLine" id="cb233-3" data-line-number="3"><span class="co"># retrieve rows that contain the female entries, and save in df2</span></a>
-<a class="sourceLine" id="cb233-4" data-line-number="4">df2 &lt;-<span class="st"> </span>df[df<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;F&quot;</span>,]</a></code></pre></div>
+<a class="sourceLine" id="cb233-2" data-line-number="2">mydf<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;F&quot;</span></a>
+<a class="sourceLine" id="cb233-3" data-line-number="3"><span class="co"># retrieve rows that contain the female entries, and save in mydf2</span></a>
+<a class="sourceLine" id="cb233-4" data-line-number="4">mydf2 &lt;-<span class="st"> </span>mydf[mydf<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;F&quot;</span>,]</a></code></pre></div>
 </details>
-<p><strong>7- Create the data frame df3 that is a subset of df containing only entries of males taller than 170.</strong></p>
+<p><strong>7- Create the data frame mydf3 that is a subset of mydf containing only entries of males taller than 170.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
 <div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb234-1" data-line-number="1"><span class="co"># which entries are males</span></a>
-<a class="sourceLine" id="cb234-2" data-line-number="2">df<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;M&quot;</span></a>
+<a class="sourceLine" id="cb234-2" data-line-number="2">mydf<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;M&quot;</span></a>
 <a class="sourceLine" id="cb234-3" data-line-number="3"><span class="co"># which entries are greater than 170 in column &quot;Height&quot;</span></a>
-<a class="sourceLine" id="cb234-4" data-line-number="4">df<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>Height <span class="op">&gt;</span><span class="st"> </span><span class="dv">170</span></a>
-<a class="sourceLine" id="cb234-5" data-line-number="5"><span class="co"># retrieve rows that contain the males that are taller than 170, and save in df3</span></a>
-<a class="sourceLine" id="cb234-6" data-line-number="6">df3 &lt;-<span class="st"> </span>df[df<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>Height <span class="op">&gt;</span><span class="st"> </span><span class="dv">170</span>,]</a></code></pre></div>
+<a class="sourceLine" id="cb234-4" data-line-number="4">mydf<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>mydf<span class="op">$</span>Height <span class="op">&gt;</span><span class="st"> </span><span class="dv">170</span></a>
+<a class="sourceLine" id="cb234-5" data-line-number="5"><span class="co"># retrieve rows that contain the males that are taller than 170, and save in mydf3</span></a>
+<a class="sourceLine" id="cb234-6" data-line-number="6">mydf3 &lt;-<span class="st"> </span>mydf[mydf<span class="op">$</span>Sex<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>mydf<span class="op">$</span>Height <span class="op">&gt;</span><span class="st"> </span><span class="dv">170</span>,]</a></code></pre></div>
 </details>
 </div>
 <div id="exercise-5b" class="section level3">
@@ -517,26 +520,26 @@ correction
 </summary></p>
 <div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb240-1" data-line-number="1"><span class="kw">load</span>(<span class="st">&quot;genes_dataframe.RData&quot;</span>)</a></code></pre></div>
 </details>
-<p><strong>4- genes_dataframe.RData contains the df_genes object: is it now present in your environment?</strong></p>
+<p><strong>4- genes_dataframe.RData contains the mydf_genes object: is it now present in your environment?</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
 <div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" data-line-number="1"><span class="kw">ls</span>()</a></code></pre></div>
 </details>
-<p><strong>5- Explore df_genes and see what it contains</strong>
+<p><strong>5- Explore mydf_genes and see what it contains</strong>
 You can use a variety of functions: str, head, tail, dim, colnames, rownames, class…</p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" data-line-number="1"><span class="kw">str</span>(df_genes)</a>
-<a class="sourceLine" id="cb242-2" data-line-number="2"><span class="kw">head</span>(df_genes)</a>
-<a class="sourceLine" id="cb242-3" data-line-number="3"><span class="kw">tail</span>(df_genes)</a>
-<a class="sourceLine" id="cb242-4" data-line-number="4"><span class="kw">dim</span>(df_genes)</a>
-<a class="sourceLine" id="cb242-5" data-line-number="5"><span class="kw">colnames</span>(df_genes)</a>
-<a class="sourceLine" id="cb242-6" data-line-number="6"><span class="kw">rownames</span>(df_genes)</a>
-<a class="sourceLine" id="cb242-7" data-line-number="7"><span class="kw">class</span>(df_genes)</a></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" data-line-number="1"><span class="kw">str</span>(mydf_genes)</a>
+<a class="sourceLine" id="cb242-2" data-line-number="2"><span class="kw">head</span>(mydf_genes)</a>
+<a class="sourceLine" id="cb242-3" data-line-number="3"><span class="kw">tail</span>(mydf_genes)</a>
+<a class="sourceLine" id="cb242-4" data-line-number="4"><span class="kw">dim</span>(mydf_genes)</a>
+<a class="sourceLine" id="cb242-5" data-line-number="5"><span class="kw">colnames</span>(mydf_genes)</a>
+<a class="sourceLine" id="cb242-6" data-line-number="6"><span class="kw">rownames</span>(mydf_genes)</a>
+<a class="sourceLine" id="cb242-7" data-line-number="7"><span class="kw">class</span>(mydf_genes)</a></code></pre></div>
 </details>
 <p><strong>6- Select rows for which pvalue_KOvsWT &lt; 0.05 AND log2FoldChange_KOvsWT &gt; 0.5. Store in the up object.</strong></p>
 <details>
@@ -544,14 +547,14 @@ correction
 correction
 </summary></p>
 <div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb243-1" data-line-number="1"><span class="co"># rows where pvalue_KOvsWT &lt; 0.05 </span></a>
-<a class="sourceLine" id="cb243-2" data-line-number="2">df_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span></a>
+<a class="sourceLine" id="cb243-2" data-line-number="2">mydf_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span></a>
 <a class="sourceLine" id="cb243-3" data-line-number="3"><span class="co"># rows where log2FoldChange_KOvsWT &gt; 0.5</span></a>
-<a class="sourceLine" id="cb243-4" data-line-number="4">df_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb243-4" data-line-number="4">mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
 <a class="sourceLine" id="cb243-5" data-line-number="5"><span class="co"># rows that comply both of the above conditions</span></a>
-<a class="sourceLine" id="cb243-6" data-line-number="6">df_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span> <span class="op">&amp;</span><span class="st"> </span>df_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb243-6" data-line-number="6">mydf_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span> <span class="op">&amp;</span><span class="st"> </span>mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
 <a class="sourceLine" id="cb243-7" data-line-number="7"><span class="co"># select rows for which pvalue_KOvsWT &lt; 0.05 AND log2FoldChange_KOvsWT &gt; 0.5</span></a>
-<a class="sourceLine" id="cb243-8" data-line-number="8">up &lt;-<span class="st"> </span>df_genes[df_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span> <span class="op">&amp;</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb243-9" data-line-number="9"><span class="st">                 </span>df_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span>,]</a></code></pre></div>
+<a class="sourceLine" id="cb243-8" data-line-number="8">up &lt;-<span class="st"> </span>mydf_genes[mydf_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span> <span class="op">&amp;</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb243-9" data-line-number="9"><span class="st">                 </span>mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span>,]</a></code></pre></div>
 </details>
 <p>How many rows (genes) were selected?</p>
 <p><strong>7- Select from the up object the Zinc finger protein coding genes (i.e. the gene symbol starts with Zfp). Use the grep() function.</strong></p>
@@ -572,20 +575,20 @@ For the selection of log2FoldChange: give the <strong>abs</strong> function a tr
 correction
 </summary></p>
 <div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb245-1" data-line-number="1"><span class="co"># rows where pvalue_KOvsWT &lt; 0.05</span></a>
-<a class="sourceLine" id="cb245-2" data-line-number="2">df_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span></a>
+<a class="sourceLine" id="cb245-2" data-line-number="2">mydf_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span></a>
 <a class="sourceLine" id="cb245-3" data-line-number="3"><span class="co"># rows where log2FoldChange_KOvsWT &gt; 0.5</span></a>
-<a class="sourceLine" id="cb245-4" data-line-number="4">df_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb245-4" data-line-number="4">mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
 <a class="sourceLine" id="cb245-5" data-line-number="5"><span class="co"># rows where log2FoldChange_KOvsWT &lt; -0.5</span></a>
-<a class="sourceLine" id="cb245-6" data-line-number="6">df_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">-0.5</span></a>
+<a class="sourceLine" id="cb245-6" data-line-number="6">mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">-0.5</span></a>
 <a class="sourceLine" id="cb245-7" data-line-number="7"><span class="co"># rows where log2FoldChange_KOvsWT &lt; -0.5 OR log2FoldChange_KOvsWT &gt; 0.5</span></a>
-<a class="sourceLine" id="cb245-8" data-line-number="8">df_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span> <span class="op">|</span><span class="st"> </span>df_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">-0.5</span></a>
+<a class="sourceLine" id="cb245-8" data-line-number="8">mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span> <span class="op">|</span><span class="st"> </span>mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT <span class="op">&gt;</span><span class="st"> </span><span class="fl">-0.5</span></a>
 <a class="sourceLine" id="cb245-9" data-line-number="9"><span class="co"># same as above but using the abs function</span></a>
-<a class="sourceLine" id="cb245-10" data-line-number="10"><span class="kw">abs</span>(df_genes<span class="op">$</span>log2FoldChange_KOvsWT) <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb245-10" data-line-number="10"><span class="kw">abs</span>(mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT) <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
 <a class="sourceLine" id="cb245-11" data-line-number="11"><span class="co"># combine all required criteria</span></a>
-<a class="sourceLine" id="cb245-12" data-line-number="12">df_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span> <span class="op">&amp;</span><span class="st"> </span><span class="kw">abs</span>(df_genes<span class="op">$</span>log2FoldChange_KOvsWT) <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb245-12" data-line-number="12">mydf_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span> <span class="op">&amp;</span><span class="st"> </span><span class="kw">abs</span>(mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT) <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
 <a class="sourceLine" id="cb245-13" data-line-number="13"><span class="co"># extract corresponding entries</span></a>
-<a class="sourceLine" id="cb245-14" data-line-number="14">diff_genes &lt;-<span class="st"> </span>df_genes[df_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span> <span class="op">&amp;</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb245-15" data-line-number="15"><span class="st">                 </span><span class="kw">abs</span>(df_genes<span class="op">$</span>log2FoldChange_KOvsWT) <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span>,]</a></code></pre></div>
+<a class="sourceLine" id="cb245-14" data-line-number="14">diff_genes &lt;-<span class="st"> </span>mydf_genes[mydf_genes<span class="op">$</span>pvalue_KOvsWT <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span> <span class="op">&amp;</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb245-15" data-line-number="15"><span class="st">                 </span><span class="kw">abs</span>(mydf_genes<span class="op">$</span>log2FoldChange_KOvsWT) <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span>,]</a></code></pre></div>
 </details>
 <p>How many rows (genes) were selected?</p>
 

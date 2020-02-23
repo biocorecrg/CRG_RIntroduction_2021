@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-20" />
+<meta name="date" content="2020-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,7 +133,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
 <li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
-<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
+<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html#note-on-files-and-folders-names"><i class="fa fa-check"></i><b>3.3.1</b> Note on files and folders names</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
@@ -145,6 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
 <li class="chapter" data-level="5.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
 <li class="chapter" data-level="5.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="5.6" data-path="names-of-objects.html"><a href="names-of-objects.html"><i class="fa fa-check"></i><b>5.6</b> Names of objects</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
 <li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
@@ -290,27 +293,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>The same as for regular plots applies:</li>
 </ul>
-<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb422-1" data-line-number="1"><span class="kw">png</span>(<span class="st">&quot;myggplot.png&quot;</span>)</a>
-<a class="sourceLine" id="cb422-2" data-line-number="2">p</a>
-<a class="sourceLine" id="cb422-3" data-line-number="3"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb425-1" data-line-number="1"><span class="kw">png</span>(<span class="st">&quot;myggplot.png&quot;</span>)</a>
+<a class="sourceLine" id="cb425-2" data-line-number="2">p</a>
+<a class="sourceLine" id="cb425-3" data-line-number="3"><span class="kw">dev.off</span>()</a></code></pre></div>
 <ul>
 <li>You can also use the ggplot2 <strong>ggsave</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb423-1" data-line-number="1"><span class="co"># By default, save the last plot that was produced</span></a>
-<a class="sourceLine" id="cb423-2" data-line-number="2"><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;lastplot.png&quot;</span>)</a>
-<a class="sourceLine" id="cb423-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb423-4" data-line-number="4"><span class="co"># You can pick which plot you want to save:</span></a>
-<a class="sourceLine" id="cb423-5" data-line-number="5"><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;myplot.png&quot;</span>, <span class="dt">plot=</span>p)</a>
-<a class="sourceLine" id="cb423-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb423-7" data-line-number="7"><span class="co"># Many different formats are available: </span></a>
-<a class="sourceLine" id="cb423-8" data-line-number="8">  <span class="co"># &quot;eps&quot;, &quot;ps&quot;, &quot;tex&quot;, &quot;pdf&quot;, &quot;jpeg&quot;, &quot;tiff&quot;, &quot;png&quot;, &quot;bmp&quot;, &quot;svg&quot;, &quot;wmf&quot;</span></a>
-<a class="sourceLine" id="cb423-9" data-line-number="9"><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;myplot.ps&quot;</span>, <span class="dt">plot=</span>p, <span class="dt">device=</span><span class="st">&quot;ps&quot;</span>)</a>
-<a class="sourceLine" id="cb423-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb423-11" data-line-number="11"><span class="co"># Change the height and width (and their unit):</span></a>
-<a class="sourceLine" id="cb423-12" data-line-number="12"><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;myplot.pdf&quot;</span>, </a>
-<a class="sourceLine" id="cb423-13" data-line-number="13">  <span class="dt">width =</span> <span class="dv">20</span>, </a>
-<a class="sourceLine" id="cb423-14" data-line-number="14">  <span class="dt">height =</span> <span class="dv">20</span>, </a>
-<a class="sourceLine" id="cb423-15" data-line-number="15">  <span class="dt">units =</span> <span class="st">&quot;cm&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb426-1" data-line-number="1"><span class="co"># By default, save the last plot that was produced</span></a>
+<a class="sourceLine" id="cb426-2" data-line-number="2"><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;lastplot.png&quot;</span>)</a>
+<a class="sourceLine" id="cb426-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb426-4" data-line-number="4"><span class="co"># You can pick which plot you want to save:</span></a>
+<a class="sourceLine" id="cb426-5" data-line-number="5"><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;myplot.png&quot;</span>, <span class="dt">plot=</span>p)</a>
+<a class="sourceLine" id="cb426-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb426-7" data-line-number="7"><span class="co"># Many different formats are available: </span></a>
+<a class="sourceLine" id="cb426-8" data-line-number="8">  <span class="co"># &quot;eps&quot;, &quot;ps&quot;, &quot;tex&quot;, &quot;pdf&quot;, &quot;jpeg&quot;, &quot;tiff&quot;, &quot;png&quot;, &quot;bmp&quot;, &quot;svg&quot;, &quot;wmf&quot;</span></a>
+<a class="sourceLine" id="cb426-9" data-line-number="9"><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;myplot.ps&quot;</span>, <span class="dt">plot=</span>p, <span class="dt">device=</span><span class="st">&quot;ps&quot;</span>)</a>
+<a class="sourceLine" id="cb426-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb426-11" data-line-number="11"><span class="co"># Change the height and width (and their unit):</span></a>
+<a class="sourceLine" id="cb426-12" data-line-number="12"><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;myplot.pdf&quot;</span>, </a>
+<a class="sourceLine" id="cb426-13" data-line-number="13">  <span class="dt">width =</span> <span class="dv">20</span>, </a>
+<a class="sourceLine" id="cb426-14" data-line-number="14">  <span class="dt">height =</span> <span class="dv">20</span>, </a>
+<a class="sourceLine" id="cb426-15" data-line-number="15">  <span class="dt">units =</span> <span class="st">&quot;cm&quot;</span>)</a></code></pre></div>
 <ul>
 <li>You can also organize several plots on one page
 <ul>
@@ -318,17 +321,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>ncol, nrow: arrange plots in such number of columns and rows</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb424-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;gridExtra&quot;</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb425-1" data-line-number="1"><span class="co"># load package</span></a>
-<a class="sourceLine" id="cb425-2" data-line-number="2"><span class="kw">library</span>(gridExtra)</a>
-<a class="sourceLine" id="cb425-3" data-line-number="3"><span class="co"># 2 rows and 2 columns</span></a>
-<a class="sourceLine" id="cb425-4" data-line-number="4"><span class="kw">grid.arrange</span>(pscat, pbox, pbar, phist, <span class="dt">nrow=</span><span class="dv">2</span>, <span class="dt">ncol=</span><span class="dv">2</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb426-1" data-line-number="1"><span class="co"># 1 row and 4 columns</span></a>
-<a class="sourceLine" id="cb426-2" data-line-number="2"><span class="kw">grid.arrange</span>(pscat, pbox, pbar, phist, <span class="dt">nrow=</span><span class="dv">1</span>, <span class="dt">ncol=</span><span class="dv">4</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb427-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;gridExtra&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb428-1" data-line-number="1"><span class="co"># load package</span></a>
+<a class="sourceLine" id="cb428-2" data-line-number="2"><span class="kw">library</span>(gridExtra)</a>
+<a class="sourceLine" id="cb428-3" data-line-number="3"><span class="co"># 2 rows and 2 columns</span></a>
+<a class="sourceLine" id="cb428-4" data-line-number="4"><span class="kw">grid.arrange</span>(pscat, pbox, pbar, phist, <span class="dt">nrow=</span><span class="dv">2</span>, <span class="dt">ncol=</span><span class="dv">2</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb429-1" data-line-number="1"><span class="co"># 1 row and 4 columns</span></a>
+<a class="sourceLine" id="cb429-2" data-line-number="2"><span class="kw">grid.arrange</span>(pscat, pbox, pbar, phist, <span class="dt">nrow=</span><span class="dv">1</span>, <span class="dt">ncol=</span><span class="dv">4</span>)</a></code></pre></div>
 <p><strong>WARNING !!</strong>: ggsave and grid.arrange are not directly compatible. To save a file organized by grid.arrange, use the regular functions (pdf, png etc.)</p>
-<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb427-1" data-line-number="1"><span class="kw">jpeg</span>(<span class="st">&quot;grid_arrange_plots.jpg&quot;</span>)</a>
-<a class="sourceLine" id="cb427-2" data-line-number="2"><span class="kw">grid.arrange</span>(pscat, pbox, pbar, phist, <span class="dt">nrow=</span><span class="dv">1</span>, <span class="dt">ncol=</span><span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb427-3" data-line-number="3"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb430"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb430-1" data-line-number="1"><span class="kw">jpeg</span>(<span class="st">&quot;grid_arrange_plots.jpg&quot;</span>)</a>
+<a class="sourceLine" id="cb430-2" data-line-number="2"><span class="kw">grid.arrange</span>(pscat, pbox, pbar, phist, <span class="dt">nrow=</span><span class="dv">1</span>, <span class="dt">ncol=</span><span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb430-3" data-line-number="3"><span class="kw">dev.off</span>()</a></code></pre></div>
 
 </div>
             </section>
