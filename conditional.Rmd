@@ -1,5 +1,7 @@
 # Conditional statement
 
+**Conditional statements** are expressions that perform different computations or actions depending on **whether a predefined boolean condition is TRUE or FALSE**.
+
 <br>
 
 <h3>"if" statement</h3>
@@ -12,15 +14,17 @@ if(condition){
 }
 ```
 
-If the **condition** is TRUE, then proceed to the **action_command**; if it is FALSE, nothing happens.
+If the **condition** is TRUE, then proceed to the **action_command**; if it is FALSE, then nothing happens.
 <br>
 
 ```{r, eval=F}
 k <- 10
+
 # print if value is > 3
 if(k > 3){
   print(k)
 }
+
 # print if value is < 3
 if(k < 3){
   print(k)
@@ -37,10 +41,11 @@ if(condition){
 }
 ```
 
-If the **condition** is TRUE, then proceed to the **action_command1**; if the **condition** is FALSE, proceed to **action_command2**.
+If the **condition** is TRUE, then proceed to **action_command1**; if the **condition** is FALSE, proceed to **action_command2**.
 
 ```{r, eval=F}
 k <- 3
+
 if(k > 3){
   print("greater than 3")
 }else{
@@ -63,9 +68,9 @@ if(condition1){
 
 <img src="images/ifelseif.png" width="450"/>
 
-If the **condition1** is TRUE, then proceed to the **action_command1**; if the **condition1** is FALSE, test for **condition2**: if the **condition2** is TRUE, proceed to the **action_command2**; if neither **condition1** nor **condition2** are TRUE, then proceed to the **action_command3**.
+If the **condition1** is TRUE, then proceed to the **action_command1**; if the **condition1** is FALSE, test for **condition2**: if the **condition2** is TRUE, proceed to the **action_command2**; if neither **condition1** nor **condition2** are TRUE, then proceed to the **action_command3** (*else*).
 <br><br>
-*Note that you can add up as many **else if** statements as you want.*
+*Note that you can add up as many* ***else if*** *statements as you want, but only one* ***else*** *(not compulsory either)*.
 
 * Example without **else**
 
