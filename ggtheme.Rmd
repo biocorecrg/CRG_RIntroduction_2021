@@ -56,7 +56,7 @@ boxp + theme(legend.title=element_blank(),
 A volcano plot is a type of scatter plot represents differential expression of features (genes for example): on the x-axis we typically find the fold change and on the y-axis the p-value.
 <br>
 
-```{r}
+```{r, eval=T, echo=T, message=F, warning=F}
 # Download the data we will use for plotting
 download.file("https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/master/de_df_for_volcano.rds", "de_df_for_volcano.rds", method="curl")
 
@@ -68,7 +68,7 @@ tmp <- readRDS("de_df_for_volcano.rds")
 de <- tmp[complete.cases(tmp), ]
 ``` 
 
-```{r}
+```{r, eval=T, echo=T, message=F, warning=F}
 # The basic scatter plot: x is "log2FoldChange", y is "pvalue"
 ggplot(data=de, aes(x=log2FoldChange, y=pvalue)) + geom_point()
 ```
@@ -76,23 +76,23 @@ ggplot(data=de, aes(x=log2FoldChange, y=pvalue)) + geom_point()
 Doesn't look quite like a Volcano plot...<br>
 Convert the p-value into a -log10(p-value)
 
-```{r}
+```{r, eval=T, echo=T, message=F, warning=F}
 # Convert directly in the aes()
 p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point()
 ```
 
-```{r}
+```{r, eval=T, echo=T, message=F, warning=F}
 # Add more simple "theme"
 p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point() + theme_minimal()
 ```
 
-```{r}
+```{r, eval=T, echo=T, message=F, warning=F}
 # Add vertical lines for log2FoldChange thresholds, and one horizontal line for the p-value threshold 
 p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
 	geom_hline(yintercept=-log10(0.05), col="red")
 ```
 
-```{r}
+```{r, eval=T, echo=T, message=F, warning=F}
 # The significantly differentially expressed genes are the ones found in the upper-left and upper-right corners.
 # Add a column to the data frame to specify if they are UP- or DOWN- regulated (log2FoldChange respectively positive or negative)
 
@@ -111,7 +111,7 @@ p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
         geom_hline(yintercept=-log10(0.05), col="red")
 ```
 
-```{r}
+```{r, eval=T, echo=T, message=F, warning=F}
 ## Change point color 
 
 # 1. by default, it is assigned to the categories in an alphabetical order):
@@ -123,7 +123,7 @@ names(mycolors) <- c("DOWN", "UP", "NO")
 p3 <- p2 + scale_colour_manual(values = mycolors)
 ```
 
-```{r}
+```{r, eval=T, echo=T, message=F, warning=F}
 # Now write down the name of genes beside the points...
 # Create a new column "delabel" to de, that will contain the name of genes differentially expressed (NA in case they are not)
 de$delabel <- NA
@@ -135,7 +135,7 @@ ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label
 	geom_text()
 ```
 
-```{r}
+```{r, eval=T, echo=T, message=F, warning=F}
 # Finally, we can organize the labels nicely using the "ggrepel" package and the geom_text_repel() function
 # load library
 library(ggrepel)
