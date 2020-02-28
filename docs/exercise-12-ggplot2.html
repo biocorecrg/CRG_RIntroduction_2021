@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-23" />
+<meta name="date" content="2020-02-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -225,10 +225,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>14</b> Conditional statement</a><ul>
-<li class="chapter" data-level="14.1" data-path="exercise-10-if-statement.html"><a href="exercise-10-if-statement.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 10: If statement</a></li>
+<li class="chapter" data-level="14.1" data-path="exercise-10-for-loop.html"><a href="exercise-10-for-loop.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 10: For loop</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>15</b> Repetitive execution</a><ul>
-<li class="chapter" data-level="15.1" data-path="exercise-9-for-loop.html"><a href="exercise-9-for-loop.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 9: For loop</a></li>
+<li class="chapter" data-level="15.1" data-path="exercise-9-if-statement.html"><a href="exercise-9-if-statement.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 9: If statement</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> Basic plots in R</a><ul>
 <li class="chapter" data-level="16.1" data-path="scatter-plots.html"><a href="scatter-plots.html"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
@@ -310,11 +310,11 @@ correction
 </details>
 <p><strong>2- Download the data we will use for plotting:</strong></p>
 <div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb433-1" data-line-number="1"><span class="kw">download.file</span>(<span class="st">&quot;https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/master/ex12_normalized_intensities.csv&quot;</span>, <span class="st">&quot;ex12_normalized_intensities.csv&quot;</span>, <span class="dt">method=</span><span class="st">&quot;curl&quot;</span>)</a></code></pre></div>
-<p><strong>3- Read file into object “project1”</strong></p>
+<p><strong>3- Read file into object “project1” (remember the input/output tutorial!)</strong></p>
 <p>About this file:
-* It is comma separated (csv format)
-* The first row is the header
-* Take the row names from the first column</p>
+* It is comma separated (csv format).
+* The first row is the header.
+* Take the row names from the first column.</p>
 <details>
 <p><summary>
 correction
@@ -332,7 +332,7 @@ correction
 <div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb435-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>project1, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>sampleB, <span class="dt">y=</span>sampleH)) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb435-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
 </details>
-<p><strong>5- Create an extra column to the data frame “project1” (you can call this column “expr_limits”): if the expression of a gene is &gt; 13 in both sampleB and sampleH, set to “high”; if the expression of a gene is &lt; 6 in both sampleB and sampleH, set to “low”; if different, set to “normal”.</strong></p>
+<p><strong>5- Add a column to the data frame “project1” (call this column “expr_limits”), that will be filled the following way: if the expression of a gene is &gt; 13 in both sampleB and sampleH, set to the value in “expr_limits” to “high”; if the expression of a gene is &lt; 6 in both sampleB and sampleH, set it to “low”; if different, set it to “normal”.</strong></p>
 <details>
 <p><summary>
 correction
@@ -344,7 +344,7 @@ correction
 <a class="sourceLine" id="cb436-5" data-line-number="5"><span class="co"># &quot;low&quot; if project1$sampleB &lt; 6 and project1$sampleH &lt; 6</span></a>
 <a class="sourceLine" id="cb436-6" data-line-number="6">project1<span class="op">$</span>expr_limits[project1<span class="op">$</span>sampleB <span class="op">&lt;</span><span class="st"> </span><span class="dv">6</span> <span class="op">&amp;</span><span class="st"> </span>project1<span class="op">$</span>sampleH <span class="op">&lt;</span><span class="st"> </span><span class="dv">6</span>] &lt;-<span class="st"> &quot;low&quot;</span></a></code></pre></div>
 </details>
-<p><strong>6- Color the points of your scatter plot according to the newly created column “expr_limits”. Save that plot in the object “p”</strong></p>
+<p><strong>6- Color the points of the scatter plot according to the newly created column “expr_limits”. Save that plot in the object “p”</strong></p>
 <details>
 <p><summary>
 correction
@@ -382,7 +382,7 @@ correction
 <div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb440-1" data-line-number="1"><span class="kw">library</span>(reshape2)</a>
 <a class="sourceLine" id="cb440-2" data-line-number="2">project_long &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="dt">data=</span>project1)</a></code></pre></div>
 </details>
-<p><strong>2- Produce a boxplot of the expression of all samples (each sample should be represented by a box)</strong></p>
+<p><strong>2- Produce a boxplot of the expression of all samples (i.e. each sample is represented by a box)</strong></p>
 <details>
 <p><summary>
 correction
@@ -390,7 +390,7 @@ correction
 <div class="sourceCode" id="cb441"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb441-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>project_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value)) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb441-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 </details>
-<p><strong>3- Modify the previous boxplot so as to obtain 3 “sub-boxplots”&quot; per sample, each representing the expression of either “low”, “normal” or “high” genes.</strong></p>
+<p><strong>3- Modify the previous boxplot so as to obtain 3 “sub-boxplots” per sample, each representing the expression of either “low”, “normal” or “high” genes.</strong></p>
 <details>
 <p><summary>
 correction
@@ -409,7 +409,7 @@ correction
 <a class="sourceLine" id="cb443-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb443-3" data-line-number="3"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>))</a></code></pre></div>
 </details>
-<p><strong>5- Finally, add a title to the plot.</strong></p>
+<p><strong>5- Finally, add a title of your choice to the plot.</strong></p>
 <details>
 <p><summary>
 correction
@@ -439,20 +439,20 @@ correction
 <a class="sourceLine" id="cb446-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb446-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept=</span><span class="dv">250</span>)</a></code></pre></div>
 </details>
-<p><strong>3- Swap the x and y axis. Save in bar2.</strong></p>
+<p><strong>3- Swap the x and y axis. Save in object “bar2”.</strong></p>
 <details>
 <p><summary>
 correction
 </summary></p>
 <div class="sourceCode" id="cb447"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb447-1" data-line-number="1">bar2 &lt;-<span class="st"> </span>bar <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
 </details>
-<p><strong>4- Save “bar” and “bar2” plots in a “png” file, using the </strong>png()** function: use grid.arrange (from the gridExtra package) to organize both plots in one page !**</p>
+<p><strong>4- Save “bar” and “bar2” plots in a “png” file, using the </strong>png()** function, in the console: use grid.arrange (from the gridExtra package) to organize both plots in one page !**</p>
 <details>
 <p><summary>
 correction
 </summary></p>
 <div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb448-1" data-line-number="1"><span class="kw">png</span>(<span class="st">&quot;mybarplots.png&quot;</span>, <span class="dt">width=</span><span class="dv">1000</span>)</a>
-<a class="sourceLine" id="cb448-2" data-line-number="2"><span class="kw">grid.arrange</span>(bar, bar2, <span class="dt">nrow=</span><span class="dv">1</span>, <span class="dt">ncol=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb448-2" data-line-number="2">  <span class="kw">grid.arrange</span>(bar, bar2, <span class="dt">nrow=</span><span class="dv">1</span>, <span class="dt">ncol=</span><span class="dv">2</span>)</a>
 <a class="sourceLine" id="cb448-3" data-line-number="3"><span class="kw">dev.off</span>()</a></code></pre></div>
 </details>
 </div>
@@ -475,7 +475,7 @@ correction
 <div class="sourceCode" id="cb450"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb450-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>project_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value)) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb450-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins=</span><span class="dv">50</span>)</a></code></pre></div>
 </details>
-<p><strong>3- This histogram plots expression values for </strong>All samples<strong>.</strong>
+<p><strong>3- The histogram plots the expression values for </strong>All samples<strong>.</strong>
 <br>
 Change the plot so as to obtain one histograms per sample.</p>
 <details>
@@ -487,7 +487,7 @@ correction
 </details>
 <p><strong>4- By default, geom_histogram produces a stacked histogram.</strong>
 <br>
-Change the “position” argument to “dodge”.</p>
+Change argument “position” to “dodge”.</p>
 <details>
 <p><summary>
 correction
@@ -509,7 +509,7 @@ correction
 </summary></p>
 <div class="sourceCode" id="cb454"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb454-1" data-line-number="1">hist3 &lt;-<span class="st"> </span>hist2 <span class="op">+</span><span class="st"> </span><span class="kw">scale_fill_manual</span>(<span class="dt">values=</span><span class="kw">rainbow</span>(<span class="dv">8</span>))</a></code></pre></div>
 </details>
-<p><strong>7- Zoom in the plots: set the x-axis limits from from 6 to 13.</strong>
+<p><strong>7- “Zoom in” the plots: set the x-axis limits from from 6 to 13.</strong>
 <br>
 Add the <strong>xlim()</strong> layer.</p>
 <details>

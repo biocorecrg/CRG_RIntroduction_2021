@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-02-23" />
+<meta name="date" content="2020-02-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -225,10 +225,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>14</b> Conditional statement</a><ul>
-<li class="chapter" data-level="14.1" data-path="exercise-10-if-statement.html"><a href="exercise-10-if-statement.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 10: If statement</a></li>
+<li class="chapter" data-level="14.1" data-path="exercise-10-for-loop.html"><a href="exercise-10-for-loop.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 10: For loop</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>15</b> Repetitive execution</a><ul>
-<li class="chapter" data-level="15.1" data-path="exercise-9-for-loop.html"><a href="exercise-9-for-loop.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 9: For loop</a></li>
+<li class="chapter" data-level="15.1" data-path="exercise-9-if-statement.html"><a href="exercise-9-if-statement.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 9: If statement</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> Basic plots in R</a><ul>
 <li class="chapter" data-level="16.1" data-path="scatter-plots.html"><a href="scatter-plots.html"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
@@ -303,6 +303,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb463-9" data-line-number="9">de &lt;-<span class="st"> </span>tmp[<span class="kw">complete.cases</span>(tmp), ]</a></code></pre></div>
 <div class="sourceCode" id="cb464"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb464-1" data-line-number="1"><span class="co"># The basic scatter plot: x is &quot;log2FoldChange&quot;, y is &quot;pvalue&quot;</span></a>
 <a class="sourceLine" id="cb464-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>de, <span class="kw">aes</span>(<span class="dt">x=</span>log2FoldChange, <span class="dt">y=</span>pvalue)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</a></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-363-1.png" width="672" /></p>
 <p>Doesn’t look quite like a Volcano plot…<br>
 Convert the p-value into a -log10(p-value)</p>
 <div class="sourceCode" id="cb465"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb465-1" data-line-number="1"><span class="co"># Convert directly in the aes()</span></a>
@@ -346,6 +347,7 @@ Convert the p-value into a -log10(p-value)</p>
 <a class="sourceLine" id="cb470-7" data-line-number="7"><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb470-8" data-line-number="8"><span class="st">    </span><span class="kw">theme_minimal</span>() <span class="op">+</span></a>
 <a class="sourceLine" id="cb470-9" data-line-number="9"><span class="st">    </span><span class="kw">geom_text</span>()</a></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-369-1.png" width="672" /></p>
 <div class="sourceCode" id="cb471"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb471-1" data-line-number="1"><span class="co"># Finally, we can organize the labels nicely using the &quot;ggrepel&quot; package and the geom_text_repel() function</span></a>
 <a class="sourceLine" id="cb471-2" data-line-number="2"><span class="co"># load library</span></a>
 <a class="sourceLine" id="cb471-3" data-line-number="3"><span class="kw">library</span>(ggrepel)</a>
@@ -357,6 +359,7 @@ Convert the p-value into a -log10(p-value)</p>
 <a class="sourceLine" id="cb471-9" data-line-number="9"><span class="st">        </span><span class="kw">scale_color_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;black&quot;</span>, <span class="st">&quot;red&quot;</span>)) <span class="op">+</span></a>
 <a class="sourceLine" id="cb471-10" data-line-number="10"><span class="st">        </span><span class="kw">geom_vline</span>(<span class="dt">xintercept=</span><span class="kw">c</span>(<span class="op">-</span><span class="fl">0.6</span>, <span class="fl">0.6</span>), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) <span class="op">+</span></a>
 <a class="sourceLine" id="cb471-11" data-line-number="11"><span class="st">        </span><span class="kw">geom_hline</span>(<span class="dt">yintercept=</span><span class="op">-</span><span class="kw">log10</span>(<span class="fl">0.05</span>), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-370-1.png" width="672" /></p>
 
 </div>
 <!-- </div> -->

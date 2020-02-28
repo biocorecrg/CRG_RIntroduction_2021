@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>19.10 More about the theme() function | Introduction to R</title>
-  <meta name="description" content="19.10 More about the theme() function | Introduction to R" />
+  <title>15.1 Exercise 9: If statement | Introduction to R</title>
+  <meta name="description" content="15.1 Exercise 9: If statement | Introduction to R" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="19.10 More about the theme() function | Introduction to R" />
+  <meta property="og:title" content="15.1 Exercise 9: If statement | Introduction to R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="19.10 More about the theme() function | Introduction to R" />
+  <meta name="twitter:title" content="15.1 Exercise 9: If statement | Introduction to R" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="exercise-12-ggplot2.html">
-<link rel="next" href="volcano-plots.html">
+<link rel="prev" href="repetitive-execution.html">
+<link rel="next" href="basic-plots-in-r.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -288,48 +288,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="more-about-the-theme-function" class="section level2">
-<h2><span class="header-section-number">19.10</span> More about the theme() function</h2>
-<p>The <strong>theme()</strong> allows a precise control of graphical parameters such as axis text, ticks and labels, or legend texts and labels, etc.
-<br>
-More details <a href="https://ggplot2.tidyverse.org/reference/theme.html">here</a></p>
-<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb458-1" data-line-number="1"><span class="co"># Let&#39;s the project_long object from exercise 12, and plot boxplots</span></a>
-<a class="sourceLine" id="cb458-2" data-line-number="2">boxp &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>project_long, <span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">color=</span>expr_limits)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb458-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a>
-<a class="sourceLine" id="cb458-4" data-line-number="4">  </a>
-<a class="sourceLine" id="cb458-5" data-line-number="5"><span class="co"># Remove the legend title:</span></a>
-<a class="sourceLine" id="cb458-6" data-line-number="6">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>())</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-1.png" width="672" /></p>
-<div class="sourceCode" id="cb459"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb459-1" data-line-number="1"><span class="co"># Change font of legend text</span></a>
-<a class="sourceLine" id="cb459-2" data-line-number="2">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>(), </a>
-<a class="sourceLine" id="cb459-3" data-line-number="3">  <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">8</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>))</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-2.png" width="672" /></p>
-<div class="sourceCode" id="cb460"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb460-1" data-line-number="1"><span class="co"># Put legend on the top of the plot</span></a>
-<a class="sourceLine" id="cb460-2" data-line-number="2">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>(), </a>
-<a class="sourceLine" id="cb460-3" data-line-number="3">  <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">8</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>),</a>
-<a class="sourceLine" id="cb460-4" data-line-number="4">  <span class="dt">legend.position=</span><span class="st">&quot;top&quot;</span>)</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-3.png" width="672" /></p>
-<div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb461-1" data-line-number="1"><span class="co"># Rotate x-axis labels</span></a>
-<a class="sourceLine" id="cb461-2" data-line-number="2">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>(), </a>
-<a class="sourceLine" id="cb461-3" data-line-number="3">  <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">8</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>),</a>
-<a class="sourceLine" id="cb461-4" data-line-number="4">  <span class="dt">legend.position=</span><span class="st">&quot;top&quot;</span>,</a>
-<a class="sourceLine" id="cb461-5" data-line-number="5">  <span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>))</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-4.png" width="672" /></p>
-<div class="sourceCode" id="cb462"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb462-1" data-line-number="1"><span class="co"># Add a color to the plot&#39;s background</span></a>
-<a class="sourceLine" id="cb462-2" data-line-number="2">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>(), </a>
-<a class="sourceLine" id="cb462-3" data-line-number="3">  <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">8</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>),</a>
-<a class="sourceLine" id="cb462-4" data-line-number="4">  <span class="dt">legend.position=</span><span class="st">&quot;top&quot;</span>,</a>
-<a class="sourceLine" id="cb462-5" data-line-number="5">  <span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>),</a>
-<a class="sourceLine" id="cb462-6" data-line-number="6">  <span class="dt">plot.background =</span> <span class="kw">element_rect</span>(<span class="dt">fill =</span> <span class="st">&quot;yellow&quot;</span>))</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-5.png" width="672" /></p>
+<div id="exercise-9-if-statement" class="section level2">
+<h2><span class="header-section-number">15.1</span> Exercise 9: If statement</h2>
+<p>Create the script “exercise9.R” and save it to the “Rcourse/Module2” directory: you will save all the commands of exercise 9 in that script.
+<br>Remember you can comment the code using #.</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb345-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb345-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
+</details>
+<p><strong>1- Create vector vec2 as:</strong></p>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb346-1" data-line-number="1">vec2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</a></code></pre></div>
+<ul>
+<li>Use an <strong>if</strong> statement and the <strong>%in%</strong> function to check whether “apple” is present in vec2 (in such case print “there is an apple!”)</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb347-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;apple&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb347-2" data-line-number="2">    <span class="kw">print</span>(<span class="st">&quot;there is an apple there&quot;</span>)</a>
+<a class="sourceLine" id="cb347-3" data-line-number="3">}</a></code></pre></div>
+</details>
+<ul>
+<li>Use an <strong>if</strong> statement and the <strong>%in%</strong> function to check whether “grapefruit” is present in vec2: if “grapefruit” is not found, test whether “pear” is found (using <strong>else if</strong>).</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb348-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb348-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</a>
+<a class="sourceLine" id="cb348-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb348-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</a>
+<a class="sourceLine" id="cb348-5" data-line-number="5">}</a></code></pre></div>
+</details>
+<ul>
+<li>Add an <strong>else</strong> section in case neither grapefruit nor pear is found in vec2.<br>
+Test your <strong>if</strong> statement also on <strong>vec3</strong>:</li>
+</ul>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb349-1" data-line-number="1">vec3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;strawberry&quot;</span>, <span class="st">&quot;blueberry&quot;</span>, <span class="st">&quot;peach&quot;</span>)</a></code></pre></div>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb350-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb350-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</a>
+<a class="sourceLine" id="cb350-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb350-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</a>
+<a class="sourceLine" id="cb350-5" data-line-number="5">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb350-6" data-line-number="6">    <span class="kw">print</span>(<span class="st">&quot;no grapefruit and no pear can be found&quot;</span>)</a>
+<a class="sourceLine" id="cb350-7" data-line-number="7">}</a></code></pre></div>
+</details>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="exercise-12-ggplot2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="volcano-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="repetitive-execution.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="basic-plots-in-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

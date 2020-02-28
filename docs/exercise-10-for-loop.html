@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>19.10 More about the theme() function | Introduction to R</title>
-  <meta name="description" content="19.10 More about the theme() function | Introduction to R" />
+  <title>14.1 Exercise 10: For loop | Introduction to R</title>
+  <meta name="description" content="14.1 Exercise 10: For loop | Introduction to R" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="19.10 More about the theme() function | Introduction to R" />
+  <meta property="og:title" content="14.1 Exercise 10: For loop | Introduction to R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="19.10 More about the theme() function | Introduction to R" />
+  <meta name="twitter:title" content="14.1 Exercise 10: For loop | Introduction to R" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="exercise-12-ggplot2.html">
-<link rel="next" href="volcano-plots.html">
+<link rel="prev" href="conditional-statement.html">
+<link rel="next" href="repetitive-execution.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -288,48 +288,130 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="more-about-the-theme-function" class="section level2">
-<h2><span class="header-section-number">19.10</span> More about the theme() function</h2>
-<p>The <strong>theme()</strong> allows a precise control of graphical parameters such as axis text, ticks and labels, or legend texts and labels, etc.
-<br>
-More details <a href="https://ggplot2.tidyverse.org/reference/theme.html">here</a></p>
-<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb458-1" data-line-number="1"><span class="co"># Let&#39;s the project_long object from exercise 12, and plot boxplots</span></a>
-<a class="sourceLine" id="cb458-2" data-line-number="2">boxp &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>project_long, <span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">color=</span>expr_limits)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb458-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a>
-<a class="sourceLine" id="cb458-4" data-line-number="4">  </a>
-<a class="sourceLine" id="cb458-5" data-line-number="5"><span class="co"># Remove the legend title:</span></a>
-<a class="sourceLine" id="cb458-6" data-line-number="6">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>())</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-1.png" width="672" /></p>
-<div class="sourceCode" id="cb459"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb459-1" data-line-number="1"><span class="co"># Change font of legend text</span></a>
-<a class="sourceLine" id="cb459-2" data-line-number="2">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>(), </a>
-<a class="sourceLine" id="cb459-3" data-line-number="3">  <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">8</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>))</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-2.png" width="672" /></p>
-<div class="sourceCode" id="cb460"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb460-1" data-line-number="1"><span class="co"># Put legend on the top of the plot</span></a>
-<a class="sourceLine" id="cb460-2" data-line-number="2">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>(), </a>
-<a class="sourceLine" id="cb460-3" data-line-number="3">  <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">8</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>),</a>
-<a class="sourceLine" id="cb460-4" data-line-number="4">  <span class="dt">legend.position=</span><span class="st">&quot;top&quot;</span>)</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-3.png" width="672" /></p>
-<div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb461-1" data-line-number="1"><span class="co"># Rotate x-axis labels</span></a>
-<a class="sourceLine" id="cb461-2" data-line-number="2">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>(), </a>
-<a class="sourceLine" id="cb461-3" data-line-number="3">  <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">8</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>),</a>
-<a class="sourceLine" id="cb461-4" data-line-number="4">  <span class="dt">legend.position=</span><span class="st">&quot;top&quot;</span>,</a>
-<a class="sourceLine" id="cb461-5" data-line-number="5">  <span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>))</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-4.png" width="672" /></p>
-<div class="sourceCode" id="cb462"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb462-1" data-line-number="1"><span class="co"># Add a color to the plot&#39;s background</span></a>
-<a class="sourceLine" id="cb462-2" data-line-number="2">boxp <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.title=</span><span class="kw">element_blank</span>(), </a>
-<a class="sourceLine" id="cb462-3" data-line-number="3">  <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">8</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>),</a>
-<a class="sourceLine" id="cb462-4" data-line-number="4">  <span class="dt">legend.position=</span><span class="st">&quot;top&quot;</span>,</a>
-<a class="sourceLine" id="cb462-5" data-line-number="5">  <span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>),</a>
-<a class="sourceLine" id="cb462-6" data-line-number="6">  <span class="dt">plot.background =</span> <span class="kw">element_rect</span>(<span class="dt">fill =</span> <span class="st">&quot;yellow&quot;</span>))</a></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-361-5.png" width="672" /></p>
+<div id="exercise-10-for-loop" class="section level2">
+<h2><span class="header-section-number">14.1</span> Exercise 10: For loop</h2>
+<p>Create the script “exercise10.R” and save it to the “Rcourse/Module2” directory: you will save all the commands of exercise 10 in that script.
+<br>Remember you can comment the code using #.</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb331-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb331-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
+</details>
+<p><strong>1- Write a for loop that iterates over the sequence of numbers 2 to 10 (both included), and prints the square root of each number (function sqrt()).</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb332-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="dv">10</span>){</a>
+<a class="sourceLine" id="cb332-2" data-line-number="2">    <span class="kw">print</span>(<span class="kw">sqrt</span>(i))</a>
+<a class="sourceLine" id="cb332-3" data-line-number="3">}</a></code></pre></div>
+</details>
+<p><strong>2- Write a for loop that iterates over the sequence of numbers 5 to 15 (both included), and prints a new vector of 2 elements containing the number and its square root</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb333-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="op">:</span><span class="dv">15</span>){</a>
+<a class="sourceLine" id="cb333-2" data-line-number="2">    veci &lt;-<span class="st"> </span><span class="kw">c</span>(i, <span class="kw">sqrt</span>(i))</a>
+<a class="sourceLine" id="cb333-3" data-line-number="3">        <span class="kw">print</span>(veci)</a>
+<a class="sourceLine" id="cb333-4" data-line-number="4">}</a></code></pre></div>
+</details>
+<p><strong>3- Create the following matrix</strong></p>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb334-1" data-line-number="1">mat1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">40</span>), <span class="dt">nrow=</span><span class="dv">20</span>)</a></code></pre></div>
+<ul>
+<li>Write a for loop that iterates over each row of <strong>mat1</strong> and prints the <strong>median value of each row</strong>.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb335-1" data-line-number="1"><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mat1)){</a>
+<a class="sourceLine" id="cb335-2" data-line-number="2">    <span class="co"># extract the row</span></a>
+<a class="sourceLine" id="cb335-3" data-line-number="3">    rowj &lt;-<span class="st"> </span>mat1[j,]</a>
+<a class="sourceLine" id="cb335-4" data-line-number="4">    <span class="co"># print rowj</span></a>
+<a class="sourceLine" id="cb335-5" data-line-number="5">    <span class="kw">print</span>(rowj)</a>
+<a class="sourceLine" id="cb335-6" data-line-number="6">    <span class="co"># print median value in row</span></a>
+<a class="sourceLine" id="cb335-7" data-line-number="7">    <span class="kw">print</span>(<span class="kw">median</span>(rowj))</a>
+<a class="sourceLine" id="cb335-8" data-line-number="8">}  </a>
+<a class="sourceLine" id="cb335-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb335-10" data-line-number="10"><span class="co"># with less lines of code:</span></a>
+<a class="sourceLine" id="cb335-11" data-line-number="11"><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mat1)){</a>
+<a class="sourceLine" id="cb335-12" data-line-number="12">    <span class="co"># print rowj</span></a>
+<a class="sourceLine" id="cb335-13" data-line-number="13">    <span class="kw">print</span>(rowj)</a>
+<a class="sourceLine" id="cb335-14" data-line-number="14">    <span class="co"># print median value in row</span></a>
+<a class="sourceLine" id="cb335-15" data-line-number="15">    <span class="kw">print</span>(<span class="kw">median</span>(mat1[j,]))</a>
+<a class="sourceLine" id="cb335-16" data-line-number="16">}   </a></code></pre></div>
+</details>
+<p><strong>2- If statement in for loop</strong></p>
+<p>Create the following matrix:</p>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb336-1" data-line-number="1">mat4 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">34</span>, <span class="dv">1</span>, <span class="ot">NA</span>, <span class="dv">89</span>, <span class="dv">7</span>, <span class="dv">12</span>, <span class="ot">NA</span>, <span class="dv">0</span>, <span class="dv">38</span>),</a>
+<a class="sourceLine" id="cb336-2" data-line-number="2">    <span class="dt">nrow=</span><span class="dv">5</span>)</a></code></pre></div>
+<p>Write a <strong>for</strong> loop that iterates over each row of <strong>mat4</strong>: <strong>if</strong> an <strong>NA</strong> is found, print the row number and the entire row where the <strong>NA</strong> is found.</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb337-1" data-line-number="1"><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mat4)){</a>
+<a class="sourceLine" id="cb337-2" data-line-number="2">    <span class="co"># extract row</span></a>
+<a class="sourceLine" id="cb337-3" data-line-number="3">    rowk &lt;-<span class="st"> </span>mat4[k,]</a>
+<a class="sourceLine" id="cb337-4" data-line-number="4">    <span class="cf">if</span>(<span class="kw">any</span>(<span class="kw">is.na</span>(rowk))){</a>
+<a class="sourceLine" id="cb337-5" data-line-number="5">        <span class="kw">print</span>(k)</a>
+<a class="sourceLine" id="cb337-6" data-line-number="6">        <span class="kw">print</span>(rowk)</a>
+<a class="sourceLine" id="cb337-7" data-line-number="7">    }</a>
+<a class="sourceLine" id="cb337-8" data-line-number="8">}</a></code></pre></div>
+</details>
+<p><strong>3- For loop, if statement and regular expression</strong></p>
+<p>Create vector <strong>vec4</strong> as:</p>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb338-1" data-line-number="1">vec4 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Oct4&quot;</span>, <span class="st">&quot;DEPP&quot;</span>, <span class="st">&quot;RSU1&quot;</span>, <span class="st">&quot;Hk2&quot;</span>, <span class="st">&quot;ZNF37A&quot;</span>, <span class="st">&quot;C1QL1&quot;</span>, <span class="st">&quot;Shh&quot;</span>, <span class="st">&quot;Cdkn2a&quot;</span>)</a></code></pre></div>
+<p><strong>vec4</strong> contains Human and Mouse gene symbols.
+<br></p>
+<p>Loop over each element of <strong>vec4</strong>:
+* If the element is a <strong>human gene (both characters and numbers; all characters are written in upper-case)</strong>, print a vector of two elements: the name of the gene and “human gene”.<br>
+* If the element is a <strong>mouse gene (both characters and numbers; only the first character is written in upper-case)</strong>, print a vector of two elements: the name of the gene and “mouse gene”.<br></p>
+<blockquote>
+<p>Tip 1: <em>Use grep and a regular expression in the if statement !</em><br>
+Tip 2: <em>When grep does not find a match, it returns an element of <strong>length 0</strong> !</em><br>
+Tip 3: <em>You can also use grepl: check the help page</em></p>
+</blockquote>
+<p>How do you get started?
+* First, work on the regular expressions: how do you retrieve Human genes only? How do you retrieve Mouse genes only?
+* Then, integrate the regular expressions in the if statement.
+* Finally, integrate all this in a for loop!
+<br></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb339-1" data-line-number="1"><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</a>
+<a class="sourceLine" id="cb339-2" data-line-number="2">    <span class="cf">if</span>(<span class="kw">length</span>(<span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)) <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb339-3" data-line-number="3">        <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</a>
+<a class="sourceLine" id="cb339-4" data-line-number="4">    }<span class="cf">else</span> <span class="cf">if</span>(<span class="kw">length</span>(<span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)) <span class="op">!=</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb339-5" data-line-number="5">        <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</a>
+<a class="sourceLine" id="cb339-6" data-line-number="6">    }</a>
+<a class="sourceLine" id="cb339-7" data-line-number="7">}</a>
+<a class="sourceLine" id="cb339-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb339-9" data-line-number="9"><span class="co"># With grepl</span></a>
+<a class="sourceLine" id="cb339-10" data-line-number="10">    <span class="co"># grepl returns a logical vector (match or not for each element of x), not the matching elements themselves.</span></a>
+<a class="sourceLine" id="cb339-11" data-line-number="11"><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</a>
+<a class="sourceLine" id="cb339-12" data-line-number="12">        <span class="cf">if</span>(<span class="kw">grepl</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)){</a>
+<a class="sourceLine" id="cb339-13" data-line-number="13">                <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</a>
+<a class="sourceLine" id="cb339-14" data-line-number="14">        }<span class="cf">else</span> <span class="cf">if</span>(<span class="kw">grepl</span>(<span class="dt">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="dt">x=</span>gene)){</a>
+<a class="sourceLine" id="cb339-15" data-line-number="15">                <span class="kw">print</span>(<span class="kw">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</a>
+<a class="sourceLine" id="cb339-16" data-line-number="16">        }</a>
+<a class="sourceLine" id="cb339-17" data-line-number="17">}</a></code></pre></div>
+</details>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="exercise-12-ggplot2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="volcano-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="conditional-statement.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="repetitive-execution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
