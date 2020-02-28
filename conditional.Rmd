@@ -16,6 +16,8 @@ if(condition){
 
 If the **condition** is TRUE, then proceed to the **action_command**; if it is FALSE, then nothing happens.
 <br>
+Note the usage of **curly brakets {}** to start and end the conditional!
+<br>
 
 ```{r, eval=F}
 k <- 10
