@@ -91,9 +91,9 @@ plot(genes$sample1,
 
 </details>
 
-**6- Add a vertical red line that starts at the median expression value of sample 1. Do it in two steps:**<br>
+**6- Add a vertical red line that shows the median expression value of sample 1. Do it in two steps:**<br>
 a. calculate the median expression of genes in sample 1.<br>
-b. plot a vertical line using abline().
+b. plot a vertical line using **abline()**.
 
 <details>
 <summary>
@@ -152,6 +152,11 @@ correction
 ```{r}
 barplot(table(genes_significance), 
   col=c("blue", "red", "grey"))
+
+# If you want to order the bars not by the default (alphabetical) order, you need to create an ordered factor!
+genes_factor <- factor(genes_significance, ordered=TRUE, levels=c("enriched", "none", "depleted"))
+barplot(table(genes_factor), 
+  col=c("blue", "red", "grey"))
 ```
 
 </details>
@@ -172,7 +177,7 @@ barplot(table(genes_significance),
 
 </details>
 
-**5- The "las" argument allow to rotate the x-axis labels for a better visibility.**
+**5- The "las" argument allows to rotate the x-axis labels for a better readability.**
 Try value 2 for las: what happens? 
 
 <details>
@@ -233,7 +238,7 @@ hist(genes$sample1)
 
 </details>
 
-**2- Repeat the histogram but change argument breaks to 50.**<br>
+**2- Repeat the histogram but change argument "breaks" to 50.**<br>
 What is the difference ?
 
 <details>
@@ -263,7 +268,7 @@ hist(genes$sample1,
 
 </details>
 
-**4- Zoom in the histogram: show only the distribution of expression values from 0 to 2 (x-axis) using the xlim argument.**
+**4- "Zoom in" the histogram: show only the distribution of expression values from 0 to 2 (x-axis) using the xlim argument.**
 
 <details>
 <summary>
