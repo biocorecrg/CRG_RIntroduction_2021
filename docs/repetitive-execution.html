@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="exercise-10-for-loop.html">
-<link rel="next" href="exercise-9-if-statement.html">
+<link rel="prev" href="exercise-9-if-statement.html">
+<link rel="next" href="exercise-10-for-loop.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -225,10 +225,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>14</b> Conditional statement</a><ul>
-<li class="chapter" data-level="14.1" data-path="exercise-10-for-loop.html"><a href="exercise-10-for-loop.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 10: For loop</a></li>
+<li class="chapter" data-level="14.1" data-path="exercise-9-if-statement.html"><a href="exercise-9-if-statement.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: If statement</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>15</b> Repetitive execution</a><ul>
-<li class="chapter" data-level="15.1" data-path="exercise-9-if-statement.html"><a href="exercise-9-if-statement.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 9: If statement</a></li>
+<li class="chapter" data-level="15.1" data-path="exercise-10-for-loop.html"><a href="exercise-10-for-loop.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: For loop</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> Basic plots in R</a><ul>
 <li class="chapter" data-level="16.1" data-path="scatter-plots.html"><a href="scatter-plots.html"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
@@ -293,9 +293,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Loops</strong> are used to repeat a specific block of code.</p>
 <p><br></p>
 <p>Structure of the <strong>for loop</strong>:</p>
-<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb340-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> vector_expression){</a>
-<a class="sourceLine" id="cb340-2" data-line-number="2">    action_command</a>
-<a class="sourceLine" id="cb340-3" data-line-number="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb337-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> vector_expression){</a>
+<a class="sourceLine" id="cb337-2" data-line-number="2">    action_command</a>
+<a class="sourceLine" id="cb337-3" data-line-number="3">}</a></code></pre></div>
 <p>3 main elements:
 * <strong>i</strong> is the loop variable: it is updated at each iteration.
 * <strong>vector_expression</strong>: value attributed to <strong>i</strong> at each iteration (the number of iterations is the <strong>length of vector_expression</strong>).
@@ -306,58 +306,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Example:</li>
 </ul>
-<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb341-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="dv">5</span>){</a>
-<a class="sourceLine" id="cb341-2" data-line-number="2">    <span class="co"># prints the value of i at each iteration</span></a>
-<a class="sourceLine" id="cb341-3" data-line-number="3">    <span class="kw">print</span>(i)</a>
-<a class="sourceLine" id="cb341-4" data-line-number="4">    <span class="co"># multiplies i by 2 at each iteration</span></a>
-<a class="sourceLine" id="cb341-5" data-line-number="5">    y &lt;-<span class="st"> </span>i<span class="op">*</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb341-6" data-line-number="6">    <span class="co"># prints the value of y at each iteration</span></a>
-<a class="sourceLine" id="cb341-7" data-line-number="7">    <span class="kw">print</span>(y)</a>
-<a class="sourceLine" id="cb341-8" data-line-number="8">}</a></code></pre></div>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb338-1" data-line-number="1"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="dv">5</span>){</a>
+<a class="sourceLine" id="cb338-2" data-line-number="2">    <span class="co"># prints the value of i at each iteration</span></a>
+<a class="sourceLine" id="cb338-3" data-line-number="3">    <span class="kw">print</span>(i)</a>
+<a class="sourceLine" id="cb338-4" data-line-number="4">    <span class="co"># multiplies i by 2 at each iteration</span></a>
+<a class="sourceLine" id="cb338-5" data-line-number="5">    y &lt;-<span class="st"> </span>i<span class="op">*</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb338-6" data-line-number="6">    <span class="co"># prints the value of y at each iteration</span></a>
+<a class="sourceLine" id="cb338-7" data-line-number="7">    <span class="kw">print</span>(y)</a>
+<a class="sourceLine" id="cb338-8" data-line-number="8">}</a></code></pre></div>
 <ul>
 <li>Example of a <strong>for loop</strong> that iterates over a character vector:</li>
 </ul>
-<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb342-1" data-line-number="1"><span class="co"># Character vector</span></a>
-<a class="sourceLine" id="cb342-2" data-line-number="2">myfruits &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</a>
-<a class="sourceLine" id="cb342-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb342-4" data-line-number="4"><span class="co"># The for loop prints the current element j, and the number of characters of element j</span></a>
-<a class="sourceLine" id="cb342-5" data-line-number="5"><span class="cf">for</span>(j <span class="cf">in</span> myfruits){</a>
-<a class="sourceLine" id="cb342-6" data-line-number="6">    <span class="kw">print</span>(j)</a>
-<a class="sourceLine" id="cb342-7" data-line-number="7">    <span class="kw">print</span>(<span class="kw">nchar</span>(j))</a>
-<a class="sourceLine" id="cb342-8" data-line-number="8">}</a></code></pre></div>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb339-1" data-line-number="1"><span class="co"># Character vector</span></a>
+<a class="sourceLine" id="cb339-2" data-line-number="2">myfruits &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</a>
+<a class="sourceLine" id="cb339-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb339-4" data-line-number="4"><span class="co"># The for loop prints the current element j, and the number of characters of element j</span></a>
+<a class="sourceLine" id="cb339-5" data-line-number="5"><span class="cf">for</span>(j <span class="cf">in</span> myfruits){</a>
+<a class="sourceLine" id="cb339-6" data-line-number="6">    <span class="kw">print</span>(j)</a>
+<a class="sourceLine" id="cb339-7" data-line-number="7">    <span class="kw">print</span>(<span class="kw">nchar</span>(j))</a>
+<a class="sourceLine" id="cb339-8" data-line-number="8">}</a></code></pre></div>
 <ul>
 <li>Example of a <strong>for loop</strong> that iterates over each row of a matrix, and prints the minimum value of that row :</li>
 </ul>
-<div class="sourceCode" id="cb343"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb343-1" data-line-number="1"><span class="co"># Matrix of 50 rows, 16 columns </span></a>
-<a class="sourceLine" id="cb343-2" data-line-number="2">mymat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">800</span>), </a>
-<a class="sourceLine" id="cb343-3" data-line-number="3">    <span class="dt">nrow=</span><span class="dv">50</span>)</a>
-<a class="sourceLine" id="cb343-4" data-line-number="4">    </a>
-<a class="sourceLine" id="cb343-5" data-line-number="5"><span class="co"># For loop over mymat rows</span></a>
-<a class="sourceLine" id="cb343-6" data-line-number="6">    <span class="co"># 1:nrow(mymat): ranges from 1 to the number of rows in the matrix: 1, 2, 3, 4, ...., 48, 49, 50</span></a>
-<a class="sourceLine" id="cb343-7" data-line-number="7">    </a>
-<a class="sourceLine" id="cb343-8" data-line-number="8"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mymat)){</a>
-<a class="sourceLine" id="cb343-9" data-line-number="9">    <span class="co"># prints the value of i at each iteration</span></a>
-<a class="sourceLine" id="cb343-10" data-line-number="10">    <span class="kw">print</span>(i)</a>
-<a class="sourceLine" id="cb343-11" data-line-number="11">    <span class="co"># prints the minimum value of the ith row of mymat at each iteration</span></a>
-<a class="sourceLine" id="cb343-12" data-line-number="12">    <span class="kw">print</span>(<span class="kw">min</span>(mymat[i,]))</a>
-<a class="sourceLine" id="cb343-13" data-line-number="13">}</a></code></pre></div>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb340-1" data-line-number="1"><span class="co"># Matrix of 50 rows, 16 columns </span></a>
+<a class="sourceLine" id="cb340-2" data-line-number="2">mymat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">800</span>), </a>
+<a class="sourceLine" id="cb340-3" data-line-number="3">    <span class="dt">nrow=</span><span class="dv">50</span>)</a>
+<a class="sourceLine" id="cb340-4" data-line-number="4">    </a>
+<a class="sourceLine" id="cb340-5" data-line-number="5"><span class="co"># For loop over mymat rows</span></a>
+<a class="sourceLine" id="cb340-6" data-line-number="6">    <span class="co"># 1:nrow(mymat): ranges from 1 to the number of rows in the matrix: 1, 2, 3, 4, ...., 48, 49, 50</span></a>
+<a class="sourceLine" id="cb340-7" data-line-number="7">    </a>
+<a class="sourceLine" id="cb340-8" data-line-number="8"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mymat)){</a>
+<a class="sourceLine" id="cb340-9" data-line-number="9">    <span class="co"># prints the value of i at each iteration</span></a>
+<a class="sourceLine" id="cb340-10" data-line-number="10">    <span class="kw">print</span>(i)</a>
+<a class="sourceLine" id="cb340-11" data-line-number="11">    <span class="co"># prints the minimum value of the ith row of mymat at each iteration</span></a>
+<a class="sourceLine" id="cb340-12" data-line-number="12">    <span class="kw">print</span>(<span class="kw">min</span>(mymat[i,]))</a>
+<a class="sourceLine" id="cb340-13" data-line-number="13">}</a></code></pre></div>
 <ul>
 <li><strong>If statement</strong> in <strong>For loop</strong>:</li>
 </ul>
 <p>You can combine <strong>for loops</strong> and <strong>if statements</strong>:</p>
-<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb344-1" data-line-number="1"><span class="co"># Matrix</span></a>
-<a class="sourceLine" id="cb344-2" data-line-number="2">mymat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">800</span>), </a>
-<a class="sourceLine" id="cb344-3" data-line-number="3">        <span class="dt">nrow=</span><span class="dv">50</span>)</a>
-<a class="sourceLine" id="cb344-4" data-line-number="4">    </a>
-<a class="sourceLine" id="cb344-5" data-line-number="5"><span class="co"># Loop over rows of mymat and print row if its median value is &gt; 0</span></a>
-<a class="sourceLine" id="cb344-6" data-line-number="6"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mymat)){</a>
-<a class="sourceLine" id="cb344-7" data-line-number="7">    <span class="co"># extract the current row</span></a>
-<a class="sourceLine" id="cb344-8" data-line-number="8">    rowi &lt;-<span class="st"> </span>mymat[i,]</a>
-<a class="sourceLine" id="cb344-9" data-line-number="9">    <span class="co"># if median of row is &gt; 0, print row</span></a>
-<a class="sourceLine" id="cb344-10" data-line-number="10">    <span class="cf">if</span>(<span class="kw">median</span>(rowi) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</a>
-<a class="sourceLine" id="cb344-11" data-line-number="11">        <span class="kw">print</span>(rowi)</a>
-<a class="sourceLine" id="cb344-12" data-line-number="12">    }</a>
-<a class="sourceLine" id="cb344-13" data-line-number="13">}</a></code></pre></div>
+<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb341-1" data-line-number="1"><span class="co"># Matrix</span></a>
+<a class="sourceLine" id="cb341-2" data-line-number="2">mymat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">800</span>), </a>
+<a class="sourceLine" id="cb341-3" data-line-number="3">        <span class="dt">nrow=</span><span class="dv">50</span>)</a>
+<a class="sourceLine" id="cb341-4" data-line-number="4">    </a>
+<a class="sourceLine" id="cb341-5" data-line-number="5"><span class="co"># Loop over rows of mymat and print row if its median value is &gt; 0</span></a>
+<a class="sourceLine" id="cb341-6" data-line-number="6"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mymat)){</a>
+<a class="sourceLine" id="cb341-7" data-line-number="7">    <span class="co"># extract the current row</span></a>
+<a class="sourceLine" id="cb341-8" data-line-number="8">    rowi &lt;-<span class="st"> </span>mymat[i,]</a>
+<a class="sourceLine" id="cb341-9" data-line-number="9">    <span class="co"># if median of row is &gt; 0, print row</span></a>
+<a class="sourceLine" id="cb341-10" data-line-number="10">    <span class="cf">if</span>(<span class="kw">median</span>(rowi) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb341-11" data-line-number="11">        <span class="kw">print</span>(rowi)</a>
+<a class="sourceLine" id="cb341-12" data-line-number="12">    }</a>
+<a class="sourceLine" id="cb341-13" data-line-number="13">}</a></code></pre></div>
 <p>You can also have a look at this <a href="https://www.datacamp.com/community/tutorials/tutorial-on-loops-in-r">tutorial</a>, to know more about loops.</p>
 <!--chapter:end:forloop.Rmd--> 
 </div>
@@ -366,8 +366,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="exercise-10-for-loop.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="exercise-9-if-statement.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-9-if-statement.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-10-for-loop.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

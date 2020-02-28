@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>15.1 Exercise 9: If statement | Introduction to R</title>
-  <meta name="description" content="15.1 Exercise 9: If statement | Introduction to R" />
+  <title>14.1 Exercise 9: If statement | Introduction to R</title>
+  <meta name="description" content="14.1 Exercise 9: If statement | Introduction to R" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="15.1 Exercise 9: If statement | Introduction to R" />
+  <meta property="og:title" content="14.1 Exercise 9: If statement | Introduction to R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="15.1 Exercise 9: If statement | Introduction to R" />
+  <meta name="twitter:title" content="14.1 Exercise 9: If statement | Introduction to R" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="repetitive-execution.html">
-<link rel="next" href="basic-plots-in-r.html">
+<link rel="prev" href="conditional-statement.html">
+<link rel="next" href="repetitive-execution.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -225,10 +225,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>14</b> Conditional statement</a><ul>
-<li class="chapter" data-level="14.1" data-path="exercise-10-for-loop.html"><a href="exercise-10-for-loop.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 10: For loop</a></li>
+<li class="chapter" data-level="14.1" data-path="exercise-9-if-statement.html"><a href="exercise-9-if-statement.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: If statement</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>15</b> Repetitive execution</a><ul>
-<li class="chapter" data-level="15.1" data-path="exercise-9-if-statement.html"><a href="exercise-9-if-statement.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 9: If statement</a></li>
+<li class="chapter" data-level="15.1" data-path="exercise-10-for-loop.html"><a href="exercise-10-for-loop.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: For loop</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> Basic plots in R</a><ul>
 <li class="chapter" data-level="16.1" data-path="scatter-plots.html"><a href="scatter-plots.html"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
@@ -289,18 +289,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="exercise-9-if-statement" class="section level2">
-<h2><span class="header-section-number">15.1</span> Exercise 9: If statement</h2>
+<h2><span class="header-section-number">14.1</span> Exercise 9: If statement</h2>
 <p>Create the script “exercise9.R” and save it to the “Rcourse/Module2” directory: you will save all the commands of exercise 9 in that script.
 <br>Remember you can comment the code using #.</p>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb345-1" data-line-number="1"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb345-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb331-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb331-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
 </details>
 <p><strong>1- Create vector vec2 as:</strong></p>
-<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb346-1" data-line-number="1">vec2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb332-1" data-line-number="1">vec2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</a></code></pre></div>
 <ul>
 <li>Use an <strong>if</strong> statement and the <strong>%in%</strong> function to check whether “apple” is present in vec2 (in such case print “there is an apple!”)</li>
 </ul>
@@ -308,9 +308,9 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb347-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;apple&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb347-2" data-line-number="2">    <span class="kw">print</span>(<span class="st">&quot;there is an apple there&quot;</span>)</a>
-<a class="sourceLine" id="cb347-3" data-line-number="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb333-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;apple&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb333-2" data-line-number="2">    <span class="kw">print</span>(<span class="st">&quot;there is an apple there&quot;</span>)</a>
+<a class="sourceLine" id="cb333-3" data-line-number="3">}</a></code></pre></div>
 </details>
 <ul>
 <li>Use an <strong>if</strong> statement and the <strong>%in%</strong> function to check whether “grapefruit” is present in vec2: if “grapefruit” is not found, test whether “pear” is found (using <strong>else if</strong>).</li>
@@ -319,28 +319,28 @@ correction
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb348-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb348-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</a>
-<a class="sourceLine" id="cb348-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb348-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</a>
-<a class="sourceLine" id="cb348-5" data-line-number="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb334-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb334-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</a>
+<a class="sourceLine" id="cb334-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb334-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</a>
+<a class="sourceLine" id="cb334-5" data-line-number="5">}</a></code></pre></div>
 </details>
 <ul>
 <li>Add an <strong>else</strong> section in case neither grapefruit nor pear is found in vec2.<br>
 Test your <strong>if</strong> statement also on <strong>vec3</strong>:</li>
 </ul>
-<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb349-1" data-line-number="1">vec3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;strawberry&quot;</span>, <span class="st">&quot;blueberry&quot;</span>, <span class="st">&quot;peach&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb335-1" data-line-number="1">vec3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;strawberry&quot;</span>, <span class="st">&quot;blueberry&quot;</span>, <span class="st">&quot;peach&quot;</span>)</a></code></pre></div>
 <details>
 <p><summary>
 correction
 </summary></p>
-<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb350-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb350-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</a>
-<a class="sourceLine" id="cb350-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
-<a class="sourceLine" id="cb350-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</a>
-<a class="sourceLine" id="cb350-5" data-line-number="5">}<span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb350-6" data-line-number="6">    <span class="kw">print</span>(<span class="st">&quot;no grapefruit and no pear can be found&quot;</span>)</a>
-<a class="sourceLine" id="cb350-7" data-line-number="7">}</a></code></pre></div>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb336-1" data-line-number="1"><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb336-2" data-line-number="2">        <span class="kw">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</a>
+<a class="sourceLine" id="cb336-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="op">%in%</span><span class="st"> </span>vec2){</a>
+<a class="sourceLine" id="cb336-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</a>
+<a class="sourceLine" id="cb336-5" data-line-number="5">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb336-6" data-line-number="6">    <span class="kw">print</span>(<span class="st">&quot;no grapefruit and no pear can be found&quot;</span>)</a>
+<a class="sourceLine" id="cb336-7" data-line-number="7">}</a></code></pre></div>
 </details>
 
 </div>
@@ -350,8 +350,8 @@ correction
           </div>
         </div>
       </div>
-<a href="repetitive-execution.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="basic-plots-in-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="conditional-statement.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="repetitive-execution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
