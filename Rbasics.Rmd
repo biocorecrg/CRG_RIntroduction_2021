@@ -77,6 +77,6 @@ Naming objects in R is quite flexible. However, there are a few rules and good p
 
 * Object names are **case sensitive**: object **MyObject** is not the same as **myobject**
 * They can contains both **numbers** or **letters** but should **START** with a letter, e.g. *2myobject* is not a valid object name.
-* You can use underscores (**_**) and points (**.**). Other **special characters** are *not allowed*.
+* You can use underscores **_** and points **.** . Other **special characters** are *not allowed*.
 * Avoid using function names as object names.
 
