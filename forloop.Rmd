@@ -15,7 +15,7 @@ for(i in vector_expression){
 3 main elements:
 * **i** is the loop variable: it is updated at each iteration.
 * **vector_expression**: value attributed to **i** at each iteration (the number of iterations is the **length of vector_expression**).
-* **action_command**: what is to be done at each iteration.
+* **action_command**: what action to take at each iteration.
 
 Note the usage of **curly brakets {}** to start and end the loop!
 <br><br>
@@ -26,10 +26,13 @@ Note the usage of **curly brakets {}** to start and end the loop!
 
 ```{r}
 for(i in 2:5){
+	# prints the value of i at each iteration
+	print(i)
+	# multiplies i by 2 at each iteration
 	y <- i*2
+	# prints the value of y at each iteration
 	print(y)
 }
-
 ```
 
 * Example of a **for loop** that iterates over a character vector:
@@ -37,7 +40,8 @@ for(i in 2:5){
 ```{r}
 # Character vector
 myfruits <- c("apple", "pear", "grape")
-# For loop that prints the current element and its number of characters
+
+# The for loop prints the current element j, and the number of characters of element j
 for(j in myfruits){
 	print(j)
 	print(nchar(j))
@@ -47,17 +51,24 @@ for(j in myfruits){
 * Example of a **for loop** that iterates over each row of a matrix, and prints the minimum value of that row :
 
 ```{r}
-# Matrix
+# Matrix of 50 rows, 16 columns 
 mymat <- matrix(rnorm(800), 
 	nrow=50)
+	
 # For loop over mymat rows
+	# 1:nrow(mymat): ranges from 1 to the number of rows in the matrix: 1, 2, 3, 4, ...., 48, 49, 50
+	
 for(i in 1:nrow(mymat)){
+	# prints the value of i at each iteration
 	print(i)
+	# prints the minimum value of the ith row of mymat at each iteration
 	print(min(mymat[i,]))
 }
 ```
 
 * **If statement** in **For loop**:
+
+You can combine **for loops** and **if statements**:
 
 ```{r, eval=F}
 # Matrix
@@ -74,4 +85,6 @@ for(i in 1:nrow(mymat)){
 	}
 }
 ```
+
+You can also have a look at this [tutorial](https://www.datacamp.com/community/tutorials/tutorial-on-loops-in-r), to know more about loops.
 
