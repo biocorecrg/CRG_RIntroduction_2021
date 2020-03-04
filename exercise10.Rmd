@@ -66,16 +66,14 @@ correction
 for(j in 1:nrow(mat1)){
 	# extract the row
 	rowj <- mat1[j,]
-	# print rowj
-	print(rowj)
+	# compute the median
+	medrowj <- median(rowj)
 	# print median value in row
-	print(median(rowj))
+	print(medrowj)
 }  
 
 # with less lines of code:
 for(j in 1:nrow(mat1)){
-	# print rowj
-	print(rowj)
 	# print median value in row
 	print(median(mat1[j,]))
 }   
@@ -124,6 +122,7 @@ vec4 <- c("Oct4", "DEPP", "RSU1", "Hk2", "ZNF37A", "C1QL1", "Shh", "Cdkn2a")
 <br>
 
 Loop over each element of **vec4**:
+
 * If the element is a **human gene (both characters and numbers; all characters are written in upper-case)**, print a vector of two elements: the name of the gene and "human gene".<br>
 * If the element is a **mouse gene (both characters and numbers; only the first character is written in upper-case)**, print a vector of two elements: the name of the gene and "mouse gene".<br>
 
@@ -132,9 +131,11 @@ Loop over each element of **vec4**:
 > Tip 3: *You can also use grepl: check the help page*
 
 How do you get started?
+
 * First, work on the regular expressions: how do you retrieve Human genes only? How do you retrieve Mouse genes only?
 * Then, integrate the regular expressions in the if statement.
 * Finally, integrate all this in a for loop!
+
 <br>
 
 <details>
@@ -160,6 +161,16 @@ for(gene in vec4){
                 print(c(gene, "mouse gene"))
         }
 }
+
+# easier way! whenever a lower case character is present: it is from mouse
+for(gene in vec4){
+        if(length(grep(pattern="[[:lower:]]", x=gene)) != 0){
+                print(c(gene, "mouse gene"))
+        }else{
+                print(c(gene, "human gene"))
+        }
+}
+
 ```
 
 </details>

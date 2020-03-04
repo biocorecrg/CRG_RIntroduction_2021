@@ -89,14 +89,14 @@ d[d[,"Age"] > 24, ]
 d[d$Age > 24, ]
 ```
 
-<img src="images/df_col2.png" width="450"/>
+<img src="images/df_col2.png" width="500"/>
 
  + Select patients (rows) based on 2 criteria: age of the patient (column 2) should be great than or equal to 25, and the patient should be vegetarian (column 3):
 ```{r}
 d[ d$Age >= 25 & d$Vegetarian == TRUE, ]
 ```
 
-<img src="images/df_col2_col3.png" width="650"/>
+<img src="images/df_col2_col3.png" width="700"/>
 
  + Select the columns of b if **at least one element in the 3rd row is less than or equal to 4**:
 ```{r}

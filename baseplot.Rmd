@@ -1,4 +1,4 @@
-# Basic plots in R
+# "Base" plots in R
 
 R-base package graphics offers functions for producing many plots, for example:
 
@@ -78,6 +78,18 @@ grep("blue", colors(), value=TRUE)
 ``` 
 
 You can also find them [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
+
+# change the default palette with one of your choice:
+
+```{r}
+palette(grep("blue", colors(), value=TRUE))
+```
+
+# change the palette back to default
+
+```{r}
+palette("default")
+```
 
 ## Bar plots
 

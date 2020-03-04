@@ -39,6 +39,7 @@ Rcourse<br>
 ### Note on files and folders names
 
 As you choose names for files and folders, a few rules will make your life easier:
+
 * Do not use **spaces**.
 * Do not use **accents** (replace **é** by **e**).
 * Avoid special characters, although**underscores** are a safe option.

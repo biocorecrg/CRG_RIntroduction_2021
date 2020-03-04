@@ -2,7 +2,7 @@
 
 We will see two additional types of plots:
 
-* Heat map (package gplots)
+* Heat map (package gplots or pheatmap)
 * Venn diagram (from package VennDiagram)
 
 ## heatmap.2 function from gplots package
@@ -55,6 +55,65 @@ heatmap.2(x=mat,
 
 <img src="images/plots/heatmap2.png" width="500"/>
 
+
+## pheatmap function from the pheatmap package
+
+```{r, eval=F}
+# install pheatmap package
+install.package("pheatmap")
+```
+
+Get started:
+
+```{r, eval=F}
+# load package
+library(pheatmap)
+
+# create matrix
+mat <- matrix(rnorm(1200), ncol=6)
+
+# heatmap with the defaults parameters
+pheatmap(mat)
+```
+
+Change the color palette / gradient
+
+```{r, eval=F}
+# with "rainbow" colors
+pheatmap(mat, color=rainbow(50))
+
+# with blue to red (middle color white)
+pheatmap(mat, color=colorRampPalette(c("navy", "white", "red"))(50))
+```
+
+Do not cluster rows or columns
+
+```{r, eval=F}
+# remove the clustering by rows
+pheatmap(mat, cluster_rows=FALSE)
+
+# remove the clustering by columns
+pheatmap(mat, cluster_cols=FALSE)
+
+# remove both clusterings
+pheatmap(mat, cluster_rows=FALSE, cluster_cols=FALSE)
+```
+
+Add some **annotation colored bar(s)**:
+
+```{r, eval=F}
+# add column names to mat
+colnames(mat) <- paste0("Sample", 1:6)
+
+# create data frame for annotation (in the case of samples, information about the experiment, for example)
+annot_cols = data.frame(
+                Group = c(rep("WT", 3), rep("KO", 3)), 
+                TimePoint = rep(c(0, 5, 10), each=2),
+		row.names = colnames(mat)
+                )
+# plot
+pheatmap(mat, annotation_col = annot_cols)
+```
 
 ## venn.diagram function from VennDiagram package
 

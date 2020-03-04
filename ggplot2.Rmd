@@ -38,9 +38,16 @@ library(ggplot2)
 ggplot(data=dataframe, mapping=aes(x=column1, y=column2))
 ```
 
-*The base layer is setting the grounds but NOT plotting anything*
+*The base layer is setting the grounds but NOT plotting anything:*
 
-* Add a layer (with the **+** sign) that describes what kind of plot you want.
+* You then add a layer (with the **+** sign) that describes what kind of plot you want:
+	* geom_point()
+	* geom_bar()
+	* geom_histogram()
+	* geom_boxplot()
+	* ...
+
+* And then you will add **one layer at a time** to add more features to your plot!
 
 ## Scatter plot
 
@@ -123,6 +130,12 @@ ggplot(data=df2, mapping=aes(x=grouping, y=sample1)) + geom_boxplot()
 
 * What if you want to plot both sample1 and sample2 ?<br>
 *You need to convert into a **long** format*
+<br>
+
+What is the **long** format ?
+
+<img src="images/plots/wide2long.png" width="500">
+
 
 Plotting both sample1 and sample2:
 
@@ -159,14 +172,19 @@ ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) +
 ```
 
 Do you want to change the default colors?<br>
+
 * Integrate either layer:
-  * **scale_color_manual()**
-  * **scale_fill_manual**
+	* **scale_color_manual()** for the boxes border color
+	* **scale_fill_manual()** for the boxes color (inside)
 
 ```{r}
-pbox <- ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
+pbox_fill <- ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
 	geom_boxplot() +
 	scale_fill_manual(values=c("slateblue2", "chocolate"))
+
+pbox_col <- ggplot(data=df_long, mapping=aes(x=variable, y=value, color=grouping)) +
+        geom_boxplot() +
+        scale_color_manual(values=c("slateblue2", "chocolate"))
 ```
 
 ## Dot plots

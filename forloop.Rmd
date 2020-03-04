@@ -13,6 +13,7 @@ for(i in vector_expression){
 ```
 
 3 main elements:
+
 * **i** is the loop variable: it is updated at each iteration.
 * **vector_expression**: value attributed to **i** at each iteration (the number of iterations is the **length of vector_expression**).
 * **action_command**: what action to take at each iteration.
