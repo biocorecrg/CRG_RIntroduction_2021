@@ -58,7 +58,7 @@ ggplot(data=dataframe, mapping=aes(x=column1, y=column2)) + geom_point()
 
 * Example of a simple scatter plot:
 
-```{r}
+```{r, eval=TRUE}
 # Create a data frame
 df1 <- data.frame(sample1=rnorm(200), sample2=rnorm(200))
 
@@ -72,7 +72,7 @@ ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) +
 	* **ggtitle** to add a title
 	* **geom_vline** to add a vertical line
 	* etc.
-```{r}
+```{r, eval=TRUE}
 ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) + 
   geom_point() +
 	ggtitle(label="my first ggplot") +
@@ -83,7 +83,7 @@ Bookmark that [ggplot2 reference](https://ggplot2.tidyverse.org/reference/) and 
 
 * You can save the plot in an object **at any time** and add layers to that object:
 
-```{r}
+```{r, eval=TRUE}
 # Save in an object
 p <- ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) +
 	geom_point()
@@ -98,7 +98,7 @@ p + ggtitle(label="my first ggplot")
 
 Color all points in red (not depending on the data):
 
-```{r}
+```{r, eval=TRUE}
 ggplot(data=df1 , mapping=aes(x=sample1, y=sample2)) +
 	geom_point(color="red") 
 ```
@@ -106,25 +106,26 @@ ggplot(data=df1 , mapping=aes(x=sample1, y=sample2)) +
 
 Color the points according to another column in the data frame:
 
-```{r}
+```{r, eval=TRUE}
 # Build a data frame from df1: add a column with "yes" and "no"
 df2 <- data.frame(df1, grouping=rep(c("yes", "no"), c(80, 120)))
 
 # Plot and add the color parameter in the aes():
 pscat <- ggplot(data=df2, mapping=aes(x=sample1, y=sample2, color=grouping)) + 
   geom_point()
+pscat
 ```
 
 ## Box plots
 
 * Simple boxplot showing the data distribution of sample 1:
 
-```{r}
+```{r, eval=TRUE}
 ggplot(data=df2, mapping=aes(x="", y=sample1)) + geom_boxplot()
 ```
 
 * Split the data into 2 boxes:
-```{r}
+```{r, eval=TRUE}
 ggplot(data=df2, mapping=aes(x=grouping, y=sample1)) + geom_boxplot()
 ```
 
@@ -134,7 +135,7 @@ ggplot(data=df2, mapping=aes(x=grouping, y=sample1)) + geom_boxplot()
 
 What is the **long** format ?
 
-<img src="images/plots/wide2long.png" width="500">
+<img src="images/plots/wide2long.png" width="800">
 
 
 Plotting both sample1 and sample2:
@@ -144,7 +145,7 @@ Plotting both sample1 and sample2:
 install.packages("reshape2")
 ```
 
-```{r}
+```{r, eval=TRUE, message=FALSE, warning=FALSE, error=FALSE}
 # load package
 library("reshape2")
 
@@ -159,13 +160,13 @@ ggplot(data=df_long, mapping=aes(x=variable, y=value)) +
 * What if now you also want to see the distribution of "yes" and "no" in both sample1 and sample2 ?<br>
 *Integrate a parameter to the **aes()***
 
-```{r}
+```{r, eval=TRUE}
 # Either color (color of the box border)
 ggplot(data=df_long, mapping=aes(x=variable, y=value, color=grouping)) + 
   geom_boxplot()
 ```
 
-```{r}
+```{r, eval=TRUE}
 # Or fill (color inside the box)
 ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
   geom_boxplot()
@@ -177,21 +178,24 @@ Do you want to change the default colors?<br>
 	* **scale_color_manual()** for the boxes border color
 	* **scale_fill_manual()** for the boxes color (inside)
 
-```{r}
+```{r, eval=TRUE}
 pbox_fill <- ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
 	geom_boxplot() +
 	scale_fill_manual(values=c("slateblue2", "chocolate"))
 
+pbox_fill
+
 pbox_col <- ggplot(data=df_long, mapping=aes(x=variable, y=value, color=grouping)) +
         geom_boxplot() +
         scale_color_manual(values=c("slateblue2", "chocolate"))
+pbox_col
 ```
 
 ## Dot plots
 
 Example of the expression of a gene in 6 samples: 2 experimental groups in triplicates.
 
-```{r}
+```{r, eval=TRUE}
 # create a named vector with the expression of a gene
 mygene <- c(8.1, 8.2, 8.6, 8.7, 9.4, 8.5)
 
@@ -211,6 +215,8 @@ mygenelong$group <- gsub("[1-3]{1}", "", mygenelong$sample_name)
 pdot <- ggplot(data=mygenelong, mapping=aes(x=group, y=value, col=group, label=sample_name)) + 
   geom_point() +
   geom_text(nudge_x=0.2)
+
+pdot
 ```
 
 * Add more layers:
@@ -218,7 +224,7 @@ pdot <- ggplot(data=mygenelong, mapping=aes(x=group, y=value, col=group, label=s
   * **ylab()** to change the y axis label
   * **theme** to manage the legend
   
-```{r}
+```{r, eval=TRUE}
 pdot +  xlab(label="Experimental group") +
   ylab(label="Normalized expression (log2)") +
   ggtitle(label="Expression of gene 1") +
@@ -229,7 +235,7 @@ pdot +  xlab(label="Experimental group") +
 
 ## Bar plots
 
-```{r}
+```{r, eval=TRUE}
 # A simple bar plot
 ggplot(data=df2, mapping=aes(x=grouping)) + geom_bar()
 ```
@@ -238,61 +244,63 @@ ggplot(data=df2, mapping=aes(x=grouping)) + geom_bar()
   * **scale_x_discrete** is used to handle x-axis title and labels
   * **coord_flip** swaps the x and y axis
   
-```{r}
+```{r, eval=TRUE}
 # Save the plot in the object "p"
 pbar <- ggplot(data=df2, mapping=aes(x=grouping, fill=grouping)) + 
   geom_bar()
 
+pbar
+
 # Change x axis label with scale_x_discrete and change order of the bars:
 p2 <- pbar + scale_x_discrete(name="counts of yes / no", limits=c("yes", "no"))
+
+p2
 
 # Swapping x and y axis with coord_flip():
 p3 <- p2 + coord_flip()
 
+p3
+
 # Change fill
 p4 <- p3 + scale_fill_manual(values=c("yellow", "cyan"))
 
-# Show intermediary and final plots
-pbar
-p2
-p3
 p4
 ```
 
+        
 ## Histograms
 
 Simple histogram on one sample (using the df2 data frame):
 
-```{r}
+```{r, eval=TRUE}
 ggplot(data=df1, mapping=aes(x=sample1)) + geom_histogram()
-
 ```
 
 Histogram on more samples (using df_long):
 
-```{r}
+```{r, eval=TRUE}
 ggplot(data=df_long, mapping=aes(x=value)) + geom_histogram()
-
 ```
 
 Split the data per sample ("variable" column that represents here the samples):
 
-```{r}
+```{r, eval=TRUE}
 ggplot(data=df_long, mapping=aes(x=value, fill=variable)) + geom_histogram()
 ```
 
 By default, the histograms are **stacked**: change to position **dodge** (side by side):
 
-```{r}
+```{r, eval=TRUE}
 phist <- ggplot(data=df_long, mapping=aes(x=value, fill=variable)) + 
 	geom_histogram(position='dodge')
+phist
 ```
 
 ## About themes
 
 You can change the default global **theme** (background color, grid lines etc. all non-data display):
 
-```{r}
+```{r, eval=TRUE, message=F, warning=F}
 # go back to a previous plot
 p <- ggplot(data=df_long, mapping=aes(x=value)) + geom_histogram()
 
@@ -309,7 +317,7 @@ p + theme_light()
 
 * The same as for regular plots applies:
 
-```{r, eval=F}
+```{r, eval=F, message=F, warning=F}
 png("myggplot.png")
 p
 dev.off()
@@ -317,7 +325,7 @@ dev.off()
 
 * You can also use the ggplot2 **ggsave** function:
 
-```{r, eval=F}
+```{r, eval=F, message=F, warning=F}
 # By default, save the last plot that was produced
 ggsave(filename="lastplot.png")
 
@@ -342,23 +350,23 @@ ggsave(filename="myplot.pdf",
 install.packages("gridExtra")
 ```
 
-```{r}
+```{r, eval=TRUE, message=F, error=F, warning=F}
 # load package
 library(gridExtra)
 # 2 rows and 2 columns
-grid.arrange(pscat, pbox, pbar, phist, nrow=2, ncol=2)
+grid.arrange(pscat, pbox_fill, pbar, phist, nrow=2, ncol=2)
 ```
 
-```{r, fig.width=10, fig.height=4,}
+```{r, fig.width=10, fig.height=4, eval=TRUE, message=F, warning=F}
 # 1 row and 4 columns
-grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
+grid.arrange(pscat, pbox_fill, pbar, phist, nrow=1, ncol=4)
 ```
 
 **WARNING !!**: ggsave and grid.arrange are not directly compatible. To save a file organized by grid.arrange, use the regular functions (pdf, png etc.)
 
 ```{r, eval=FALSE}
 jpeg("grid_arrange_plots.jpg")
-grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
+grid.arrange(pscat, pbox_fill, pbar, phist, nrow=1, ncol=4)
 dev.off()
 ```
 
