@@ -267,6 +267,35 @@ p4 <- p3 + scale_fill_manual(values=c("yellow", "cyan"))
 p4
 ```
 
+### Bar plots with error bars
+
+We can create error bars on barplots.
+<br>
+Let's create a toy data set, that contains 7 independent qPCR measurements for 3 genes:
+
+```{r, eval=TRUE}
+pcr <- data.frame(Dkk1=c(18.2, 18.1, 17.8, 17.85, 18.6, 12.4, 10.7),
+                  Pten=c(15.1,15.2, 15.0, 15.6, 15.3, 14.8, 15.9),
+                  Tp53=c(9.1, 9.9, 9.25, 8.7, 8.8, 9.3, 7.8))
+```
+
+The height of the bar will represent the **average** qPCR measurement. The error bar will represent the **average - standard deviation** on the lowe part, and the **average + standard deviation** on the high part.
+<br>
+We need to create a data frame that **summarizes** these values:
+
+```{r, eval=TRUE}
+pcr_summary <- data.frame(average=apply(pcr, 2, mean), 
+                          standard_deviation=apply(pcr, 2, sd),
+                          genes=colnames(pcr))
+```
+
+And now we can plot!
+
+```{r, eval=TRUE}
+ggplot(pcr_summary, aes(x=genes, y=average, fill=genes)) + 
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin=average-standard_deviation, ymax=average+standard_deviation), colour="black", width=.1) 
+```
         
 ## Histograms
 
@@ -362,11 +391,11 @@ grid.arrange(pscat, pbox_fill, pbar, phist, nrow=2, ncol=2)
 grid.arrange(pscat, pbox_fill, pbar, phist, nrow=1, ncol=4)
 ```
 
-**WARNING !!**: ggsave and grid.arrange are not directly compatible. To save a file organized by grid.arrange, use the regular functions (pdf, png etc.)
+Combine ggsave and grid.arrange:
 
 ```{r, eval=FALSE}
-jpeg("grid_arrange_plots.jpg")
-grid.arrange(pscat, pbox_fill, pbar, phist, nrow=1, ncol=4)
-dev.off()
+myplots <- grid.arrange(pscat, pbox_fill, pbar, phist, nrow=1, ncol=4)
+
+ggsave(filename="mygridarrange.png", plot=myplots))
 ```
 

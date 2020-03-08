@@ -40,6 +40,7 @@ download.file("https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/ma
 **3- Read file into object "project1" (remember the input/output tutorial!)**
 
 About this file:
+
 * It is comma separated (csv format).
 * The first row is the header.
 * Take the row names from the first column.
@@ -72,11 +73,15 @@ ggplot(data=project1, mapping=aes(x=sampleB, y=sampleH)) +
 
 </details>
 
-**5- Add a column to the data frame "project1" (call this column "expr_limits"), that will be filled the following way: if the expression of a gene is > 13 in both sampleB and sampleH, set to the value in "expr_limits" to "high"; if the expression of a gene is < 6 in both sampleB and sampleH, set it to "low"; if different, set it to "normal".**
+**5- Add a column to the data frame "project1" (call this column "expr_limits"), that will be filled the following way:**
+
+* if the expression of a gene is > 13 in both sampleB and sampleH, set to the value in "expr_limits" to "high"
+* if the expression of a gene is < 6 in both sampleB and sampleH, set it to "low"
+* if different, set it to "normal".
 
 <details>
 <summary>
-correction
+correction 
 </summary>
 
 ```{r}
@@ -86,6 +91,21 @@ project1$expr_limits <- "normal"
 project1$expr_limits[project1$sampleB > 13 & project1$sampleH > 13] <- "high"
 # "low" if project1$sampleB < 6 and project1$sampleH < 6
 project1$expr_limits[project1$sampleB < 6 & project1$sampleH < 6] <- "low"
+
+## more complicated version, using a for loop and if statement
+# initialize column "expr_limits" with "normal"
+project1$expr_limits <- "normal"
+# loop around each row of "project1"
+for(i in 1:nrow(project1)){
+  # create an object that contains only row "i" (the row will be different at every iteration)
+  rowi <- project1[i,]
+  # test values in rowi: assign expr_limits accordingly
+  if(rowi$sampleB > 13 & rowi$sampleH > 13){
+    project1$expr_limits[i] <- "high"
+  }else if(rowi$sampleB < 6 & rowi$sampleH < 6){
+    project1$expr_limits[i] <- "low"
+  }
+}
 ```
 
 </details>
