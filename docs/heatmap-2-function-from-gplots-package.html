@@ -299,17 +299,13 @@ The <strong>heatmap.2</strong> function from the <strong>gplots</strong> package
 <div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb394-1" data-line-number="1"><span class="co"># install gplots package</span></a>
 <a class="sourceLine" id="cb394-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;gplots&quot;</span>)</a></code></pre></div>
 <div class="sourceCode" id="cb395"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb395-1" data-line-number="1"><span class="co"># load package</span></a>
-<a class="sourceLine" id="cb395-2" data-line-number="2"><span class="kw">library</span>(<span class="st">&quot;gplots&quot;</span>)</a></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;gplots&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:stats&#39;:
-## 
-##     lowess</code></pre>
-<div class="sourceCode" id="cb398"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb398-1" data-line-number="1"><span class="co"># make matrix</span></a>
-<a class="sourceLine" id="cb398-2" data-line-number="2">mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">1200</span>), <span class="dt">ncol=</span><span class="dv">6</span>)</a>
-<a class="sourceLine" id="cb398-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb398-4" data-line-number="4"><span class="co"># heatmap with the defaults parameters</span></a>
-<a class="sourceLine" id="cb398-5" data-line-number="5"><span class="kw">heatmap.2</span>(<span class="dt">x=</span>mat)</a></code></pre></div>
+<a class="sourceLine" id="cb395-2" data-line-number="2"><span class="kw">library</span>(<span class="st">&quot;gplots&quot;</span>)</a>
+<a class="sourceLine" id="cb395-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb395-4" data-line-number="4"><span class="co"># make matrix</span></a>
+<a class="sourceLine" id="cb395-5" data-line-number="5">mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">1200</span>), <span class="dt">ncol=</span><span class="dv">6</span>)</a>
+<a class="sourceLine" id="cb395-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb395-7" data-line-number="7"><span class="co"># heatmap with the defaults parameters</span></a>
+<a class="sourceLine" id="cb395-8" data-line-number="8"><span class="kw">heatmap.2</span>(<span class="dt">x=</span>mat)</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-300-1.png" width="672" />
 <img src="images/plots/heatmap1.png" width="500"/></p>
 <ul>
@@ -326,17 +322,17 @@ The <strong>heatmap.2</strong> function from the <strong>gplots</strong> package
 <li>xlab, ylab: x-axis or y-axis label</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb399"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb399-1" data-line-number="1"><span class="kw">heatmap.2</span>(<span class="dt">x=</span>mat, </a>
-<a class="sourceLine" id="cb399-2" data-line-number="2">    <span class="dt">Colv=</span><span class="ot">FALSE</span>, </a>
-<a class="sourceLine" id="cb399-3" data-line-number="3">    <span class="dt">dendrogram=</span><span class="st">&quot;row&quot;</span>,</a>
-<a class="sourceLine" id="cb399-4" data-line-number="4">    <span class="dt">scale=</span><span class="st">&quot;row&quot;</span>,</a>
-<a class="sourceLine" id="cb399-5" data-line-number="5">    <span class="dt">col=</span><span class="st">&quot;bluered&quot;</span>,</a>
-<a class="sourceLine" id="cb399-6" data-line-number="6">    <span class="dt">trace=</span><span class="st">&quot;none&quot;</span>,</a>
-<a class="sourceLine" id="cb399-7" data-line-number="7">    <span class="dt">ColSideColors=</span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;green&quot;</span>,<span class="st">&quot;orange&quot;</span>), <span class="dt">each=</span><span class="dv">3</span>),</a>
-<a class="sourceLine" id="cb399-8" data-line-number="8">    <span class="dt">labRow=</span><span class="ot">FALSE</span>,</a>
-<a class="sourceLine" id="cb399-9" data-line-number="9">    <span class="dt">main=</span><span class="st">&quot;my heatmap&quot;</span>,</a>
-<a class="sourceLine" id="cb399-10" data-line-number="10">    <span class="dt">ylab=</span><span class="st">&quot;Genes&quot;</span>,</a>
-<a class="sourceLine" id="cb399-11" data-line-number="11">    <span class="dt">xlab=</span><span class="st">&quot;Samples&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb396-1" data-line-number="1"><span class="kw">heatmap.2</span>(<span class="dt">x=</span>mat, </a>
+<a class="sourceLine" id="cb396-2" data-line-number="2">    <span class="dt">Colv=</span><span class="ot">FALSE</span>, </a>
+<a class="sourceLine" id="cb396-3" data-line-number="3">    <span class="dt">dendrogram=</span><span class="st">&quot;row&quot;</span>,</a>
+<a class="sourceLine" id="cb396-4" data-line-number="4">    <span class="dt">scale=</span><span class="st">&quot;row&quot;</span>,</a>
+<a class="sourceLine" id="cb396-5" data-line-number="5">    <span class="dt">col=</span><span class="st">&quot;bluered&quot;</span>,</a>
+<a class="sourceLine" id="cb396-6" data-line-number="6">    <span class="dt">trace=</span><span class="st">&quot;none&quot;</span>,</a>
+<a class="sourceLine" id="cb396-7" data-line-number="7">    <span class="dt">ColSideColors=</span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;green&quot;</span>,<span class="st">&quot;orange&quot;</span>), <span class="dt">each=</span><span class="dv">3</span>),</a>
+<a class="sourceLine" id="cb396-8" data-line-number="8">    <span class="dt">labRow=</span><span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb396-9" data-line-number="9">    <span class="dt">main=</span><span class="st">&quot;my heatmap&quot;</span>,</a>
+<a class="sourceLine" id="cb396-10" data-line-number="10">    <span class="dt">ylab=</span><span class="st">&quot;Genes&quot;</span>,</a>
+<a class="sourceLine" id="cb396-11" data-line-number="11">    <span class="dt">xlab=</span><span class="st">&quot;Samples&quot;</span>)</a></code></pre></div>
 <p><img src="images/plots/heatmap2.png" width="500"/></p>
 </div>
             </section>

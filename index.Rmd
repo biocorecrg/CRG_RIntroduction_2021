@@ -50,4 +50,9 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 
 All material is available from this page (https://biocorecrg.github.io/CRG_RIntroduction/) and will be regularly updated.
 <br>
-You can download the "raw" material from the corresponding [github page](https://github.com/biocorecrg/CRG_RIntroduction/): download all as a **zip** archive, then keep only the "docs" folder: open the index.html file in a web browser.
+
+If you want to get the latest version locally, you can:
+
+* download and uncompress the [zip archive](https://github.com/biocorecrg/CRG_RIntroduction/archive/master.zip)
+* keep only the "docs" and " images" folders.
+* open the "index.html" file in a web browser.

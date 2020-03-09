@@ -294,21 +294,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="about-themes" class="section level2">
 <h2><span class="header-section-number">19.7</span> About themes</h2>
 <p>You can change the default global <strong>theme</strong> (background color, grid lines etc. all non-data display):</p>
-<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb442-1" data-line-number="1"><span class="co"># go back to a previous plot</span></a>
-<a class="sourceLine" id="cb442-2" data-line-number="2">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a>
-<a class="sourceLine" id="cb442-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb442-4" data-line-number="4"><span class="co"># Try different themes</span></a>
-<a class="sourceLine" id="cb442-5" data-line-number="5">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_bw</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb439"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb439-1" data-line-number="1"><span class="co"># go back to a previous plot</span></a>
+<a class="sourceLine" id="cb439-2" data-line-number="2">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a>
+<a class="sourceLine" id="cb439-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb439-4" data-line-number="4"><span class="co"># Try different themes</span></a>
+<a class="sourceLine" id="cb439-5" data-line-number="5">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_bw</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-336-1.png" width="672" /></p>
-<div class="sourceCode" id="cb443"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb443-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb440-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-336-2.png" width="672" /></p>
-<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb444-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_void</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb441"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb441-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_void</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-336-3.png" width="672" /></p>
-<div class="sourceCode" id="cb445"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb445-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_grey</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb442-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_grey</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-336-4.png" width="672" /></p>
-<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb446-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_dark</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb443"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb443-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_dark</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-336-5.png" width="672" /></p>
-<div class="sourceCode" id="cb447"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb447-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_light</span>() </a></code></pre></div>
+<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb444-1" data-line-number="1">p <span class="op">+</span><span class="st"> </span><span class="kw">theme_light</span>() </a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-336-6.png" width="672" /></p>
 </div>
             </section>
