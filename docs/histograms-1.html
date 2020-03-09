@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-03-08" />
+<meta name="date" content="2020-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -294,21 +294,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="histograms-1" class="section level2">
 <h2><span class="header-section-number">19.6</span> Histograms</h2>
 <p>Simple histogram on one sample (using the df2 data frame):</p>
-<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb431-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df1, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb434"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb434-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df1, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-332-1.png" width="672" /></p>
 <p>Histogram on more samples (using df_long):</p>
-<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb433-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb436-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-333-1.png" width="672" /></p>
 <p>Split the data per sample (“variable” column that represents here the samples):</p>
-<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb435-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">fill=</span>variable)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb438-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">fill=</span>variable)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-334-1.png" width="672" /></p>
 <p>By default, the histograms are <strong>stacked</strong>: change to position <strong>dodge</strong> (side by side):</p>
-<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb437-1" data-line-number="1">phist &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">fill=</span>variable)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb437-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">position=</span><span class="st">&#39;dodge&#39;</span>)</a>
-<a class="sourceLine" id="cb437-3" data-line-number="3">phist</a></code></pre></div>
+<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb440-1" data-line-number="1">phist &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">fill=</span>variable)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb440-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">position=</span><span class="st">&#39;dodge&#39;</span>)</a>
+<a class="sourceLine" id="cb440-3" data-line-number="3">phist</a></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-335-1.png" width="672" /></p>
 </div>

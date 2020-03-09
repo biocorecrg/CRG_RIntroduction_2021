@@ -45,3 +45,9 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 
 <h3> Learning objectives </h3>
 <a href="https://biocorecrg.github.io/CRG_RIntroduction/images/learningobjectives.png"><img src="images/learningobjectives.png"  width="600"/></a>
+
+<h3>Material</h3>
+
+All material is available from this page (https://biocorecrg.github.io/CRG_RIntroduction/) and will be regularly updated.
+<br>
+You can download the "raw" material from the corresponding [github page](https://github.com/biocorecrg/CRG_RIntroduction/): download all as a **zip** archive, then keep only the "docs" folder: open the index.html file in a web browser.

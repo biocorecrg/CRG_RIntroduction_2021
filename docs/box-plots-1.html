@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-03-08" />
+<meta name="date" content="2020-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,12 +296,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Simple boxplot showing the data distribution of sample 1:</li>
 </ul>
-<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb413-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span><span class="st">&quot;&quot;</span>, <span class="dt">y=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb416-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span><span class="st">&quot;&quot;</span>, <span class="dt">y=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-318-1.png" width="672" /></p>
 <ul>
 <li>Split the data into 2 boxes:</li>
 </ul>
-<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb414-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>grouping, <span class="dt">y=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb417-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data=</span>df2, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>grouping, <span class="dt">y=</span>sample1)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-319-1.png" width="672" /></p>
 <ul>
 <li>What if you want to plot both sample1 and sample2 ?<br>
@@ -311,29 +311,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>What is the <strong>long</strong> format ?</p>
 <p><img src="images/plots/wide2long.png" width="800"></p>
 <p>Plotting both sample1 and sample2:</p>
-<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb415-1" data-line-number="1"><span class="co"># install package reshape2</span></a>
-<a class="sourceLine" id="cb415-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;reshape2&quot;</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb416-1" data-line-number="1"><span class="co"># load package</span></a>
-<a class="sourceLine" id="cb416-2" data-line-number="2"><span class="kw">library</span>(<span class="st">&quot;reshape2&quot;</span>)</a>
-<a class="sourceLine" id="cb416-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb416-4" data-line-number="4"><span class="co"># convert to long format</span></a>
-<a class="sourceLine" id="cb416-5" data-line-number="5">df_long &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="dt">data=</span>df2)</a>
-<a class="sourceLine" id="cb416-6" data-line-number="6">    <span class="co"># all numeric values are organized into only one column: value</span></a>
-<a class="sourceLine" id="cb416-7" data-line-number="7"><span class="co"># plot:</span></a>
-<a class="sourceLine" id="cb416-8" data-line-number="8"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb416-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb418-1" data-line-number="1"><span class="co"># install package reshape2</span></a>
+<a class="sourceLine" id="cb418-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;reshape2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb419"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb419-1" data-line-number="1"><span class="co"># load package</span></a>
+<a class="sourceLine" id="cb419-2" data-line-number="2"><span class="kw">library</span>(<span class="st">&quot;reshape2&quot;</span>)</a>
+<a class="sourceLine" id="cb419-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb419-4" data-line-number="4"><span class="co"># convert to long format</span></a>
+<a class="sourceLine" id="cb419-5" data-line-number="5">df_long &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="dt">data=</span>df2)</a>
+<a class="sourceLine" id="cb419-6" data-line-number="6">    <span class="co"># all numeric values are organized into only one column: value</span></a>
+<a class="sourceLine" id="cb419-7" data-line-number="7"><span class="co"># plot:</span></a>
+<a class="sourceLine" id="cb419-8" data-line-number="8"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb419-9" data-line-number="9"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-321-1.png" width="672" /></p>
 <ul>
 <li>What if now you also want to see the distribution of “yes” and “no” in both sample1 and sample2 ?<br>
 <em>Integrate a parameter to the <strong>aes()</strong></em></li>
 </ul>
-<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb417-1" data-line-number="1"><span class="co"># Either color (color of the box border)</span></a>
-<a class="sourceLine" id="cb417-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">color=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb417-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb420-1" data-line-number="1"><span class="co"># Either color (color of the box border)</span></a>
+<a class="sourceLine" id="cb420-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">color=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb420-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-322-1.png" width="672" /></p>
-<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb418-1" data-line-number="1"><span class="co"># Or fill (color inside the box)</span></a>
-<a class="sourceLine" id="cb418-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb418-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb421-1" data-line-number="1"><span class="co"># Or fill (color inside the box)</span></a>
+<a class="sourceLine" id="cb421-2" data-line-number="2"><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb421-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-323-1.png" width="672" /></p>
 <p>Do you want to change the default colors?<br></p>
 <ul>
@@ -343,16 +343,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>scale_fill_manual()</strong> for the boxes color (inside)</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb419"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb419-1" data-line-number="1">pbox_fill &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb419-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb419-3" data-line-number="3"><span class="st">    </span><span class="kw">scale_fill_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</a>
-<a class="sourceLine" id="cb419-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb419-5" data-line-number="5">pbox_fill</a></code></pre></div>
+<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb422-1" data-line-number="1">pbox_fill &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">fill=</span>grouping)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb422-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb422-3" data-line-number="3"><span class="st">    </span><span class="kw">scale_fill_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</a>
+<a class="sourceLine" id="cb422-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb422-5" data-line-number="5">pbox_fill</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-324-1.png" width="672" /></p>
-<div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb420-1" data-line-number="1">pbox_col &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">color=</span>grouping)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb420-2" data-line-number="2"><span class="st">        </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb420-3" data-line-number="3"><span class="st">        </span><span class="kw">scale_color_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</a>
-<a class="sourceLine" id="cb420-4" data-line-number="4">pbox_col</a></code></pre></div>
+<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb423-1" data-line-number="1">pbox_col &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df_long, <span class="dt">mapping=</span><span class="kw">aes</span>(<span class="dt">x=</span>variable, <span class="dt">y=</span>value, <span class="dt">color=</span>grouping)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb423-2" data-line-number="2"><span class="st">        </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb423-3" data-line-number="3"><span class="st">        </span><span class="kw">scale_color_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</a>
+<a class="sourceLine" id="cb423-4" data-line-number="4">pbox_col</a></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-324-2.png" width="672" /></p>
 </div>
             </section>
