@@ -1,0 +1,5906 @@
+--- 
+title: "Introduction to R (2021)"
+author: "Sarah Bonnin"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+---
+
+# Welcome
+
+<h3> Dates, time & location </h3>
+
+* Dates (2021):
+	* Module 1: March 15,16
+	  * Introduction to R and RStudio
+	  * Paths and directories
+	  * R basics
+	  * Functions in R
+	  * R scripts
+	  * Data types & data structures
+	* Module 2: March 22, 23
+	  * Input / output
+	  * Library and packages
+	  * Regular expressions
+	  * Conditional statement
+	  * Repetitive execution
+	* Module 3: April 12, 13:
+	  * basic plotting
+	  * plotting with ggplot2
+* Time:
+	* 10:00-13:00 <br>
+
+* Location:
+	* Online (Zoom)
+
+<h3> Instructors </h3>
+ 
+[Sarah Bonnin](mailto:sarah.bonnin@crg.eu)<br>
+[Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu)<br>
+from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office , 4th floor hospital side)
+
+<h3> Learning objectives </h3>
+<a href="https://biocorecrg.github.io/CRG_RIntroduction/images/learningobjectives.png"><img src="images/learningobjectives.png"  width="600"/></a>
+
+<h3>Material</h3>
+
+All material is available from this page (https://biocorecrg.github.io/CRG_RIntroduction_2021/) and will be regularly updated.
+<br>
+
+If you want to get the latest version locally, you can:
+
+* download and uncompress the [zip archive](https://github.com/biocorecrg/CRG_RIntroduction_2021/archive/master.zip)
+* keep only the "docs" and " images" folders.
+* open the "index.html" file in a web browser.
+
+<!--chapter:end:index.Rmd-->
+
+# What is R ?
+
+* Programming language and environment for **data manipulation**, **statistical computing**, and **graphical display**.
+
+* Implementation of the S programming language
+
+* Created at the University of Auckland, New Zealand:
+	+ Initial version released in 1995
+	+ Stable version released in 2000
+* **Free and open source !**
+	+ https://www.r-project.org/
+
+* Interactive, flexible
+
+* Very active community of developers and users!
+	+ Many resources and forums available
+
+* Access through a command-line interpreter:
+![](images/rterminal.png "R command line")
+
+
+
+<!--chapter:end:Rintro.Rmd-->
+
+# What is RStudio ?
+
+* Free and open source IDE (Integrated Development Environment) for R
+
+* Available for Windows, Mac OS and LINUX
+
+<img src="images/rstudio_logo.png" alt="rstudio logo" width="250"/>
+
+## RStudio access
+
+* [RStudio Desktop installation](https://www.rstudio.com/products/rstudio/download)
+
+* [RStudio access from the CRG server](http://rstudio.linux.crg.es/)
+	+ Access with CRG credentials
+	+ For those who don't have access to the CRG server, use the guest accounts.
+
+![](images/rstudio_login.png "RStudio login")
+
+## RStudio interface
+
+* 4 panels:
+	+ top-left: scripts and files
+	+ bottom-left: R console
+	+ top-right: objects, history and environment
+	+ bottom-right: tree of folders, graph window, packages, help window, viewer
+
+<a href="https://sbcrg.github.io/CRG_RIntroduction/images/rstudio_interface.png"><img src="images/rstudio_interface.png" alt="rstudio logo" width="1000"/></a>
+
+## Setting up the folder structure for the course
+
+Rcourse<br>
+  |-Module1<br>
+  |-Module2<br>
+  |-Module3<br>
+
+![](images/rstudio_folder.png "RStudio create folder")
+
+
+### Note on files and folders names
+
+As you choose names for files and folders, a few rules will make your life easier:
+
+* Do not use **spaces**.
+* Do not use **accents** (replace **é** by **e**).
+* Avoid special characters, although**underscores** are a safe option.
+
+
+
+
+<!--chapter:end:rstudio.Rmd-->
+
+# Paths and directories
+
+* The path of a file/directory is its **location/address** in the file system.
+
+* Your home directory is the one that hosts your personal folder:
+	+ for CRG users: **/nfs/users/[yourgroup]/[yourusername]**
+
+## Tree of directories
+
+<a href="https://sbcrg.github.io/CRG_RIntroduction/images/tree_directories.png"><img src="images/tree_directories.png" alt="rstudio logo" width="1000"/></a>
+<br>
+<font size="12"> <b>~</b></font>: shortcut to the home directory
+<br>
+<font size="12"> <b>.</b></font>: current directory
+<br>
+<font size="12"> <b>..</b></font>: one directory up the tree
+
+
+## Navigate the tree of directory with the R console
+
+* Get the path of the current directory (know where you are working at the moment) with <b>getwd</b> (get working directory):
+```{r, eval=FALSE}	
+getwd()
+```
+
+* Change working directory with **setwd** (set working directory)<br>
+Go to a directory giving the absolute path: 
+```{r, eval=FALSE}
+setwd("~/Rcourse")
+```
+Go to a directory giving the relative path:
+```{r, eval=FALSE}
+setwd("Module1")
+```
+You are now in: "~/Rcourse/Module1"
+<br>
+Move one directory "up" the tree:
+```{r, eval=FALSE} 
+setwd("..")
+```
+You are now in: "~/Rcourse"
+
+
+
+<!--chapter:end:pathdirectories.Rmd-->
+
+# R basics
+
+## Arithmetic operators
+
+| Operator  | Function      |
+|:--------: |:-------------:|
+|     +     | addition      |
+|     -     | subtraction   |
+|     /     | division      |
+|     *     | multiplication|
+|  ^ or **  | exponential   |
+
+In the R console:
+```{r}
+10 - 2
+```
+Type **Enter** for R to interpret the command.
+
+## Simple calculations
+
+Given the following table:
+
+| type of RNA | Total   |
+| :---------: |:-------:|
+| mRNA        | 329     |
+| miRNA       | 45      |
+| snoRNA      | 12      |
+| lncRNA      | 28      |
+
+
+Calculate the total number of RNAs reported in the table:
+```{r}
+329 + 45 + 12 + 28
+```
+What is the percentage of miRNA?
+```{r}
+( 45 / 414 ) * 100
+```
+
+## Objects in R
+
+Everything that stores any kind of data in R is an **object**:
+<br>
+<img src="images/objects_box.png" alt="rstudio logo" width="300" align="middle"/>
+
+## Assignment operators
+
++ **<-** or **=**
++ Essentially the same but, to avoid confusions:
+  + Use **<-** for assignments
+  + Keep **=** for functions arguments
+
+## Assigning data to an object
+
+<img src="images/rsyntax1.png" alt="rstudio logo" width="350"/>
+
+* Assigning a value to the object **B**:
+B <- 10
+
+* Reassigning: modifying the content of an object:
+```{r, eval=FALSE}
+B + 10
+```
+
+<span style="color:red">**B unchanged !!**</span><br>
+```{r, eval=FALSE}
+B <- B + 10
+```
+
+<span style="color:red">**B changed !!**</span><br>
+
+* You can see the objects you created in the upper right panel in RStudio: the environment.
+
+## Names of objects
+
+Naming objects in R is quite flexible. However, there are a few rules and good practices to consider:
+
+* Object names are **case sensitive**: object **MyObject** is not the same as **myobject**
+* They can contains both **numbers** or **letters** but should **START** with a letter, e.g. *2myobject* is not a valid object name.
+* You can use **underscores** and points. Other **special characters** should be avoided.
+* Avoid using function names as object names.
+
+
+<!--chapter:end:Rbasics.Rmd-->
+
+# Functions
+
+In programming, a function is a section of a program that **performs a specific task**.
+
+For example, the function **getwd** is used as:
+```{r, eval=FALSE}
+getwd()
+```
+and has the task of outputting the current working directory.
+
+You can recognize a function with the **round brackets**: function**()**
+ 
+A function can also take *arguments/parameters*
+```{r, eval=FALSE}
+setwd(dir="Rcourse")
+```
+**setwd** changes the current working directory and takes one argument **dir**. 
+
+<img src="images/func_arg1.png"  width="250"/>
+
+* Assign the output of a function to an object:
+
+<img src="images/func_arg2.png"  width="250"/>
+
+* Getting help: <br>
+
+From the console:
+
+```{r}
+help(getwd)
+?getwd
+```
+
+From the RStudio bottom-right panel:<br>
+
+<img src="images/func_help.png"  width="500"/>
+
+* The help pages show:
+	+ required/optional argument(s), if any.
+	+ default values for each argument(s), if any.
+	+ examples.
+	+ detailed description.
+
+* Get the example of a function:
+```{r, eval=FALSE}
+example(mean)
+```
+
+* Need more help? Ask your favourite **Web search engine !**
+
+* **Note on arguments**
+
+The help page shows the compulsory arguments in the **Usage** section: in the help page of getwd and setwd (above), you can see that getwd *doesn't take any compulsory argument*, and setwd takes one compulsory argument that is called dir.
+<br>
+
+Compulsory arguments can be given **with their names**: in such case you don't need to respect a specific order, or **without their names**, in which case you have to respect the order specified in the help page!<br>
+
+For example, the **rep.int** function (a variant of the rep function) takes 2 arguments (see in help page): **x** and **times**, in that order:
+
+```{r}
+# use arguments with their names:
+rep.int(x=1, times=3)
+# use arguments with their names without respecting the order:
+rep.int(times=3, x=1)
+# use arguments without their names but respecting the order:
+rep.int(1, 3)
+# use arguments without their names without respecting the order:
+rep.int(3, 1)
+# It works, but is not giving the expected output!
+```
+
+
+<!--chapter:end:functionbasics.Rmd-->
+
+# R scripts
+
+## Create and save a script
+
+* Store commands in a .R/.r script. Create and save a script in RStudio with: 
+  + File -> New File -> R Script
+  + Once the file has opened: File -> Save 
+  + Specify a name: ***the extension .R is automatically added***
+  
+  <img src="images/rscript_rstudio.png" width="500"/>
+<br>
+* Execute commands or blocks of commands from RStudio:
+
+<img src="images/rscript_rstudio_cmd.png" width="500"/>
+
+## R syntax
+
+* Case sensitive: **g** is not **G**
+* Comment lines start with **#**
+* Commands are separated by a **new line** or **;**
+```{r, eval=FALSE}
+# This is a comment: it will not be interpreted
+a <- 10
+A + 1
+# Will throw an error because A and a are different
+```
+<img src="images/syntax_error.png" width="500"/>
+
+## RStudio tips in the console
+
+Ctrl + Enter: execute the current line.<br>
+
+<img src="images/arrow_up.png" width="40"/> Upper arrow: goes to the commands previously typed.
+Ctrl + cmd + <img src="images/arrow_up.png" width="40"/> : Browse command history.
+
+<img src="images/tab_key.png" width="50"/> Type a letter in the console + "tab": R Studio proposes the different functions or object stored which start with that letter. <br> for example, type **get + "tab"**:
+
+<img src="images/tab_functions.png" width="350"/>
+
+<!--chapter:end:Rscripts.Rmd-->
+
+## Exercice 1. Getting started ~ 15 minutes
+
+Create the script "exercise1.R" (in R Studio: File -> New File) and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 1 in that  script.
+<br>Remember you can comment the code using #.
+
+**1- From the console, go to Rcourse/Module1.
+First check where you currently are with getwd(); 
+then go to Rcourse/Module1 with setwd()**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=FALSE}
+getwd()
+setwd("Rcourse/Module1")
+setwd("~/Rcourse/Module1")
+```
+
+</details>
+
+
+**2- Using R as a calculator, calculate the square root of 654 (don't know the function? Search the internet!).**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+sqrt(654)
+```
+
+</details>
+
+**3- Using R as a calculator, calculate the percentage of males and females currently present in the classroom.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# 6 males out of 19 students:
+(6/19) * 100
+# 13 females out of 19 students
+(13/19) * 100
+```
+
+</details>
+
+**4- Create a new object "myobject" with value 60.
+Show "myobject" in the console.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+myobject <- 60
+myobject
+```
+
+</details>
+
+**5- Reassign myobject with value 87.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+myobject <- 87
+```
+
+</details>
+
+**6- Subtract 1 to myobject. Reassign.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+myobject <- myobject - 1
+```
+
+</details>
+
+**7- Create a new object "mysqrt" that will store the square root of "myobject".**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mysqrt <- sqrt(myobject)
+```
+
+</details>
+
+**8- Create a new object "mydiv" that will store the result of "myobject" divided by "mysqrt".**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mydiv <- myobject / mysqrt
+```
+
+</details>
+
+
+<!--chapter:end:exercise1.Rmd-->
+
+# Data types
+
+Each object has a data type:
+  
+* Numeric (number - integer or double)
+* Character (text)
+* Logical (TRUE / FALSE)
+
+## Checking data types
+
+Number:
+```{r}
+a <- 10
+mode(a)
+typeof(a)
+str(a)
+```
+
+Text:
+```{r}
+b <- "word"
+mode(b)
+typeof(b)
+str(b)
+```
+
+
+<!--chapter:end:datatypes.Rmd-->
+
+# Data structures
+
+The main data structures are:
+
+* Vector
+* Factor
+* Matrix
+* Data frame
+
+
+<!--chapter:end:datastructure.Rmd-->
+
+## Vectors
+
+A vector is a sequence of data elements from the **same type**.
+
+|||||
+| ------ | ----- | ----- | ----- | 
+| 329 | 45 | 12 | 28 |
+
+
+### Creating a vector
+
+* Values are assigned to a vector using the **c** command (**c**ombining elements).
+
+```{r}
+vector1 <- c(329, 45, 12, 28)
+```
+
+You can create an empty vector with:
+
+```{r}
+vecempty <- vector()
+```
+
+* Create a sequence of consecutive numbers:
+
+```{r}
+vecnum <- 10:16
+# same as:
+vecnum <- c(10, 11, 12, 13, 14, 15, 16)
+# both ends (10 and 16) are included
+```
+
+* Character vectors:  Each element is entered between (single or double) quotes.
+
+|||||
+| ------ | ----- | ----- | ----- | 
+| mRNA | miRNA | snoRNA | lncRNA |
+
+```{r}
+mynames <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
+```
+
+### Vector manipulation
+
+* A vector can be **named**: each element of the vector can be assigned a name (number or character)
+
+```{r}
+names(vector1) <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
+# use an object which already contains a vector
+names(vector1) <- mynames
+```
+
+* Get the length (number of elements) of a vector
+
+```{r}
+length(vector1)
+```
+
+* Extracting elements from vector **a**
+	+ extract elements using their position (index) in the vector:
+	<img src="images/vector_indices.png" width="500">
+
+	```{r}
+	vecnum <- 10:16
+	vecnum[1]
+	vecnum[c(1,3)]
+	vecnum[2:4]
+	```
+	+ extract elements using their names:
+	<img src="images/vector_indices_names.png" width="500">
+
+	```{r}
+	vector1["mRNA"]
+	vector1[c("miRNA", "lncRNA")]            
+	```
+
+* Reassigning a vector's element
+
+```{r}
+vector1[2] <- 31
+vector1["miRNA"] <- 31
+```
+
+* Removing a vector's element
+
+```{r}
+vector1 <- vector1[-3]
+```
+
+* __Show__ versus __change__
+
+x[-2] <img src="images/red_triangle.jpg" width="40"> x <span style="color:red">unchanged</span> !
+
+x <- x[-2] <img src="images/red_triangle.jpg" width="40"> x <span style="color:red">reassigned</span> !
+
+### Combining vectors
+
+* From 2 vectors **a** and **b** you can create a vector **d**
+
+```{r}
+v1 <- 2:5
+v2 <- 4:6
+v3 <- c(v1, v2)
+```
+
+ > The elements of **v2** are added after the elements of **v1**
+
+* Likewise, you can add elements at the end of a vector
+
+```{r}
+v3 <- c(v3, 19)
+```
+
+
+### Numeric vector manipulation
+
+<h4>Logical operators</h4>
+
+| Operator  | Description   |
+|:--------: |:-------------:|
+|     <     | less than    |
+|     <=    | less than or equal to   |
+|     >     | greater than  |
+|     >=    | greater than or equal to|
+|     ==    | exactly equal to   |
+|     !=    | not equal to |
+|    !x     | not x |
+|   x \| y | x OR y |
+|   x & y | x AND y |
+
+* Which elements of **a** are equal to 2?
+```{r}
+a <- 1:5
+a == 2
+```
+<img src="images/vector_equal.png" width="450">
+
+* Which elements of **a** are superior to 2?
+```{r}
+a <- 1:5
+a > 2
+```
+<img src="images/vector_super.png" width="450">
+
+* Extract elements of a vector that comply with a condition:
+```{r}
+a <- 1:5
+a >= 2
+a[a >= 2]
+```
+<img src="images/vector_subvector.png" width="500">
+
+#### Operations on vectors
+
+* Adding 2 to a vector adds 2 to **each element** of the vector:
+
+```{r}
+a <- 1:5
+a + 2
+```
+
+<img src="images/vector_addition.png" width="350">
+
+> Same goes for subtractions, multiplications and divisions...
+
+* Multiplying a vector by another vector of equal length
+
+```{r}
+a <- c(2, 4, 6)
+b <- c(2, 3, 0)
+a * b
+```
+
+<img src="images/vector_multiply.png" width="220">
+
+* Multiplying a vector by another **shorter** vector
+
+```{r}
+a <- c(2, 4, 6, 3, 1)
+b <- c(2, 3, 0)
+a * b
+```
+
+<img src="images/vector_multi_recycle.png" width="300">
+
+
+ > Vector **a** is "recycled" !
+
+* Summary statistics
+
+| Function  | Description   |
+|:--------: |:-------------:|
+|     mean(x)  | mean / average |
+|    median(x) | median |
+|     min(x)   | minimum |
+|     max(x)   | maximum |
+|     var(x)   | variance |
+| summary(x) | mean, median, min, max, quartiles |
+
+```{r}
+a <- c(1, 3, 12, 45, 3, 2)
+summary(a)
+```
+
+#### Comparing vectors
+
+* The **%in%** operator
+
+Which elements of **a** are also found in **b** ?
+
+```{r}
+a <- 2:6
+b <- 4:10
+a %in% b
+```
+
+<img src="images/vector_in.png" width="350">
+
+Retrieve actual elements of **a** that are found in **b**:
+
+```{r}
+a <- 2:6
+b <- 4:10
+a[a %in% b]
+```
+
+### Character vector manipulation
+
+Character vectors are manipulated similarly to numeric ones.
+
+* The **%in%** operator:
+
+```{r}
+k <- c("mRNA", "miRNA", "snoRNA", "RNA", "lincRNA")
+p <- c("mRNA","lincRNA", "tRNA", "miRNA")
+k %in% p
+k[k %in% p]
+```
+
+* Select elements from vector **m** that are not *exon*
+
+```{r}
+m <- c("exon", "intron", "exon")
+m != "exon"
+m[m != "exon"]
+```
+
+
+
+<!--chapter:end:vector.Rmd-->
+
+## Exercise 2. Numeric vector manipulation
+
+### Exercise 2a.
+
+Create the script "exercise2.R" and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 2 in that script.
+<br>Remember you can comment the code using #.
+
+**1- Go to Rcourse/Module1
+First check where you currently are with getwd();
+then go to Rcourse/Module1 with setwd()**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+getwd()
+setwd("Rcourse/Module1")
+setwd("~/Rcourse/Module1")
+```
+
+</details>
+
+
+**2- Create a numeric vector "y" which contains the numbers from 2 to 11, both included.** 
+<br>Show y in the console.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+y <- c(2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+# same as
+y <- 2:11
+# show in console:
+y
+```
+
+</details>
+
+**3- How many elements are in y? I.e what is the length of vector y ?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+length(y)
+```
+
+</details>
+
+**4- Show the 2nd element of y.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+y[2]
+```
+
+</details>
+
+**5- Show the 3rd and the 6th elements of y.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+y[c(3,6)]
+```
+
+</details>
+
+**6- Remove the 4th element of y: reassign. What is now the length of y ?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# remove 4th element and reassign
+y <- y[-4]
+# length of y
+length(y)
+```
+
+</details>
+
+**7- Show all elements of y that are inferior to 7.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# which elements of y are less than 7:
+y < 7
+# show those elements 
+y[ y < 7 ]
+```
+
+</details>
+
+**8- Show all elements of y that are superior or equal to 4 and inferior to 9.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+y[ y >= 4 & y < 9 ]
+```
+
+</details>
+
+
+**9- Create the vector x of 1000 random numbers from the normal distribution:**
+<br>***First read the help page of the rnorm() function.***
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# help page for the rnorm function
+help(rnorm)
+# produce a vector of 1000 random numbers from the normal distribution
+x <- rnorm(1000)
+```
+
+</details>
+
+**10. What are the mean, median, minimum and maximum values of x?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mean(x); median(x); min(x); max(x)
+```
+
+</details>
+
+**11- Run the summary() function on x. <br>What additional information do you obtain ?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+summary(x)
+```
+
+</details>
+
+**12- Create vector y2 as:**<br>
+
+```{r}
+y2 <- c(1, 11, 5, 62,  18, 2, 8)
+```
+
+**13- Which elements of y2 are also present in y ?<br>Note: remember the %in% operator.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+y2[ y2 %in% y ]
+```
+
+</details>
+
+**14- Multiply each element of y2 by 1.5: reassign.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+y2 <- y2 * 1.5
+```
+
+</details>
+
+
+**15- Use the function any() to check if the number 3 is present.<br>Check the help page of any()!**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# "Given a set of logical vectors, is at least one of the values true?"
+any( y2 == 3 )
+```
+
+</details>
+
+
+### Exercise 2b.
+
+**1- Create the vector myvector as:**
+
+```{r}
+myvector <- c(1, 2, 3, 1, 2, 3, 1, 2, 3)
+```
+
+**Create the same vector using the rep.int() function (?rep.int)**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+myvector <- rep.int(x=1:3, times=3)
+```
+
+</details>
+
+
+**2- Reassign the 5th, 6th and 7th position of myvector with the values 8, 12 and 32, respectively.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# reassign one by one
+myvector[5] <- 8
+myvector[6] <- 12
+myvector[7] <- 32
+# or reassign all at once
+myvector[5:7] <- c(8, 12, 32)
+```
+
+</details>
+
+**3- Calculate the fraction/percentage of each element of myvector (relative to the sum of all elements of the vector).<br>Note:sum() can be useful...**
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# sum of all elements of the vector
+mytotal <- sum(myvector)
+# divide each element by the sum
+myvector / mytotal
+# multiply by 100 to get a percentage
+(myvector / mytotal) * 100
+```
+
+</details>
+
+**4- Add vector c(2, 4, 6, 7) to myvector (combining both vectors): reassign!**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# create the new vector
+newvector <- c(2, 4, 6, 7)
+# combine both myvector and newvector
+c(myvector, newvector)
+# reassign myvector
+myvector <- c(myvector, newvector)
+```
+
+</details>
+
+
+<!--chapter:end:exercise2.Rmd-->
+
+## Exercise 3. Character vector manipulation
+
+### Exercise 3a.
+
+Create the script "exercise3.R" and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 3 in that script.
+<br>Remember you can comment the code using #.
+
+**1- Go to Rcourse/Module1
+First check where you currently are with getwd();
+then go to Rcourse/Module1 with setwd()**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+getwd()
+setwd("Rcourse/Module1")
+setwd("~/Rcourse/Module1")
+```
+
+</details>
+
+**2- Create vector w as:**
+
+```{r}
+w <- rep(x=c("miRNA", "mRNA"), times=c(3, 2))
+```
+
+**3- View vector w in the console: how does function rep() work ?** 
+<br>Play with the **times** argument.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+rep(x=c("miRNA", "mRNA"), times=c(3, 4))
+rep(x=c("miRNA", "mRNA"), times=c(10, 2))
+```
+
+</details>
+
+**4- What is the output of table(w) ? What does the table function do ?**
+
+**5- Type w[grep(pattern="mRNA", x=w)] and w[w == "mRNA"]**
+<br> Is there a difference between the two outputs?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+w[grep(pattern="mRNA", w)]
+w[w == "mRNA"]
+# no difference between the outputs
+```
+
+</details>
+
+**6- Now type w[grep(pattern="RNA", w)] and w[w == "RNA"]**
+<br> Is there a difference between the two outputs?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+w[grep(pattern="RNA", w)]
+w[w == "RNA"]
+# grep outputs 5 values but == outputs none
+```
+
+</details>
+
+What is the difference between **==** and **grep** ?
+
+
+<details>
+<summary>
+correction
+</summary>
+
+>= looks for exact matches.
+<br>
+grep looks for **patterns**.
+
+</details>
+
+
+**7- Create vector g as:**
+
+```{r}
+g <- c("hsa-let-7a", "hsa-mir-1", "CLC", "DKK1", "LPA")
+```
+
+How many elements do w and g contain?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+length(w); length(g)
+```
+
+</details>
+
+**8- Do vectors w and g have the same length? Use the function identical() to check this.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+identical(x=length(w), y=length(g))
+```
+
+</details>
+
+**9- Name the elements of g using the elements of w.**<br> 
+(i.e. the names of each element of g will be the elements of w).
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+names(g) <- w
+```
+
+</details>
+
+**If you have time**, continue with Exercise 3b below.<br>
+
+### Exercise 3b.
+
+**1- Use the sub() function to replace miRNA with microRNA in the *names* of g.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+names(g) <- sub(pattern="miRNA", replacement="microRNA", x=names(g))
+```
+
+</details>
+
+**2- Count how many microRNAs and mRNAs there are in g based on the column names.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+table(names(g))
+```
+
+</details>
+
+**3- Create vector tt as:**
+
+```{r}
+tt <- "Introduction to R course"
+```
+
+How many characters does tt contain? Use nchar().
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+nchar(tt)
+```
+
+</details>
+
+**4- Remove "Introduction to R" from tt.**
+<br>You can try with either substr() or gsub()
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+substr(x=tt, start=17, stop=nchar(tt))
+gsub(pattern="Introduction to R", replacement="", x=tt)
+```
+
+</details>
+
+
+<!--chapter:end:exercise3.Rmd-->
+
+## Factors
+
+* A factor is a vector object (1 dimension) used to specify a **discrete classification (grouping)** of the components of other vectors.
+
+* Factors are mainly used for **statistical modeling**, and can also be useful for graphing.
+
+* You can create factors with the **factor** function, for example:
+
+```{r}
+e <- factor(c("high", "low", "medium", "low"))
+# check the structure of e
+str(e)
+```
+
+* Example of a character vector versus a factor
+
+```{r}
+# factor
+e <- factor(c("high", "low", "medium", "low"))
+# character vector
+e2 <- c("high", "low", "medium", "low")
+# Check the structure of both objects
+str(e)
+str(e2)
+```
+
+* Groups in factors are called **levels**.<br>
+Levels can be **ordered**. Then, some operations applied on numeric vectors can be used:
+
+```{r, eval=F}
+# unordered factor:
+e <- factor(c("high", "low", "medium", "low"))
+max(e) # throws an error
+# ordered factor
+e_ord <- factor(e, levels=c("low", "medium", "high"), ordered=TRUE)
+max(e_ord) # outputs "high"
+```
+
+
+
+<!--chapter:end:factor.Rmd-->
+
+## Matrices
+
+* A matrix is a **2 dimensional** vector.
+
+* All columns in a matrix must have:
+	+ the same **type** (numeric, character or logical)
+	+ the same **length**
+
+### Creating a matrix
+
+* From vectors with the **rbind** function:
+
+```{r}
+x <- c(1, 44)
+y <- c(0, 12)
+z <- c(34, 4)
+# rbind: bind rows
+b <- rbind(x, y, z)
+```
+
+* From vectors with the **cbind** function:
+
+```{r}
+i <- c(1, 0, 34)
+j <- c(44, 12, 4)
+# cbind: bind columns
+b <- cbind(i, j)
+```
+
+* From scratch with the *matrix* function:
+
+```{r}
+# nrow: number of rows
+# ncol: number of columns
+b <- matrix(c(1, 0, 34, 44, 12, 4), 
+	nrow=3,
+	ncol=2)
+```
+
+### Two-dimensional object
+
+Vectors have one index per element (1-dimension).<br>
+Matrices have **two indices (2-dimensions)** per element, corresponding to the row and the column:
+
+<img src="images/matrix_indices.png" width="300"/>
+
+* Fetching elements of a matrix:
+
+The "coordinates" of an element in a 2-dimensional object will be first the row (on the left of the comma), then the column (on the right of the comma):
+
+<img src="images/matrix_rc.png" alt="rstudio logo" width="250"/>
+
+### Matrix manipulation
+
+* Add 1 to all elements of a matrix
+
+```{r}
+b <- b + 1
+```
+
+* Multiply by 3 all elements of a matrix
+
+```{r}
+b <- b * 3
+```
+
+* Subtract 2 to each element of **the first row** of a matrix
+
+```{r}
+b[1, ] <- b[1, ] - 2
+```
+
+* Replace elements that comply a condition:
+
+```{r}
+# Replace all elements that are greater than 3 with NA
+b[ b>3 ] <- NA
+```
+
+
+
+<!--chapter:end:matrix.Rmd-->
+
+## Data frames
+
+```{r, include=FALSE, eval=TRUE}
+knitr::opts_chunk$set(eval = FALSE, echo = TRUE)
+```
+
+A data frame is a 2-dimensional structure.
+<br> It is more general than a matrix.
+<br><br>
+All columns in a data frame:
+  
+* can be of different **types** (numeric, character or logical)
+* must have the same **length**
+
+A data frame is organized by **column**: columns are **variables** and rows are **observations** of each variable.
+
+### Create a data frame 
+
+* With the **data.frame** function:
+
+```{r}
+# stringsAsFactors: ensures that characters are treated as characters and not as factors
+d <- data.frame(c("Maria", "Juan", "Alba"), 
+	c(23, 25, 31),
+	c(TRUE, TRUE, FALSE),
+	stringsAsFactors = FALSE)
+```
+
+* Example why "stringsAsFactors = FALSE" is useful
+
+```{r, eval=FALSE}
+# Create a data frame with default parameters
+df <- data.frame(label=rep("test",5), column2=1:5)
+# Replace one value
+df[2,1] <- "yes"
+# Throws an error and doesn't replace the value !
+```
+
+```{r}
+# Create a data frame with:
+df2 <- data.frame(label=rep("test",5), column2=1:5, stringsAsFactors = FALSE)
+# Replace one value
+df2[2,1] <- "yes"
+# Works!
+```
+
+* Converting a matrix into a data frame:
+
+```{r}
+# create a matrix
+b <- matrix(c(1, 0, 34, 44, 12, 4), 
+        nrow=3,
+        ncol=2)
+# convert as data frame
+b_df <- as.data.frame(b)
+```
+
+### Data frame manipulation:
+<br>
+Very similar to matrix manipulation.
+
+<img src="images/df_fetch.png" width="450"/>
+
+
+
+<!--chapter:end:dataframe.Rmd-->
+
+## Two-dimensional structures manipulation
+
+```{r, include=FALSE, eval=TRUE}
+knitr::opts_chunk$set(eval = FALSE, echo = TRUE)
+```
+
+### Dimensions
+
+* Get the number of rows and the number of columns:
+
+```{r}
+# Create a data frame
+d <- data.frame(c("Maria", "Juan", "Alba"),
+	c(23, 25, 31),
+	c(TRUE, TRUE, FALSE),
+	stringsAsFactors = FALSE)
+# number of rows
+nrow(d)
+# number of columns
+ncol(d)
+```
+
+* Check the dimensions of the object: both number of rows and number of columns:
+
+```{r}
+# first element: number of rows
+# second element: number of columns
+dim(d)
+```
+
+* Dimension names
+
+Column and/or row names can be added to matrices and data frames
+
+```{r}
+colnames(d) <- c("Name", "Age", "Vegetarian")
+rownames(d) <- c("Patient1", "Patient2", "Patient3")
+```
+
+Column and/or row names can be used to retrieve elements or sets of elements from a 2-dimensional object:
+
+<img src="images/df_names.png" width="450"/>
+
+
+```{r}
+d[,"Name"]
+# same as:
+d[,1]
+
+d["Patient3", "Age"]
+# same as:
+d[3,2]
+
+# for data frames only, the $ sign can be used to retrieve columns:
+# d$Name is d[,1] is d[, "Name"]
+
+```
+
+* Include names as you create objects:
+	+ Matrix:
+```{r}
+m <- matrix(1:4, ncol=2, 
+	dimnames=list(c("row1", "row2"), c("col1", "col2")))
+```
+	+ Data frame:
+```{r}
+df <- data.frame(col1=1:2, col2=1:2, 
+	row.names=c("row1", "row2"))
+```
+
+### Manipulation
+
+Same principle as vectors... but in 2 dimensions!
+<br>
+
+#### Examples
+
+ + Select rows of b if **at least one element in column 2 is greater than 24** (i.e. select patients if they are older than 24):
+```{r}
+# build data frame d
+d <- data.frame(Name=c("Maria", "Juan", "Alba"), 
+        Age=c(23, 25, 31),
+        Vegetarian=c(TRUE, TRUE, FALSE),
+        stringsAsFactors = FALSE)
+rownames(d) <- c("Patient1", "Patient2", "Patient3")
+# The following commands all output the same result:
+d[d[,2] > 24, ]
+d[d[,"Age"] > 24, ]
+d[d$Age > 24, ]
+```
+
+<img src="images/df_col2.png" width="500"/>
+
+ + Select patients (rows) based on 2 criteria: age of the patient (column 2) should be great than or equal to 25, and the patient should be vegetarian (column 3):
+```{r}
+d[ d$Age >= 25 & d$Vegetarian == TRUE, ]
+```
+
+<img src="images/df_col2_col3.png" width="700"/>
+
+ + Select the columns of b if **at least one element in the 3rd row is less than or equal to 4**:
+```{r}
+# create b
+b <- matrix(c(1, 0, 34, 44, 12, 4), 
+	nrow=3, 
+	ncol=2)
+# third row of b:
+b[3, ]
+# element(s) in the third row of b that is (are) less than or equal to 4
+b[3, ] <= 4
+# retrieve the corresponding sub-matrix
+b[ ,b[3, ] <= 4]
+```
+
+
+#### More useful commands
+
+* Add a row or a column with **rbind** and **cbind**, respectively
+
+```{r}
+# add a column
+cbind(d, 1:3)
+# add a row
+rbind(d, 4:6)
+```
+
+Add a patient to our data frame **d**:
+
+```{r}
+d <- rbind(d, c("Jordi", 33, FALSE))
+```
+
+* Process the sum of all rows or all columns with **rowSums** and **colSums**, respectively.
+
+```{r}
+# create a matrix
+b <- matrix(1:20, ncol=4)
+# process sum of rows and sum of cols
+rowSums(b)
+colSums(b)
+```
+
+* The **apply** function
+
+Powerful tool to apply a command to all rows or all columns of a data frame or a matrix.<br>
+For example, instead of calculating the sum of each row, you might be interested in calculating the median ? But rowMedians doesn't exist !
+<br><br>
+**apply** takes 3 arguments:
+
+* first argument **X**: 2-dimensional object
+* second argument **MARGIN**: apply by row or by column?
+	+ 1: by row
+	+ 2: by column
+* third argument **FUN**: function to apply to either rows or columns
+
+```{r}
+# median value of each row of b
+apply(X=b, MARGIN=1, FUN=median)
+# median value of each column of b
+apply(X=b, MARGIN=2, FUN=median)
+```
+
+
+
+<!--chapter:end:2d_manip.Rmd-->
+
+## Exercise 4. Matrix manipulation
+
+Create the script "exercise4.R" and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 4 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+getwd()
+setwd("Rcourse/Module1")
+setwd("~/Rcourse/Module1")
+```
+
+</details>
+
+**1- Create three numeric vectors x, y, z, each of 4 elements of your choice.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+x <- 2:5
+y <- 6:9
+z <- 7:4
+```
+</details>
+
+Use rbind() to create a matrix **mat** (3 rows and 4 columns) out of x, y and z.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mat <- rbind(x, y, z)
+```
+
+</details>
+
+**2- Create the same matrix now using the matrix function. Repeat the same using the byrow=TRUE parameter: what is different?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mat <- matrix(data=c(x, y, z), nrow=3, ncol=4)
+# "byrow=TRUE": what is different in the output ?
+mat_byrow <- matrix(data=c(x, y, z), nrow=3, ncol=4, byrow=TRUE)
+```
+
+</details>
+
+**3- Add names to mat's columns: "a", "b", "c", "d", respectively.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+colnames(mat) <- c("a", "b", "c", "d")
+```
+
+</details>
+
+**4- Calculate the sum of each row, and the sum of each column**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+rowSums(mat); colSums(mat)
+```
+
+</details>
+
+**5- Create the matrix mat2 as:**
+
+```{r}
+mat2 <- matrix(c(seq(from=1, to=10, by=2), 5:1, rep(x=2017, times=5)), ncol=3)
+```
+
+What does function seq() do?
+
+<details>
+<summary>
+correction
+</summary>
+
+**seq** generate sequences of numbers. Here, it creates a sequences from 1 to 10 with a step of 2 numbers.
+
+</details>
+
+**6- What are the dimensions of mat2 (number of rows and number of columns)?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# number of rows
+nrow(mat2)
+# number of columns
+ncol(mat2)
+# dimensions: number of rows, number of columns
+dim(mat2)
+```
+
+</details>
+
+**7- Add column names to mat2: "day", "month" and "year", respectively.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+colnames(mat2) <- c("day", "month", "year")
+```
+
+</details>
+
+**8- Add row names to mat2: letters "A" to "E"**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+rownames(mat2) <- c("A", "B", "C", "D", "E")
+rownames(mat2) <- LETTERS[1:5]
+```
+
+</details>
+
+**9- Shows row(s) of mat2 where the month column is greater than or equal to 3.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# select column month
+mat2[, "month"]
+# element(s) of column month that is (are) greater than or equal to 3
+mat2[,"month"] >= 3
+# finally select row(s) where the month columns is greater than or equal to 3
+mat2[mat2[,"month"] >= 3,]
+```
+
+</details>
+
+**10- Replace all elements of mat2 that are equal to 2017 with 2018.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# which elements of mat2 that are exactly equal to 2017
+mat2==2017
+# retrieve actual elements
+mat2[mat2==2017]
+# replace all 2017 with 2018
+mat2[mat2==2017] <- 2018
+```
+
+</details>
+
+**11- Multiply all elements of the 2nd column of mat2 by 7. Reassign mat2!**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# multiply all elements of the 2nd column of mat2 by 7
+mat2[,2] * 7
+# reassign mat2 with the new values of column 2
+mat2[,2] <- mat2[,2] * 7
+```
+
+</details>
+
+**12- Add the column named "time" to mat2, that contains values 8, 12, 11, 10, 8. Save in the new object mat3.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mat3 <- cbind(mat2, time=c(8, 12, 11, 10, 8))
+```
+
+</details>
+
+**13- Replace all elements of mat3 that are less than 3 with NA.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# which elements of mat3 that are less than 3
+mat3 < 3
+# actually elements of mat3 that are less than 3
+mat3[mat3 < 3]
+# reassign elements of mat3 that are less than 3 with NA
+mat3[mat3 < 3] <- NA
+```
+
+</details>
+
+**14- Remove rows from mat3 if a NA is present. Save in the new object mat4.**
+
+<details> 
+<summary>
+correction
+</summary>
+
+```{r}
+mat4 <- na.omit(mat3)
+```
+
+</details>
+
+**15- Retrieve the smaller value of each column of mat4.**
+
+Try different approaches:
+
+* Retrieve the minimum for each column one by one.
+
+<details> 
+<summary>
+correction
+</summary>
+
+```{r}
+min(mat4[,"day"])
+min(mat4[,"month"])
+min(mat4[,"year"])
+min(mat4[,"time"])
+```
+
+</details>
+
+* Retrieve the minimum of all columns simultaneously using the apply() function.
+
+<details> 
+<summary>
+correction 
+</summary>
+
+```{r}
+# mat4: object
+# 2: by column
+# min: function to apply
+apply(mat4, 2, min)
+```
+
+</details>
+
+
+
+<!--chapter:end:exercise4.Rmd-->
+
+## Exercise 5. Data frame manipulation
+
+Create the script "exercise5.R" and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 5 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+getwd()
+setwd("Rcourse/Module1")
+setwd("~/Rcourse/Module1")
+```
+
+</details>
+
+### Exercise 5a
+
+**1- Create the following data frame:**
+
+| | | |
+|:---:|:---:|:---:|
+|43|181|M|
+|34|172|F|
+|22|189|M|
+|27|167|F|
+
+<br>
+With Row names: John, Jessica, Steve, Rachel.
+<br>
+And Column names: Age, Height, Sex.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+mydf <- data.frame(Age=c(43, 34, 22, 27), 
+                 Height=c(181, 172, 189, 167),
+                 Sex=c("M", "F", "M", "F"),
+                 row.names = c("John", "Jessica", "Steve", "Rachel"),
+                 stringsAsFactors=FALSE)
+```
+
+</details>
+
+**2- Check the structure of mydf with str().**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+str(mydf)
+```
+
+</details>
+
+**3- Calculate the average age and height in mydf**
+
+Try different approaches:
+
+* Calculate the average for each column separately.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+mean(mydf$Age)
+mean(mydf$Height)
+```
+
+</details>
+
+* Calculate the average of both columns simultaneously using the apply() function.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# we have to remove the Sex column: we can calculate the average only with numbers
+apply(mydf[,-3], 2, mean)
+apply(mydf[,1:2], 2, mean)
+apply(mydf[,-grep("Sex", colnames(mydf))], 2, mean)
+```
+
+</details>
+
+**4- Add one row to mydf: Georges who is 53 years old and 168cm tall.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# Georges= allows us to enter the row name at the same time as we add a row
+mydf <- rbind(mydf, Georges=c(53, 168, "M"))
+```
+
+</details>
+
+**5- Change the row names of mydf so the data becomes anonymous:** 
+Use Patient1, Patient2, etc. instead of actual names.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F} 
+rownames(mydf) <- c("Patient1", "Patient2", "Patient3", "Patient4", "Patient5")
+# try also the paste function!
+rownames(mydf) <- paste("Patient", 1:5, sep="")
+```
+
+</details>
+
+**6- Create the data frame mydf2 that is a subset of mydf containing only the female entries.**
+ 
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# which elements are female ("F" in the "Sex" colum)
+mydf$Sex=="F"
+# retrieve rows that contain the female entries, and save in mydf2
+mydf2 <- mydf[mydf$Sex=="F",]
+```
+
+</details>
+
+**7- Create the data frame mydf3 that is a subset of mydf containing only entries of males taller than 170.**
+ 
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# which entries are males
+mydf$Sex=="M"
+# which entries are greater than 170 in column "Height"
+mydf$Sex=="M" & mydf$Height > 170
+# retrieve rows that contain the males that are taller than 170, and save in mydf3
+mydf3 <- mydf[mydf$Sex=="M" & mydf$Height > 170,]
+```
+
+</details>
+
+### Exercise 5b
+
+**1. Create two data frames mydf1 and mydf2 as:**
+
+mydf1:
+
+| | |
+|:---:|:---:|
+|1|14|
+|2|12|
+|3|15|
+|4|10|
+
+mydf2:
+
+| | |
+|:---:|:---:|
+|1|paul|
+|2|helen|
+|3|emily|
+|4|john|
+|5|mark|
+
+With column names: **"id", "age"** for mydf1, and **"id", "name"** for mydf2.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+mydf1 <- data.frame(id=1:4, age=c(14,12,15,10))
+mydf2 <- data.frame(id=1:5, name=c("paul", "helen", "emily", "john", "mark"))
+```
+
+</details>
+
+**2- Merge mydf1 and mydf2 by their "id" column.**
+Look for the help page of **merge** and/or Google it!
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# input 2 data frames
+# "by" columns indicate by which column you want to merge the data
+merge(x=mydf1, y=mydf2, by.x="id", by.y="id")
+mydf3 <- merge(x=mydf1, y=mydf2, by="id")
+```
+
+</details>
+
+**3- Order mydf3 by decreasing age.**
+Look for the help page of **order**.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# order the age column (default is increasing order)
+order(mydf3$age)
+# order the age column by decreasing order
+order(mydf3$age, decreasing = TRUE)
+# order the whole data frame by the column age in decreasing order
+mydf3[order(mydf3$age, decreasing = TRUE), ]
+```
+
+</details>
+
+### Exercise 5c
+
+**1- Using the download.file function, download [this file](https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData) to your current directory.** (Right click on "this file" -> Copy link location to get the full path).
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# failing: download.file("https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData", "genes_dataframe.RData")
+download.file("https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData", "genes_dataframe.RData")
+```
+
+</details>
+
+**2- The function dir() lists the files and directories present in the current directory: check if genes_dataframe.RData was copied.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+dir()
+```
+
+</details>
+
+**3- Load genes_dataframe.RData in your environment**
+Use the *load* function.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+load("genes_dataframe.RData")
+```
+
+</details>
+
+**4- genes_dataframe.RData contains the mydf_genes object: is it now present in your environment?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+ls()
+```
+
+</details>
+
+**5- Explore mydf_genes and see what it contains**
+You can use a variety of functions: str, head, tail, dim, colnames, rownames, class... 
+ 
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+str(mydf_genes)
+head(mydf_genes)
+tail(mydf_genes)
+dim(mydf_genes)
+colnames(mydf_genes)
+rownames(mydf_genes)
+class(mydf_genes)
+```
+
+</details>
+
+**6- Select rows for which pvalue_KOvsWT < 0.05 AND log2FoldChange_KOvsWT > 0.5. Store in the up object.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# rows where pvalue_KOvsWT < 0.05 
+mydf_genes$pvalue_KOvsWT < 0.05
+# rows where log2FoldChange_KOvsWT > 0.5
+mydf_genes$log2FoldChange_KOvsWT > 0.5
+# rows that comply both of the above conditions
+mydf_genes$pvalue_KOvsWT < 0.05 & mydf_genes$log2FoldChange_KOvsWT > 0.5
+# select rows for which pvalue_KOvsWT < 0.05 AND log2FoldChange_KOvsWT > 0.5
+up <- mydf_genes[mydf_genes$pvalue_KOvsWT < 0.05 & 
+                 mydf_genes$log2FoldChange_KOvsWT > 0.5,]
+```
+
+</details>
+
+How many rows (genes) were selected?
+
+
+**7- Select from the up object the Zinc finger protein coding genes (i.e. the gene symbol starts with Zfp). Use the grep() function.**
+
+<details>
+<summary>
+correction       
+</summary>
+
+```{r, eval=F}
+# extract gene symbol column
+up$gene_symbol
+# use grep to get the genes matching the pattern "Zfp"
+up[grep("Zf", up$gene_symbol), ]
+```
+
+</details>
+
+**8- Select rows for which pvalue_KOvsWT < 0.05 AND log2FoldChange_KOvsWT is > 0.5 OR < -0.5.**
+For the selection of log2FoldChange: give the **abs** function a try! 
+<br>Store in the diff_genes object.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# rows where pvalue_KOvsWT < 0.05
+mydf_genes$pvalue_KOvsWT < 0.05
+# rows where log2FoldChange_KOvsWT > 0.5
+mydf_genes$log2FoldChange_KOvsWT > 0.5
+# rows where log2FoldChange_KOvsWT < -0.5
+mydf_genes$log2FoldChange_KOvsWT > -0.5
+# rows where log2FoldChange_KOvsWT < -0.5 OR log2FoldChange_KOvsWT > 0.5
+mydf_genes$log2FoldChange_KOvsWT > 0.5 | mydf_genes$log2FoldChange_KOvsWT > -0.5
+# same as above but using the abs function
+abs(mydf_genes$log2FoldChange_KOvsWT) > 0.5
+# combine all required criteria
+mydf_genes$pvalue_KOvsWT < 0.05 & abs(mydf_genes$log2FoldChange_KOvsWT) > 0.5
+# extract corresponding entries
+diff_genes <- mydf_genes[mydf_genes$pvalue_KOvsWT < 0.05 & 
+                 abs(mydf_genes$log2FoldChange_KOvsWT) > 0.5,]
+```
+
+</details>
+
+How many rows (genes) were selected?
+
+
+<!--chapter:end:exercise5.Rmd-->
+
+# Missing values
+
+**NA** (Not Available) is a recognized element in R.
+
+* Finding missing values in a vector
+
+```{r, eval=F}
+# Create vector
+x <- c(4, 2, 7, NA)
+
+# Find missing values in vector:
+is.na(x)
+
+# Remove missing values
+na.omit(x)
+x[ !is.na(x) ]
+```
+
+* Some functions can deal with NAs, either by default, or with specific arguments:
+
+```{r, eval=F}
+x <- c(4, 2, 7, NA)
+
+# default arguments
+mean(x)
+
+# set na.rm=TRUE
+mean(x, na.rm=TRUE)
+```
+
+* In a matrix or a data frame, keep only rows where there are no NA values:
+
+```{r, eval=F}
+# Create matrix with some NA values
+mydata <- matrix(c(1:10, NA, 12:2, NA, 15:20, NA), ncol=3)
+
+# Keep only rows without NAs
+mydata[complete.cases(mydata), ]
+# or
+na.omit(mydata)
+```
+
+<br>
+Check this [R blogger post on missing/null values](https://www.r-bloggers.com/r-null-values-null-na-nan-inf/)
+
+<!--chapter:end:na.Rmd-->
+
+# Input / Output
+
+We will learn how to:
+
+* Read in a file
+* Write out a file
+* Save a graph in a file (Module 3)
+
+## On vectors
+
+* Read a file as a vector with the **scan** function
+
+```{r, eval=F}
+# Read in file
+scan(file="file.txt")
+# Save in  object
+k <- scan(file="file.txt")
+```
+
+By default, scans "double" (numeric) elements: it fails if the input contains characters.<br>
+If non-numeric, you need to specify the type of data contained in the file: 
+
+```{r, eval=F}
+# specify the type of data to scan
+scan(file="file.txt", 
+	what="character")
+scan(file="~/file.txt", 
+	what="character")
+```
+
+Regarding paths of files:<br>
+If the file is not in the current directory, you can provide a full or relative path. For example, if located in the home directory, read it as:
+
+```{r, eval=F}
+scan(file="~/file.txt", 
+	what="character")
+```
+
+* Write the content of a vector in a file:
+
+```{r, eval=F}
+# create a vector
+mygenes <- c("SMAD4", "DKK1", "ASXL3", "ERG", "CKLF", "TIAM1", "VHL", "BTD", "EMP1", "MALL", "PAX3")
+# write in a file
+write(x=mygenes, 
+	file="gene_list.txt")
+```
+
+Regarding paths of files:<br>
+When you write a file, you can also specify a full or relative path:
+
+```{r, eval=F}
+# Write to home directory
+write(x=mygenes,
+        file="~/gene_list.txt")
+# Write to one directory up
+write(x=mygenes,
+        file="../gene_list.txt")
+```
+
+
+## On data frames or matrices
+
+* Read in a file into a data frame with the **read.table** function:
+
+```{r, eval=F}
+a <- read.table(file="file.txt")
+```
+
+You can convert it as a matrix, if needed, with:
+
+```{r, eval=F}
+a <- as.matrix(read.table(file="file.txt"))
+```
+
+
+Useful arguments:
+
+<a href="https://biocorecrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/readtable.png" width="550/"></a>
+
+* Write a data frame or matrix to a file:
+
+```{r, eval=F}
+write.table(x=a,
+	file="file.txt")
+```
+
+Useful arguments:
+
+<a href="https://biocorecrg.github.io/CRG_RIntroduction/images/writetable.png"><img src="images/writetable.png" width="550/"></a>
+
+* Note that **\\t** stands for tab-delimitation
+
+
+
+<!--chapter:end:inout.Rmd-->
+
+## Exercise 6. 
+
+Create the script "exercise6.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 6 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+getwd()
+setwd("Rcourse/Module2")
+setwd("~/Rcourse/Module2")
+```
+
+</details>
+
+### Exercise 6a. Input / output
+
+**1- Download folder "i_o_files" in your current directory with:** 
+
+```{r, eval=F}
+# system invokes the OS command specified by the "command" argument.
+system(command="svn export https://github.com/biocorecrg/CRG_RIntroduction/trunk/i_o_files.tar.gz")
+# extract archive (tar: archive, gz: compressed)
+system(command="tar -xvzf i_o_files.tar.gz")
+# list files present in i_o_files
+dir("i_o_files")
+```
+
+All files that will be used for exercise 6 are found in the **i_o_files** folder ! 
+
+**2- Read in the content of ex6a_input.txt using the scan command; save in object z**
+
+How many elements are in z?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# scan content of the file
+z <- scan("i_o_files/ex6a_input.txt")
+# number of elements (length of vector)
+length(z)
+```
+
+</details>
+
+**3- Sort z: save sorted vector in object "zsorted". ?sort**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+zsorted <- sort(z)
+```
+
+</details>
+
+**4- Write zsorted content into file ex6a_output.txt. ?write**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+write(zsorted, "ex6a_output.txt")
+```
+
+</details>
+
+**5- Check the file you produced in the RStudio file browser (click on the file in bottom-right panel, "Files" tab). Save the content of zsorted again but this time setting the argument "ncolumns" to 1: how does the file look now?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+write(zsorted, "ex6a_output.txt", ncolumns=1)
+```
+
+</details>
+
+### Exercise 6b - I/O on data frames: play with the arguments of read.table
+  
+**1- field separator**
+
+* **Read ex6b_IO_commas_noheader.txt in object fs. ?read.table.
+What are the dimensions of fs?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# read in file with default parameters
+fs <- read.table("i_o_files/ex6b_IO_commas_noheader.txt")
+dim(fs)
+```
+
+</details>
+
+* **Fields/columns are separated by commas: change the default value of the "sep" argument and read in the file again.
+What are now the dimensions of fs?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# change field separator to ","
+fs <- read.table("i_o_files/ex6b_IO_commas_noheader.txt", 
+	sep=",")
+dim(fs)
+```
+
+</details>
+
+**2- field separator + header**
+
+* **Read ex6b_IO_commas_header.txt in object fs_c.
+What are the dimensions of fs_c ?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F} 
+fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt")
+dim(fs_c)
+```
+
+</details>
+
+* **Check head(fs_c) and change the default field separator to the appropriate one.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt", 
+                   sep=",")
+```
+
+</details>
+
+* **The first row should to be the header (column names)! Change the default value of the header parameter and read in the file again.**
+What are now the dimensions of fs_c ?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt", 
+                   sep=",", 
+                   header=TRUE)
+```
+
+</details>
+
+**3- skipping lines**
+
+* **Read ex6b_IO_skip.txt in object sk.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F, message=F, warning=F, error=F}
+sk <- read.table("i_o_files/ex6b_IO_skip.txt")
+```
+
+</details>
+
+**Is R complaining ?**<br>
+ 
+Check "manually" the file (open it in the R Studio file browser).<br>
+
+* The "skip" argument allows you to ignore one or more line(s) before reading in a file. **Introduce this argument with the appropriate number of lines to skip, and read in the file again.**<br>
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+sk <- read.table("i_o_files/ex6b_IO_skip.txt",
+                 skip=2)
+dim(sk)
+```
+
+</details>
+
+* Is R still complaining? 
+What are now the dimensions of sk ?
+
+* **Change the default field separator.**
+What are now the dimensions of sk ?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+sk <- read.table("i_o_files/ex6b_IO_skip.txt",
+                 skip=2,
+                 sep=",",
+                 header=T)
+```
+
+</details>
+
+**4- Comment lines**
+
+* **Read ex6b_IO_comment.txt in object cl.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F, warning=F, message=F, error=F}
+cl <- read.table("i_o_files/ex6b_IO_comment.txt")
+```
+
+</details>
+
+Is R complaining again ? **Check manually the file and try to find out what is wrong...**<br>
+
+What is the "comment.char" argument used for ? **Adjust the comment.char argument and read in the file again.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+cl <- read.table("i_o_files/ex6b_IO_comment.txt",
+                 comment.char = "*")
+```
+
+</details>
+
+* **Adjust also the header and sep arguments to read in the file correctly.**
+What are now the dimensions of cl?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+cl <- read.table("i_o_files/ex6b_IO_comment.txt",
+                 comment.char = "*",
+                 sep=",",
+                 header=TRUE)
+dim(cl)
+```
+
+</details>
+
+**4- final**
+
+* **Read ex6b_IO_final.txt in object "fin".**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F, warning=F, error=F, message=F}
+fin <- read.table("i_o_files/ex6b_IO_final.txt")
+```
+
+</details>
+
+* **Adjust the appropriate arguments of "write.table" according to what you have learnt so far, in order to obtain the data frame "fin" of dimensions 167 x 4.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+fin <- read.table("i_o_files/ex6b_IO_final.txt",
+                  sep=",",
+                  header=TRUE,
+                  skip=3,
+                  comment.char="&"
+                  )
+```
+
+</details>
+
+
+
+
+
+<!--chapter:end:exercise6.Rmd-->
+
+# Library and packages
+
+* **Packages** are collections of R functions, data, and compiled code in a well-defined format.
+
+* The directory where packages are stored is called the **library**.
+
+*Source of definitions: http://www.statmethods.net/interface/packages.html*
+
+## R base
+
+A set a standard packages which are supplied with R by default.<br>
+Example: package base (write, table, rownames functions), package utils (read.table, str functions), package stats (var, na.omit, median functions).
+
+## R contrib
+
+All other packages:
+
+* [CRAN](https://cran.r-project.org): Comprehensive R Archive Network
+  + 15356<sup>*</sup> packages available
+  + find packages in https://cran.r-project.org/web/packages/
+	<img src="images/cran_packages.png" width="550"/>
+* [Bioconductor](https://www.bioconductor.org/):
+	+ 1823<sup>*</sup> packages available
+	+ find packages in https://bioconductor.org/packages
+	<img src="images/bioc_packages.png" width="550"/>
+
+*<sup>*</sup>As of February 2019*
+
+<h4>Bioconductor</h4>
+
+Set of R packages specialized in the analysis of bioinformatics data.<br>
+
+Bioconductor supports most types of **genomics and NGS data** (e.g. limma, DESeq2, BayesPeak) and integrates:
+
+* Specific data classes (e.g. Granges from GenomicRanges)
+* Integrates command line tools (e.g Rsamtools)
+* Annotation tools (e.g. biomaRt)
+
+There are different types of Bioconductor packages:
+
+* **Software**: set of functions
+  + e.g. DESeq2 (NGS data analysis)
+* **Annotation**: annotation of specific arrays, organisms, events, etc.
+  + e.g. BSgenome.Hsapiens.UCSC.hg38
+* **Experiment**: data that can be loaded and used
+  + e.g. ALL (acute lymphoblastic leukemia dataset)
+
+## Install a package
+
+* With RStudio:
+<img src="images/bioc_install.png" width="550"/>
+
+* From the console:
+```{r, eval=F}
+install.packages(pkgs="BiocManager")
+```
+
+* Install a bioconductor package:
+  * For R version >= 3.5.0
+```{r, eval=F}
+# Install Bioconductor package manager
+install.packages(pkgs="BiocManager")
+# Install Bioconductor package
+BiocManager::install("DESeq2")
+```
+  * For older R versions
+```{r, eval=F}
+# Source (load into environment) script containing biocLite function
+source("http://www.bioconductor.org/biocLite.R")
+# Use biocLite function to install Bioconductor package
+biocLite("DESeq2")
+```
+
+## Load a package
+
+* With RStudio:
+<img src="images/bioc_load.png" width="450"/>
+
+* From the console:
+```{r}
+library("ggplot2")
+```
+
+## Check what packages are currently loaded
+
+```{r}
+sessionInfo()
+```
+
+## List functions from a package
+
+* With RStudio <br>
+
+<img src="images/rstudio_ggplot2.png" width="450"/>
+
+* From the console
+```{r, eval=F}
+ls("package:ggplot2")
+```
+
+## RStudio server at CRG
+
+If you can't install packages (permission issues), you first need to specify a writeable directory to install the packages into.<br>
+
+Follow the steps below:
+
+```{r, eval=F}
+# Go to your home directory
+setwd("~")
+# Create a directory where to store the packages
+dir.create("R_packages")
+# Add directory location to the library path
+.libPaths("~/R_packages/")
+```
+
+
+<!--chapter:end:libpackages.Rmd-->
+
+## Exercise 7: Library and packages
+
+Create the script "exercise7.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 7 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+getwd()
+setwd("Rcourse/Module2")
+setwd("~/Rcourse/Module2")
+```
+
+</details>
+
+**1- Install and load the packages ggplot2 and WriteXLS**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# Install the 2 packages at once
+install.packages(pkgs=c("ggplot2", "WriteXLS"))
+# Load in the environment (one by one)
+library("ggplot2")
+library("WriteXLS")
+```
+
+Check with sessionInfo() that the packages were loaded.
+
+</details>
+
+**2- ggplot2 loads automatically the diamonds dataset in the working environment: you can use it as an object after ggplot2 is loaded.**
+
+What are the dimensions of diamonds? What are the column names of diamond?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# Dimensions of diamonds
+dim(diamonds)
+# Column names of diamonds
+colnames(diamonds)
+```
+
+</details>
+
+You can read the help page of the diamonds dataset to understand what it contains!<br>
+
+Note: diamonds is a data frame: you can test it with is.data.frame(diamonds) (returns TRUE).
+
+**3- Select the columns carat, cut, color and price of diamonds and store in the object diams1.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# Select columns
+diams1 <- diamonds[,c("carat", "cut", "color", "price")]
+```
+
+</details>
+
+**4- Install and load the package dplyr from the Console.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# Install package
+install.packages(pkgs="dplyr")
+# Load package
+library("dplyr")
+```
+
+</details>
+
+**5- Use the function "sample_n" from the dplyr package to randomly sample 200 lines of diams1: save in diams object.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# Subset data frame
+diams <- sample_n(tbl=diams1, size=200)
+```
+
+</details>
+
+**6- Save diams into 2 files (different file formats):**
+
+* diamonds200.txt with function **write.table** (from package *utils*)
+* diamonds200.xls with function **WriteXLS** (from package of the same name *WriteXLS*).
+  
+Note: read about and play with the different options of both functions and check the output files.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+# Write a text file with write.table
+write.table(x=diams, 
+	file="diamonds200.txt",
+        row.names=FALSE,
+        quote=FALSE,
+        sep="\t")
+# Write an Excel file with WriteXLS
+WriteXLS(x=diams, 
+	ExcelFileName="diamonds200.xls", 
+	row.names=FALSE, 
+	col.names=TRUE, 
+	FreezeRow=1, 
+	BoldHeaderRow=TRUE)
+
+```
+
+</details>
+
+<!--chapter:end:exercise7.Rmd-->
+
+## Exercise (to do at home)
+
+**1- Read in file ex6c_input.txt (that is in folder downloaded for exercice 6 "i_o_files") in object "extra"**
+  
+  Warning: the file has a header !
+  <br>
+  Check the structure of extra (remember the **str** command).
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+extra <- read.table("i_o_files/ex6c_input.txt", 
+                  header=TRUE)
+str(extra)
+```
+
+</details>
+  
+  
+  **2- Read in the same file but, this time, set the argument as.is to TRUE.**
+  
+  Check again the structure: what has changed ?
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+extra <- read.table("i_o_files/ex6c_input.txt", 
+                  header=TRUE,
+                  as.is=TRUE)
+str(extra)
+```
+
+</details>
+  
+  **3- What are the column names of extra ?**
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+colnames(extra)
+```
+
+</details>
+  
+  **4- Change the name of the first column of extra from "State" to "Country".**
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+# ex6ct all column names of extra
+colnames(extra)
+# ex6ct the name of the first column only
+colnames(extra)[1]
+# reassign name of the first column only
+colnames(extra)[1] <- "Country"
+```
+
+</details>
+  
+  **5- How many countries are in the Eurozone, according to extra ?**
+  
+  *Remember the table function. ?table*
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+table(extra$Eurozone)
+```
+
+</details>
+  
+  **6- In the Eurozone column: change "TRUE" with "yes" and "FALSE" with "no".**
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+# select the Eurozone column
+extra$Eurozone
+# elements of the Eurozone column that are exactly TRUE
+extra$Eurozone==TRUE
+# ex6ct actual values that are TRUE
+extra$Eurozone[extra$Eurozone==TRUE]
+# reassign all elements that are TRUE with "yes"
+extra$Eurozone[extra$Eurozone==TRUE] <- "yes"
+# same with FALSE
+extra$Eurozone[extra$Eurozone==FALSE] <- "no"
+```
+
+</details>
+  
+  **7- In the column Country: how many country names from the list contain the letter "c" (capital- or lower-case) ?**
+  
+  Remember the grep function. Check the help page.
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+# country names with "c" (lower-case)
+grep("c", extra$Country)
+# country names with "c" or "C" (ignoring case)
+grep("c", extra$Country, ignore.case = TRUE)
+# show actual country names
+grep("c", extra$Country, value=TRUE, ignore.case = TRUE)
+```
+
+</details>
+  
+  **8- According to that data frame: how many people live:**
+  + in the European union (whole table) ?
+  + in the Eurozone ?
+  
+  <details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+# sum the whole population column
+sum(extra$Population)
+# select elements of extra where Eurozone is "yes"
+extra$Eurozone == "yes"
+# select only elements in Population for which the corresponding Eurozone elements are "yes"
+extra$Population[extra$Eurozone == "yes"]
+# sum that selection
+sum(extra$Population[extra$Eurozone == "yes"])
+```
+
+</details>
+  
+  **9- Write extra into file ex6c_output.txt**
+  
+  *After each of the following steps, check the output file in the RStudio file browser (lower-right panel).*
+  
+  * Try with the default arguments.
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+write.table(extra, file="ex6c_output.txt")
+```
+
+</details>
+  
+  * Add the argument "row.names" set to FALSE.
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+write.table(extra, file="ex6c_output.txt", 
+            row.names = FALSE)
+```
+
+</details>
+  
+  * Add the argument "quote" set to FALSE.
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+write.table(extra, file="ex6c_output.txt", 
+            row.names = FALSE,
+            quote = FALSE)
+```
+
+</details>
+  
+  * Add the argument "sep" set to "\t" or to ","
+
+<details>
+  <summary>
+  correction
+</summary>
+  
+  ```{r, eval=F}
+write.table(extra, file="ex6c_output.txt", 
+            row.names = FALSE,
+            quote = FALSE,
+            sep="\t")
+```
+
+</details>
+  
+
+<!--chapter:end:exercise_additional.Rmd-->
+
+# Regular expressions
+
+Regular expressions are tools to **describe patterns in strings**.
+
+```{r, include=FALSE, eval=TRUE}
+knitr::opts_chunk$set(eval = FALSE, echo = TRUE)
+```
+
+## Find simple matches with grep
+
+* Find a pattern anywhere in the string (outputs the index of the element):
+
+```{r}
+# By default, outputs the index of the element matching the pattern
+grep(pattern="Gen", 
+	x="Genomics")
+```
+
+* Show actual element where the pattern is found (instead of the index only) with **value=TRUE**:
+
+```{r}
+# Set value=TRUE
+grep(pattern="Gen",
+        x="Genomics",
+        value=TRUE)
+```
+
+* Non case-sensitive search with **ignore.case=TRUE**:
+
+```{r}
+# Enter the pattern in lower-case, but case is ignored
+grep(pattern="gen",
+        x="Genomics",
+        value=TRUE,
+        ignore.case=TRUE)
+```
+
+* Show if it DOESN'T match the pattern with **inv=TRUE**:
+
+```{r}
+# Shows what doesn't match
+grep(pattern="gen",
+        x="Genomics",
+        value=TRUE,
+        ignore.case=TRUE,
+	inv=TRUE)
+```
+
+## Regular expressions to find more flexible patterns
+
+<h4>Special characters used for pattern recognition:</h4>
+
+| Character | Description |
+|:----:|:-------:|
+| $ | Find pattern at the end of the string |
+| ^ | Find pattern at the beginning of the string |
+| {n} | The previous pattern should be found exactly n times |
+| {n,m} | The previous pattern should be found between n and m times|
+| + | The previous pattern should be found at least 1 time |
+| * | One or more allowed, but optional |
+| ? | One allowed, but optional |
+
+<h4>Match your own pattern inside **[]**</h4>
+
+| Pattern | Description |
+|:----:|:-------:|
+| [abc] | matches a, b, or c|
+| ^[abc] | matches a, b or c at the beginning of the element|
+| ^A[abc]+ | matches A as the first character of the element, then either a, b or c|
+| ^A[abc]* | matches A as the first character of the element, then optionally either a, b or c|
+| ^A[abc]{1}_ | matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore |
+| [a-z] | matches every character between a and z |
+| [A-Z] | matches every character between A and Z |
+| [0-9] | matches every number between 0 and 9 |
+
+
+* Match anything contained between brackets (here either g or t) once:
+
+```{r}
+grep(pattern="[gt]", 
+	x=c("genomics", "proteomics", "transcriptomics"), 
+	value=TRUE)
+```
+
+* Match anything contained between brackets once AND at the start of the element:
+
+```{r}
+grep(pattern="^[gt]",
+        x=c("genomics", "proteomics", "transcriptomics"),
+        value=TRUE)
+```
+
+* **Create a vector of email addresses:**
+
+```{r}
+vec_ad <- c("marie.curie@yahoo.es", "albert.einstein01@hotmail.com", 
+	"charles.darwin1809@gmail.com", "rosalind.franklin@aol.it")
+```
+
+* Keep only email addresses finishing with "es":
+
+```{r}
+grep(pattern="es$",
+        x=vec_ad,
+        value=TRUE)
+```
+
+## Substitute or remove matching patterns with gsub
+
+From the same vector of email addresses:
+
+* Remove the "@" symbol and the email provider from each address
+
+```{r}
+gsub(pattern="@[a-z.]+",
+        replacement="",
+        x=vec_ad)
+```
+
+* Substitute the "@" symbol with "_at_"
+
+```{r}
+gsub(pattern="@",
+        replacement="_at_",
+        x=vec_ad)
+```
+
+* Substitute "es" and "it" by "eu"
+
+```{r}
+gsub(pattern="es$|it$", 
+	replacement="eu", 
+	x=vec_ad)
+```
+
+## Predefined variables to use in regular expressions:
+
+| | |
+|:---:|:---:|
+| [:lower:] | Lower-case letters |
+| [:upper:] | Upper-case letters |
+| [:alpha:] | Alphabetic characters: [:lower:] and [:upper:] |
+| [:digit:] | Digits: 0 1 2 3 4 5 6 7 8 9 |
+| [:alnum:] | Alphanumeric characters: [:alpha:] and [:digit:] |
+| [:print:] | Printable characters: [:alnum:], [:punct:] and space. |
+| [:punct:] | Punctuation characters: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { &#124; } ~ |
+| [:blank:] | Blank characters: space and tab |
+
+
+* Take the previous character vector containing email addresses:
+  + Remove the @ and the email provider from each address
+```{r}
+gsub(pattern="@[[:lower:][:punct:]]+", 
+	replacement="", 
+	x=vec_ad)
+```
+  + Same thing but remove additionally any number(s) BEFORE the @ (if any):
+```{r}
+gsub(pattern="[[:digit:]]*@[[:lower:][:punct:]]+",
+        replacement="",
+        x=vec_ad)
+```
+  + Same but simplified:
+```{r}
+gsub(pattern="[[:digit:]]*@[[:print:]]+",
+        replacement="",
+        x=vec_ad)
+```
+
+## Use grep and regular expressions to retrieve columns by their names
+
+Example of a data frame:
+
+```{r}
+# Build data frame
+df_regex <- data.frame(expression1=1:4, 
+	expression2=2:5, 
+	expression3=4:7, 
+	annotation=LETTERS[1:4], 
+	expression4=6:3, 
+	average_expression=c(3.25, 3.75, 4.25, 4.75),
+	stringsAsFactors=FALSE)
+
+# Select column names that start with "expression"
+grep(pattern="^expression", 
+	x=colnames(df_regex))
+
+# Select columns from df_regex if their names start with "expression"
+df_regex[, grep(pattern="^expression", colnames(df_regex))]
+```
+
+<!--chapter:end:regex.Rmd-->
+
+## Exercise 8: Regular expressions
+
+Create the script "exercise8.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 8 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+getwd()
+setwd("~/Rcourse/Module2")
+```
+
+</details>
+
+
+**1- Play with grep**
+
+* Create the following data frame
+
+```{r}
+df2 <- data.frame(age=c(32, 45, 12, 67, 40, 27), 
+	citizenship=c("England", "India", "Spain", "Brasil", "Tunisia", "Poland"), 
+	row.names=paste(rep(c("Patient", "Doctor"), c(4, 2)), 1:6, sep=""),
+	stringsAsFactors=FALSE)
+
+```
+
+Using grep: create the smaller data frame df3 that contains only the Patient's but NOT the Doctor's information.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# Select row names
+rownames(df2)
+# Select only rownames that correspond to patients
+grep("Patient", rownames(df2))
+# Create data frame that contains only those rows
+df3 <- df2[grep("Patient", rownames(df2)), ]
+```
+
+</details>
+
+* Use **grep** and ***one*** regular expression to retrieve from df2 patients/doctors coming from either **Brasil** or **Spain**. Brainstorm a bit!
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+df2[grep("a[a-z]*i", df2$citizenship),]
+```
+
+</details>
+
+* Use **grep** and ***one*** regular expression to retrieve from df2 patients/doctors coming from either **Brasil** or **England**.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+df2[grep("[gi]l", df2$citizenship),]
+```
+
+</details>
+
+**2- Play with gsub**
+
+Build this vector of file names:
+
+```{r}
+vector1 <- c("L2_sample1_GTAGCG.fastq.gz", "L1_sample2_ATTGCC.fastq.gz", 
+	"L1_sample3_TGTTAC.fastq.gz", "L4_sample4_ATGGTA.fastq.gz")
+```
+
+Use **gsub** and an appropriate **regular expression** on **vector1** to retrieve only "sample1", "sample2", "sample3" and "sample4".
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# | is used as OR
+gsub(pattern="L[124]{1}_|_[ATGC]{6}.fastq.gz", 
+	replacement="", 
+	x=vector1)
+```
+
+</details>
+
+<!--chapter:end:exercise8.Rmd-->
+
+# Conditional statement
+
+**Conditional statements** are expressions that perform different computations or actions depending on **whether a predefined boolean condition is TRUE or FALSE**.
+
+<br>
+
+<h3>"if" statement</h3>
+
+Structure of the **if statement**:
+
+```{r, eval=F}
+if(condition){
+    action_command
+}
+```
+
+If the **condition** is TRUE, then proceed to the **action_command**; if it is FALSE, then nothing happens.
+<br>
+Note the usage of **curly brakets {}** to start and end the conditional!
+<br>
+
+```{r, eval=F}
+k <- 10
+
+# print if value is > 3
+if(k > 3){
+  print(k)
+}
+
+# print if value is < 3
+if(k < 3){
+  print(k)
+}
+```
+
+<h4>With **else**</h4>
+
+```{r, eval=F}
+if(condition){
+    action_command1
+}else{
+    action_command2
+}
+```
+
+If the **condition** is TRUE, then proceed to **action_command1**; if the **condition** is FALSE, proceed to **action_command2**.
+
+```{r, eval=F}
+k <- 3
+
+if(k > 3){
+  print("greater than 3")
+}else{
+  print("less than 3")
+}
+```
+
+
+<h4>With **else if**</h4>
+
+```{r, eval=F}
+if(condition1){
+    action_command1
+}else if(condition2){
+    action_command2
+}else{
+    action_command3
+}
+```
+
+<img src="images/ifelseif.png" width="450"/>
+
+If the **condition1** is TRUE, then proceed to the **action_command1**; if the **condition1** is FALSE, test for **condition2**: if the **condition2** is TRUE, proceed to the **action_command2**; if neither **condition1** nor **condition2** are TRUE, then proceed to the **action_command3** (*else*).
+<br><br>
+*Note that you can add up as many* ***else if*** *statements as you want, but only one* ***else*** *(not compulsory either)*.
+
+* Example without **else**
+
+```{r, eval=F}
+k <- -2
+# Test whether k is positive or negative or equal to 0
+if(k < 0){
+	print("negative")
+}else if(k > 0){
+	print("positive")
+}else if(k == 0){
+	print("is 0")
+}
+```
+
+* Example with **else**
+
+```{r, eval=F}
+k <- 10
+
+# print if value is <= 3
+if(k <= 3){
+  print("less than or equal to 3")
+}else if(k >= 8){
+  print("greater than or equal to 8")
+}else{
+  print("greater than 3 and less than 8")
+}
+```
+
+
+<!--chapter:end:conditional.Rmd-->
+
+## Exercise 9: If statement
+
+Create the script "exercise9.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 9 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+getwd()
+setwd("~/Rcourse/Module2")
+```
+
+</details>
+
+
+**1- Create vector vec2 as:**
+
+
+```{r}
+vec2 <- c("kiwi", "apple", "pear", "grape")
+```
+
+* Use an **if** statement and the **%in%** function to check whether "apple" is present in vec2 (in such case print "there is an apple!")
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+if("apple" %in% vec2){
+	print("there is an apple there")
+}
+```
+
+</details>
+
+* Use an **if** statement and the **%in%** function to check whether "grapefruit" is present in vec2: if "grapefruit" is not found, test whether "pear" is found (using **else if**).
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+if("grapefruit" %in% vec2){
+        print("there is a grapefruit here")
+}else if("pear" %in% vec2){
+	print("there is no grapefruit here, but there is a pear!")
+}
+```
+
+</details>
+
+* Add an **else** section in case neither grapefruit nor pear is found in vec2.<br>
+Test your **if** statement also on **vec3**:
+
+```{r}
+vec3 <- c("cherry", "strawberry", "blueberry", "peach")
+```
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+if("grapefruit" %in% vec2){
+        print("there is a grapefruit here")
+}else if("pear" %in% vec2){
+	print("there is no grapefruit here, but there is a pear!")
+}else{
+	print("no grapefruit and no pear can be found")
+}
+```
+
+</details>
+
+
+
+
+
+
+<!--chapter:end:exercise9.Rmd-->
+
+# Repetitive execution
+
+**Loops** are used to repeat a specific block of code.
+
+<br>
+
+Structure of the **for loop**:
+
+```{r, eval=F}
+for(i in vector_expression){
+    action_command
+}
+```
+
+3 main elements:
+
+* **i** is the loop variable: it is updated at each iteration.
+* **vector_expression**: value attributed to **i** at each iteration (the number of iterations is the **length of vector_expression**).
+* **action_command**: what action to take at each iteration.
+
+Note the usage of **curly brakets {}** to start and end the loop!
+<br><br>
+<img src="images/forloop1.png" width="300"/><img src="images/forloop2.png" width="450"/>
+
+
+* Example:
+
+```{r}
+for(i in 2:5){
+	# prints the value of i at each iteration
+	print(i)
+	# multiplies i by 2 at each iteration
+	y <- i*2
+	# prints the value of y at each iteration
+	print(y)
+}
+```
+
+* Example of a **for loop** that iterates over a character vector:
+
+```{r}
+# Character vector
+myfruits <- c("apple", "pear", "grape")
+
+# The for loop prints the current element j, and the number of characters of element j
+for(j in myfruits){
+	print(j)
+	print(nchar(j))
+}
+```
+
+* Example of a **for loop** that iterates over each row of a matrix, and prints the minimum value of that row :
+
+```{r}
+# Matrix of 50 rows, 16 columns 
+mymat <- matrix(rnorm(800), 
+	nrow=50)
+	
+# For loop over mymat rows
+	# 1:nrow(mymat): ranges from 1 to the number of rows in the matrix: 1, 2, 3, 4, ...., 48, 49, 50
+	
+for(i in 1:nrow(mymat)){
+	# prints the value of i at each iteration
+	print(i)
+	# prints the minimum value of the ith row of mymat at each iteration
+	print(min(mymat[i,]))
+}
+```
+
+* **If statement** in **For loop**:
+
+You can combine **for loops** and **if statements**:
+
+```{r, eval=F}
+# Matrix
+mymat <- matrix(rnorm(800), 
+        nrow=50)
+	
+# Loop over rows of mymat and print row if its median value is > 0
+for(i in 1:nrow(mymat)){
+	# extract the current row
+	rowi <- mymat[i,]
+	# if median of row is > 0, print row
+	if(median(rowi) > 0){
+		print(rowi)
+	}
+}
+```
+
+You can also have a look at this [tutorial](https://www.datacamp.com/community/tutorials/tutorial-on-loops-in-r), to know more about loops.
+
+
+<!--chapter:end:forloop.Rmd-->
+
+## Exercise 10: For loop
+
+Create the script "exercise10.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 10 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}
+getwd()
+setwd("~/Rcourse/Module2")
+```
+
+</details>
+
+
+**1- Write a for loop that iterates over the sequence of numbers 2 to 10 (both included), and prints the square root of each number (function sqrt()).**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(i in 2:10){
+	print(sqrt(i))
+}
+```
+
+</details>
+
+
+**2- Write a for loop that iterates over the sequence of numbers 5 to 15 (both included), and prints a new vector of 2 elements containing the number and its square root**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(i in 5:15){
+	veci <- c(i, sqrt(i))
+        print(veci)
+}
+```
+
+</details>
+
+**3- Create the following matrix**
+
+```{r}
+mat1 <- matrix(rnorm(40), nrow=20)
+```
+
+* Write a for loop that iterates over each row of **mat1** and prints the **median value of each row**.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(j in 1:nrow(mat1)){
+	# extract the row
+	rowj <- mat1[j,]
+	# compute the median
+	medrowj <- median(rowj)
+	# print median value in row
+	print(medrowj)
+}  
+
+# with less lines of code:
+for(j in 1:nrow(mat1)){
+	# print median value in row
+	print(median(mat1[j,]))
+}   
+```     
+
+</details>
+
+**2- If statement in for loop**
+
+Create the following matrix:
+
+```{r}
+mat4 <- matrix(c(2, 34, 1, NA, 89, 7, 12, NA, 0, 38),
+	nrow=5)
+```
+
+Write a **for** loop that iterates over each row of **mat4**: **if** an **NA** is found, print the row number and the entire row where the **NA** is found.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(k in 1:nrow(mat4)){
+	# extract row
+	rowk <- mat4[k,]
+	if(any(is.na(rowk))){
+		print(k)
+		print(rowk)
+	}
+}
+```
+
+</details>
+
+**3- For loop, if statement and regular expression**
+
+Create vector **vec4** as:
+
+```{r}
+vec4 <- c("Oct4", "DEPP", "RSU1", "Hk2", "ZNF37A", "C1QL1", "Shh", "Cdkn2a")
+```
+
+**vec4** contains Human and Mouse gene symbols.
+<br>
+
+Loop over each element of **vec4**:
+
+* If the element is a **human gene (both characters and numbers; all characters are written in upper-case)**, print a vector of two elements: the name of the gene and "human gene".<br>
+* If the element is a **mouse gene (both characters and numbers; only the first character is written in upper-case)**, print a vector of two elements: the name of the gene and "mouse gene".<br>
+
+> Tip 1: *Use grep and a regular expression in the if statement !*<br>
+> Tip 2: *When grep does not find a match, it returns an element of **length 0** !*<br>
+> Tip 3: *You can also use grepl: check the help page*
+
+How do you get started?
+
+* First, work on the regular expressions: how do you retrieve Human genes only? How do you retrieve Mouse genes only?
+* Then, integrate the regular expressions in the if statement.
+* Finally, integrate all this in a for loop!
+
+<br>
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(gene in vec4){
+	if(length(grep(pattern="^[A-Z0-9]+$", x=gene)) != 0){
+		print(c(gene, "human gene"))
+	}else if(length(grep(pattern="^[A-Z]{1}[a-z0-9]+$", x=gene)) != 0){
+		print(c(gene, "mouse gene"))
+	}
+}
+
+# With grepl
+	# grepl returns a logical vector (match or not for each element of x), not the matching elements themselves.
+for(gene in vec4){
+        if(grepl(pattern="^[A-Z0-9]+$", x=gene)){
+                print(c(gene, "human gene"))
+        }else if(grepl(pattern="^[A-Z]{1}[a-z0-9]+$", x=gene)){
+                print(c(gene, "mouse gene"))
+        }
+}
+
+# easier way! whenever a lower case character is present: it is from mouse
+for(gene in vec4){
+        if(length(grep(pattern="[[:lower:]]", x=gene)) != 0){
+                print(c(gene, "mouse gene"))
+        }else{
+                print(c(gene, "human gene"))
+        }
+}
+
+```
+
+</details>
+
+<!--chapter:end:exercise10.Rmd-->
+
+# "Base" plots in R
+
+R-base package graphics offers functions for producing many plots, for example:
+
+* scatter plots - plot()
+* bar plots - barplot()
+* pie charts - pie()
+* box plots - boxplot()
+* histograms - hist()
+
+## Scatter plots
+
+*A scatter plot has points that show the **relationship** between two sets of data.*
+
+* Simple scatter plot
+
+```{r}
+# Create 2 vectors
+x <- 1:10
+y <- x^2
+
+# Plot x against y
+plot(x, y)
+```
+<img src="images/plots/scatter1.png" width="450"/>
+
+*Note that if one vector only is given as an input, it will be plotted against the indices of each element*
+
+* Add arguments:
+	* col: color
+	* pch: type of point
+	* type: "l" for line, "p" for point, "b" for both point and line
+	* main: title of the plot
+
+```{r}
+plot(x, y, 
+	col="red", 
+	pch=2, 
+	type="b", 
+	main="a pretty scatter plot")
+```
+
+<img src="images/plots/scatter2.png" width="450"/>
+
+* You can play a bit:
+
+```{r}
+plot(x, y, 
+	col=1:10, 
+	pch=1:10, 
+	cex=1:10, 
+	type="b", 
+	main="an even prettier scatter plot")
+```
+<img src="images/plots/scatter3.png" width="450"/>
+
+<h4>Different type of points that you can use:</h4>
+
+<img src="images/plots/pointtype.png" width="450"/>
+
+<h4>About colors</h4>
+
+* Color codes 1 to 8 are taken from the **palette()** function and respectively code for: "black", "red", "green3", "blue", "cyan", "magenta", "yellow", "gray".
+
+```{r}
+# see the 8-color palette:
+palette()
+```
+
+* There is a larger set of build-in colors that you can use:
+
+```{r}
+# see all 657 possible build-in colors:
+colors()
+
+# looking for blue only? You can pick from 66 blueish options:
+grep("blue", colors(), value=TRUE)
+``` 
+
+You can also find them [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
+
+* change the default palette with one of your choice:
+
+```{r}
+palette(grep("blue", colors(), value=TRUE))
+```
+
+* change the palette back to default
+
+```{r}
+palette("default")
+```
+
+## Bar plots
+
+*A bar chart or bar plot displays rectangular bars with **lengths proportional to the values that they represent.***
+
+* A simple bar plot :
+
+```{r}
+# Create a vector
+x <- rep(c("PhDstudent", "Postdoc", "Technician", "PI"), c(8,10,5,2))
+
+# Count number of occurences of each character string
+mytable <- table(x)
+
+# Bar plot using that table
+barplot(mytable)
+```
+
+<img src="images/plots/barplot1.png" width="450"/>
+
+* Customize a bit :
+	* col : color
+	* main : title of the plot
+	* las : orientation of x-axis labels: "2": perpendicular to axis
+
+```{r}
+barplot(mytable,
+	col=1:4,
+	main="bar plot",
+	las=2)
+```
+
+<img src="images/plots/barplot2.png" width="450"/>
+
+* Customize the ordering of the bars :
+
+By default, the bars are organized in alphabetical order. You can change it with the factors.
+
+```{r}
+# Create an ordered factor out of x
+xfact <- factor(x, 
+	levels=c("PhDstudent", "Postdoc", "Technician", "PI"), 
+	ordered=TRUE)
+
+# Produce the table
+xfacttable <- table(xfact)
+
+# Plot the same way
+barplot(xfacttable,
+	col=1:4,
+        main="reorganized bar plot",
+        las=2)
+```
+
+<img src="images/plots/barplot3.png" width="450"/>
+
+* Let's make a stacked barplot :
+
+```{r}
+# Create a matrix of number of type of employees per research program :
+barmat <- matrix(c(8, 10, 9, 2, 6, 4, 5, 3, 14, 13, 16, 4, 11, 10, 8, 5),
+	nrow=4,
+	dimnames=list(c("Technician", "PhDstudent", "PostDoc", "PI"), c("BG", "CDB", "GRSCC", "SB")))
+
+# Plot barplot
+barplot(barmat, col=sample(colors(), 4))
+```
+
+* Add some parameters:
+
+```{r}
+# set a random color vector
+mycolors <- sample(colors(), 4)
+
+# plot barplot
+# ylim sets the lower and upper limit of the y-axis: here it allows us to fit the legend !
+barplot(barmat, 
+	col=mycolors, 
+	ylim=c(0,50),
+	main="stacked barplot")
+
+# add a legend
+# first argument is the legend position
+legend("topleft", 
+	legend=c("Technician", "PhDstudent", "PostDoc", "PI"),
+	fill=mycolors)
+```
+
+<img src="images/plots/barplot4.png" width="450"/>
+
+
+## Pie charts
+
+*A pie chart is a circular charts which is divided into slices, illustrating proportions.*
+
+* Using our previous vector, build a simple pie chart:
+
+```{r}
+# Create a vector
+x <- rep(c("PhDstudent", "Postdoc", "Technician", "PI"), c(8,10,5,2))
+
+# Count number of occurences of each string
+mytable <- table(x)
+
+pie(mytable,
+	main="pie chart",
+	col=c("lightblue", "lightgreen", "salmon", "maroon"))
+```
+
+<img src="images/plots/pie1.png" width="450"/>
+
+## Box plots
+
+*A boxplot is a convenient way to describe the **distribution** of the data.*
+
+* A simple boxplot:
+
+```{r}
+# Create a matrix of 1000 random values from the normal distribution (4 columns, 250 rows)
+x <- matrix(rnorm(1000), ncol=4)
+
+# Basic boxplot
+boxplot(x)
+```
+
+<img src="images/plots/boxplot1.png" width="450"/>
+
+* Add some arguments :
+	* xlab: x-axis label
+	* ylab: y-axis label
+	* at: position of each box along the x-axis: here we skip position 3 to allow more space between boxes 1/2 and 3/4
+
+```{r}
+boxplot(x, 
+	xlab="sample",
+	ylab="expression",
+	at=c(1, 2, 4, 5))
+```
+
+<img src="images/plots/boxplot2.png" width="450"/>
+
+* Add an horizontal line at y=0 with **abline()**; arguments of abline :
+	* h : y-axis starting point of horizontal line (v for a vertical line)
+	* col : color
+	* lwd : line thickness
+	* lty : line type
+
+```{r}
+# First plot the box plot as before:
+boxplot(x, 
+	xlab="sample",
+	ylab="expression",
+	at=c(1, 2, 4, 5),
+	 main="my boxplot")
+	
+# Then run the abline function
+abline(h=0, col="red", lwd=3, lty="dotdash")
+```
+
+<img src="images/plots/boxplot3.png" width="450"/>
+
+* Line types in R:
+
+<img src="images/linetypes-in-r-line-types.png" width="250"/>
+
+
+## Histograms
+
+*A histogram graphically summarizes the **distribution** of the data.*
+
+* A simple histogram
+
+```{r}
+# Vector of 200 random values from the normal distribution
+x <- rnorm(200)
+
+# Plot histogram
+hist(x)
+```
+
+<img src="images/plots/histogram1.png" width="450"/>
+
+* Add parameters:
+	* border: color of bar borders
+	* breaks: number of bars the data is divided into
+	* cex.main: size of title
+	* cex.lab: size of axis labels
+
+```{r}
+hist(x,
+	border="blue",
+	breaks=50,
+	main="Histogram",
+	xlab="",
+	cex.main=2.5,
+	cex.lab=2)
+```
+
+<img src="images/plots/histogram2.png" width="450"/>
+
+
+<!--chapter:end:baseplot.Rmd-->
+
+# How to save plots
+
+## With R Studio
+
+<img src="images/rstudio_plotsave.png" width="450"/>
+
+## With the console
+
+```{r}
+# Open the file that will contain your plot (the name is up to you)
+pdf(file="myplot.pdf")
+
+# execute the plot
+plot(1:10)
+
+# Close the file that will contain the plot
+dev.off()
+```
+
+<h4>Formats</h4>
+
+R supports a variety of file formats for figures: pdf, png, jpeg, tiff, bmp, svg, ps.<br>
+They all come with their own function, for example:
+
+```{r}
+# TIFF
+tiff(file="myfile.tiff")
+
+	plot(1:10)
+
+dev.off()
+
+# JPEG
+jpeg(file="myfile.jpeg")
+
+	plot(1:10)
+
+dev.off()
+
+# etc.
+
+```
+
+The size of the output file can be changed:
+
+```{r}
+# Default: 7 inches (both width and height) for svg, pdf, ps.
+svg(file="myfile.svg", width=8, height=12)
+
+	plot(1:10)
+
+dev.off()
+
+# Default: 480 pixels (both width and height) for jpeg, tiff, png, bmp.
+png(file="myfile.png", width=500, height=600)
+
+	plot(1:10)
+
+dev.off()
+```
+
+*Note that pdf is the only format that supports saving several pages*:
+
+```{r}
+pdf(file="myfile_pages.pdf")
+
+	plot(1:10)
+	plot(2:20)
+
+dev.off()
+```
+
+<h4>Plot several figures in one page</h4>
+
+You can output more than one plot per page using the **par()** function (sets graphical parameters) and the **mfrow** argument.
+
+```{r}
+jpeg(file="myfile_multi.jpeg")
+
+# organize the plot in 1 row and 2 columns:
+	# nr: number of rows
+	# nc: number of columns
+par(mfrow=c(nr=1, nc=2))
+
+	plot(1:10)
+	plot(2:20)
+
+dev.off()
+```
+
+<img src="images/plots/myfile_multi.jpeg" width="350/" >
+
+```{r}
+jpeg(file="myfile_multi4.jpeg")
+
+# organize the plot in 2 rows and 2 columns
+par(mfrow=c(nr=2, nc=2))
+
+# top-left
+plot(1:10)
+# top-right
+barplot(table(rep(c("A","B"), c(2,3))))
+# bottom-left
+pie(table(rep(c("A","B"), c(2,3))))
+# bottom-right
+hist(rnorm(2000))
+
+dev.off()
+```
+
+<img src="images/plots/myfile_multi4.jpeg" width="500/" >
+
+<!--chapter:end:io_plots.Rmd-->
+
+## Exercise 11: Base plots
+
+Create the script "exercise11.R" and save it to the "Rcourse/Module3" directory: you will save all the commands of exercise 11 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}	
+getwd()
+setwd("~/Rcourse/Module3")
+```
+
+</details>
+
+### Exercise 11a- scatter plot
+
+**1- Create the following data frame**
+
+```{r}
+genes <- data.frame(sample1=rnorm(300),
+                    sample2=rnorm(300))
+```
+
+**2- Create a scatter plot showing sample1 (x-axis) vs sample2 (y-axis) of genes.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}	
+plot(genes$sample1, genes$sample2)
+```
+
+</details>
+
+**3- Change the point type and color.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+plot(genes$sample1, 
+     genes$sample2, 
+     col="lightblue", 
+     pch=3)
+```
+
+</details>
+
+**4- Change x-axis and y-axis labels to "Sample 1" and "Sample 2", respectively.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+plot(genes$sample1, 
+     genes$sample2, 
+     col="lightblue", 
+     pch=3,
+     xlab="Sample 1", 
+     ylab="Sample 2")
+```
+
+</details>
+
+**5- Add a title to the plot.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+plot(genes$sample1, 
+     genes$sample2, 
+     col="lightblue", 
+     pch=3,
+     xlab="Sample 1", 
+     ylab="Sample 2",
+     main="scatter plot")
+```
+
+</details>
+
+**6- Add a vertical red line that shows the median expression value of sample 1. Do it in two steps:**<br>
+a. calculate the median expression of genes in sample 1.<br>
+b. plot a vertical line using **abline()**.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# median expression of sample1
+med1 <- median(genes$sample1)
+
+# plot
+plot(genes$sample1, 
+     genes$sample2, 
+     col="lightblue", 
+     pch=3,
+     xlab="Sample 1", 
+     ylab="Sample 2",
+     main="scatter plot")
+
+# vertical line
+abline(v=med1, col="red")
+```
+
+</details>
+
+### Exercise 11b- bar plot + pie chart
+
+**1- Create the following vector**
+
+```{r}
+genes_significance <- rep(c("enriched", "depleted", "none"), c(20, 32, 248))
+```
+
+
+**2- The vector describes whether a gene is up- (enriched) or down- (depleted) regulated, or not regulated (none).**<br>
+Produce a barplot that displays this information: how many genes are enriched, depleted, or not regulated.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+barplot(table(genes_significance))
+```
+
+</details>
+
+**3- Color the bars of the boxplot, each in a different color (3 colors of your choice)**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+barplot(table(genes_significance), 
+  col=c("blue", "red", "grey"))
+
+# If you want to order the bars not by the default (alphabetical) order, you need to create an ordered factor!
+genes_factor <- factor(genes_significance, ordered=TRUE, levels=c("enriched", "none", "depleted"))
+barplot(table(genes_factor), 
+  col=c("blue", "red", "grey"))
+```
+
+</details>
+
+**4- Use the argument "names.arg" in barplot() to rename the bars:**
+Change depleted to "Down", enriched to "Up", none to "Not significant"
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+barplot(table(genes_significance), 
+  col=c("blue", "red", "grey"), 
+  names.arg=c("Down", "Up", "Not significant"))
+```
+
+</details>
+
+**5- The "las" argument allows to rotate the x-axis labels for a better readability.**
+Try value 2 for las: what happens? 
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+barplot(table(genes_significance), 
+  col=c("blue", "red", "grey"), 
+  names.arg=c("Down", "Up", "Not significant"), 
+  las=2)
+```
+
+</details>
+
+**6- Create a pie chart of the same information (Enriched, Depleted, None)**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+pie(table(genes_significance))
+```
+
+</details>
+
+Change the color of the slices, modify the labels, and add a title.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+pie(table(genes_significance), 
+    col=c("blue", "red", "grey"), 
+    main="pie chart", 
+    labels=c("Down", "Up", "Not significant"))
+```
+
+</details>
+
+### Exercise 11c- histogram
+
+**1- Use genes object from exercise 11a to create a histogram of the gene expression distribution of sample 1.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist(genes$sample1)
+```
+
+</details>
+
+**2- Repeat the histogram but change argument "breaks" to 50.**<br>
+What is the difference ?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist(genes$sample1, 
+  breaks=50)
+```
+
+</details>
+
+**3- Color this histogram in light blue.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist(genes$sample1, 
+  breaks=50, 
+  col="lightblue")
+```
+
+</details>
+
+**4- "Zoom in" the histogram: show only the distribution of expression values from 0 to 2 (x-axis) using the xlim argument.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist(genes$sample1, 
+  breaks=50, 
+  col="lightblue",
+  xlim=c(0, 2))
+```
+
+</details>
+
+**5- Save the histogram in a pdf file.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+pdf("myhistogram.pdf")
+
+hist(genes$sample1, 
+    breaks=50, 
+    col="lightblue", 
+    xlim=c(0, 2))
+
+dev.off()
+```
+
+</details>
+
+<!--chapter:end:exercise11.Rmd-->
+
+# Plots from other packages
+
+We will see two additional types of plots:
+
+* Heat map (package gplots or pheatmap)
+* Venn diagram (from package VennDiagram)
+
+## heatmap.2 function from gplots package
+
+A heatmap is a graphical representation of data where the values are represented with **colors**.
+<br>
+The **heatmap.2** function from the **gplots** package allows to produce highly customizable heatmaps.
+
+```{r, eval=F}
+# install gplots package
+install.packages("gplots")
+```
+
+```{r, eval=T}
+# load package
+library("gplots")
+
+# make matrix
+mat <- matrix(rnorm(1200), ncol=6)
+
+# heatmap with the defaults parameters
+heatmap.2(x=mat)
+```
+<img src="images/plots/heatmap1.png" width="500"/>
+
+* Useful arguments include:
+	* Rowv, Colv : process clustering of columns or rows (default TRUE to both)
+	* dendrogram : show dendrogram for row, col, both or none
+	* scale : scale data per row, column, or none
+	* col : dendrogram color palette
+	* trace : control the cyan density lines
+	* RowSideColors, ColSideColors :  block of colors that represent the columns or the rows
+	* labRow,labCol : remove or keep row or col labels
+	* main :  title
+	* xlab, ylab: x-axis or y-axis label
+
+```{r}
+heatmap.2(x=mat, 
+	Colv=FALSE, 
+	dendrogram="row",
+	scale="row",
+	col="bluered",
+	trace="none",
+	ColSideColors=rep(c("green","orange"), each=3),
+	labRow=FALSE,
+	main="my heatmap",
+	ylab="Genes",
+	xlab="Samples")
+```
+
+<img src="images/plots/heatmap2.png" width="500"/>
+
+
+## pheatmap function from the pheatmap package
+
+```{r, eval=F}
+# install pheatmap package
+install.package("pheatmap")
+```
+
+Get started:
+
+```{r, eval=F}
+# load package
+library(pheatmap)
+
+# create matrix
+mat <- matrix(rnorm(1200), ncol=6)
+
+# heatmap with the defaults parameters
+pheatmap(mat)
+```
+
+Change the color palette / gradient
+
+```{r, eval=F}
+# with "rainbow" colors
+pheatmap(mat, color=rainbow(50))
+
+# with blue to red (middle color white)
+pheatmap(mat, color=colorRampPalette(c("navy", "white", "red"))(50))
+```
+
+Do not cluster rows or columns
+
+```{r, eval=F}
+# remove the clustering by rows
+pheatmap(mat, cluster_rows=FALSE)
+
+# remove the clustering by columns
+pheatmap(mat, cluster_cols=FALSE)
+
+# remove both clusterings
+pheatmap(mat, cluster_rows=FALSE, cluster_cols=FALSE)
+```
+
+Add some **annotation colored bar(s)**:
+
+```{r, eval=F}
+# add column names to mat
+colnames(mat) <- paste0("Sample", 1:6)
+
+# create data frame for annotation (in the case of samples, information about the experiment, for example)
+annot_cols = data.frame(
+                Group = c(rep("WT", 3), rep("KO", 3)), 
+                TimePoint = rep(c(0, 5, 10), each=2),
+		row.names = colnames(mat)
+                )
+# plot
+pheatmap(mat, annotation_col = annot_cols)
+```
+
+## venn.diagram function from VennDiagram package
+
+*A Venn diagram shows all possible logical relations between data sets.*
+<br>
+The **venn.diagram** function from the **VennDiagram** package allows to create up to a 5-way Venn Diagram (i.e. 5 circles representing 5 data sets).
+
+```{r}
+# load package
+library(VennDiagram)
+
+# Prepare character vectors
+v1 <- c("DKK1", "NPC1", "NAPG", "ERG", "VHL", "BTD", "MALL", "HAUS1")
+v2 <- c("SMAD4", "DKK1", "ASXL3", "ERG", "CKLF", "TIAM1", "VHL", "BTD", "EMP1", "MALL", "PAX3")
+v3 <- c("PAX3", "SMAD4", "DKK1", "MALL", "ERG", "CDKN2A", "DENR", "NPC1", "NAPG")
+
+# Create a list of vectors
+vlist <- list(v1, v2, v3)
+names(vlist) <- c("list1", "list2", "list3")
+
+# 2-way Venn
+venn.diagram(vlist[1:2], 
+	filename="Venn_2way.png",
+	imagetype="png")
+```
+
+<img src="images/plots/Venn_2way.png" width="450"/>
+
+```{r}
+# 3-way Venn
+venn.diagram(vlist, 
+        filename="Venn_3way.png",
+        imagetype="png")
+```
+
+<img src="images/plots/Venn_3way.png" width="450"/>
+
+* More arguments:
+	* main : title
+	* sub : sub-title
+	* main.col : color of title font
+	* fill : color of circles
+	* col : color of circle lines
+	* cat.col : color of category labels
+
+```{r}
+venn.diagram(vlist,     
+        filename="Venn_3way_more.png",
+        imagetype="png",
+	main="Venn diagram",
+	sub="3-way",
+	main.col="red",
+	fill=c("lightgreen", "lightblue", "lightsalmon"),
+	col=c("lightgreen", "lightblue", "lightsalmon"),
+	cat.col=c("green", "blue", "salmon"))
+
+```
+
+<img src="images/plots/Venn_3way_more.png" width="500"/>
+
+
+<!--chapter:end:extraplot.Rmd-->
+
+# ggplot2 package
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=5, fig.height=4,
+                      echo=TRUE, warning=FALSE, message=FALSE)
+```
+
+* Graphing package inspired by the **G**rammar of **G**raphics work of Leland Wilkinson.
+
+* A tool that enables to concisely describe the components of a graphic.
+
+* Why ggplot2 ?
+	+ Flexible
+	+ Customizable
+	+ Pretty !
+	+ Well documented
+
+* We will see:
+	* Scatter plots
+	* Box plots
+	* Dot plots
+	* Bar plots
+	* Histograms
+	* How to save plots
+	* Volcano plots
+
+## Getting started
+
+Load package:
+
+```{r, eval=TRUE, echo=TRUE, warning=F, message=F}
+library(ggplot2)
+```
+
+* All ggplots start with a **base layer** created with the **ggplot()** function:
+
+```{r, eval=F, echo=TRUE}
+ggplot(data=dataframe, mapping=aes(x=column1, y=column2))
+```
+
+*The base layer is setting the grounds but NOT plotting anything:*
+
+* You then add a layer (with the **+** sign) that describes what kind of plot you want:
+	* geom_point()
+	* geom_bar()
+	* geom_histogram()
+	* geom_boxplot()
+	* ...
+
+* And then you will add **one layer at a time** to add more features to your plot!
+
+## Scatter plot
+
+```{r, eval=F}
+# Example of a scatter plot: add the geom_point() layer
+ggplot(data=dataframe, mapping=aes(x=column1, y=column2)) + geom_point()
+```
+
+* Example of a simple scatter plot:
+
+```{r, eval=TRUE}
+# Create a data frame
+df1 <- data.frame(sample1=rnorm(200), sample2=rnorm(200))
+
+# Plot !
+ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) + 
+	geom_point()
+```
+
+
+* Add **layers** to that object to customize the plot:
+	* **ggtitle** to add a title
+	* **geom_vline** to add a vertical line
+	* etc.
+```{r, eval=TRUE}
+ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) + 
+  geom_point() +
+	ggtitle(label="my first ggplot") +
+	geom_vline(xintercept=0)
+```
+
+Bookmark that [ggplot2 reference](https://ggplot2.tidyverse.org/reference/) and that good [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf) for some of the ggplot2 options.
+
+* You can save the plot in an object **at any time** and add layers to that object:
+
+```{r, eval=TRUE}
+# Save in an object
+p <- ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) +
+	geom_point()
+# Add layers to that object
+p + ggtitle(label="my first ggplot")
+```
+
+* What is inside the **aes** (aesthetics)function ?
+	* Anything that varies according to your data !
+		* Columns with values to be plotted.
+		* Columns with which you want to, for example, color the points.
+
+Color all points in red (not depending on the data):
+
+```{r, eval=TRUE}
+ggplot(data=df1 , mapping=aes(x=sample1, y=sample2)) +
+	geom_point(color="red") 
+```
+
+
+Color the points according to another column in the data frame:
+
+```{r, eval=TRUE}
+# Build a data frame from df1: add a column with "yes" and "no"
+df2 <- data.frame(df1, grouping=rep(c("yes", "no"), c(80, 120)))
+
+# Plot and add the color parameter in the aes():
+pscat <- ggplot(data=df2, mapping=aes(x=sample1, y=sample2, color=grouping)) + 
+  geom_point()
+pscat
+```
+
+## Box plots
+
+* Simple boxplot showing the data distribution of sample 1:
+
+```{r, eval=TRUE}
+ggplot(data=df2, mapping=aes(x="", y=sample1)) + geom_boxplot()
+```
+
+* Split the data into 2 boxes:
+```{r, eval=TRUE}
+ggplot(data=df2, mapping=aes(x=grouping, y=sample1)) + geom_boxplot()
+```
+
+* What if you want to plot both sample1 and sample2 ?<br>
+*You need to convert into a **long** format*
+<br>
+
+What is the **long** format ?
+
+<img src="images/plots/wide2long.png" width="800">
+
+
+Plotting both sample1 and sample2:
+
+```{r, eval=FALSE}
+# install package reshape2
+install.packages("reshape2")
+```
+
+```{r, eval=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+# load package
+library("reshape2")
+
+# convert to long format
+df_long <- melt(data=df2)
+	# all numeric values are organized into only one column: value
+# plot:
+ggplot(data=df_long, mapping=aes(x=variable, y=value)) + 
+  geom_boxplot()
+```
+
+* What if now you also want to see the distribution of "yes" and "no" in both sample1 and sample2 ?<br>
+*Integrate a parameter to the **aes()***
+
+```{r, eval=TRUE}
+# Either color (color of the box border)
+ggplot(data=df_long, mapping=aes(x=variable, y=value, color=grouping)) + 
+  geom_boxplot()
+```
+
+```{r, eval=TRUE}
+# Or fill (color inside the box)
+ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
+  geom_boxplot()
+```
+
+Do you want to change the default colors?<br>
+
+* Integrate either layer:
+	* **scale_color_manual()** for the boxes border color
+	* **scale_fill_manual()** for the boxes color (inside)
+
+```{r, eval=TRUE}
+pbox_fill <- ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
+	geom_boxplot() +
+	scale_fill_manual(values=c("slateblue2", "chocolate"))
+
+pbox_fill
+
+pbox_col <- ggplot(data=df_long, mapping=aes(x=variable, y=value, color=grouping)) +
+        geom_boxplot() +
+        scale_color_manual(values=c("slateblue2", "chocolate"))
+pbox_col
+```
+
+## Dot plots
+
+Example of the expression of a gene in 6 samples: 2 experimental groups in triplicates.
+
+```{r, eval=TRUE}
+# create a named vector with the expression of a gene
+mygene <- c(8.1, 8.2, 8.6, 8.7, 9.4, 8.5)
+
+# the names of each element of the vector are sample names
+names(mygene) <- c("KO1", "KO2", "KO3", "WT1", "WT2", "WT3")
+
+# transform to long format
+mygenelong <- melt(data=mygene)
+
+# add new columns containing sample names and experimental groups
+mygenelong$sample_name <- rownames(mygenelong)
+mygenelong$group <- gsub("[1-3]{1}", "", mygenelong$sample_name)
+
+# dot plot
+  # add labels with "label" in the aes() and layer geom_text()
+  # nudge_x adjust the labels horizontally
+pdot <- ggplot(data=mygenelong, mapping=aes(x=group, y=value, col=group, label=sample_name)) + 
+  geom_point() +
+  geom_text(nudge_x=0.2)
+
+pdot
+```
+
+* Add more layers:
+  * **xlab()** to change the x axis label
+  * **ylab()** to change the y axis label
+  * **theme** to manage the legend
+  
+```{r, eval=TRUE}
+pdot +  xlab(label="Experimental group") +
+  ylab(label="Normalized expression (log2)") +
+  ggtitle(label="Expression of gene 1") +
+  theme_bw() +
+  theme(legend.position="none")
+  
+```
+
+## Bar plots
+
+```{r, eval=TRUE}
+# A simple bar plot
+ggplot(data=df2, mapping=aes(x=grouping)) + geom_bar()
+```
+
+* Customize:
+  * **scale_x_discrete** is used to handle x-axis title and labels
+  * **coord_flip** swaps the x and y axis
+  
+```{r, eval=TRUE}
+# Save the plot in the object "p"
+pbar <- ggplot(data=df2, mapping=aes(x=grouping, fill=grouping)) + 
+  geom_bar()
+
+pbar
+
+# Change x axis label with scale_x_discrete and change order of the bars:
+p2 <- pbar + scale_x_discrete(name="counts of yes / no", limits=c("yes", "no"))
+
+p2
+
+# Swapping x and y axis with coord_flip():
+p3 <- p2 + coord_flip()
+
+p3
+
+# Change fill
+p4 <- p3 + scale_fill_manual(values=c("yellow", "cyan"))
+
+p4
+```
+
+### Bar plots with error bars
+
+We can create error bars on barplots.
+<br>
+Let's create a toy data set, that contains 7 independent qPCR measurements for 3 genes:
+
+```{r, eval=TRUE}
+pcr <- data.frame(Dkk1=c(18.2, 18.1, 17.8, 17.85, 18.6, 12.4, 10.7),
+                  Pten=c(15.1,15.2, 15.0, 15.6, 15.3, 14.8, 15.9),
+                  Tp53=c(9.1, 9.9, 9.25, 8.7, 8.8, 9.3, 7.8))
+```
+
+The height of the bar will represent the **average** qPCR measurement. The error bar will represent the **average - standard deviation** on the lowe part, and the **average + standard deviation** on the high part.
+<br>
+We need to create a data frame that **summarizes** these values:
+
+```{r, eval=TRUE}
+pcr_summary <- data.frame(average=apply(pcr, 2, mean), 
+                          standard_deviation=apply(pcr, 2, sd),
+                          genes=colnames(pcr))
+```
+
+And now we can plot!
+
+```{r, eval=TRUE}
+ggplot(pcr_summary, aes(x=genes, y=average, fill=genes)) + 
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin=average-standard_deviation, ymax=average+standard_deviation), colour="black", width=.1) 
+```
+        
+## Histograms
+
+Simple histogram on one sample (using the df2 data frame):
+
+```{r, eval=TRUE}
+ggplot(data=df1, mapping=aes(x=sample1)) + geom_histogram()
+```
+
+Histogram on more samples (using df_long):
+
+```{r, eval=TRUE}
+ggplot(data=df_long, mapping=aes(x=value)) + geom_histogram()
+```
+
+Split the data per sample ("variable" column that represents here the samples):
+
+```{r, eval=TRUE}
+ggplot(data=df_long, mapping=aes(x=value, fill=variable)) + geom_histogram()
+```
+
+By default, the histograms are **stacked**: change to position **dodge** (side by side):
+
+```{r, eval=TRUE}
+phist <- ggplot(data=df_long, mapping=aes(x=value, fill=variable)) + 
+	geom_histogram(position='dodge')
+phist
+```
+
+## About themes
+
+You can change the default global **theme** (background color, grid lines etc. all non-data display):
+
+```{r, eval=TRUE, message=F, warning=F}
+# go back to a previous plot
+p <- ggplot(data=df_long, mapping=aes(x=value)) + geom_histogram()
+
+# Try different themes
+p + theme_bw()
+p + theme_minimal()
+p + theme_void()
+p + theme_grey()
+p + theme_dark()
+p + theme_light() 
+```
+
+## Saving plots in files
+
+* The same as for regular plots applies:
+
+```{r, eval=F, message=F, warning=F}
+png("myggplot.png")
+p
+dev.off()
+```
+
+* You can also use the ggplot2 **ggsave** function:
+
+```{r, eval=F, message=F, warning=F}
+# By default, save the last plot that was produced
+ggsave(filename="lastplot.png")
+
+# You can pick which plot you want to save:
+ggsave(filename="myplot.png", plot=p)
+
+# Many different formats are available: 
+  # "eps", "ps", "tex", "pdf", "jpeg", "tiff", "png", "bmp", "svg", "wmf"
+ggsave(filename="myplot.ps", plot=p, device="ps")
+
+# Change the height and width (and their unit):
+ggsave(filename="myplot.pdf", 
+  width = 20, 
+  height = 20, 
+  units = "cm")
+```
+
+* You can also organize several plots on one page
+	* One way is to use the **gridExtra** package:
+	* ncol, nrow: arrange plots in such number of columns and rows
+```{r, eval=F}
+install.packages("gridExtra")
+```
+
+```{r, eval=TRUE, message=F, error=F, warning=F}
+# load package
+library(gridExtra)
+# 2 rows and 2 columns
+grid.arrange(pscat, pbox_fill, pbar, phist, nrow=2, ncol=2)
+```
+
+```{r, fig.width=10, fig.height=4, eval=TRUE, message=F, warning=F}
+# 1 row and 4 columns
+grid.arrange(pscat, pbox_fill, pbar, phist, nrow=1, ncol=4)
+```
+
+Combine ggsave and grid.arrange:
+
+```{r, eval=FALSE}
+myplots <- grid.arrange(pscat, pbox_fill, pbar, phist, nrow=1, ncol=4)
+
+ggsave(filename="mygridarrange.png", plot=myplots))
+```
+
+
+<!--chapter:end:ggplot2.Rmd-->
+
+## Exercise 12: ggplot2
+
+Create the script "exercise12.R" and save it to the "Rcourse/Module3" directory: you will save all the commands of exercise 12 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r, eval=F}	
+getwd()
+setwd("~/Rcourse/Module3")
+```
+
+</details>
+
+### Exercise 12a- Scatter plot
+
+**1- Load ggplot2 package**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}	
+library(ggplot2)
+```
+
+</details>
+
+**2- Download the data we will use for plotting:**
+
+```{r}
+download.file("https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/master/ex12_normalized_intensities.csv", "ex12_normalized_intensities.csv", method="curl")
+```
+
+**3- Read file into object "project1" (remember the input/output tutorial!)**
+
+About this file:
+
+* It is comma separated (csv format).
+* The first row is the header.
+* Take the row names from the first column.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+project1 <- read.table("ex12_normalized_intensities.csv", 
+  sep=",", 
+  header=TRUE, 
+  row.names = 1)
+```
+
+</details>
+
+**4- Using ggplot, create a simple scatter plot representing gene expression of "sampleB" on the x-axis and "sampleH" on the y-axis.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=project1, mapping=aes(x=sampleB, y=sampleH)) + 
+  geom_point()
+```
+
+</details>
+
+**5- Add a column to the data frame "project1" (call this column "expr_limits"), that will be filled the following way:**
+
+* if the expression of a gene is > 13 in both sampleB and sampleH, set to the value in "expr_limits" to "high"
+* if the expression of a gene is < 6 in both sampleB and sampleH, set it to "low"
+* if different, set it to "normal".
+
+<details>
+<summary>
+correction 
+</summary>
+
+```{r}
+# Initialize all values to "normal"
+project1$expr_limits <- "normal"
+# "high" if project1$sampleB > 13 and project1$sampleH > 13
+project1$expr_limits[project1$sampleB > 13 & project1$sampleH > 13] <- "high"
+# "low" if project1$sampleB < 6 and project1$sampleH < 6
+project1$expr_limits[project1$sampleB < 6 & project1$sampleH < 6] <- "low"
+
+## more complicated version, using a for loop and if statement
+# initialize column "expr_limits" with "normal"
+project1$expr_limits <- "normal"
+# loop around each row of "project1"
+for(i in 1:nrow(project1)){
+  # create an object that contains only row "i" (the row will be different at every iteration)
+  rowi <- project1[i,]
+  # test values in rowi: assign expr_limits accordingly
+  if(rowi$sampleB > 13 & rowi$sampleH > 13){
+    project1$expr_limits[i] <- "high"
+  }else if(rowi$sampleB < 6 & rowi$sampleH < 6){
+    project1$expr_limits[i] <- "low"
+  }
+}
+```
+
+</details>
+
+**6- Color the points of the scatter plot according to the newly created column "expr_limits". Save that plot in the object "p"**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+p <- ggplot(data=project1, mapping=aes(x=sampleB, y=sampleH, color=expr_limits)) + 
+  geom_point()
+```
+
+</details>
+  
+**7- Add a layer to "p" in order to change the points colors to blue (for low), grey (for normal) and red (for high). Save this plot in the object "p2".**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+p2 <- p + scale_color_manual(values=c("red", "blue", "grey"))
+```
+
+</details>
+
+
+**8- Save p2 in a jpeg file.**
+a. Try with RStudio Plots window (Export)<br>
+b. Try in the console:<br>
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+jpeg("myscatterggplot.jpg")
+  p2
+dev.off()
+```
+
+</details>
+
+### Exercise 12b- Box plot
+
+**1- Convert "project1" from a wide format to a long format: save in the object "project_long"**
+*Note: remember melt function from reshape2 package.*
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+library(reshape2)
+project_long <- melt(data=project1)
+```
+
+</details>
+
+**2- Produce a boxplot of the expression of all samples (i.e. each sample is represented by a box)**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=project_long, mapping=aes(x=variable, y=value)) + 
+  geom_boxplot()
+```
+
+</details>
+
+**3- Modify the previous boxplot so as to obtain 3 "sub-boxplots" per sample, each representing the expression of either "low", "normal" or "high" genes.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=project_long, mapping=aes(x=variable, y=value, color=expr_limits)) + 
+  geom_boxplot()
+```
+
+</details>
+
+**4- Rotate the x-axis labels (90 degrees angle).**
+<br>
+This is new ! Google it !!
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=project_long, mapping=aes(x=variable, y=value, color=expr_limits)) + 
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+</details>
+
+**5- Finally, add a title of your choice to the plot.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=project_long, mapping=aes(x=variable, y=value, color=expr_limits)) + 
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  ggtitle("My boxplots")
+```
+
+</details>
+
+
+### Exercise 12c- Bar plot
+
+**1- Produce a bar plot of how many low/normal/high genes are in the column "expr_limits" of "project1".**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=project1, mapping=aes(x=expr_limits)) + 
+  geom_bar()
+```
+
+</details>
+
+**2- Add an horizontal line at counts 250 (y-axis). Save the plot in the object "bar"**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+bar <- ggplot(data=project1, mapping=aes(x=expr_limits)) + 
+  geom_bar() + 
+  geom_hline(yintercept=250)
+```
+
+</details>
+
+**3- Swap the x and y axis. Save in object "bar2".**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+bar2 <- bar + coord_flip()
+```
+
+</details>
+
+**4- Save "bar" and "bar2" plots in a "png" file, using the **png()** function, in the console: use grid.arrange (from the gridExtra package) to organize both plots in one page !**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+png("mybarplots.png", width=1000)
+  grid.arrange(bar, bar2, nrow=1, ncol=2)
+dev.off()
+```
+
+</details>
+
+
+### Exercise 12d- Histogram
+
+**1- Create a simple histogram using project_long (column "value").**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=project_long, mapping=aes(x=value)) + 
+  geom_histogram()
+```
+
+</details>
+
+**2- Notice that you get the following warning message" *stat_bin() using `bins = 30`. Pick better value with `binwidth`.***<br>
+Set "bins"" parameter of geom_histogram() to 50.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=project_long, mapping=aes(x=value)) + 
+  geom_histogram(bins=50)
+```
+
+</details>
+
+**3- The histogram plots the expression values for **All samples**.**
+<br>
+Change the plot so as to obtain one histograms per sample.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=project_long, mapping=aes(x=value, fill=variable)) + 
+  geom_histogram(bins=50)
+```
+
+</details>
+
+**4- By default, geom_histogram produces a stacked histogram.**
+<br>
+Change argument "position" to "dodge".
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist1 <- ggplot(data=project_long, mapping=aes(x=value, fill=variable)) + 
+  geom_histogram(position="dodge")
+```
+  
+</details>
+
+**5- A bit messy ?? Run the following:**
+
+```{r}
+hist2 <- ggplot(data=project_long, mapping=aes(x=value, fill=variable)) + 
+  geom_histogram(bins=50) + 
+  facet_grid(~variable)
+```
+
+**facet_grid()** is another easy way to split the views!
+
+**6- Change the default colors with scale_fill_manual().**
+<br>
+You can try the rainbow() function for coloring.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist3 <- hist2 + scale_fill_manual(values=rainbow(8))
+```
+
+</details>
+
+**7- "Zoom in" the plots: set the x-axis limits from from 6 to 13.**
+<br>
+Add the **xlim()** layer.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist4 <- hist3 + xlim(6, 13)
+```
+
+</details>
+
+**8- Change the default theme to theme_minimal()**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist5 <- hist4 + theme_minimal()
+```
+
+</details>
+
+**9- Save that last plot to a file (format of your choice) with ggsave()**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggsave(filename="myhistograms.png", plot=hist5, device="png", width=20)
+```
+
+</details>
+
+<!--chapter:end:exercise12.Rmd-->
+
+## More about the theme() function
+
+The **theme()** allows a precise control of graphical parameters such as axis text, ticks and labels, or legend texts and labels, etc.
+<br>
+More details [here](https://ggplot2.tidyverse.org/reference/theme.html)
+
+```{r, eval=T, echo=F, message=F, warning=F}
+project1 <- read.table("ex12_normalized_intensities.csv", 
+  sep=",", 
+  header=TRUE, 
+  row.names = 1)
+# Initialize all values to "normal"
+project1$expr_limits <- "normal"
+# "high" if project1$sampleB > 13 and project1$sampleH > 13
+project1$expr_limits[project1$sampleB > 13 & project1$sampleH > 13] <- "high"
+# "low" if project1$sampleB < 6 and project1$sampleH < 6
+project1$expr_limits[project1$sampleB < 6 & project1$sampleH < 6] <- "low"
+
+library(reshape2)
+project_long <- melt(data=project1)
+```
+
+```{r, eval=T}
+# Let's the project_long object from exercise 12, and plot boxplots
+boxp <- ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) + 
+  geom_boxplot()
+  
+# Remove the legend title:
+boxp + theme(legend.title=element_blank())
+
+# Change font of legend text
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"))
+
+# Put legend on the top of the plot
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"),
+  legend.position="top")
+  
+# Rotate x-axis labels
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"),
+  legend.position="top",
+  axis.text.x = element_text(angle = 90))
+
+# Add a color to the plot's background
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"),
+  legend.position="top",
+  axis.text.x = element_text(angle = 90),
+  plot.background = element_rect(fill = "yellow"))
+```
+
+## Volcano plots
+
+A volcano plot is a type of scatter plot represents differential expression of features (genes for example): on the x-axis we typically find the fold change and on the y-axis the p-value.
+<br>
+
+```{r, eval=T, echo=T, message=F, warning=F}
+# Download the data we will use for plotting
+download.file("https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction_2021/master/de_df_for_volcano.rds", "de_df_for_volcano.rds", method="curl")
+
+# The RDS format is used to save a single R object to a file, and to restore it.
+# Extract that object in the current session:
+tmp <- readRDS("de_df_for_volcano.rds")
+
+# remove rows that contain NA values
+de <- tmp[complete.cases(tmp), ]
+``` 
+
+```{r, eval=T, echo=T, message=F, warning=F}
+# The basic scatter plot: x is "log2FoldChange", y is "pvalue"
+ggplot(data=de, aes(x=log2FoldChange, y=pvalue)) + geom_point()
+```
+
+Doesn't look quite like a Volcano plot...<br>
+Convert the p-value into a -log10(p-value)
+
+```{r, eval=T, echo=T, message=F, warning=F}
+# Convert directly in the aes()
+p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point()
+```
+
+```{r, eval=T, echo=T, message=F, warning=F}
+# Add more simple "theme"
+p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point() + theme_minimal()
+```
+
+```{r, eval=T, echo=T, message=F, warning=F}
+# Add vertical lines for log2FoldChange thresholds, and one horizontal line for the p-value threshold 
+p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
+	geom_hline(yintercept=-log10(0.05), col="red")
+```
+
+```{r, eval=T, echo=T, message=F, warning=F}
+# The significantly differentially expressed genes are the ones found in the upper-left and upper-right corners.
+# Add a column to the data frame to specify if they are UP- or DOWN- regulated (log2FoldChange respectively positive or negative)
+
+# add a column of NAs
+de$diffexpressed <- "NO"
+# if log2Foldchange > 0.6 and pvalue < 0.05, set as "UP" 
+de$diffexpressed[de$log2FoldChange > 0.6 & de$pvalue < 0.05] <- "UP"
+# if log2Foldchange < -0.6 and pvalue < 0.05, set as "DOWN"
+de$diffexpressed[de$log2FoldChange < -0.6 & de$pvalue < 0.05] <- "DOWN"
+
+# Re-plot but this time color the points with "diffexpressed"
+p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed)) + geom_point() + theme_minimal()
+
+# Add lines as before...
+p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
+        geom_hline(yintercept=-log10(0.05), col="red")
+```
+
+```{r, eval=T, echo=T, message=F, warning=F}
+## Change point color 
+
+# 1. by default, it is assigned to the categories in an alphabetical order):
+p3 <- p2 + scale_color_manual(values=c("blue", "black", "red"))
+
+# 2. to automate a bit: ceate a named vector: the values are the colors to be used, the names are the categories they will be assigned to:
+mycolors <- c("blue", "red", "black")
+names(mycolors) <- c("DOWN", "UP", "NO")
+p3 <- p2 + scale_colour_manual(values = mycolors)
+```
+
+```{r, eval=T, echo=T, message=F, warning=F}
+# Now write down the name of genes beside the points...
+# Create a new column "delabel" to de, that will contain the name of genes differentially expressed (NA in case they are not)
+de$delabel <- NA
+de$delabel[de$diffexpressed != "NO"] <- de$gene_symbol[de$diffexpressed != "NO"]
+
+ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label=delabel)) + 
+	geom_point() + 
+	theme_minimal() +
+	geom_text()
+```
+
+```{r, eval=T, echo=T, message=F, warning=F}
+# Finally, we can organize the labels nicely using the "ggrepel" package and the geom_text_repel() function
+# load library
+library(ggrepel)
+# plot adding up all layers we have seen so far
+ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label=delabel)) +
+        geom_point() + 
+        theme_minimal() +
+        geom_text_repel() +
+        scale_color_manual(values=c("blue", "black", "red")) +
+        geom_vline(xintercept=c(-0.6, 0.6), col="red") +
+        geom_hline(yintercept=-log10(0.05), col="red")
+```
+
+
+<!--chapter:end:ggtheme.Rmd-->
+

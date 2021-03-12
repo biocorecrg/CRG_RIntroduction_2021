@@ -1,21 +1,20 @@
 #Dates, time & location
 
 ##Dates:
-* Module 1: Monday 18th & Tuesday 19th February, 2019
-* Module 2: Monday 25th & Tuesday 26th February, 2019
-* Module 3: Monday 4th & Tuesday 5th March, 2019
-* Module 4: Monday 11th & Tuesday 12th March, 2019
+* Module 1: Monday 18th & Tuesday 19th March, 2021
+* Module 2: Monday 25th & Tuesday 26th March, 2021
+* Module 3: Monday 4th & Tuesday 5th April, 2021
 
 ##Time:
-* 10:00-13:30 <br>
+* 10:00-13:00 <br>
 
 ##Location:
-* CRG Training center
+* Online (Zoom platform)
 
 # Instructors 
-[Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu) (Module 4)<br>
-[Sarah Bonnin](mailto:sarah.bonnin@crg.eu) (Module 1, 2, 3)<br>
-from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460, 4th floor hotel side)
+[Sarah Bonnin](mailto:sarah.bonnin@crg.eu) <br>
+[Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu) <br>
+from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office , 4th floor hotel side)
 
 #Learning objectives
 <a href="https://sbcrg.github.io/CRG_RIntroduction/images/learningobjectives.png"><img src="images/learningobjectives.png"  width="600"/></a>
@@ -62,8 +61,6 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 * [Graphing with ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
 	+ [Exercise 12](https://sbcrg.github.io/CRG_RIntroduction/exercise12): ggplot2.
 
-##Module 4
-* [Exploratory data analysis](https://rawgit.com/sbcrg/CRG_RIntroduction/master/Module4_2_EDA_Mar_2019.html)
 
 #Resources
 
