@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9.8 Exercise 4. Matrix manipulation | Introduction to R</title>
-  <meta name="description" content="9.8 Exercise 4. Matrix manipulation | Introduction to R" />
-  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+  <title>9.8 Exercise 4. Matrix manipulation | Introduction to R (2021)</title>
+  <meta name="description" content="9.8 Exercise 4. Matrix manipulation | Introduction to R (2021)" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9.8 Exercise 4. Matrix manipulation | Introduction to R" />
+  <meta property="og:title" content="9.8 Exercise 4. Matrix manipulation | Introduction to R (2021)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9.8 Exercise 4. Matrix manipulation | Introduction to R" />
+  <meta name="twitter:title" content="9.8 Exercise 4. Matrix manipulation | Introduction to R (2021)" />
   
   
   
@@ -24,15 +24,16 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2020-03-09" />
+<meta name="date" content="2021-03-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="two-dimensional-structures-manipulation.html">
-<link rel="next" href="exercise-5-data-frame-manipulation.html">
+<link rel="prev" href="two-dimensional-structures-manipulation.html"/>
+<link rel="next" href="exercise-5-data-frame-manipulation.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -40,6 +41,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -50,25 +54,27 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -77,9 +83,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -130,18 +136,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
 <li class="chapter" data-level="2" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>2</b> What is R ?</a></li>
-<li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
+<li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
-<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a><ul>
+<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a>
+<ul>
 <li class="chapter" data-level="3.3.1" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html#note-on-files-and-folders-names"><i class="fa fa-check"></i><b>3.3.1</b> Note on files and folders names</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
+<li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
 <li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R console</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
+<li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
 <li class="chapter" data-level="5.2" data-path="simple-calculations.html"><a href="simple-calculations.html"><i class="fa fa-check"></i><b>5.2</b> Simple calculations</a></li>
 <li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
@@ -150,62 +160,75 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.6" data-path="names-of-objects.html"><a href="names-of-objects.html"><i class="fa fa-check"></i><b>5.6</b> Names of objects</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
-<li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
+<li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
 <li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
 <li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
 <li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a><ul>
+<li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data structures</a><ul>
-<li class="chapter" data-level="9.1" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>9.1</b> Vectors</a><ul>
+<li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data structures</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>9.1</b> Vectors</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="vectors.html"><a href="vectors.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
 <li class="chapter" data-level="9.1.2" data-path="vectors.html"><a href="vectors.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
 <li class="chapter" data-level="9.1.3" data-path="vectors.html"><a href="vectors.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
 <li class="chapter" data-level="9.1.4" data-path="vectors.html"><a href="vectors.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
 <li class="chapter" data-level="9.1.5" data-path="vectors.html"><a href="vectors.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a><ul>
+<li class="chapter" data-level="9.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a>
+<ul>
 <li class="chapter" data-level="9.2.1" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
 <li class="chapter" data-level="9.2.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a><ul>
+<li class="chapter" data-level="9.3" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a>
+<ul>
 <li class="chapter" data-level="9.3.1" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
 <li class="chapter" data-level="9.3.2" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3b."><i class="fa fa-check"></i><b>9.3.2</b> Exercise 3b.</a></li>
 </ul></li>
 <li class="chapter" data-level="9.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
-<li class="chapter" data-level="9.5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>9.5</b> Matrices</a><ul>
+<li class="chapter" data-level="9.5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>9.5</b> Matrices</a>
+<ul>
 <li class="chapter" data-level="9.5.1" data-path="matrices.html"><a href="matrices.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
 <li class="chapter" data-level="9.5.2" data-path="matrices.html"><a href="matrices.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
 <li class="chapter" data-level="9.5.3" data-path="matrices.html"><a href="matrices.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.6" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>9.6</b> Data frames</a><ul>
+<li class="chapter" data-level="9.6" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>9.6</b> Data frames</a>
+<ul>
 <li class="chapter" data-level="9.6.1" data-path="data-frames.html"><a href="data-frames.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
 <li class="chapter" data-level="9.6.2" data-path="data-frames.html"><a href="data-frames.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
 </ul></li>
-<li class="chapter" data-level="9.7" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a><ul>
+<li class="chapter" data-level="9.7" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a>
+<ul>
 <li class="chapter" data-level="9.7.1" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
 <li class="chapter" data-level="9.7.2" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
 </ul></li>
 <li class="chapter" data-level="9.8" data-path="exercise-4-matrix-manipulation.html"><a href="exercise-4-matrix-manipulation.html"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
-<li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a><ul>
+<li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
+<ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
 <li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
 <li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
-<li class="chapter" data-level="11" data-path="input-output.html"><a href="input-output.html"><i class="fa fa-check"></i><b>11</b> Input / Output</a><ul>
+<li class="chapter" data-level="11" data-path="input-output.html"><a href="input-output.html"><i class="fa fa-check"></i><b>11</b> Input / Output</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="on-vectors.html"><a href="on-vectors.html"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
 <li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
-<li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
+<li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a>
+<ul>
 <li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
 <li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frames-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frames: play with the arguments of read.table</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
+<li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a>
+<ul>
 <li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
 <li class="chapter" data-level="12.2" data-path="r-contrib.html"><a href="r-contrib.html"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
 <li class="chapter" data-level="12.3" data-path="install-a-package.html"><a href="install-a-package.html"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
@@ -216,7 +239,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
 <li class="chapter" data-level="12.9" data-path="exercise-to-do-at-home.html"><a href="exercise-to-do-at-home.html"><i class="fa fa-check"></i><b>12.9</b> Exercise (to do at home)</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a><ul>
+<li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a>
+<ul>
 <li class="chapter" data-level="13.1" data-path="find-simple-matches-with-grep.html"><a href="find-simple-matches-with-grep.html"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
 <li class="chapter" data-level="13.2" data-path="regular-expressions-to-find-more-flexible-patterns.html"><a href="regular-expressions-to-find-more-flexible-patterns.html"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
 <li class="chapter" data-level="13.3" data-path="substitute-or-remove-matching-patterns-with-gsub.html"><a href="substitute-or-remove-matching-patterns-with-gsub.html"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
@@ -224,45 +248,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.5" data-path="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
 <li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>14</b> Conditional statement</a><ul>
+<li class="chapter" data-level="14" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>14</b> Conditional statement</a>
+<ul>
 <li class="chapter" data-level="14.1" data-path="exercise-9-if-statement.html"><a href="exercise-9-if-statement.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: If statement</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>15</b> Repetitive execution</a><ul>
+<li class="chapter" data-level="15" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>15</b> Repetitive execution</a>
+<ul>
 <li class="chapter" data-level="15.1" data-path="exercise-10-for-loop.html"><a href="exercise-10-for-loop.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: For loop</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> “Base” plots in R</a><ul>
+<li class="chapter" data-level="16" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> “Base” plots in R</a>
+<ul>
 <li class="chapter" data-level="16.1" data-path="scatter-plots.html"><a href="scatter-plots.html"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
 <li class="chapter" data-level="16.2" data-path="bar-plots.html"><a href="bar-plots.html"><i class="fa fa-check"></i><b>16.2</b> Bar plots</a></li>
 <li class="chapter" data-level="16.3" data-path="pie-charts.html"><a href="pie-charts.html"><i class="fa fa-check"></i><b>16.3</b> Pie charts</a></li>
 <li class="chapter" data-level="16.4" data-path="box-plots.html"><a href="box-plots.html"><i class="fa fa-check"></i><b>16.4</b> Box plots</a></li>
 <li class="chapter" data-level="16.5" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>16.5</b> Histograms</a></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html"><i class="fa fa-check"></i><b>17</b> How to save plots</a><ul>
+<li class="chapter" data-level="17" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html"><i class="fa fa-check"></i><b>17</b> How to save plots</a>
+<ul>
 <li class="chapter" data-level="17.1" data-path="with-r-studio.html"><a href="with-r-studio.html"><i class="fa fa-check"></i><b>17.1</b> With R Studio</a></li>
 <li class="chapter" data-level="17.2" data-path="with-the-console.html"><a href="with-the-console.html"><i class="fa fa-check"></i><b>17.2</b> With the console</a></li>
-<li class="chapter" data-level="17.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html"><i class="fa fa-check"></i><b>17.3</b> Exercise 11: Base plots</a><ul>
+<li class="chapter" data-level="17.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html"><i class="fa fa-check"></i><b>17.3</b> Exercise 11: Base plots</a>
+<ul>
 <li class="chapter" data-level="17.3.1" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11a--scatter-plot"><i class="fa fa-check"></i><b>17.3.1</b> Exercise 11a- scatter plot</a></li>
 <li class="chapter" data-level="17.3.2" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11b--bar-plot-pie-chart"><i class="fa fa-check"></i><b>17.3.2</b> Exercise 11b- bar plot + pie chart</a></li>
 <li class="chapter" data-level="17.3.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11c--histogram"><i class="fa fa-check"></i><b>17.3.3</b> Exercise 11c- histogram</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html"><i class="fa fa-check"></i><b>18</b> Plots from other packages</a><ul>
+<li class="chapter" data-level="18" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html"><i class="fa fa-check"></i><b>18</b> Plots from other packages</a>
+<ul>
 <li class="chapter" data-level="18.1" data-path="heatmap-2-function-from-gplots-package.html"><a href="heatmap-2-function-from-gplots-package.html"><i class="fa fa-check"></i><b>18.1</b> heatmap.2 function from gplots package</a></li>
 <li class="chapter" data-level="18.2" data-path="pheatmap-function-from-the-pheatmap-package.html"><a href="pheatmap-function-from-the-pheatmap-package.html"><i class="fa fa-check"></i><b>18.2</b> pheatmap function from the pheatmap package</a></li>
 <li class="chapter" data-level="18.3" data-path="venn-diagram-function-from-venndiagram-package.html"><a href="venn-diagram-function-from-venndiagram-package.html"><i class="fa fa-check"></i><b>18.3</b> venn.diagram function from VennDiagram package</a></li>
 </ul></li>
-<li class="chapter" data-level="19" data-path="ggplot2-package.html"><a href="ggplot2-package.html"><i class="fa fa-check"></i><b>19</b> ggplot2 package</a><ul>
+<li class="chapter" data-level="19" data-path="ggplot2-package.html"><a href="ggplot2-package.html"><i class="fa fa-check"></i><b>19</b> ggplot2 package</a>
+<ul>
 <li class="chapter" data-level="19.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>19.1</b> Getting started</a></li>
 <li class="chapter" data-level="19.2" data-path="scatter-plot.html"><a href="scatter-plot.html"><i class="fa fa-check"></i><b>19.2</b> Scatter plot</a></li>
 <li class="chapter" data-level="19.3" data-path="box-plots-1.html"><a href="box-plots-1.html"><i class="fa fa-check"></i><b>19.3</b> Box plots</a></li>
 <li class="chapter" data-level="19.4" data-path="dot-plots.html"><a href="dot-plots.html"><i class="fa fa-check"></i><b>19.4</b> Dot plots</a></li>
-<li class="chapter" data-level="19.5" data-path="bar-plots-1.html"><a href="bar-plots-1.html"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a><ul>
+<li class="chapter" data-level="19.5" data-path="bar-plots-1.html"><a href="bar-plots-1.html"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a>
+<ul>
 <li class="chapter" data-level="19.5.1" data-path="bar-plots-1.html"><a href="bar-plots-1.html#bar-plots-with-error-bars"><i class="fa fa-check"></i><b>19.5.1</b> Bar plots with error bars</a></li>
 </ul></li>
 <li class="chapter" data-level="19.6" data-path="histograms-1.html"><a href="histograms-1.html"><i class="fa fa-check"></i><b>19.6</b> Histograms</a></li>
 <li class="chapter" data-level="19.7" data-path="about-themes.html"><a href="about-themes.html"><i class="fa fa-check"></i><b>19.7</b> About themes</a></li>
 <li class="chapter" data-level="19.8" data-path="saving-plots-in-files.html"><a href="saving-plots-in-files.html"><i class="fa fa-check"></i><b>19.8</b> Saving plots in files</a></li>
-<li class="chapter" data-level="19.9" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a><ul>
+<li class="chapter" data-level="19.9" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a>
+<ul>
 <li class="chapter" data-level="19.9.1" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.9.1</b> Exercise 12a- Scatter plot</a></li>
 <li class="chapter" data-level="19.9.2" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.9.2</b> Exercise 12b- Box plot</a></li>
 <li class="chapter" data-level="19.9.3" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.9.3</b> Exercise 12c- Bar plot</a></li>
@@ -272,7 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="19.11" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>19.11</b> Volcano plots</a></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/sarahbonnin/CRG_RIntroduction" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/sarahbonnin/CRG_RIntroduction_2021" target="blank">Published with bookdown</a></li>
 
 </ul>
 
@@ -283,7 +316,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R (2021)</a>
           </h1>
         </div>
 
@@ -291,152 +324,152 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercise-4.-matrix-manipulation" class="section level2">
+<div id="exercise-4.-matrix-manipulation" class="section level2" number="9.8">
 <h2><span class="header-section-number">9.8</span> Exercise 4. Matrix manipulation</h2>
 <p>Create the script “exercise4.R” and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 4 in that script.
 <br>Remember you can comment the code using #.</p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb208-1" data-line-number="1"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb208-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</a>
-<a class="sourceLine" id="cb208-3" data-line-number="3"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="exercise-4-matrix-manipulation.html#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb208-2"><a href="exercise-4-matrix-manipulation.html#cb208-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</span>
+<span id="cb208-3"><a href="exercise-4-matrix-manipulation.html#cb208-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>1- Create three numeric vectors x, y, z, each of 4 elements of your choice.</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb209-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">:</span><span class="dv">5</span></a>
-<a class="sourceLine" id="cb209-2" data-line-number="2">y &lt;-<span class="st"> </span><span class="dv">6</span><span class="op">:</span><span class="dv">9</span></a>
-<a class="sourceLine" id="cb209-3" data-line-number="3">z &lt;-<span class="st"> </span><span class="dv">7</span><span class="op">:</span><span class="dv">4</span></a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="exercise-4-matrix-manipulation.html#cb209-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb209-2"><a href="exercise-4-matrix-manipulation.html#cb209-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">9</span></span>
+<span id="cb209-3"><a href="exercise-4-matrix-manipulation.html#cb209-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">:</span><span class="dv">4</span></span></code></pre></div>
 </details>
 <p>Use rbind() to create a matrix <strong>mat</strong> (3 rows and 4 columns) out of x, y and z.</p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb210-1" data-line-number="1">mat &lt;-<span class="st"> </span><span class="kw">rbind</span>(x, y, z)</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="exercise-4-matrix-manipulation.html#cb210-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, y, z)</span></code></pre></div>
 </details>
 <p><strong>2- Create the same matrix now using the matrix function. Repeat the same using the byrow=TRUE parameter: what is different?</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb211-1" data-line-number="1">mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data=</span><span class="kw">c</span>(x, y, z), <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb211-2" data-line-number="2"><span class="co"># &quot;byrow=TRUE&quot;: what is different in the output ?</span></a>
-<a class="sourceLine" id="cb211-3" data-line-number="3">mat_byrow &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data=</span><span class="kw">c</span>(x, y, z), <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="exercise-4-matrix-manipulation.html#cb211-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data=</span><span class="fu">c</span>(x, y, z), <span class="at">nrow=</span><span class="dv">3</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
+<span id="cb211-2"><a href="exercise-4-matrix-manipulation.html#cb211-2" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;byrow=TRUE&quot;: what is different in the output ?</span></span>
+<span id="cb211-3"><a href="exercise-4-matrix-manipulation.html#cb211-3" aria-hidden="true" tabindex="-1"></a>mat_byrow <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data=</span><span class="fu">c</span>(x, y, z), <span class="at">nrow=</span><span class="dv">3</span>, <span class="at">ncol=</span><span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 </details>
-<p><strong>3- Add names to mat’s columns: “a”, “b”, “c”, “d”, respectively.</strong></p>
+<p><strong>3- Add names to mat’s columns: “a,” “b,” “c,” “d,” respectively.</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb212-1" data-line-number="1"><span class="kw">colnames</span>(mat) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="exercise-4-matrix-manipulation.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>4- Calculate the sum of each row, and the sum of each column</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb213-1" data-line-number="1"><span class="kw">rowSums</span>(mat); <span class="kw">colSums</span>(mat)</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="exercise-4-matrix-manipulation.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rowSums</span>(mat); <span class="fu">colSums</span>(mat)</span></code></pre></div>
 </details>
 <p><strong>5- Create the matrix mat2 as:</strong></p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb214-1" data-line-number="1">mat2 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="kw">seq</span>(<span class="dt">from=</span><span class="dv">1</span>, <span class="dt">to=</span><span class="dv">10</span>, <span class="dt">by=</span><span class="dv">2</span>), <span class="dv">5</span><span class="op">:</span><span class="dv">1</span>, <span class="kw">rep</span>(<span class="dt">x=</span><span class="dv">2017</span>, <span class="dt">times=</span><span class="dv">5</span>)), <span class="dt">ncol=</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="exercise-4-matrix-manipulation.html#cb214-1" aria-hidden="true" tabindex="-1"></a>mat2 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>, <span class="at">to=</span><span class="dv">10</span>, <span class="at">by=</span><span class="dv">2</span>), <span class="dv">5</span><span class="sc">:</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="at">x=</span><span class="dv">2017</span>, <span class="at">times=</span><span class="dv">5</span>)), <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
 <p>What does function seq() do?</p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
+</summary>
 <p><strong>seq</strong> generate sequences of numbers. Here, it creates a sequences from 1 to 10 with a step of 2 numbers.</p>
 </details>
 <p><strong>6- What are the dimensions of mat2 (number of rows and number of columns)?</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb215-1" data-line-number="1"><span class="co"># number of rows</span></a>
-<a class="sourceLine" id="cb215-2" data-line-number="2"><span class="kw">nrow</span>(mat2)</a>
-<a class="sourceLine" id="cb215-3" data-line-number="3"><span class="co"># number of columns</span></a>
-<a class="sourceLine" id="cb215-4" data-line-number="4"><span class="kw">ncol</span>(mat2)</a>
-<a class="sourceLine" id="cb215-5" data-line-number="5"><span class="co"># dimensions: number of rows, number of columns</span></a>
-<a class="sourceLine" id="cb215-6" data-line-number="6"><span class="kw">dim</span>(mat2)</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="exercise-4-matrix-manipulation.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="co"># number of rows</span></span>
+<span id="cb215-2"><a href="exercise-4-matrix-manipulation.html#cb215-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(mat2)</span>
+<span id="cb215-3"><a href="exercise-4-matrix-manipulation.html#cb215-3" aria-hidden="true" tabindex="-1"></a><span class="co"># number of columns</span></span>
+<span id="cb215-4"><a href="exercise-4-matrix-manipulation.html#cb215-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(mat2)</span>
+<span id="cb215-5"><a href="exercise-4-matrix-manipulation.html#cb215-5" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions: number of rows, number of columns</span></span>
+<span id="cb215-6"><a href="exercise-4-matrix-manipulation.html#cb215-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(mat2)</span></code></pre></div>
 </details>
-<p><strong>7- Add column names to mat2: “day”, “month” and “year”, respectively.</strong></p>
+<p><strong>7- Add column names to mat2: “day,” “month” and “year,” respectively.</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb216-1" data-line-number="1"><span class="kw">colnames</span>(mat2) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;day&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;year&quot;</span>)</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="exercise-4-matrix-manipulation.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;day&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;year&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>8- Add row names to mat2: letters “A” to “E”</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb217-1" data-line-number="1"><span class="kw">rownames</span>(mat2) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;E&quot;</span>)</a>
-<a class="sourceLine" id="cb217-2" data-line-number="2"><span class="kw">rownames</span>(mat2) &lt;-<span class="st"> </span>LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="exercise-4-matrix-manipulation.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mat2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;E&quot;</span>)</span>
+<span id="cb217-2"><a href="exercise-4-matrix-manipulation.html#cb217-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mat2) <span class="ot">&lt;-</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div>
 </details>
 <p><strong>9- Shows row(s) of mat2 where the month column is greater than or equal to 3.</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb218-1" data-line-number="1"><span class="co"># select column month</span></a>
-<a class="sourceLine" id="cb218-2" data-line-number="2">mat2[, <span class="st">&quot;month&quot;</span>]</a>
-<a class="sourceLine" id="cb218-3" data-line-number="3"><span class="co"># element(s) of column month that is (are) greater than or equal to 3</span></a>
-<a class="sourceLine" id="cb218-4" data-line-number="4">mat2[,<span class="st">&quot;month&quot;</span>] <span class="op">&gt;=</span><span class="st"> </span><span class="dv">3</span></a>
-<a class="sourceLine" id="cb218-5" data-line-number="5"><span class="co"># finally select row(s) where the month columns is greater than or equal to 3</span></a>
-<a class="sourceLine" id="cb218-6" data-line-number="6">mat2[mat2[,<span class="st">&quot;month&quot;</span>] <span class="op">&gt;=</span><span class="st"> </span><span class="dv">3</span>,]</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="exercise-4-matrix-manipulation.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select column month</span></span>
+<span id="cb218-2"><a href="exercise-4-matrix-manipulation.html#cb218-2" aria-hidden="true" tabindex="-1"></a>mat2[, <span class="st">&quot;month&quot;</span>]</span>
+<span id="cb218-3"><a href="exercise-4-matrix-manipulation.html#cb218-3" aria-hidden="true" tabindex="-1"></a><span class="co"># element(s) of column month that is (are) greater than or equal to 3</span></span>
+<span id="cb218-4"><a href="exercise-4-matrix-manipulation.html#cb218-4" aria-hidden="true" tabindex="-1"></a>mat2[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span></span>
+<span id="cb218-5"><a href="exercise-4-matrix-manipulation.html#cb218-5" aria-hidden="true" tabindex="-1"></a><span class="co"># finally select row(s) where the month columns is greater than or equal to 3</span></span>
+<span id="cb218-6"><a href="exercise-4-matrix-manipulation.html#cb218-6" aria-hidden="true" tabindex="-1"></a>mat2[mat2[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span>,]</span></code></pre></div>
 </details>
 <p><strong>10- Replace all elements of mat2 that are equal to 2017 with 2018.</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb219-1" data-line-number="1"><span class="co"># which elements of mat2 that are exactly equal to 2017</span></a>
-<a class="sourceLine" id="cb219-2" data-line-number="2">mat2<span class="op">==</span><span class="dv">2017</span></a>
-<a class="sourceLine" id="cb219-3" data-line-number="3"><span class="co"># retrieve actual elements</span></a>
-<a class="sourceLine" id="cb219-4" data-line-number="4">mat2[mat2<span class="op">==</span><span class="dv">2017</span>]</a>
-<a class="sourceLine" id="cb219-5" data-line-number="5"><span class="co"># replace all 2017 with 2018</span></a>
-<a class="sourceLine" id="cb219-6" data-line-number="6">mat2[mat2<span class="op">==</span><span class="dv">2017</span>] &lt;-<span class="st"> </span><span class="dv">2018</span></a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="exercise-4-matrix-manipulation.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements of mat2 that are exactly equal to 2017</span></span>
+<span id="cb219-2"><a href="exercise-4-matrix-manipulation.html#cb219-2" aria-hidden="true" tabindex="-1"></a>mat2<span class="sc">==</span><span class="dv">2017</span></span>
+<span id="cb219-3"><a href="exercise-4-matrix-manipulation.html#cb219-3" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve actual elements</span></span>
+<span id="cb219-4"><a href="exercise-4-matrix-manipulation.html#cb219-4" aria-hidden="true" tabindex="-1"></a>mat2[mat2<span class="sc">==</span><span class="dv">2017</span>]</span>
+<span id="cb219-5"><a href="exercise-4-matrix-manipulation.html#cb219-5" aria-hidden="true" tabindex="-1"></a><span class="co"># replace all 2017 with 2018</span></span>
+<span id="cb219-6"><a href="exercise-4-matrix-manipulation.html#cb219-6" aria-hidden="true" tabindex="-1"></a>mat2[mat2<span class="sc">==</span><span class="dv">2017</span>] <span class="ot">&lt;-</span> <span class="dv">2018</span></span></code></pre></div>
 </details>
 <p><strong>11- Multiply all elements of the 2nd column of mat2 by 7. Reassign mat2!</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb220-1" data-line-number="1"><span class="co"># multiply all elements of the 2nd column of mat2 by 7</span></a>
-<a class="sourceLine" id="cb220-2" data-line-number="2">mat2[,<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span><span class="dv">7</span></a>
-<a class="sourceLine" id="cb220-3" data-line-number="3"><span class="co"># reassign mat2 with the new values of column 2</span></a>
-<a class="sourceLine" id="cb220-4" data-line-number="4">mat2[,<span class="dv">2</span>] &lt;-<span class="st"> </span>mat2[,<span class="dv">2</span>] <span class="op">*</span><span class="st"> </span><span class="dv">7</span></a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="exercise-4-matrix-manipulation.html#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="co"># multiply all elements of the 2nd column of mat2 by 7</span></span>
+<span id="cb220-2"><a href="exercise-4-matrix-manipulation.html#cb220-2" aria-hidden="true" tabindex="-1"></a>mat2[,<span class="dv">2</span>] <span class="sc">*</span> <span class="dv">7</span></span>
+<span id="cb220-3"><a href="exercise-4-matrix-manipulation.html#cb220-3" aria-hidden="true" tabindex="-1"></a><span class="co"># reassign mat2 with the new values of column 2</span></span>
+<span id="cb220-4"><a href="exercise-4-matrix-manipulation.html#cb220-4" aria-hidden="true" tabindex="-1"></a>mat2[,<span class="dv">2</span>] <span class="ot">&lt;-</span> mat2[,<span class="dv">2</span>] <span class="sc">*</span> <span class="dv">7</span></span></code></pre></div>
 </details>
 <p><strong>12- Add the column named “time” to mat2, that contains values 8, 12, 11, 10, 8. Save in the new object mat3.</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb221-1" data-line-number="1">mat3 &lt;-<span class="st"> </span><span class="kw">cbind</span>(mat2, <span class="dt">time=</span><span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>))</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="exercise-4-matrix-manipulation.html#cb221-1" aria-hidden="true" tabindex="-1"></a>mat3 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(mat2, <span class="at">time=</span><span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>))</span></code></pre></div>
 </details>
 <p><strong>13- Replace all elements of mat3 that are less than 3 with NA.</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb222-1" data-line-number="1"><span class="co"># which elements of mat3 that are less than 3</span></a>
-<a class="sourceLine" id="cb222-2" data-line-number="2">mat3 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span></a>
-<a class="sourceLine" id="cb222-3" data-line-number="3"><span class="co"># actually elements of mat3 that are less than 3</span></a>
-<a class="sourceLine" id="cb222-4" data-line-number="4">mat3[mat3 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>]</a>
-<a class="sourceLine" id="cb222-5" data-line-number="5"><span class="co"># reassign elements of mat3 that are less than 3 with NA</span></a>
-<a class="sourceLine" id="cb222-6" data-line-number="6">mat3[mat3 <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="exercise-4-matrix-manipulation.html#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements of mat3 that are less than 3</span></span>
+<span id="cb222-2"><a href="exercise-4-matrix-manipulation.html#cb222-2" aria-hidden="true" tabindex="-1"></a>mat3 <span class="sc">&lt;</span> <span class="dv">3</span></span>
+<span id="cb222-3"><a href="exercise-4-matrix-manipulation.html#cb222-3" aria-hidden="true" tabindex="-1"></a><span class="co"># actually elements of mat3 that are less than 3</span></span>
+<span id="cb222-4"><a href="exercise-4-matrix-manipulation.html#cb222-4" aria-hidden="true" tabindex="-1"></a>mat3[mat3 <span class="sc">&lt;</span> <span class="dv">3</span>]</span>
+<span id="cb222-5"><a href="exercise-4-matrix-manipulation.html#cb222-5" aria-hidden="true" tabindex="-1"></a><span class="co"># reassign elements of mat3 that are less than 3 with NA</span></span>
+<span id="cb222-6"><a href="exercise-4-matrix-manipulation.html#cb222-6" aria-hidden="true" tabindex="-1"></a>mat3[mat3 <span class="sc">&lt;</span> <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
 </details>
 <p><strong>14- Remove rows from mat3 if a NA is present. Save in the new object mat4.</strong></p>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb223-1" data-line-number="1">mat4 &lt;-<span class="st"> </span><span class="kw">na.omit</span>(mat3)</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="exercise-4-matrix-manipulation.html#cb223-1" aria-hidden="true" tabindex="-1"></a>mat4 <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(mat3)</span></code></pre></div>
 </details>
 <p><strong>15- Retrieve the smaller value of each column of mat4.</strong></p>
 <p>Try different approaches:</p>
@@ -444,25 +477,25 @@ correction
 <li>Retrieve the minimum for each column one by one.</li>
 </ul>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb224-1" data-line-number="1"><span class="kw">min</span>(mat4[,<span class="st">&quot;day&quot;</span>])</a>
-<a class="sourceLine" id="cb224-2" data-line-number="2"><span class="kw">min</span>(mat4[,<span class="st">&quot;month&quot;</span>])</a>
-<a class="sourceLine" id="cb224-3" data-line-number="3"><span class="kw">min</span>(mat4[,<span class="st">&quot;year&quot;</span>])</a>
-<a class="sourceLine" id="cb224-4" data-line-number="4"><span class="kw">min</span>(mat4[,<span class="st">&quot;time&quot;</span>])</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="exercise-4-matrix-manipulation.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;day&quot;</span>])</span>
+<span id="cb224-2"><a href="exercise-4-matrix-manipulation.html#cb224-2" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;month&quot;</span>])</span>
+<span id="cb224-3"><a href="exercise-4-matrix-manipulation.html#cb224-3" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;year&quot;</span>])</span>
+<span id="cb224-4"><a href="exercise-4-matrix-manipulation.html#cb224-4" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;time&quot;</span>])</span></code></pre></div>
 </details>
 <ul>
 <li>Retrieve the minimum of all columns simultaneously using the apply() function.</li>
 </ul>
 <details>
-<p><summary>
+<summary>
 correction
-</summary></p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb225-1" data-line-number="1"><span class="co"># mat4: object</span></a>
-<a class="sourceLine" id="cb225-2" data-line-number="2"><span class="co"># 2: by column</span></a>
-<a class="sourceLine" id="cb225-3" data-line-number="3"><span class="co"># min: function to apply</span></a>
-<a class="sourceLine" id="cb225-4" data-line-number="4"><span class="kw">apply</span>(mat4, <span class="dv">2</span>, min)</a></code></pre></div>
+</summary>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="exercise-4-matrix-manipulation.html#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mat4: object</span></span>
+<span id="cb225-2"><a href="exercise-4-matrix-manipulation.html#cb225-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 2: by column</span></span>
+<span id="cb225-3"><a href="exercise-4-matrix-manipulation.html#cb225-3" aria-hidden="true" tabindex="-1"></a><span class="co"># min: function to apply</span></span>
+<span id="cb225-4"><a href="exercise-4-matrix-manipulation.html#cb225-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mat4, <span class="dv">2</span>, min)</span></code></pre></div>
 </details>
 
 </div>
@@ -477,11 +510,13 @@ correction
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -489,12 +524,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -506,6 +540,10 @@ gitbook.start({
 "text": null
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
