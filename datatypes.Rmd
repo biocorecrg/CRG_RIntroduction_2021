@@ -24,3 +24,15 @@ typeof(b)
 str(b)
 ```
 
+**HANDS-ON** (3 minutes)
+
+1. Create the following objects:
+```{r, eval=F}
+o1 <- "R course"
+o2 <- 10
+o3 <- FALSE
+o4 <- "9"
+```
+2. Check the data type of each object with **mode**.
+3. Did you expect a different result? Why?
+

@@ -4,7 +4,8 @@
 
 * Your home directory is the one that hosts your personal folder:
 	+ for CRG users: **/nfs/users/[yourgroup]/[yourusername]**
-
+  + your **Home** is where your store your data, analysis, etc. You are the only one who can **write** in this folder (apart from the system administrator, if needed).
+  
 ## Tree of directories
 
 <a href="https://sbcrg.github.io/CRG_RIntroduction/images/tree_directories.png"><img src="images/tree_directories.png" alt="rstudio logo" width="1000"/></a>
@@ -15,6 +16,7 @@
 <br>
 <font size="12"> <b>..</b></font>: one directory up the tree
 
+In this example, **Rcourse** is a sub-directory of **sbonnin**, which in turn is a sub-direcory of **bi**, and so on.
 
 ## Navigate the tree of directory with the R console
 
@@ -22,22 +24,45 @@
 ```{r, eval=FALSE}	
 getwd()
 ```
+Hit **Enter/Return** to execute getwd() in the R console.
 
 * Change working directory with **setwd** (set working directory)<br>
-Go to a directory giving the absolute path: 
+(in a Windows or MAC OS system, you would typically **double-click** to reach sub-directories). <br>
+Here we use **commands/fonctions** in the **R console**:<br>
+
+Go to a directory giving the **absolute path** (the entire address): 
+```{r, eval=FALSE}
+setwd("/users/bi/sbonnin/Rcourse")
+```
+
+Same as:
 ```{r, eval=FALSE}
 setwd("~/Rcourse")
 ```
-Go to a directory giving the relative path:
+
+Go to a directory giving the **relative path**. For example, if you are in **Rcourse**, you can either go to **Module1** using the absolute path:
+```{r, eval=FALSE}
+setwd("/users/bi/sbonnin/Rcourse/Module1")
+```
+or the relative path:
 ```{r, eval=FALSE}
 setwd("Module1")
 ```
-You are now in: "~/Rcourse/Module1"
+You are now in: "~/Rcourse/Module1" (check it with getwd() !).
 <br>
 Move one directory "up" the tree:
 ```{r, eval=FALSE} 
 setwd("..")
 ```
 You are now in: "~/Rcourse"
+
+### **HANDS-ON** (3-5 minutes)
+
+1. Execute the following command in the R console:
+```{r, eval=FALSE}
+setwd("/")
+```
+2. Where are you now? (use getwd())
+3. Find your way back to the **Module1** folder
 
 

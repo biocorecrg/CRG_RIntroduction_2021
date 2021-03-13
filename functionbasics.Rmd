@@ -2,19 +2,19 @@
 
 In programming, a function is a section of a program that **performs a specific task**.
 
-For example, the function **getwd** is used as:
+For example, the function **getwd**, that we have seen before, is used as:
 ```{r, eval=FALSE}
 getwd()
 ```
-and has the task of outputting the current working directory.
+and has the task of outputting the **current working directory**.
 
-You can recognize a function with the **round brackets**: function**()**
+You can recognize a function by its **round brackets**: function**()**
  
-A function can also take *arguments/parameters*
+A function can also take *arguments/parameters*:
 ```{r, eval=FALSE}
 setwd(dir="Rcourse")
 ```
-**setwd** changes the current working directory and takes one argument **dir**. 
+**setwd** changes the current working directory to the directory specified with argument **dir**. 
 
 <img src="images/func_arg1.png"  width="250"/>
 
@@ -22,12 +22,17 @@ setwd(dir="Rcourse")
 
 <img src="images/func_arg2.png"  width="250"/>
 
-* Getting help: <br>
+* Getting help / know how a function works: <br>
 
 From the console:
 
 ```{r}
 help(getwd)
+```
+
+or (shortcut):
+
+```{r}
 ?getwd
 ```
 

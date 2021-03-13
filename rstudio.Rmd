@@ -10,7 +10,7 @@
 
 * [RStudio Desktop installation](https://www.rstudio.com/products/rstudio/download)
 
-* [RStudio access from the CRG server](http://rstudio.linux.crg.es/)
+* [RStudio access from the CRG server](http://rstudio4.linux.crg.es/auth-sign-in)
 	+ Access with CRG credentials
 	+ For those who don't have access to the CRG server, use the guest accounts.
 
@@ -28,6 +28,8 @@
 
 ## Setting up the folder structure for the course
 
+Create the **Rcourse** folder (bottom-right panel, **Files** tab). Inside the Rcourse folder, create 3 sub-folder: **Module1**, **Module2**, **Module3**:
+
 Rcourse<br>
   |-Module1<br>
   |-Module2<br>
@@ -41,8 +43,8 @@ Rcourse<br>
 As you choose names for files and folders, a few rules will make your life easier:
 
 * Do not use **spaces**.
-* Do not use **accents** (replace **é** by **e**).
-* Avoid special characters, although**underscores** are a safe option.
+* Do not use **accents** (e.g. replace **é** by **e**).
+* Avoid special characters, although **underscores** are a safe option.
 
 
 

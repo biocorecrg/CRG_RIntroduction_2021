@@ -2,6 +2,8 @@
 
 ## Arithmetic operators
 
+Use the R console as a calculator!
+
 | Operator  | Function      |
 |:--------: |:-------------:|
 |     +     | addition      |
@@ -14,7 +16,7 @@ In the R console:
 ```{r}
 10 - 2
 ```
-Type **Enter** for R to interpret the command.
+Hit **Enter/Return** for R to interpret the command.
 
 ## Simple calculations
 
@@ -37,6 +39,22 @@ What is the percentage of miRNA?
 ( 45 / 414 ) * 100
 ```
 
+### **HANDS-ON** (3-5 minutes)
+
+Given the following table (number of exons / introns of the hg38 genome, Gencode 31 annotation):
+Total number of genes: 60651
+
+Of which:
+
+| Protein-coding genes       | 19951      |
+| Long non-coding RNA genes      | 17948      |
+| Small non-coding RNA genes      | 7569      |
+| Pseudogenes | 14773 |
+
+1. How many genes are we missing to reach the total number of genes?
+2. What is the percentage of long non-coding RNA genes?
+
+
 ## Objects in R
 
 Everything that stores any kind of data in R is an **object**:
@@ -47,8 +65,8 @@ Everything that stores any kind of data in R is an **object**:
 
 + **<-** or **=**
 + Essentially the same but, to avoid confusions:
-  + Use **<-** for assignments
-  + Keep **=** for functions arguments
+  + Use **<-** for assigning data to objects.
+  + Keep **=** for functions arguments (we will talk about it in a next section).
 
 ## Assigning data to an object
 
@@ -56,6 +74,8 @@ Everything that stores any kind of data in R is an **object**:
 
 * Assigning a value to the object **B**:
 B <- 10
+
+* NOTE: You can see the objects you created in the upper-right panel in RStudio: the environment.
 
 * Reassigning: modifying the content of an object:
 ```{r, eval=FALSE}
@@ -69,7 +89,24 @@ B <- B + 10
 
 <span style="color:red">**B changed !!**</span><br>
 
-* You can see the objects you created in the upper right panel in RStudio: the environment.
+## Using objects
+
+You can use objects in your calculations:
+<br>
+Create objects A and B:
+```{r, eval=FALSE}
+A <- 7
+B <- 10
+```
+
+Sum up A and B, and save the sum in C:
+```{r, eval=FALSE}
+A + B
+C <- A + B
+```
+
+Note that if A or B change, C will NOT change, unless you re-run "C <- A + B"
+
 
 ## Names of objects
 
@@ -77,6 +114,11 @@ Naming objects in R is quite flexible. However, there are a few rules and good p
 
 * Object names are **case sensitive**: object **MyObject** is not the same as **myobject**
 * They can contains both **numbers** or **letters** but should **START** with a letter, e.g. *2myobject* is not a valid object name.
-* You can use **underscores** and points. Other **special characters** should be avoided.
-* Avoid using function names as object names.
+* You can use **underscores**. Other **special characters** should be avoided.
+* Avoid using function names as object names (e.g. do not create a **getwd** object).
 
+### **HANDS-ON** (3-5 minutes)
+
+1. Create the object **myfirstobject**, that contains the value **762**.
+2. Create **mysecondobject**, that contains the value **80**.
+3. Create **mythirdobject** , that contains the subtraction of **mysecondobject** from **myfirstobject**.

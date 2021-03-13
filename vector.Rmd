@@ -1,6 +1,6 @@
 ## Vectors
 
-A vector is a sequence of data elements from the **same type**.
+A vector is a sequence of data elements of the **same type**.
 
 |||||
 | ------ | ----- | ----- | ----- | 
@@ -9,7 +9,7 @@ A vector is a sequence of data elements from the **same type**.
 
 ### Creating a vector
 
-* Values are assigned to a vector using the **c** command (**c**ombining elements).
+* Values are assigned to a vector using the **c** command (**c**ombining elements). Open and close the round brackets, and place the different elements, separated by **commas**.
 
 ```{r}
 vector1 <- c(329, 45, 12, 28)
@@ -18,19 +18,24 @@ vector1 <- c(329, 45, 12, 28)
 You can create an empty vector with:
 
 ```{r}
+# empty vector
 vecempty <- vector()
+# empty numerical vector with 5 elements
+vecnumempty <- vector(mode="numeric", length=5)
+# empty character vector with 8 elements
+veccharempty <- vector(mode="character", length=8)
 ```
 
 * Create a sequence of consecutive numbers:
 
 ```{r}
 vecnum <- 10:16
-# same as:
+# shortcut for:
 vecnum <- c(10, 11, 12, 13, 14, 15, 16)
-# both ends (10 and 16) are included
+# NOTES: both ends (10 and 16) are included
 ```
 
-* Character vectors:  Each element is entered between (single or double) quotes.
+* Character vectors: each element is entered between (single or double) quotes.
 
 |||||
 | ------ | ----- | ----- | ----- | 
@@ -40,13 +45,25 @@ vecnum <- c(10, 11, 12, 13, 14, 15, 16)
 mynames <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
 ```
 
+**HANDS-ON** (3 minutes)
+1. Create a vector (choose the name) that contains a sequence of number, from 3 to 8, both included.
+2. Create vector myfruits as:
+```{r,eval=FALSE}
+myfruits <- c(apple, pear, orange)
+```
+What is happening? Why?
+
 ### Vector manipulation
 
 * A vector can be **named**: each element of the vector can be assigned a name (number or character)
 
 ```{r}
+# our previous numerical vector
+vector1 <- c(329, 45, 12, 28)
+# assign names
 names(vector1) <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
 # use an object which already contains a vector
+mynames <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
 names(vector1) <- mynames
 ```
 
@@ -61,10 +78,9 @@ length(vector1)
 	<img src="images/vector_indices.png" width="500">
 
 	```{r}
-	vecnum <- 10:16
-	vecnum[1]
-	vecnum[c(1,3)]
-	vecnum[2:4]
+	vector1[1]
+	vector1[c(1,3)]
+	vector1[2:4]
 	```
 	+ extract elements using their names:
 	<img src="images/vector_indices_names.png" width="500">
@@ -77,6 +93,7 @@ length(vector1)
 * Reassigning a vector's element
 
 ```{r}
+# here we re-assign the 2nd element of vector1 with 31.
 vector1[2] <- 31
 vector1["miRNA"] <- 31
 ```
@@ -84,6 +101,10 @@ vector1["miRNA"] <- 31
 * Removing a vector's element
 
 ```{r}
+# here we remove the 3rd element of vector1
+# show in the console vector1 without its 3rd element:
+vector1[-3]
+# reassign vector1 without its 3rd element
 vector1 <- vector1[-3]
 ```
 
@@ -95,7 +116,8 @@ x <- x[-2] <img src="images/red_triangle.jpg" width="40"> x <span style="color:r
 
 ### Combining vectors
 
-* From 2 vectors **a** and **b** you can create a vector **d**
+* You can combine 2 (or more) vectors into one.
+Here, we combine **v1** and **v2** to create a vector **v3**
 
 ```{r}
 v1 <- 2:5

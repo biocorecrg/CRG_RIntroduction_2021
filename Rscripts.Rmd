@@ -2,8 +2,11 @@
 
 ## Create and save a script
 
-* Store commands in a .R/.r script. Create and save a script in RStudio with: 
+* Store commands in a .R/.r file/script. It will be your **dry labbook**.
+
+* Create and save a script in RStudio with: 
   + File -> New File -> R Script
+  + File opens in the upper-left panel.
   + Once the file has opened: File -> Save 
   + Specify a name: ***the extension .R is automatically added***
   
@@ -16,7 +19,7 @@
 ## R syntax
 
 * Case sensitive: **g** is not **G**
-* Comment lines start with **#**
+* Comment lines start with **#**. Comment lines are NOT interpreted by R.
 * Commands are separated by a **new line** or **;**
 ```{r, eval=FALSE}
 # This is a comment: it will not be interpreted
