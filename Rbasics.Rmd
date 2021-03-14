@@ -42,10 +42,12 @@ What is the percentage of miRNA?
 ### **HANDS-ON** (3-5 minutes)
 
 Given the following table (number of exons / introns of the hg38 genome, Gencode 31 annotation):
-Total number of genes: 60651
+<br>
+**Total number of genes: 60651**
 
 Of which:
-
+|||
+| :--: | :--: |
 | Protein-coding genes       | 19951      |
 | Long non-coding RNA genes      | 17948      |
 | Small non-coding RNA genes      | 7569      |

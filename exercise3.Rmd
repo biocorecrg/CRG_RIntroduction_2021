@@ -1,4 +1,4 @@
-## Exercise 3. Character vector manipulation
+## Exercise 3. Character vector manipulation (10 minutes)
 
 ### Exercise 3a.
 
@@ -111,20 +111,7 @@ length(w); length(g)
 
 </details>
 
-**8- Do vectors w and g have the same length? Use the function identical() to check this.**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r}
-identical(x=length(w), y=length(g))
-```
-
-</details>
-
-**9- Name the elements of g using the elements of w.**<br> 
+**8- Name the elements of g using the elements of w.**<br> 
 (i.e. the names of each element of g will be the elements of w).
 
 <details>
@@ -137,68 +124,3 @@ names(g) <- w
 ```
 
 </details>
-
-**If you have time**, continue with Exercise 3b below.<br>
-
-### Exercise 3b.
-
-**1- Use the sub() function to replace miRNA with microRNA in the *names* of g.**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r}
-names(g) <- sub(pattern="miRNA", replacement="microRNA", x=names(g))
-```
-
-</details>
-
-**2- Count how many microRNAs and mRNAs there are in g based on the column names.**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r}
-table(names(g))
-```
-
-</details>
-
-**3- Create vector tt as:**
-
-```{r}
-tt <- "Introduction to R course"
-```
-
-How many characters does tt contain? Use nchar().
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r}
-nchar(tt)
-```
-
-</details>
-
-**4- Remove "Introduction to R" from tt.**
-<br>You can try with either substr() or gsub()
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r}
-substr(x=tt, start=17, stop=nchar(tt))
-gsub(pattern="Introduction to R", replacement="", x=tt)
-```
-
-</details>
-

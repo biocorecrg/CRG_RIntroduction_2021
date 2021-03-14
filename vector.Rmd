@@ -167,10 +167,23 @@ a > 2
 * Extract elements of a vector that comply with a condition:
 ```{r}
 a <- 1:5
+# extract the TRUE/FALSE vector
 a >= 2
+# extract the actual sub-vector that complies the condition (TRUE values)
 a[a >= 2]
+# count how many elements comply the condition
+length(a[a >= 2])
 ```
 <img src="images/vector_subvector.png" width="500">
+
+**HANDS-ON** (3 minutes)
+Given the following vector containing a group of people's ages:
+```{r}
+ages <- c(18, 32, 12, 34, 42, 32, 17, 56, 76, 10)
+```
+2. How many people are over 18?
+3. How many people are under 60?
+4. How many people are between 25 and 45?
 
 #### Operations on vectors
 
@@ -220,9 +233,17 @@ a * b
 | summary(x) | mean, median, min, max, quartiles |
 
 ```{r}
-a <- c(1, 3, 12, 45, 3, 2)
-summary(a)
+k <- c(1, 3, 12, 45, 3, 2)
+summary(k)
 ```
+
+**HANDS-ON** (3 minutes)
+Given our **ages** vector::
+```{r}
+ages <- c(18, 32, 12, 34, 42, 32, 17, 56, 76, 10)
+```
+1. What is the average/mean age?
+2. What is percentage of variation? It is defined as (standard deviation / mean) * 100. 
 
 #### Comparing vectors
 
@@ -235,6 +256,8 @@ a <- 2:6
 b <- 4:10
 a %in% b
 ```
+
+Yields a TRUE/FALSE vector of the size of **a**.
 
 <img src="images/vector_in.png" width="350">
 
