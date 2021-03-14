@@ -24,15 +24,15 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-13" />
+<meta name="date" content="2021-03-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-types.html"/>
-<link rel="next" href="missing-values.html"/>
+<link rel="prev" href="checking-data-types.html"/>
+<link rel="next" href="vectors.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -118,6 +118,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -130,186 +131,191 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">Introduction to R</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
 <li class="chapter" data-level="2" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>2</b> What is R ?</a></li>
 <li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#rstudio-access"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
-<li class="chapter" data-level="3.2" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#rstudio-interface"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
-<li class="chapter" data-level="3.3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#setting-up-the-folder-structure-for-the-course"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a>
+<li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
+<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#note-on-files-and-folders-names"><i class="fa fa-check"></i><b>3.3.1</b> Note on files and folders names</a></li>
+<li class="chapter" data-level="3.3.1" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html#note-on-files-and-folders-names"><i class="fa fa-check"></i><b>3.3.1</b> Note on files and folders names</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>4</b> R basics</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="r-basics.html"><a href="r-basics.html#arithmetic-operators"><i class="fa fa-check"></i><b>4.1</b> Arithmetic operators</a></li>
-<li class="chapter" data-level="4.2" data-path="r-basics.html"><a href="r-basics.html#simple-calculations"><i class="fa fa-check"></i><b>4.2</b> Simple calculations</a>
+<li class="chapter" data-level="4.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>4.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="4.2" data-path="simple-calculations.html"><a href="simple-calculations.html"><i class="fa fa-check"></i><b>4.2</b> Simple calculations</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="r-basics.html"><a href="r-basics.html#hands-on-3-5-minutes"><i class="fa fa-check"></i><b>4.2.1</b> <strong>HANDS-ON</strong> (3-5 minutes)</a></li>
+<li class="chapter" data-level="4.2.1" data-path="simple-calculations.html"><a href="simple-calculations.html#hands-on-3-5-minutes"><i class="fa fa-check"></i><b>4.2.1</b> <strong>HANDS-ON</strong> (3-5 minutes)</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="r-basics.html"><a href="r-basics.html#objects-in-r"><i class="fa fa-check"></i><b>4.3</b> Objects in R</a></li>
-<li class="chapter" data-level="4.4" data-path="r-basics.html"><a href="r-basics.html#assignment-operators"><i class="fa fa-check"></i><b>4.4</b> Assignment operators</a></li>
-<li class="chapter" data-level="4.5" data-path="r-basics.html"><a href="r-basics.html#assigning-data-to-an-object"><i class="fa fa-check"></i><b>4.5</b> Assigning data to an object</a></li>
-<li class="chapter" data-level="4.6" data-path="r-basics.html"><a href="r-basics.html#using-objects"><i class="fa fa-check"></i><b>4.6</b> Using objects</a></li>
-<li class="chapter" data-level="4.7" data-path="r-basics.html"><a href="r-basics.html#names-of-objects"><i class="fa fa-check"></i><b>4.7</b> Names of objects</a>
+<li class="chapter" data-level="4.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>4.3</b> Objects in R</a></li>
+<li class="chapter" data-level="4.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>4.4</b> Assignment operators</a></li>
+<li class="chapter" data-level="4.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>4.5</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="4.6" data-path="using-objects.html"><a href="using-objects.html"><i class="fa fa-check"></i><b>4.6</b> Using objects</a></li>
+<li class="chapter" data-level="4.7" data-path="names-of-objects.html"><a href="names-of-objects.html"><i class="fa fa-check"></i><b>4.7</b> Names of objects</a>
 <ul>
-<li class="chapter" data-level="4.7.1" data-path="r-basics.html"><a href="r-basics.html#hands-on-3-5-minutes-1"><i class="fa fa-check"></i><b>4.7.1</b> <strong>HANDS-ON</strong> (3-5 minutes)</a></li>
+<li class="chapter" data-level="4.7.1" data-path="names-of-objects.html"><a href="names-of-objects.html#hands-on-3-5-minutes-1"><i class="fa fa-check"></i><b>4.7.1</b> <strong>HANDS-ON</strong> (3-5 minutes)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="paths-and-directories.html"><a href="paths-and-directories.html#tree-of-directories"><i class="fa fa-check"></i><b>5.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="5.2" data-path="paths-and-directories.html"><a href="paths-and-directories.html#navigate-the-tree-of-directory-with-the-r-console"><i class="fa fa-check"></i><b>5.2</b> Navigate the tree of directory with the R console</a>
+<li class="chapter" data-level="5.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>5.1</b> Tree of directories</a></li>
+<li class="chapter" data-level="5.2" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html"><i class="fa fa-check"></i><b>5.2</b> Navigate the tree of directory with the R console</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="paths-and-directories.html"><a href="paths-and-directories.html#hands-on-3-5-minutes-2"><i class="fa fa-check"></i><b>5.2.1</b> <strong>HANDS-ON</strong> (3-5 minutes)</a></li>
+<li class="chapter" data-level="5.2.1" data-path="navigate-the-tree-of-directory-with-the-r-console.html"><a href="navigate-the-tree-of-directory-with-the-r-console.html#hands-on-3-5-minutes-2"><i class="fa fa-check"></i><b>5.2.1</b> <strong>HANDS-ON</strong> (3-5 minutes)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
 <li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="r-scripts.html"><a href="r-scripts.html#create-and-save-a-script"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
-<li class="chapter" data-level="7.2" data-path="r-scripts.html"><a href="r-scripts.html#r-syntax"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
-<li class="chapter" data-level="7.3" data-path="r-scripts.html"><a href="r-scripts.html#rstudio-tips-in-the-console"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="r-scripts.html"><a href="r-scripts.html#exercice-1.-getting-started-15-minutes"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
+<li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
+<li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
+<li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-15-minutes.html"><a href="exercice-1-getting-started-15-minutes.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started ~ 15 minutes</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="data-types.html"><a href="data-types.html#checking-data-types"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
+<li class="chapter" data-level="8.1" data-path="checking-data-types.html"><a href="checking-data-types.html"><i class="fa fa-check"></i><b>8.1</b> Checking data types</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data structures</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>9.1</b> Vectors</a>
+<li class="chapter" data-level="9.1" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>9.1</b> Vectors</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="data-structures.html"><a href="data-structures.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
-<li class="chapter" data-level="9.1.2" data-path="data-structures.html"><a href="data-structures.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
-<li class="chapter" data-level="9.1.3" data-path="data-structures.html"><a href="data-structures.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
-<li class="chapter" data-level="9.1.4" data-path="data-structures.html"><a href="data-structures.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
-<li class="chapter" data-level="9.1.5" data-path="data-structures.html"><a href="data-structures.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
+<li class="chapter" data-level="9.1.1" data-path="vectors.html"><a href="vectors.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
+<li class="chapter" data-level="9.1.2" data-path="vectors.html"><a href="vectors.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
+<li class="chapter" data-level="9.1.3" data-path="vectors.html"><a href="vectors.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
+<li class="chapter" data-level="9.1.4" data-path="vectors.html"><a href="vectors.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
+<li class="chapter" data-level="9.1.5" data-path="vectors.html"><a href="vectors.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="data-structures.html"><a href="data-structures.html#exercise-2.-numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a>
+<li class="chapter" data-level="9.2" data-path="exercise-2-numeric-vector-manipulation-15-minutes.html"><a href="exercise-2-numeric-vector-manipulation-15-minutes.html"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation (15 minutes)</a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="data-structures.html"><a href="data-structures.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
-<li class="chapter" data-level="9.2.2" data-path="data-structures.html"><a href="data-structures.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
+<li class="chapter" data-level="9.2.1" data-path="exercise-2-numeric-vector-manipulation-15-minutes.html"><a href="exercise-2-numeric-vector-manipulation-15-minutes.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
+<li class="chapter" data-level="9.2.2" data-path="exercise-2-numeric-vector-manipulation-15-minutes.html"><a href="exercise-2-numeric-vector-manipulation-15-minutes.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="data-structures.html"><a href="data-structures.html#exercise-3.-character-vector-manipulation"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a>
+<li class="chapter" data-level="9.3" data-path="exercise-3-character-vector-manipulation-10-minutes.html"><a href="exercise-3-character-vector-manipulation-10-minutes.html"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation (10 minutes)</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="data-structures.html"><a href="data-structures.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
-<li class="chapter" data-level="9.3.2" data-path="data-structures.html"><a href="data-structures.html#exercise-3b."><i class="fa fa-check"></i><b>9.3.2</b> Exercise 3b.</a></li>
+<li class="chapter" data-level="9.3.1" data-path="exercise-3-character-vector-manipulation-10-minutes.html"><a href="exercise-3-character-vector-manipulation-10-minutes.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
-<li class="chapter" data-level="9.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>9.5</b> Matrices</a>
+<li class="chapter" data-level="9.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>9.5</b> Matrices</a>
 <ul>
-<li class="chapter" data-level="9.5.1" data-path="data-structures.html"><a href="data-structures.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
-<li class="chapter" data-level="9.5.2" data-path="data-structures.html"><a href="data-structures.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
-<li class="chapter" data-level="9.5.3" data-path="data-structures.html"><a href="data-structures.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
+<li class="chapter" data-level="9.5.1" data-path="matrices.html"><a href="matrices.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices.html"><a href="matrices.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
+<li class="chapter" data-level="9.5.3" data-path="matrices.html"><a href="matrices.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.6" data-path="data-structures.html"><a href="data-structures.html#data-frames"><i class="fa fa-check"></i><b>9.6</b> Data frames</a>
+<li class="chapter" data-level="9.6" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>9.6</b> Data frames</a>
 <ul>
-<li class="chapter" data-level="9.6.1" data-path="data-structures.html"><a href="data-structures.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
-<li class="chapter" data-level="9.6.2" data-path="data-structures.html"><a href="data-structures.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
+<li class="chapter" data-level="9.6.1" data-path="data-frames.html"><a href="data-frames.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
+<li class="chapter" data-level="9.6.2" data-path="data-frames.html"><a href="data-frames.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
 </ul></li>
-<li class="chapter" data-level="9.7" data-path="data-structures.html"><a href="data-structures.html#two-dimensional-structures-manipulation"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a>
+<li class="chapter" data-level="9.7" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a>
 <ul>
-<li class="chapter" data-level="9.7.1" data-path="data-structures.html"><a href="data-structures.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
-<li class="chapter" data-level="9.7.2" data-path="data-structures.html"><a href="data-structures.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
+<li class="chapter" data-level="9.7.1" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
+<li class="chapter" data-level="9.7.2" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.8" data-path="data-structures.html"><a href="data-structures.html#exercise-4.-matrix-manipulation"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
-<li class="chapter" data-level="9.9" data-path="data-structures.html"><a href="data-structures.html#exercise-5.-data-frame-manipulation"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
+<li class="chapter" data-level="9.8" data-path="exercise-4-matrix-manipulation.html"><a href="exercise-4-matrix-manipulation.html"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
+<li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
-<li class="chapter" data-level="9.9.1" data-path="data-structures.html"><a href="data-structures.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="data-structures.html"><a href="data-structures.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
-<li class="chapter" data-level="9.9.3" data-path="data-structures.html"><a href="data-structures.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
+<li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
 <li class="chapter" data-level="11" data-path="input-output.html"><a href="input-output.html"><i class="fa fa-check"></i><b>11</b> Input / Output</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="input-output.html"><a href="input-output.html#on-vectors"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
-<li class="chapter" data-level="11.2" data-path="input-output.html"><a href="input-output.html#on-data-frames-or-matrices"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
-<li class="chapter" data-level="11.3" data-path="input-output.html"><a href="input-output.html#exercise-6."><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a>
+<li class="chapter" data-level="11.1" data-path="on-vectors.html"><a href="on-vectors.html"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
+<li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
+<li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="input-output.html"><a href="input-output.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
-<li class="chapter" data-level="11.3.2" data-path="input-output.html"><a href="input-output.html#exercise-6b---io-on-data-frames-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frames: play with the arguments of read.table</a></li>
+<li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
+<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frames-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frames: play with the arguments of read.table</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="library-and-packages.html"><a href="library-and-packages.html#r-base"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
-<li class="chapter" data-level="12.2" data-path="library-and-packages.html"><a href="library-and-packages.html#r-contrib"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
-<li class="chapter" data-level="12.3" data-path="library-and-packages.html"><a href="library-and-packages.html#install-a-package"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
-<li class="chapter" data-level="12.4" data-path="library-and-packages.html"><a href="library-and-packages.html#load-a-package"><i class="fa fa-check"></i><b>12.4</b> Load a package</a></li>
-<li class="chapter" data-level="12.5" data-path="library-and-packages.html"><a href="library-and-packages.html#check-what-packages-are-currently-loaded"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
-<li class="chapter" data-level="12.6" data-path="library-and-packages.html"><a href="library-and-packages.html#list-functions-from-a-package"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
-<li class="chapter" data-level="12.7" data-path="library-and-packages.html"><a href="library-and-packages.html#rstudio-server-at-crg"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
-<li class="chapter" data-level="12.8" data-path="library-and-packages.html"><a href="library-and-packages.html#exercise-7-library-and-packages"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
-<li class="chapter" data-level="12.9" data-path="library-and-packages.html"><a href="library-and-packages.html#exercise-to-do-at-home"><i class="fa fa-check"></i><b>12.9</b> Exercise (to do at home)</a></li>
+<li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
+<li class="chapter" data-level="12.2" data-path="r-contrib.html"><a href="r-contrib.html"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
+<li class="chapter" data-level="12.3" data-path="install-a-package.html"><a href="install-a-package.html"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
+<li class="chapter" data-level="12.4" data-path="load-a-package.html"><a href="load-a-package.html"><i class="fa fa-check"></i><b>12.4</b> Load a package</a></li>
+<li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
+<li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
+<li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
+<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.9" data-path="exercise-to-do-at-home.html"><a href="exercise-to-do-at-home.html"><i class="fa fa-check"></i><b>12.9</b> Exercise (to do at home)</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="regular-expressions.html"><a href="regular-expressions.html#find-simple-matches-with-grep"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
-<li class="chapter" data-level="13.2" data-path="regular-expressions.html"><a href="regular-expressions.html#regular-expressions-to-find-more-flexible-patterns"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
-<li class="chapter" data-level="13.3" data-path="regular-expressions.html"><a href="regular-expressions.html#substitute-or-remove-matching-patterns-with-gsub"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
-<li class="chapter" data-level="13.4" data-path="regular-expressions.html"><a href="regular-expressions.html#predefined-variables-to-use-in-regular-expressions"><i class="fa fa-check"></i><b>13.4</b> Predefined variables to use in regular expressions:</a></li>
-<li class="chapter" data-level="13.5" data-path="regular-expressions.html"><a href="regular-expressions.html#use-grep-and-regular-expressions-to-retrieve-columns-by-their-names"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
-<li class="chapter" data-level="13.6" data-path="regular-expressions.html"><a href="regular-expressions.html#exercise-8-regular-expressions"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
+<li class="chapter" data-level="13.1" data-path="find-simple-matches-with-grep.html"><a href="find-simple-matches-with-grep.html"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
+<li class="chapter" data-level="13.2" data-path="regular-expressions-to-find-more-flexible-patterns.html"><a href="regular-expressions-to-find-more-flexible-patterns.html"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
+<li class="chapter" data-level="13.3" data-path="substitute-or-remove-matching-patterns-with-gsub.html"><a href="substitute-or-remove-matching-patterns-with-gsub.html"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
+<li class="chapter" data-level="13.4" data-path="predefined-variables-to-use-in-regular-expressions.html"><a href="predefined-variables-to-use-in-regular-expressions.html"><i class="fa fa-check"></i><b>13.4</b> Predefined variables to use in regular expressions:</a></li>
+<li class="chapter" data-level="13.5" data-path="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
+<li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>14</b> Conditional statement</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="conditional-statement.html"><a href="conditional-statement.html#exercise-9-if-statement"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: If statement</a></li>
+<li class="chapter" data-level="14.1" data-path="exercise-9-if-statement.html"><a href="exercise-9-if-statement.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: If statement</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>15</b> Repetitive execution</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="repetitive-execution.html"><a href="repetitive-execution.html#exercise-10-for-loop"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: For loop</a></li>
+<li class="chapter" data-level="15.1" data-path="exercise-10-for-loop.html"><a href="exercise-10-for-loop.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: For loop</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> “Base” plots in R</a>
 <ul>
-<li class="chapter" data-level="16.1" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html#scatter-plots"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
-<li class="chapter" data-level="16.2" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html#bar-plots"><i class="fa fa-check"></i><b>16.2</b> Bar plots</a></li>
-<li class="chapter" data-level="16.3" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html#pie-charts"><i class="fa fa-check"></i><b>16.3</b> Pie charts</a></li>
-<li class="chapter" data-level="16.4" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html#box-plots"><i class="fa fa-check"></i><b>16.4</b> Box plots</a></li>
-<li class="chapter" data-level="16.5" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html#histograms"><i class="fa fa-check"></i><b>16.5</b> Histograms</a></li>
+<li class="chapter" data-level="16.1" data-path="scatter-plots.html"><a href="scatter-plots.html"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
+<li class="chapter" data-level="16.2" data-path="bar-plots.html"><a href="bar-plots.html"><i class="fa fa-check"></i><b>16.2</b> Bar plots</a></li>
+<li class="chapter" data-level="16.3" data-path="pie-charts.html"><a href="pie-charts.html"><i class="fa fa-check"></i><b>16.3</b> Pie charts</a></li>
+<li class="chapter" data-level="16.4" data-path="box-plots.html"><a href="box-plots.html"><i class="fa fa-check"></i><b>16.4</b> Box plots</a></li>
+<li class="chapter" data-level="16.5" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>16.5</b> Histograms</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html"><i class="fa fa-check"></i><b>17</b> How to save plots</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#with-r-studio"><i class="fa fa-check"></i><b>17.1</b> With R Studio</a></li>
-<li class="chapter" data-level="17.2" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#with-the-console"><i class="fa fa-check"></i><b>17.2</b> With the console</a></li>
-<li class="chapter" data-level="17.3" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11-base-plots"><i class="fa fa-check"></i><b>17.3</b> Exercise 11: Base plots</a>
+<li class="chapter" data-level="17.1" data-path="with-r-studio.html"><a href="with-r-studio.html"><i class="fa fa-check"></i><b>17.1</b> With R Studio</a></li>
+<li class="chapter" data-level="17.2" data-path="with-the-console.html"><a href="with-the-console.html"><i class="fa fa-check"></i><b>17.2</b> With the console</a></li>
+<li class="chapter" data-level="17.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html"><i class="fa fa-check"></i><b>17.3</b> Exercise 11: Base plots</a>
 <ul>
-<li class="chapter" data-level="17.3.1" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11a--scatter-plot"><i class="fa fa-check"></i><b>17.3.1</b> Exercise 11a- scatter plot</a></li>
-<li class="chapter" data-level="17.3.2" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11b--bar-plot-pie-chart"><i class="fa fa-check"></i><b>17.3.2</b> Exercise 11b- bar plot + pie chart</a></li>
-<li class="chapter" data-level="17.3.3" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11c--histogram"><i class="fa fa-check"></i><b>17.3.3</b> Exercise 11c- histogram</a></li>
+<li class="chapter" data-level="17.3.1" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11a--scatter-plot"><i class="fa fa-check"></i><b>17.3.1</b> Exercise 11a- scatter plot</a></li>
+<li class="chapter" data-level="17.3.2" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11b--bar-plot-pie-chart"><i class="fa fa-check"></i><b>17.3.2</b> Exercise 11b- bar plot + pie chart</a></li>
+<li class="chapter" data-level="17.3.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11c--histogram"><i class="fa fa-check"></i><b>17.3.3</b> Exercise 11c- histogram</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="18" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html"><i class="fa fa-check"></i><b>18</b> Plots from other packages</a>
 <ul>
-<li class="chapter" data-level="18.1" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html#heatmap.2-function-from-gplots-package"><i class="fa fa-check"></i><b>18.1</b> heatmap.2 function from gplots package</a></li>
-<li class="chapter" data-level="18.2" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html#pheatmap-function-from-the-pheatmap-package"><i class="fa fa-check"></i><b>18.2</b> pheatmap function from the pheatmap package</a></li>
-<li class="chapter" data-level="18.3" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html#venn.diagram-function-from-venndiagram-package"><i class="fa fa-check"></i><b>18.3</b> venn.diagram function from VennDiagram package</a></li>
+<li class="chapter" data-level="18.1" data-path="heatmap-2-function-from-gplots-package.html"><a href="heatmap-2-function-from-gplots-package.html"><i class="fa fa-check"></i><b>18.1</b> heatmap.2 function from gplots package</a></li>
+<li class="chapter" data-level="18.2" data-path="pheatmap-function-from-the-pheatmap-package.html"><a href="pheatmap-function-from-the-pheatmap-package.html"><i class="fa fa-check"></i><b>18.2</b> pheatmap function from the pheatmap package</a></li>
+<li class="chapter" data-level="18.3" data-path="venn-diagram-function-from-venndiagram-package.html"><a href="venn-diagram-function-from-venndiagram-package.html"><i class="fa fa-check"></i><b>18.3</b> venn.diagram function from VennDiagram package</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="ggplot2-package.html"><a href="ggplot2-package.html"><i class="fa fa-check"></i><b>19</b> ggplot2 package</a>
 <ul>
-<li class="chapter" data-level="19.1" data-path="ggplot2-package.html"><a href="ggplot2-package.html#getting-started"><i class="fa fa-check"></i><b>19.1</b> Getting started</a></li>
-<li class="chapter" data-level="19.2" data-path="ggplot2-package.html"><a href="ggplot2-package.html#scatter-plot"><i class="fa fa-check"></i><b>19.2</b> Scatter plot</a></li>
-<li class="chapter" data-level="19.3" data-path="ggplot2-package.html"><a href="ggplot2-package.html#box-plots-1"><i class="fa fa-check"></i><b>19.3</b> Box plots</a></li>
-<li class="chapter" data-level="19.4" data-path="ggplot2-package.html"><a href="ggplot2-package.html#dot-plots"><i class="fa fa-check"></i><b>19.4</b> Dot plots</a></li>
-<li class="chapter" data-level="19.5" data-path="ggplot2-package.html"><a href="ggplot2-package.html#bar-plots-1"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a>
+<li class="chapter" data-level="19.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>19.1</b> Getting started</a></li>
+<li class="chapter" data-level="19.2" data-path="scatter-plot.html"><a href="scatter-plot.html"><i class="fa fa-check"></i><b>19.2</b> Scatter plot</a></li>
+<li class="chapter" data-level="19.3" data-path="box-plots-1.html"><a href="box-plots-1.html"><i class="fa fa-check"></i><b>19.3</b> Box plots</a></li>
+<li class="chapter" data-level="19.4" data-path="dot-plots.html"><a href="dot-plots.html"><i class="fa fa-check"></i><b>19.4</b> Dot plots</a></li>
+<li class="chapter" data-level="19.5" data-path="bar-plots-1.html"><a href="bar-plots-1.html"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a>
 <ul>
-<li class="chapter" data-level="19.5.1" data-path="ggplot2-package.html"><a href="ggplot2-package.html#bar-plots-with-error-bars"><i class="fa fa-check"></i><b>19.5.1</b> Bar plots with error bars</a></li>
+<li class="chapter" data-level="19.5.1" data-path="bar-plots-1.html"><a href="bar-plots-1.html#bar-plots-with-error-bars"><i class="fa fa-check"></i><b>19.5.1</b> Bar plots with error bars</a></li>
 </ul></li>
-<li class="chapter" data-level="19.6" data-path="ggplot2-package.html"><a href="ggplot2-package.html#histograms-1"><i class="fa fa-check"></i><b>19.6</b> Histograms</a></li>
-<li class="chapter" data-level="19.7" data-path="ggplot2-package.html"><a href="ggplot2-package.html#about-themes"><i class="fa fa-check"></i><b>19.7</b> About themes</a></li>
-<li class="chapter" data-level="19.8" data-path="ggplot2-package.html"><a href="ggplot2-package.html#saving-plots-in-files"><i class="fa fa-check"></i><b>19.8</b> Saving plots in files</a></li>
-<li class="chapter" data-level="19.9" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12-ggplot2"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a>
+<li class="chapter" data-level="19.6" data-path="histograms-1.html"><a href="histograms-1.html"><i class="fa fa-check"></i><b>19.6</b> Histograms</a></li>
+<li class="chapter" data-level="19.7" data-path="about-themes.html"><a href="about-themes.html"><i class="fa fa-check"></i><b>19.7</b> About themes</a></li>
+<li class="chapter" data-level="19.8" data-path="saving-plots-in-files.html"><a href="saving-plots-in-files.html"><i class="fa fa-check"></i><b>19.8</b> Saving plots in files</a></li>
+<li class="chapter" data-level="19.9" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a>
 <ul>
-<li class="chapter" data-level="19.9.1" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.9.1</b> Exercise 12a- Scatter plot</a></li>
-<li class="chapter" data-level="19.9.2" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.9.2</b> Exercise 12b- Box plot</a></li>
-<li class="chapter" data-level="19.9.3" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.9.3</b> Exercise 12c- Bar plot</a></li>
-<li class="chapter" data-level="19.9.4" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12d--histogram"><i class="fa fa-check"></i><b>19.9.4</b> Exercise 12d- Histogram</a></li>
+<li class="chapter" data-level="19.9.1" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.9.1</b> Exercise 12a- Scatter plot</a></li>
+<li class="chapter" data-level="19.9.2" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.9.2</b> Exercise 12b- Box plot</a></li>
+<li class="chapter" data-level="19.9.3" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.9.3</b> Exercise 12c- Bar plot</a></li>
+<li class="chapter" data-level="19.9.4" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12d--histogram"><i class="fa fa-check"></i><b>19.9.4</b> Exercise 12d- Histogram</a></li>
 </ul></li>
-<li class="chapter" data-level="19.10" data-path="ggplot2-package.html"><a href="ggplot2-package.html#more-about-the-theme-function"><i class="fa fa-check"></i><b>19.10</b> More about the theme() function</a></li>
-<li class="chapter" data-level="19.11" data-path="ggplot2-package.html"><a href="ggplot2-package.html#volcano-plots"><i class="fa fa-check"></i><b>19.11</b> Volcano plots</a></li>
+<li class="chapter" data-level="19.10" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>19.10</b> More about the theme() function</a></li>
+<li class="chapter" data-level="19.11" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>19.11</b> Volcano plots</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/sarahbonnin/CRG_RIntroduction_2021" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -336,1445 +342,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Matrix</li>
 <li>Data frame</li>
 </ul>
-
-<div id="vectors" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Vectors</h2>
-<p>A vector is a sequence of data elements of the <strong>same type</strong>.</p>
-<table>
-<tbody>
-<tr class="odd">
-<td>329</td>
-<td>45</td>
-<td>12</td>
-<td>28</td>
-</tr>
-</tbody>
-</table>
-<div id="creating-a-vector" class="section level3" number="9.1.1">
-<h3><span class="header-section-number">9.1.1</span> Creating a vector</h3>
-<ul>
-<li>Values are assigned to a vector using the <strong>c</strong> command (<strong>c</strong>ombining elements). Open and close the round brackets, and place the different elements, separated by <strong>commas</strong>.</li>
-</ul>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="data-structures.html#cb54-1" aria-hidden="true" tabindex="-1"></a>vector1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">329</span>, <span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">28</span>)</span></code></pre></div>
-<p>You can create an empty vector with:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="data-structures.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># empty vector</span></span>
-<span id="cb55-2"><a href="data-structures.html#cb55-2" aria-hidden="true" tabindex="-1"></a>vecempty <span class="ot">&lt;-</span> <span class="fu">vector</span>()</span>
-<span id="cb55-3"><a href="data-structures.html#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="co"># empty numerical vector with 5 elements</span></span>
-<span id="cb55-4"><a href="data-structures.html#cb55-4" aria-hidden="true" tabindex="-1"></a>vecnumempty <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">mode=</span><span class="st">&quot;numeric&quot;</span>, <span class="at">length=</span><span class="dv">5</span>)</span>
-<span id="cb55-5"><a href="data-structures.html#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="co"># empty character vector with 8 elements</span></span>
-<span id="cb55-6"><a href="data-structures.html#cb55-6" aria-hidden="true" tabindex="-1"></a>veccharempty <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">mode=</span><span class="st">&quot;character&quot;</span>, <span class="at">length=</span><span class="dv">8</span>)</span></code></pre></div>
-<ul>
-<li>Create a sequence of consecutive numbers:</li>
-</ul>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="data-structures.html#cb56-1" aria-hidden="true" tabindex="-1"></a>vecnum <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">16</span></span>
-<span id="cb56-2"><a href="data-structures.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co"># shortcut for:</span></span>
-<span id="cb56-3"><a href="data-structures.html#cb56-3" aria-hidden="true" tabindex="-1"></a>vecnum <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>, <span class="dv">16</span>)</span>
-<span id="cb56-4"><a href="data-structures.html#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="co"># NOTES: both ends (10 and 16) are included</span></span></code></pre></div>
-<ul>
-<li>Character vectors: each element is entered between (single or double) quotes.</li>
-</ul>
-<table>
-<tbody>
-<tr class="odd">
-<td>mRNA</td>
-<td>miRNA</td>
-<td>snoRNA</td>
-<td>lncRNA</td>
-</tr>
-</tbody>
-</table>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="data-structures.html#cb57-1" aria-hidden="true" tabindex="-1"></a>mynames <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;snoRNA&quot;</span>, <span class="st">&quot;lncRNA&quot;</span>)</span></code></pre></div>
-<p><strong>HANDS-ON</strong> (3 minutes)
-1. Create a vector (choose the name) that contains a sequence of number, from 3 to 8, both included.
-2. Create vector myfruits as:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="data-structures.html#cb58-1" aria-hidden="true" tabindex="-1"></a>myfruits <span class="ot">&lt;-</span> <span class="fu">c</span>(apple, pear, orange)</span></code></pre></div>
-<p>What is happening? Why?</p>
-</div>
-<div id="vector-manipulation" class="section level3" number="9.1.2">
-<h3><span class="header-section-number">9.1.2</span> Vector manipulation</h3>
-<ul>
-<li>A vector can be <strong>named</strong>: each element of the vector can be assigned a name (number or character)</li>
-</ul>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="data-structures.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co"># our previous numerical vector</span></span>
-<span id="cb59-2"><a href="data-structures.html#cb59-2" aria-hidden="true" tabindex="-1"></a>vector1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">329</span>, <span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">28</span>)</span>
-<span id="cb59-3"><a href="data-structures.html#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="co"># assign names</span></span>
-<span id="cb59-4"><a href="data-structures.html#cb59-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(vector1) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;snoRNA&quot;</span>, <span class="st">&quot;lncRNA&quot;</span>)</span>
-<span id="cb59-5"><a href="data-structures.html#cb59-5" aria-hidden="true" tabindex="-1"></a><span class="co"># use an object which already contains a vector</span></span>
-<span id="cb59-6"><a href="data-structures.html#cb59-6" aria-hidden="true" tabindex="-1"></a>mynames <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;snoRNA&quot;</span>, <span class="st">&quot;lncRNA&quot;</span>)</span>
-<span id="cb59-7"><a href="data-structures.html#cb59-7" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(vector1) <span class="ot">&lt;-</span> mynames</span></code></pre></div>
-<ul>
-<li>Get the length (number of elements) of a vector</li>
-</ul>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="data-structures.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(vector1)</span></code></pre></div>
-<pre><code>## [1] 4</code></pre>
-<ul>
-<li>Extracting elements from vector <strong>a</strong>
-<ul>
-<li>extract elements using their position (index) in the vector:
-<img src="images/vector_indices.png" width="500"></li>
-</ul>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="data-structures.html#cb62-1" aria-hidden="true" tabindex="-1"></a>vector1[<span class="dv">1</span>]</span></code></pre></div>
-<pre><code>## mRNA 
-##  329</code></pre>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="data-structures.html#cb64-1" aria-hidden="true" tabindex="-1"></a>vector1[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span></code></pre></div>
-<pre><code>##   mRNA snoRNA 
-##    329     12</code></pre>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="data-structures.html#cb66-1" aria-hidden="true" tabindex="-1"></a>vector1[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
-<pre><code>##  miRNA snoRNA lncRNA 
-##     45     12     28</code></pre>
-<ul>
-<li>extract elements using their names:
-<img src="images/vector_indices_names.png" width="500"></li>
-</ul>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="data-structures.html#cb68-1" aria-hidden="true" tabindex="-1"></a>vector1[<span class="st">&quot;mRNA&quot;</span>]</span></code></pre></div>
-<pre><code>## mRNA 
-##  329</code></pre>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="data-structures.html#cb70-1" aria-hidden="true" tabindex="-1"></a>vector1[<span class="fu">c</span>(<span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;lncRNA&quot;</span>)]            </span></code></pre></div>
-<pre><code>##  miRNA lncRNA 
-##     45     28</code></pre></li>
-<li>Reassigning a vector’s element</li>
-</ul>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="data-structures.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># here we re-assign the 2nd element of vector1 with 31.</span></span>
-<span id="cb72-2"><a href="data-structures.html#cb72-2" aria-hidden="true" tabindex="-1"></a>vector1[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="dv">31</span></span>
-<span id="cb72-3"><a href="data-structures.html#cb72-3" aria-hidden="true" tabindex="-1"></a>vector1[<span class="st">&quot;miRNA&quot;</span>] <span class="ot">&lt;-</span> <span class="dv">31</span></span></code></pre></div>
-<ul>
-<li>Removing a vector’s element</li>
-</ul>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="data-structures.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># here we remove the 3rd element of vector1</span></span>
-<span id="cb73-2"><a href="data-structures.html#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="co"># show in the console vector1 without its 3rd element:</span></span>
-<span id="cb73-3"><a href="data-structures.html#cb73-3" aria-hidden="true" tabindex="-1"></a>vector1[<span class="sc">-</span><span class="dv">3</span>]</span></code></pre></div>
-<pre><code>##   mRNA  miRNA lncRNA 
-##    329     31     28</code></pre>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="data-structures.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reassign vector1 without its 3rd element</span></span>
-<span id="cb75-2"><a href="data-structures.html#cb75-2" aria-hidden="true" tabindex="-1"></a>vector1 <span class="ot">&lt;-</span> vector1[<span class="sc">-</span><span class="dv">3</span>]</span></code></pre></div>
-<ul>
-<li><strong>Show</strong> versus <strong>change</strong></li>
-</ul>
-<p>x[-2] <img src="images/red_triangle.jpg" width="40"> x <span style="color:red">unchanged</span> !</p>
-<p>x &lt;- x[-2] <img src="images/red_triangle.jpg" width="40"> x <span style="color:red">reassigned</span> !</p>
-</div>
-<div id="combining-vectors" class="section level3" number="9.1.3">
-<h3><span class="header-section-number">9.1.3</span> Combining vectors</h3>
-<ul>
-<li>You can combine 2 (or more) vectors into one.
-Here, we combine <strong>v1</strong> and <strong>v2</strong> to create a vector <strong>v3</strong></li>
-</ul>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="data-structures.html#cb76-1" aria-hidden="true" tabindex="-1"></a>v1 <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb76-2"><a href="data-structures.html#cb76-2" aria-hidden="true" tabindex="-1"></a>v2 <span class="ot">&lt;-</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb76-3"><a href="data-structures.html#cb76-3" aria-hidden="true" tabindex="-1"></a>v3 <span class="ot">&lt;-</span> <span class="fu">c</span>(v1, v2)</span></code></pre></div>
-<blockquote>
-<p>The elements of <strong>v2</strong> are added after the elements of <strong>v1</strong></p>
-</blockquote>
-<ul>
-<li>Likewise, you can add elements at the end of a vector</li>
-</ul>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="data-structures.html#cb77-1" aria-hidden="true" tabindex="-1"></a>v3 <span class="ot">&lt;-</span> <span class="fu">c</span>(v3, <span class="dv">19</span>)</span></code></pre></div>
-</div>
-<div id="numeric-vector-manipulation" class="section level3" number="9.1.4">
-<h3><span class="header-section-number">9.1.4</span> Numeric vector manipulation</h3>
-<h4>
-Logical operators
-</h4>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Operator</th>
-<th align="center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">&lt;</td>
-<td align="center">less than</td>
-</tr>
-<tr class="even">
-<td align="center">&lt;=</td>
-<td align="center">less than or equal to</td>
-</tr>
-<tr class="odd">
-<td align="center">&gt;</td>
-<td align="center">greater than</td>
-</tr>
-<tr class="even">
-<td align="center">&gt;=</td>
-<td align="center">greater than or equal to</td>
-</tr>
-<tr class="odd">
-<td align="center">==</td>
-<td align="center">exactly equal to</td>
-</tr>
-<tr class="even">
-<td align="center">!=</td>
-<td align="center">not equal to</td>
-</tr>
-<tr class="odd">
-<td align="center">!x</td>
-<td align="center">not x</td>
-</tr>
-<tr class="even">
-<td align="center">x | y</td>
-<td align="center">x OR y</td>
-</tr>
-<tr class="odd">
-<td align="center">x &amp; y</td>
-<td align="center">x AND y</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Which elements of <strong>a</strong> are equal to 2?</li>
-</ul>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="data-structures.html#cb78-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb78-2"><a href="data-structures.html#cb78-2" aria-hidden="true" tabindex="-1"></a>a <span class="sc">==</span> <span class="dv">2</span></span></code></pre></div>
-<pre><code>## [1] FALSE  TRUE FALSE FALSE FALSE</code></pre>
-<p><img src="images/vector_equal.png" width="450"></p>
-<ul>
-<li>Which elements of <strong>a</strong> are superior to 2?</li>
-</ul>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="data-structures.html#cb80-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb80-2"><a href="data-structures.html#cb80-2" aria-hidden="true" tabindex="-1"></a>a <span class="sc">&gt;</span> <span class="dv">2</span></span></code></pre></div>
-<pre><code>## [1] FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
-<p><img src="images/vector_super.png" width="450"></p>
-<ul>
-<li>Extract elements of a vector that comply with a condition:</li>
-</ul>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="data-structures.html#cb82-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb82-2"><a href="data-structures.html#cb82-2" aria-hidden="true" tabindex="-1"></a>a <span class="sc">&gt;=</span> <span class="dv">2</span></span></code></pre></div>
-<pre><code>## [1] FALSE  TRUE  TRUE  TRUE  TRUE</code></pre>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="data-structures.html#cb84-1" aria-hidden="true" tabindex="-1"></a>a[a <span class="sc">&gt;=</span> <span class="dv">2</span>]</span></code></pre></div>
-<pre><code>## [1] 2 3 4 5</code></pre>
-<p><img src="images/vector_subvector.png" width="500"></p>
-<div id="operations-on-vectors" class="section level4" number="9.1.4.1">
-<h4><span class="header-section-number">9.1.4.1</span> Operations on vectors</h4>
-<ul>
-<li>Adding 2 to a vector adds 2 to <strong>each element</strong> of the vector:</li>
-</ul>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="data-structures.html#cb86-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb86-2"><a href="data-structures.html#cb86-2" aria-hidden="true" tabindex="-1"></a>a <span class="sc">+</span> <span class="dv">2</span></span></code></pre></div>
-<pre><code>## [1] 3 4 5 6 7</code></pre>
-<p><img src="images/vector_addition.png" width="350"></p>
-<blockquote>
-<p>Same goes for subtractions, multiplications and divisions…</p>
-</blockquote>
-<ul>
-<li>Multiplying a vector by another vector of equal length</li>
-</ul>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="data-structures.html#cb88-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
-<span id="cb88-2"><a href="data-structures.html#cb88-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">0</span>)</span>
-<span id="cb88-3"><a href="data-structures.html#cb88-3" aria-hidden="true" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
-<pre><code>## [1]  4 12  0</code></pre>
-<p><img src="images/vector_multiply.png" width="220"></p>
-<ul>
-<li>Multiplying a vector by another <strong>shorter</strong> vector</li>
-</ul>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="data-structures.html#cb90-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb90-2"><a href="data-structures.html#cb90-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">0</span>)</span>
-<span id="cb90-3"><a href="data-structures.html#cb90-3" aria-hidden="true" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
-<pre><code>## Warning in a * b: longer object length is not a multiple of shorter object
-## length</code></pre>
-<pre><code>## [1]  4 12  0  6  3</code></pre>
-<p><img src="images/vector_multi_recycle.png" width="300"></p>
-<blockquote>
-<p>Vector <strong>a</strong> is “recycled” !</p>
-</blockquote>
-<ul>
-<li>Summary statistics</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Function</th>
-<th align="center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">mean(x)</td>
-<td align="center">mean / average</td>
-</tr>
-<tr class="even">
-<td align="center">median(x)</td>
-<td align="center">median</td>
-</tr>
-<tr class="odd">
-<td align="center">min(x)</td>
-<td align="center">minimum</td>
-</tr>
-<tr class="even">
-<td align="center">max(x)</td>
-<td align="center">maximum</td>
-</tr>
-<tr class="odd">
-<td align="center">var(x)</td>
-<td align="center">variance</td>
-</tr>
-<tr class="even">
-<td align="center">summary(x)</td>
-<td align="center">mean, median, min, max, quartiles</td>
-</tr>
-</tbody>
-</table>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="data-structures.html#cb93-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">12</span>, <span class="dv">45</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span>
-<span id="cb93-2"><a href="data-structures.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(a)</span></code></pre></div>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1.00    2.25    3.00   11.00    9.75   45.00</code></pre>
-</div>
-<div id="comparing-vectors" class="section level4" number="9.1.4.2">
-<h4><span class="header-section-number">9.1.4.2</span> Comparing vectors</h4>
-<ul>
-<li>The <strong>%in%</strong> operator</li>
-</ul>
-<p>Which elements of <strong>a</strong> are also found in <strong>b</strong> ?</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="data-structures.html#cb95-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb95-2"><a href="data-structures.html#cb95-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb95-3"><a href="data-structures.html#cb95-3" aria-hidden="true" tabindex="-1"></a>a <span class="sc">%in%</span> b</span></code></pre></div>
-<pre><code>## [1] FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
-<p><img src="images/vector_in.png" width="350"></p>
-<p>Retrieve actual elements of <strong>a</strong> that are found in <strong>b</strong>:</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="data-structures.html#cb97-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb97-2"><a href="data-structures.html#cb97-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb97-3"><a href="data-structures.html#cb97-3" aria-hidden="true" tabindex="-1"></a>a[a <span class="sc">%in%</span> b]</span></code></pre></div>
-<pre><code>## [1] 4 5 6</code></pre>
-</div>
-</div>
-<div id="character-vector-manipulation" class="section level3" number="9.1.5">
-<h3><span class="header-section-number">9.1.5</span> Character vector manipulation</h3>
-<p>Character vectors are manipulated similarly to numeric ones.</p>
-<ul>
-<li>The <strong>%in%</strong> operator:</li>
-</ul>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="data-structures.html#cb99-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;snoRNA&quot;</span>, <span class="st">&quot;RNA&quot;</span>, <span class="st">&quot;lincRNA&quot;</span>)</span>
-<span id="cb99-2"><a href="data-structures.html#cb99-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>,<span class="st">&quot;lincRNA&quot;</span>, <span class="st">&quot;tRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>)</span>
-<span id="cb99-3"><a href="data-structures.html#cb99-3" aria-hidden="true" tabindex="-1"></a>k <span class="sc">%in%</span> p</span></code></pre></div>
-<pre><code>## [1]  TRUE  TRUE FALSE FALSE  TRUE</code></pre>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="data-structures.html#cb101-1" aria-hidden="true" tabindex="-1"></a>k[k <span class="sc">%in%</span> p]</span></code></pre></div>
-<pre><code>## [1] &quot;mRNA&quot;    &quot;miRNA&quot;   &quot;lincRNA&quot;</code></pre>
-<ul>
-<li>Select elements from vector <strong>m</strong> that are not <em>exon</em></li>
-</ul>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="data-structures.html#cb103-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;exon&quot;</span>, <span class="st">&quot;intron&quot;</span>, <span class="st">&quot;exon&quot;</span>)</span>
-<span id="cb103-2"><a href="data-structures.html#cb103-2" aria-hidden="true" tabindex="-1"></a>m <span class="sc">!=</span> <span class="st">&quot;exon&quot;</span></span></code></pre></div>
-<pre><code>## [1] FALSE  TRUE FALSE</code></pre>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="data-structures.html#cb105-1" aria-hidden="true" tabindex="-1"></a>m[m <span class="sc">!=</span> <span class="st">&quot;exon&quot;</span>]</span></code></pre></div>
-<pre><code>## [1] &quot;intron&quot;</code></pre>
-
-</div>
-</div>
-<div id="exercise-2.-numeric-vector-manipulation" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Exercise 2. Numeric vector manipulation</h2>
-<div id="exercise-2a." class="section level3" number="9.2.1">
-<h3><span class="header-section-number">9.2.1</span> Exercise 2a.</h3>
-<p>Create the script “exercise2.R” and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 2 in that script.
-<br>Remember you can comment the code using #.</p>
-<p><strong>1- Go to Rcourse/Module1
-First check where you currently are with getwd();
-then go to Rcourse/Module1 with setwd()</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="data-structures.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb107-2"><a href="data-structures.html#cb107-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</span>
-<span id="cb107-3"><a href="data-structures.html#cb107-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>2- Create a numeric vector “y” which contains the numbers from 2 to 11, both included.</strong>
-<br>Show y in the console.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="data-structures.html#cb108-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>)</span>
-<span id="cb108-2"><a href="data-structures.html#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="co"># same as</span></span>
-<span id="cb108-3"><a href="data-structures.html#cb108-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">11</span></span>
-<span id="cb108-4"><a href="data-structures.html#cb108-4" aria-hidden="true" tabindex="-1"></a><span class="co"># show in console:</span></span>
-<span id="cb108-5"><a href="data-structures.html#cb108-5" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
-<pre><code>##  [1]  2  3  4  5  6  7  8  9 10 11</code></pre>
-</details>
-<p><strong>3- How many elements are in y? I.e what is the length of vector y ?</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="data-structures.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y)</span></code></pre></div>
-<pre><code>## [1] 10</code></pre>
-</details>
-<p><strong>4- Show the 2nd element of y.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="data-structures.html#cb112-1" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">2</span>]</span></code></pre></div>
-<pre><code>## [1] 3</code></pre>
-</details>
-<p><strong>5- Show the 3rd and the 6th elements of y.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="data-structures.html#cb114-1" aria-hidden="true" tabindex="-1"></a>y[<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>)]</span></code></pre></div>
-<pre><code>## [1] 4 7</code></pre>
-</details>
-<p><strong>6- Remove the 4th element of y: reassign. What is now the length of y ?</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="data-structures.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remove 4th element and reassign</span></span>
-<span id="cb116-2"><a href="data-structures.html#cb116-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> y[<span class="sc">-</span><span class="dv">4</span>]</span>
-<span id="cb116-3"><a href="data-structures.html#cb116-3" aria-hidden="true" tabindex="-1"></a><span class="co"># length of y</span></span>
-<span id="cb116-4"><a href="data-structures.html#cb116-4" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y)</span></code></pre></div>
-<pre><code>## [1] 9</code></pre>
-</details>
-<p><strong>7- Show all elements of y that are inferior to 7.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="data-structures.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements of y are less than 7:</span></span>
-<span id="cb118-2"><a href="data-structures.html#cb118-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;</span> <span class="dv">7</span></span></code></pre></div>
-<pre><code>## [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE</code></pre>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="data-structures.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="co"># show those elements </span></span>
-<span id="cb120-2"><a href="data-structures.html#cb120-2" aria-hidden="true" tabindex="-1"></a>y[ y <span class="sc">&lt;</span> <span class="dv">7</span> ]</span></code></pre></div>
-<pre><code>## [1] 2 3 4 6</code></pre>
-</details>
-<p><strong>8- Show all elements of y that are superior or equal to 4 and inferior to 9.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="data-structures.html#cb122-1" aria-hidden="true" tabindex="-1"></a>y[ y <span class="sc">&gt;=</span> <span class="dv">4</span> <span class="sc">&amp;</span> y <span class="sc">&lt;</span> <span class="dv">9</span> ]</span></code></pre></div>
-<pre><code>## [1] 4 6 7 8</code></pre>
-</details>
-<p><strong>9- Create the vector x of 1000 random numbers from the normal distribution:</strong>
-<br><strong><em>First read the help page of the rnorm() function.</em></strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="data-structures.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="co"># help page for the rnorm function</span></span>
-<span id="cb124-2"><a href="data-structures.html#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(rnorm)</span>
-<span id="cb124-3"><a href="data-structures.html#cb124-3" aria-hidden="true" tabindex="-1"></a><span class="co"># produce a vector of 1000 random numbers from the normal distribution</span></span>
-<span id="cb124-4"><a href="data-structures.html#cb124-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)</span></code></pre></div>
-</details>
-<p><strong>10. What are the mean, median, minimum and maximum values of x?</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="data-structures.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x); <span class="fu">median</span>(x); <span class="fu">min</span>(x); <span class="fu">max</span>(x)</span></code></pre></div>
-<pre><code>## [1] 0.01764546</code></pre>
-<pre><code>## [1] -0.007102336</code></pre>
-<pre><code>## [1] -3.112241</code></pre>
-<pre><code>## [1] 3.148654</code></pre>
-</details>
-<p><strong>11- Run the summary() function on x. <br>What additional information do you obtain ?</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="data-structures.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(x)</span></code></pre></div>
-<pre><code>##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-## -3.112241 -0.686158 -0.007102  0.017646  0.704310  3.148654</code></pre>
-</details>
-<p><strong>12- Create vector y2 as:</strong><br></p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="data-structures.html#cb132-1" aria-hidden="true" tabindex="-1"></a>y2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">11</span>, <span class="dv">5</span>, <span class="dv">62</span>,  <span class="dv">18</span>, <span class="dv">2</span>, <span class="dv">8</span>)</span></code></pre></div>
-<p><strong>13- Which elements of y2 are also present in y ?<br>Note: remember the %in% operator.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="data-structures.html#cb133-1" aria-hidden="true" tabindex="-1"></a>y2[ y2 <span class="sc">%in%</span> y ]</span></code></pre></div>
-<pre><code>## [1] 11  2  8</code></pre>
-</details>
-<p><strong>14- Multiply each element of y2 by 1.5: reassign.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="data-structures.html#cb135-1" aria-hidden="true" tabindex="-1"></a>y2 <span class="ot">&lt;-</span> y2 <span class="sc">*</span> <span class="fl">1.5</span></span></code></pre></div>
-</details>
-<p><strong>15- Use the function any() to check if the number 3 is present.<br>Check the help page of any()!</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="data-structures.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Given a set of logical vectors, is at least one of the values true?&quot;</span></span>
-<span id="cb136-2"><a href="data-structures.html#cb136-2" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>( y2 <span class="sc">==</span> <span class="dv">3</span> )</span></code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-</details>
-</div>
-<div id="exercise-2b." class="section level3" number="9.2.2">
-<h3><span class="header-section-number">9.2.2</span> Exercise 2b.</h3>
-<p><strong>1- Create the vector myvector as:</strong></p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="data-structures.html#cb138-1" aria-hidden="true" tabindex="-1"></a>myvector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code></pre></div>
-<p><strong>Create the same vector using the rep.int() function (?rep.int)</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="data-structures.html#cb139-1" aria-hidden="true" tabindex="-1"></a>myvector <span class="ot">&lt;-</span> <span class="fu">rep.int</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">times=</span><span class="dv">3</span>)</span></code></pre></div>
-</details>
-<p><strong>2- Reassign the 5th, 6th and 7th position of myvector with the values 8, 12 and 32, respectively.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="data-structures.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reassign one by one</span></span>
-<span id="cb140-2"><a href="data-structures.html#cb140-2" aria-hidden="true" tabindex="-1"></a>myvector[<span class="dv">5</span>] <span class="ot">&lt;-</span> <span class="dv">8</span></span>
-<span id="cb140-3"><a href="data-structures.html#cb140-3" aria-hidden="true" tabindex="-1"></a>myvector[<span class="dv">6</span>] <span class="ot">&lt;-</span> <span class="dv">12</span></span>
-<span id="cb140-4"><a href="data-structures.html#cb140-4" aria-hidden="true" tabindex="-1"></a>myvector[<span class="dv">7</span>] <span class="ot">&lt;-</span> <span class="dv">32</span></span>
-<span id="cb140-5"><a href="data-structures.html#cb140-5" aria-hidden="true" tabindex="-1"></a><span class="co"># or reassign all at once</span></span>
-<span id="cb140-6"><a href="data-structures.html#cb140-6" aria-hidden="true" tabindex="-1"></a>myvector[<span class="dv">5</span><span class="sc">:</span><span class="dv">7</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">32</span>)</span></code></pre></div>
-</details>
-<p><strong>3- Calculate the fraction/percentage of each element of myvector (relative to the sum of all elements of the vector).<br>Note:sum() can be useful…</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="data-structures.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of all elements of the vector</span></span>
-<span id="cb141-2"><a href="data-structures.html#cb141-2" aria-hidden="true" tabindex="-1"></a>mytotal <span class="ot">&lt;-</span> <span class="fu">sum</span>(myvector)</span>
-<span id="cb141-3"><a href="data-structures.html#cb141-3" aria-hidden="true" tabindex="-1"></a><span class="co"># divide each element by the sum</span></span>
-<span id="cb141-4"><a href="data-structures.html#cb141-4" aria-hidden="true" tabindex="-1"></a>myvector <span class="sc">/</span> mytotal</span></code></pre></div>
-<pre><code>## [1] 0.015625 0.031250 0.046875 0.015625 0.125000 0.187500 0.500000 0.031250
-## [9] 0.046875</code></pre>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="data-structures.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="co"># multiply by 100 to get a percentage</span></span>
-<span id="cb143-2"><a href="data-structures.html#cb143-2" aria-hidden="true" tabindex="-1"></a>(myvector <span class="sc">/</span> mytotal) <span class="sc">*</span> <span class="dv">100</span></span></code></pre></div>
-<pre><code>## [1]  1.5625  3.1250  4.6875  1.5625 12.5000 18.7500 50.0000  3.1250  4.6875</code></pre>
-</details>
-<p><strong>4- Add vector c(2, 4, 6, 7) to myvector (combining both vectors): reassign!</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="data-structures.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create the new vector</span></span>
-<span id="cb145-2"><a href="data-structures.html#cb145-2" aria-hidden="true" tabindex="-1"></a>newvector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>)</span>
-<span id="cb145-3"><a href="data-structures.html#cb145-3" aria-hidden="true" tabindex="-1"></a><span class="co"># combine both myvector and newvector</span></span>
-<span id="cb145-4"><a href="data-structures.html#cb145-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(myvector, newvector)</span></code></pre></div>
-<pre><code>##  [1]  1  2  3  1  8 12 32  2  3  2  4  6  7</code></pre>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="data-structures.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reassign myvector</span></span>
-<span id="cb147-2"><a href="data-structures.html#cb147-2" aria-hidden="true" tabindex="-1"></a>myvector <span class="ot">&lt;-</span> <span class="fu">c</span>(myvector, newvector)</span></code></pre></div>
-</details>
-
-</div>
-</div>
-<div id="exercise-3.-character-vector-manipulation" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> Exercise 3. Character vector manipulation</h2>
-<div id="exercise-3a." class="section level3" number="9.3.1">
-<h3><span class="header-section-number">9.3.1</span> Exercise 3a.</h3>
-<p>Create the script “exercise3.R” and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 3 in that script.
-<br>Remember you can comment the code using #.</p>
-<p><strong>1- Go to Rcourse/Module1
-First check where you currently are with getwd();
-then go to Rcourse/Module1 with setwd()</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="data-structures.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb148-2"><a href="data-structures.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</span>
-<span id="cb148-3"><a href="data-structures.html#cb148-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>2- Create vector w as:</strong></p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="data-structures.html#cb149-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;mRNA&quot;</span>), <span class="at">times=</span><span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>))</span></code></pre></div>
-<p><strong>3- View vector w in the console: how does function rep() work ?</strong>
-<br>Play with the <strong>times</strong> argument.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="data-structures.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;mRNA&quot;</span>), <span class="at">times=</span><span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>))</span></code></pre></div>
-<pre><code>## [1] &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;mRNA&quot;  &quot;mRNA&quot;  &quot;mRNA&quot;  &quot;mRNA&quot;</code></pre>
-<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="data-structures.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;mRNA&quot;</span>), <span class="at">times=</span><span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">2</span>))</span></code></pre></div>
-<pre><code>##  [1] &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot;
-## [10] &quot;miRNA&quot; &quot;mRNA&quot;  &quot;mRNA&quot;</code></pre>
-</details>
-<p><strong>4- What is the output of table(w) ? What does the table function do ?</strong></p>
-<p><strong>5- Type w[grep(pattern=“mRNA,” x=w)] and w[w == “mRNA”]</strong>
-<br> Is there a difference between the two outputs?</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="data-structures.html#cb154-1" aria-hidden="true" tabindex="-1"></a>w[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;mRNA&quot;</span>, w)]</span></code></pre></div>
-<pre><code>## [1] &quot;mRNA&quot; &quot;mRNA&quot;</code></pre>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="data-structures.html#cb156-1" aria-hidden="true" tabindex="-1"></a>w[w <span class="sc">==</span> <span class="st">&quot;mRNA&quot;</span>]</span></code></pre></div>
-<pre><code>## [1] &quot;mRNA&quot; &quot;mRNA&quot;</code></pre>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="data-structures.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="co"># no difference between the outputs</span></span></code></pre></div>
-</details>
-<p><strong>6- Now type w[grep(pattern=“RNA,” w)] and w[w == “RNA”]</strong>
-<br> Is there a difference between the two outputs?</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="data-structures.html#cb159-1" aria-hidden="true" tabindex="-1"></a>w[<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;RNA&quot;</span>, w)]</span></code></pre></div>
-<pre><code>## [1] &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;mRNA&quot;  &quot;mRNA&quot;</code></pre>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="data-structures.html#cb161-1" aria-hidden="true" tabindex="-1"></a>w[w <span class="sc">==</span> <span class="st">&quot;RNA&quot;</span>]</span></code></pre></div>
-<pre><code>## character(0)</code></pre>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="data-structures.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="co"># grep outputs 5 values but == outputs none</span></span></code></pre></div>
-</details>
-<p>What is the difference between <strong>==</strong> and <strong>grep</strong> ?</p>
-<details>
-<summary>
-correction
-</summary>
-<blockquote>
-<p>= looks for exact matches.
-<br>
-grep looks for <strong>patterns</strong>.</p>
-</blockquote>
-</details>
-<p><strong>7- Create vector g as:</strong></p>
-<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="data-structures.html#cb164-1" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;hsa-let-7a&quot;</span>, <span class="st">&quot;hsa-mir-1&quot;</span>, <span class="st">&quot;CLC&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;LPA&quot;</span>)</span></code></pre></div>
-<p>How many elements do w and g contain?</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="data-structures.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(w); <span class="fu">length</span>(g)</span></code></pre></div>
-<pre><code>## [1] 5</code></pre>
-<pre><code>## [1] 5</code></pre>
-</details>
-<p><strong>8- Do vectors w and g have the same length? Use the function identical() to check this.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="data-structures.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(<span class="at">x=</span><span class="fu">length</span>(w), <span class="at">y=</span><span class="fu">length</span>(g))</span></code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-</details>
-<p><strong>9- Name the elements of g using the elements of w.</strong><br>
-(i.e. the names of each element of g will be the elements of w).</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="data-structures.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(g) <span class="ot">&lt;-</span> w</span></code></pre></div>
-</details>
-<p><strong>If you have time</strong>, continue with Exercise 3b below.<br></p>
-</div>
-<div id="exercise-3b." class="section level3" number="9.3.2">
-<h3><span class="header-section-number">9.3.2</span> Exercise 3b.</h3>
-<p><strong>1- Use the sub() function to replace miRNA with microRNA in the <em>names</em> of g.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="data-structures.html#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(g) <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="at">pattern=</span><span class="st">&quot;miRNA&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;microRNA&quot;</span>, <span class="at">x=</span><span class="fu">names</span>(g))</span></code></pre></div>
-</details>
-<p><strong>2- Count how many microRNAs and mRNAs there are in g based on the column names.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="data-structures.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">names</span>(g))</span></code></pre></div>
-<pre><code>## 
-## microRNA     mRNA 
-##        3        2</code></pre>
-</details>
-<p><strong>3- Create vector tt as:</strong></p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="data-structures.html#cb174-1" aria-hidden="true" tabindex="-1"></a>tt <span class="ot">&lt;-</span> <span class="st">&quot;Introduction to R course&quot;</span></span></code></pre></div>
-<p>How many characters does tt contain? Use nchar().</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="data-structures.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(tt)</span></code></pre></div>
-<pre><code>## [1] 24</code></pre>
-</details>
-<p><strong>4- Remove “Introduction to R” from tt.</strong>
-<br>You can try with either substr() or gsub()</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="data-structures.html#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(<span class="at">x=</span>tt, <span class="at">start=</span><span class="dv">17</span>, <span class="at">stop=</span><span class="fu">nchar</span>(tt))</span></code></pre></div>
-<pre><code>## [1] &quot;R course&quot;</code></pre>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="data-structures.html#cb179-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;Introduction to R&quot;</span>, <span class="at">replacement=</span><span class="st">&quot;&quot;</span>, <span class="at">x=</span>tt)</span></code></pre></div>
-<pre><code>## [1] &quot; course&quot;</code></pre>
-</details>
-
-</div>
-</div>
-<div id="factors" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> Factors</h2>
-<ul>
-<li><p>A factor is a vector object (1 dimension) used to specify a <strong>discrete classification (grouping)</strong> of the components of other vectors.</p></li>
-<li><p>Factors are mainly used for <strong>statistical modeling</strong>, and can also be useful for graphing.</p></li>
-<li><p>You can create factors with the <strong>factor</strong> function, for example:</p></li>
-</ul>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="data-structures.html#cb181-1" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
-<span id="cb181-2"><a href="data-structures.html#cb181-2" aria-hidden="true" tabindex="-1"></a><span class="co"># check the structure of e</span></span>
-<span id="cb181-3"><a href="data-structures.html#cb181-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(e)</span></code></pre></div>
-<pre><code>##  Factor w/ 3 levels &quot;high&quot;,&quot;low&quot;,&quot;medium&quot;: 1 2 3 2</code></pre>
-<ul>
-<li>Example of a character vector versus a factor</li>
-</ul>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="data-structures.html#cb183-1" aria-hidden="true" tabindex="-1"></a><span class="co"># factor</span></span>
-<span id="cb183-2"><a href="data-structures.html#cb183-2" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
-<span id="cb183-3"><a href="data-structures.html#cb183-3" aria-hidden="true" tabindex="-1"></a><span class="co"># character vector</span></span>
-<span id="cb183-4"><a href="data-structures.html#cb183-4" aria-hidden="true" tabindex="-1"></a>e2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>)</span>
-<span id="cb183-5"><a href="data-structures.html#cb183-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the structure of both objects</span></span>
-<span id="cb183-6"><a href="data-structures.html#cb183-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(e)</span></code></pre></div>
-<pre><code>##  Factor w/ 3 levels &quot;high&quot;,&quot;low&quot;,&quot;medium&quot;: 1 2 3 2</code></pre>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="data-structures.html#cb185-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(e2)</span></code></pre></div>
-<pre><code>##  chr [1:4] &quot;high&quot; &quot;low&quot; &quot;medium&quot; &quot;low&quot;</code></pre>
-<ul>
-<li>Groups in factors are called <strong>levels</strong>.<br>
-Levels can be <strong>ordered</strong>. Then, some operations applied on numeric vectors can be used:</li>
-</ul>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="data-structures.html#cb187-1" aria-hidden="true" tabindex="-1"></a><span class="co"># unordered factor:</span></span>
-<span id="cb187-2"><a href="data-structures.html#cb187-2" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
-<span id="cb187-3"><a href="data-structures.html#cb187-3" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(e) <span class="co"># throws an error</span></span>
-<span id="cb187-4"><a href="data-structures.html#cb187-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ordered factor</span></span>
-<span id="cb187-5"><a href="data-structures.html#cb187-5" aria-hidden="true" tabindex="-1"></a>e_ord <span class="ot">&lt;-</span> <span class="fu">factor</span>(e, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;high&quot;</span>), <span class="at">ordered=</span><span class="cn">TRUE</span>)</span>
-<span id="cb187-6"><a href="data-structures.html#cb187-6" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(e_ord) <span class="co"># outputs &quot;high&quot;</span></span></code></pre></div>
-
-</div>
-<div id="matrices" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> Matrices</h2>
-<ul>
-<li><p>A matrix is a <strong>2 dimensional</strong> vector.</p></li>
-<li><p>All columns in a matrix must have:</p>
-<ul>
-<li>the same <strong>type</strong> (numeric, character or logical)</li>
-<li>the same <strong>length</strong></li>
-</ul></li>
-</ul>
-<div id="creating-a-matrix" class="section level3" number="9.5.1">
-<h3><span class="header-section-number">9.5.1</span> Creating a matrix</h3>
-<ul>
-<li>From vectors with the <strong>rbind</strong> function:</li>
-</ul>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="data-structures.html#cb188-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">44</span>)</span>
-<span id="cb188-2"><a href="data-structures.html#cb188-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">12</span>)</span>
-<span id="cb188-3"><a href="data-structures.html#cb188-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">34</span>, <span class="dv">4</span>)</span>
-<span id="cb188-4"><a href="data-structures.html#cb188-4" aria-hidden="true" tabindex="-1"></a><span class="co"># rbind: bind rows</span></span>
-<span id="cb188-5"><a href="data-structures.html#cb188-5" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, y, z)</span></code></pre></div>
-<ul>
-<li>From vectors with the <strong>cbind</strong> function:</li>
-</ul>
-<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="data-structures.html#cb189-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>)</span>
-<span id="cb189-2"><a href="data-structures.html#cb189-2" aria-hidden="true" tabindex="-1"></a>j <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>)</span>
-<span id="cb189-3"><a href="data-structures.html#cb189-3" aria-hidden="true" tabindex="-1"></a><span class="co"># cbind: bind columns</span></span>
-<span id="cb189-4"><a href="data-structures.html#cb189-4" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">cbind</span>(i, j)</span></code></pre></div>
-<ul>
-<li>From scratch with the <em>matrix</em> function:</li>
-</ul>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="data-structures.html#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nrow: number of rows</span></span>
-<span id="cb190-2"><a href="data-structures.html#cb190-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ncol: number of columns</span></span>
-<span id="cb190-3"><a href="data-structures.html#cb190-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
-<span id="cb190-4"><a href="data-structures.html#cb190-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">3</span>,</span>
-<span id="cb190-5"><a href="data-structures.html#cb190-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
-</div>
-<div id="two-dimensional-object" class="section level3" number="9.5.2">
-<h3><span class="header-section-number">9.5.2</span> Two-dimensional object</h3>
-<p>Vectors have one index per element (1-dimension).<br>
-Matrices have <strong>two indices (2-dimensions)</strong> per element, corresponding to the row and the column:</p>
-<p><img src="images/matrix_indices.png" width="300"/></p>
-<ul>
-<li>Fetching elements of a matrix:</li>
-</ul>
-<p>The “coordinates” of an element in a 2-dimensional object will be first the row (on the left of the comma), then the column (on the right of the comma):</p>
-<p><img src="images/matrix_rc.png" alt="rstudio logo" width="250"/></p>
-</div>
-<div id="matrix-manipulation" class="section level3" number="9.5.3">
-<h3><span class="header-section-number">9.5.3</span> Matrix manipulation</h3>
-<ul>
-<li>Add 1 to all elements of a matrix</li>
-</ul>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="data-structures.html#cb191-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> b <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
-<ul>
-<li>Multiply by 3 all elements of a matrix</li>
-</ul>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="data-structures.html#cb192-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> b <span class="sc">*</span> <span class="dv">3</span></span></code></pre></div>
-<ul>
-<li>Subtract 2 to each element of <strong>the first row</strong> of a matrix</li>
-</ul>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="data-structures.html#cb193-1" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">1</span>, ] <span class="ot">&lt;-</span> b[<span class="dv">1</span>, ] <span class="sc">-</span> <span class="dv">2</span></span></code></pre></div>
-<ul>
-<li>Replace elements that comply a condition:</li>
-</ul>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="data-structures.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace all elements that are greater than 3 with NA</span></span>
-<span id="cb194-2"><a href="data-structures.html#cb194-2" aria-hidden="true" tabindex="-1"></a>b[ b<span class="sc">&gt;</span><span class="dv">3</span> ] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
-
-</div>
-</div>
-<div id="data-frames" class="section level2" number="9.6">
-<h2><span class="header-section-number">9.6</span> Data frames</h2>
-<p>A data frame is a 2-dimensional structure.
-<br> It is more general than a matrix.
-<br><br>
-All columns in a data frame:</p>
-<ul>
-<li>can be of different <strong>types</strong> (numeric, character or logical)</li>
-<li>must have the same <strong>length</strong></li>
-</ul>
-<p>A data frame is organized by <strong>column</strong>: columns are <strong>variables</strong> and rows are <strong>observations</strong> of each variable.</p>
-<div id="create-a-data-frame" class="section level3" number="9.6.1">
-<h3><span class="header-section-number">9.6.1</span> Create a data frame</h3>
-<ul>
-<li>With the <strong>data.frame</strong> function:</li>
-</ul>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="data-structures.html#cb195-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stringsAsFactors: ensures that characters are treated as characters and not as factors</span></span>
-<span id="cb195-2"><a href="data-structures.html#cb195-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </span>
-<span id="cb195-3"><a href="data-structures.html#cb195-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</span>
-<span id="cb195-4"><a href="data-structures.html#cb195-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
-<span id="cb195-5"><a href="data-structures.html#cb195-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<ul>
-<li>Example why “stringsAsFactors = FALSE” is useful</li>
-</ul>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="data-structures.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with default parameters</span></span>
-<span id="cb196-2"><a href="data-structures.html#cb196-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">label=</span><span class="fu">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="at">column2=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb196-3"><a href="data-structures.html#cb196-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace one value</span></span>
-<span id="cb196-4"><a href="data-structures.html#cb196-4" aria-hidden="true" tabindex="-1"></a>df[<span class="dv">2</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;yes&quot;</span></span>
-<span id="cb196-5"><a href="data-structures.html#cb196-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Throws an error and doesn&#39;t replace the value !</span></span></code></pre></div>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="data-structures.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with:</span></span>
-<span id="cb197-2"><a href="data-structures.html#cb197-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">label=</span><span class="fu">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="at">column2=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb197-3"><a href="data-structures.html#cb197-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace one value</span></span>
-<span id="cb197-4"><a href="data-structures.html#cb197-4" aria-hidden="true" tabindex="-1"></a>df2[<span class="dv">2</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;yes&quot;</span></span>
-<span id="cb197-5"><a href="data-structures.html#cb197-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Works!</span></span></code></pre></div>
-<ul>
-<li>Converting a matrix into a data frame:</li>
-</ul>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="data-structures.html#cb198-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a matrix</span></span>
-<span id="cb198-2"><a href="data-structures.html#cb198-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
-<span id="cb198-3"><a href="data-structures.html#cb198-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">nrow=</span><span class="dv">3</span>,</span>
-<span id="cb198-4"><a href="data-structures.html#cb198-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ncol=</span><span class="dv">2</span>)</span>
-<span id="cb198-5"><a href="data-structures.html#cb198-5" aria-hidden="true" tabindex="-1"></a><span class="co"># convert as data frame</span></span>
-<span id="cb198-6"><a href="data-structures.html#cb198-6" aria-hidden="true" tabindex="-1"></a>b_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(b)</span></code></pre></div>
-</div>
-<div id="data-frame-manipulation" class="section level3" number="9.6.2">
-<h3><span class="header-section-number">9.6.2</span> Data frame manipulation:</h3>
-<p><br>
-Very similar to matrix manipulation.</p>
-<p><img src="images/df_fetch.png" width="450"/></p>
-
-</div>
-</div>
-<div id="two-dimensional-structures-manipulation" class="section level2" number="9.7">
-<h2><span class="header-section-number">9.7</span> Two-dimensional structures manipulation</h2>
-<div id="dimensions" class="section level3" number="9.7.1">
-<h3><span class="header-section-number">9.7.1</span> Dimensions</h3>
-<ul>
-<li>Get the number of rows and the number of columns:</li>
-</ul>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="data-structures.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame</span></span>
-<span id="cb199-2"><a href="data-structures.html#cb199-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>),</span>
-<span id="cb199-3"><a href="data-structures.html#cb199-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</span>
-<span id="cb199-4"><a href="data-structures.html#cb199-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
-<span id="cb199-5"><a href="data-structures.html#cb199-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb199-6"><a href="data-structures.html#cb199-6" aria-hidden="true" tabindex="-1"></a><span class="co"># number of rows</span></span>
-<span id="cb199-7"><a href="data-structures.html#cb199-7" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(d)</span>
-<span id="cb199-8"><a href="data-structures.html#cb199-8" aria-hidden="true" tabindex="-1"></a><span class="co"># number of columns</span></span>
-<span id="cb199-9"><a href="data-structures.html#cb199-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(d)</span></code></pre></div>
-<ul>
-<li>Check the dimensions of the object: both number of rows and number of columns:</li>
-</ul>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="data-structures.html#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first element: number of rows</span></span>
-<span id="cb200-2"><a href="data-structures.html#cb200-2" aria-hidden="true" tabindex="-1"></a><span class="co"># second element: number of columns</span></span>
-<span id="cb200-3"><a href="data-structures.html#cb200-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(d)</span></code></pre></div>
-<ul>
-<li>Dimension names</li>
-</ul>
-<p>Column and/or row names can be added to matrices and data frames</p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="data-structures.html#cb201-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Name&quot;</span>, <span class="st">&quot;Age&quot;</span>, <span class="st">&quot;Vegetarian&quot;</span>)</span>
-<span id="cb201-2"><a href="data-structures.html#cb201-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>)</span></code></pre></div>
-<p>Column and/or row names can be used to retrieve elements or sets of elements from a 2-dimensional object:</p>
-<p><img src="images/df_names.png" width="450"/></p>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="data-structures.html#cb202-1" aria-hidden="true" tabindex="-1"></a>d[,<span class="st">&quot;Name&quot;</span>]</span>
-<span id="cb202-2"><a href="data-structures.html#cb202-2" aria-hidden="true" tabindex="-1"></a><span class="co"># same as:</span></span>
-<span id="cb202-3"><a href="data-structures.html#cb202-3" aria-hidden="true" tabindex="-1"></a>d[,<span class="dv">1</span>]</span>
-<span id="cb202-4"><a href="data-structures.html#cb202-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb202-5"><a href="data-structures.html#cb202-5" aria-hidden="true" tabindex="-1"></a>d[<span class="st">&quot;Patient3&quot;</span>, <span class="st">&quot;Age&quot;</span>]</span>
-<span id="cb202-6"><a href="data-structures.html#cb202-6" aria-hidden="true" tabindex="-1"></a><span class="co"># same as:</span></span>
-<span id="cb202-7"><a href="data-structures.html#cb202-7" aria-hidden="true" tabindex="-1"></a>d[<span class="dv">3</span>,<span class="dv">2</span>]</span>
-<span id="cb202-8"><a href="data-structures.html#cb202-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb202-9"><a href="data-structures.html#cb202-9" aria-hidden="true" tabindex="-1"></a><span class="co"># for data frames only, the $ sign can be used to retrieve columns:</span></span>
-<span id="cb202-10"><a href="data-structures.html#cb202-10" aria-hidden="true" tabindex="-1"></a><span class="co"># d$Name is d[,1] is d[, &quot;Name&quot;]</span></span></code></pre></div>
-<ul>
-<li>Include names as you create objects:
-<ul>
-<li>Matrix:</li>
-</ul></li>
-</ul>
-<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="data-structures.html#cb203-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">ncol=</span><span class="dv">2</span>, </span>
-<span id="cb203-2"><a href="data-structures.html#cb203-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">dimnames=</span><span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;row1&quot;</span>, <span class="st">&quot;row2&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;col1&quot;</span>, <span class="st">&quot;col2&quot;</span>)))</span></code></pre></div>
-<pre><code>+ Data frame:</code></pre>
-<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="data-structures.html#cb205-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">col1=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">col2=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, </span>
-<span id="cb205-2"><a href="data-structures.html#cb205-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.names=</span><span class="fu">c</span>(<span class="st">&quot;row1&quot;</span>, <span class="st">&quot;row2&quot;</span>))</span></code></pre></div>
-</div>
-<div id="manipulation" class="section level3" number="9.7.2">
-<h3><span class="header-section-number">9.7.2</span> Manipulation</h3>
-<p>Same principle as vectors… but in 2 dimensions!
-<br></p>
-<div id="examples" class="section level4" number="9.7.2.1">
-<h4><span class="header-section-number">9.7.2.1</span> Examples</h4>
-<ul>
-<li>Select rows of b if <strong>at least one element in column 2 is greater than 24</strong> (i.e. select patients if they are older than 24):</li>
-</ul>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="data-structures.html#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="co"># build data frame d</span></span>
-<span id="cb206-2"><a href="data-structures.html#cb206-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Name=</span><span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </span>
-<span id="cb206-3"><a href="data-structures.html#cb206-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">Age=</span><span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</span>
-<span id="cb206-4"><a href="data-structures.html#cb206-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Vegetarian=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
-<span id="cb206-5"><a href="data-structures.html#cb206-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb206-6"><a href="data-structures.html#cb206-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>)</span>
-<span id="cb206-7"><a href="data-structures.html#cb206-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The following commands all output the same result:</span></span>
-<span id="cb206-8"><a href="data-structures.html#cb206-8" aria-hidden="true" tabindex="-1"></a>d[d[,<span class="dv">2</span>] <span class="sc">&gt;</span> <span class="dv">24</span>, ]</span>
-<span id="cb206-9"><a href="data-structures.html#cb206-9" aria-hidden="true" tabindex="-1"></a>d[d[,<span class="st">&quot;Age&quot;</span>] <span class="sc">&gt;</span> <span class="dv">24</span>, ]</span>
-<span id="cb206-10"><a href="data-structures.html#cb206-10" aria-hidden="true" tabindex="-1"></a>d[d<span class="sc">$</span>Age <span class="sc">&gt;</span> <span class="dv">24</span>, ]</span></code></pre></div>
-<p><img src="images/df_col2.png" width="500"/></p>
-<ul>
-<li>Select patients (rows) based on 2 criteria: age of the patient (column 2) should be great than or equal to 25, and the patient should be vegetarian (column 3):</li>
-</ul>
-<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="data-structures.html#cb207-1" aria-hidden="true" tabindex="-1"></a>d[ d<span class="sc">$</span>Age <span class="sc">&gt;=</span> <span class="dv">25</span> <span class="sc">&amp;</span> d<span class="sc">$</span>Vegetarian <span class="sc">==</span> <span class="cn">TRUE</span>, ]</span></code></pre></div>
-<p><img src="images/df_col2_col3.png" width="700"/></p>
-<ul>
-<li>Select the columns of b if <strong>at least one element in the 3rd row is less than or equal to 4</strong>:</li>
-</ul>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="data-structures.html#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create b</span></span>
-<span id="cb208-2"><a href="data-structures.html#cb208-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
-<span id="cb208-3"><a href="data-structures.html#cb208-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">3</span>, </span>
-<span id="cb208-4"><a href="data-structures.html#cb208-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">ncol=</span><span class="dv">2</span>)</span>
-<span id="cb208-5"><a href="data-structures.html#cb208-5" aria-hidden="true" tabindex="-1"></a><span class="co"># third row of b:</span></span>
-<span id="cb208-6"><a href="data-structures.html#cb208-6" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">3</span>, ]</span>
-<span id="cb208-7"><a href="data-structures.html#cb208-7" aria-hidden="true" tabindex="-1"></a><span class="co"># element(s) in the third row of b that is (are) less than or equal to 4</span></span>
-<span id="cb208-8"><a href="data-structures.html#cb208-8" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">3</span>, ] <span class="sc">&lt;=</span> <span class="dv">4</span></span>
-<span id="cb208-9"><a href="data-structures.html#cb208-9" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve the corresponding sub-matrix</span></span>
-<span id="cb208-10"><a href="data-structures.html#cb208-10" aria-hidden="true" tabindex="-1"></a>b[ ,b[<span class="dv">3</span>, ] <span class="sc">&lt;=</span> <span class="dv">4</span>]</span></code></pre></div>
-</div>
-<div id="more-useful-commands" class="section level4" number="9.7.2.2">
-<h4><span class="header-section-number">9.7.2.2</span> More useful commands</h4>
-<ul>
-<li>Add a row or a column with <strong>rbind</strong> and <strong>cbind</strong>, respectively</li>
-</ul>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="data-structures.html#cb209-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add a column</span></span>
-<span id="cb209-2"><a href="data-structures.html#cb209-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(d, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
-<span id="cb209-3"><a href="data-structures.html#cb209-3" aria-hidden="true" tabindex="-1"></a><span class="co"># add a row</span></span>
-<span id="cb209-4"><a href="data-structures.html#cb209-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(d, <span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>)</span></code></pre></div>
-<p>Add a patient to our data frame <strong>d</strong>:</p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="data-structures.html#cb210-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">rbind</span>(d, <span class="fu">c</span>(<span class="st">&quot;Jordi&quot;</span>, <span class="dv">33</span>, <span class="cn">FALSE</span>))</span></code></pre></div>
-<ul>
-<li>Process the sum of all rows or all columns with <strong>rowSums</strong> and <strong>colSums</strong>, respectively.</li>
-</ul>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="data-structures.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a matrix</span></span>
-<span id="cb211-2"><a href="data-structures.html#cb211-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
-<span id="cb211-3"><a href="data-structures.html#cb211-3" aria-hidden="true" tabindex="-1"></a><span class="co"># process sum of rows and sum of cols</span></span>
-<span id="cb211-4"><a href="data-structures.html#cb211-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rowSums</span>(b)</span>
-<span id="cb211-5"><a href="data-structures.html#cb211-5" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(b)</span></code></pre></div>
-<ul>
-<li>The <strong>apply</strong> function</li>
-</ul>
-<p>Powerful tool to apply a command to all rows or all columns of a data frame or a matrix.<br>
-For example, instead of calculating the sum of each row, you might be interested in calculating the median ? But rowMedians doesn’t exist !
-<br><br>
-<strong>apply</strong> takes 3 arguments:</p>
-<ul>
-<li>first argument <strong>X</strong>: 2-dimensional object</li>
-<li>second argument <strong>MARGIN</strong>: apply by row or by column?
-<ul>
-<li>1: by row</li>
-<li>2: by column</li>
-</ul></li>
-<li>third argument <strong>FUN</strong>: function to apply to either rows or columns</li>
-</ul>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="data-structures.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each row of b</span></span>
-<span id="cb212-2"><a href="data-structures.html#cb212-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>median)</span>
-<span id="cb212-3"><a href="data-structures.html#cb212-3" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each column of b</span></span>
-<span id="cb212-4"><a href="data-structures.html#cb212-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">2</span>, <span class="at">FUN=</span>median)</span></code></pre></div>
-
-</div>
-</div>
-</div>
-<div id="exercise-4.-matrix-manipulation" class="section level2" number="9.8">
-<h2><span class="header-section-number">9.8</span> Exercise 4. Matrix manipulation</h2>
-<p>Create the script “exercise4.R” and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 4 in that script.
-<br>Remember you can comment the code using #.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="data-structures.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb213-2"><a href="data-structures.html#cb213-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</span>
-<span id="cb213-3"><a href="data-structures.html#cb213-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>1- Create three numeric vectors x, y, z, each of 4 elements of your choice.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="data-structures.html#cb214-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb214-2"><a href="data-structures.html#cb214-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">9</span></span>
-<span id="cb214-3"><a href="data-structures.html#cb214-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">:</span><span class="dv">4</span></span></code></pre></div>
-</details>
-<p>Use rbind() to create a matrix <strong>mat</strong> (3 rows and 4 columns) out of x, y and z.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="data-structures.html#cb215-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, y, z)</span></code></pre></div>
-</details>
-<p><strong>2- Create the same matrix now using the matrix function. Repeat the same using the byrow=TRUE parameter: what is different?</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="data-structures.html#cb216-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data=</span><span class="fu">c</span>(x, y, z), <span class="at">nrow=</span><span class="dv">3</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
-<span id="cb216-2"><a href="data-structures.html#cb216-2" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;byrow=TRUE&quot;: what is different in the output ?</span></span>
-<span id="cb216-3"><a href="data-structures.html#cb216-3" aria-hidden="true" tabindex="-1"></a>mat_byrow <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data=</span><span class="fu">c</span>(x, y, z), <span class="at">nrow=</span><span class="dv">3</span>, <span class="at">ncol=</span><span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-</details>
-<p><strong>3- Add names to mat’s columns: “a,” “b,” “c,” “d,” respectively.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="data-structures.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>4- Calculate the sum of each row, and the sum of each column</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="data-structures.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rowSums</span>(mat); <span class="fu">colSums</span>(mat)</span></code></pre></div>
-</details>
-<p><strong>5- Create the matrix mat2 as:</strong></p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="data-structures.html#cb219-1" aria-hidden="true" tabindex="-1"></a>mat2 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>, <span class="at">to=</span><span class="dv">10</span>, <span class="at">by=</span><span class="dv">2</span>), <span class="dv">5</span><span class="sc">:</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="at">x=</span><span class="dv">2017</span>, <span class="at">times=</span><span class="dv">5</span>)), <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
-<p>What does function seq() do?</p>
-<details>
-<summary>
-correction
-</summary>
-<p><strong>seq</strong> generate sequences of numbers. Here, it creates a sequences from 1 to 10 with a step of 2 numbers.</p>
-</details>
-<p><strong>6- What are the dimensions of mat2 (number of rows and number of columns)?</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="data-structures.html#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="co"># number of rows</span></span>
-<span id="cb220-2"><a href="data-structures.html#cb220-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(mat2)</span>
-<span id="cb220-3"><a href="data-structures.html#cb220-3" aria-hidden="true" tabindex="-1"></a><span class="co"># number of columns</span></span>
-<span id="cb220-4"><a href="data-structures.html#cb220-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(mat2)</span>
-<span id="cb220-5"><a href="data-structures.html#cb220-5" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions: number of rows, number of columns</span></span>
-<span id="cb220-6"><a href="data-structures.html#cb220-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(mat2)</span></code></pre></div>
-</details>
-<p><strong>7- Add column names to mat2: “day,” “month” and “year,” respectively.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="data-structures.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;day&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;year&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>8- Add row names to mat2: letters “A” to “E”</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="data-structures.html#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mat2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;E&quot;</span>)</span>
-<span id="cb222-2"><a href="data-structures.html#cb222-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mat2) <span class="ot">&lt;-</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div>
-</details>
-<p><strong>9- Shows row(s) of mat2 where the month column is greater than or equal to 3.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="data-structures.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select column month</span></span>
-<span id="cb223-2"><a href="data-structures.html#cb223-2" aria-hidden="true" tabindex="-1"></a>mat2[, <span class="st">&quot;month&quot;</span>]</span>
-<span id="cb223-3"><a href="data-structures.html#cb223-3" aria-hidden="true" tabindex="-1"></a><span class="co"># element(s) of column month that is (are) greater than or equal to 3</span></span>
-<span id="cb223-4"><a href="data-structures.html#cb223-4" aria-hidden="true" tabindex="-1"></a>mat2[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span></span>
-<span id="cb223-5"><a href="data-structures.html#cb223-5" aria-hidden="true" tabindex="-1"></a><span class="co"># finally select row(s) where the month columns is greater than or equal to 3</span></span>
-<span id="cb223-6"><a href="data-structures.html#cb223-6" aria-hidden="true" tabindex="-1"></a>mat2[mat2[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span>,]</span></code></pre></div>
-</details>
-<p><strong>10- Replace all elements of mat2 that are equal to 2017 with 2018.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="data-structures.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements of mat2 that are exactly equal to 2017</span></span>
-<span id="cb224-2"><a href="data-structures.html#cb224-2" aria-hidden="true" tabindex="-1"></a>mat2<span class="sc">==</span><span class="dv">2017</span></span>
-<span id="cb224-3"><a href="data-structures.html#cb224-3" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve actual elements</span></span>
-<span id="cb224-4"><a href="data-structures.html#cb224-4" aria-hidden="true" tabindex="-1"></a>mat2[mat2<span class="sc">==</span><span class="dv">2017</span>]</span>
-<span id="cb224-5"><a href="data-structures.html#cb224-5" aria-hidden="true" tabindex="-1"></a><span class="co"># replace all 2017 with 2018</span></span>
-<span id="cb224-6"><a href="data-structures.html#cb224-6" aria-hidden="true" tabindex="-1"></a>mat2[mat2<span class="sc">==</span><span class="dv">2017</span>] <span class="ot">&lt;-</span> <span class="dv">2018</span></span></code></pre></div>
-</details>
-<p><strong>11- Multiply all elements of the 2nd column of mat2 by 7. Reassign mat2!</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="data-structures.html#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="co"># multiply all elements of the 2nd column of mat2 by 7</span></span>
-<span id="cb225-2"><a href="data-structures.html#cb225-2" aria-hidden="true" tabindex="-1"></a>mat2[,<span class="dv">2</span>] <span class="sc">*</span> <span class="dv">7</span></span>
-<span id="cb225-3"><a href="data-structures.html#cb225-3" aria-hidden="true" tabindex="-1"></a><span class="co"># reassign mat2 with the new values of column 2</span></span>
-<span id="cb225-4"><a href="data-structures.html#cb225-4" aria-hidden="true" tabindex="-1"></a>mat2[,<span class="dv">2</span>] <span class="ot">&lt;-</span> mat2[,<span class="dv">2</span>] <span class="sc">*</span> <span class="dv">7</span></span></code></pre></div>
-</details>
-<p><strong>12- Add the column named “time” to mat2, that contains values 8, 12, 11, 10, 8. Save in the new object mat3.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="data-structures.html#cb226-1" aria-hidden="true" tabindex="-1"></a>mat3 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(mat2, <span class="at">time=</span><span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>))</span></code></pre></div>
-</details>
-<p><strong>13- Replace all elements of mat3 that are less than 3 with NA.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="data-structures.html#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements of mat3 that are less than 3</span></span>
-<span id="cb227-2"><a href="data-structures.html#cb227-2" aria-hidden="true" tabindex="-1"></a>mat3 <span class="sc">&lt;</span> <span class="dv">3</span></span>
-<span id="cb227-3"><a href="data-structures.html#cb227-3" aria-hidden="true" tabindex="-1"></a><span class="co"># actually elements of mat3 that are less than 3</span></span>
-<span id="cb227-4"><a href="data-structures.html#cb227-4" aria-hidden="true" tabindex="-1"></a>mat3[mat3 <span class="sc">&lt;</span> <span class="dv">3</span>]</span>
-<span id="cb227-5"><a href="data-structures.html#cb227-5" aria-hidden="true" tabindex="-1"></a><span class="co"># reassign elements of mat3 that are less than 3 with NA</span></span>
-<span id="cb227-6"><a href="data-structures.html#cb227-6" aria-hidden="true" tabindex="-1"></a>mat3[mat3 <span class="sc">&lt;</span> <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
-</details>
-<p><strong>14- Remove rows from mat3 if a NA is present. Save in the new object mat4.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="data-structures.html#cb228-1" aria-hidden="true" tabindex="-1"></a>mat4 <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(mat3)</span></code></pre></div>
-</details>
-<p><strong>15- Retrieve the smaller value of each column of mat4.</strong></p>
-<p>Try different approaches:</p>
-<ul>
-<li>Retrieve the minimum for each column one by one.</li>
-</ul>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="data-structures.html#cb229-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;day&quot;</span>])</span>
-<span id="cb229-2"><a href="data-structures.html#cb229-2" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;month&quot;</span>])</span>
-<span id="cb229-3"><a href="data-structures.html#cb229-3" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;year&quot;</span>])</span>
-<span id="cb229-4"><a href="data-structures.html#cb229-4" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;time&quot;</span>])</span></code></pre></div>
-</details>
-<ul>
-<li>Retrieve the minimum of all columns simultaneously using the apply() function.</li>
-</ul>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="data-structures.html#cb230-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mat4: object</span></span>
-<span id="cb230-2"><a href="data-structures.html#cb230-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 2: by column</span></span>
-<span id="cb230-3"><a href="data-structures.html#cb230-3" aria-hidden="true" tabindex="-1"></a><span class="co"># min: function to apply</span></span>
-<span id="cb230-4"><a href="data-structures.html#cb230-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mat4, <span class="dv">2</span>, min)</span></code></pre></div>
-</details>
-
-</div>
-<div id="exercise-5.-data-frame-manipulation" class="section level2" number="9.9">
-<h2><span class="header-section-number">9.9</span> Exercise 5. Data frame manipulation</h2>
-<p>Create the script “exercise5.R” and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 5 in that script.
-<br>Remember you can comment the code using #.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="data-structures.html#cb231-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb231-2"><a href="data-structures.html#cb231-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</span>
-<span id="cb231-3"><a href="data-structures.html#cb231-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</span></code></pre></div>
-</details>
-<div id="exercise-5a" class="section level3" number="9.9.1">
-<h3><span class="header-section-number">9.9.1</span> Exercise 5a</h3>
-<p><strong>1- Create the following data frame:</strong></p>
-<table>
-<tbody>
-<tr class="odd">
-<td align="center">43</td>
-<td align="center">181</td>
-<td align="center">M</td>
-</tr>
-<tr class="even">
-<td align="center">34</td>
-<td align="center">172</td>
-<td align="center">F</td>
-</tr>
-<tr class="odd">
-<td align="center">22</td>
-<td align="center">189</td>
-<td align="center">M</td>
-</tr>
-<tr class="even">
-<td align="center">27</td>
-<td align="center">167</td>
-<td align="center">F</td>
-</tr>
-</tbody>
-</table>
-<p><br>
-With Row names: John, Jessica, Steve, Rachel.
-<br>
-And Column names: Age, Height, Sex.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="data-structures.html#cb232-1" aria-hidden="true" tabindex="-1"></a>mydf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Age=</span><span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">34</span>, <span class="dv">22</span>, <span class="dv">27</span>), </span>
-<span id="cb232-2"><a href="data-structures.html#cb232-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">Height=</span><span class="fu">c</span>(<span class="dv">181</span>, <span class="dv">172</span>, <span class="dv">189</span>, <span class="dv">167</span>),</span>
-<span id="cb232-3"><a href="data-structures.html#cb232-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">Sex=</span><span class="fu">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>),</span>
-<span id="cb232-4"><a href="data-structures.html#cb232-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">row.names =</span> <span class="fu">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Jessica&quot;</span>, <span class="st">&quot;Steve&quot;</span>, <span class="st">&quot;Rachel&quot;</span>),</span>
-<span id="cb232-5"><a href="data-structures.html#cb232-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-</details>
-<p><strong>2- Check the structure of mydf with str().</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="data-structures.html#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(mydf)</span></code></pre></div>
-</details>
-<p><strong>3- Calculate the average age and height in mydf</strong></p>
-<p>Try different approaches:</p>
-<ul>
-<li>Calculate the average for each column separately.</li>
-</ul>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="data-structures.html#cb234-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(mydf<span class="sc">$</span>Age)</span>
-<span id="cb234-2"><a href="data-structures.html#cb234-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(mydf<span class="sc">$</span>Height)</span></code></pre></div>
-</details>
-<ul>
-<li>Calculate the average of both columns simultaneously using the apply() function.</li>
-</ul>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="data-structures.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we have to remove the Sex column: we can calculate the average only with numbers</span></span>
-<span id="cb235-2"><a href="data-structures.html#cb235-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mydf[,<span class="sc">-</span><span class="dv">3</span>], <span class="dv">2</span>, mean)</span>
-<span id="cb235-3"><a href="data-structures.html#cb235-3" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mydf[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>], <span class="dv">2</span>, mean)</span>
-<span id="cb235-4"><a href="data-structures.html#cb235-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mydf[,<span class="sc">-</span><span class="fu">grep</span>(<span class="st">&quot;Sex&quot;</span>, <span class="fu">colnames</span>(mydf))], <span class="dv">2</span>, mean)</span></code></pre></div>
-</details>
-<p><strong>4- Add one row to mydf: Georges who is 53 years old and 168cm tall.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="data-structures.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Georges= allows us to enter the row name at the same time as we add a row</span></span>
-<span id="cb236-2"><a href="data-structures.html#cb236-2" aria-hidden="true" tabindex="-1"></a>mydf <span class="ot">&lt;-</span> <span class="fu">rbind</span>(mydf, <span class="at">Georges=</span><span class="fu">c</span>(<span class="dv">53</span>, <span class="dv">168</span>, <span class="st">&quot;M&quot;</span>))</span></code></pre></div>
-</details>
-<p><strong>5- Change the row names of mydf so the data becomes anonymous:</strong>
-Use Patient1, Patient2, etc. instead of actual names.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="data-structures.html#cb237-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mydf) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>, <span class="st">&quot;Patient4&quot;</span>, <span class="st">&quot;Patient5&quot;</span>)</span>
-<span id="cb237-2"><a href="data-structures.html#cb237-2" aria-hidden="true" tabindex="-1"></a><span class="co"># try also the paste function!</span></span>
-<span id="cb237-3"><a href="data-structures.html#cb237-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mydf) <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;Patient&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>6- Create the data frame mydf2 that is a subset of mydf containing only the female entries.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="data-structures.html#cb238-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements are female (&quot;F&quot; in the &quot;Sex&quot; colum)</span></span>
-<span id="cb238-2"><a href="data-structures.html#cb238-2" aria-hidden="true" tabindex="-1"></a>mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;F&quot;</span></span>
-<span id="cb238-3"><a href="data-structures.html#cb238-3" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve rows that contain the female entries, and save in mydf2</span></span>
-<span id="cb238-4"><a href="data-structures.html#cb238-4" aria-hidden="true" tabindex="-1"></a>mydf2 <span class="ot">&lt;-</span> mydf[mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;F&quot;</span>,]</span></code></pre></div>
-</details>
-<p><strong>7- Create the data frame mydf3 that is a subset of mydf containing only entries of males taller than 170.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="data-structures.html#cb239-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which entries are males</span></span>
-<span id="cb239-2"><a href="data-structures.html#cb239-2" aria-hidden="true" tabindex="-1"></a>mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;M&quot;</span></span>
-<span id="cb239-3"><a href="data-structures.html#cb239-3" aria-hidden="true" tabindex="-1"></a><span class="co"># which entries are greater than 170 in column &quot;Height&quot;</span></span>
-<span id="cb239-4"><a href="data-structures.html#cb239-4" aria-hidden="true" tabindex="-1"></a>mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;M&quot;</span> <span class="sc">&amp;</span> mydf<span class="sc">$</span>Height <span class="sc">&gt;</span> <span class="dv">170</span></span>
-<span id="cb239-5"><a href="data-structures.html#cb239-5" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve rows that contain the males that are taller than 170, and save in mydf3</span></span>
-<span id="cb239-6"><a href="data-structures.html#cb239-6" aria-hidden="true" tabindex="-1"></a>mydf3 <span class="ot">&lt;-</span> mydf[mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;M&quot;</span> <span class="sc">&amp;</span> mydf<span class="sc">$</span>Height <span class="sc">&gt;</span> <span class="dv">170</span>,]</span></code></pre></div>
-</details>
-</div>
-<div id="exercise-5b" class="section level3" number="9.9.2">
-<h3><span class="header-section-number">9.9.2</span> Exercise 5b</h3>
-<p><strong>1. Create two data frames mydf1 and mydf2 as:</strong></p>
-<p>mydf1:</p>
-<table>
-<tbody>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center">14</td>
-</tr>
-<tr class="even">
-<td align="center">2</td>
-<td align="center">12</td>
-</tr>
-<tr class="odd">
-<td align="center">3</td>
-<td align="center">15</td>
-</tr>
-<tr class="even">
-<td align="center">4</td>
-<td align="center">10</td>
-</tr>
-</tbody>
-</table>
-<p>mydf2:</p>
-<table>
-<tbody>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center">paul</td>
-</tr>
-<tr class="even">
-<td align="center">2</td>
-<td align="center">helen</td>
-</tr>
-<tr class="odd">
-<td align="center">3</td>
-<td align="center">emily</td>
-</tr>
-<tr class="even">
-<td align="center">4</td>
-<td align="center">john</td>
-</tr>
-<tr class="odd">
-<td align="center">5</td>
-<td align="center">mark</td>
-</tr>
-</tbody>
-</table>
-<p>With column names: <strong>“id,” “age”</strong> for mydf1, and <strong>“id,” “name”</strong> for mydf2.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="data-structures.html#cb240-1" aria-hidden="true" tabindex="-1"></a>mydf1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">age=</span><span class="fu">c</span>(<span class="dv">14</span>,<span class="dv">12</span>,<span class="dv">15</span>,<span class="dv">10</span>))</span>
-<span id="cb240-2"><a href="data-structures.html#cb240-2" aria-hidden="true" tabindex="-1"></a>mydf2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">name=</span><span class="fu">c</span>(<span class="st">&quot;paul&quot;</span>, <span class="st">&quot;helen&quot;</span>, <span class="st">&quot;emily&quot;</span>, <span class="st">&quot;john&quot;</span>, <span class="st">&quot;mark&quot;</span>))</span></code></pre></div>
-</details>
-<p><strong>2- Merge mydf1 and mydf2 by their “id” column.</strong>
-Look for the help page of <strong>merge</strong> and/or Google it!</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="data-structures.html#cb241-1" aria-hidden="true" tabindex="-1"></a><span class="co"># input 2 data frames</span></span>
-<span id="cb241-2"><a href="data-structures.html#cb241-2" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;by&quot; columns indicate by which column you want to merge the data</span></span>
-<span id="cb241-3"><a href="data-structures.html#cb241-3" aria-hidden="true" tabindex="-1"></a><span class="fu">merge</span>(<span class="at">x=</span>mydf1, <span class="at">y=</span>mydf2, <span class="at">by.x=</span><span class="st">&quot;id&quot;</span>, <span class="at">by.y=</span><span class="st">&quot;id&quot;</span>)</span>
-<span id="cb241-4"><a href="data-structures.html#cb241-4" aria-hidden="true" tabindex="-1"></a>mydf3 <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x=</span>mydf1, <span class="at">y=</span>mydf2, <span class="at">by=</span><span class="st">&quot;id&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>3- Order mydf3 by decreasing age.</strong>
-Look for the help page of <strong>order</strong>.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="data-structures.html#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="co"># order the age column (default is increasing order)</span></span>
-<span id="cb242-2"><a href="data-structures.html#cb242-2" aria-hidden="true" tabindex="-1"></a><span class="fu">order</span>(mydf3<span class="sc">$</span>age)</span>
-<span id="cb242-3"><a href="data-structures.html#cb242-3" aria-hidden="true" tabindex="-1"></a><span class="co"># order the age column by decreasing order</span></span>
-<span id="cb242-4"><a href="data-structures.html#cb242-4" aria-hidden="true" tabindex="-1"></a><span class="fu">order</span>(mydf3<span class="sc">$</span>age, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb242-5"><a href="data-structures.html#cb242-5" aria-hidden="true" tabindex="-1"></a><span class="co"># order the whole data frame by the column age in decreasing order</span></span>
-<span id="cb242-6"><a href="data-structures.html#cb242-6" aria-hidden="true" tabindex="-1"></a>mydf3[<span class="fu">order</span>(mydf3<span class="sc">$</span>age, <span class="at">decreasing =</span> <span class="cn">TRUE</span>), ]</span></code></pre></div>
-</details>
-</div>
-<div id="exercise-5c" class="section level3" number="9.9.3">
-<h3><span class="header-section-number">9.9.3</span> Exercise 5c</h3>
-<p><strong>1- Using the download.file function, download <a href="https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData">this file</a> to your current directory.</strong> (Right click on “this file” -&gt; Copy link location to get the full path).</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="data-structures.html#cb243-1" aria-hidden="true" tabindex="-1"></a><span class="co"># failing: download.file(&quot;https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData&quot;, &quot;genes_dataframe.RData&quot;)</span></span>
-<span id="cb243-2"><a href="data-structures.html#cb243-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&quot;https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData&quot;</span>, <span class="st">&quot;genes_dataframe.RData&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>2- The function dir() lists the files and directories present in the current directory: check if genes_dataframe.RData was copied.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="data-structures.html#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span>()</span></code></pre></div>
-</details>
-<p><strong>3- Load genes_dataframe.RData in your environment</strong>
-Use the <em>load</em> function.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="data-structures.html#cb245-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;genes_dataframe.RData&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>4- genes_dataframe.RData contains the mydf_genes object: is it now present in your environment?</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="data-structures.html#cb246-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
-</details>
-<p><strong>5- Explore mydf_genes and see what it contains</strong>
-You can use a variety of functions: str, head, tail, dim, colnames, rownames, class…</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="data-structures.html#cb247-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(mydf_genes)</span>
-<span id="cb247-2"><a href="data-structures.html#cb247-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mydf_genes)</span>
-<span id="cb247-3"><a href="data-structures.html#cb247-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(mydf_genes)</span>
-<span id="cb247-4"><a href="data-structures.html#cb247-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(mydf_genes)</span>
-<span id="cb247-5"><a href="data-structures.html#cb247-5" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mydf_genes)</span>
-<span id="cb247-6"><a href="data-structures.html#cb247-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mydf_genes)</span>
-<span id="cb247-7"><a href="data-structures.html#cb247-7" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mydf_genes)</span></code></pre></div>
-</details>
-<p><strong>6- Select rows for which pvalue_KOvsWT &lt; 0.05 AND log2FoldChange_KOvsWT &gt; 0.5. Store in the up object.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="data-structures.html#cb248-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rows where pvalue_KOvsWT &lt; 0.05 </span></span>
-<span id="cb248-2"><a href="data-structures.html#cb248-2" aria-hidden="true" tabindex="-1"></a>mydf_genes<span class="sc">$</span>pvalue_KOvsWT <span class="sc">&lt;</span> <span class="fl">0.05</span></span>
-<span id="cb248-3"><a href="data-structures.html#cb248-3" aria-hidden="true" tabindex="-1"></a><span class="co"># rows where log2FoldChange_KOvsWT &gt; 0.5</span></span>
-<span id="cb248-4"><a href="data-structures.html#cb248-4" aria-hidden="true" tabindex="-1"></a>mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT <span class="sc">&gt;</span> <span class="fl">0.5</span></span>
-<span id="cb248-5"><a href="data-structures.html#cb248-5" aria-hidden="true" tabindex="-1"></a><span class="co"># rows that comply both of the above conditions</span></span>
-<span id="cb248-6"><a href="data-structures.html#cb248-6" aria-hidden="true" tabindex="-1"></a>mydf_genes<span class="sc">$</span>pvalue_KOvsWT <span class="sc">&lt;</span> <span class="fl">0.05</span> <span class="sc">&amp;</span> mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT <span class="sc">&gt;</span> <span class="fl">0.5</span></span>
-<span id="cb248-7"><a href="data-structures.html#cb248-7" aria-hidden="true" tabindex="-1"></a><span class="co"># select rows for which pvalue_KOvsWT &lt; 0.05 AND log2FoldChange_KOvsWT &gt; 0.5</span></span>
-<span id="cb248-8"><a href="data-structures.html#cb248-8" aria-hidden="true" tabindex="-1"></a>up <span class="ot">&lt;-</span> mydf_genes[mydf_genes<span class="sc">$</span>pvalue_KOvsWT <span class="sc">&lt;</span> <span class="fl">0.05</span> <span class="sc">&amp;</span> </span>
-<span id="cb248-9"><a href="data-structures.html#cb248-9" aria-hidden="true" tabindex="-1"></a>                 mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT <span class="sc">&gt;</span> <span class="fl">0.5</span>,]</span></code></pre></div>
-</details>
-<p>How many rows (genes) were selected?</p>
-<p><strong>7- Select from the up object the Zinc finger protein coding genes (i.e. the gene symbol starts with Zfp). Use the grep() function.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="data-structures.html#cb249-1" aria-hidden="true" tabindex="-1"></a><span class="co"># extract gene symbol column</span></span>
-<span id="cb249-2"><a href="data-structures.html#cb249-2" aria-hidden="true" tabindex="-1"></a>up<span class="sc">$</span>gene_symbol</span>
-<span id="cb249-3"><a href="data-structures.html#cb249-3" aria-hidden="true" tabindex="-1"></a><span class="co"># use grep to get the genes matching the pattern &quot;Zfp&quot;</span></span>
-<span id="cb249-4"><a href="data-structures.html#cb249-4" aria-hidden="true" tabindex="-1"></a>up[<span class="fu">grep</span>(<span class="st">&quot;Zf&quot;</span>, up<span class="sc">$</span>gene_symbol), ]</span></code></pre></div>
-</details>
-<p><strong>8- Select rows for which pvalue_KOvsWT &lt; 0.05 AND log2FoldChange_KOvsWT is &gt; 0.5 OR &lt; -0.5.</strong>
-For the selection of log2FoldChange: give the <strong>abs</strong> function a try!
-<br>Store in the diff_genes object.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="data-structures.html#cb250-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rows where pvalue_KOvsWT &lt; 0.05</span></span>
-<span id="cb250-2"><a href="data-structures.html#cb250-2" aria-hidden="true" tabindex="-1"></a>mydf_genes<span class="sc">$</span>pvalue_KOvsWT <span class="sc">&lt;</span> <span class="fl">0.05</span></span>
-<span id="cb250-3"><a href="data-structures.html#cb250-3" aria-hidden="true" tabindex="-1"></a><span class="co"># rows where log2FoldChange_KOvsWT &gt; 0.5</span></span>
-<span id="cb250-4"><a href="data-structures.html#cb250-4" aria-hidden="true" tabindex="-1"></a>mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT <span class="sc">&gt;</span> <span class="fl">0.5</span></span>
-<span id="cb250-5"><a href="data-structures.html#cb250-5" aria-hidden="true" tabindex="-1"></a><span class="co"># rows where log2FoldChange_KOvsWT &lt; -0.5</span></span>
-<span id="cb250-6"><a href="data-structures.html#cb250-6" aria-hidden="true" tabindex="-1"></a>mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT <span class="sc">&gt;</span> <span class="sc">-</span><span class="fl">0.5</span></span>
-<span id="cb250-7"><a href="data-structures.html#cb250-7" aria-hidden="true" tabindex="-1"></a><span class="co"># rows where log2FoldChange_KOvsWT &lt; -0.5 OR log2FoldChange_KOvsWT &gt; 0.5</span></span>
-<span id="cb250-8"><a href="data-structures.html#cb250-8" aria-hidden="true" tabindex="-1"></a>mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT <span class="sc">&gt;</span> <span class="fl">0.5</span> <span class="sc">|</span> mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT <span class="sc">&gt;</span> <span class="sc">-</span><span class="fl">0.5</span></span>
-<span id="cb250-9"><a href="data-structures.html#cb250-9" aria-hidden="true" tabindex="-1"></a><span class="co"># same as above but using the abs function</span></span>
-<span id="cb250-10"><a href="data-structures.html#cb250-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abs</span>(mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT) <span class="sc">&gt;</span> <span class="fl">0.5</span></span>
-<span id="cb250-11"><a href="data-structures.html#cb250-11" aria-hidden="true" tabindex="-1"></a><span class="co"># combine all required criteria</span></span>
-<span id="cb250-12"><a href="data-structures.html#cb250-12" aria-hidden="true" tabindex="-1"></a>mydf_genes<span class="sc">$</span>pvalue_KOvsWT <span class="sc">&lt;</span> <span class="fl">0.05</span> <span class="sc">&amp;</span> <span class="fu">abs</span>(mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT) <span class="sc">&gt;</span> <span class="fl">0.5</span></span>
-<span id="cb250-13"><a href="data-structures.html#cb250-13" aria-hidden="true" tabindex="-1"></a><span class="co"># extract corresponding entries</span></span>
-<span id="cb250-14"><a href="data-structures.html#cb250-14" aria-hidden="true" tabindex="-1"></a>diff_genes <span class="ot">&lt;-</span> mydf_genes[mydf_genes<span class="sc">$</span>pvalue_KOvsWT <span class="sc">&lt;</span> <span class="fl">0.05</span> <span class="sc">&amp;</span> </span>
-<span id="cb250-15"><a href="data-structures.html#cb250-15" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">abs</span>(mydf_genes<span class="sc">$</span>log2FoldChange_KOvsWT) <span class="sc">&gt;</span> <span class="fl">0.5</span>,]</span></code></pre></div>
-</details>
-<p>How many rows (genes) were selected?</p>
-
-</div>
-</div>
+<!--chapter:end:datastructure.Rmd-->
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="data-types.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="missing-values.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="checking-data-types.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vectors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1818,8 +394,9 @@ gitbook.start({
 },
 "download": ["r-intro-crg.pdf", "r-intro-crg.epub"],
 "toc": {
-"collapse": "subsection"
-}
+"collapse": "section"
+},
+"search": true
 });
 });
 </script>

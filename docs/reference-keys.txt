@@ -36,12 +36,11 @@ numeric-vector-manipulation
 operations-on-vectors
 comparing-vectors
 character-vector-manipulation
-exercise-2.-numeric-vector-manipulation
+exercise-2.-numeric-vector-manipulation-15-minutes
 exercise-2a.
 exercise-2b.
-exercise-3.-character-vector-manipulation
+exercise-3.-character-vector-manipulation-10-minutes
 exercise-3a.
-exercise-3b.
 factors
 matrices
 creating-a-matrix
