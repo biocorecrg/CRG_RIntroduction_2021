@@ -221,7 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!!)</a></li>
 <li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
@@ -341,51 +341,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="exercise-4-matrix-manipulation.html#cb195-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb195-2"><a href="exercise-4-matrix-manipulation.html#cb195-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</span>
-<span id="cb195-3"><a href="exercise-4-matrix-manipulation.html#cb195-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="exercise-4-matrix-manipulation.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb197-2"><a href="exercise-4-matrix-manipulation.html#cb197-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</span>
+<span id="cb197-3"><a href="exercise-4-matrix-manipulation.html#cb197-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</span></code></pre></div>
 </details>
-<p><strong>1- Create three numeric vectors x, y, z, each of 4 elements of your choice.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="exercise-4-matrix-manipulation.html#cb196-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb196-2"><a href="exercise-4-matrix-manipulation.html#cb196-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">9</span></span>
-<span id="cb196-3"><a href="exercise-4-matrix-manipulation.html#cb196-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">:</span><span class="dv">4</span></span></code></pre></div>
-</details>
-<p>Use rbind() to create a matrix <strong>mat</strong> (3 rows and 4 columns) out of x, y and z.</p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="exercise-4-matrix-manipulation.html#cb197-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, y, z)</span></code></pre></div>
-</details>
-<p><strong>2- Create the same matrix now using the matrix function. Repeat the same using the byrow=TRUE parameter: what is different?</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="exercise-4-matrix-manipulation.html#cb198-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data=</span><span class="fu">c</span>(x, y, z), <span class="at">nrow=</span><span class="dv">3</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
-<span id="cb198-2"><a href="exercise-4-matrix-manipulation.html#cb198-2" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;byrow=TRUE&quot;: what is different in the output ?</span></span>
-<span id="cb198-3"><a href="exercise-4-matrix-manipulation.html#cb198-3" aria-hidden="true" tabindex="-1"></a>mat_byrow <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data=</span><span class="fu">c</span>(x, y, z), <span class="at">nrow=</span><span class="dv">3</span>, <span class="at">ncol=</span><span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-</details>
-<p><strong>3- Add names to mat’s columns: “a,” “b,” “c,” “d,” respectively.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="exercise-4-matrix-manipulation.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</span></code></pre></div>
-</details>
-<p><strong>4- Calculate the sum of each row, and the sum of each column</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="exercise-4-matrix-manipulation.html#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rowSums</span>(mat); <span class="fu">colSums</span>(mat)</span></code></pre></div>
-</details>
-<p><strong>5- Create the matrix mat2 as:</strong></p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="exercise-4-matrix-manipulation.html#cb201-1" aria-hidden="true" tabindex="-1"></a>mat2 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>, <span class="at">to=</span><span class="dv">10</span>, <span class="at">by=</span><span class="dv">2</span>), <span class="dv">5</span><span class="sc">:</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="at">x=</span><span class="dv">2017</span>, <span class="at">times=</span><span class="dv">5</span>)), <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
+<p><strong>1- Create the matrix mat as:</strong></p>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="exercise-4-matrix-manipulation.html#cb198-1" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>, <span class="at">to=</span><span class="dv">10</span>, <span class="at">by=</span><span class="dv">2</span>), <span class="dv">5</span><span class="sc">:</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="at">x=</span><span class="dv">2020</span>, <span class="at">times=</span><span class="dv">5</span>)), <span class="at">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
 <p>What does function seq() do?</p>
 <details>
 <summary>
@@ -393,118 +354,79 @@ correction
 </summary>
 <p><strong>seq</strong> generate sequences of numbers. Here, it creates a sequences from 1 to 10 with a step of 2 numbers.</p>
 </details>
-<p><strong>6- What are the dimensions of mat2 (number of rows and number of columns)?</strong></p>
+<p><strong>2- What are the dimensions of mat (number of rows and number of columns)?</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="exercise-4-matrix-manipulation.html#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="co"># number of rows</span></span>
-<span id="cb202-2"><a href="exercise-4-matrix-manipulation.html#cb202-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(mat2)</span>
-<span id="cb202-3"><a href="exercise-4-matrix-manipulation.html#cb202-3" aria-hidden="true" tabindex="-1"></a><span class="co"># number of columns</span></span>
-<span id="cb202-4"><a href="exercise-4-matrix-manipulation.html#cb202-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(mat2)</span>
-<span id="cb202-5"><a href="exercise-4-matrix-manipulation.html#cb202-5" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions: number of rows, number of columns</span></span>
-<span id="cb202-6"><a href="exercise-4-matrix-manipulation.html#cb202-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(mat2)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="exercise-4-matrix-manipulation.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="co"># number of rows</span></span>
+<span id="cb199-2"><a href="exercise-4-matrix-manipulation.html#cb199-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(mat)</span>
+<span id="cb199-3"><a href="exercise-4-matrix-manipulation.html#cb199-3" aria-hidden="true" tabindex="-1"></a><span class="co"># number of columns</span></span>
+<span id="cb199-4"><a href="exercise-4-matrix-manipulation.html#cb199-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(mat)</span>
+<span id="cb199-5"><a href="exercise-4-matrix-manipulation.html#cb199-5" aria-hidden="true" tabindex="-1"></a><span class="co"># dimensions: number of rows, number of columns</span></span>
+<span id="cb199-6"><a href="exercise-4-matrix-manipulation.html#cb199-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(mat)</span></code></pre></div>
 </details>
-<p><strong>7- Add column names to mat2: “day,” “month” and “year,” respectively.</strong></p>
+<p><strong>3- Extract the first row of mat. Then the third column.</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="exercise-4-matrix-manipulation.html#cb203-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;day&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;year&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="exercise-4-matrix-manipulation.html#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first row:</span></span>
+<span id="cb200-2"><a href="exercise-4-matrix-manipulation.html#cb200-2" aria-hidden="true" tabindex="-1"></a>mat[<span class="dv">1</span>,]</span>
+<span id="cb200-3"><a href="exercise-4-matrix-manipulation.html#cb200-3" aria-hidden="true" tabindex="-1"></a><span class="co"># third column</span></span>
+<span id="cb200-4"><a href="exercise-4-matrix-manipulation.html#cb200-4" aria-hidden="true" tabindex="-1"></a>mat[,<span class="dv">3</span>]</span></code></pre></div>
 </details>
-<p><strong>8- Add row names to mat2: letters “A” to “E”</strong></p>
+<p><strong>4- Calculate the sum of each row, and the sum of each column</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="exercise-4-matrix-manipulation.html#cb204-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mat2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;E&quot;</span>)</span>
-<span id="cb204-2"><a href="exercise-4-matrix-manipulation.html#cb204-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mat2) <span class="ot">&lt;-</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="exercise-4-matrix-manipulation.html#cb201-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rowSums</span>(mat); <span class="fu">colSums</span>(mat)</span></code></pre></div>
 </details>
-<p><strong>9- Shows row(s) of mat2 where the month column is greater than or equal to 3.</strong></p>
+<p><strong>5- Add column names to mat: “day,” “month” and “year,” respectively.</strong></p>
 <details>
 <summary>
 correction
 </summary>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="exercise-4-matrix-manipulation.html#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;day&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;year&quot;</span>)</span></code></pre></div>
+</details>
+<p><strong>6- Add row names to mat: letters “A” to “E”</strong></p>
+<details>
+<summary>
+correction
+</summary>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="exercise-4-matrix-manipulation.html#cb203-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mat) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;E&quot;</span>)</span>
+<span id="cb203-2"><a href="exercise-4-matrix-manipulation.html#cb203-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mat) <span class="ot">&lt;-</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div>
+</details>
+<p><strong>7- Shows row(s) of mat where the month column is greater than or equal to 3.</strong></p>
+<details>
+<summary>
+correction
+</summary>
+<p>Step by step:</p>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="exercise-4-matrix-manipulation.html#cb204-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select column month</span></span>
+<span id="cb204-2"><a href="exercise-4-matrix-manipulation.html#cb204-2" aria-hidden="true" tabindex="-1"></a>mat[, <span class="st">&quot;month&quot;</span>]</span>
+<span id="cb204-3"><a href="exercise-4-matrix-manipulation.html#cb204-3" aria-hidden="true" tabindex="-1"></a><span class="co"># element(s) of column month that is (are) greater than or equal to 3</span></span>
+<span id="cb204-4"><a href="exercise-4-matrix-manipulation.html#cb204-4" aria-hidden="true" tabindex="-1"></a>mat[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span></span>
+<span id="cb204-5"><a href="exercise-4-matrix-manipulation.html#cb204-5" aria-hidden="true" tabindex="-1"></a><span class="co"># finally select row(s) where the month columns is greater than or equal to 3</span></span>
+<span id="cb204-6"><a href="exercise-4-matrix-manipulation.html#cb204-6" aria-hidden="true" tabindex="-1"></a>mat[mat[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span>,]</span></code></pre></div>
+</details>
+<p><strong>8- Shows row(s) of mat where the month column is greater than or equal to 3 AND the day column is less than 5. How many rows are left ?</strong></p>
+<details>
+<summary>
+correction
+</summary>
+<p>Step by step:</p>
 <div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="exercise-4-matrix-manipulation.html#cb205-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select column month</span></span>
-<span id="cb205-2"><a href="exercise-4-matrix-manipulation.html#cb205-2" aria-hidden="true" tabindex="-1"></a>mat2[, <span class="st">&quot;month&quot;</span>]</span>
-<span id="cb205-3"><a href="exercise-4-matrix-manipulation.html#cb205-3" aria-hidden="true" tabindex="-1"></a><span class="co"># element(s) of column month that is (are) greater than or equal to 3</span></span>
-<span id="cb205-4"><a href="exercise-4-matrix-manipulation.html#cb205-4" aria-hidden="true" tabindex="-1"></a>mat2[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span></span>
-<span id="cb205-5"><a href="exercise-4-matrix-manipulation.html#cb205-5" aria-hidden="true" tabindex="-1"></a><span class="co"># finally select row(s) where the month columns is greater than or equal to 3</span></span>
-<span id="cb205-6"><a href="exercise-4-matrix-manipulation.html#cb205-6" aria-hidden="true" tabindex="-1"></a>mat2[mat2[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span>,]</span></code></pre></div>
-</details>
-<p><strong>10- Replace all elements of mat2 that are equal to 2017 with 2018.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="exercise-4-matrix-manipulation.html#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements of mat2 that are exactly equal to 2017</span></span>
-<span id="cb206-2"><a href="exercise-4-matrix-manipulation.html#cb206-2" aria-hidden="true" tabindex="-1"></a>mat2<span class="sc">==</span><span class="dv">2017</span></span>
-<span id="cb206-3"><a href="exercise-4-matrix-manipulation.html#cb206-3" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve actual elements</span></span>
-<span id="cb206-4"><a href="exercise-4-matrix-manipulation.html#cb206-4" aria-hidden="true" tabindex="-1"></a>mat2[mat2<span class="sc">==</span><span class="dv">2017</span>]</span>
-<span id="cb206-5"><a href="exercise-4-matrix-manipulation.html#cb206-5" aria-hidden="true" tabindex="-1"></a><span class="co"># replace all 2017 with 2018</span></span>
-<span id="cb206-6"><a href="exercise-4-matrix-manipulation.html#cb206-6" aria-hidden="true" tabindex="-1"></a>mat2[mat2<span class="sc">==</span><span class="dv">2017</span>] <span class="ot">&lt;-</span> <span class="dv">2018</span></span></code></pre></div>
-</details>
-<p><strong>11- Multiply all elements of the 2nd column of mat2 by 7. Reassign mat2!</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="exercise-4-matrix-manipulation.html#cb207-1" aria-hidden="true" tabindex="-1"></a><span class="co"># multiply all elements of the 2nd column of mat2 by 7</span></span>
-<span id="cb207-2"><a href="exercise-4-matrix-manipulation.html#cb207-2" aria-hidden="true" tabindex="-1"></a>mat2[,<span class="dv">2</span>] <span class="sc">*</span> <span class="dv">7</span></span>
-<span id="cb207-3"><a href="exercise-4-matrix-manipulation.html#cb207-3" aria-hidden="true" tabindex="-1"></a><span class="co"># reassign mat2 with the new values of column 2</span></span>
-<span id="cb207-4"><a href="exercise-4-matrix-manipulation.html#cb207-4" aria-hidden="true" tabindex="-1"></a>mat2[,<span class="dv">2</span>] <span class="ot">&lt;-</span> mat2[,<span class="dv">2</span>] <span class="sc">*</span> <span class="dv">7</span></span></code></pre></div>
-</details>
-<p><strong>12- Add the column named “time” to mat2, that contains values 8, 12, 11, 10, 8. Save in the new object mat3.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="exercise-4-matrix-manipulation.html#cb208-1" aria-hidden="true" tabindex="-1"></a>mat3 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(mat2, <span class="at">time=</span><span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>))</span></code></pre></div>
-</details>
-<p><strong>13- Replace all elements of mat3 that are less than 3 with NA.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="exercise-4-matrix-manipulation.html#cb209-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements of mat3 that are less than 3</span></span>
-<span id="cb209-2"><a href="exercise-4-matrix-manipulation.html#cb209-2" aria-hidden="true" tabindex="-1"></a>mat3 <span class="sc">&lt;</span> <span class="dv">3</span></span>
-<span id="cb209-3"><a href="exercise-4-matrix-manipulation.html#cb209-3" aria-hidden="true" tabindex="-1"></a><span class="co"># actually elements of mat3 that are less than 3</span></span>
-<span id="cb209-4"><a href="exercise-4-matrix-manipulation.html#cb209-4" aria-hidden="true" tabindex="-1"></a>mat3[mat3 <span class="sc">&lt;</span> <span class="dv">3</span>]</span>
-<span id="cb209-5"><a href="exercise-4-matrix-manipulation.html#cb209-5" aria-hidden="true" tabindex="-1"></a><span class="co"># reassign elements of mat3 that are less than 3 with NA</span></span>
-<span id="cb209-6"><a href="exercise-4-matrix-manipulation.html#cb209-6" aria-hidden="true" tabindex="-1"></a>mat3[mat3 <span class="sc">&lt;</span> <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
-</details>
-<p><strong>14- Remove rows from mat3 if a NA is present. Save in the new object mat4.</strong></p>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="exercise-4-matrix-manipulation.html#cb210-1" aria-hidden="true" tabindex="-1"></a>mat4 <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(mat3)</span></code></pre></div>
-</details>
-<p><strong>15- Retrieve the smaller value of each column of mat4.</strong></p>
-<p>Try different approaches:</p>
-<ul>
-<li>Retrieve the minimum for each column one by one.</li>
-</ul>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="exercise-4-matrix-manipulation.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;day&quot;</span>])</span>
-<span id="cb211-2"><a href="exercise-4-matrix-manipulation.html#cb211-2" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;month&quot;</span>])</span>
-<span id="cb211-3"><a href="exercise-4-matrix-manipulation.html#cb211-3" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;year&quot;</span>])</span>
-<span id="cb211-4"><a href="exercise-4-matrix-manipulation.html#cb211-4" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mat4[,<span class="st">&quot;time&quot;</span>])</span></code></pre></div>
-</details>
-<ul>
-<li>Retrieve the minimum of all columns simultaneously using the apply() function.</li>
-</ul>
-<details>
-<summary>
-correction
-</summary>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="exercise-4-matrix-manipulation.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mat4: object</span></span>
-<span id="cb212-2"><a href="exercise-4-matrix-manipulation.html#cb212-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 2: by column</span></span>
-<span id="cb212-3"><a href="exercise-4-matrix-manipulation.html#cb212-3" aria-hidden="true" tabindex="-1"></a><span class="co"># min: function to apply</span></span>
-<span id="cb212-4"><a href="exercise-4-matrix-manipulation.html#cb212-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mat4, <span class="dv">2</span>, min)</span></code></pre></div>
+<span id="cb205-2"><a href="exercise-4-matrix-manipulation.html#cb205-2" aria-hidden="true" tabindex="-1"></a>mat[, <span class="st">&quot;month&quot;</span>]</span>
+<span id="cb205-3"><a href="exercise-4-matrix-manipulation.html#cb205-3" aria-hidden="true" tabindex="-1"></a><span class="co"># element(s) of column month that is/are greater than or equal to 3</span></span>
+<span id="cb205-4"><a href="exercise-4-matrix-manipulation.html#cb205-4" aria-hidden="true" tabindex="-1"></a>mat[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span></span>
+<span id="cb205-5"><a href="exercise-4-matrix-manipulation.html#cb205-5" aria-hidden="true" tabindex="-1"></a><span class="co"># element(s) of column day that is/are less than 5</span></span>
+<span id="cb205-6"><a href="exercise-4-matrix-manipulation.html#cb205-6" aria-hidden="true" tabindex="-1"></a>mat[,<span class="st">&quot;day&quot;</span>] <span class="sc">&lt;</span> <span class="dv">5</span></span>
+<span id="cb205-7"><a href="exercise-4-matrix-manipulation.html#cb205-7" aria-hidden="true" tabindex="-1"></a><span class="co"># element(s) of column month that is/are greater than or equal to 3 AND element(s) of column day that is/are less than 5</span></span>
+<span id="cb205-8"><a href="exercise-4-matrix-manipulation.html#cb205-8" aria-hidden="true" tabindex="-1"></a>mat[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span> <span class="sc">&amp;</span> mat[,<span class="st">&quot;day&quot;</span>] <span class="sc">&lt;</span> <span class="dv">5</span></span>
+<span id="cb205-9"><a href="exercise-4-matrix-manipulation.html#cb205-9" aria-hidden="true" tabindex="-1"></a><span class="co"># finally select corresponding rows</span></span>
+<span id="cb205-10"><a href="exercise-4-matrix-manipulation.html#cb205-10" aria-hidden="true" tabindex="-1"></a>mat[mat[,<span class="st">&quot;month&quot;</span>] <span class="sc">&gt;=</span> <span class="dv">3</span> <span class="sc">&amp;</span> mat[,<span class="st">&quot;day&quot;</span>] <span class="sc">&lt;</span> <span class="dv">5</span>,]</span></code></pre></div>
 </details>
 
 </div>

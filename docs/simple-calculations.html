@@ -221,7 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!!)</a></li>
 <li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
@@ -373,13 +373,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Given the following table (number of exons / introns of the hg38 genome, Gencode 31 annotation):
 <br>
 <strong>Total number of genes: 60651</strong></p>
-<p>Of which:
-|||
-| :–: | :–: |
-| Protein-coding genes | 19951 |
-| Long non-coding RNA genes | 17948 |
-| Small non-coding RNA genes | 7569 |
-| Pseudogenes | 14773 |</p>
+<p>Of which:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">gene type</th>
+<th align="center">count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Protein-coding genes</td>
+<td align="center">19951</td>
+</tr>
+<tr class="even">
+<td align="center">Long non-coding RNA genes</td>
+<td align="center">17948</td>
+</tr>
+<tr class="odd">
+<td align="center">Small non-coding RNA genes</td>
+<td align="center">7569</td>
+</tr>
+<tr class="even">
+<td align="center">Pseudogenes</td>
+<td align="center">14773</td>
+</tr>
+</tbody>
+</table>
 <ol style="list-style-type: decimal">
 <li>How many genes are we missing to reach the total number of genes?</li>
 <li>What is the percentage of long non-coding RNA genes?</li>

@@ -221,7 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!!)</a></li>
 <li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
@@ -380,9 +380,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="vectors.html#cb57-1" aria-hidden="true" tabindex="-1"></a>mynames <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;snoRNA&quot;</span>, <span class="st">&quot;lncRNA&quot;</span>)</span></code></pre></div>
-<p><strong>HANDS-ON</strong> (3 minutes)
-1. Create a vector (choose the name) that contains a sequence of number, from 3 to 8, both included.
-2. Create vector myfruits as:</p>
+<p><strong>HANDS-ON</strong> (3 minutes)</p>
+<ol style="list-style-type: decimal">
+<li>Create a vector (choose the name) that contains a sequence of number, from 3 to 8, both included.</li>
+<li>Create vector myfruits as:</li>
+</ol>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="vectors.html#cb58-1" aria-hidden="true" tabindex="-1"></a>myfruits <span class="ot">&lt;-</span> <span class="fu">c</span>(apple, pear, orange)</span></code></pre></div>
 <p>What is happening? Why?</p>
 </div>
@@ -545,8 +547,8 @@ Logical operators
 <span id="cb86-2"><a href="vectors.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(a[a <span class="sc">&gt;=</span> <span class="dv">2</span>])</span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
 <p><img src="images/vector_subvector.png" width="500"></p>
-<p><strong>HANDS-ON</strong> (3 minutes)
-Given the following vector containing a group of people’s ages:</p>
+<p><strong>HANDS-ON</strong> (3 minutes)</p>
+<p>Given the following vector containing a group of people’s ages:</p>
 <div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="vectors.html#cb88-1" aria-hidden="true" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">18</span>, <span class="dv">32</span>, <span class="dv">12</span>, <span class="dv">34</span>, <span class="dv">42</span>, <span class="dv">32</span>, <span class="dv">17</span>, <span class="dv">56</span>, <span class="dv">76</span>, <span class="dv">10</span>)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>How many people are over 18?</li>
@@ -627,8 +629,8 @@ Given the following vector containing a group of people’s ages:</p>
 <span id="cb96-2"><a href="vectors.html#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(k)</span></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##    1.00    2.25    3.00   11.00    9.75   45.00</code></pre>
-<p><strong>HANDS-ON</strong> (3 minutes)
-Given our <strong>ages</strong> vector::</p>
+<p><strong>HANDS-ON</strong> (3 minutes)</p>
+<p>Given our <strong>ages</strong> vector::</p>
 <div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="vectors.html#cb98-1" aria-hidden="true" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">18</span>, <span class="dv">32</span>, <span class="dv">12</span>, <span class="dv">34</span>, <span class="dv">42</span>, <span class="dv">32</span>, <span class="dv">17</span>, <span class="dv">56</span>, <span class="dv">76</span>, <span class="dv">10</span>)</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>What is the average/mean age?</li>

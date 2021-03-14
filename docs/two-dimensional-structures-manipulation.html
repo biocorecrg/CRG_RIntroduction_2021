@@ -221,7 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!!)</a></li>
 <li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
@@ -371,8 +371,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb185-6"><a href="two-dimensional-structures-manipulation.html#cb185-6" aria-hidden="true" tabindex="-1"></a><span class="co"># same as:</span></span>
 <span id="cb185-7"><a href="two-dimensional-structures-manipulation.html#cb185-7" aria-hidden="true" tabindex="-1"></a>d[<span class="dv">3</span>,<span class="dv">2</span>]</span>
 <span id="cb185-8"><a href="two-dimensional-structures-manipulation.html#cb185-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb185-9"><a href="two-dimensional-structures-manipulation.html#cb185-9" aria-hidden="true" tabindex="-1"></a><span class="co"># for data frames only, the $ sign can be used to retrieve columns:</span></span>
-<span id="cb185-10"><a href="two-dimensional-structures-manipulation.html#cb185-10" aria-hidden="true" tabindex="-1"></a><span class="co"># d$Name is d[,1] is d[, &quot;Name&quot;]</span></span></code></pre></div>
+<span id="cb185-9"><a href="two-dimensional-structures-manipulation.html#cb185-9" aria-hidden="true" tabindex="-1"></a><span class="co"># for data frames ONLY, the $ (dollar) sign can be used to retrieve columns:</span></span>
+<span id="cb185-10"><a href="two-dimensional-structures-manipulation.html#cb185-10" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>Name </span>
+<span id="cb185-11"><a href="two-dimensional-structures-manipulation.html#cb185-11" aria-hidden="true" tabindex="-1"></a><span class="co"># is the same as</span></span>
+<span id="cb185-12"><a href="two-dimensional-structures-manipulation.html#cb185-12" aria-hidden="true" tabindex="-1"></a>d[,<span class="st">&quot;Name&quot;</span>]</span>
+<span id="cb185-13"><a href="two-dimensional-structures-manipulation.html#cb185-13" aria-hidden="true" tabindex="-1"></a><span class="co"># and the same as</span></span>
+<span id="cb185-14"><a href="two-dimensional-structures-manipulation.html#cb185-14" aria-hidden="true" tabindex="-1"></a>d[,<span class="dv">1</span>]</span></code></pre></div>
 <ul>
 <li>Include names as you create objects:
 <ul>
@@ -425,26 +429,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb190-8"><a href="two-dimensional-structures-manipulation.html#cb190-8" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">3</span>, ] <span class="sc">&lt;=</span> <span class="dv">4</span></span>
 <span id="cb190-9"><a href="two-dimensional-structures-manipulation.html#cb190-9" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve the corresponding sub-matrix</span></span>
 <span id="cb190-10"><a href="two-dimensional-structures-manipulation.html#cb190-10" aria-hidden="true" tabindex="-1"></a>b[ ,b[<span class="dv">3</span>, ] <span class="sc">&lt;=</span> <span class="dv">4</span>]</span></code></pre></div>
+<p><strong>HANDS-ON</strong></p>
+<p>Given the following data frame <strong>mypatients</strong>:</p>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="two-dimensional-structures-manipulation.html#cb191-1" aria-hidden="true" tabindex="-1"></a>mypatients <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Name=</span><span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>, <span class="st">&quot;Luis&quot;</span>, <span class="st">&quot;Hector&quot;</span>), </span>
+<span id="cb191-2"><a href="two-dimensional-structures-manipulation.html#cb191-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">Age=</span><span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>, <span class="dv">18</span>, <span class="dv">42</span>),</span>
+<span id="cb191-3"><a href="two-dimensional-structures-manipulation.html#cb191-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">Vegetarian=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb191-4"><a href="two-dimensional-structures-manipulation.html#cb191-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>Extract ages of vegetarian patients.</li>
+<li>What is the average age of vegetarian patients?</li>
+</ol>
 </div>
 <div id="more-useful-commands" class="section level4" number="9.7.2.2">
 <h4><span class="header-section-number">9.7.2.2</span> More useful commands</h4>
 <ul>
 <li>Add a row or a column with <strong>rbind</strong> and <strong>cbind</strong>, respectively</li>
 </ul>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="two-dimensional-structures-manipulation.html#cb191-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add a column</span></span>
-<span id="cb191-2"><a href="two-dimensional-structures-manipulation.html#cb191-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(d, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
-<span id="cb191-3"><a href="two-dimensional-structures-manipulation.html#cb191-3" aria-hidden="true" tabindex="-1"></a><span class="co"># add a row</span></span>
-<span id="cb191-4"><a href="two-dimensional-structures-manipulation.html#cb191-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(d, <span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>)</span></code></pre></div>
-<p>Add a patient to our data frame <strong>d</strong>:</p>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="two-dimensional-structures-manipulation.html#cb192-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">rbind</span>(d, <span class="fu">c</span>(<span class="st">&quot;Jordi&quot;</span>, <span class="dv">33</span>, <span class="cn">FALSE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="two-dimensional-structures-manipulation.html#cb192-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add a column</span></span>
+<span id="cb192-2"><a href="two-dimensional-structures-manipulation.html#cb192-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(d, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb192-3"><a href="two-dimensional-structures-manipulation.html#cb192-3" aria-hidden="true" tabindex="-1"></a><span class="co"># add a row</span></span>
+<span id="cb192-4"><a href="two-dimensional-structures-manipulation.html#cb192-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(d, <span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>)</span></code></pre></div>
+<p>As data frames columns can be of different type, rbind will not give the expected results.<br>
+Remember <strong>str()</strong>?
+<br>
+Let’s try to add a patient to our data frame <strong>d</strong> with rbind:</p>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="two-dimensional-structures-manipulation.html#cb193-1" aria-hidden="true" tabindex="-1"></a>drb <span class="ot">&lt;-</span> <span class="fu">rbind</span>(d, <span class="fu">c</span>(<span class="st">&quot;Jordi&quot;</span>, <span class="dv">33</span>, <span class="cn">FALSE</span>))</span>
+<span id="cb193-2"><a href="two-dimensional-structures-manipulation.html#cb193-2" aria-hidden="true" tabindex="-1"></a><span class="co"># check the structure</span></span>
+<span id="cb193-3"><a href="two-dimensional-structures-manipulation.html#cb193-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(drb)</span>
+<span id="cb193-4"><a href="two-dimensional-structures-manipulation.html#cb193-4" aria-hidden="true" tabindex="-1"></a><span class="co"># what is the problem here?</span></span></code></pre></div>
+<p>Add a patient to d using <strong>data.frame</strong>: need to use an intermediate data frame, and not a vector:</p>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="two-dimensional-structures-manipulation.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="co"># intermediate data frame</span></span>
+<span id="cb194-2"><a href="two-dimensional-structures-manipulation.html#cb194-2" aria-hidden="true" tabindex="-1"></a>newd <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">&quot;Jordi&quot;</span>, <span class="dv">33</span>, <span class="cn">FALSE</span>)</span>
+<span id="cb194-3"><a href="two-dimensional-structures-manipulation.html#cb194-3" aria-hidden="true" tabindex="-1"></a><span class="co"># name the intermediate data frames columns the same as d&#39;s names</span></span>
+<span id="cb194-4"><a href="two-dimensional-structures-manipulation.html#cb194-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(newd) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(d)</span>
+<span id="cb194-5"><a href="two-dimensional-structures-manipulation.html#cb194-5" aria-hidden="true" tabindex="-1"></a><span class="co"># add row with rbind</span></span>
+<span id="cb194-6"><a href="two-dimensional-structures-manipulation.html#cb194-6" aria-hidden="true" tabindex="-1"></a>ddf <span class="ot">&lt;-</span> <span class="fu">rbind</span>(d, newd)</span>
+<span id="cb194-7"><a href="two-dimensional-structures-manipulation.html#cb194-7" aria-hidden="true" tabindex="-1"></a><span class="co"># check the structure</span></span>
+<span id="cb194-8"><a href="two-dimensional-structures-manipulation.html#cb194-8" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(ddf)</span>
+<span id="cb194-9"><a href="two-dimensional-structures-manipulation.html#cb194-9" aria-hidden="true" tabindex="-1"></a><span class="co"># what is the problem here?</span></span></code></pre></div>
 <ul>
 <li>Process the sum of all rows or all columns with <strong>rowSums</strong> and <strong>colSums</strong>, respectively.</li>
 </ul>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="two-dimensional-structures-manipulation.html#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a matrix</span></span>
-<span id="cb193-2"><a href="two-dimensional-structures-manipulation.html#cb193-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
-<span id="cb193-3"><a href="two-dimensional-structures-manipulation.html#cb193-3" aria-hidden="true" tabindex="-1"></a><span class="co"># process sum of rows and sum of cols</span></span>
-<span id="cb193-4"><a href="two-dimensional-structures-manipulation.html#cb193-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rowSums</span>(b)</span>
-<span id="cb193-5"><a href="two-dimensional-structures-manipulation.html#cb193-5" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(b)</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="two-dimensional-structures-manipulation.html#cb195-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a matrix</span></span>
+<span id="cb195-2"><a href="two-dimensional-structures-manipulation.html#cb195-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
+<span id="cb195-3"><a href="two-dimensional-structures-manipulation.html#cb195-3" aria-hidden="true" tabindex="-1"></a><span class="co"># process sum of rows and sum of cols</span></span>
+<span id="cb195-4"><a href="two-dimensional-structures-manipulation.html#cb195-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rowSums</span>(b)</span>
+<span id="cb195-5"><a href="two-dimensional-structures-manipulation.html#cb195-5" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(b)</span></code></pre></div>
 <ul>
 <li>The <strong>apply</strong> function</li>
 </ul>
@@ -461,10 +491,10 @@ For example, instead of calculating the sum of each row, you might be interested
 </ul></li>
 <li>third argument <strong>FUN</strong>: function to apply to either rows or columns</li>
 </ul>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="two-dimensional-structures-manipulation.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each row of b</span></span>
-<span id="cb194-2"><a href="two-dimensional-structures-manipulation.html#cb194-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>median)</span>
-<span id="cb194-3"><a href="two-dimensional-structures-manipulation.html#cb194-3" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each column of b</span></span>
-<span id="cb194-4"><a href="two-dimensional-structures-manipulation.html#cb194-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">2</span>, <span class="at">FUN=</span>median)</span></code></pre></div>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="two-dimensional-structures-manipulation.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each row of b</span></span>
+<span id="cb196-2"><a href="two-dimensional-structures-manipulation.html#cb196-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>median)</span>
+<span id="cb196-3"><a href="two-dimensional-structures-manipulation.html#cb196-3" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each column of b</span></span>
+<span id="cb196-4"><a href="two-dimensional-structures-manipulation.html#cb196-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">2</span>, <span class="at">FUN=</span>median)</span></code></pre></div>
 
 </div>
 </div>

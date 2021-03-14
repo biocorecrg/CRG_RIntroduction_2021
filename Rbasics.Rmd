@@ -46,8 +46,9 @@ Given the following table (number of exons / introns of the hg38 genome, Gencode
 **Total number of genes: 60651**
 
 Of which:
-|||
-| :--: | :--: |
+
+| gene type | count |
+| :---: | :---: |
 | Protein-coding genes       | 19951      |
 | Long non-coding RNA genes      | 17948      |
 | Small non-coding RNA genes      | 7569      |

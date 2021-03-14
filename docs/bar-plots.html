@@ -221,7 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!!)</a></li>
 <li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
@@ -339,14 +339,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>A simple bar plot :</li>
 </ul>
-<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb345-1"><a href="bar-plots.html#cb345-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector</span></span>
-<span id="cb345-2"><a href="bar-plots.html#cb345-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span>
-<span id="cb345-3"><a href="bar-plots.html#cb345-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb345-4"><a href="bar-plots.html#cb345-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Count number of occurences of each character string</span></span>
-<span id="cb345-5"><a href="bar-plots.html#cb345-5" aria-hidden="true" tabindex="-1"></a>mytable <span class="ot">&lt;-</span> <span class="fu">table</span>(x)</span>
-<span id="cb345-6"><a href="bar-plots.html#cb345-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb345-7"><a href="bar-plots.html#cb345-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar plot using that table</span></span>
-<span id="cb345-8"><a href="bar-plots.html#cb345-8" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(mytable)</span></code></pre></div>
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb337-1"><a href="bar-plots.html#cb337-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector</span></span>
+<span id="cb337-2"><a href="bar-plots.html#cb337-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span>
+<span id="cb337-3"><a href="bar-plots.html#cb337-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb337-4"><a href="bar-plots.html#cb337-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Count number of occurences of each character string</span></span>
+<span id="cb337-5"><a href="bar-plots.html#cb337-5" aria-hidden="true" tabindex="-1"></a>mytable <span class="ot">&lt;-</span> <span class="fu">table</span>(x)</span>
+<span id="cb337-6"><a href="bar-plots.html#cb337-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb337-7"><a href="bar-plots.html#cb337-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar plot using that table</span></span>
+<span id="cb337-8"><a href="bar-plots.html#cb337-8" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(mytable)</span></code></pre></div>
 <p><img src="images/plots/barplot1.png" width="450"/></p>
 <ul>
 <li>Customize a bit :
@@ -356,57 +356,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>las : orientation of x-axis labels: “2”: perpendicular to axis</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="bar-plots.html#cb346-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(mytable,</span>
-<span id="cb346-2"><a href="bar-plots.html#cb346-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
-<span id="cb346-3"><a href="bar-plots.html#cb346-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;bar plot&quot;</span>,</span>
-<span id="cb346-4"><a href="bar-plots.html#cb346-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">las=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="bar-plots.html#cb338-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(mytable,</span>
+<span id="cb338-2"><a href="bar-plots.html#cb338-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb338-3"><a href="bar-plots.html#cb338-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;bar plot&quot;</span>,</span>
+<span id="cb338-4"><a href="bar-plots.html#cb338-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">las=</span><span class="dv">2</span>)</span></code></pre></div>
 <p><img src="images/plots/barplot2.png" width="450"/></p>
 <ul>
 <li>Customize the ordering of the bars :</li>
 </ul>
 <p>By default, the bars are organized in alphabetical order. You can change it with the factors.</p>
-<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb347-1"><a href="bar-plots.html#cb347-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an ordered factor out of x</span></span>
-<span id="cb347-2"><a href="bar-plots.html#cb347-2" aria-hidden="true" tabindex="-1"></a>xfact <span class="ot">&lt;-</span> <span class="fu">factor</span>(x, </span>
-<span id="cb347-3"><a href="bar-plots.html#cb347-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), </span>
-<span id="cb347-4"><a href="bar-plots.html#cb347-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">ordered=</span><span class="cn">TRUE</span>)</span>
-<span id="cb347-5"><a href="bar-plots.html#cb347-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb347-6"><a href="bar-plots.html#cb347-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Produce the table</span></span>
-<span id="cb347-7"><a href="bar-plots.html#cb347-7" aria-hidden="true" tabindex="-1"></a>xfacttable <span class="ot">&lt;-</span> <span class="fu">table</span>(xfact)</span>
-<span id="cb347-8"><a href="bar-plots.html#cb347-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb347-9"><a href="bar-plots.html#cb347-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the same way</span></span>
-<span id="cb347-10"><a href="bar-plots.html#cb347-10" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(xfacttable,</span>
-<span id="cb347-11"><a href="bar-plots.html#cb347-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
-<span id="cb347-12"><a href="bar-plots.html#cb347-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">&quot;reorganized bar plot&quot;</span>,</span>
-<span id="cb347-13"><a href="bar-plots.html#cb347-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">las=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb339-1"><a href="bar-plots.html#cb339-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an ordered factor out of x</span></span>
+<span id="cb339-2"><a href="bar-plots.html#cb339-2" aria-hidden="true" tabindex="-1"></a>xfact <span class="ot">&lt;-</span> <span class="fu">factor</span>(x, </span>
+<span id="cb339-3"><a href="bar-plots.html#cb339-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), </span>
+<span id="cb339-4"><a href="bar-plots.html#cb339-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">ordered=</span><span class="cn">TRUE</span>)</span>
+<span id="cb339-5"><a href="bar-plots.html#cb339-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb339-6"><a href="bar-plots.html#cb339-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Produce the table</span></span>
+<span id="cb339-7"><a href="bar-plots.html#cb339-7" aria-hidden="true" tabindex="-1"></a>xfacttable <span class="ot">&lt;-</span> <span class="fu">table</span>(xfact)</span>
+<span id="cb339-8"><a href="bar-plots.html#cb339-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb339-9"><a href="bar-plots.html#cb339-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the same way</span></span>
+<span id="cb339-10"><a href="bar-plots.html#cb339-10" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(xfacttable,</span>
+<span id="cb339-11"><a href="bar-plots.html#cb339-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb339-12"><a href="bar-plots.html#cb339-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">&quot;reorganized bar plot&quot;</span>,</span>
+<span id="cb339-13"><a href="bar-plots.html#cb339-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">las=</span><span class="dv">2</span>)</span></code></pre></div>
 <p><img src="images/plots/barplot3.png" width="450"/></p>
 <ul>
 <li>Let’s make a stacked barplot :</li>
 </ul>
-<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb348-1"><a href="bar-plots.html#cb348-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix of number of type of employees per research program :</span></span>
-<span id="cb348-2"><a href="bar-plots.html#cb348-2" aria-hidden="true" tabindex="-1"></a>barmat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">14</span>, <span class="dv">13</span>, <span class="dv">16</span>, <span class="dv">4</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">5</span>),</span>
-<span id="cb348-3"><a href="bar-plots.html#cb348-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">4</span>,</span>
-<span id="cb348-4"><a href="bar-plots.html#cb348-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">dimnames=</span><span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;PostDoc&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;BG&quot;</span>, <span class="st">&quot;CDB&quot;</span>, <span class="st">&quot;GRSCC&quot;</span>, <span class="st">&quot;SB&quot;</span>)))</span>
-<span id="cb348-5"><a href="bar-plots.html#cb348-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb348-6"><a href="bar-plots.html#cb348-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot barplot</span></span>
-<span id="cb348-7"><a href="bar-plots.html#cb348-7" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(barmat, <span class="at">col=</span><span class="fu">sample</span>(<span class="fu">colors</span>(), <span class="dv">4</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="bar-plots.html#cb340-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix of number of type of employees per research program :</span></span>
+<span id="cb340-2"><a href="bar-plots.html#cb340-2" aria-hidden="true" tabindex="-1"></a>barmat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">14</span>, <span class="dv">13</span>, <span class="dv">16</span>, <span class="dv">4</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">5</span>),</span>
+<span id="cb340-3"><a href="bar-plots.html#cb340-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">4</span>,</span>
+<span id="cb340-4"><a href="bar-plots.html#cb340-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">dimnames=</span><span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;PostDoc&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;BG&quot;</span>, <span class="st">&quot;CDB&quot;</span>, <span class="st">&quot;GRSCC&quot;</span>, <span class="st">&quot;SB&quot;</span>)))</span>
+<span id="cb340-5"><a href="bar-plots.html#cb340-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb340-6"><a href="bar-plots.html#cb340-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot barplot</span></span>
+<span id="cb340-7"><a href="bar-plots.html#cb340-7" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(barmat, <span class="at">col=</span><span class="fu">sample</span>(<span class="fu">colors</span>(), <span class="dv">4</span>))</span></code></pre></div>
 <ul>
 <li>Add some parameters:</li>
 </ul>
-<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="bar-plots.html#cb349-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set a random color vector</span></span>
-<span id="cb349-2"><a href="bar-plots.html#cb349-2" aria-hidden="true" tabindex="-1"></a>mycolors <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">colors</span>(), <span class="dv">4</span>)</span>
-<span id="cb349-3"><a href="bar-plots.html#cb349-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb349-4"><a href="bar-plots.html#cb349-4" aria-hidden="true" tabindex="-1"></a><span class="co"># plot barplot</span></span>
-<span id="cb349-5"><a href="bar-plots.html#cb349-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ylim sets the lower and upper limit of the y-axis: here it allows us to fit the legend !</span></span>
-<span id="cb349-6"><a href="bar-plots.html#cb349-6" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(barmat, </span>
-<span id="cb349-7"><a href="bar-plots.html#cb349-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span>mycolors, </span>
-<span id="cb349-8"><a href="bar-plots.html#cb349-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>),</span>
-<span id="cb349-9"><a href="bar-plots.html#cb349-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;stacked barplot&quot;</span>)</span>
-<span id="cb349-10"><a href="bar-plots.html#cb349-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb349-11"><a href="bar-plots.html#cb349-11" aria-hidden="true" tabindex="-1"></a><span class="co"># add a legend</span></span>
-<span id="cb349-12"><a href="bar-plots.html#cb349-12" aria-hidden="true" tabindex="-1"></a><span class="co"># first argument is the legend position</span></span>
-<span id="cb349-13"><a href="bar-plots.html#cb349-13" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topleft&quot;</span>, </span>
-<span id="cb349-14"><a href="bar-plots.html#cb349-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;PostDoc&quot;</span>, <span class="st">&quot;PI&quot;</span>),</span>
-<span id="cb349-15"><a href="bar-plots.html#cb349-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill=</span>mycolors)</span></code></pre></div>
+<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb341-1"><a href="bar-plots.html#cb341-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set a random color vector</span></span>
+<span id="cb341-2"><a href="bar-plots.html#cb341-2" aria-hidden="true" tabindex="-1"></a>mycolors <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">colors</span>(), <span class="dv">4</span>)</span>
+<span id="cb341-3"><a href="bar-plots.html#cb341-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb341-4"><a href="bar-plots.html#cb341-4" aria-hidden="true" tabindex="-1"></a><span class="co"># plot barplot</span></span>
+<span id="cb341-5"><a href="bar-plots.html#cb341-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ylim sets the lower and upper limit of the y-axis: here it allows us to fit the legend !</span></span>
+<span id="cb341-6"><a href="bar-plots.html#cb341-6" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(barmat, </span>
+<span id="cb341-7"><a href="bar-plots.html#cb341-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span>mycolors, </span>
+<span id="cb341-8"><a href="bar-plots.html#cb341-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>),</span>
+<span id="cb341-9"><a href="bar-plots.html#cb341-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;stacked barplot&quot;</span>)</span>
+<span id="cb341-10"><a href="bar-plots.html#cb341-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb341-11"><a href="bar-plots.html#cb341-11" aria-hidden="true" tabindex="-1"></a><span class="co"># add a legend</span></span>
+<span id="cb341-12"><a href="bar-plots.html#cb341-12" aria-hidden="true" tabindex="-1"></a><span class="co"># first argument is the legend position</span></span>
+<span id="cb341-13"><a href="bar-plots.html#cb341-13" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topleft&quot;</span>, </span>
+<span id="cb341-14"><a href="bar-plots.html#cb341-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;PostDoc&quot;</span>, <span class="st">&quot;PI&quot;</span>),</span>
+<span id="cb341-15"><a href="bar-plots.html#cb341-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill=</span>mycolors)</span></code></pre></div>
 <p><img src="images/plots/barplot4.png" width="450"/></p>
 </div>
             </section>

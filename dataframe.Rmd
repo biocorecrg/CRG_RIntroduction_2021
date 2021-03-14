@@ -61,7 +61,10 @@ Very similar to matrix manipulation: each element is found by its row and column
 
 <img src="images/df_fetch.png" width="450"/>
 
+
+
 **HANDS-ON**
-1. Given matrix **d** previously created, extract all elements of the **second row** of d.
+
+1. Given data frame **d** previously created, extract all elements of the **second row** of d.
 2. Extract all elements of the **first column** of d.
 3. Extract the element that is located on the **third row** and **second column** of d.

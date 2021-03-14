@@ -221,7 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!!)</a></li>
 <li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
@@ -339,11 +339,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>A simple histogram</li>
 </ul>
-<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb354-1"><a href="histograms.html#cb354-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector of 200 random values from the normal distribution</span></span>
-<span id="cb354-2"><a href="histograms.html#cb354-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">200</span>)</span>
-<span id="cb354-3"><a href="histograms.html#cb354-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb354-4"><a href="histograms.html#cb354-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot histogram</span></span>
-<span id="cb354-5"><a href="histograms.html#cb354-5" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="histograms.html#cb346-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector of 200 random values from the normal distribution</span></span>
+<span id="cb346-2"><a href="histograms.html#cb346-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">200</span>)</span>
+<span id="cb346-3"><a href="histograms.html#cb346-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb346-4"><a href="histograms.html#cb346-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot histogram</span></span>
+<span id="cb346-5"><a href="histograms.html#cb346-5" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x)</span></code></pre></div>
 <p><img src="images/plots/histogram1.png" width="450"/></p>
 <ul>
 <li>Add parameters:
@@ -354,13 +354,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>cex.lab: size of axis labels</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb355-1"><a href="histograms.html#cb355-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x,</span>
-<span id="cb355-2"><a href="histograms.html#cb355-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">border=</span><span class="st">&quot;blue&quot;</span>,</span>
-<span id="cb355-3"><a href="histograms.html#cb355-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="dv">50</span>,</span>
-<span id="cb355-4"><a href="histograms.html#cb355-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;Histogram&quot;</span>,</span>
-<span id="cb355-5"><a href="histograms.html#cb355-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;&quot;</span>,</span>
-<span id="cb355-6"><a href="histograms.html#cb355-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex.main=</span><span class="fl">2.5</span>,</span>
-<span id="cb355-7"><a href="histograms.html#cb355-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex.lab=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb347-1"><a href="histograms.html#cb347-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x,</span>
+<span id="cb347-2"><a href="histograms.html#cb347-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">border=</span><span class="st">&quot;blue&quot;</span>,</span>
+<span id="cb347-3"><a href="histograms.html#cb347-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="dv">50</span>,</span>
+<span id="cb347-4"><a href="histograms.html#cb347-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;Histogram&quot;</span>,</span>
+<span id="cb347-5"><a href="histograms.html#cb347-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;&quot;</span>,</span>
+<span id="cb347-6"><a href="histograms.html#cb347-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex.main=</span><span class="fl">2.5</span>,</span>
+<span id="cb347-7"><a href="histograms.html#cb347-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex.lab=</span><span class="dv">2</span>)</span></code></pre></div>
 <p><img src="images/plots/histogram2.png" width="450"/></p>
 
 </div>

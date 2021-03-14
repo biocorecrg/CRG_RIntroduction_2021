@@ -29,9 +29,9 @@ setwd("~/Rcourse/Module1")
 |27|167|F|
 
 <br>
-With Row names: John, Jessica, Steve, Rachel.
+With Row names: **John, Jessica, Steve, Rachel**.
 <br>
-And Column names: Age, Height, Sex.
+And Column names: **Age, Height, Sex**.
 
 <details>
 <summary>
@@ -61,7 +61,7 @@ str(mydf)
 
 </details>
 
-**3- Calculate the average age and height in mydf**
+**3- Calculate the average/mean age and height in mydf.**
 
 Try different approaches:
 
@@ -95,21 +95,7 @@ apply(mydf[,-grep("Sex", colnames(mydf))], 2, mean)
 
 </details>
 
-**4- Add one row to mydf: Georges who is 53 years old and 168cm tall.**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-# Georges= allows us to enter the row name at the same time as we add a row
-mydf <- rbind(mydf, Georges=c(53, 168, "M"))
-```
-
-</details>
-
-**5- Change the row names of mydf so the data becomes anonymous:** 
+**4- Change the row names of mydf so the data becomes anonymous:** 
 Use Patient1, Patient2, etc. instead of actual names.
 
 <details>
@@ -118,14 +104,14 @@ correction
 </summary>
 
 ```{r, eval=F} 
-rownames(mydf) <- c("Patient1", "Patient2", "Patient3", "Patient4", "Patient5")
+rownames(mydf) <- c("Patient1", "Patient2", "Patient3", "Patient4")
 # try also the paste function!
-rownames(mydf) <- paste("Patient", 1:5, sep="")
+rownames(mydf) <- paste("Patient", 1:4, sep="")
 ```
 
 </details>
 
-**6- Create the data frame mydf2 that is a subset of mydf containing only the female entries.**
+**5- Create the data frame mydf2 that is a subset of mydf containing only the female entries.**
  
 <details>
 <summary>
@@ -141,7 +127,7 @@ mydf2 <- mydf[mydf$Sex=="F",]
 
 </details>
 
-**7- Create the data frame mydf3 that is a subset of mydf containing only entries of males taller than 170.**
+**6- Create the data frame mydf3 that is a subset of mydf containing only entries of males taller than 170.**
  
 <details>
 <summary>
@@ -159,7 +145,8 @@ mydf3 <- mydf[mydf$Sex=="M" & mydf$Height > 170,]
 
 </details>
 
-### Exercise 5b
+
+### Exercise 5b (EXTRA: only if time allows, or to do at home!!)
 
 **1. Create two data frames mydf1 and mydf2 as:**
 

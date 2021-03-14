@@ -51,9 +51,12 @@ d["Patient3", "Age"]
 # same as:
 d[3,2]
 
-# for data frames only, the $ sign can be used to retrieve columns:
-# d$Name is d[,1] is d[, "Name"]
-
+# for data frames ONLY, the $ (dollar) sign can be used to retrieve columns:
+d$Name 
+# is the same as
+d[,"Name"]
+# and the same as
+d[,1]
 ```
 
 * Include names as you create objects:
@@ -112,6 +115,18 @@ b[3, ] <= 4
 b[ ,b[3, ] <= 4]
 ```
 
+**HANDS-ON**
+
+Given the following data frame **mypatients**:
+```{r,eval=FALSE}
+mypatients <- data.frame(Name=c("Maria", "Juan", "Alba", "Luis", "Hector"), 
+        Age=c(23, 25, 31, 18, 42),
+        Vegetarian=c(TRUE, TRUE, FALSE, FALSE, TRUE),
+        stringsAsFactors = FALSE)
+```
+
+1. Extract ages of vegetarian patients.
+2. What is the average age of vegetarian patients?
 
 #### More useful commands
 
@@ -124,10 +139,30 @@ cbind(d, 1:3)
 rbind(d, 4:6)
 ```
 
-Add a patient to our data frame **d**:
+As data frames columns can be of different type, rbind will not give the expected results.<br>
+Remember **str()**?
+<br>
+Let's try to add a patient to our data frame **d** with rbind:
 
 ```{r}
-d <- rbind(d, c("Jordi", 33, FALSE))
+drb <- rbind(d, c("Jordi", 33, FALSE))
+# check the structure
+str(drb)
+# what is the problem here?
+```
+
+Add a patient to d using **data.frame**: need to use an intermediate data frame, and not a vector:
+
+```{r}
+# intermediate data frame
+newd <- data.frame("Jordi", 33, FALSE)
+# name the intermediate data frames columns the same as d's names
+colnames(newd) <- colnames(d)
+# add row with rbind
+ddf <- rbind(d, newd)
+# check the structure
+str(ddf)
+# what is the problem here?
 ```
 
 * Process the sum of all rows or all columns with **rowSums** and **colSums**, respectively.

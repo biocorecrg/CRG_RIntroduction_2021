@@ -46,6 +46,7 @@ mynames <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
 ```
 
 **HANDS-ON** (3 minutes)
+
 1. Create a vector (choose the name) that contains a sequence of number, from 3 to 8, both included.
 2. Create vector myfruits as:
 ```{r,eval=FALSE}
@@ -177,6 +178,7 @@ length(a[a >= 2])
 <img src="images/vector_subvector.png" width="500">
 
 **HANDS-ON** (3 minutes)
+
 Given the following vector containing a group of people's ages:
 ```{r}
 ages <- c(18, 32, 12, 34, 42, 32, 17, 56, 76, 10)
@@ -238,6 +240,7 @@ summary(k)
 ```
 
 **HANDS-ON** (3 minutes)
+
 Given our **ages** vector::
 ```{r}
 ages <- c(18, 32, 12, 34, 42, 32, 17, 56, 76, 10)
