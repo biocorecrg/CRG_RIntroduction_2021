@@ -19,7 +19,7 @@
 ## R syntax
 
 * Case sensitive: **g** is not **G**
-* Comment lines start with **#**. Comment lines are NOT interpreted by R.
+* Comment lines start with **#**. Comment lines are NOT interpreted by the R console.
 * Commands are separated by a **new line** or **;**
 ```{r, eval=FALSE}
 # This is a comment: it will not be interpreted

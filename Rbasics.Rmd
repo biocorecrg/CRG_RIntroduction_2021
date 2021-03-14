@@ -39,7 +39,7 @@ What is the percentage of miRNA?
 ( 45 / 414 ) * 100
 ```
 
-### **HANDS-ON** (3-5 minutes)
+**HANDS-ON**
 
 Given the following table (number of exons / introns of the hg38 genome, Gencode 31 annotation):
 <br>
@@ -118,9 +118,10 @@ Naming objects in R is quite flexible. However, there are a few rules and good p
 * Object names are **case sensitive**: object **MyObject** is not the same as **myobject**
 * They can contains both **numbers** or **letters** but should **START** with a letter, e.g. *2myobject* is not a valid object name.
 * You can use **underscores**. Other **special characters** should be avoided.
-* Avoid using function names as object names (e.g. do not create a **getwd** object).
+* Avoid using function names as object names (we will learn about functions next).
 
-### **HANDS-ON** (3-5 minutes)
+
+**HANDS-ON**
 
 1. Create the object **myfirstobject**, that contains the value **762**.
 2. Create **mysecondobject**, that contains the value **80**.

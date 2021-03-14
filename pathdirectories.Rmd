@@ -56,7 +56,7 @@ setwd("..")
 ```
 You are now in: "~/Rcourse"
 
-### **HANDS-ON** (3-5 minutes)
+**HANDS-ON**
 
 1. Execute the following command in the R console:
 ```{r, eval=FALSE}

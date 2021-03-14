@@ -8,7 +8,7 @@ getwd()
 ```
 and has the task of outputting the **current working directory**.
 
-You can recognize a function by its **round brackets**: function**()**
+You can recognize a function by its **round brackets**: functionname**()**
  
 A function can also take *arguments/parameters*:
 ```{r, eval=FALSE}

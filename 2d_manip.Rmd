@@ -86,13 +86,22 @@ d <- data.frame(Name=c("Maria", "Juan", "Alba"),
         Vegetarian=c(TRUE, TRUE, FALSE),
         stringsAsFactors = FALSE)
 rownames(d) <- c("Patient1", "Patient2", "Patient3")
+
 # The following commands all output the same result:
 d[d[,2] > 24, ]
 d[d[,"Age"] > 24, ]
 d[d$Age > 24, ]
+
+# Step by step:
+# 1. "isolate" column of interest (here, the second column: "Age")
+d[,"Age"]
+# 2. apply your criterion (here, "Age" should be greater than 24)
+d[,"Age"] > 24
+# 3. Extract the corresponding rows from the original data frame
+d[ d[, "Age"] > 24, ]
 ```
 
-<img src="images/df_col2.png" width="500"/>
+<img src="images/df_col2.png" width="600"/>
 
  + Select patients (rows) based on 2 criteria: age of the patient (column 2) should be great than or equal to 25, and the patient should be vegetarian (column 3):
 ```{r}
@@ -142,7 +151,7 @@ rbind(d, 4:6)
 As data frames columns can be of different type, rbind will not give the expected results.<br>
 Remember **str()**?
 <br>
-Let's try to add a patient to our data frame **d** with rbind:
+Let's try to add a patient to our data frame **d** with rbind, and a new vector:
 
 ```{r}
 drb <- rbind(d, c("Jordi", 33, FALSE))
@@ -162,7 +171,6 @@ colnames(newd) <- colnames(d)
 ddf <- rbind(d, newd)
 # check the structure
 str(ddf)
-# what is the problem here?
 ```
 
 * Process the sum of all rows or all columns with **rowSums** and **colSums**, respectively.
@@ -177,7 +185,7 @@ colSums(b)
 
 * The **apply** function
 
-Powerful tool to apply a command to all rows or all columns of a data frame or a matrix.<br>
+Powerful tool to **apply a command to all rows or all columns of a data frame or a matrix**.<br>
 For example, instead of calculating the sum of each row, you might be interested in calculating the median ? But rowMedians doesn't exist !
 <br><br>
 **apply** takes 3 arguments:
