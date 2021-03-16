@@ -327,9 +327,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="exercise-5-data-frame-manipulation.html#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb210-2"><a href="exercise-5-data-frame-manipulation.html#cb210-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</span>
-<span id="cb210-3"><a href="exercise-5-data-frame-manipulation.html#cb210-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="exercise-5-data-frame-manipulation.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb211-2"><a href="exercise-5-data-frame-manipulation.html#cb211-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)</span>
+<span id="cb211-3"><a href="exercise-5-data-frame-manipulation.html#cb211-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</span></code></pre></div>
 </details>
 <div id="exercise-5a" class="section level3" number="9.9.1">
 <h3><span class="header-section-number">9.9.1</span> Exercise 5a</h3>
@@ -366,18 +366,18 @@ And Column names: <strong>Age, Height, Sex</strong>.</p>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="exercise-5-data-frame-manipulation.html#cb211-1" aria-hidden="true" tabindex="-1"></a>mydf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Age=</span><span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">34</span>, <span class="dv">22</span>, <span class="dv">27</span>), </span>
-<span id="cb211-2"><a href="exercise-5-data-frame-manipulation.html#cb211-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">Height=</span><span class="fu">c</span>(<span class="dv">181</span>, <span class="dv">172</span>, <span class="dv">189</span>, <span class="dv">167</span>),</span>
-<span id="cb211-3"><a href="exercise-5-data-frame-manipulation.html#cb211-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">Sex=</span><span class="fu">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>),</span>
-<span id="cb211-4"><a href="exercise-5-data-frame-manipulation.html#cb211-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">row.names =</span> <span class="fu">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Jessica&quot;</span>, <span class="st">&quot;Steve&quot;</span>, <span class="st">&quot;Rachel&quot;</span>),</span>
-<span id="cb211-5"><a href="exercise-5-data-frame-manipulation.html#cb211-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="exercise-5-data-frame-manipulation.html#cb212-1" aria-hidden="true" tabindex="-1"></a>mydf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Age=</span><span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">34</span>, <span class="dv">22</span>, <span class="dv">27</span>), </span>
+<span id="cb212-2"><a href="exercise-5-data-frame-manipulation.html#cb212-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">Height=</span><span class="fu">c</span>(<span class="dv">181</span>, <span class="dv">172</span>, <span class="dv">189</span>, <span class="dv">167</span>),</span>
+<span id="cb212-3"><a href="exercise-5-data-frame-manipulation.html#cb212-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">Sex=</span><span class="fu">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>),</span>
+<span id="cb212-4"><a href="exercise-5-data-frame-manipulation.html#cb212-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">row.names =</span> <span class="fu">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Jessica&quot;</span>, <span class="st">&quot;Steve&quot;</span>, <span class="st">&quot;Rachel&quot;</span>),</span>
+<span id="cb212-5"><a href="exercise-5-data-frame-manipulation.html#cb212-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 </details>
 <p><strong>2- Check the structure of mydf with str().</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="exercise-5-data-frame-manipulation.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(mydf)</span></code></pre></div>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="exercise-5-data-frame-manipulation.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(mydf)</span></code></pre></div>
 </details>
 <p><strong>3- Calculate the average/mean age and height in mydf.</strong></p>
 <p>Try different approaches:</p>
@@ -388,8 +388,8 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="exercise-5-data-frame-manipulation.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(mydf<span class="sc">$</span>Age)</span>
-<span id="cb213-2"><a href="exercise-5-data-frame-manipulation.html#cb213-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(mydf<span class="sc">$</span>Height)</span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="exercise-5-data-frame-manipulation.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(mydf<span class="sc">$</span>Age)</span>
+<span id="cb214-2"><a href="exercise-5-data-frame-manipulation.html#cb214-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(mydf<span class="sc">$</span>Height)</span></code></pre></div>
 </details>
 <ul>
 <li>Calculate the average of both columns simultaneously using the apply() function.</li>
@@ -398,10 +398,10 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="exercise-5-data-frame-manipulation.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we have to remove the Sex column: we can calculate the average only with numbers</span></span>
-<span id="cb214-2"><a href="exercise-5-data-frame-manipulation.html#cb214-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mydf[,<span class="sc">-</span><span class="dv">3</span>], <span class="dv">2</span>, mean)</span>
-<span id="cb214-3"><a href="exercise-5-data-frame-manipulation.html#cb214-3" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mydf[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>], <span class="dv">2</span>, mean)</span>
-<span id="cb214-4"><a href="exercise-5-data-frame-manipulation.html#cb214-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mydf[,<span class="sc">-</span><span class="fu">grep</span>(<span class="st">&quot;Sex&quot;</span>, <span class="fu">colnames</span>(mydf))], <span class="dv">2</span>, mean)</span></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="exercise-5-data-frame-manipulation.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we have to remove the Sex column: we can calculate the average only with numbers</span></span>
+<span id="cb215-2"><a href="exercise-5-data-frame-manipulation.html#cb215-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mydf[,<span class="sc">-</span><span class="dv">3</span>], <span class="dv">2</span>, mean)</span>
+<span id="cb215-3"><a href="exercise-5-data-frame-manipulation.html#cb215-3" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mydf[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>], <span class="dv">2</span>, mean)</span>
+<span id="cb215-4"><a href="exercise-5-data-frame-manipulation.html#cb215-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mydf[,<span class="sc">-</span><span class="fu">grep</span>(<span class="st">&quot;Sex&quot;</span>, <span class="fu">colnames</span>(mydf))], <span class="dv">2</span>, mean)</span></code></pre></div>
 </details>
 <p><strong>4- Change the row names of mydf so the data becomes anonymous:</strong>
 Use Patient1, Patient2, etc. instead of actual names.</p>
@@ -409,31 +409,31 @@ Use Patient1, Patient2, etc. instead of actual names.</p>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="exercise-5-data-frame-manipulation.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mydf) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>, <span class="st">&quot;Patient4&quot;</span>)</span>
-<span id="cb215-2"><a href="exercise-5-data-frame-manipulation.html#cb215-2" aria-hidden="true" tabindex="-1"></a><span class="co"># try also the paste function!</span></span>
-<span id="cb215-3"><a href="exercise-5-data-frame-manipulation.html#cb215-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mydf) <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;Patient&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="exercise-5-data-frame-manipulation.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mydf) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Patient1&quot;</span>, <span class="st">&quot;Patient2&quot;</span>, <span class="st">&quot;Patient3&quot;</span>, <span class="st">&quot;Patient4&quot;</span>)</span>
+<span id="cb216-2"><a href="exercise-5-data-frame-manipulation.html#cb216-2" aria-hidden="true" tabindex="-1"></a><span class="co"># try also the paste function!</span></span>
+<span id="cb216-3"><a href="exercise-5-data-frame-manipulation.html#cb216-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(mydf) <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;Patient&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>5- Create the data frame mydf2 that is a subset of mydf containing only the female entries.</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="exercise-5-data-frame-manipulation.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements are female (&quot;F&quot; in the &quot;Sex&quot; colum)</span></span>
-<span id="cb216-2"><a href="exercise-5-data-frame-manipulation.html#cb216-2" aria-hidden="true" tabindex="-1"></a>mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;F&quot;</span></span>
-<span id="cb216-3"><a href="exercise-5-data-frame-manipulation.html#cb216-3" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve rows that contain the female entries, and save in mydf2</span></span>
-<span id="cb216-4"><a href="exercise-5-data-frame-manipulation.html#cb216-4" aria-hidden="true" tabindex="-1"></a>mydf2 <span class="ot">&lt;-</span> mydf[mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;F&quot;</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="exercise-5-data-frame-manipulation.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which elements are female (&quot;F&quot; in the &quot;Sex&quot; colum)</span></span>
+<span id="cb217-2"><a href="exercise-5-data-frame-manipulation.html#cb217-2" aria-hidden="true" tabindex="-1"></a>mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;F&quot;</span></span>
+<span id="cb217-3"><a href="exercise-5-data-frame-manipulation.html#cb217-3" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve rows that contain the female entries, and save in mydf2</span></span>
+<span id="cb217-4"><a href="exercise-5-data-frame-manipulation.html#cb217-4" aria-hidden="true" tabindex="-1"></a>mydf2 <span class="ot">&lt;-</span> mydf[mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;F&quot;</span>,]</span></code></pre></div>
 </details>
 <p><strong>6- Create the data frame mydf3 that is a subset of mydf containing only entries of males taller than 170.</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="exercise-5-data-frame-manipulation.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which entries are males</span></span>
-<span id="cb217-2"><a href="exercise-5-data-frame-manipulation.html#cb217-2" aria-hidden="true" tabindex="-1"></a>mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;M&quot;</span></span>
-<span id="cb217-3"><a href="exercise-5-data-frame-manipulation.html#cb217-3" aria-hidden="true" tabindex="-1"></a><span class="co"># which entries are greater than 170 in column &quot;Height&quot;</span></span>
-<span id="cb217-4"><a href="exercise-5-data-frame-manipulation.html#cb217-4" aria-hidden="true" tabindex="-1"></a>mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;M&quot;</span> <span class="sc">&amp;</span> mydf<span class="sc">$</span>Height <span class="sc">&gt;</span> <span class="dv">170</span></span>
-<span id="cb217-5"><a href="exercise-5-data-frame-manipulation.html#cb217-5" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve rows that contain the males that are taller than 170, and save in mydf3</span></span>
-<span id="cb217-6"><a href="exercise-5-data-frame-manipulation.html#cb217-6" aria-hidden="true" tabindex="-1"></a>mydf3 <span class="ot">&lt;-</span> mydf[mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;M&quot;</span> <span class="sc">&amp;</span> mydf<span class="sc">$</span>Height <span class="sc">&gt;</span> <span class="dv">170</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="exercise-5-data-frame-manipulation.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="co"># which entries are males</span></span>
+<span id="cb218-2"><a href="exercise-5-data-frame-manipulation.html#cb218-2" aria-hidden="true" tabindex="-1"></a>mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;M&quot;</span></span>
+<span id="cb218-3"><a href="exercise-5-data-frame-manipulation.html#cb218-3" aria-hidden="true" tabindex="-1"></a><span class="co"># which entries are greater than 170 in column &quot;Height&quot;</span></span>
+<span id="cb218-4"><a href="exercise-5-data-frame-manipulation.html#cb218-4" aria-hidden="true" tabindex="-1"></a>mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;M&quot;</span> <span class="sc">&amp;</span> mydf<span class="sc">$</span>Height <span class="sc">&gt;</span> <span class="dv">170</span></span>
+<span id="cb218-5"><a href="exercise-5-data-frame-manipulation.html#cb218-5" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve rows that contain the males that are taller than 170, and save in mydf3</span></span>
+<span id="cb218-6"><a href="exercise-5-data-frame-manipulation.html#cb218-6" aria-hidden="true" tabindex="-1"></a>mydf3 <span class="ot">&lt;-</span> mydf[mydf<span class="sc">$</span>Sex<span class="sc">==</span><span class="st">&quot;M&quot;</span> <span class="sc">&amp;</span> mydf<span class="sc">$</span>Height <span class="sc">&gt;</span> <span class="dv">170</span>,]</span></code></pre></div>
 </details>
 </details>
 

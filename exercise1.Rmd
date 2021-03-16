@@ -10,7 +10,7 @@ Remember that **~** is a shortcut to your home directory.
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=FALSE}
@@ -26,7 +26,7 @@ setwd("~/Rcourse/Module1")
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -40,7 +40,7 @@ Show "myobject" in the console.**
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -54,7 +54,7 @@ myobject
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -67,7 +67,7 @@ myobject <- myobject - 1
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -80,7 +80,7 @@ mysqrt <- sqrt(myobject)
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}

@@ -411,25 +411,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="two-dimensional-structures-manipulation.html#cb193-1" aria-hidden="true" tabindex="-1"></a>d[ d<span class="sc">$</span>Age <span class="sc">&gt;=</span> <span class="dv">25</span> <span class="sc">&amp;</span> d<span class="sc">$</span>Vegetarian <span class="sc">==</span> <span class="cn">TRUE</span>, ]</span></code></pre></div>
 <p><img src="images/df_col2_col3.png" width="700"/></p>
-<ul>
-<li>Select the columns of b if <strong>at least one element in the 3rd row is less than or equal to 4</strong>:</li>
-</ul>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="two-dimensional-structures-manipulation.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create b</span></span>
-<span id="cb194-2"><a href="two-dimensional-structures-manipulation.html#cb194-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
-<span id="cb194-3"><a href="two-dimensional-structures-manipulation.html#cb194-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">3</span>, </span>
-<span id="cb194-4"><a href="two-dimensional-structures-manipulation.html#cb194-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">ncol=</span><span class="dv">2</span>)</span>
-<span id="cb194-5"><a href="two-dimensional-structures-manipulation.html#cb194-5" aria-hidden="true" tabindex="-1"></a><span class="co"># third row of b:</span></span>
-<span id="cb194-6"><a href="two-dimensional-structures-manipulation.html#cb194-6" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">3</span>, ]</span>
-<span id="cb194-7"><a href="two-dimensional-structures-manipulation.html#cb194-7" aria-hidden="true" tabindex="-1"></a><span class="co"># element(s) in the third row of b that is (are) less than or equal to 4</span></span>
-<span id="cb194-8"><a href="two-dimensional-structures-manipulation.html#cb194-8" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">3</span>, ] <span class="sc">&lt;=</span> <span class="dv">4</span></span>
-<span id="cb194-9"><a href="two-dimensional-structures-manipulation.html#cb194-9" aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve the corresponding sub-matrix</span></span>
-<span id="cb194-10"><a href="two-dimensional-structures-manipulation.html#cb194-10" aria-hidden="true" tabindex="-1"></a>b[ ,b[<span class="dv">3</span>, ] <span class="sc">&lt;=</span> <span class="dv">4</span>]</span></code></pre></div>
 <p><strong>HANDS-ON</strong></p>
 <p>Given the following data frame <strong>mypatients</strong>:</p>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="two-dimensional-structures-manipulation.html#cb195-1" aria-hidden="true" tabindex="-1"></a>mypatients <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Name=</span><span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>, <span class="st">&quot;Luis&quot;</span>, <span class="st">&quot;Hector&quot;</span>), </span>
-<span id="cb195-2"><a href="two-dimensional-structures-manipulation.html#cb195-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">Age=</span><span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>, <span class="dv">18</span>, <span class="dv">42</span>),</span>
-<span id="cb195-3"><a href="two-dimensional-structures-manipulation.html#cb195-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">Vegetarian=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb195-4"><a href="two-dimensional-structures-manipulation.html#cb195-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="two-dimensional-structures-manipulation.html#cb194-1" aria-hidden="true" tabindex="-1"></a>mypatients <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Name=</span><span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>, <span class="st">&quot;Luis&quot;</span>, <span class="st">&quot;Hector&quot;</span>), </span>
+<span id="cb194-2"><a href="two-dimensional-structures-manipulation.html#cb194-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">Age=</span><span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>, <span class="dv">18</span>, <span class="dv">42</span>),</span>
+<span id="cb194-3"><a href="two-dimensional-structures-manipulation.html#cb194-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">Vegetarian=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb194-4"><a href="two-dimensional-structures-manipulation.html#cb194-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Extract ages of vegetarian patients.</li>
 <li>What is the average age of vegetarian patients?</li>
@@ -438,12 +425,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="more-useful-commands" class="section level4" number="9.7.2.2">
 <h4><span class="header-section-number">9.7.2.2</span> More useful commands</h4>
 <ul>
-<li>Add a row or a column with <strong>rbind</strong> and <strong>cbind</strong>, respectively</li>
+<li>For matrices: add a row or a column with <strong>rbind</strong> and <strong>cbind</strong>, respectively:</li>
 </ul>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="two-dimensional-structures-manipulation.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add a column</span></span>
-<span id="cb196-2"><a href="two-dimensional-structures-manipulation.html#cb196-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(d, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
-<span id="cb196-3"><a href="two-dimensional-structures-manipulation.html#cb196-3" aria-hidden="true" tabindex="-1"></a><span class="co"># add a row</span></span>
-<span id="cb196-4"><a href="two-dimensional-structures-manipulation.html#cb196-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(d, <span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="two-dimensional-structures-manipulation.html#cb195-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add a column</span></span>
+<span id="cb195-2"><a href="two-dimensional-structures-manipulation.html#cb195-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(d, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb195-3"><a href="two-dimensional-structures-manipulation.html#cb195-3" aria-hidden="true" tabindex="-1"></a><span class="co"># add a row</span></span>
+<span id="cb195-4"><a href="two-dimensional-structures-manipulation.html#cb195-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(d, <span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>)</span></code></pre></div>
+<ul>
+<li>Add columns (variables) to data frames:</li>
+</ul>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="two-dimensional-structures-manipulation.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add column &quot;Gender&quot;</span></span>
+<span id="cb196-2"><a href="two-dimensional-structures-manipulation.html#cb196-2" aria-hidden="true" tabindex="-1"></a>dgender <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(d, <span class="at">Gender=</span><span class="fu">c</span>(<span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>))</span></code></pre></div>
+<ul>
+<li>Add rows (observations) to data frames:</li>
+</ul>
 <p>As data frames columns can be of different type, rbind will not give the expected results.<br>
 Remember <strong>str()</strong>?
 <br>
@@ -489,6 +484,15 @@ For example, instead of calculating the sum of each row, you might be interested
 <span id="cb200-2"><a href="two-dimensional-structures-manipulation.html#cb200-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>median)</span>
 <span id="cb200-3"><a href="two-dimensional-structures-manipulation.html#cb200-3" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each column of b</span></span>
 <span id="cb200-4"><a href="two-dimensional-structures-manipulation.html#cb200-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">2</span>, <span class="at">FUN=</span>median)</span></code></pre></div>
+<p><strong>HANDS-ON</strong></p>
+<p>Given the following data frame <strong>mypatients</strong>:</p>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="two-dimensional-structures-manipulation.html#cb201-1" aria-hidden="true" tabindex="-1"></a>mypatients <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Name=</span><span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>, <span class="st">&quot;Luis&quot;</span>, <span class="st">&quot;Hector&quot;</span>), </span>
+<span id="cb201-2"><a href="two-dimensional-structures-manipulation.html#cb201-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">Age=</span><span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>, <span class="dv">18</span>, <span class="dv">42</span>),</span>
+<span id="cb201-3"><a href="two-dimensional-structures-manipulation.html#cb201-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">Vegetarian=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb201-4"><a href="two-dimensional-structures-manipulation.html#cb201-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>Add a “Gender” column to <strong>mypatients</strong>.</li>
+</ol>
 
 </div>
 </div>
