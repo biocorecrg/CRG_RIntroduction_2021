@@ -53,8 +53,6 @@ more-useful-commands
 exercise-4.-matrix-manipulation
 exercise-5.-data-frame-manipulation
 exercise-5a
-exercise-5b-extra-only-if-time-allows-or-to-do-at-home
-exercise-5c-extra-only-if-time-allows-or-to-do-at-home
 missing-values
 input-output
 on-vectors

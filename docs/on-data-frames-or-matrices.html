@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-14" />
+<meta name="date" content="2021-03-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -209,8 +209,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
-<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -326,16 +324,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Read in a file into a data frame with the <strong>read.table</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="on-data-frames-or-matrices.html#cb233-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="on-data-frames-or-matrices.html#cb229-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
 <p>You can convert it as a matrix, if needed, with:</p>
-<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="on-data-frames-or-matrices.html#cb234-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="on-data-frames-or-matrices.html#cb230-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>))</span></code></pre></div>
 <p>Useful arguments:</p>
 <p><a href="https://biocorecrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/readtable.png" width="550/"></a></p>
 <ul>
 <li>Write a data frame or matrix to a file:</li>
 </ul>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="on-data-frames-or-matrices.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>a,</span>
-<span id="cb235-2"><a href="on-data-frames-or-matrices.html#cb235-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="on-data-frames-or-matrices.html#cb231-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>a,</span>
+<span id="cb231-2"><a href="on-data-frames-or-matrices.html#cb231-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
 <p>Useful arguments:</p>
 <p><a href="https://biocorecrg.github.io/CRG_RIntroduction/images/writetable.png"><img src="images/writetable.png" width="550/"></a></p>
 <ul>

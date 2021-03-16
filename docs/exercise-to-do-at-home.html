@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-14" />
+<meta name="date" content="2021-03-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -209,8 +209,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
-<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -331,9 +329,9 @@ Check the structure of extra (remember the <strong>str</strong> command).</p>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="exercise-to-do-at-home.html#cb269-1" aria-hidden="true" tabindex="-1"></a>  extra <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;i_o_files/ex6c_input.txt&quot;</span>, </span>
-<span id="cb269-2"><a href="exercise-to-do-at-home.html#cb269-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">header=</span><span class="cn">TRUE</span>)</span>
-<span id="cb269-3"><a href="exercise-to-do-at-home.html#cb269-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(extra)</span></code></pre></div>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="exercise-to-do-at-home.html#cb265-1" aria-hidden="true" tabindex="-1"></a>  extra <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;i_o_files/ex6c_input.txt&quot;</span>, </span>
+<span id="cb265-2"><a href="exercise-to-do-at-home.html#cb265-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb265-3"><a href="exercise-to-do-at-home.html#cb265-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(extra)</span></code></pre></div>
 </details>
 <p><strong>2- Read in the same file but, this time, set the argument as.is to TRUE.</strong></p>
 <p>Check again the structure: what has changed ?</p>
@@ -341,29 +339,29 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="exercise-to-do-at-home.html#cb270-1" aria-hidden="true" tabindex="-1"></a>  extra <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;i_o_files/ex6c_input.txt&quot;</span>, </span>
-<span id="cb270-2"><a href="exercise-to-do-at-home.html#cb270-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">header=</span><span class="cn">TRUE</span>,</span>
-<span id="cb270-3"><a href="exercise-to-do-at-home.html#cb270-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">as.is=</span><span class="cn">TRUE</span>)</span>
-<span id="cb270-4"><a href="exercise-to-do-at-home.html#cb270-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(extra)</span></code></pre></div>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="exercise-to-do-at-home.html#cb266-1" aria-hidden="true" tabindex="-1"></a>  extra <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;i_o_files/ex6c_input.txt&quot;</span>, </span>
+<span id="cb266-2"><a href="exercise-to-do-at-home.html#cb266-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">header=</span><span class="cn">TRUE</span>,</span>
+<span id="cb266-3"><a href="exercise-to-do-at-home.html#cb266-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">as.is=</span><span class="cn">TRUE</span>)</span>
+<span id="cb266-4"><a href="exercise-to-do-at-home.html#cb266-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str</span>(extra)</span></code></pre></div>
 </details>
 <p><strong>3- What are the column names of extra ?</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="exercise-to-do-at-home.html#cb271-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(extra)</span></code></pre></div>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="exercise-to-do-at-home.html#cb267-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(extra)</span></code></pre></div>
 </details>
 <p><strong>4- Change the name of the first column of extra from “State” to “Country.”</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="exercise-to-do-at-home.html#cb272-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ex6ct all column names of extra</span></span>
-<span id="cb272-2"><a href="exercise-to-do-at-home.html#cb272-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(extra)</span>
-<span id="cb272-3"><a href="exercise-to-do-at-home.html#cb272-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ex6ct the name of the first column only</span></span>
-<span id="cb272-4"><a href="exercise-to-do-at-home.html#cb272-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(extra)[<span class="dv">1</span>]</span>
-<span id="cb272-5"><a href="exercise-to-do-at-home.html#cb272-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># reassign name of the first column only</span></span>
-<span id="cb272-6"><a href="exercise-to-do-at-home.html#cb272-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(extra)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Country&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="exercise-to-do-at-home.html#cb268-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ex6ct all column names of extra</span></span>
+<span id="cb268-2"><a href="exercise-to-do-at-home.html#cb268-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(extra)</span>
+<span id="cb268-3"><a href="exercise-to-do-at-home.html#cb268-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ex6ct the name of the first column only</span></span>
+<span id="cb268-4"><a href="exercise-to-do-at-home.html#cb268-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(extra)[<span class="dv">1</span>]</span>
+<span id="cb268-5"><a href="exercise-to-do-at-home.html#cb268-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># reassign name of the first column only</span></span>
+<span id="cb268-6"><a href="exercise-to-do-at-home.html#cb268-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(extra)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Country&quot;</span></span></code></pre></div>
 </details>
 <p><strong>5- How many countries are in the Eurozone, according to extra ?</strong></p>
 <p><em>Remember the table function. ?table</em></p>
@@ -371,23 +369,23 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="exercise-to-do-at-home.html#cb273-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">table</span>(extra<span class="sc">$</span>Eurozone)</span></code></pre></div>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="exercise-to-do-at-home.html#cb269-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">table</span>(extra<span class="sc">$</span>Eurozone)</span></code></pre></div>
 </details>
 <p><strong>6- In the Eurozone column: change “TRUE” with “yes” and “FALSE” with “no.”</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="exercise-to-do-at-home.html#cb274-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># select the Eurozone column</span></span>
-<span id="cb274-2"><a href="exercise-to-do-at-home.html#cb274-2" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone</span>
-<span id="cb274-3"><a href="exercise-to-do-at-home.html#cb274-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># elements of the Eurozone column that are exactly TRUE</span></span>
-<span id="cb274-4"><a href="exercise-to-do-at-home.html#cb274-4" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone<span class="sc">==</span><span class="cn">TRUE</span></span>
-<span id="cb274-5"><a href="exercise-to-do-at-home.html#cb274-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ex6ct actual values that are TRUE</span></span>
-<span id="cb274-6"><a href="exercise-to-do-at-home.html#cb274-6" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone[extra<span class="sc">$</span>Eurozone<span class="sc">==</span><span class="cn">TRUE</span>]</span>
-<span id="cb274-7"><a href="exercise-to-do-at-home.html#cb274-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># reassign all elements that are TRUE with &quot;yes&quot;</span></span>
-<span id="cb274-8"><a href="exercise-to-do-at-home.html#cb274-8" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone[extra<span class="sc">$</span>Eurozone<span class="sc">==</span><span class="cn">TRUE</span>] <span class="ot">&lt;-</span> <span class="st">&quot;yes&quot;</span></span>
-<span id="cb274-9"><a href="exercise-to-do-at-home.html#cb274-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># same with FALSE</span></span>
-<span id="cb274-10"><a href="exercise-to-do-at-home.html#cb274-10" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone[extra<span class="sc">$</span>Eurozone<span class="sc">==</span><span class="cn">FALSE</span>] <span class="ot">&lt;-</span> <span class="st">&quot;no&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="exercise-to-do-at-home.html#cb270-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># select the Eurozone column</span></span>
+<span id="cb270-2"><a href="exercise-to-do-at-home.html#cb270-2" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone</span>
+<span id="cb270-3"><a href="exercise-to-do-at-home.html#cb270-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># elements of the Eurozone column that are exactly TRUE</span></span>
+<span id="cb270-4"><a href="exercise-to-do-at-home.html#cb270-4" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone<span class="sc">==</span><span class="cn">TRUE</span></span>
+<span id="cb270-5"><a href="exercise-to-do-at-home.html#cb270-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ex6ct actual values that are TRUE</span></span>
+<span id="cb270-6"><a href="exercise-to-do-at-home.html#cb270-6" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone[extra<span class="sc">$</span>Eurozone<span class="sc">==</span><span class="cn">TRUE</span>]</span>
+<span id="cb270-7"><a href="exercise-to-do-at-home.html#cb270-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># reassign all elements that are TRUE with &quot;yes&quot;</span></span>
+<span id="cb270-8"><a href="exercise-to-do-at-home.html#cb270-8" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone[extra<span class="sc">$</span>Eurozone<span class="sc">==</span><span class="cn">TRUE</span>] <span class="ot">&lt;-</span> <span class="st">&quot;yes&quot;</span></span>
+<span id="cb270-9"><a href="exercise-to-do-at-home.html#cb270-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># same with FALSE</span></span>
+<span id="cb270-10"><a href="exercise-to-do-at-home.html#cb270-10" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone[extra<span class="sc">$</span>Eurozone<span class="sc">==</span><span class="cn">FALSE</span>] <span class="ot">&lt;-</span> <span class="st">&quot;no&quot;</span></span></code></pre></div>
 </details>
 <p><strong>7- In the column Country: how many country names from the list contain the letter “c” (capital- or lower-case) ?</strong></p>
 <p>Remember the grep function. Check the help page.</p>
@@ -395,12 +393,12 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="exercise-to-do-at-home.html#cb275-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># country names with &quot;c&quot; (lower-case)</span></span>
-<span id="cb275-2"><a href="exercise-to-do-at-home.html#cb275-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grep</span>(<span class="st">&quot;c&quot;</span>, extra<span class="sc">$</span>Country)</span>
-<span id="cb275-3"><a href="exercise-to-do-at-home.html#cb275-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># country names with &quot;c&quot; or &quot;C&quot; (ignoring case)</span></span>
-<span id="cb275-4"><a href="exercise-to-do-at-home.html#cb275-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grep</span>(<span class="st">&quot;c&quot;</span>, extra<span class="sc">$</span>Country, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb275-5"><a href="exercise-to-do-at-home.html#cb275-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># show actual country names</span></span>
-<span id="cb275-6"><a href="exercise-to-do-at-home.html#cb275-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grep</span>(<span class="st">&quot;c&quot;</span>, extra<span class="sc">$</span>Country, <span class="at">value=</span><span class="cn">TRUE</span>, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="exercise-to-do-at-home.html#cb271-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># country names with &quot;c&quot; (lower-case)</span></span>
+<span id="cb271-2"><a href="exercise-to-do-at-home.html#cb271-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grep</span>(<span class="st">&quot;c&quot;</span>, extra<span class="sc">$</span>Country)</span>
+<span id="cb271-3"><a href="exercise-to-do-at-home.html#cb271-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># country names with &quot;c&quot; or &quot;C&quot; (ignoring case)</span></span>
+<span id="cb271-4"><a href="exercise-to-do-at-home.html#cb271-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grep</span>(<span class="st">&quot;c&quot;</span>, extra<span class="sc">$</span>Country, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb271-5"><a href="exercise-to-do-at-home.html#cb271-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># show actual country names</span></span>
+<span id="cb271-6"><a href="exercise-to-do-at-home.html#cb271-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grep</span>(<span class="st">&quot;c&quot;</span>, extra<span class="sc">$</span>Country, <span class="at">value=</span><span class="cn">TRUE</span>, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 </details>
 <p><strong>8- According to that data frame: how many people live:</strong>
 + in the European union (whole table) ?
@@ -409,14 +407,14 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="exercise-to-do-at-home.html#cb276-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># sum the whole population column</span></span>
-<span id="cb276-2"><a href="exercise-to-do-at-home.html#cb276-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(extra<span class="sc">$</span>Population)</span>
-<span id="cb276-3"><a href="exercise-to-do-at-home.html#cb276-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># select elements of extra where Eurozone is &quot;yes&quot;</span></span>
-<span id="cb276-4"><a href="exercise-to-do-at-home.html#cb276-4" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone <span class="sc">==</span> <span class="st">&quot;yes&quot;</span></span>
-<span id="cb276-5"><a href="exercise-to-do-at-home.html#cb276-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># select only elements in Population for which the corresponding Eurozone elements are &quot;yes&quot;</span></span>
-<span id="cb276-6"><a href="exercise-to-do-at-home.html#cb276-6" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Population[extra<span class="sc">$</span>Eurozone <span class="sc">==</span> <span class="st">&quot;yes&quot;</span>]</span>
-<span id="cb276-7"><a href="exercise-to-do-at-home.html#cb276-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># sum that selection</span></span>
-<span id="cb276-8"><a href="exercise-to-do-at-home.html#cb276-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(extra<span class="sc">$</span>Population[extra<span class="sc">$</span>Eurozone <span class="sc">==</span> <span class="st">&quot;yes&quot;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="exercise-to-do-at-home.html#cb272-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># sum the whole population column</span></span>
+<span id="cb272-2"><a href="exercise-to-do-at-home.html#cb272-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(extra<span class="sc">$</span>Population)</span>
+<span id="cb272-3"><a href="exercise-to-do-at-home.html#cb272-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># select elements of extra where Eurozone is &quot;yes&quot;</span></span>
+<span id="cb272-4"><a href="exercise-to-do-at-home.html#cb272-4" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Eurozone <span class="sc">==</span> <span class="st">&quot;yes&quot;</span></span>
+<span id="cb272-5"><a href="exercise-to-do-at-home.html#cb272-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># select only elements in Population for which the corresponding Eurozone elements are &quot;yes&quot;</span></span>
+<span id="cb272-6"><a href="exercise-to-do-at-home.html#cb272-6" aria-hidden="true" tabindex="-1"></a>  extra<span class="sc">$</span>Population[extra<span class="sc">$</span>Eurozone <span class="sc">==</span> <span class="st">&quot;yes&quot;</span>]</span>
+<span id="cb272-7"><a href="exercise-to-do-at-home.html#cb272-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># sum that selection</span></span>
+<span id="cb272-8"><a href="exercise-to-do-at-home.html#cb272-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(extra<span class="sc">$</span>Population[extra<span class="sc">$</span>Eurozone <span class="sc">==</span> <span class="st">&quot;yes&quot;</span>])</span></code></pre></div>
 </details>
 <p><strong>9- Write extra into file ex6c_output.txt</strong></p>
 <p><em>After each of the following steps, check the output file in the RStudio file browser (lower-right panel).</em></p>
@@ -427,7 +425,7 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="exercise-to-do-at-home.html#cb277-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.table</span>(extra, <span class="at">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="exercise-to-do-at-home.html#cb273-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.table</span>(extra, <span class="at">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>)</span></code></pre></div>
 </details>
 <ul>
 <li>Add the argument “row.names” set to FALSE.</li>
@@ -436,8 +434,8 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="exercise-to-do-at-home.html#cb278-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.table</span>(extra, <span class="at">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </span>
-<span id="cb278-2"><a href="exercise-to-do-at-home.html#cb278-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="exercise-to-do-at-home.html#cb274-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.table</span>(extra, <span class="at">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </span>
+<span id="cb274-2"><a href="exercise-to-do-at-home.html#cb274-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 </details>
 <ul>
 <li>Add the argument “quote” set to FALSE.</li>
@@ -446,9 +444,9 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="exercise-to-do-at-home.html#cb279-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.table</span>(extra, <span class="at">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </span>
-<span id="cb279-2"><a href="exercise-to-do-at-home.html#cb279-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb279-3"><a href="exercise-to-do-at-home.html#cb279-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="exercise-to-do-at-home.html#cb275-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.table</span>(extra, <span class="at">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </span>
+<span id="cb275-2"><a href="exercise-to-do-at-home.html#cb275-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb275-3"><a href="exercise-to-do-at-home.html#cb275-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 </details>
 <ul>
 <li>Add the argument “sep” set to “ or to,”"</li>
@@ -457,10 +455,10 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="exercise-to-do-at-home.html#cb280-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.table</span>(extra, <span class="at">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </span>
-<span id="cb280-2"><a href="exercise-to-do-at-home.html#cb280-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb280-3"><a href="exercise-to-do-at-home.html#cb280-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">quote =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb280-4"><a href="exercise-to-do-at-home.html#cb280-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="exercise-to-do-at-home.html#cb276-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write.table</span>(extra, <span class="at">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </span>
+<span id="cb276-2"><a href="exercise-to-do-at-home.html#cb276-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb276-3"><a href="exercise-to-do-at-home.html#cb276-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">quote =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb276-4"><a href="exercise-to-do-at-home.html#cb276-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>)</span></code></pre></div>
 </details>
 
 </div>

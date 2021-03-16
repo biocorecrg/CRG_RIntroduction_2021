@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-14" />
+<meta name="date" content="2021-03-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -209,8 +209,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
-<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -323,9 +321,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="bar-plots-1" class="section level2" number="19.5">
 <h2><span class="header-section-number">19.5</span> Bar plots</h2>
-<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="bar-plots-1.html#cb402-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple bar plot</span></span>
-<span id="cb402-2"><a href="bar-plots-1.html#cb402-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>grouping)) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-324-1.png" width="672" /></p>
+<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="bar-plots-1.html#cb401-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple bar plot</span></span>
+<span id="cb401-2"><a href="bar-plots-1.html#cb401-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>grouping)) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-312-1.png" width="672" /></p>
 <ul>
 <li>Customize:
 <ul>
@@ -333,46 +331,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>coord_flip</strong> swaps the x and y axis</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="bar-plots-1.html#cb403-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the plot in the object &quot;p&quot;</span></span>
-<span id="cb403-2"><a href="bar-plots-1.html#cb403-2" aria-hidden="true" tabindex="-1"></a>pbar <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>grouping, <span class="at">fill=</span>grouping)) <span class="sc">+</span> </span>
-<span id="cb403-3"><a href="bar-plots-1.html#cb403-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span>
-<span id="cb403-4"><a href="bar-plots-1.html#cb403-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb403-5"><a href="bar-plots-1.html#cb403-5" aria-hidden="true" tabindex="-1"></a>pbar</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-325-1.png" width="672" /></p>
-<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="bar-plots-1.html#cb404-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change x axis label with scale_x_discrete and change order of the bars:</span></span>
-<span id="cb404-2"><a href="bar-plots-1.html#cb404-2" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> pbar <span class="sc">+</span> <span class="fu">scale_x_discrete</span>(<span class="at">name=</span><span class="st">&quot;counts of yes / no&quot;</span>, <span class="at">limits=</span><span class="fu">c</span>(<span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>))</span>
+<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="bar-plots-1.html#cb402-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the plot in the object &quot;p&quot;</span></span>
+<span id="cb402-2"><a href="bar-plots-1.html#cb402-2" aria-hidden="true" tabindex="-1"></a>pbar <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>grouping, <span class="at">fill=</span>grouping)) <span class="sc">+</span> </span>
+<span id="cb402-3"><a href="bar-plots-1.html#cb402-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb402-4"><a href="bar-plots-1.html#cb402-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb402-5"><a href="bar-plots-1.html#cb402-5" aria-hidden="true" tabindex="-1"></a>pbar</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-1.png" width="672" /></p>
+<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="bar-plots-1.html#cb403-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change x axis label with scale_x_discrete and change order of the bars:</span></span>
+<span id="cb403-2"><a href="bar-plots-1.html#cb403-2" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> pbar <span class="sc">+</span> <span class="fu">scale_x_discrete</span>(<span class="at">name=</span><span class="st">&quot;counts of yes / no&quot;</span>, <span class="at">limits=</span><span class="fu">c</span>(<span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>))</span>
+<span id="cb403-3"><a href="bar-plots-1.html#cb403-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb403-4"><a href="bar-plots-1.html#cb403-4" aria-hidden="true" tabindex="-1"></a>p2</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-2.png" width="672" /></p>
+<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="bar-plots-1.html#cb404-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Swapping x and y axis with coord_flip():</span></span>
+<span id="cb404-2"><a href="bar-plots-1.html#cb404-2" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> p2 <span class="sc">+</span> <span class="fu">coord_flip</span>()</span>
 <span id="cb404-3"><a href="bar-plots-1.html#cb404-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb404-4"><a href="bar-plots-1.html#cb404-4" aria-hidden="true" tabindex="-1"></a>p2</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-325-2.png" width="672" /></p>
-<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="bar-plots-1.html#cb405-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Swapping x and y axis with coord_flip():</span></span>
-<span id="cb405-2"><a href="bar-plots-1.html#cb405-2" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> p2 <span class="sc">+</span> <span class="fu">coord_flip</span>()</span>
+<span id="cb404-4"><a href="bar-plots-1.html#cb404-4" aria-hidden="true" tabindex="-1"></a>p3</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-3.png" width="672" /></p>
+<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="bar-plots-1.html#cb405-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change fill</span></span>
+<span id="cb405-2"><a href="bar-plots-1.html#cb405-2" aria-hidden="true" tabindex="-1"></a>p4 <span class="ot">&lt;-</span> p3 <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;cyan&quot;</span>))</span>
 <span id="cb405-3"><a href="bar-plots-1.html#cb405-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb405-4"><a href="bar-plots-1.html#cb405-4" aria-hidden="true" tabindex="-1"></a>p3</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-325-3.png" width="672" /></p>
-<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="bar-plots-1.html#cb406-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change fill</span></span>
-<span id="cb406-2"><a href="bar-plots-1.html#cb406-2" aria-hidden="true" tabindex="-1"></a>p4 <span class="ot">&lt;-</span> p3 <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;cyan&quot;</span>))</span>
-<span id="cb406-3"><a href="bar-plots-1.html#cb406-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb406-4"><a href="bar-plots-1.html#cb406-4" aria-hidden="true" tabindex="-1"></a>p4</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-325-4.png" width="672" /></p>
+<span id="cb405-4"><a href="bar-plots-1.html#cb405-4" aria-hidden="true" tabindex="-1"></a>p4</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-4.png" width="672" /></p>
 <div id="bar-plots-with-error-bars" class="section level3" number="19.5.1">
 <h3><span class="header-section-number">19.5.1</span> Bar plots with error bars</h3>
 <p>We can create error bars on barplots.
 <br>
 Let’s create a toy data set, that contains 7 independent qPCR measurements for 3 genes:</p>
-<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="bar-plots-1.html#cb407-1" aria-hidden="true" tabindex="-1"></a>pcr <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Dkk1=</span><span class="fu">c</span>(<span class="fl">18.2</span>, <span class="fl">18.1</span>, <span class="fl">17.8</span>, <span class="fl">17.85</span>, <span class="fl">18.6</span>, <span class="fl">12.4</span>, <span class="fl">10.7</span>),</span>
-<span id="cb407-2"><a href="bar-plots-1.html#cb407-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">Pten=</span><span class="fu">c</span>(<span class="fl">15.1</span>,<span class="fl">15.2</span>, <span class="fl">15.0</span>, <span class="fl">15.6</span>, <span class="fl">15.3</span>, <span class="fl">14.8</span>, <span class="fl">15.9</span>),</span>
-<span id="cb407-3"><a href="bar-plots-1.html#cb407-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">Tp53=</span><span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.9</span>, <span class="fl">9.25</span>, <span class="fl">8.7</span>, <span class="fl">8.8</span>, <span class="fl">9.3</span>, <span class="fl">7.8</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="bar-plots-1.html#cb406-1" aria-hidden="true" tabindex="-1"></a>pcr <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Dkk1=</span><span class="fu">c</span>(<span class="fl">18.2</span>, <span class="fl">18.1</span>, <span class="fl">17.8</span>, <span class="fl">17.85</span>, <span class="fl">18.6</span>, <span class="fl">12.4</span>, <span class="fl">10.7</span>),</span>
+<span id="cb406-2"><a href="bar-plots-1.html#cb406-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">Pten=</span><span class="fu">c</span>(<span class="fl">15.1</span>,<span class="fl">15.2</span>, <span class="fl">15.0</span>, <span class="fl">15.6</span>, <span class="fl">15.3</span>, <span class="fl">14.8</span>, <span class="fl">15.9</span>),</span>
+<span id="cb406-3"><a href="bar-plots-1.html#cb406-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">Tp53=</span><span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.9</span>, <span class="fl">9.25</span>, <span class="fl">8.7</span>, <span class="fl">8.8</span>, <span class="fl">9.3</span>, <span class="fl">7.8</span>))</span></code></pre></div>
 <p>The height of the bar will represent the <strong>average</strong> qPCR measurement. The error bar will represent the <strong>average - standard deviation</strong> on the lowe part, and the <strong>average + standard deviation</strong> on the high part.
 <br>
 We need to create a data frame that <strong>summarizes</strong> these values:</p>
-<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb408-1"><a href="bar-plots-1.html#cb408-1" aria-hidden="true" tabindex="-1"></a>pcr_summary <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">average=</span><span class="fu">apply</span>(pcr, <span class="dv">2</span>, mean), </span>
-<span id="cb408-2"><a href="bar-plots-1.html#cb408-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">standard_deviation=</span><span class="fu">apply</span>(pcr, <span class="dv">2</span>, sd),</span>
-<span id="cb408-3"><a href="bar-plots-1.html#cb408-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">genes=</span><span class="fu">colnames</span>(pcr))</span></code></pre></div>
+<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="bar-plots-1.html#cb407-1" aria-hidden="true" tabindex="-1"></a>pcr_summary <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">average=</span><span class="fu">apply</span>(pcr, <span class="dv">2</span>, mean), </span>
+<span id="cb407-2"><a href="bar-plots-1.html#cb407-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">standard_deviation=</span><span class="fu">apply</span>(pcr, <span class="dv">2</span>, sd),</span>
+<span id="cb407-3"><a href="bar-plots-1.html#cb407-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">genes=</span><span class="fu">colnames</span>(pcr))</span></code></pre></div>
 <p>And now we can plot!</p>
-<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb409-1"><a href="bar-plots-1.html#cb409-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pcr_summary, <span class="fu">aes</span>(<span class="at">x=</span>genes, <span class="at">y=</span>average, <span class="at">fill=</span>genes)) <span class="sc">+</span> </span>
-<span id="cb409-2"><a href="bar-plots-1.html#cb409-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
-<span id="cb409-3"><a href="bar-plots-1.html#cb409-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>average<span class="sc">-</span>standard_deviation, <span class="at">ymax=</span>average<span class="sc">+</span>standard_deviation), <span class="at">colour=</span><span class="st">&quot;black&quot;</span>, <span class="at">width=</span>.<span class="dv">1</span>) </span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-328-1.png" width="672" /></p>
+<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb408-1"><a href="bar-plots-1.html#cb408-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pcr_summary, <span class="fu">aes</span>(<span class="at">x=</span>genes, <span class="at">y=</span>average, <span class="at">fill=</span>genes)) <span class="sc">+</span> </span>
+<span id="cb408-2"><a href="bar-plots-1.html#cb408-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb408-3"><a href="bar-plots-1.html#cb408-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>average<span class="sc">-</span>standard_deviation, <span class="at">ymax=</span>average<span class="sc">+</span>standard_deviation), <span class="at">colour=</span><span class="st">&quot;black&quot;</span>, <span class="at">width=</span>.<span class="dv">1</span>) </span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-316-1.png" width="672" /></p>
 </div>
 </div>
             </section>

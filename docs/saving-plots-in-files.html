@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-14" />
+<meta name="date" content="2021-03-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -209,8 +209,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
-<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -326,27 +324,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>The same as for regular plots applies:</li>
 </ul>
-<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="saving-plots-in-files.html#cb424-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="st">&quot;myggplot.png&quot;</span>)</span>
-<span id="cb424-2"><a href="saving-plots-in-files.html#cb424-2" aria-hidden="true" tabindex="-1"></a>p</span>
-<span id="cb424-3"><a href="saving-plots-in-files.html#cb424-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="saving-plots-in-files.html#cb423-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="st">&quot;myggplot.png&quot;</span>)</span>
+<span id="cb423-2"><a href="saving-plots-in-files.html#cb423-2" aria-hidden="true" tabindex="-1"></a>p</span>
+<span id="cb423-3"><a href="saving-plots-in-files.html#cb423-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 <ul>
 <li>You can also use the ggplot2 <strong>ggsave</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="saving-plots-in-files.html#cb425-1" aria-hidden="true" tabindex="-1"></a><span class="co"># By default, save the last plot that was produced</span></span>
-<span id="cb425-2"><a href="saving-plots-in-files.html#cb425-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;lastplot.png&quot;</span>)</span>
-<span id="cb425-3"><a href="saving-plots-in-files.html#cb425-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb425-4"><a href="saving-plots-in-files.html#cb425-4" aria-hidden="true" tabindex="-1"></a><span class="co"># You can pick which plot you want to save:</span></span>
-<span id="cb425-5"><a href="saving-plots-in-files.html#cb425-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;myplot.png&quot;</span>, <span class="at">plot=</span>p)</span>
-<span id="cb425-6"><a href="saving-plots-in-files.html#cb425-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb425-7"><a href="saving-plots-in-files.html#cb425-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Many different formats are available: </span></span>
-<span id="cb425-8"><a href="saving-plots-in-files.html#cb425-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># &quot;eps&quot;, &quot;ps&quot;, &quot;tex&quot;, &quot;pdf&quot;, &quot;jpeg&quot;, &quot;tiff&quot;, &quot;png&quot;, &quot;bmp&quot;, &quot;svg&quot;, &quot;wmf&quot;</span></span>
-<span id="cb425-9"><a href="saving-plots-in-files.html#cb425-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;myplot.ps&quot;</span>, <span class="at">plot=</span>p, <span class="at">device=</span><span class="st">&quot;ps&quot;</span>)</span>
-<span id="cb425-10"><a href="saving-plots-in-files.html#cb425-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb425-11"><a href="saving-plots-in-files.html#cb425-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the height and width (and their unit):</span></span>
-<span id="cb425-12"><a href="saving-plots-in-files.html#cb425-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;myplot.pdf&quot;</span>, </span>
-<span id="cb425-13"><a href="saving-plots-in-files.html#cb425-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">width =</span> <span class="dv">20</span>, </span>
-<span id="cb425-14"><a href="saving-plots-in-files.html#cb425-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="dv">20</span>, </span>
-<span id="cb425-15"><a href="saving-plots-in-files.html#cb425-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="saving-plots-in-files.html#cb424-1" aria-hidden="true" tabindex="-1"></a><span class="co"># By default, save the last plot that was produced</span></span>
+<span id="cb424-2"><a href="saving-plots-in-files.html#cb424-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;lastplot.png&quot;</span>)</span>
+<span id="cb424-3"><a href="saving-plots-in-files.html#cb424-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb424-4"><a href="saving-plots-in-files.html#cb424-4" aria-hidden="true" tabindex="-1"></a><span class="co"># You can pick which plot you want to save:</span></span>
+<span id="cb424-5"><a href="saving-plots-in-files.html#cb424-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;myplot.png&quot;</span>, <span class="at">plot=</span>p)</span>
+<span id="cb424-6"><a href="saving-plots-in-files.html#cb424-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb424-7"><a href="saving-plots-in-files.html#cb424-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Many different formats are available: </span></span>
+<span id="cb424-8"><a href="saving-plots-in-files.html#cb424-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># &quot;eps&quot;, &quot;ps&quot;, &quot;tex&quot;, &quot;pdf&quot;, &quot;jpeg&quot;, &quot;tiff&quot;, &quot;png&quot;, &quot;bmp&quot;, &quot;svg&quot;, &quot;wmf&quot;</span></span>
+<span id="cb424-9"><a href="saving-plots-in-files.html#cb424-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;myplot.ps&quot;</span>, <span class="at">plot=</span>p, <span class="at">device=</span><span class="st">&quot;ps&quot;</span>)</span>
+<span id="cb424-10"><a href="saving-plots-in-files.html#cb424-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb424-11"><a href="saving-plots-in-files.html#cb424-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the height and width (and their unit):</span></span>
+<span id="cb424-12"><a href="saving-plots-in-files.html#cb424-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;myplot.pdf&quot;</span>, </span>
+<span id="cb424-13"><a href="saving-plots-in-files.html#cb424-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">width =</span> <span class="dv">20</span>, </span>
+<span id="cb424-14"><a href="saving-plots-in-files.html#cb424-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="dv">20</span>, </span>
+<span id="cb424-15"><a href="saving-plots-in-files.html#cb424-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>)</span></code></pre></div>
 <ul>
 <li>You can also organize several plots on one page
 <ul>
@@ -354,19 +352,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>ncol, nrow: arrange plots in such number of columns and rows</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="saving-plots-in-files.html#cb426-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;gridExtra&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb427-1"><a href="saving-plots-in-files.html#cb427-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package</span></span>
-<span id="cb427-2"><a href="saving-plots-in-files.html#cb427-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
-<span id="cb427-3"><a href="saving-plots-in-files.html#cb427-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 rows and 2 columns</span></span>
-<span id="cb427-4"><a href="saving-plots-in-files.html#cb427-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-337-1.png" width="672" /></p>
-<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="saving-plots-in-files.html#cb428-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 row and 4 columns</span></span>
-<span id="cb428-2"><a href="saving-plots-in-files.html#cb428-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-338-1.png" width="960" /></p>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="saving-plots-in-files.html#cb425-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;gridExtra&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="saving-plots-in-files.html#cb426-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package</span></span>
+<span id="cb426-2"><a href="saving-plots-in-files.html#cb426-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb426-3"><a href="saving-plots-in-files.html#cb426-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 rows and 2 columns</span></span>
+<span id="cb426-4"><a href="saving-plots-in-files.html#cb426-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-325-1.png" width="672" /></p>
+<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb427-1"><a href="saving-plots-in-files.html#cb427-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 row and 4 columns</span></span>
+<span id="cb427-2"><a href="saving-plots-in-files.html#cb427-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-326-1.png" width="960" /></p>
 <p>Combine ggsave and grid.arrange:</p>
-<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb429-1"><a href="saving-plots-in-files.html#cb429-1" aria-hidden="true" tabindex="-1"></a>myplots <span class="ot">&lt;-</span> <span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
-<span id="cb429-2"><a href="saving-plots-in-files.html#cb429-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb429-3"><a href="saving-plots-in-files.html#cb429-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;mygridarrange.png&quot;</span>, <span class="at">plot=</span>myplots)<span class="er">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="saving-plots-in-files.html#cb428-1" aria-hidden="true" tabindex="-1"></a>myplots <span class="ot">&lt;-</span> <span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
+<span id="cb428-2"><a href="saving-plots-in-files.html#cb428-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb428-3"><a href="saving-plots-in-files.html#cb428-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;mygridarrange.png&quot;</span>, <span class="at">plot=</span>myplots)<span class="er">)</span></span></code></pre></div>
 
 </div>
             </section>
