@@ -209,6 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -321,28 +323,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="exercise-8-regular-expressions.html#cb401-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb401-2"><a href="exercise-8-regular-expressions.html#cb401-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb412-1"><a href="exercise-8-regular-expressions.html#cb412-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb412-2"><a href="exercise-8-regular-expressions.html#cb412-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>1- Play with grep</strong></p>
 <ul>
 <li>Create the following data frame</li>
 </ul>
-<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="exercise-8-regular-expressions.html#cb402-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">age=</span><span class="fu">c</span>(<span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">67</span>, <span class="dv">40</span>, <span class="dv">27</span>), </span>
-<span id="cb402-2"><a href="exercise-8-regular-expressions.html#cb402-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">citizenship=</span><span class="fu">c</span>(<span class="st">&quot;England&quot;</span>, <span class="st">&quot;India&quot;</span>, <span class="st">&quot;Spain&quot;</span>, <span class="st">&quot;Brasil&quot;</span>, <span class="st">&quot;Tunisia&quot;</span>, <span class="st">&quot;Poland&quot;</span>), </span>
-<span id="cb402-3"><a href="exercise-8-regular-expressions.html#cb402-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.names=</span><span class="fu">paste</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Patient&quot;</span>, <span class="st">&quot;Doctor&quot;</span>), <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>)), <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>),</span>
-<span id="cb402-4"><a href="exercise-8-regular-expressions.html#cb402-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="exercise-8-regular-expressions.html#cb413-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">age=</span><span class="fu">c</span>(<span class="dv">32</span>, <span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">67</span>, <span class="dv">40</span>, <span class="dv">27</span>), </span>
+<span id="cb413-2"><a href="exercise-8-regular-expressions.html#cb413-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">citizenship=</span><span class="fu">c</span>(<span class="st">&quot;England&quot;</span>, <span class="st">&quot;India&quot;</span>, <span class="st">&quot;Spain&quot;</span>, <span class="st">&quot;Brasil&quot;</span>, <span class="st">&quot;Tunisia&quot;</span>, <span class="st">&quot;Poland&quot;</span>), </span>
+<span id="cb413-3"><a href="exercise-8-regular-expressions.html#cb413-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.names=</span><span class="fu">paste</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Patient&quot;</span>, <span class="st">&quot;Doctor&quot;</span>), <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>)), <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>),</span>
+<span id="cb413-4"><a href="exercise-8-regular-expressions.html#cb413-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 <p>Using grep: create the smaller data frame df3 that contains only the Patient’s but NOT the Doctor’s information.</p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="exercise-8-regular-expressions.html#cb403-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select row names</span></span>
-<span id="cb403-2"><a href="exercise-8-regular-expressions.html#cb403-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(df2)</span>
-<span id="cb403-3"><a href="exercise-8-regular-expressions.html#cb403-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Select only rownames that correspond to patients</span></span>
-<span id="cb403-4"><a href="exercise-8-regular-expressions.html#cb403-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="st">&quot;Patient&quot;</span>, <span class="fu">rownames</span>(df2))</span>
-<span id="cb403-5"><a href="exercise-8-regular-expressions.html#cb403-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame that contains only those rows</span></span>
-<span id="cb403-6"><a href="exercise-8-regular-expressions.html#cb403-6" aria-hidden="true" tabindex="-1"></a>df3 <span class="ot">&lt;-</span> df2[<span class="fu">grep</span>(<span class="st">&quot;Patient&quot;</span>, <span class="fu">rownames</span>(df2)), ]</span></code></pre></div>
+<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb414-1"><a href="exercise-8-regular-expressions.html#cb414-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select row names</span></span>
+<span id="cb414-2"><a href="exercise-8-regular-expressions.html#cb414-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(df2)</span>
+<span id="cb414-3"><a href="exercise-8-regular-expressions.html#cb414-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Select only rownames that correspond to patients</span></span>
+<span id="cb414-4"><a href="exercise-8-regular-expressions.html#cb414-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="st">&quot;Patient&quot;</span>, <span class="fu">rownames</span>(df2))</span>
+<span id="cb414-5"><a href="exercise-8-regular-expressions.html#cb414-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame that contains only those rows</span></span>
+<span id="cb414-6"><a href="exercise-8-regular-expressions.html#cb414-6" aria-hidden="true" tabindex="-1"></a>df3 <span class="ot">&lt;-</span> df2[<span class="fu">grep</span>(<span class="st">&quot;Patient&quot;</span>, <span class="fu">rownames</span>(df2)), ]</span></code></pre></div>
 </details>
 <ul>
 <li>Use <strong>grep</strong> and <strong><em>one</em></strong> regular expression to retrieve from df2 patients/doctors coming from either <strong>Brasil</strong> or <strong>Spain</strong>. Brainstorm a bit!</li>
@@ -351,7 +353,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="exercise-8-regular-expressions.html#cb404-1" aria-hidden="true" tabindex="-1"></a>df2[<span class="fu">grep</span>(<span class="st">&quot;a[a-z]*i&quot;</span>, df2<span class="sc">$</span>citizenship),]</span></code></pre></div>
+<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="exercise-8-regular-expressions.html#cb415-1" aria-hidden="true" tabindex="-1"></a>df2[<span class="fu">grep</span>(<span class="st">&quot;a[a-z]*i&quot;</span>, df2<span class="sc">$</span>citizenship),]</span></code></pre></div>
 </details>
 <ul>
 <li>Use <strong>grep</strong> and <strong><em>one</em></strong> regular expression to retrieve from df2 patients/doctors coming from either <strong>Brasil</strong> or <strong>England</strong>.</li>
@@ -360,21 +362,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="exercise-8-regular-expressions.html#cb405-1" aria-hidden="true" tabindex="-1"></a>df2[<span class="fu">grep</span>(<span class="st">&quot;[gi]l&quot;</span>, df2<span class="sc">$</span>citizenship),]</span></code></pre></div>
+<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb416-1"><a href="exercise-8-regular-expressions.html#cb416-1" aria-hidden="true" tabindex="-1"></a>df2[<span class="fu">grep</span>(<span class="st">&quot;[gi]l&quot;</span>, df2<span class="sc">$</span>citizenship),]</span></code></pre></div>
 </details>
 <p><strong>2- Play with gsub</strong></p>
 <p>Build this vector of file names:</p>
-<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="exercise-8-regular-expressions.html#cb406-1" aria-hidden="true" tabindex="-1"></a>vector1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;L2_sample1_GTAGCG.fastq.gz&quot;</span>, <span class="st">&quot;L1_sample2_ATTGCC.fastq.gz&quot;</span>, </span>
-<span id="cb406-2"><a href="exercise-8-regular-expressions.html#cb406-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;L1_sample3_TGTTAC.fastq.gz&quot;</span>, <span class="st">&quot;L4_sample4_ATGGTA.fastq.gz&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="exercise-8-regular-expressions.html#cb417-1" aria-hidden="true" tabindex="-1"></a>vector1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;L2_sample1_GTAGCG.fastq.gz&quot;</span>, <span class="st">&quot;L1_sample2_ATTGCC.fastq.gz&quot;</span>, </span>
+<span id="cb417-2"><a href="exercise-8-regular-expressions.html#cb417-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;L1_sample3_TGTTAC.fastq.gz&quot;</span>, <span class="st">&quot;L4_sample4_ATGGTA.fastq.gz&quot;</span>)</span></code></pre></div>
 <p>Use <strong>gsub</strong> and an appropriate <strong>regular expression</strong> on <strong>vector1</strong> to retrieve only “sample1,” “sample2,” “sample3” and “sample4.”</p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="exercise-8-regular-expressions.html#cb407-1" aria-hidden="true" tabindex="-1"></a><span class="co"># | is used as OR</span></span>
-<span id="cb407-2"><a href="exercise-8-regular-expressions.html#cb407-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;L[124]{1}_|_[ATGC]{6}.fastq.gz&quot;</span>, </span>
-<span id="cb407-3"><a href="exercise-8-regular-expressions.html#cb407-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">replacement=</span><span class="st">&quot;&quot;</span>, </span>
-<span id="cb407-4"><a href="exercise-8-regular-expressions.html#cb407-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span>vector1)</span></code></pre></div>
+<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb418-1"><a href="exercise-8-regular-expressions.html#cb418-1" aria-hidden="true" tabindex="-1"></a><span class="co"># | is used as OR</span></span>
+<span id="cb418-2"><a href="exercise-8-regular-expressions.html#cb418-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;L[124]{1}_|_[ATGC]{6}.fastq.gz&quot;</span>, </span>
+<span id="cb418-3"><a href="exercise-8-regular-expressions.html#cb418-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">replacement=</span><span class="st">&quot;&quot;</span>, </span>
+<span id="cb418-4"><a href="exercise-8-regular-expressions.html#cb418-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span>vector1)</span></code></pre></div>
 </details>
 
 </div>

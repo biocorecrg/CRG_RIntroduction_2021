@@ -209,6 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -318,13 +320,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Simple boxplot showing the data distribution of sample 1:</li>
 </ul>
-<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="box-plots-1.html#cb307-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-223-1.png" width="672" /></p>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="box-plots-1.html#cb318-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="st">&quot;&quot;</span>, <span class="at">y=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-230-1.png" width="672" /></p>
 <ul>
 <li>Split the data into 2 boxes:</li>
 </ul>
-<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="box-plots-1.html#cb308-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>grouping, <span class="at">y=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-224-1.png" width="672" /></p>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="box-plots-1.html#cb319-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>grouping, <span class="at">y=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-231-1.png" width="672" /></p>
 <ul>
 <li>What if you want to plot both sample1 and sample2 ?<br>
 <em>You need to convert into a <strong>long</strong> format</em>
@@ -333,30 +335,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>What is the <strong>long</strong> format ?</p>
 <p><img src="images/plots/wide2long.png" width="800"></p>
 <p>Plotting both sample1 and sample2:</p>
-<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb309-1"><a href="box-plots-1.html#cb309-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install package reshape2</span></span>
-<span id="cb309-2"><a href="box-plots-1.html#cb309-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;reshape2&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="box-plots-1.html#cb310-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package</span></span>
-<span id="cb310-2"><a href="box-plots-1.html#cb310-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;reshape2&quot;</span>)</span>
-<span id="cb310-3"><a href="box-plots-1.html#cb310-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb310-4"><a href="box-plots-1.html#cb310-4" aria-hidden="true" tabindex="-1"></a><span class="co"># convert to long format</span></span>
-<span id="cb310-5"><a href="box-plots-1.html#cb310-5" aria-hidden="true" tabindex="-1"></a>df_long <span class="ot">&lt;-</span> <span class="fu">melt</span>(<span class="at">data=</span>df2)</span>
-<span id="cb310-6"><a href="box-plots-1.html#cb310-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># all numeric values are organized into only one column: value</span></span>
-<span id="cb310-7"><a href="box-plots-1.html#cb310-7" aria-hidden="true" tabindex="-1"></a><span class="co"># plot:</span></span>
-<span id="cb310-8"><a href="box-plots-1.html#cb310-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span> </span>
-<span id="cb310-9"><a href="box-plots-1.html#cb310-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-226-1.png" width="672" /></p>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="box-plots-1.html#cb320-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install package reshape2</span></span>
+<span id="cb320-2"><a href="box-plots-1.html#cb320-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;reshape2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="box-plots-1.html#cb321-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package</span></span>
+<span id="cb321-2"><a href="box-plots-1.html#cb321-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;reshape2&quot;</span>)</span>
+<span id="cb321-3"><a href="box-plots-1.html#cb321-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb321-4"><a href="box-plots-1.html#cb321-4" aria-hidden="true" tabindex="-1"></a><span class="co"># convert to long format</span></span>
+<span id="cb321-5"><a href="box-plots-1.html#cb321-5" aria-hidden="true" tabindex="-1"></a>df_long <span class="ot">&lt;-</span> <span class="fu">melt</span>(<span class="at">data=</span>df2)</span>
+<span id="cb321-6"><a href="box-plots-1.html#cb321-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># all numeric values are organized into only one column: value</span></span>
+<span id="cb321-7"><a href="box-plots-1.html#cb321-7" aria-hidden="true" tabindex="-1"></a><span class="co"># plot:</span></span>
+<span id="cb321-8"><a href="box-plots-1.html#cb321-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span> </span>
+<span id="cb321-9"><a href="box-plots-1.html#cb321-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-233-1.png" width="672" /></p>
 <ul>
 <li>What if now you also want to see the distribution of “yes” and “no” in both sample1 and sample2 ?<br>
 <em>Integrate a parameter to the <strong>aes()</strong></em></li>
 </ul>
-<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb311-1"><a href="box-plots-1.html#cb311-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Either color (color of the box border)</span></span>
-<span id="cb311-2"><a href="box-plots-1.html#cb311-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>grouping)) <span class="sc">+</span> </span>
-<span id="cb311-3"><a href="box-plots-1.html#cb311-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-227-1.png" width="672" /></p>
-<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="box-plots-1.html#cb312-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Or fill (color inside the box)</span></span>
-<span id="cb312-2"><a href="box-plots-1.html#cb312-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">fill=</span>grouping)) <span class="sc">+</span> </span>
-<span id="cb312-3"><a href="box-plots-1.html#cb312-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-228-1.png" width="672" /></p>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="box-plots-1.html#cb322-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Either color (color of the box border)</span></span>
+<span id="cb322-2"><a href="box-plots-1.html#cb322-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>grouping)) <span class="sc">+</span> </span>
+<span id="cb322-3"><a href="box-plots-1.html#cb322-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-234-1.png" width="672" /></p>
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="box-plots-1.html#cb323-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Or fill (color inside the box)</span></span>
+<span id="cb323-2"><a href="box-plots-1.html#cb323-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">fill=</span>grouping)) <span class="sc">+</span> </span>
+<span id="cb323-3"><a href="box-plots-1.html#cb323-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-235-1.png" width="672" /></p>
 <p>Do you want to change the default colors?<br></p>
 <ul>
 <li>Integrate either layer:
@@ -365,17 +367,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>scale_fill_manual()</strong> for the boxes color (inside)</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb313-1"><a href="box-plots-1.html#cb313-1" aria-hidden="true" tabindex="-1"></a>pbox_fill <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">fill=</span>grouping)) <span class="sc">+</span> </span>
-<span id="cb313-2"><a href="box-plots-1.html#cb313-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb313-3"><a href="box-plots-1.html#cb313-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</span>
-<span id="cb313-4"><a href="box-plots-1.html#cb313-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb313-5"><a href="box-plots-1.html#cb313-5" aria-hidden="true" tabindex="-1"></a>pbox_fill</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-229-1.png" width="672" /></p>
-<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="box-plots-1.html#cb314-1" aria-hidden="true" tabindex="-1"></a>pbox_col <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>grouping)) <span class="sc">+</span></span>
-<span id="cb314-2"><a href="box-plots-1.html#cb314-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb314-3"><a href="box-plots-1.html#cb314-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</span>
-<span id="cb314-4"><a href="box-plots-1.html#cb314-4" aria-hidden="true" tabindex="-1"></a>pbox_col</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-229-2.png" width="672" /></p>
+<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb324-1"><a href="box-plots-1.html#cb324-1" aria-hidden="true" tabindex="-1"></a>pbox_fill <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">fill=</span>grouping)) <span class="sc">+</span> </span>
+<span id="cb324-2"><a href="box-plots-1.html#cb324-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb324-3"><a href="box-plots-1.html#cb324-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</span>
+<span id="cb324-4"><a href="box-plots-1.html#cb324-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb324-5"><a href="box-plots-1.html#cb324-5" aria-hidden="true" tabindex="-1"></a>pbox_fill</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-236-1.png" width="672" /></p>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="box-plots-1.html#cb325-1" aria-hidden="true" tabindex="-1"></a>pbox_col <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>grouping)) <span class="sc">+</span></span>
+<span id="cb325-2"><a href="box-plots-1.html#cb325-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb325-3"><a href="box-plots-1.html#cb325-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;slateblue2&quot;</span>, <span class="st">&quot;chocolate&quot;</span>))</span>
+<span id="cb325-4"><a href="box-plots-1.html#cb325-4" aria-hidden="true" tabindex="-1"></a>pbox_col</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-236-2.png" width="672" /></p>
 </div>
             </section>
 

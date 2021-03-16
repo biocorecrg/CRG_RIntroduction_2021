@@ -209,6 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -316,23 +318,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="histograms-1" class="section level2" number="16.6">
 <h2><span class="header-section-number">16.6</span> Histograms</h2>
 <p>Simple histogram on one sample (using the df2 data frame):</p>
-<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="histograms-1.html#cb325-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="histograms-1.html#cb336-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-237-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-244-1.png" width="672" /></p>
 <p>Histogram on more samples (using df_long):</p>
-<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="histograms-1.html#cb327-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="histograms-1.html#cb338-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-238-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-245-1.png" width="672" /></p>
 <p>Split the data per sample (“variable” column that represents here the samples):</p>
-<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="histograms-1.html#cb329-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="histograms-1.html#cb340-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-239-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-246-1.png" width="672" /></p>
 <p>By default, the histograms are <strong>stacked</strong>: change to position <strong>dodge</strong> (side by side):</p>
-<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="histograms-1.html#cb331-1" aria-hidden="true" tabindex="-1"></a>phist <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
-<span id="cb331-2"><a href="histograms-1.html#cb331-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">position=</span><span class="st">&#39;dodge&#39;</span>)</span>
-<span id="cb331-3"><a href="histograms-1.html#cb331-3" aria-hidden="true" tabindex="-1"></a>phist</span></code></pre></div>
+<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="histograms-1.html#cb342-1" aria-hidden="true" tabindex="-1"></a>phist <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
+<span id="cb342-2"><a href="histograms-1.html#cb342-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">position=</span><span class="st">&#39;dodge&#39;</span>)</span>
+<span id="cb342-3"><a href="histograms-1.html#cb342-3" aria-hidden="true" tabindex="-1"></a>phist</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-240-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-247-1.png" width="672" /></p>
 </div>
             </section>
 

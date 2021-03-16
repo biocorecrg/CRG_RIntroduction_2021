@@ -209,6 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -318,16 +320,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Read in a file into a data frame with the <strong>read.table</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="on-data-frames-or-matrices.html#cb228-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="on-data-frames-or-matrices.html#cb239-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
 <p>You can convert it as a matrix, if needed, with:</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="on-data-frames-or-matrices.html#cb229-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="on-data-frames-or-matrices.html#cb240-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>))</span></code></pre></div>
 <p>Useful arguments:</p>
 <p><a href="https://biocorecrg.github.io/CRG_RIntroduction_2021/images/readtable.png"><img src="images/readtable.png" width="550/"></a></p>
 <ul>
 <li>Write a data frame or matrix to a file:</li>
 </ul>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="on-data-frames-or-matrices.html#cb230-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>a,</span>
-<span id="cb230-2"><a href="on-data-frames-or-matrices.html#cb230-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="on-data-frames-or-matrices.html#cb241-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>a,</span>
+<span id="cb241-2"><a href="on-data-frames-or-matrices.html#cb241-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
 <p>Useful arguments:</p>
 <p><a href="https://biocorecrg.github.io/CRG_RIntroduction_2021/images/writetable.png"><img src="images/writetable.png" width="550/"></a></p>
 <ul>
@@ -338,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>Download file <strong>inputB.txt</strong> the following way, using the <strong>download.file</strong> function:</li>
 </ol>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="on-data-frames-or-matrices.html#cb231-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputB.txt&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;inputB.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="on-data-frames-or-matrices.html#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputB.txt&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;inputB.txt&quot;</span>)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Read in the content of inputB.txt using the <strong>read.table</strong> command; save in object “pop.”
 What are the dimensions of “pop?” What are the column names?</p></li>

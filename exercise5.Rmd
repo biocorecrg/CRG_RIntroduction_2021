@@ -147,3 +147,226 @@ mydf3 <- mydf[mydf$Sex=="M" & mydf$Height > 170,]
 
 
 </details>
+
+
+### Exercise 5b (EXTRA: only if time allows, or to do at home!)
+
+**1. Create two data frames mydf1 and mydf2 as:**
+
+mydf1:
+
+| | |
+|:---:|:---:|
+|1|14|
+|2|12|
+|3|15|
+|4|10|
+
+mydf2:
+
+| | |
+|:---:|:---:|
+|1|paul|
+|2|helen|
+|3|emily|
+|4|john|
+|5|mark|
+
+With column names: **"id", "age"** for mydf1, and **"id", "name"** for mydf2.
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+mydf1 <- data.frame(id=1:4, age=c(14,12,15,10))
+mydf2 <- data.frame(id=1:5, name=c("paul", "helen", "emily", "john", "mark"))
+```
+
+</details>
+
+**2- Merge mydf1 and mydf2 by their "id" column.**
+Look for the help page of **merge** and/or Google it!
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+# input 2 data frames
+# "by" columns indicate by which column you want to merge the data
+merge(x=mydf1, y=mydf2, by.x="id", by.y="id")
+mydf3 <- merge(x=mydf1, y=mydf2, by="id")
+```
+
+</details>
+
+**3- Order mydf3 by decreasing age.**
+Look for the help page of **order**.
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+# order the age column (default is increasing order)
+order(mydf3$age)
+# order the age column by decreasing order
+order(mydf3$age, decreasing = TRUE)
+# order the whole data frame by the column age in decreasing order
+mydf3[order(mydf3$age, decreasing = TRUE), ]
+```
+
+</details>
+
+### Exercise 5c (EXTRA: only if time allows, or to do at home!!)
+
+**1- Using the download.file function, download [this file](https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData) to your current directory.** (Right click on "this file" -> Copy link location to get the full path).
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+# failing: download.file("https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData", "genes_dataframe.RData")
+download.file("https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData", "genes_dataframe.RData")
+```
+
+
+**2- The function dir() lists the files and directories present in the current directory: check if genes_dataframe.RData was copied.**
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+dir()
+```
+
+</details>
+
+**3- Load genes_dataframe.RData in your environment**
+Use the *load* function.
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+load("genes_dataframe.RData")
+```
+
+</details>
+
+**4- genes_dataframe.RData contains the mydf_genes object: is it now present in your environment?**
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+# check in the upper-right panel "Environment" tab of RStudio, or run:
+ls()
+```
+
+</details>
+
+**5- Explore mydf_genes and see what it contains**
+You can use a variety of functions: str, head, tail, dim, colnames, rownames, class... 
+ 
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+str(mydf_genes)
+head(mydf_genes)
+tail(mydf_genes)
+dim(mydf_genes)
+colnames(mydf_genes)
+rownames(mydf_genes)
+class(mydf_genes)
+```
+
+</details>
+
+**6- Select rows for which pvalue_KOvsWT < 0.05 AND log2FoldChange_KOvsWT > 0.5. Store in the up object.**
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+# rows where pvalue_KOvsWT < 0.05 
+mydf_genes$pvalue_KOvsWT < 0.05
+# rows where log2FoldChange_KOvsWT > 0.5
+mydf_genes$log2FoldChange_KOvsWT > 0.5
+# rows that comply both of the above conditions
+mydf_genes$pvalue_KOvsWT < 0.05 & mydf_genes$log2FoldChange_KOvsWT > 0.5
+# select rows for which pvalue_KOvsWT < 0.05 AND log2FoldChange_KOvsWT > 0.5
+up <- mydf_genes[mydf_genes$pvalue_KOvsWT < 0.05 & 
+                 mydf_genes$log2FoldChange_KOvsWT > 0.5,]
+```
+
+</details>
+
+How many rows (genes) were selected?
+
+
+**7- Select from the up object the Zinc finger protein coding genes (i.e. the gene symbol starts with Zfp). Use the grep() function.**
+
+<details>
+<summary>
+*Answer*       
+</summary>
+
+```{r, eval=F}
+# extract gene symbol column
+up$gene_symbol
+# use grep to get the genes matching the pattern "Zfp"
+up[grep("Zf", up$gene_symbol), ]
+```
+
+</details>
+
+**8- Select rows for which pvalue_KOvsWT < 0.05 AND log2FoldChange_KOvsWT is > 0.5 OR < -0.5.**
+For the selection of log2FoldChange: give the **abs** function a try! 
+<br>Store in the diff_genes object.
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+# rows where pvalue_KOvsWT < 0.05
+mydf_genes$pvalue_KOvsWT < 0.05
+# rows where log2FoldChange_KOvsWT > 0.5
+mydf_genes$log2FoldChange_KOvsWT > 0.5
+# rows where log2FoldChange_KOvsWT < -0.5
+mydf_genes$log2FoldChange_KOvsWT > -0.5
+# rows where log2FoldChange_KOvsWT < -0.5 OR log2FoldChange_KOvsWT > 0.5
+mydf_genes$log2FoldChange_KOvsWT > 0.5 | mydf_genes$log2FoldChange_KOvsWT > -0.5
+# same as above but using the abs function
+abs(mydf_genes$log2FoldChange_KOvsWT) > 0.5
+# combine all required criteria
+mydf_genes$pvalue_KOvsWT < 0.05 & abs(mydf_genes$log2FoldChange_KOvsWT) > 0.5
+# extract corresponding entries
+diff_genes <- mydf_genes[mydf_genes$pvalue_KOvsWT < 0.05 & 
+                 abs(mydf_genes$log2FoldChange_KOvsWT) > 0.5,]
+```
+
+</details>
+
+How many rows (genes) were selected?
+
+

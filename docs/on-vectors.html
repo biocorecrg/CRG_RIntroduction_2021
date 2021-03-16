@@ -209,6 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -318,42 +320,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Read a file as a vector with the <strong>scan</strong> function</li>
 </ul>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="on-vectors.html#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in file</span></span>
-<span id="cb222-2"><a href="on-vectors.html#cb222-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span>
-<span id="cb222-3"><a href="on-vectors.html#cb222-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Save in  object</span></span>
-<span id="cb222-4"><a href="on-vectors.html#cb222-4" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="on-vectors.html#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in file</span></span>
+<span id="cb233-2"><a href="on-vectors.html#cb233-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span>
+<span id="cb233-3"><a href="on-vectors.html#cb233-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Save in  object</span></span>
+<span id="cb233-4"><a href="on-vectors.html#cb233-4" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
 <p>By default, scans “double” (numeric) elements: it fails if the input contains characters.<br>
 If non-numeric, you need to specify the type of data contained in the file:</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="on-vectors.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="co"># specify the type of data to scan</span></span>
-<span id="cb223-2"><a href="on-vectors.html#cb223-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>, </span>
-<span id="cb223-3"><a href="on-vectors.html#cb223-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">what=</span><span class="st">&quot;character&quot;</span>)</span>
-<span id="cb223-4"><a href="on-vectors.html#cb223-4" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </span>
-<span id="cb223-5"><a href="on-vectors.html#cb223-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">what=</span><span class="st">&quot;character&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="on-vectors.html#cb234-1" aria-hidden="true" tabindex="-1"></a><span class="co"># specify the type of data to scan</span></span>
+<span id="cb234-2"><a href="on-vectors.html#cb234-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>, </span>
+<span id="cb234-3"><a href="on-vectors.html#cb234-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">what=</span><span class="st">&quot;character&quot;</span>)</span>
+<span id="cb234-4"><a href="on-vectors.html#cb234-4" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </span>
+<span id="cb234-5"><a href="on-vectors.html#cb234-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">what=</span><span class="st">&quot;character&quot;</span>)</span></code></pre></div>
 <p>Regarding paths of files:<br>
 If the file is not in the current directory, you can provide a full or relative path. For example, if located in the home directory, read it as:</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="on-vectors.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </span>
-<span id="cb224-2"><a href="on-vectors.html#cb224-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">what=</span><span class="st">&quot;character&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="on-vectors.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </span>
+<span id="cb235-2"><a href="on-vectors.html#cb235-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">what=</span><span class="st">&quot;character&quot;</span>)</span></code></pre></div>
 <ul>
 <li>Write the content of a vector in a file:</li>
 </ul>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="on-vectors.html#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a vector</span></span>
-<span id="cb225-2"><a href="on-vectors.html#cb225-2" aria-hidden="true" tabindex="-1"></a>mygenes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;SMAD4&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;ASXL3&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;CKLF&quot;</span>, <span class="st">&quot;TIAM1&quot;</span>, <span class="st">&quot;VHL&quot;</span>, <span class="st">&quot;BTD&quot;</span>, <span class="st">&quot;EMP1&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;PAX3&quot;</span>)</span>
-<span id="cb225-3"><a href="on-vectors.html#cb225-3" aria-hidden="true" tabindex="-1"></a><span class="co"># write in a file</span></span>
-<span id="cb225-4"><a href="on-vectors.html#cb225-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(<span class="at">x=</span>mygenes, </span>
-<span id="cb225-5"><a href="on-vectors.html#cb225-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;gene_list.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="on-vectors.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a vector</span></span>
+<span id="cb236-2"><a href="on-vectors.html#cb236-2" aria-hidden="true" tabindex="-1"></a>mygenes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;SMAD4&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;ASXL3&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;CKLF&quot;</span>, <span class="st">&quot;TIAM1&quot;</span>, <span class="st">&quot;VHL&quot;</span>, <span class="st">&quot;BTD&quot;</span>, <span class="st">&quot;EMP1&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;PAX3&quot;</span>)</span>
+<span id="cb236-3"><a href="on-vectors.html#cb236-3" aria-hidden="true" tabindex="-1"></a><span class="co"># write in a file</span></span>
+<span id="cb236-4"><a href="on-vectors.html#cb236-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(<span class="at">x=</span>mygenes, </span>
+<span id="cb236-5"><a href="on-vectors.html#cb236-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;gene_list.txt&quot;</span>)</span></code></pre></div>
 <p>Regarding paths of files:<br>
 When you write a file, you can also specify a full or relative path:</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="on-vectors.html#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write to home directory</span></span>
-<span id="cb226-2"><a href="on-vectors.html#cb226-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(<span class="at">x=</span>mygenes,</span>
-<span id="cb226-3"><a href="on-vectors.html#cb226-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">file=</span><span class="st">&quot;~/gene_list.txt&quot;</span>)</span>
-<span id="cb226-4"><a href="on-vectors.html#cb226-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Write to one directory up</span></span>
-<span id="cb226-5"><a href="on-vectors.html#cb226-5" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(<span class="at">x=</span>mygenes,</span>
-<span id="cb226-6"><a href="on-vectors.html#cb226-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">file=</span><span class="st">&quot;../gene_list.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="on-vectors.html#cb237-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write to home directory</span></span>
+<span id="cb237-2"><a href="on-vectors.html#cb237-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(<span class="at">x=</span>mygenes,</span>
+<span id="cb237-3"><a href="on-vectors.html#cb237-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">file=</span><span class="st">&quot;~/gene_list.txt&quot;</span>)</span>
+<span id="cb237-4"><a href="on-vectors.html#cb237-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Write to one directory up</span></span>
+<span id="cb237-5"><a href="on-vectors.html#cb237-5" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(<span class="at">x=</span>mygenes,</span>
+<span id="cb237-6"><a href="on-vectors.html#cb237-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">file=</span><span class="st">&quot;../gene_list.txt&quot;</span>)</span></code></pre></div>
 <p><strong>HANDS-ON</strong></p>
 <ol style="list-style-type: decimal">
 <li>Download file <strong>inputA.txt</strong> the following way, using the <strong>download.file</strong> function:</li>
 </ol>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="on-vectors.html#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputA.txt&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;inputA.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="on-vectors.html#cb238-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputA.txt&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;inputA.txt&quot;</span>)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Read in the content of inputA.txt using the scan command; save in object z
 How many elements are in z?</li>

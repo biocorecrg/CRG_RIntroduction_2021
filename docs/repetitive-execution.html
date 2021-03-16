@@ -209,6 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -318,9 +320,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Loops</strong> are used to repeat a specific block of code.</p>
 <p><br></p>
 <p>Structure of the <strong>for loop</strong>:</p>
-<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb421-1"><a href="repetitive-execution.html#cb421-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> vector_expression){</span>
-<span id="cb421-2"><a href="repetitive-execution.html#cb421-2" aria-hidden="true" tabindex="-1"></a>    action_command</span>
-<span id="cb421-3"><a href="repetitive-execution.html#cb421-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb432"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb432-1"><a href="repetitive-execution.html#cb432-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> vector_expression){</span>
+<span id="cb432-2"><a href="repetitive-execution.html#cb432-2" aria-hidden="true" tabindex="-1"></a>    action_command</span>
+<span id="cb432-3"><a href="repetitive-execution.html#cb432-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>3 main elements:</p>
 <ul>
 <li><strong>i</strong> is the loop variable: it is updated at each iteration.</li>
@@ -333,58 +335,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Example:</li>
 </ul>
-<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="repetitive-execution.html#cb422-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">5</span>){</span>
-<span id="cb422-2"><a href="repetitive-execution.html#cb422-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># prints the value of i at each iteration</span></span>
-<span id="cb422-3"><a href="repetitive-execution.html#cb422-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
-<span id="cb422-4"><a href="repetitive-execution.html#cb422-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># multiplies i by 2 at each iteration</span></span>
-<span id="cb422-5"><a href="repetitive-execution.html#cb422-5" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">&lt;-</span> i<span class="sc">*</span><span class="dv">2</span></span>
-<span id="cb422-6"><a href="repetitive-execution.html#cb422-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># prints the value of y at each iteration</span></span>
-<span id="cb422-7"><a href="repetitive-execution.html#cb422-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(y)</span>
-<span id="cb422-8"><a href="repetitive-execution.html#cb422-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="repetitive-execution.html#cb433-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb433-2"><a href="repetitive-execution.html#cb433-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># prints the value of i at each iteration</span></span>
+<span id="cb433-3"><a href="repetitive-execution.html#cb433-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
+<span id="cb433-4"><a href="repetitive-execution.html#cb433-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># multiplies i by 2 at each iteration</span></span>
+<span id="cb433-5"><a href="repetitive-execution.html#cb433-5" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">&lt;-</span> i<span class="sc">*</span><span class="dv">2</span></span>
+<span id="cb433-6"><a href="repetitive-execution.html#cb433-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># prints the value of y at each iteration</span></span>
+<span id="cb433-7"><a href="repetitive-execution.html#cb433-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(y)</span>
+<span id="cb433-8"><a href="repetitive-execution.html#cb433-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <ul>
 <li>Example of a <strong>for loop</strong> that iterates over a character vector:</li>
 </ul>
-<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="repetitive-execution.html#cb423-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Character vector</span></span>
-<span id="cb423-2"><a href="repetitive-execution.html#cb423-2" aria-hidden="true" tabindex="-1"></a>myfruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</span>
-<span id="cb423-3"><a href="repetitive-execution.html#cb423-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb423-4"><a href="repetitive-execution.html#cb423-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The for loop prints the current element j, and the number of characters of element j</span></span>
-<span id="cb423-5"><a href="repetitive-execution.html#cb423-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> myfruits){</span>
-<span id="cb423-6"><a href="repetitive-execution.html#cb423-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(j)</span>
-<span id="cb423-7"><a href="repetitive-execution.html#cb423-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">nchar</span>(j))</span>
-<span id="cb423-8"><a href="repetitive-execution.html#cb423-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb434"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb434-1"><a href="repetitive-execution.html#cb434-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Character vector</span></span>
+<span id="cb434-2"><a href="repetitive-execution.html#cb434-2" aria-hidden="true" tabindex="-1"></a>myfruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</span>
+<span id="cb434-3"><a href="repetitive-execution.html#cb434-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb434-4"><a href="repetitive-execution.html#cb434-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The for loop prints the current element j, and the number of characters of element j</span></span>
+<span id="cb434-5"><a href="repetitive-execution.html#cb434-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> myfruits){</span>
+<span id="cb434-6"><a href="repetitive-execution.html#cb434-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(j)</span>
+<span id="cb434-7"><a href="repetitive-execution.html#cb434-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">nchar</span>(j))</span>
+<span id="cb434-8"><a href="repetitive-execution.html#cb434-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <ul>
 <li>Example of a <strong>for loop</strong> that iterates over each row of a matrix, and prints the minimum value of that row :</li>
 </ul>
-<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="repetitive-execution.html#cb424-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix of 50 rows, 16 columns </span></span>
-<span id="cb424-2"><a href="repetitive-execution.html#cb424-2" aria-hidden="true" tabindex="-1"></a>mymat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">800</span>), </span>
-<span id="cb424-3"><a href="repetitive-execution.html#cb424-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">50</span>)</span>
-<span id="cb424-4"><a href="repetitive-execution.html#cb424-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb424-5"><a href="repetitive-execution.html#cb424-5" aria-hidden="true" tabindex="-1"></a><span class="co"># For loop over mymat rows</span></span>
-<span id="cb424-6"><a href="repetitive-execution.html#cb424-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1:nrow(mymat): ranges from 1 to the number of rows in the matrix: 1, 2, 3, 4, ...., 48, 49, 50</span></span>
-<span id="cb424-7"><a href="repetitive-execution.html#cb424-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb424-8"><a href="repetitive-execution.html#cb424-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mymat)){</span>
-<span id="cb424-9"><a href="repetitive-execution.html#cb424-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># prints the value of i at each iteration</span></span>
-<span id="cb424-10"><a href="repetitive-execution.html#cb424-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
-<span id="cb424-11"><a href="repetitive-execution.html#cb424-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># prints the minimum value of the ith row of mymat at each iteration</span></span>
-<span id="cb424-12"><a href="repetitive-execution.html#cb424-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">min</span>(mymat[i,]))</span>
-<span id="cb424-13"><a href="repetitive-execution.html#cb424-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb435-1"><a href="repetitive-execution.html#cb435-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix of 50 rows, 16 columns </span></span>
+<span id="cb435-2"><a href="repetitive-execution.html#cb435-2" aria-hidden="true" tabindex="-1"></a>mymat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">800</span>), </span>
+<span id="cb435-3"><a href="repetitive-execution.html#cb435-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">50</span>)</span>
+<span id="cb435-4"><a href="repetitive-execution.html#cb435-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb435-5"><a href="repetitive-execution.html#cb435-5" aria-hidden="true" tabindex="-1"></a><span class="co"># For loop over mymat rows</span></span>
+<span id="cb435-6"><a href="repetitive-execution.html#cb435-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1:nrow(mymat): ranges from 1 to the number of rows in the matrix: 1, 2, 3, 4, ...., 48, 49, 50</span></span>
+<span id="cb435-7"><a href="repetitive-execution.html#cb435-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb435-8"><a href="repetitive-execution.html#cb435-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mymat)){</span>
+<span id="cb435-9"><a href="repetitive-execution.html#cb435-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># prints the value of i at each iteration</span></span>
+<span id="cb435-10"><a href="repetitive-execution.html#cb435-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(i)</span>
+<span id="cb435-11"><a href="repetitive-execution.html#cb435-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># prints the minimum value of the ith row of mymat at each iteration</span></span>
+<span id="cb435-12"><a href="repetitive-execution.html#cb435-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">min</span>(mymat[i,]))</span>
+<span id="cb435-13"><a href="repetitive-execution.html#cb435-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <ul>
 <li><strong>If statement</strong> in <strong>For loop</strong>:</li>
 </ul>
 <p>You can combine <strong>for loops</strong> and <strong>if statements</strong>:</p>
-<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="repetitive-execution.html#cb425-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix</span></span>
-<span id="cb425-2"><a href="repetitive-execution.html#cb425-2" aria-hidden="true" tabindex="-1"></a>mymat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">800</span>), </span>
-<span id="cb425-3"><a href="repetitive-execution.html#cb425-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">nrow=</span><span class="dv">50</span>)</span>
-<span id="cb425-4"><a href="repetitive-execution.html#cb425-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb425-5"><a href="repetitive-execution.html#cb425-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop over rows of mymat and print row if its median value is &gt; 0</span></span>
-<span id="cb425-6"><a href="repetitive-execution.html#cb425-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mymat)){</span>
-<span id="cb425-7"><a href="repetitive-execution.html#cb425-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># extract the current row</span></span>
-<span id="cb425-8"><a href="repetitive-execution.html#cb425-8" aria-hidden="true" tabindex="-1"></a>    rowi <span class="ot">&lt;-</span> mymat[i,]</span>
-<span id="cb425-9"><a href="repetitive-execution.html#cb425-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if median of row is &gt; 0, print row</span></span>
-<span id="cb425-10"><a href="repetitive-execution.html#cb425-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">median</span>(rowi) <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
-<span id="cb425-11"><a href="repetitive-execution.html#cb425-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(rowi)</span>
-<span id="cb425-12"><a href="repetitive-execution.html#cb425-12" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb425-13"><a href="repetitive-execution.html#cb425-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb436-1"><a href="repetitive-execution.html#cb436-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix</span></span>
+<span id="cb436-2"><a href="repetitive-execution.html#cb436-2" aria-hidden="true" tabindex="-1"></a>mymat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">800</span>), </span>
+<span id="cb436-3"><a href="repetitive-execution.html#cb436-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">nrow=</span><span class="dv">50</span>)</span>
+<span id="cb436-4"><a href="repetitive-execution.html#cb436-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb436-5"><a href="repetitive-execution.html#cb436-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop over rows of mymat and print row if its median value is &gt; 0</span></span>
+<span id="cb436-6"><a href="repetitive-execution.html#cb436-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mymat)){</span>
+<span id="cb436-7"><a href="repetitive-execution.html#cb436-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># extract the current row</span></span>
+<span id="cb436-8"><a href="repetitive-execution.html#cb436-8" aria-hidden="true" tabindex="-1"></a>    rowi <span class="ot">&lt;-</span> mymat[i,]</span>
+<span id="cb436-9"><a href="repetitive-execution.html#cb436-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if median of row is &gt; 0, print row</span></span>
+<span id="cb436-10"><a href="repetitive-execution.html#cb436-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">median</span>(rowi) <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb436-11"><a href="repetitive-execution.html#cb436-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(rowi)</span>
+<span id="cb436-12"><a href="repetitive-execution.html#cb436-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb436-13"><a href="repetitive-execution.html#cb436-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>You can also have a look at this <a href="https://www.datacamp.com/community/tutorials/tutorial-on-loops-in-r">tutorial</a>, to know more about loops.</p>
 <!--chapter:end:forloop.Rmd-->
 </div>
