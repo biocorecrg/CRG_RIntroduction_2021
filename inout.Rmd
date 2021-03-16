@@ -4,7 +4,7 @@ We will learn how to:
 
 * Read in a file
 * Write out a file
-* Save a graph in a file (Module 3)
+* Save a graph to a file (Module 3)
 
 ## On vectors
 
@@ -58,6 +58,22 @@ write(x=mygenes,
         file="../gene_list.txt")
 ```
 
+**HANDS-ON**
+
+1. Download file **inputA.txt** the following way, using the **download.file** function:
+
+```{r, eval=F}
+download.file(url="https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputA.txt", destfile = "inputA.txt")
+```
+
+2. Read in the content of inputA.txt using the scan command; save in object z
+How many elements are in z?
+
+3- Sort z: save sorted vector in a new object "zsorted" (see function **sort()**)
+
+4. Write zsorted content into file outputA.txt, with the **write()** function.
+
+
 
 ## On data frames or matrices
 
@@ -76,7 +92,7 @@ a <- as.matrix(read.table(file="file.txt"))
 
 Useful arguments:
 
-<a href="https://biocorecrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/readtable.png" width="550/"></a>
+<a href="https://biocorecrg.github.io/CRG_RIntroduction_2021/images/readtable.png"><img src="images/readtable.png" width="550/"></a>
 
 * Write a data frame or matrix to a file:
 
@@ -87,8 +103,21 @@ write.table(x=a,
 
 Useful arguments:
 
-<a href="https://biocorecrg.github.io/CRG_RIntroduction/images/writetable.png"><img src="images/writetable.png" width="550/"></a>
+<a href="https://biocorecrg.github.io/CRG_RIntroduction_2021/images/writetable.png"><img src="images/writetable.png" width="550/"></a>
 
 * Note that **\\t** stands for tab-delimitation
 
+* NOTE: **read.csv** derives from the read.table function, and reads **.csv** (comma-separated) files...
 
+**HANDS-ON**
+
+1. Download file **inputB.txt** the following way, using the **download.file** function:
+
+```{r, eval=F}
+download.file(url="https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputB.txt", destfile = "inputB.txt")
+```
+
+2. Read in the content of inputB.txt using the **read.table** command; save in object "pop".
+What are the dimensions of "pop"? What are the column names?
+
+3. Select all states that are in the "Eurozone". What is the **total population** of the Eurozone, according to this table?

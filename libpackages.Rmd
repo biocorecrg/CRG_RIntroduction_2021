@@ -16,15 +16,15 @@ Example: package base (write, table, rownames functions), package utils (read.ta
 All other packages:
 
 * [CRAN](https://cran.r-project.org): Comprehensive R Archive Network
-  + 15356<sup>*</sup> packages available
+  + 17318<sup>*</sup> packages available
   + find packages in https://cran.r-project.org/web/packages/
 	<img src="images/cran_packages.png" width="550"/>
 * [Bioconductor](https://www.bioconductor.org/):
-	+ 1823<sup>*</sup> packages available
+	+ 3372<sup>*</sup> packages available
 	+ find packages in https://bioconductor.org/packages
 	<img src="images/bioc_packages.png" width="550"/>
 
-*<sup>*</sup>As of February 2019*
+*<sup>*</sup>As of March 2021*
 
 <h4>Bioconductor</h4>
 
@@ -47,7 +47,8 @@ There are different types of Bioconductor packages:
 
 ## Install a package
 
-* With RStudio:
+* With RStudio (please install package **BiocManager**):
+
 <img src="images/bioc_install.png" width="550"/>
 
 * From the console:
@@ -56,29 +57,23 @@ install.packages(pkgs="BiocManager")
 ```
 
 * Install a bioconductor package:
-  * For R version >= 3.5.0
 ```{r, eval=F}
 # Install Bioconductor package manager
 install.packages(pkgs="BiocManager")
 # Install Bioconductor package
 BiocManager::install("DESeq2")
 ```
-  * For older R versions
-```{r, eval=F}
-# Source (load into environment) script containing biocLite function
-source("http://www.bioconductor.org/biocLite.R")
-# Use biocLite function to install Bioconductor package
-biocLite("DESeq2")
-```
+
 
 ## Load a package
 
 * With RStudio:
+
 <img src="images/bioc_load.png" width="450"/>
 
 * From the console:
 ```{r}
-library("ggplot2")
+library("BiocManager")
 ```
 
 ## Check what packages are currently loaded
@@ -95,7 +90,7 @@ sessionInfo()
 
 * From the console
 ```{r, eval=F}
-ls("package:ggplot2")
+ls("package:BiocManager")
 ```
 
 ## RStudio server at CRG

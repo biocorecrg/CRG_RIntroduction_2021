@@ -8,7 +8,7 @@
 
 <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -26,7 +26,7 @@ str(extra)
   
   <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -42,7 +42,7 @@ str(extra)
   
   <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -55,7 +55,7 @@ colnames(extra)
   
   <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -75,7 +75,7 @@ colnames(extra)[1] <- "Country"
   
   <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -88,7 +88,7 @@ table(extra$Eurozone)
   
   <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -112,7 +112,7 @@ extra$Eurozone[extra$Eurozone==FALSE] <- "no"
 
 <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -132,7 +132,7 @@ grep("c", extra$Country, value=TRUE, ignore.case = TRUE)
   
   <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -156,7 +156,7 @@ sum(extra$Population[extra$Eurozone == "yes"])
 
 <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -169,7 +169,7 @@ write.table(extra, file="ex6c_output.txt")
 
 <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -183,7 +183,7 @@ write.table(extra, file="ex6c_output.txt",
 
 <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}
@@ -198,7 +198,7 @@ write.table(extra, file="ex6c_output.txt",
 
 <details>
   <summary>
-  correction
+  *Answer*
 </summary>
   
   ```{r, eval=F}

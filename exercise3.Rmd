@@ -9,7 +9,7 @@ then go to Rcourse/Module1 with setwd()**
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -31,7 +31,7 @@ w <- rep(x=c("miRNA", "mRNA"), times=c(3, 2))
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -48,7 +48,7 @@ rep(x=c("miRNA", "mRNA"), times=c(10, 2))
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -64,7 +64,7 @@ w[w == "mRNA"]
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -80,7 +80,7 @@ What is the difference between **==** and **grep** ?
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 >= looks for exact matches.
@@ -100,7 +100,7 @@ How many elements do w and g contain?
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -114,7 +114,7 @@ length(w); length(g)
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}

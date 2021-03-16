@@ -6,7 +6,7 @@ Create the script "exercise8.R" and save it to the "Rcourse/Module2" directory: 
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -33,7 +33,7 @@ Using grep: create the smaller data frame df3 that contains only the Patient's b
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -51,7 +51,7 @@ df3 <- df2[grep("Patient", rownames(df2)), ]
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -64,7 +64,7 @@ df2[grep("a[a-z]*i", df2$citizenship),]
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -86,7 +86,7 @@ Use **gsub** and an appropriate **regular expression** on **vector1** to retriev
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}

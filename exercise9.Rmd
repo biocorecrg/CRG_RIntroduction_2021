@@ -6,7 +6,7 @@ Create the script "exercise9.R" and save it to the "Rcourse/Module2" directory: 
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -28,7 +28,7 @@ vec2 <- c("kiwi", "apple", "pear", "grape")
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -43,7 +43,7 @@ if("apple" %in% vec2){
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -65,7 +65,7 @@ vec3 <- c("cherry", "strawberry", "blueberry", "peach")
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}

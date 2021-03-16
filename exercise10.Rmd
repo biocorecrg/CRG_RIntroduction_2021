@@ -6,7 +6,7 @@ Create the script "exercise10.R" and save it to the "Rcourse/Module2" directory:
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -21,7 +21,7 @@ setwd("~/Rcourse/Module2")
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -37,7 +37,7 @@ for(i in 2:10){
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -59,7 +59,7 @@ mat1 <- matrix(rnorm(40), nrow=20)
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -94,7 +94,7 @@ Write a **for** loop that iterates over each row of **mat4**: **if** an **NA** i
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -140,7 +140,7 @@ How do you get started?
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}

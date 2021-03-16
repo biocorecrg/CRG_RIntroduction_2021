@@ -6,7 +6,7 @@ Create the script "exercise6.R" and save it to the "Rcourse/Module2" directory: 
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -19,295 +19,81 @@ setwd("~/Rcourse/Module2")
 
 ### Exercise 6a. Input / output
 
-**1- Download folder "i_o_files" in your current directory with:** 
+**1- Import the following file (use download.file() function: check the help page!) into your current working directyr (Module2)**
+https://data.cityofnewyork.us/resource/vfnx-vebw.csv
 
-```{r, eval=F}
-# system invokes the OS command specified by the "command" argument.
-system(command="svn export https://github.com/biocorecrg/CRG_RIntroduction/trunk/i_o_files.tar.gz")
-# extract archive (tar: archive, gz: compressed)
-system(command="tar -xvzf i_o_files.tar.gz")
-# list files present in i_o_files
-dir("i_o_files")
-```
-
-All files that will be used for exercise 6 are found in the **i_o_files** folder ! 
-
-**2- Read in the content of ex6a_input.txt using the scan command; save in object z**
-
-How many elements are in z?
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
-# scan content of the file
-z <- scan("i_o_files/ex6a_input.txt")
-# number of elements (length of vector)
-length(z)
+download.file(url="https://data.cityofnewyork.us/resource/vfnx-vebw.csv", destfile="vfnx-vebw.csv")
 ```
 
 </details>
 
-**3- Sort z: save sorted vector in object "zsorted". ?sort**
+**2- Check that the file you download is present in the current directory (use dir())**
+
+**3- Read this file into object squirrels (remember that the read.csv function exists)**
+
+This data set contains the census of NYC central park squirrels!
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
-zsorted <- sort(z)
+# with read.table
+squirrels <- read.table("vfnx-vebw.csv", header=T, sep=",", as.is=TRUE)
+# read.csv is an option
+squirrels <- read.table("vfnx-vebw.csv")
 ```
 
 </details>
 
-**4- Write zsorted content into file ex6a_output.txt. ?write**
+**4- Select only "Juvenile" squirrels ("Juvenile" in the "age" column). How many squirrels do you get?**
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
-write(zsorted, "ex6a_output.txt")
+squirrels[squirrels$age == "Juvenile", ]
 ```
 
 </details>
 
-**5- Check the file you produced in the RStudio file browser (click on the file in bottom-right panel, "Files" tab). Save the content of zsorted again but this time setting the argument "ncolumns" to 1: how does the file look now?**
+**5- Select squirrels if their primary fur color is "Cinnamon". How many squirrels do you get?**
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
-write(zsorted, "ex6a_output.txt", ncolumns=1)
+squirrels[squirrels$primary_fur_color == "Cinnamon", ]
 ```
 
 </details>
 
-### Exercise 6b - I/O on data frames: play with the arguments of read.table
-  
-**1- field separator**
-
-* **Read ex6b_IO_commas_noheader.txt in object fs. ?read.table.
-What are the dimensions of fs?**
+**6- Finally, select squirrels that are both Juvenile and Cinnamon. How many squirrels are those?**
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
-# read in file with default parameters
-fs <- read.table("i_o_files/ex6b_IO_commas_noheader.txt")
-dim(fs)
+squirrels[squirrels$age == "Juvenile" & squirrels$primary_fur_color == "Cinnamon", ]
 ```
 
 </details>
 
-* **Fields/columns are separated by commas: change the default value of the "sep" argument and read in the file again.
-What are now the dimensions of fs?**
 
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-# change field separator to ","
-fs <- read.table("i_o_files/ex6b_IO_commas_noheader.txt", 
-	sep=",")
-dim(fs)
-```
-
-</details>
-
-**2- field separator + header**
-
-* **Read ex6b_IO_commas_header.txt in object fs_c.
-What are the dimensions of fs_c ?**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F} 
-fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt")
-dim(fs_c)
-```
-
-</details>
-
-* **Check head(fs_c) and change the default field separator to the appropriate one.**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt", 
-                   sep=",")
-```
-
-</details>
-
-* **The first row should to be the header (column names)! Change the default value of the header parameter and read in the file again.**
-What are now the dimensions of fs_c ?
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt", 
-                   sep=",", 
-                   header=TRUE)
-```
-
-</details>
-
-**3- skipping lines**
-
-* **Read ex6b_IO_skip.txt in object sk.**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F, message=F, warning=F, error=F}
-sk <- read.table("i_o_files/ex6b_IO_skip.txt")
-```
-
-</details>
-
-**Is R complaining ?**<br>
- 
-Check "manually" the file (open it in the R Studio file browser).<br>
-
-* The "skip" argument allows you to ignore one or more line(s) before reading in a file. **Introduce this argument with the appropriate number of lines to skip, and read in the file again.**<br>
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-sk <- read.table("i_o_files/ex6b_IO_skip.txt",
-                 skip=2)
-dim(sk)
-```
-
-</details>
-
-* Is R still complaining? 
-What are now the dimensions of sk ?
-
-* **Change the default field separator.**
-What are now the dimensions of sk ?
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-sk <- read.table("i_o_files/ex6b_IO_skip.txt",
-                 skip=2,
-                 sep=",",
-                 header=T)
-```
-
-</details>
-
-**4- Comment lines**
-
-* **Read ex6b_IO_comment.txt in object cl.**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F, warning=F, message=F, error=F}
-cl <- read.table("i_o_files/ex6b_IO_comment.txt")
-```
-
-</details>
-
-Is R complaining again ? **Check manually the file and try to find out what is wrong...**<br>
-
-What is the "comment.char" argument used for ? **Adjust the comment.char argument and read in the file again.**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-cl <- read.table("i_o_files/ex6b_IO_comment.txt",
-                 comment.char = "*")
-```
-
-</details>
-
-* **Adjust also the header and sep arguments to read in the file correctly.**
-What are now the dimensions of cl?
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-cl <- read.table("i_o_files/ex6b_IO_comment.txt",
-                 comment.char = "*",
-                 sep=",",
-                 header=TRUE)
-dim(cl)
-```
-
-</details>
-
-**4- final**
-
-* **Read ex6b_IO_final.txt in object "fin".**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F, warning=F, error=F, message=F}
-fin <- read.table("i_o_files/ex6b_IO_final.txt")
-```
-
-</details>
-
-* **Adjust the appropriate arguments of "write.table" according to what you have learnt so far, in order to obtain the data frame "fin" of dimensions 167 x 4.**
-
-<details>
-<summary>
-correction
-</summary>
-
-```{r, eval=F}
-fin <- read.table("i_o_files/ex6b_IO_final.txt",
-                  sep=",",
-                  header=TRUE,
-                  skip=3,
-                  comment.char="&"
-                  )
-```
-
-</details>
 
 
 

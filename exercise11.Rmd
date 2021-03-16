@@ -6,7 +6,7 @@ Create the script "exercise11.R" and save it to the "Rcourse/Module3" directory:
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}	
@@ -29,7 +29,7 @@ genes <- data.frame(sample1=rnorm(300),
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}	
@@ -42,7 +42,7 @@ plot(genes$sample1, genes$sample2)
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -58,7 +58,7 @@ plot(genes$sample1,
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -76,7 +76,7 @@ plot(genes$sample1,
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -97,7 +97,7 @@ b. plot a vertical line using **abline()**.
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -133,7 +133,7 @@ Produce a barplot that displays this information: how many genes are enriched, d
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -146,7 +146,7 @@ barplot(table(genes_significance))
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -166,7 +166,7 @@ Change depleted to "Down", enriched to "Up", none to "Not significant"
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -182,7 +182,7 @@ Try value 2 for las: what happens?
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -198,7 +198,7 @@ barplot(table(genes_significance),
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -211,7 +211,7 @@ Change the color of the slices, modify the labels, and add a title.
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -229,7 +229,7 @@ pie(table(genes_significance),
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -243,7 +243,7 @@ What is the difference ?
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -257,7 +257,7 @@ hist(genes$sample1,
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -272,7 +272,7 @@ hist(genes$sample1,
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -288,7 +288,7 @@ hist(genes$sample1,
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}

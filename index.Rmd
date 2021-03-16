@@ -23,14 +23,16 @@ link-citations: yes
 	  * R scripts
 	  * Data types & data structures
 	* Module 2: March 22, 23
+	  * More on data frame manipulation
 	  * Input / output
 	  * Library and packages
-	  * Regular expressions
-	  * Conditional statement
-	  * Repetitive execution
 	* Module 3: April 12, 13:
 	  * basic plotting
 	  * plotting with ggplot2
+	* EXTRAS:
+		* Regular expressions
+	  * Conditional statement
+	  * Repetitive execution
 * Time:
 	* 10:00-13:00 <br>
 

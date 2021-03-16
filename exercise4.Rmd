@@ -5,7 +5,7 @@ Create the script "exercise4.R" and save it to the "Rcourse/Module1" directory: 
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -26,7 +26,7 @@ What does function seq() do?
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 **seq** generate sequences of numbers. Here, it creates a sequences from 1 to 10 with a step of 2 numbers.
@@ -37,7 +37,7 @@ correction
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -55,7 +55,7 @@ dim(mat)
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -71,7 +71,7 @@ mat[,3]
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -84,7 +84,7 @@ rowSums(mat); colSums(mat)
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -97,7 +97,7 @@ colnames(mat) <- c("day", "month", "year")
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r}
@@ -111,7 +111,7 @@ rownames(mat) <- LETTERS[1:5]
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 Step by step:
@@ -130,7 +130,7 @@ mat[mat[,"month"] >= 3,]
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 Step by step:

@@ -6,7 +6,7 @@ Create the script "exercise5.R" and save it to the "Rcourse/Module1" directory: 
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -35,7 +35,7 @@ And Column names: **Age, Height, Sex**.
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -52,7 +52,7 @@ mydf <- data.frame(Age=c(43, 34, 22, 27),
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -69,7 +69,7 @@ Try different approaches:
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -83,7 +83,7 @@ mean(mydf$Height)
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -100,7 +100,7 @@ Use Patient1, Patient2, etc. instead of actual names.
 
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F} 
@@ -115,7 +115,7 @@ rownames(mydf) <- paste("Patient", 1:4, sep="")
  
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
@@ -131,7 +131,7 @@ mydf2 <- mydf[mydf$Sex=="F",]
  
 <details>
 <summary>
-correction
+*Answer*
 </summary>
 
 ```{r, eval=F}
