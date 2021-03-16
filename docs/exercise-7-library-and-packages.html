@@ -327,20 +327,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="exercise-7-library-and-packages.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb258-2"><a href="exercise-7-library-and-packages.html#cb258-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module2&quot;</span>)</span>
-<span id="cb258-3"><a href="exercise-7-library-and-packages.html#cb258-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="exercise-7-library-and-packages.html#cb255-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb255-2"><a href="exercise-7-library-and-packages.html#cb255-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module2&quot;</span>)</span>
+<span id="cb255-3"><a href="exercise-7-library-and-packages.html#cb255-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>1- Install and load the packages ggplot2 and WriteXLS</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="exercise-7-library-and-packages.html#cb259-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the 2 packages at once</span></span>
-<span id="cb259-2"><a href="exercise-7-library-and-packages.html#cb259-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs=</span><span class="fu">c</span>(<span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;WriteXLS&quot;</span>))</span>
-<span id="cb259-3"><a href="exercise-7-library-and-packages.html#cb259-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in the environment (one by one)</span></span>
-<span id="cb259-4"><a href="exercise-7-library-and-packages.html#cb259-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb259-5"><a href="exercise-7-library-and-packages.html#cb259-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;WriteXLS&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="exercise-7-library-and-packages.html#cb256-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the 2 packages at once</span></span>
+<span id="cb256-2"><a href="exercise-7-library-and-packages.html#cb256-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs=</span><span class="fu">c</span>(<span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;WriteXLS&quot;</span>))</span>
+<span id="cb256-3"><a href="exercise-7-library-and-packages.html#cb256-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in the environment (one by one)</span></span>
+<span id="cb256-4"><a href="exercise-7-library-and-packages.html#cb256-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb256-5"><a href="exercise-7-library-and-packages.html#cb256-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;WriteXLS&quot;</span>)</span></code></pre></div>
 <p>Check with sessionInfo() that the packages were loaded.</p>
 </details>
 <p><strong>2- ggplot2 loads automatically the diamonds dataset in the working environment: you can use it as an object after ggplot2 is loaded.</strong></p>
@@ -349,10 +349,10 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="exercise-7-library-and-packages.html#cb260-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dimensions of diamonds</span></span>
-<span id="cb260-2"><a href="exercise-7-library-and-packages.html#cb260-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(diamonds)</span>
-<span id="cb260-3"><a href="exercise-7-library-and-packages.html#cb260-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Column names of diamonds</span></span>
-<span id="cb260-4"><a href="exercise-7-library-and-packages.html#cb260-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(diamonds)</span></code></pre></div>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="exercise-7-library-and-packages.html#cb257-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dimensions of diamonds</span></span>
+<span id="cb257-2"><a href="exercise-7-library-and-packages.html#cb257-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(diamonds)</span>
+<span id="cb257-3"><a href="exercise-7-library-and-packages.html#cb257-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Column names of diamonds</span></span>
+<span id="cb257-4"><a href="exercise-7-library-and-packages.html#cb257-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(diamonds)</span></code></pre></div>
 </details>
 <p>You can read the help page of the diamonds dataset to understand what it contains!<br></p>
 <p>Note: diamonds is a data frame: you can test it with is.data.frame(diamonds) (returns TRUE).</p>
@@ -361,26 +361,26 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="exercise-7-library-and-packages.html#cb261-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select columns</span></span>
-<span id="cb261-2"><a href="exercise-7-library-and-packages.html#cb261-2" aria-hidden="true" tabindex="-1"></a>diams1 <span class="ot">&lt;-</span> diamonds[,<span class="fu">c</span>(<span class="st">&quot;carat&quot;</span>, <span class="st">&quot;cut&quot;</span>, <span class="st">&quot;color&quot;</span>, <span class="st">&quot;price&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="exercise-7-library-and-packages.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select columns</span></span>
+<span id="cb258-2"><a href="exercise-7-library-and-packages.html#cb258-2" aria-hidden="true" tabindex="-1"></a>diams1 <span class="ot">&lt;-</span> diamonds[,<span class="fu">c</span>(<span class="st">&quot;carat&quot;</span>, <span class="st">&quot;cut&quot;</span>, <span class="st">&quot;color&quot;</span>, <span class="st">&quot;price&quot;</span>)]</span></code></pre></div>
 </details>
 <p><strong>4- Install and load the package dplyr from the Console.</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="exercise-7-library-and-packages.html#cb262-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install package</span></span>
-<span id="cb262-2"><a href="exercise-7-library-and-packages.html#cb262-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs=</span><span class="st">&quot;dplyr&quot;</span>)</span>
-<span id="cb262-3"><a href="exercise-7-library-and-packages.html#cb262-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load package</span></span>
-<span id="cb262-4"><a href="exercise-7-library-and-packages.html#cb262-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="exercise-7-library-and-packages.html#cb259-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install package</span></span>
+<span id="cb259-2"><a href="exercise-7-library-and-packages.html#cb259-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs=</span><span class="st">&quot;dplyr&quot;</span>)</span>
+<span id="cb259-3"><a href="exercise-7-library-and-packages.html#cb259-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load package</span></span>
+<span id="cb259-4"><a href="exercise-7-library-and-packages.html#cb259-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>5- Use the function “sample_n” from the dplyr package to randomly sample 200 lines of diams1: save in diams object.</strong></p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="exercise-7-library-and-packages.html#cb263-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset data frame</span></span>
-<span id="cb263-2"><a href="exercise-7-library-and-packages.html#cb263-2" aria-hidden="true" tabindex="-1"></a>diams <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(<span class="at">tbl=</span>diams1, <span class="at">size=</span><span class="dv">200</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="exercise-7-library-and-packages.html#cb260-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset data frame</span></span>
+<span id="cb260-2"><a href="exercise-7-library-and-packages.html#cb260-2" aria-hidden="true" tabindex="-1"></a>diams <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(<span class="at">tbl=</span>diams1, <span class="at">size=</span><span class="dv">200</span>)</span></code></pre></div>
 </details>
 <p><strong>6- Save diams into 2 files (different file formats):</strong></p>
 <ul>
@@ -392,19 +392,19 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="exercise-7-library-and-packages.html#cb264-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a text file with write.table</span></span>
-<span id="cb264-2"><a href="exercise-7-library-and-packages.html#cb264-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>diams, </span>
-<span id="cb264-3"><a href="exercise-7-library-and-packages.html#cb264-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;diamonds200.txt&quot;</span>,</span>
-<span id="cb264-4"><a href="exercise-7-library-and-packages.html#cb264-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">row.names=</span><span class="cn">FALSE</span>,</span>
-<span id="cb264-5"><a href="exercise-7-library-and-packages.html#cb264-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">quote=</span><span class="cn">FALSE</span>,</span>
-<span id="cb264-6"><a href="exercise-7-library-and-packages.html#cb264-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>)</span>
-<span id="cb264-7"><a href="exercise-7-library-and-packages.html#cb264-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Write an Excel file with WriteXLS</span></span>
-<span id="cb264-8"><a href="exercise-7-library-and-packages.html#cb264-8" aria-hidden="true" tabindex="-1"></a><span class="fu">WriteXLS</span>(<span class="at">x=</span>diams, </span>
-<span id="cb264-9"><a href="exercise-7-library-and-packages.html#cb264-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">ExcelFileName=</span><span class="st">&quot;diamonds200.xls&quot;</span>, </span>
-<span id="cb264-10"><a href="exercise-7-library-and-packages.html#cb264-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.names=</span><span class="cn">FALSE</span>, </span>
-<span id="cb264-11"><a href="exercise-7-library-and-packages.html#cb264-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names=</span><span class="cn">TRUE</span>, </span>
-<span id="cb264-12"><a href="exercise-7-library-and-packages.html#cb264-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">FreezeRow=</span><span class="dv">1</span>, </span>
-<span id="cb264-13"><a href="exercise-7-library-and-packages.html#cb264-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">BoldHeaderRow=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="exercise-7-library-and-packages.html#cb261-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a text file with write.table</span></span>
+<span id="cb261-2"><a href="exercise-7-library-and-packages.html#cb261-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>diams, </span>
+<span id="cb261-3"><a href="exercise-7-library-and-packages.html#cb261-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;diamonds200.txt&quot;</span>,</span>
+<span id="cb261-4"><a href="exercise-7-library-and-packages.html#cb261-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">row.names=</span><span class="cn">FALSE</span>,</span>
+<span id="cb261-5"><a href="exercise-7-library-and-packages.html#cb261-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">quote=</span><span class="cn">FALSE</span>,</span>
+<span id="cb261-6"><a href="exercise-7-library-and-packages.html#cb261-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>)</span>
+<span id="cb261-7"><a href="exercise-7-library-and-packages.html#cb261-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Write an Excel file with WriteXLS</span></span>
+<span id="cb261-8"><a href="exercise-7-library-and-packages.html#cb261-8" aria-hidden="true" tabindex="-1"></a><span class="fu">WriteXLS</span>(<span class="at">x=</span>diams, </span>
+<span id="cb261-9"><a href="exercise-7-library-and-packages.html#cb261-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">ExcelFileName=</span><span class="st">&quot;diamonds200.xls&quot;</span>, </span>
+<span id="cb261-10"><a href="exercise-7-library-and-packages.html#cb261-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.names=</span><span class="cn">FALSE</span>, </span>
+<span id="cb261-11"><a href="exercise-7-library-and-packages.html#cb261-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names=</span><span class="cn">TRUE</span>, </span>
+<span id="cb261-12"><a href="exercise-7-library-and-packages.html#cb261-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">FreezeRow=</span><span class="dv">1</span>, </span>
+<span id="cb261-13"><a href="exercise-7-library-and-packages.html#cb261-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">BoldHeaderRow=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 </details>
 
 </div>

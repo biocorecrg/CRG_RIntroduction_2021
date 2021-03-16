@@ -334,26 +334,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>From vectors with the <strong>rbind</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="matrices.html#cb170-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">44</span>)</span>
-<span id="cb170-2"><a href="matrices.html#cb170-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">12</span>)</span>
-<span id="cb170-3"><a href="matrices.html#cb170-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">34</span>, <span class="dv">4</span>)</span>
-<span id="cb170-4"><a href="matrices.html#cb170-4" aria-hidden="true" tabindex="-1"></a><span class="co"># rbind: bind rows</span></span>
-<span id="cb170-5"><a href="matrices.html#cb170-5" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, y, z)</span></code></pre></div>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="matrices.html#cb174-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">44</span>)</span>
+<span id="cb174-2"><a href="matrices.html#cb174-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">12</span>)</span>
+<span id="cb174-3"><a href="matrices.html#cb174-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">34</span>, <span class="dv">4</span>)</span>
+<span id="cb174-4"><a href="matrices.html#cb174-4" aria-hidden="true" tabindex="-1"></a><span class="co"># rbind: bind rows</span></span>
+<span id="cb174-5"><a href="matrices.html#cb174-5" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">rbind</span>(x, y, z)</span></code></pre></div>
 <ul>
 <li>From vectors with the <strong>cbind</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="matrices.html#cb171-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>)</span>
-<span id="cb171-2"><a href="matrices.html#cb171-2" aria-hidden="true" tabindex="-1"></a>j <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>)</span>
-<span id="cb171-3"><a href="matrices.html#cb171-3" aria-hidden="true" tabindex="-1"></a><span class="co"># cbind: bind columns</span></span>
-<span id="cb171-4"><a href="matrices.html#cb171-4" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">cbind</span>(i, j)</span></code></pre></div>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="matrices.html#cb175-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>)</span>
+<span id="cb175-2"><a href="matrices.html#cb175-2" aria-hidden="true" tabindex="-1"></a>j <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>)</span>
+<span id="cb175-3"><a href="matrices.html#cb175-3" aria-hidden="true" tabindex="-1"></a><span class="co"># cbind: bind columns</span></span>
+<span id="cb175-4"><a href="matrices.html#cb175-4" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">cbind</span>(i, j)</span></code></pre></div>
 <ul>
 <li>From scratch with the <em>matrix</em> function:</li>
 </ul>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="matrices.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nrow: number of rows</span></span>
-<span id="cb172-2"><a href="matrices.html#cb172-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ncol: number of columns</span></span>
-<span id="cb172-3"><a href="matrices.html#cb172-3" aria-hidden="true" tabindex="-1"></a>pp <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
-<span id="cb172-4"><a href="matrices.html#cb172-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">3</span>,</span>
-<span id="cb172-5"><a href="matrices.html#cb172-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="matrices.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nrow: number of rows</span></span>
+<span id="cb176-2"><a href="matrices.html#cb176-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ncol: number of columns</span></span>
+<span id="cb176-3"><a href="matrices.html#cb176-3" aria-hidden="true" tabindex="-1"></a>pp <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
+<span id="cb176-4"><a href="matrices.html#cb176-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">3</span>,</span>
+<span id="cb176-5"><a href="matrices.html#cb176-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
 </div>
 <div id="two-dimensional-object" class="section level3" number="9.5.2">
 <h3><span class="header-section-number">9.5.2</span> Two-dimensional object</h3>
@@ -371,26 +371,26 @@ Matrices have <strong>two indices (2-dimensions)</strong> per element, correspon
 <ul>
 <li>Add 1 to all elements of a matrix</li>
 </ul>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="matrices.html#cb173-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> b <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="matrices.html#cb177-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> b <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
 <ul>
 <li>Multiply by 3 all elements of a matrix</li>
 </ul>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="matrices.html#cb174-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> b <span class="sc">*</span> <span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="matrices.html#cb178-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> b <span class="sc">*</span> <span class="dv">3</span></span></code></pre></div>
 <ul>
 <li>Subtract 2 to each element of <strong>the first row</strong> of a matrix</li>
 </ul>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="matrices.html#cb175-1" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">1</span>, ] <span class="ot">&lt;-</span> b[<span class="dv">1</span>, ] <span class="sc">-</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="matrices.html#cb179-1" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">1</span>, ] <span class="ot">&lt;-</span> b[<span class="dv">1</span>, ] <span class="sc">-</span> <span class="dv">2</span></span></code></pre></div>
 <ul>
 <li>Replace elements that comply a condition:</li>
 </ul>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="matrices.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace all elements that are greater than 3 with NA</span></span>
-<span id="cb176-2"><a href="matrices.html#cb176-2" aria-hidden="true" tabindex="-1"></a>b[ b <span class="sc">&gt;</span> <span class="dv">3</span> ] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="matrices.html#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace all elements that are greater than 3 with NA</span></span>
+<span id="cb180-2"><a href="matrices.html#cb180-2" aria-hidden="true" tabindex="-1"></a>b[ b <span class="sc">&gt;</span> <span class="dv">3</span> ] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
 <p><strong>HANDS-ON</strong></p>
 <ol style="list-style-type: decimal">
 <li>Create a matrix, using the 2 following vectors <strong>vv1</strong> and <strong>vv2</strong> as columns:</li>
 </ol>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="matrices.html#cb177-1" aria-hidden="true" tabindex="-1"></a>vv1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">21</span>, <span class="dv">54</span>, <span class="dv">65</span>, <span class="dv">25</span>, <span class="dv">44</span>)</span>
-<span id="cb177-2"><a href="matrices.html#cb177-2" aria-hidden="true" tabindex="-1"></a>vv2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="matrices.html#cb181-1" aria-hidden="true" tabindex="-1"></a>vv1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">21</span>, <span class="dv">54</span>, <span class="dv">65</span>, <span class="dv">25</span>, <span class="dv">44</span>)</span>
+<span id="cb181-2"><a href="matrices.html#cb181-2" aria-hidden="true" tabindex="-1"></a>vv2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code></pre></div>
 <p>Save the matrix in the object <strong>mm1</strong>.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Add <strong>2</strong> to each element of <strong>mm1</strong>.</li>

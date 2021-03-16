@@ -640,6 +640,17 @@ Logical operators
 <span id="cb101-2"><a href="vectors.html#cb101-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">10</span></span>
 <span id="cb101-3"><a href="vectors.html#cb101-3" aria-hidden="true" tabindex="-1"></a>a[a <span class="sc">%in%</span> b]</span></code></pre></div>
 <pre><code>## [1] 4 5 6</code></pre>
+<ul>
+<li>Intersection:</li>
+</ul>
+<p>Retrieve the intersection of 2 vectors:</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="vectors.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">intersect</span>(a, b)</span></code></pre></div>
+<pre><code>## [1] 4 5 6</code></pre>
+<ul>
+<li>Check if 2 vectors are exactly identical</li>
+</ul>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="vectors.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(a, b)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
 </div>
 </div>
 <div id="character-vector-manipulation" class="section level3" number="9.1.5">
@@ -648,19 +659,19 @@ Logical operators
 <ul>
 <li>The <strong>%in%</strong> operator:</li>
 </ul>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="vectors.html#cb103-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;snoRNA&quot;</span>, <span class="st">&quot;RNA&quot;</span>, <span class="st">&quot;lincRNA&quot;</span>)</span>
-<span id="cb103-2"><a href="vectors.html#cb103-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>,<span class="st">&quot;lincRNA&quot;</span>, <span class="st">&quot;tRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>)</span>
-<span id="cb103-3"><a href="vectors.html#cb103-3" aria-hidden="true" tabindex="-1"></a>k <span class="sc">%in%</span> p</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="vectors.html#cb107-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;snoRNA&quot;</span>, <span class="st">&quot;RNA&quot;</span>, <span class="st">&quot;lincRNA&quot;</span>)</span>
+<span id="cb107-2"><a href="vectors.html#cb107-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mRNA&quot;</span>,<span class="st">&quot;lincRNA&quot;</span>, <span class="st">&quot;tRNA&quot;</span>, <span class="st">&quot;miRNA&quot;</span>)</span>
+<span id="cb107-3"><a href="vectors.html#cb107-3" aria-hidden="true" tabindex="-1"></a>k <span class="sc">%in%</span> p</span></code></pre></div>
 <pre><code>## [1]  TRUE  TRUE FALSE FALSE  TRUE</code></pre>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="vectors.html#cb105-1" aria-hidden="true" tabindex="-1"></a>k[k <span class="sc">%in%</span> p]</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="vectors.html#cb109-1" aria-hidden="true" tabindex="-1"></a>k[k <span class="sc">%in%</span> p]</span></code></pre></div>
 <pre><code>## [1] &quot;mRNA&quot;    &quot;miRNA&quot;   &quot;lincRNA&quot;</code></pre>
 <ul>
 <li>Select elements from vector <strong>m</strong> that are not <em>exon</em></li>
 </ul>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="vectors.html#cb107-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;exon&quot;</span>, <span class="st">&quot;intron&quot;</span>, <span class="st">&quot;exon&quot;</span>)</span>
-<span id="cb107-2"><a href="vectors.html#cb107-2" aria-hidden="true" tabindex="-1"></a>m <span class="sc">!=</span> <span class="st">&quot;exon&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="vectors.html#cb111-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;exon&quot;</span>, <span class="st">&quot;intron&quot;</span>, <span class="st">&quot;exon&quot;</span>)</span>
+<span id="cb111-2"><a href="vectors.html#cb111-2" aria-hidden="true" tabindex="-1"></a>m <span class="sc">!=</span> <span class="st">&quot;exon&quot;</span></span></code></pre></div>
 <pre><code>## [1] FALSE  TRUE FALSE</code></pre>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="vectors.html#cb109-1" aria-hidden="true" tabindex="-1"></a>m[m <span class="sc">!=</span> <span class="st">&quot;exon&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="vectors.html#cb113-1" aria-hidden="true" tabindex="-1"></a>m[m <span class="sc">!=</span> <span class="st">&quot;exon&quot;</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;intron&quot;</code></pre>
 
 </div>

@@ -324,16 +324,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Read in a file into a data frame with the <strong>read.table</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="on-data-frames-or-matrices.html#cb229-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="on-data-frames-or-matrices.html#cb226-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
 <p>You can convert it as a matrix, if needed, with:</p>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="on-data-frames-or-matrices.html#cb230-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="on-data-frames-or-matrices.html#cb227-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>))</span></code></pre></div>
 <p>Useful arguments:</p>
 <p><a href="https://biocorecrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/readtable.png" width="550/"></a></p>
 <ul>
 <li>Write a data frame or matrix to a file:</li>
 </ul>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="on-data-frames-or-matrices.html#cb231-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>a,</span>
-<span id="cb231-2"><a href="on-data-frames-or-matrices.html#cb231-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="on-data-frames-or-matrices.html#cb228-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>a,</span>
+<span id="cb228-2"><a href="on-data-frames-or-matrices.html#cb228-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
 <p>Useful arguments:</p>
 <p><a href="https://biocorecrg.github.io/CRG_RIntroduction/images/writetable.png"><img src="images/writetable.png" width="550/"></a></p>
 <ul>

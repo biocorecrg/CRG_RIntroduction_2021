@@ -325,12 +325,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Simple scatter plot</li>
 </ul>
-<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="scatter-plots.html#cb326-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create 2 vectors</span></span>
-<span id="cb326-2"><a href="scatter-plots.html#cb326-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb326-3"><a href="scatter-plots.html#cb326-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb326-4"><a href="scatter-plots.html#cb326-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb326-5"><a href="scatter-plots.html#cb326-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot x against y</span></span>
-<span id="cb326-6"><a href="scatter-plots.html#cb326-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="scatter-plots.html#cb323-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create 2 vectors</span></span>
+<span id="cb323-2"><a href="scatter-plots.html#cb323-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb323-3"><a href="scatter-plots.html#cb323-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb323-4"><a href="scatter-plots.html#cb323-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb323-5"><a href="scatter-plots.html#cb323-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot x against y</span></span>
+<span id="cb323-6"><a href="scatter-plots.html#cb323-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
 <p><img src="images/plots/scatter1.png" width="450"/></p>
 <p><em>Note that if one vector only is given as an input, it will be plotted against the indices of each element</em></p>
 <ul>
@@ -342,21 +342,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>main: title of the plot</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="scatter-plots.html#cb327-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, </span>
-<span id="cb327-2"><a href="scatter-plots.html#cb327-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="st">&quot;red&quot;</span>, </span>
-<span id="cb327-3"><a href="scatter-plots.html#cb327-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">pch=</span><span class="dv">2</span>, </span>
-<span id="cb327-4"><a href="scatter-plots.html#cb327-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">type=</span><span class="st">&quot;b&quot;</span>, </span>
-<span id="cb327-5"><a href="scatter-plots.html#cb327-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;a pretty scatter plot&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb324-1"><a href="scatter-plots.html#cb324-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, </span>
+<span id="cb324-2"><a href="scatter-plots.html#cb324-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="st">&quot;red&quot;</span>, </span>
+<span id="cb324-3"><a href="scatter-plots.html#cb324-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">pch=</span><span class="dv">2</span>, </span>
+<span id="cb324-4"><a href="scatter-plots.html#cb324-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">type=</span><span class="st">&quot;b&quot;</span>, </span>
+<span id="cb324-5"><a href="scatter-plots.html#cb324-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;a pretty scatter plot&quot;</span>)</span></code></pre></div>
 <p><img src="images/plots/scatter2.png" width="450"/></p>
 <ul>
 <li>You can play a bit:</li>
 </ul>
-<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="scatter-plots.html#cb328-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, </span>
-<span id="cb328-2"><a href="scatter-plots.html#cb328-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
-<span id="cb328-3"><a href="scatter-plots.html#cb328-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">pch=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
-<span id="cb328-4"><a href="scatter-plots.html#cb328-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
-<span id="cb328-5"><a href="scatter-plots.html#cb328-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">type=</span><span class="st">&quot;b&quot;</span>, </span>
-<span id="cb328-6"><a href="scatter-plots.html#cb328-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;an even prettier scatter plot&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="scatter-plots.html#cb325-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, </span>
+<span id="cb325-2"><a href="scatter-plots.html#cb325-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
+<span id="cb325-3"><a href="scatter-plots.html#cb325-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">pch=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
+<span id="cb325-4"><a href="scatter-plots.html#cb325-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
+<span id="cb325-5"><a href="scatter-plots.html#cb325-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">type=</span><span class="st">&quot;b&quot;</span>, </span>
+<span id="cb325-6"><a href="scatter-plots.html#cb325-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;an even prettier scatter plot&quot;</span>)</span></code></pre></div>
 <p><img src="images/plots/scatter3.png" width="450"/></p>
 <h4>
 Different type of points that you can use:
@@ -368,25 +368,25 @@ About colors
 <ul>
 <li>Color codes 1 to 8 are taken from the <strong>palette()</strong> function and respectively code for: “black,” “red,” “green3,” “blue,” “cyan,” “magenta,” “yellow,” “gray.”</li>
 </ul>
-<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="scatter-plots.html#cb329-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see the 8-color palette:</span></span>
-<span id="cb329-2"><a href="scatter-plots.html#cb329-2" aria-hidden="true" tabindex="-1"></a><span class="fu">palette</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="scatter-plots.html#cb326-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see the 8-color palette:</span></span>
+<span id="cb326-2"><a href="scatter-plots.html#cb326-2" aria-hidden="true" tabindex="-1"></a><span class="fu">palette</span>()</span></code></pre></div>
 <ul>
 <li>There is a larger set of build-in colors that you can use:</li>
 </ul>
-<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="scatter-plots.html#cb330-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see all 657 possible build-in colors:</span></span>
-<span id="cb330-2"><a href="scatter-plots.html#cb330-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colors</span>()</span>
-<span id="cb330-3"><a href="scatter-plots.html#cb330-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb330-4"><a href="scatter-plots.html#cb330-4" aria-hidden="true" tabindex="-1"></a><span class="co"># looking for blue only? You can pick from 66 blueish options:</span></span>
-<span id="cb330-5"><a href="scatter-plots.html#cb330-5" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="st">&quot;blue&quot;</span>, <span class="fu">colors</span>(), <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="scatter-plots.html#cb327-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see all 657 possible build-in colors:</span></span>
+<span id="cb327-2"><a href="scatter-plots.html#cb327-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colors</span>()</span>
+<span id="cb327-3"><a href="scatter-plots.html#cb327-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb327-4"><a href="scatter-plots.html#cb327-4" aria-hidden="true" tabindex="-1"></a><span class="co"># looking for blue only? You can pick from 66 blueish options:</span></span>
+<span id="cb327-5"><a href="scatter-plots.html#cb327-5" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="st">&quot;blue&quot;</span>, <span class="fu">colors</span>(), <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <p>You can also find them <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">here</a>.</p>
 <ul>
 <li>change the default palette with one of your choice:</li>
 </ul>
-<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="scatter-plots.html#cb331-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette</span>(<span class="fu">grep</span>(<span class="st">&quot;blue&quot;</span>, <span class="fu">colors</span>(), <span class="at">value=</span><span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="scatter-plots.html#cb328-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette</span>(<span class="fu">grep</span>(<span class="st">&quot;blue&quot;</span>, <span class="fu">colors</span>(), <span class="at">value=</span><span class="cn">TRUE</span>))</span></code></pre></div>
 <ul>
 <li>change the palette back to default</li>
 </ul>
-<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb332-1"><a href="scatter-plots.html#cb332-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette</span>(<span class="st">&quot;default&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="scatter-plots.html#cb329-1" aria-hidden="true" tabindex="-1"></a><span class="fu">palette</span>(<span class="st">&quot;default&quot;</span>)</span></code></pre></div>
 </div>
             </section>
 

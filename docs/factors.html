@@ -326,32 +326,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Factors are mainly used for <strong>statistical modeling</strong>, and can also be useful for graphing.</p></li>
 <li><p>You can create factors with the <strong>factor</strong> function, for example:</p></li>
 </ul>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="factors.html#cb163-1" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
-<span id="cb163-2"><a href="factors.html#cb163-2" aria-hidden="true" tabindex="-1"></a><span class="co"># check the structure of e</span></span>
-<span id="cb163-3"><a href="factors.html#cb163-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(e)</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="factors.html#cb167-1" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
+<span id="cb167-2"><a href="factors.html#cb167-2" aria-hidden="true" tabindex="-1"></a><span class="co"># check the structure of e</span></span>
+<span id="cb167-3"><a href="factors.html#cb167-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(e)</span></code></pre></div>
 <pre><code>##  Factor w/ 3 levels &quot;high&quot;,&quot;low&quot;,&quot;medium&quot;: 1 2 3 2</code></pre>
 <ul>
 <li>Example of a character vector versus a factor</li>
 </ul>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="factors.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="co"># factor</span></span>
-<span id="cb165-2"><a href="factors.html#cb165-2" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
-<span id="cb165-3"><a href="factors.html#cb165-3" aria-hidden="true" tabindex="-1"></a><span class="co"># character vector</span></span>
-<span id="cb165-4"><a href="factors.html#cb165-4" aria-hidden="true" tabindex="-1"></a>e2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>)</span>
-<span id="cb165-5"><a href="factors.html#cb165-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the structure of both objects</span></span>
-<span id="cb165-6"><a href="factors.html#cb165-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(e)</span></code></pre></div>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="factors.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="co"># factor</span></span>
+<span id="cb169-2"><a href="factors.html#cb169-2" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
+<span id="cb169-3"><a href="factors.html#cb169-3" aria-hidden="true" tabindex="-1"></a><span class="co"># character vector</span></span>
+<span id="cb169-4"><a href="factors.html#cb169-4" aria-hidden="true" tabindex="-1"></a>e2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>)</span>
+<span id="cb169-5"><a href="factors.html#cb169-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the structure of both objects</span></span>
+<span id="cb169-6"><a href="factors.html#cb169-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(e)</span></code></pre></div>
 <pre><code>##  Factor w/ 3 levels &quot;high&quot;,&quot;low&quot;,&quot;medium&quot;: 1 2 3 2</code></pre>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="factors.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(e2)</span></code></pre></div>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="factors.html#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(e2)</span></code></pre></div>
 <pre><code>##  chr [1:4] &quot;high&quot; &quot;low&quot; &quot;medium&quot; &quot;low&quot;</code></pre>
 <ul>
 <li>Groups in factors are called <strong>levels</strong>.<br>
 Levels can be <strong>ordered</strong>. Then, some operations applied on numeric vectors can be used:</li>
 </ul>
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="factors.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="co"># unordered factor:</span></span>
-<span id="cb169-2"><a href="factors.html#cb169-2" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
-<span id="cb169-3"><a href="factors.html#cb169-3" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(e) <span class="co"># throws an error</span></span>
-<span id="cb169-4"><a href="factors.html#cb169-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ordered factor</span></span>
-<span id="cb169-5"><a href="factors.html#cb169-5" aria-hidden="true" tabindex="-1"></a>e_ord <span class="ot">&lt;-</span> <span class="fu">factor</span>(e, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;high&quot;</span>), <span class="at">ordered=</span><span class="cn">TRUE</span>)</span>
-<span id="cb169-6"><a href="factors.html#cb169-6" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(e_ord) <span class="co"># outputs &quot;high&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="factors.html#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="co"># unordered factor:</span></span>
+<span id="cb173-2"><a href="factors.html#cb173-2" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;high&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;low&quot;</span>))</span>
+<span id="cb173-3"><a href="factors.html#cb173-3" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(e) <span class="co"># throws an error</span></span>
+<span id="cb173-4"><a href="factors.html#cb173-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ordered factor</span></span>
+<span id="cb173-5"><a href="factors.html#cb173-5" aria-hidden="true" tabindex="-1"></a>e_ord <span class="ot">&lt;-</span> <span class="fu">factor</span>(e, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;low&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;high&quot;</span>), <span class="at">ordered=</span><span class="cn">TRUE</span>)</span>
+<span id="cb173-6"><a href="factors.html#cb173-6" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(e_ord) <span class="co"># outputs &quot;high&quot;</span></span></code></pre></div>
 
 </div>
             </section>

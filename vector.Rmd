@@ -272,6 +272,19 @@ b <- 4:10
 a[a %in% b]
 ```
 
+* Intersection:
+
+Retrieve the intersection of 2 vectors:
+
+```{r}
+intersect(a, b)
+```
+* Check if 2 vectors are exactly identical
+
+```{r}
+identical(a, b)
+```
+
 ### Character vector manipulation
 
 Character vectors are manipulated similarly to numeric ones.

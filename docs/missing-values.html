@@ -325,35 +325,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Finding missing values in a vector</li>
 </ul>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="missing-values.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create vector</span></span>
-<span id="cb221-2"><a href="missing-values.html#cb221-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="cn">NA</span>)</span>
-<span id="cb221-3"><a href="missing-values.html#cb221-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb221-4"><a href="missing-values.html#cb221-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Find missing values in vector:</span></span>
-<span id="cb221-5"><a href="missing-values.html#cb221-5" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(x)</span>
-<span id="cb221-6"><a href="missing-values.html#cb221-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb221-7"><a href="missing-values.html#cb221-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove missing values</span></span>
-<span id="cb221-8"><a href="missing-values.html#cb221-8" aria-hidden="true" tabindex="-1"></a><span class="fu">na.omit</span>(x)</span>
-<span id="cb221-9"><a href="missing-values.html#cb221-9" aria-hidden="true" tabindex="-1"></a>x[ <span class="sc">!</span><span class="fu">is.na</span>(x) ]</span></code></pre></div>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="missing-values.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create vector</span></span>
+<span id="cb218-2"><a href="missing-values.html#cb218-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="cn">NA</span>)</span>
+<span id="cb218-3"><a href="missing-values.html#cb218-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb218-4"><a href="missing-values.html#cb218-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Find missing values in vector:</span></span>
+<span id="cb218-5"><a href="missing-values.html#cb218-5" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(x)</span>
+<span id="cb218-6"><a href="missing-values.html#cb218-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb218-7"><a href="missing-values.html#cb218-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove missing values</span></span>
+<span id="cb218-8"><a href="missing-values.html#cb218-8" aria-hidden="true" tabindex="-1"></a><span class="fu">na.omit</span>(x)</span>
+<span id="cb218-9"><a href="missing-values.html#cb218-9" aria-hidden="true" tabindex="-1"></a>x[ <span class="sc">!</span><span class="fu">is.na</span>(x) ]</span></code></pre></div>
 <ul>
 <li>Some functions can deal with NAs, either by default, or with specific arguments:</li>
 </ul>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="missing-values.html#cb222-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="cn">NA</span>)</span>
-<span id="cb222-2"><a href="missing-values.html#cb222-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb222-3"><a href="missing-values.html#cb222-3" aria-hidden="true" tabindex="-1"></a><span class="co"># default arguments</span></span>
-<span id="cb222-4"><a href="missing-values.html#cb222-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span>
-<span id="cb222-5"><a href="missing-values.html#cb222-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb222-6"><a href="missing-values.html#cb222-6" aria-hidden="true" tabindex="-1"></a><span class="co"># set na.rm=TRUE</span></span>
-<span id="cb222-7"><a href="missing-values.html#cb222-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="missing-values.html#cb219-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="cn">NA</span>)</span>
+<span id="cb219-2"><a href="missing-values.html#cb219-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb219-3"><a href="missing-values.html#cb219-3" aria-hidden="true" tabindex="-1"></a><span class="co"># default arguments</span></span>
+<span id="cb219-4"><a href="missing-values.html#cb219-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span>
+<span id="cb219-5"><a href="missing-values.html#cb219-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb219-6"><a href="missing-values.html#cb219-6" aria-hidden="true" tabindex="-1"></a><span class="co"># set na.rm=TRUE</span></span>
+<span id="cb219-7"><a href="missing-values.html#cb219-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <ul>
 <li>In a matrix or a data frame, keep only rows where there are no NA values:</li>
 </ul>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="missing-values.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create matrix with some NA values</span></span>
-<span id="cb223-2"><a href="missing-values.html#cb223-2" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="cn">NA</span>, <span class="dv">12</span><span class="sc">:</span><span class="dv">2</span>, <span class="cn">NA</span>, <span class="dv">15</span><span class="sc">:</span><span class="dv">20</span>, <span class="cn">NA</span>), <span class="at">ncol=</span><span class="dv">3</span>)</span>
-<span id="cb223-3"><a href="missing-values.html#cb223-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb223-4"><a href="missing-values.html#cb223-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only rows without NAs</span></span>
-<span id="cb223-5"><a href="missing-values.html#cb223-5" aria-hidden="true" tabindex="-1"></a>mydata[<span class="fu">complete.cases</span>(mydata), ]</span>
-<span id="cb223-6"><a href="missing-values.html#cb223-6" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
-<span id="cb223-7"><a href="missing-values.html#cb223-7" aria-hidden="true" tabindex="-1"></a><span class="fu">na.omit</span>(mydata)</span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="missing-values.html#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create matrix with some NA values</span></span>
+<span id="cb220-2"><a href="missing-values.html#cb220-2" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="cn">NA</span>, <span class="dv">12</span><span class="sc">:</span><span class="dv">2</span>, <span class="cn">NA</span>, <span class="dv">15</span><span class="sc">:</span><span class="dv">20</span>, <span class="cn">NA</span>), <span class="at">ncol=</span><span class="dv">3</span>)</span>
+<span id="cb220-3"><a href="missing-values.html#cb220-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb220-4"><a href="missing-values.html#cb220-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only rows without NAs</span></span>
+<span id="cb220-5"><a href="missing-values.html#cb220-5" aria-hidden="true" tabindex="-1"></a>mydata[<span class="fu">complete.cases</span>(mydata), ]</span>
+<span id="cb220-6"><a href="missing-values.html#cb220-6" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb220-7"><a href="missing-values.html#cb220-7" aria-hidden="true" tabindex="-1"></a><span class="fu">na.omit</span>(mydata)</span></code></pre></div>
 <p><br>
 Check this <a href="https://www.r-bloggers.com/r-null-values-null-na-nan-inf/">R blogger post on missing/null values</a></p>
 

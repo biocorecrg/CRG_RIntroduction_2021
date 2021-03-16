@@ -325,15 +325,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Using our previous vector, build a simple pie chart:</li>
 </ul>
-<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="pie-charts.html#cb338-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector</span></span>
-<span id="cb338-2"><a href="pie-charts.html#cb338-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span>
-<span id="cb338-3"><a href="pie-charts.html#cb338-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb338-4"><a href="pie-charts.html#cb338-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Count number of occurences of each string</span></span>
-<span id="cb338-5"><a href="pie-charts.html#cb338-5" aria-hidden="true" tabindex="-1"></a>mytable <span class="ot">&lt;-</span> <span class="fu">table</span>(x)</span>
-<span id="cb338-6"><a href="pie-charts.html#cb338-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb338-7"><a href="pie-charts.html#cb338-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(mytable,</span>
-<span id="cb338-8"><a href="pie-charts.html#cb338-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;pie chart&quot;</span>,</span>
-<span id="cb338-9"><a href="pie-charts.html#cb338-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;salmon&quot;</span>, <span class="st">&quot;maroon&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb335-1"><a href="pie-charts.html#cb335-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector</span></span>
+<span id="cb335-2"><a href="pie-charts.html#cb335-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span>
+<span id="cb335-3"><a href="pie-charts.html#cb335-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb335-4"><a href="pie-charts.html#cb335-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Count number of occurences of each string</span></span>
+<span id="cb335-5"><a href="pie-charts.html#cb335-5" aria-hidden="true" tabindex="-1"></a>mytable <span class="ot">&lt;-</span> <span class="fu">table</span>(x)</span>
+<span id="cb335-6"><a href="pie-charts.html#cb335-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb335-7"><a href="pie-charts.html#cb335-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(mytable,</span>
+<span id="cb335-8"><a href="pie-charts.html#cb335-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;pie chart&quot;</span>,</span>
+<span id="cb335-9"><a href="pie-charts.html#cb335-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;salmon&quot;</span>, <span class="st">&quot;maroon&quot;</span>))</span></code></pre></div>
 <p><img src="images/plots/pie1.png" width="450"/></p>
 </div>
             </section>
