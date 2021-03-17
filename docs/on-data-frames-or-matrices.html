@@ -228,7 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
-<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -320,16 +320,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Read in a file into a data frame with the <strong>read.table</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="on-data-frames-or-matrices.html#cb239-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="on-data-frames-or-matrices.html#cb240-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
 <p>You can convert it as a matrix, if needed, with:</p>
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="on-data-frames-or-matrices.html#cb240-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="on-data-frames-or-matrices.html#cb241-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">read.table</span>(<span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>))</span></code></pre></div>
 <p>Useful arguments:</p>
 <p><a href="https://biocorecrg.github.io/CRG_RIntroduction_2021/images/readtable.png"><img src="images/readtable.png" width="550/"></a></p>
 <ul>
 <li>Write a data frame or matrix to a file:</li>
 </ul>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="on-data-frames-or-matrices.html#cb241-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>a,</span>
-<span id="cb241-2"><a href="on-data-frames-or-matrices.html#cb241-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="on-data-frames-or-matrices.html#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(<span class="at">x=</span>a,</span>
+<span id="cb242-2"><a href="on-data-frames-or-matrices.html#cb242-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;file.txt&quot;</span>)</span></code></pre></div>
 <p>Useful arguments:</p>
 <p><a href="https://biocorecrg.github.io/CRG_RIntroduction_2021/images/writetable.png"><img src="images/writetable.png" width="550/"></a></p>
 <ul>
@@ -338,12 +338,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><strong>HANDS-ON</strong></p>
 <ol style="list-style-type: decimal">
-<li>Download file <strong>inputB.txt</strong> the following way, using the <strong>download.file</strong> function:</li>
+<li>Download <strong>inputB.txt</strong> the following way, using the <strong>download.file</strong> function:</li>
 </ol>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="on-data-frames-or-matrices.html#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputB.txt&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;inputB.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="on-data-frames-or-matrices.html#cb243-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url=</span><span class="st">&quot;https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputB.txt&quot;</span>,</span>
+<span id="cb243-2"><a href="on-data-frames-or-matrices.html#cb243-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">&quot;inputB.txt&quot;</span>)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
-<li><p>Read in the content of inputB.txt using the <strong>read.table</strong> command; save in object “pop.”
-What are the dimensions of “pop?” What are the column names?</p></li>
+<li><p>Read in the content of <strong>inputB.txt</strong> using the <strong>read.table</strong> command; save in object <strong>pop</strong>.
+What are the dimensions of <strong>pop</strong>? What are the column names?</p></li>
 <li><p>Select all states that are in the “Eurozone.” What is the <strong>total population</strong> of the Eurozone, according to this table?</p></li>
 </ol>
 

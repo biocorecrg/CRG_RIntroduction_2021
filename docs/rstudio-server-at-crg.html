@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="list-functions-from-a-package.html"/>
-<link rel="next" href="exercise-7-library-and-packages.html"/>
+<link rel="next" href="exercise-6-about-module-2.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -228,7 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
-<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -319,12 +319,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">12.7</span> RStudio server at CRG</h2>
 <p>If you can’t install packages (permission issues), you first need to specify a writeable directory to install the packages into.<br></p>
 <p>Follow the steps below:</p>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="rstudio-server-at-crg.html#cb248-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Go to your home directory</span></span>
-<span id="cb248-2"><a href="rstudio-server-at-crg.html#cb248-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>)</span>
-<span id="cb248-3"><a href="rstudio-server-at-crg.html#cb248-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a directory where to store the packages</span></span>
-<span id="cb248-4"><a href="rstudio-server-at-crg.html#cb248-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;R_packages&quot;</span>)</span>
-<span id="cb248-5"><a href="rstudio-server-at-crg.html#cb248-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Add directory location to the library path</span></span>
-<span id="cb248-6"><a href="rstudio-server-at-crg.html#cb248-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.libPaths</span>(<span class="st">&quot;~/R_packages/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="rstudio-server-at-crg.html#cb249-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Go to your home directory</span></span>
+<span id="cb249-2"><a href="rstudio-server-at-crg.html#cb249-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>)</span>
+<span id="cb249-3"><a href="rstudio-server-at-crg.html#cb249-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a directory where to store the packages</span></span>
+<span id="cb249-4"><a href="rstudio-server-at-crg.html#cb249-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;R_packages&quot;</span>)</span>
+<span id="cb249-5"><a href="rstudio-server-at-crg.html#cb249-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Add directory location to the library path</span></span>
+<span id="cb249-6"><a href="rstudio-server-at-crg.html#cb249-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.libPaths</span>(<span class="st">&quot;~/R_packages/&quot;</span>)</span></code></pre></div>
+<p><strong>HANDS-ON</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Install and load package <strong>WriteXLS</strong> (using either the RStudio “Packages” panel, or the console)</p></li>
+<li><p>Create a simple matrix (of your choice) with 6 rows and 4 columns!</p></li>
+<li><p>Write matrix to a file using the <strong>WriteXLS</strong> function (from the package of the same name). Check the help page of the function!</p></li>
+</ol>
 
 </div>
             </section>
@@ -333,7 +339,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="list-functions-from-a-package.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="exercise-7-library-and-packages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-6-about-module-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

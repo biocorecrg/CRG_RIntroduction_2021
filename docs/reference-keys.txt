@@ -50,6 +50,7 @@ dimensions
 manipulation
 examples
 more-useful-commands
+the-apply-function
 exercise-4.-matrix-manipulation
 exercise-5.-data-frame-manipulation
 exercise-5a
@@ -67,7 +68,7 @@ load-a-package
 check-what-packages-are-currently-loaded
 list-functions-from-a-package
 rstudio-server-at-crg
-exercise-7-library-and-packages
+exercise-6-about-module-2
 base-plots-in-r
 scatter-plots
 bar-plots

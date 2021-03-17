@@ -228,7 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
-<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -323,30 +323,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="exercise-10-for-loop.html#cb437-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb437-2"><a href="exercise-10-for-loop.html#cb437-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="exercise-10-for-loop.html#cb440-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb440-2"><a href="exercise-10-for-loop.html#cb440-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>1- Write a for loop that iterates over the sequence of numbers 2 to 10 (both included), and prints the square root of each number (function sqrt()).</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="exercise-10-for-loop.html#cb438-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">10</span>){</span>
-<span id="cb438-2"><a href="exercise-10-for-loop.html#cb438-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">sqrt</span>(i))</span>
-<span id="cb438-3"><a href="exercise-10-for-loop.html#cb438-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb441"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb441-1"><a href="exercise-10-for-loop.html#cb441-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">10</span>){</span>
+<span id="cb441-2"><a href="exercise-10-for-loop.html#cb441-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">sqrt</span>(i))</span>
+<span id="cb441-3"><a href="exercise-10-for-loop.html#cb441-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <p><strong>2- Write a for loop that iterates over the sequence of numbers 5 to 15 (both included), and prints a new vector of 2 elements containing the number and its square root</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb439"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb439-1"><a href="exercise-10-for-loop.html#cb439-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">15</span>){</span>
-<span id="cb439-2"><a href="exercise-10-for-loop.html#cb439-2" aria-hidden="true" tabindex="-1"></a>    veci <span class="ot">&lt;-</span> <span class="fu">c</span>(i, <span class="fu">sqrt</span>(i))</span>
-<span id="cb439-3"><a href="exercise-10-for-loop.html#cb439-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(veci)</span>
-<span id="cb439-4"><a href="exercise-10-for-loop.html#cb439-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="exercise-10-for-loop.html#cb442-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">15</span>){</span>
+<span id="cb442-2"><a href="exercise-10-for-loop.html#cb442-2" aria-hidden="true" tabindex="-1"></a>    veci <span class="ot">&lt;-</span> <span class="fu">c</span>(i, <span class="fu">sqrt</span>(i))</span>
+<span id="cb442-3"><a href="exercise-10-for-loop.html#cb442-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(veci)</span>
+<span id="cb442-4"><a href="exercise-10-for-loop.html#cb442-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <p><strong>3- Create the following matrix</strong></p>
-<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="exercise-10-for-loop.html#cb440-1" aria-hidden="true" tabindex="-1"></a>mat1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">40</span>), <span class="at">nrow=</span><span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb443"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb443-1"><a href="exercise-10-for-loop.html#cb443-1" aria-hidden="true" tabindex="-1"></a>mat1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">40</span>), <span class="at">nrow=</span><span class="dv">20</span>)</span></code></pre></div>
 <ul>
 <li>Write a for loop that iterates over each row of <strong>mat1</strong> and prints the <strong>median value of each row</strong>.</li>
 </ul>
@@ -354,42 +354,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb441"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb441-1"><a href="exercise-10-for-loop.html#cb441-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mat1)){</span>
-<span id="cb441-2"><a href="exercise-10-for-loop.html#cb441-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># extract the row</span></span>
-<span id="cb441-3"><a href="exercise-10-for-loop.html#cb441-3" aria-hidden="true" tabindex="-1"></a>    rowj <span class="ot">&lt;-</span> mat1[j,]</span>
-<span id="cb441-4"><a href="exercise-10-for-loop.html#cb441-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># compute the median</span></span>
-<span id="cb441-5"><a href="exercise-10-for-loop.html#cb441-5" aria-hidden="true" tabindex="-1"></a>    medrowj <span class="ot">&lt;-</span> <span class="fu">median</span>(rowj)</span>
-<span id="cb441-6"><a href="exercise-10-for-loop.html#cb441-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print median value in row</span></span>
-<span id="cb441-7"><a href="exercise-10-for-loop.html#cb441-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(medrowj)</span>
-<span id="cb441-8"><a href="exercise-10-for-loop.html#cb441-8" aria-hidden="true" tabindex="-1"></a>}  </span>
-<span id="cb441-9"><a href="exercise-10-for-loop.html#cb441-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb441-10"><a href="exercise-10-for-loop.html#cb441-10" aria-hidden="true" tabindex="-1"></a><span class="co"># with less lines of code:</span></span>
-<span id="cb441-11"><a href="exercise-10-for-loop.html#cb441-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mat1)){</span>
-<span id="cb441-12"><a href="exercise-10-for-loop.html#cb441-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print median value in row</span></span>
-<span id="cb441-13"><a href="exercise-10-for-loop.html#cb441-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">median</span>(mat1[j,]))</span>
-<span id="cb441-14"><a href="exercise-10-for-loop.html#cb441-14" aria-hidden="true" tabindex="-1"></a>}   </span></code></pre></div>
+<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="exercise-10-for-loop.html#cb444-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mat1)){</span>
+<span id="cb444-2"><a href="exercise-10-for-loop.html#cb444-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># extract the row</span></span>
+<span id="cb444-3"><a href="exercise-10-for-loop.html#cb444-3" aria-hidden="true" tabindex="-1"></a>    rowj <span class="ot">&lt;-</span> mat1[j,]</span>
+<span id="cb444-4"><a href="exercise-10-for-loop.html#cb444-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># compute the median</span></span>
+<span id="cb444-5"><a href="exercise-10-for-loop.html#cb444-5" aria-hidden="true" tabindex="-1"></a>    medrowj <span class="ot">&lt;-</span> <span class="fu">median</span>(rowj)</span>
+<span id="cb444-6"><a href="exercise-10-for-loop.html#cb444-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print median value in row</span></span>
+<span id="cb444-7"><a href="exercise-10-for-loop.html#cb444-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(medrowj)</span>
+<span id="cb444-8"><a href="exercise-10-for-loop.html#cb444-8" aria-hidden="true" tabindex="-1"></a>}  </span>
+<span id="cb444-9"><a href="exercise-10-for-loop.html#cb444-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb444-10"><a href="exercise-10-for-loop.html#cb444-10" aria-hidden="true" tabindex="-1"></a><span class="co"># with less lines of code:</span></span>
+<span id="cb444-11"><a href="exercise-10-for-loop.html#cb444-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mat1)){</span>
+<span id="cb444-12"><a href="exercise-10-for-loop.html#cb444-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print median value in row</span></span>
+<span id="cb444-13"><a href="exercise-10-for-loop.html#cb444-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">median</span>(mat1[j,]))</span>
+<span id="cb444-14"><a href="exercise-10-for-loop.html#cb444-14" aria-hidden="true" tabindex="-1"></a>}   </span></code></pre></div>
 </details>
 <p><strong>2- If statement in for loop</strong></p>
 <p>Create the following matrix:</p>
-<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="exercise-10-for-loop.html#cb442-1" aria-hidden="true" tabindex="-1"></a>mat4 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">34</span>, <span class="dv">1</span>, <span class="cn">NA</span>, <span class="dv">89</span>, <span class="dv">7</span>, <span class="dv">12</span>, <span class="cn">NA</span>, <span class="dv">0</span>, <span class="dv">38</span>),</span>
-<span id="cb442-2"><a href="exercise-10-for-loop.html#cb442-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb445"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb445-1"><a href="exercise-10-for-loop.html#cb445-1" aria-hidden="true" tabindex="-1"></a>mat4 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">34</span>, <span class="dv">1</span>, <span class="cn">NA</span>, <span class="dv">89</span>, <span class="dv">7</span>, <span class="dv">12</span>, <span class="cn">NA</span>, <span class="dv">0</span>, <span class="dv">38</span>),</span>
+<span id="cb445-2"><a href="exercise-10-for-loop.html#cb445-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">5</span>)</span></code></pre></div>
 <p>Write a <strong>for</strong> loop that iterates over each row of <strong>mat4</strong>: <strong>if</strong> an <strong>NA</strong> is found, print the row number and the entire row where the <strong>NA</strong> is found.</p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb443"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb443-1"><a href="exercise-10-for-loop.html#cb443-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mat4)){</span>
-<span id="cb443-2"><a href="exercise-10-for-loop.html#cb443-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># extract row</span></span>
-<span id="cb443-3"><a href="exercise-10-for-loop.html#cb443-3" aria-hidden="true" tabindex="-1"></a>    rowk <span class="ot">&lt;-</span> mat4[k,]</span>
-<span id="cb443-4"><a href="exercise-10-for-loop.html#cb443-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">any</span>(<span class="fu">is.na</span>(rowk))){</span>
-<span id="cb443-5"><a href="exercise-10-for-loop.html#cb443-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(k)</span>
-<span id="cb443-6"><a href="exercise-10-for-loop.html#cb443-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(rowk)</span>
-<span id="cb443-7"><a href="exercise-10-for-loop.html#cb443-7" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb443-8"><a href="exercise-10-for-loop.html#cb443-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="exercise-10-for-loop.html#cb446-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(mat4)){</span>
+<span id="cb446-2"><a href="exercise-10-for-loop.html#cb446-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># extract row</span></span>
+<span id="cb446-3"><a href="exercise-10-for-loop.html#cb446-3" aria-hidden="true" tabindex="-1"></a>    rowk <span class="ot">&lt;-</span> mat4[k,]</span>
+<span id="cb446-4"><a href="exercise-10-for-loop.html#cb446-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">any</span>(<span class="fu">is.na</span>(rowk))){</span>
+<span id="cb446-5"><a href="exercise-10-for-loop.html#cb446-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(k)</span>
+<span id="cb446-6"><a href="exercise-10-for-loop.html#cb446-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(rowk)</span>
+<span id="cb446-7"><a href="exercise-10-for-loop.html#cb446-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb446-8"><a href="exercise-10-for-loop.html#cb446-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <p><strong>3- For loop, if statement and regular expression</strong></p>
 <p>Create vector <strong>vec4</strong> as:</p>
-<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="exercise-10-for-loop.html#cb444-1" aria-hidden="true" tabindex="-1"></a>vec4 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Oct4&quot;</span>, <span class="st">&quot;DEPP&quot;</span>, <span class="st">&quot;RSU1&quot;</span>, <span class="st">&quot;Hk2&quot;</span>, <span class="st">&quot;ZNF37A&quot;</span>, <span class="st">&quot;C1QL1&quot;</span>, <span class="st">&quot;Shh&quot;</span>, <span class="st">&quot;Cdkn2a&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb447"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb447-1"><a href="exercise-10-for-loop.html#cb447-1" aria-hidden="true" tabindex="-1"></a>vec4 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Oct4&quot;</span>, <span class="st">&quot;DEPP&quot;</span>, <span class="st">&quot;RSU1&quot;</span>, <span class="st">&quot;Hk2&quot;</span>, <span class="st">&quot;ZNF37A&quot;</span>, <span class="st">&quot;C1QL1&quot;</span>, <span class="st">&quot;Shh&quot;</span>, <span class="st">&quot;Cdkn2a&quot;</span>)</span></code></pre></div>
 <p><strong>vec4</strong> contains Human and Mouse gene symbols.
 <br></p>
 <p>Loop over each element of <strong>vec4</strong>:</p>
@@ -413,32 +413,32 @@ Tip 3: <em>You can also use grepl: check the help page</em></p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb445"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb445-1"><a href="exercise-10-for-loop.html#cb445-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</span>
-<span id="cb445-2"><a href="exercise-10-for-loop.html#cb445-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">length</span>(<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="at">x=</span>gene)) <span class="sc">!=</span> <span class="dv">0</span>){</span>
-<span id="cb445-3"><a href="exercise-10-for-loop.html#cb445-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</span>
-<span id="cb445-4"><a href="exercise-10-for-loop.html#cb445-4" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">else</span> <span class="cf">if</span>(<span class="fu">length</span>(<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="at">x=</span>gene)) <span class="sc">!=</span> <span class="dv">0</span>){</span>
-<span id="cb445-5"><a href="exercise-10-for-loop.html#cb445-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</span>
-<span id="cb445-6"><a href="exercise-10-for-loop.html#cb445-6" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb445-7"><a href="exercise-10-for-loop.html#cb445-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb445-8"><a href="exercise-10-for-loop.html#cb445-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb445-9"><a href="exercise-10-for-loop.html#cb445-9" aria-hidden="true" tabindex="-1"></a><span class="co"># With grepl</span></span>
-<span id="cb445-10"><a href="exercise-10-for-loop.html#cb445-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># grepl returns a logical vector (match or not for each element of x), not the matching elements themselves.</span></span>
-<span id="cb445-11"><a href="exercise-10-for-loop.html#cb445-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</span>
-<span id="cb445-12"><a href="exercise-10-for-loop.html#cb445-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="at">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="at">x=</span>gene)){</span>
-<span id="cb445-13"><a href="exercise-10-for-loop.html#cb445-13" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</span>
-<span id="cb445-14"><a href="exercise-10-for-loop.html#cb445-14" aria-hidden="true" tabindex="-1"></a>        }<span class="cf">else</span> <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="at">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="at">x=</span>gene)){</span>
-<span id="cb445-15"><a href="exercise-10-for-loop.html#cb445-15" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</span>
-<span id="cb445-16"><a href="exercise-10-for-loop.html#cb445-16" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb445-17"><a href="exercise-10-for-loop.html#cb445-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb445-18"><a href="exercise-10-for-loop.html#cb445-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb445-19"><a href="exercise-10-for-loop.html#cb445-19" aria-hidden="true" tabindex="-1"></a><span class="co"># easier way! whenever a lower case character is present: it is from mouse</span></span>
-<span id="cb445-20"><a href="exercise-10-for-loop.html#cb445-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</span>
-<span id="cb445-21"><a href="exercise-10-for-loop.html#cb445-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="fu">length</span>(<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;[[:lower:]]&quot;</span>, <span class="at">x=</span>gene)) <span class="sc">!=</span> <span class="dv">0</span>){</span>
-<span id="cb445-22"><a href="exercise-10-for-loop.html#cb445-22" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</span>
-<span id="cb445-23"><a href="exercise-10-for-loop.html#cb445-23" aria-hidden="true" tabindex="-1"></a>        }<span class="cf">else</span>{</span>
-<span id="cb445-24"><a href="exercise-10-for-loop.html#cb445-24" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</span>
-<span id="cb445-25"><a href="exercise-10-for-loop.html#cb445-25" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb445-26"><a href="exercise-10-for-loop.html#cb445-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb448-1"><a href="exercise-10-for-loop.html#cb448-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</span>
+<span id="cb448-2"><a href="exercise-10-for-loop.html#cb448-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">length</span>(<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="at">x=</span>gene)) <span class="sc">!=</span> <span class="dv">0</span>){</span>
+<span id="cb448-3"><a href="exercise-10-for-loop.html#cb448-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</span>
+<span id="cb448-4"><a href="exercise-10-for-loop.html#cb448-4" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">else</span> <span class="cf">if</span>(<span class="fu">length</span>(<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="at">x=</span>gene)) <span class="sc">!=</span> <span class="dv">0</span>){</span>
+<span id="cb448-5"><a href="exercise-10-for-loop.html#cb448-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</span>
+<span id="cb448-6"><a href="exercise-10-for-loop.html#cb448-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb448-7"><a href="exercise-10-for-loop.html#cb448-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb448-8"><a href="exercise-10-for-loop.html#cb448-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb448-9"><a href="exercise-10-for-loop.html#cb448-9" aria-hidden="true" tabindex="-1"></a><span class="co"># With grepl</span></span>
+<span id="cb448-10"><a href="exercise-10-for-loop.html#cb448-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># grepl returns a logical vector (match or not for each element of x), not the matching elements themselves.</span></span>
+<span id="cb448-11"><a href="exercise-10-for-loop.html#cb448-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</span>
+<span id="cb448-12"><a href="exercise-10-for-loop.html#cb448-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="at">pattern=</span><span class="st">&quot;^[A-Z0-9]+$&quot;</span>, <span class="at">x=</span>gene)){</span>
+<span id="cb448-13"><a href="exercise-10-for-loop.html#cb448-13" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</span>
+<span id="cb448-14"><a href="exercise-10-for-loop.html#cb448-14" aria-hidden="true" tabindex="-1"></a>        }<span class="cf">else</span> <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="at">pattern=</span><span class="st">&quot;^[A-Z]{1}[a-z0-9]+$&quot;</span>, <span class="at">x=</span>gene)){</span>
+<span id="cb448-15"><a href="exercise-10-for-loop.html#cb448-15" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</span>
+<span id="cb448-16"><a href="exercise-10-for-loop.html#cb448-16" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb448-17"><a href="exercise-10-for-loop.html#cb448-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb448-18"><a href="exercise-10-for-loop.html#cb448-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb448-19"><a href="exercise-10-for-loop.html#cb448-19" aria-hidden="true" tabindex="-1"></a><span class="co"># easier way! whenever a lower case character is present: it is from mouse</span></span>
+<span id="cb448-20"><a href="exercise-10-for-loop.html#cb448-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(gene <span class="cf">in</span> vec4){</span>
+<span id="cb448-21"><a href="exercise-10-for-loop.html#cb448-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="fu">length</span>(<span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;[[:lower:]]&quot;</span>, <span class="at">x=</span>gene)) <span class="sc">!=</span> <span class="dv">0</span>){</span>
+<span id="cb448-22"><a href="exercise-10-for-loop.html#cb448-22" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;mouse gene&quot;</span>))</span>
+<span id="cb448-23"><a href="exercise-10-for-loop.html#cb448-23" aria-hidden="true" tabindex="-1"></a>        }<span class="cf">else</span>{</span>
+<span id="cb448-24"><a href="exercise-10-for-loop.html#cb448-24" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">c</span>(gene, <span class="st">&quot;human gene&quot;</span>))</span>
+<span id="cb448-25"><a href="exercise-10-for-loop.html#cb448-25" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb448-26"><a href="exercise-10-for-loop.html#cb448-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 
 </div>

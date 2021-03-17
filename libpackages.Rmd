@@ -47,9 +47,9 @@ There are different types of Bioconductor packages:
 
 ## Install a package
 
-* With RStudio (please install package **BiocManager**):
+* With RStudio, from the bottom-right panel, "Packages" tab:
 
-<img src="images/bioc_install.png" width="550"/>
+<img src="images/rstudio_installBiocManager_arrow.png" width="550"/>
 
 * From the console:
 ```{r, eval=F}
@@ -67,9 +67,9 @@ BiocManager::install("DESeq2")
 
 ## Load a package
 
-* With RStudio:
+* With RStudio: tick the box.
 
-<img src="images/bioc_load.png" width="450"/>
+<img src="images/rstudio_tick_BiocManager.png" width="450"/>
 
 * From the console:
 ```{r}
@@ -84,9 +84,9 @@ sessionInfo()
 
 ## List functions from a package
 
-* With RStudio <br>
+* With RStudio: click on the package name in the "Packages" tab: <br>
 
-<img src="images/rstudio_ggplot2.png" width="450"/>
+<img src="images/rstudio_list_biocmanager.png" width="450"/>
 
 * From the console
 ```{r, eval=F}
@@ -107,4 +107,14 @@ dir.create("R_packages")
 # Add directory location to the library path
 .libPaths("~/R_packages/")
 ```
+
+**HANDS-ON**
+
+1. Install and load package **WriteXLS** (using either the RStudio "Packages" panel, or the console)
+
+2. Create a simple matrix (of your choice) with 6 rows and 4 columns!
+
+3. Write matrix to a file using the **WriteXLS** function (from the package of the same name). Check the help page of the function!
+
+
 

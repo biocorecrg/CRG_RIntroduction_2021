@@ -228,7 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
-<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -450,21 +450,31 @@ Let’s try to add a patient to our data frame <strong>d</strong> with rbind, an
 <span id="cb198-3"><a href="two-dimensional-structures-manipulation.html#cb198-3" aria-hidden="true" tabindex="-1"></a><span class="co"># process sum of rows and sum of cols</span></span>
 <span id="cb198-4"><a href="two-dimensional-structures-manipulation.html#cb198-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rowSums</span>(b)</span>
 <span id="cb198-5"><a href="two-dimensional-structures-manipulation.html#cb198-5" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(b)</span></code></pre></div>
+<ul>
+<li>Check the first and last rows with <strong>head</strong> and <strong>tail</strong>:</li>
+</ul>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="two-dimensional-structures-manipulation.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a 5000 row matrix</span></span>
+<span id="cb199-2"><a href="two-dimensional-structures-manipulation.html#cb199-2" aria-hidden="true" tabindex="-1"></a>bigmat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20000</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
+<span id="cb199-3"><a href="two-dimensional-structures-manipulation.html#cb199-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check the first and last 6 rows (by default)</span></span>
+<span id="cb199-4"><a href="two-dimensional-structures-manipulation.html#cb199-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bigmat)</span>
+<span id="cb199-5"><a href="two-dimensional-structures-manipulation.html#cb199-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(bigmat)</span>
+<span id="cb199-6"><a href="two-dimensional-structures-manipulation.html#cb199-6" aria-hidden="true" tabindex="-1"></a><span class="co"># check the first and last 10 rows</span></span>
+<span id="cb199-7"><a href="two-dimensional-structures-manipulation.html#cb199-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bigmat, <span class="at">n=</span><span class="dv">10</span>)</span>
+<span id="cb199-8"><a href="two-dimensional-structures-manipulation.html#cb199-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(bigmat, <span class="at">n=</span><span class="dv">10</span>)</span></code></pre></div>
 <p><strong>HANDS-ON</strong></p>
 <p>Given the following data frame <strong>mypatients</strong>:</p>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="two-dimensional-structures-manipulation.html#cb199-1" aria-hidden="true" tabindex="-1"></a>mypatients <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Name=</span><span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>, <span class="st">&quot;Luis&quot;</span>, <span class="st">&quot;Hector&quot;</span>), </span>
-<span id="cb199-2"><a href="two-dimensional-structures-manipulation.html#cb199-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">Age=</span><span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>, <span class="dv">18</span>, <span class="dv">42</span>),</span>
-<span id="cb199-3"><a href="two-dimensional-structures-manipulation.html#cb199-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">Weight=</span><span class="fu">c</span>(<span class="dv">65</span>, <span class="dv">72</span>, <span class="dv">58</span>, <span class="dv">78</span>, <span class="dv">82</span>),</span>
-<span id="cb199-4"><a href="two-dimensional-structures-manipulation.html#cb199-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Vegetarian=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb199-5"><a href="two-dimensional-structures-manipulation.html#cb199-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="two-dimensional-structures-manipulation.html#cb200-1" aria-hidden="true" tabindex="-1"></a>mypatients <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Name=</span><span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>, <span class="st">&quot;Luis&quot;</span>, <span class="st">&quot;Hector&quot;</span>), </span>
+<span id="cb200-2"><a href="two-dimensional-structures-manipulation.html#cb200-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">Age=</span><span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>, <span class="dv">18</span>, <span class="dv">42</span>),</span>
+<span id="cb200-3"><a href="two-dimensional-structures-manipulation.html#cb200-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">Weight=</span><span class="fu">c</span>(<span class="dv">65</span>, <span class="dv">72</span>, <span class="dv">58</span>, <span class="dv">78</span>, <span class="dv">82</span>),</span>
+<span id="cb200-4"><a href="two-dimensional-structures-manipulation.html#cb200-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Vegetarian=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb200-5"><a href="two-dimensional-structures-manipulation.html#cb200-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>What is the <strong>average age of vegetarian patients</strong>?</li>
-<li>Add a “Gender” column to <strong>mypatients</strong>.</li>
+<li>Add a “Gender” column to <strong>mypatients</strong> (that contains “Female” and “Male” entries).</li>
 <li>What is the <strong>average weight of vegetarian men</strong>?</li>
 </ol>
-<ul>
-<li>The <strong>apply</strong> function</li>
-</ul>
+<div id="the-apply-function" class="section level5" number="9.7.2.2.1">
+<h5><span class="header-section-number">9.7.2.2.1</span> The <strong>apply</strong> function</h5>
 <p>Powerful tool to <strong>apply a command to all rows or all columns of a data frame or a matrix</strong>.<br>
 For example, instead of calculating the sum of each row, you might be interested in calculating the median ? But rowMedians doesn’t exist !
 <br><br>
@@ -478,21 +488,22 @@ For example, instead of calculating the sum of each row, you might be interested
 </ul></li>
 <li>third argument <strong>FUN</strong>: function to apply to either rows or columns</li>
 </ul>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="two-dimensional-structures-manipulation.html#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each row of b</span></span>
-<span id="cb200-2"><a href="two-dimensional-structures-manipulation.html#cb200-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>median)</span>
-<span id="cb200-3"><a href="two-dimensional-structures-manipulation.html#cb200-3" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each column of b</span></span>
-<span id="cb200-4"><a href="two-dimensional-structures-manipulation.html#cb200-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">2</span>, <span class="at">FUN=</span>median)</span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="two-dimensional-structures-manipulation.html#cb201-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each row of b</span></span>
+<span id="cb201-2"><a href="two-dimensional-structures-manipulation.html#cb201-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">1</span>, <span class="at">FUN=</span>median)</span>
+<span id="cb201-3"><a href="two-dimensional-structures-manipulation.html#cb201-3" aria-hidden="true" tabindex="-1"></a><span class="co"># median value of each column of b</span></span>
+<span id="cb201-4"><a href="two-dimensional-structures-manipulation.html#cb201-4" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(<span class="at">X=</span>b, <span class="at">MARGIN=</span><span class="dv">2</span>, <span class="at">FUN=</span>median)</span></code></pre></div>
 <p>NOTE: apply is part of a family of functions. For more information, check the <a href="https://www.datacamp.com/community/tutorials/r-tutorial-apply-family">dedicated DataCamp chapter</a>.</p>
 <p><strong>HANDS-ON</strong></p>
 <p>Given the following matrix <strong>datam</strong>:</p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="two-dimensional-structures-manipulation.html#cb201-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rnorm produces random numbers (here, 10000), from the normal distribution.</span></span>
-<span id="cb201-2"><a href="two-dimensional-structures-manipulation.html#cb201-2" aria-hidden="true" tabindex="-1"></a>datam <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">10000</span>), <span class="at">ncol=</span><span class="dv">25</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="two-dimensional-structures-manipulation.html#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rnorm produces random numbers (here, 10000), from the normal distribution.</span></span>
+<span id="cb202-2"><a href="two-dimensional-structures-manipulation.html#cb202-2" aria-hidden="true" tabindex="-1"></a>datam <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">10000</span>), <span class="at">ncol=</span><span class="dv">25</span>)</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>How many rows does datam have?</li>
 <li>Calculate the standard deviation of each column of datam (use <strong>apply</strong> and <strong>sd</strong>).</li>
-<li>Calculate the median of each row of datam (use<strong>apply</strong> and <strong>median</strong>).</li>
+<li>Calculate the median of each row of datam (use <strong>apply</strong> and <strong>median</strong>).</li>
 </ol>
 
+</div>
 </div>
 </div>
 </div>

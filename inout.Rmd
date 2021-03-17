@@ -63,15 +63,18 @@ write(x=mygenes,
 1. Download file **inputA.txt** the following way, using the **download.file** function:
 
 ```{r, eval=F}
-download.file(url="https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputA.txt", destfile = "inputA.txt")
+download.file(url="https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputA.txt",
+              destfile = "inputA.txt")
+
 ```
+The file is now in your current working directory. Check with **dir()** (lists of files and folders).
 
-2. Read in the content of inputA.txt using the scan command; save in object z
-How many elements are in z?
+2. Read in the content of **inputA.txt** using the **scan** function: save in object **z**.
+How many elements does **z** contain?
 
-3- Sort z: save sorted vector in a new object "zsorted" (see function **sort()**)
+3- **Sort z**: save sorted vector in a new object **zsorted** (see function **sort()**)
 
-4. Write zsorted content into file outputA.txt, with the **write()** function.
+4. Write zsorted content into file **outputA.txt**, using the **write()** function.
 
 
 
@@ -109,15 +112,17 @@ Useful arguments:
 
 * NOTE: **read.csv** derives from the read.table function, and reads **.csv** (comma-separated) files...
 
+
 **HANDS-ON**
 
-1. Download file **inputB.txt** the following way, using the **download.file** function:
+1. Download **inputB.txt** the following way, using the **download.file** function:
 
 ```{r, eval=F}
-download.file(url="https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputB.txt", destfile = "inputB.txt")
+download.file(url="https://public-docs.crg.es/biocore/projects/training/R_introduction_2021/inputB.txt",
+              destfile = "inputB.txt")
 ```
 
-2. Read in the content of inputB.txt using the **read.table** command; save in object "pop".
-What are the dimensions of "pop"? What are the column names?
+2. Read in the content of **inputB.txt** using the **read.table** command; save in object **pop**.
+What are the dimensions of **pop**? What are the column names?
 
 3. Select all states that are in the "Eurozone". What is the **total population** of the Eurozone, according to this table?

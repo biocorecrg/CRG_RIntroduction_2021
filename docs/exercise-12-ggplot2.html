@@ -228,7 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
-<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -323,8 +323,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb356-1"><a href="exercise-12-ggplot2.html#cb356-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb356-2"><a href="exercise-12-ggplot2.html#cb356-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module3&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="exercise-12-ggplot2.html#cb359-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb359-2"><a href="exercise-12-ggplot2.html#cb359-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module3&quot;</span>)</span></code></pre></div>
 </details>
 <div id="exercise-12a--scatter-plot" class="section level3" number="16.9.1">
 <h3><span class="header-section-number">16.9.1</span> Exercise 12a- Scatter plot</h3>
@@ -333,10 +333,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="exercise-12-ggplot2.html#cb357-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb360-1"><a href="exercise-12-ggplot2.html#cb360-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
 </details>
 <p><strong>2- Download the data we will use for plotting:</strong></p>
-<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb358-1"><a href="exercise-12-ggplot2.html#cb358-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&quot;https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/master/ex12_normalized_intensities.csv&quot;</span>, <span class="st">&quot;ex12_normalized_intensities.csv&quot;</span>, <span class="at">method=</span><span class="st">&quot;curl&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="exercise-12-ggplot2.html#cb361-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&quot;https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/master/ex12_normalized_intensities.csv&quot;</span>, <span class="st">&quot;ex12_normalized_intensities.csv&quot;</span>, <span class="at">method=</span><span class="st">&quot;curl&quot;</span>)</span></code></pre></div>
 <p><strong>3- Read file into object “project1” (remember the input/output tutorial!)</strong></p>
 <p>About this file:</p>
 <ul>
@@ -348,18 +348,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="exercise-12-ggplot2.html#cb359-1" aria-hidden="true" tabindex="-1"></a>project1 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;ex12_normalized_intensities.csv&quot;</span>, </span>
-<span id="cb359-2"><a href="exercise-12-ggplot2.html#cb359-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">sep=</span><span class="st">&quot;,&quot;</span>, </span>
-<span id="cb359-3"><a href="exercise-12-ggplot2.html#cb359-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">header=</span><span class="cn">TRUE</span>, </span>
-<span id="cb359-4"><a href="exercise-12-ggplot2.html#cb359-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">row.names =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="exercise-12-ggplot2.html#cb362-1" aria-hidden="true" tabindex="-1"></a>project1 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;ex12_normalized_intensities.csv&quot;</span>, </span>
+<span id="cb362-2"><a href="exercise-12-ggplot2.html#cb362-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">sep=</span><span class="st">&quot;,&quot;</span>, </span>
+<span id="cb362-3"><a href="exercise-12-ggplot2.html#cb362-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">header=</span><span class="cn">TRUE</span>, </span>
+<span id="cb362-4"><a href="exercise-12-ggplot2.html#cb362-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">row.names =</span> <span class="dv">1</span>)</span></code></pre></div>
 </details>
 <p><strong>4- Using ggplot, create a simple scatter plot representing gene expression of “sampleB” on the x-axis and “sampleH” on the y-axis.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb360-1"><a href="exercise-12-ggplot2.html#cb360-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sampleB, <span class="at">y=</span>sampleH)) <span class="sc">+</span> </span>
-<span id="cb360-2"><a href="exercise-12-ggplot2.html#cb360-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="exercise-12-ggplot2.html#cb363-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sampleB, <span class="at">y=</span>sampleH)) <span class="sc">+</span> </span>
+<span id="cb363-2"><a href="exercise-12-ggplot2.html#cb363-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 </details>
 <p><strong>5- Add a column to the data frame “project1” (call this column “expr_limits”), that will be filled the following way:</strong></p>
 <ul>
@@ -371,42 +371,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="exercise-12-ggplot2.html#cb361-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize all values to &quot;normal&quot;</span></span>
-<span id="cb361-2"><a href="exercise-12-ggplot2.html#cb361-2" aria-hidden="true" tabindex="-1"></a>project1<span class="sc">$</span>expr_limits <span class="ot">&lt;-</span> <span class="st">&quot;normal&quot;</span></span>
-<span id="cb361-3"><a href="exercise-12-ggplot2.html#cb361-3" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;high&quot; if project1$sampleB &gt; 13 and project1$sampleH &gt; 13</span></span>
-<span id="cb361-4"><a href="exercise-12-ggplot2.html#cb361-4" aria-hidden="true" tabindex="-1"></a>project1<span class="sc">$</span>expr_limits[project1<span class="sc">$</span>sampleB <span class="sc">&gt;</span> <span class="dv">13</span> <span class="sc">&amp;</span> project1<span class="sc">$</span>sampleH <span class="sc">&gt;</span> <span class="dv">13</span>] <span class="ot">&lt;-</span> <span class="st">&quot;high&quot;</span></span>
-<span id="cb361-5"><a href="exercise-12-ggplot2.html#cb361-5" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;low&quot; if project1$sampleB &lt; 6 and project1$sampleH &lt; 6</span></span>
-<span id="cb361-6"><a href="exercise-12-ggplot2.html#cb361-6" aria-hidden="true" tabindex="-1"></a>project1<span class="sc">$</span>expr_limits[project1<span class="sc">$</span>sampleB <span class="sc">&lt;</span> <span class="dv">6</span> <span class="sc">&amp;</span> project1<span class="sc">$</span>sampleH <span class="sc">&lt;</span> <span class="dv">6</span>] <span class="ot">&lt;-</span> <span class="st">&quot;low&quot;</span></span>
-<span id="cb361-7"><a href="exercise-12-ggplot2.html#cb361-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb361-8"><a href="exercise-12-ggplot2.html#cb361-8" aria-hidden="true" tabindex="-1"></a><span class="do">## more complicated version, using a for loop and if statement</span></span>
-<span id="cb361-9"><a href="exercise-12-ggplot2.html#cb361-9" aria-hidden="true" tabindex="-1"></a><span class="co"># initialize column &quot;expr_limits&quot; with &quot;normal&quot;</span></span>
-<span id="cb361-10"><a href="exercise-12-ggplot2.html#cb361-10" aria-hidden="true" tabindex="-1"></a>project1<span class="sc">$</span>expr_limits <span class="ot">&lt;-</span> <span class="st">&quot;normal&quot;</span></span>
-<span id="cb361-11"><a href="exercise-12-ggplot2.html#cb361-11" aria-hidden="true" tabindex="-1"></a><span class="co"># loop around each row of &quot;project1&quot;</span></span>
-<span id="cb361-12"><a href="exercise-12-ggplot2.html#cb361-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(project1)){</span>
-<span id="cb361-13"><a href="exercise-12-ggplot2.html#cb361-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># create an object that contains only row &quot;i&quot; (the row will be different at every iteration)</span></span>
-<span id="cb361-14"><a href="exercise-12-ggplot2.html#cb361-14" aria-hidden="true" tabindex="-1"></a>  rowi <span class="ot">&lt;-</span> project1[i,]</span>
-<span id="cb361-15"><a href="exercise-12-ggplot2.html#cb361-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># test values in rowi: assign expr_limits accordingly</span></span>
-<span id="cb361-16"><a href="exercise-12-ggplot2.html#cb361-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(rowi<span class="sc">$</span>sampleB <span class="sc">&gt;</span> <span class="dv">13</span> <span class="sc">&amp;</span> rowi<span class="sc">$</span>sampleH <span class="sc">&gt;</span> <span class="dv">13</span>){</span>
-<span id="cb361-17"><a href="exercise-12-ggplot2.html#cb361-17" aria-hidden="true" tabindex="-1"></a>    project1<span class="sc">$</span>expr_limits[i] <span class="ot">&lt;-</span> <span class="st">&quot;high&quot;</span></span>
-<span id="cb361-18"><a href="exercise-12-ggplot2.html#cb361-18" aria-hidden="true" tabindex="-1"></a>  }<span class="cf">else</span> <span class="cf">if</span>(rowi<span class="sc">$</span>sampleB <span class="sc">&lt;</span> <span class="dv">6</span> <span class="sc">&amp;</span> rowi<span class="sc">$</span>sampleH <span class="sc">&lt;</span> <span class="dv">6</span>){</span>
-<span id="cb361-19"><a href="exercise-12-ggplot2.html#cb361-19" aria-hidden="true" tabindex="-1"></a>    project1<span class="sc">$</span>expr_limits[i] <span class="ot">&lt;-</span> <span class="st">&quot;low&quot;</span></span>
-<span id="cb361-20"><a href="exercise-12-ggplot2.html#cb361-20" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb361-21"><a href="exercise-12-ggplot2.html#cb361-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="exercise-12-ggplot2.html#cb364-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize all values to &quot;normal&quot;</span></span>
+<span id="cb364-2"><a href="exercise-12-ggplot2.html#cb364-2" aria-hidden="true" tabindex="-1"></a>project1<span class="sc">$</span>expr_limits <span class="ot">&lt;-</span> <span class="st">&quot;normal&quot;</span></span>
+<span id="cb364-3"><a href="exercise-12-ggplot2.html#cb364-3" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;high&quot; if project1$sampleB &gt; 13 and project1$sampleH &gt; 13</span></span>
+<span id="cb364-4"><a href="exercise-12-ggplot2.html#cb364-4" aria-hidden="true" tabindex="-1"></a>project1<span class="sc">$</span>expr_limits[project1<span class="sc">$</span>sampleB <span class="sc">&gt;</span> <span class="dv">13</span> <span class="sc">&amp;</span> project1<span class="sc">$</span>sampleH <span class="sc">&gt;</span> <span class="dv">13</span>] <span class="ot">&lt;-</span> <span class="st">&quot;high&quot;</span></span>
+<span id="cb364-5"><a href="exercise-12-ggplot2.html#cb364-5" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;low&quot; if project1$sampleB &lt; 6 and project1$sampleH &lt; 6</span></span>
+<span id="cb364-6"><a href="exercise-12-ggplot2.html#cb364-6" aria-hidden="true" tabindex="-1"></a>project1<span class="sc">$</span>expr_limits[project1<span class="sc">$</span>sampleB <span class="sc">&lt;</span> <span class="dv">6</span> <span class="sc">&amp;</span> project1<span class="sc">$</span>sampleH <span class="sc">&lt;</span> <span class="dv">6</span>] <span class="ot">&lt;-</span> <span class="st">&quot;low&quot;</span></span>
+<span id="cb364-7"><a href="exercise-12-ggplot2.html#cb364-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb364-8"><a href="exercise-12-ggplot2.html#cb364-8" aria-hidden="true" tabindex="-1"></a><span class="do">## more complicated version, using a for loop and if statement</span></span>
+<span id="cb364-9"><a href="exercise-12-ggplot2.html#cb364-9" aria-hidden="true" tabindex="-1"></a><span class="co"># initialize column &quot;expr_limits&quot; with &quot;normal&quot;</span></span>
+<span id="cb364-10"><a href="exercise-12-ggplot2.html#cb364-10" aria-hidden="true" tabindex="-1"></a>project1<span class="sc">$</span>expr_limits <span class="ot">&lt;-</span> <span class="st">&quot;normal&quot;</span></span>
+<span id="cb364-11"><a href="exercise-12-ggplot2.html#cb364-11" aria-hidden="true" tabindex="-1"></a><span class="co"># loop around each row of &quot;project1&quot;</span></span>
+<span id="cb364-12"><a href="exercise-12-ggplot2.html#cb364-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(project1)){</span>
+<span id="cb364-13"><a href="exercise-12-ggplot2.html#cb364-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># create an object that contains only row &quot;i&quot; (the row will be different at every iteration)</span></span>
+<span id="cb364-14"><a href="exercise-12-ggplot2.html#cb364-14" aria-hidden="true" tabindex="-1"></a>  rowi <span class="ot">&lt;-</span> project1[i,]</span>
+<span id="cb364-15"><a href="exercise-12-ggplot2.html#cb364-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># test values in rowi: assign expr_limits accordingly</span></span>
+<span id="cb364-16"><a href="exercise-12-ggplot2.html#cb364-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(rowi<span class="sc">$</span>sampleB <span class="sc">&gt;</span> <span class="dv">13</span> <span class="sc">&amp;</span> rowi<span class="sc">$</span>sampleH <span class="sc">&gt;</span> <span class="dv">13</span>){</span>
+<span id="cb364-17"><a href="exercise-12-ggplot2.html#cb364-17" aria-hidden="true" tabindex="-1"></a>    project1<span class="sc">$</span>expr_limits[i] <span class="ot">&lt;-</span> <span class="st">&quot;high&quot;</span></span>
+<span id="cb364-18"><a href="exercise-12-ggplot2.html#cb364-18" aria-hidden="true" tabindex="-1"></a>  }<span class="cf">else</span> <span class="cf">if</span>(rowi<span class="sc">$</span>sampleB <span class="sc">&lt;</span> <span class="dv">6</span> <span class="sc">&amp;</span> rowi<span class="sc">$</span>sampleH <span class="sc">&lt;</span> <span class="dv">6</span>){</span>
+<span id="cb364-19"><a href="exercise-12-ggplot2.html#cb364-19" aria-hidden="true" tabindex="-1"></a>    project1<span class="sc">$</span>expr_limits[i] <span class="ot">&lt;-</span> <span class="st">&quot;low&quot;</span></span>
+<span id="cb364-20"><a href="exercise-12-ggplot2.html#cb364-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb364-21"><a href="exercise-12-ggplot2.html#cb364-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <p><strong>6- Color the points of the scatter plot according to the newly created column “expr_limits.” Save that plot in the object “p”</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="exercise-12-ggplot2.html#cb362-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sampleB, <span class="at">y=</span>sampleH, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
-<span id="cb362-2"><a href="exercise-12-ggplot2.html#cb362-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="exercise-12-ggplot2.html#cb365-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sampleB, <span class="at">y=</span>sampleH, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
+<span id="cb365-2"><a href="exercise-12-ggplot2.html#cb365-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 </details>
 <p><strong>7- Add a layer to “p” in order to change the points colors to blue (for low), grey (for normal) and red (for high). Save this plot in the object “p2.”</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="exercise-12-ggplot2.html#cb363-1" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;grey&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="exercise-12-ggplot2.html#cb366-1" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;grey&quot;</span>))</span></code></pre></div>
 </details>
 <p><strong>8- Save p2 in a jpeg file.</strong>
 a. Try with RStudio Plots window (Export)<br>
@@ -415,9 +415,9 @@ b. Try in the console:<br></p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="exercise-12-ggplot2.html#cb364-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="st">&quot;myscatterggplot.jpg&quot;</span>)</span>
-<span id="cb364-2"><a href="exercise-12-ggplot2.html#cb364-2" aria-hidden="true" tabindex="-1"></a>  p2</span>
-<span id="cb364-3"><a href="exercise-12-ggplot2.html#cb364-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="exercise-12-ggplot2.html#cb367-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="st">&quot;myscatterggplot.jpg&quot;</span>)</span>
+<span id="cb367-2"><a href="exercise-12-ggplot2.html#cb367-2" aria-hidden="true" tabindex="-1"></a>  p2</span>
+<span id="cb367-3"><a href="exercise-12-ggplot2.html#cb367-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 </details>
 </div>
 <div id="exercise-12b--box-plot" class="section level3" number="16.9.2">
@@ -428,24 +428,24 @@ b. Try in the console:<br></p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="exercise-12-ggplot2.html#cb365-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span>
-<span id="cb365-2"><a href="exercise-12-ggplot2.html#cb365-2" aria-hidden="true" tabindex="-1"></a>project_long <span class="ot">&lt;-</span> <span class="fu">melt</span>(<span class="at">data=</span>project1)</span></code></pre></div>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="exercise-12-ggplot2.html#cb368-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span>
+<span id="cb368-2"><a href="exercise-12-ggplot2.html#cb368-2" aria-hidden="true" tabindex="-1"></a>project_long <span class="ot">&lt;-</span> <span class="fu">melt</span>(<span class="at">data=</span>project1)</span></code></pre></div>
 </details>
 <p><strong>2- Produce a boxplot of the expression of all samples (i.e. each sample is represented by a box)</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="exercise-12-ggplot2.html#cb366-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span> </span>
-<span id="cb366-2"><a href="exercise-12-ggplot2.html#cb366-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="exercise-12-ggplot2.html#cb369-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value)) <span class="sc">+</span> </span>
+<span id="cb369-2"><a href="exercise-12-ggplot2.html#cb369-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 </details>
 <p><strong>3- Modify the previous boxplot so as to obtain 3 “sub-boxplots” per sample, each representing the expression of either “low,” “normal” or “high” genes.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="exercise-12-ggplot2.html#cb367-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
-<span id="cb367-2"><a href="exercise-12-ggplot2.html#cb367-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="exercise-12-ggplot2.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
+<span id="cb370-2"><a href="exercise-12-ggplot2.html#cb370-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 </details>
 <p><strong>4- Rotate the x-axis labels (90 degrees angle).</strong>
 <br>
@@ -454,19 +454,19 @@ This is new ! Google it !!</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="exercise-12-ggplot2.html#cb368-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
-<span id="cb368-2"><a href="exercise-12-ggplot2.html#cb368-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
-<span id="cb368-3"><a href="exercise-12-ggplot2.html#cb368-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="exercise-12-ggplot2.html#cb371-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
+<span id="cb371-2"><a href="exercise-12-ggplot2.html#cb371-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
+<span id="cb371-3"><a href="exercise-12-ggplot2.html#cb371-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>))</span></code></pre></div>
 </details>
 <p><strong>5- Finally, add a title of your choice to the plot.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="exercise-12-ggplot2.html#cb369-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
-<span id="cb369-2"><a href="exercise-12-ggplot2.html#cb369-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
-<span id="cb369-3"><a href="exercise-12-ggplot2.html#cb369-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>)) <span class="sc">+</span></span>
-<span id="cb369-4"><a href="exercise-12-ggplot2.html#cb369-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;My boxplots&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="exercise-12-ggplot2.html#cb372-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
+<span id="cb372-2"><a href="exercise-12-ggplot2.html#cb372-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
+<span id="cb372-3"><a href="exercise-12-ggplot2.html#cb372-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>)) <span class="sc">+</span></span>
+<span id="cb372-4"><a href="exercise-12-ggplot2.html#cb372-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;My boxplots&quot;</span>)</span></code></pre></div>
 </details>
 </div>
 <div id="exercise-12c--bar-plot" class="section level3" number="16.9.3">
@@ -476,33 +476,33 @@ This is new ! Google it !!</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="exercise-12-ggplot2.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>expr_limits)) <span class="sc">+</span> </span>
-<span id="cb370-2"><a href="exercise-12-ggplot2.html#cb370-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="exercise-12-ggplot2.html#cb373-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>expr_limits)) <span class="sc">+</span> </span>
+<span id="cb373-2"><a href="exercise-12-ggplot2.html#cb373-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
 </details>
 <p><strong>2- Add an horizontal line at counts 250 (y-axis). Save the plot in the object “bar”</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="exercise-12-ggplot2.html#cb371-1" aria-hidden="true" tabindex="-1"></a>bar <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>expr_limits)) <span class="sc">+</span> </span>
-<span id="cb371-2"><a href="exercise-12-ggplot2.html#cb371-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
-<span id="cb371-3"><a href="exercise-12-ggplot2.html#cb371-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">250</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="exercise-12-ggplot2.html#cb374-1" aria-hidden="true" tabindex="-1"></a>bar <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>expr_limits)) <span class="sc">+</span> </span>
+<span id="cb374-2"><a href="exercise-12-ggplot2.html#cb374-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb374-3"><a href="exercise-12-ggplot2.html#cb374-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">250</span>)</span></code></pre></div>
 </details>
 <p><strong>3- Swap the x and y axis. Save in object “bar2.”</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="exercise-12-ggplot2.html#cb372-1" aria-hidden="true" tabindex="-1"></a>bar2 <span class="ot">&lt;-</span> bar <span class="sc">+</span> <span class="fu">coord_flip</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb375-1"><a href="exercise-12-ggplot2.html#cb375-1" aria-hidden="true" tabindex="-1"></a>bar2 <span class="ot">&lt;-</span> bar <span class="sc">+</span> <span class="fu">coord_flip</span>()</span></code></pre></div>
 </details>
 <p><strong>4- Save “bar” and “bar2” plots in a “png” file, using the </strong>png()** function, in the console: use grid.arrange (from the gridExtra package) to organize both plots in one page !**</p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="exercise-12-ggplot2.html#cb373-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="st">&quot;mybarplots.png&quot;</span>, <span class="at">width=</span><span class="dv">1000</span>)</span>
-<span id="cb373-2"><a href="exercise-12-ggplot2.html#cb373-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grid.arrange</span>(bar, bar2, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">2</span>)</span>
-<span id="cb373-3"><a href="exercise-12-ggplot2.html#cb373-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="exercise-12-ggplot2.html#cb376-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="st">&quot;mybarplots.png&quot;</span>, <span class="at">width=</span><span class="dv">1000</span>)</span>
+<span id="cb376-2"><a href="exercise-12-ggplot2.html#cb376-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grid.arrange</span>(bar, bar2, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">2</span>)</span>
+<span id="cb376-3"><a href="exercise-12-ggplot2.html#cb376-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 </details>
 </div>
 <div id="exercise-12d--histogram" class="section level3" number="16.9.4">
@@ -512,8 +512,8 @@ This is new ! Google it !!</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="exercise-12-ggplot2.html#cb374-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> </span>
-<span id="cb374-2"><a href="exercise-12-ggplot2.html#cb374-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="exercise-12-ggplot2.html#cb377-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> </span>
+<span id="cb377-2"><a href="exercise-12-ggplot2.html#cb377-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
 </details>
 <p><strong>2- Notice that you get the following warning message" <em>stat_bin() using <code>bins = 30</code>. Pick better value with <code>binwidth</code>.</em></strong><br>
 Set “bins”" parameter of geom_histogram() to 50.</p>
@@ -521,8 +521,8 @@ Set “bins”" parameter of geom_histogram() to 50.</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb375-1"><a href="exercise-12-ggplot2.html#cb375-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> </span>
-<span id="cb375-2"><a href="exercise-12-ggplot2.html#cb375-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">50</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="exercise-12-ggplot2.html#cb378-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> </span>
+<span id="cb378-2"><a href="exercise-12-ggplot2.html#cb378-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">50</span>)</span></code></pre></div>
 </details>
 <p><strong>3- The histogram plots the expression values for </strong>All samples<strong>.</strong>
 <br>
@@ -531,8 +531,8 @@ Change the plot so as to obtain one histograms per sample.</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="exercise-12-ggplot2.html#cb376-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
-<span id="cb376-2"><a href="exercise-12-ggplot2.html#cb376-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">50</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="exercise-12-ggplot2.html#cb379-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
+<span id="cb379-2"><a href="exercise-12-ggplot2.html#cb379-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">50</span>)</span></code></pre></div>
 </details>
 <p><strong>4- By default, geom_histogram produces a stacked histogram.</strong>
 <br>
@@ -541,13 +541,13 @@ Change argument “position” to “dodge.”</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="exercise-12-ggplot2.html#cb377-1" aria-hidden="true" tabindex="-1"></a>hist1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
-<span id="cb377-2"><a href="exercise-12-ggplot2.html#cb377-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="exercise-12-ggplot2.html#cb380-1" aria-hidden="true" tabindex="-1"></a>hist1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
+<span id="cb380-2"><a href="exercise-12-ggplot2.html#cb380-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>5- A bit messy ?? Run the following:</strong></p>
-<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="exercise-12-ggplot2.html#cb378-1" aria-hidden="true" tabindex="-1"></a>hist2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
-<span id="cb378-2"><a href="exercise-12-ggplot2.html#cb378-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">50</span>) <span class="sc">+</span> </span>
-<span id="cb378-3"><a href="exercise-12-ggplot2.html#cb378-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>variable)</span></code></pre></div>
+<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="exercise-12-ggplot2.html#cb381-1" aria-hidden="true" tabindex="-1"></a>hist2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
+<span id="cb381-2"><a href="exercise-12-ggplot2.html#cb381-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">50</span>) <span class="sc">+</span> </span>
+<span id="cb381-3"><a href="exercise-12-ggplot2.html#cb381-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>variable)</span></code></pre></div>
 <p><strong>facet_grid()</strong> is another easy way to split the views!</p>
 <p><strong>6- Change the default colors with scale_fill_manual().</strong>
 <br>
@@ -556,7 +556,7 @@ You can try the rainbow() function for coloring.</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="exercise-12-ggplot2.html#cb379-1" aria-hidden="true" tabindex="-1"></a>hist3 <span class="ot">&lt;-</span> hist2 <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">rainbow</span>(<span class="dv">8</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="exercise-12-ggplot2.html#cb382-1" aria-hidden="true" tabindex="-1"></a>hist3 <span class="ot">&lt;-</span> hist2 <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">rainbow</span>(<span class="dv">8</span>))</span></code></pre></div>
 </details>
 <p><strong>7- “Zoom in” the plots: set the x-axis limits from from 6 to 13.</strong>
 <br>
@@ -565,21 +565,21 @@ Add the <strong>xlim()</strong> layer.</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="exercise-12-ggplot2.html#cb380-1" aria-hidden="true" tabindex="-1"></a>hist4 <span class="ot">&lt;-</span> hist3 <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">6</span>, <span class="dv">13</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="exercise-12-ggplot2.html#cb383-1" aria-hidden="true" tabindex="-1"></a>hist4 <span class="ot">&lt;-</span> hist3 <span class="sc">+</span> <span class="fu">xlim</span>(<span class="dv">6</span>, <span class="dv">13</span>)</span></code></pre></div>
 </details>
 <p><strong>8- Change the default theme to theme_minimal()</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="exercise-12-ggplot2.html#cb381-1" aria-hidden="true" tabindex="-1"></a>hist5 <span class="ot">&lt;-</span> hist4 <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="exercise-12-ggplot2.html#cb384-1" aria-hidden="true" tabindex="-1"></a>hist5 <span class="ot">&lt;-</span> hist4 <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
 </details>
 <p><strong>9- Save that last plot to a file (format of your choice) with ggsave()</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="exercise-12-ggplot2.html#cb382-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;myhistograms.png&quot;</span>, <span class="at">plot=</span>hist5, <span class="at">device=</span><span class="st">&quot;png&quot;</span>, <span class="at">width=</span><span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="exercise-12-ggplot2.html#cb385-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;myhistograms.png&quot;</span>, <span class="at">plot=</span>hist5, <span class="at">device=</span><span class="st">&quot;png&quot;</span>, <span class="at">width=</span><span class="dv">20</span>)</span></code></pre></div>
 </details>
 
 </div>
