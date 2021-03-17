@@ -111,18 +111,7 @@ d[ d$Age >= 25 & d$Vegetarian == TRUE, ]
 <img src="images/df_col2_col3.png" width="700"/>
 
 
-**HANDS-ON**
 
-Given the following data frame **mypatients**:
-```{r,eval=FALSE}
-mypatients <- data.frame(Name=c("Maria", "Juan", "Alba", "Luis", "Hector"), 
-        Age=c(23, 25, 31, 18, 42),
-        Vegetarian=c(TRUE, TRUE, FALSE, FALSE, TRUE),
-        stringsAsFactors = FALSE)
-```
-
-1. Extract ages of vegetarian patients.
-2. What is the average age of vegetarian patients?
 
 #### More useful commands
 
@@ -177,6 +166,21 @@ b <- matrix(1:20, ncol=4)
 rowSums(b)
 colSums(b)
 ```
+**HANDS-ON**
+
+Given the following data frame **mypatients**:
+```{r,eval=FALSE}
+mypatients <- data.frame(Name=c("Maria", "Juan", "Alba", "Luis", "Hector"), 
+        Age=c(23, 25, 31, 18, 42),
+        Weight=c(65, 72, 58, 78, 82),
+        Vegetarian=c(TRUE, TRUE, FALSE, FALSE, TRUE),
+        stringsAsFactors = FALSE)
+```
+
+1. What is the **average age of vegetarian patients**?
+2. Add a "Gender" column to **mypatients**.
+3. What is the **average weight of vegetarian men**?
+
 
 * The **apply** function
 
@@ -198,16 +202,24 @@ apply(X=b, MARGIN=1, FUN=median)
 apply(X=b, MARGIN=2, FUN=median)
 ```
 
+NOTE: apply is part of a family of functions. For more information, check the [dedicated DataCamp chapter](https://www.datacamp.com/community/tutorials/r-tutorial-apply-family).
+
+
 **HANDS-ON**
 
-Given the following data frame **mypatients**:
+Given the following matrix **datam**:
 ```{r,eval=FALSE}
-mypatients <- data.frame(Name=c("Maria", "Juan", "Alba", "Luis", "Hector"), 
-        Age=c(23, 25, 31, 18, 42),
-        Vegetarian=c(TRUE, TRUE, FALSE, FALSE, TRUE),
-        stringsAsFactors = FALSE)
+# rnorm produces random numbers (here, 10000), from the normal distribution.
+datam <- matrix(rnorm(10000), ncol=25)
 ```
 
-1. Add a "Gender" column to **mypatients**.
+1. How many rows does datam have?
+2. Calculate the standard deviation of each column of datam (use **apply** and **sd**).
+3. Calculate the median of each row of datam (use**apply** and **median**).
+
+
+
+
+
 
 
