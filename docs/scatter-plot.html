@@ -209,8 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
-<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -317,18 +317,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="scatter-plot" class="section level2" number="16.2">
 <h2><span class="header-section-number">16.2</span> Scatter plot</h2>
-<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="scatter-plot.html#cb315-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example of a scatter plot: add the geom_point() layer</span></span>
-<span id="cb315-2"><a href="scatter-plot.html#cb315-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dataframe, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>column1, <span class="at">y=</span>column2)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="scatter-plot.html#cb318-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example of a scatter plot: add the geom_point() layer</span></span>
+<span id="cb318-2"><a href="scatter-plot.html#cb318-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dataframe, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>column1, <span class="at">y=</span>column2)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
 <ul>
 <li>Example of a simple scatter plot:</li>
 </ul>
-<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="scatter-plot.html#cb316-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame</span></span>
-<span id="cb316-2"><a href="scatter-plot.html#cb316-2" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">sample1=</span><span class="fu">rnorm</span>(<span class="dv">200</span>), <span class="at">sample2=</span><span class="fu">rnorm</span>(<span class="dv">200</span>))</span>
-<span id="cb316-3"><a href="scatter-plot.html#cb316-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb316-4"><a href="scatter-plot.html#cb316-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot !</span></span>
-<span id="cb316-5"><a href="scatter-plot.html#cb316-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span> df1 , <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
-<span id="cb316-6"><a href="scatter-plot.html#cb316-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-231-1.png" width="672" /></p>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="scatter-plot.html#cb319-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame</span></span>
+<span id="cb319-2"><a href="scatter-plot.html#cb319-2" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">sample1=</span><span class="fu">rnorm</span>(<span class="dv">200</span>), <span class="at">sample2=</span><span class="fu">rnorm</span>(<span class="dv">200</span>))</span>
+<span id="cb319-3"><a href="scatter-plot.html#cb319-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb319-4"><a href="scatter-plot.html#cb319-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot !</span></span>
+<span id="cb319-5"><a href="scatter-plot.html#cb319-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span> df1 , <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb319-6"><a href="scatter-plot.html#cb319-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-238-1.png" width="672" /></p>
 <ul>
 <li>Add <strong>layers</strong> to that object to customize the plot:
 <ul>
@@ -337,21 +337,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>etc.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb317-1"><a href="scatter-plot.html#cb317-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span> df1 , <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
-<span id="cb317-2"><a href="scatter-plot.html#cb317-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb317-3"><a href="scatter-plot.html#cb317-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my first ggplot&quot;</span>) <span class="sc">+</span></span>
-<span id="cb317-4"><a href="scatter-plot.html#cb317-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="dv">0</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-232-1.png" width="672" /></p>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="scatter-plot.html#cb320-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span> df1 , <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>
+<span id="cb320-2"><a href="scatter-plot.html#cb320-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb320-3"><a href="scatter-plot.html#cb320-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my first ggplot&quot;</span>) <span class="sc">+</span></span>
+<span id="cb320-4"><a href="scatter-plot.html#cb320-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="dv">0</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-239-1.png" width="672" /></p>
 <p>Bookmark that <a href="https://ggplot2.tidyverse.org/reference/">ggplot2 reference</a> and that good <a href="https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf">cheatsheet</a> for some of the ggplot2 options.</p>
 <ul>
 <li>You can save the plot in an object <strong>at any time</strong> and add layers to that object:</li>
 </ul>
-<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="scatter-plot.html#cb318-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save in an object</span></span>
-<span id="cb318-2"><a href="scatter-plot.html#cb318-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span> df1 , <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span></span>
-<span id="cb318-3"><a href="scatter-plot.html#cb318-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>()</span>
-<span id="cb318-4"><a href="scatter-plot.html#cb318-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Add layers to that object</span></span>
-<span id="cb318-5"><a href="scatter-plot.html#cb318-5" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my first ggplot&quot;</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-233-1.png" width="672" /></p>
+<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="scatter-plot.html#cb321-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save in an object</span></span>
+<span id="cb321-2"><a href="scatter-plot.html#cb321-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span> df1 , <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span></span>
+<span id="cb321-3"><a href="scatter-plot.html#cb321-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>()</span>
+<span id="cb321-4"><a href="scatter-plot.html#cb321-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Add layers to that object</span></span>
+<span id="cb321-5"><a href="scatter-plot.html#cb321-5" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;my first ggplot&quot;</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-240-1.png" width="672" /></p>
 <ul>
 <li>What is inside the <strong>aes</strong> (aesthetics)function ?
 <ul>
@@ -363,18 +363,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 <p>Color all points in red (not depending on the data):</p>
-<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="scatter-plot.html#cb319-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1 , <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span></span>
-<span id="cb319-2"><a href="scatter-plot.html#cb319-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>) </span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-234-1.png" width="672" /></p>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="scatter-plot.html#cb322-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1 , <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span></span>
+<span id="cb322-2"><a href="scatter-plot.html#cb322-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">&quot;red&quot;</span>) </span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-241-1.png" width="672" /></p>
 <p>Color the points according to another column in the data frame:</p>
-<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="scatter-plot.html#cb320-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a data frame from df1: add a column with &quot;yes&quot; and &quot;no&quot;</span></span>
-<span id="cb320-2"><a href="scatter-plot.html#cb320-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(df1, <span class="at">grouping=</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>), <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">120</span>)))</span>
-<span id="cb320-3"><a href="scatter-plot.html#cb320-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb320-4"><a href="scatter-plot.html#cb320-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot and add the color parameter in the aes():</span></span>
-<span id="cb320-5"><a href="scatter-plot.html#cb320-5" aria-hidden="true" tabindex="-1"></a>pscat <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2, <span class="at">color=</span>grouping)) <span class="sc">+</span> </span>
-<span id="cb320-6"><a href="scatter-plot.html#cb320-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb320-7"><a href="scatter-plot.html#cb320-7" aria-hidden="true" tabindex="-1"></a>pscat</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-235-1.png" width="672" /></p>
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="scatter-plot.html#cb323-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a data frame from df1: add a column with &quot;yes&quot; and &quot;no&quot;</span></span>
+<span id="cb323-2"><a href="scatter-plot.html#cb323-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(df1, <span class="at">grouping=</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>), <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">120</span>)))</span>
+<span id="cb323-3"><a href="scatter-plot.html#cb323-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb323-4"><a href="scatter-plot.html#cb323-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot and add the color parameter in the aes():</span></span>
+<span id="cb323-5"><a href="scatter-plot.html#cb323-5" aria-hidden="true" tabindex="-1"></a>pscat <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2, <span class="at">color=</span>grouping)) <span class="sc">+</span> </span>
+<span id="cb323-6"><a href="scatter-plot.html#cb323-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb323-7"><a href="scatter-plot.html#cb323-7" aria-hidden="true" tabindex="-1"></a>pscat</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-242-1.png" width="672" /></p>
 </div>
             </section>
 

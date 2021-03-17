@@ -209,8 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
-<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -320,17 +320,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A heatmap is a graphical representation of data where the values are represented with <strong>colors</strong>.
 <br>
 The <strong>heatmap.2</strong> function from the <strong>gplots</strong> package allows to produce highly customizable heatmaps.</p>
-<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="heatmap-2-function-from-gplots-package.html#cb302-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install gplots package</span></span>
-<span id="cb302-2"><a href="heatmap-2-function-from-gplots-package.html#cb302-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;gplots&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="heatmap-2-function-from-gplots-package.html#cb303-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package</span></span>
-<span id="cb303-2"><a href="heatmap-2-function-from-gplots-package.html#cb303-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;gplots&quot;</span>)</span>
-<span id="cb303-3"><a href="heatmap-2-function-from-gplots-package.html#cb303-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb303-4"><a href="heatmap-2-function-from-gplots-package.html#cb303-4" aria-hidden="true" tabindex="-1"></a><span class="co"># make matrix</span></span>
-<span id="cb303-5"><a href="heatmap-2-function-from-gplots-package.html#cb303-5" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1200</span>), <span class="at">ncol=</span><span class="dv">6</span>)</span>
-<span id="cb303-6"><a href="heatmap-2-function-from-gplots-package.html#cb303-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb303-7"><a href="heatmap-2-function-from-gplots-package.html#cb303-7" aria-hidden="true" tabindex="-1"></a><span class="co"># heatmap with the defaults parameters</span></span>
-<span id="cb303-8"><a href="heatmap-2-function-from-gplots-package.html#cb303-8" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap.2</span>(<span class="at">x=</span>mat)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-218-1.png" width="672" />
+<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="heatmap-2-function-from-gplots-package.html#cb305-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install gplots package</span></span>
+<span id="cb305-2"><a href="heatmap-2-function-from-gplots-package.html#cb305-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;gplots&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="heatmap-2-function-from-gplots-package.html#cb306-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package</span></span>
+<span id="cb306-2"><a href="heatmap-2-function-from-gplots-package.html#cb306-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;gplots&quot;</span>)</span>
+<span id="cb306-3"><a href="heatmap-2-function-from-gplots-package.html#cb306-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb306-4"><a href="heatmap-2-function-from-gplots-package.html#cb306-4" aria-hidden="true" tabindex="-1"></a><span class="co"># make matrix</span></span>
+<span id="cb306-5"><a href="heatmap-2-function-from-gplots-package.html#cb306-5" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1200</span>), <span class="at">ncol=</span><span class="dv">6</span>)</span>
+<span id="cb306-6"><a href="heatmap-2-function-from-gplots-package.html#cb306-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb306-7"><a href="heatmap-2-function-from-gplots-package.html#cb306-7" aria-hidden="true" tabindex="-1"></a><span class="co"># heatmap with the defaults parameters</span></span>
+<span id="cb306-8"><a href="heatmap-2-function-from-gplots-package.html#cb306-8" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap.2</span>(<span class="at">x=</span>mat)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-225-1.png" width="672" />
 <img src="images/plots/heatmap1.png" width="500"/></p>
 <ul>
 <li>Useful arguments include:
@@ -346,17 +346,17 @@ The <strong>heatmap.2</strong> function from the <strong>gplots</strong> package
 <li>xlab, ylab: x-axis or y-axis label</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="heatmap-2-function-from-gplots-package.html#cb304-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap.2</span>(<span class="at">x=</span>mat, </span>
-<span id="cb304-2"><a href="heatmap-2-function-from-gplots-package.html#cb304-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">Colv=</span><span class="cn">FALSE</span>, </span>
-<span id="cb304-3"><a href="heatmap-2-function-from-gplots-package.html#cb304-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">dendrogram=</span><span class="st">&quot;row&quot;</span>,</span>
-<span id="cb304-4"><a href="heatmap-2-function-from-gplots-package.html#cb304-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale=</span><span class="st">&quot;row&quot;</span>,</span>
-<span id="cb304-5"><a href="heatmap-2-function-from-gplots-package.html#cb304-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="st">&quot;bluered&quot;</span>,</span>
-<span id="cb304-6"><a href="heatmap-2-function-from-gplots-package.html#cb304-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">trace=</span><span class="st">&quot;none&quot;</span>,</span>
-<span id="cb304-7"><a href="heatmap-2-function-from-gplots-package.html#cb304-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">ColSideColors=</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;green&quot;</span>,<span class="st">&quot;orange&quot;</span>), <span class="at">each=</span><span class="dv">3</span>),</span>
-<span id="cb304-8"><a href="heatmap-2-function-from-gplots-package.html#cb304-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">labRow=</span><span class="cn">FALSE</span>,</span>
-<span id="cb304-9"><a href="heatmap-2-function-from-gplots-package.html#cb304-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;my heatmap&quot;</span>,</span>
-<span id="cb304-10"><a href="heatmap-2-function-from-gplots-package.html#cb304-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;Genes&quot;</span>,</span>
-<span id="cb304-11"><a href="heatmap-2-function-from-gplots-package.html#cb304-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;Samples&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="heatmap-2-function-from-gplots-package.html#cb307-1" aria-hidden="true" tabindex="-1"></a><span class="fu">heatmap.2</span>(<span class="at">x=</span>mat, </span>
+<span id="cb307-2"><a href="heatmap-2-function-from-gplots-package.html#cb307-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">Colv=</span><span class="cn">FALSE</span>, </span>
+<span id="cb307-3"><a href="heatmap-2-function-from-gplots-package.html#cb307-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">dendrogram=</span><span class="st">&quot;row&quot;</span>,</span>
+<span id="cb307-4"><a href="heatmap-2-function-from-gplots-package.html#cb307-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale=</span><span class="st">&quot;row&quot;</span>,</span>
+<span id="cb307-5"><a href="heatmap-2-function-from-gplots-package.html#cb307-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="st">&quot;bluered&quot;</span>,</span>
+<span id="cb307-6"><a href="heatmap-2-function-from-gplots-package.html#cb307-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">trace=</span><span class="st">&quot;none&quot;</span>,</span>
+<span id="cb307-7"><a href="heatmap-2-function-from-gplots-package.html#cb307-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">ColSideColors=</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;green&quot;</span>,<span class="st">&quot;orange&quot;</span>), <span class="at">each=</span><span class="dv">3</span>),</span>
+<span id="cb307-8"><a href="heatmap-2-function-from-gplots-package.html#cb307-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">labRow=</span><span class="cn">FALSE</span>,</span>
+<span id="cb307-9"><a href="heatmap-2-function-from-gplots-package.html#cb307-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;my heatmap&quot;</span>,</span>
+<span id="cb307-10"><a href="heatmap-2-function-from-gplots-package.html#cb307-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;Genes&quot;</span>,</span>
+<span id="cb307-11"><a href="heatmap-2-function-from-gplots-package.html#cb307-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;Samples&quot;</span>)</span></code></pre></div>
 <p><img src="images/plots/heatmap2.png" width="500"/></p>
 </div>
             </section>

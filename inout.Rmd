@@ -110,8 +110,9 @@ Useful arguments:
 
 * Note that **\\t** stands for tab-delimitation
 
-* NOTE: **read.csv** derives from the read.table function, and reads **.csv** (comma-separated) files...
+* NOTE: **read.csv** derives from the read.table function, and reads **.csv** (comma-separated) files. **write.csv** also exists for writing **.csv** files.
 
+<br>
 
 **HANDS-ON**
 
@@ -122,7 +123,9 @@ download.file(url="https://public-docs.crg.es/biocore/projects/training/R_introd
               destfile = "inputB.txt")
 ```
 
-2. Read in the content of **inputB.txt** using the **read.table** command; save in object **pop**.
-What are the dimensions of **pop**? What are the column names?
+2. Read in the content of **inputB.txt** using the **read.table** command; save in object **pop**. Note: inputB.txt has a header row!<br>
+What are the dimensions of **pop**? What are the column names? Check the first rows of **pop** with the **head** function.
 
 3. Select all states that are in the "Eurozone". What is the **total population** of the Eurozone, according to this table?
+
+4. Write to file **Eurozone.csv** States and Capitals that belong to the "Eurozone. You need to select rows as previously done, and also the State and Capital columns.

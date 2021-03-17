@@ -93,6 +93,17 @@ sessionInfo()
 ls("package:BiocManager")
 ```
 
+<br>
+
+**HANDS-ON**
+
+1. Install and load package **WriteXLS** (using either the RStudio "Packages" panel, or the console)
+
+2. Create a simple matrix (of your choice) with 6 rows and 4 columns!
+
+3. Write matrix to a file using the **WriteXLS** function (from the package of the same name). Check the help page of the function!
+
+
 ## RStudio server at CRG
 
 If you can't install packages (permission issues), you first need to specify a writeable directory to install the packages into.<br>
@@ -108,13 +119,6 @@ dir.create("R_packages")
 .libPaths("~/R_packages/")
 ```
 
-**HANDS-ON**
-
-1. Install and load package **WriteXLS** (using either the RStudio "Packages" panel, or the console)
-
-2. Create a simple matrix (of your choice) with 6 rows and 4 columns!
-
-3. Write matrix to a file using the **WriteXLS** function (from the package of the same name). Check the help page of the function!
 
 
 

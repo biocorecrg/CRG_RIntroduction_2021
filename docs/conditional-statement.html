@@ -209,8 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a>
 <ul>
 <li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b (EXTRA: only if time allows, or to do at home!)</a></li>
-<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c-extra-only-if-time-allows-or-to-do-at-home"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c (EXTRA: only if time allows, or to do at home!!)</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
@@ -323,50 +323,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 “if” statement
 </h3>
 <p>Structure of the <strong>if statement</strong>:</p>
-<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="conditional-statement.html#cb422-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(condition){</span>
-<span id="cb422-2"><a href="conditional-statement.html#cb422-2" aria-hidden="true" tabindex="-1"></a>    action_command</span>
-<span id="cb422-3"><a href="conditional-statement.html#cb422-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="conditional-statement.html#cb425-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(condition){</span>
+<span id="cb425-2"><a href="conditional-statement.html#cb425-2" aria-hidden="true" tabindex="-1"></a>    action_command</span>
+<span id="cb425-3"><a href="conditional-statement.html#cb425-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>If the <strong>condition</strong> is TRUE, then proceed to the <strong>action_command</strong>; if it is FALSE, then nothing happens.
 <br>
 Note the usage of <strong>curly brakets {}</strong> to start and end the conditional!
 <br></p>
-<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="conditional-statement.html#cb423-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb423-2"><a href="conditional-statement.html#cb423-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb423-3"><a href="conditional-statement.html#cb423-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print if value is &gt; 3</span></span>
-<span id="cb423-4"><a href="conditional-statement.html#cb423-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&gt;</span> <span class="dv">3</span>){</span>
-<span id="cb423-5"><a href="conditional-statement.html#cb423-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(k)</span>
-<span id="cb423-6"><a href="conditional-statement.html#cb423-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb423-7"><a href="conditional-statement.html#cb423-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb423-8"><a href="conditional-statement.html#cb423-8" aria-hidden="true" tabindex="-1"></a><span class="co"># print if value is &lt; 3</span></span>
-<span id="cb423-9"><a href="conditional-statement.html#cb423-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&lt;</span> <span class="dv">3</span>){</span>
-<span id="cb423-10"><a href="conditional-statement.html#cb423-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(k)</span>
-<span id="cb423-11"><a href="conditional-statement.html#cb423-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="conditional-statement.html#cb426-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb426-2"><a href="conditional-statement.html#cb426-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb426-3"><a href="conditional-statement.html#cb426-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print if value is &gt; 3</span></span>
+<span id="cb426-4"><a href="conditional-statement.html#cb426-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&gt;</span> <span class="dv">3</span>){</span>
+<span id="cb426-5"><a href="conditional-statement.html#cb426-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(k)</span>
+<span id="cb426-6"><a href="conditional-statement.html#cb426-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb426-7"><a href="conditional-statement.html#cb426-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb426-8"><a href="conditional-statement.html#cb426-8" aria-hidden="true" tabindex="-1"></a><span class="co"># print if value is &lt; 3</span></span>
+<span id="cb426-9"><a href="conditional-statement.html#cb426-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&lt;</span> <span class="dv">3</span>){</span>
+<span id="cb426-10"><a href="conditional-statement.html#cb426-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(k)</span>
+<span id="cb426-11"><a href="conditional-statement.html#cb426-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h4>
 With <strong>else</strong>
 </h4>
-<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="conditional-statement.html#cb424-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(condition){</span>
-<span id="cb424-2"><a href="conditional-statement.html#cb424-2" aria-hidden="true" tabindex="-1"></a>    action_command1</span>
-<span id="cb424-3"><a href="conditional-statement.html#cb424-3" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb424-4"><a href="conditional-statement.html#cb424-4" aria-hidden="true" tabindex="-1"></a>    action_command2</span>
-<span id="cb424-5"><a href="conditional-statement.html#cb424-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb427-1"><a href="conditional-statement.html#cb427-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(condition){</span>
+<span id="cb427-2"><a href="conditional-statement.html#cb427-2" aria-hidden="true" tabindex="-1"></a>    action_command1</span>
+<span id="cb427-3"><a href="conditional-statement.html#cb427-3" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb427-4"><a href="conditional-statement.html#cb427-4" aria-hidden="true" tabindex="-1"></a>    action_command2</span>
+<span id="cb427-5"><a href="conditional-statement.html#cb427-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>If the <strong>condition</strong> is TRUE, then proceed to <strong>action_command1</strong>; if the <strong>condition</strong> is FALSE, proceed to <strong>action_command2</strong>.</p>
-<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="conditional-statement.html#cb425-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb425-2"><a href="conditional-statement.html#cb425-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb425-3"><a href="conditional-statement.html#cb425-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&gt;</span> <span class="dv">3</span>){</span>
-<span id="cb425-4"><a href="conditional-statement.html#cb425-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;greater than 3&quot;</span>)</span>
-<span id="cb425-5"><a href="conditional-statement.html#cb425-5" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb425-6"><a href="conditional-statement.html#cb425-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;less than 3&quot;</span>)</span>
-<span id="cb425-7"><a href="conditional-statement.html#cb425-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="conditional-statement.html#cb428-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb428-2"><a href="conditional-statement.html#cb428-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb428-3"><a href="conditional-statement.html#cb428-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&gt;</span> <span class="dv">3</span>){</span>
+<span id="cb428-4"><a href="conditional-statement.html#cb428-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;greater than 3&quot;</span>)</span>
+<span id="cb428-5"><a href="conditional-statement.html#cb428-5" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb428-6"><a href="conditional-statement.html#cb428-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;less than 3&quot;</span>)</span>
+<span id="cb428-7"><a href="conditional-statement.html#cb428-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h4>
 With <strong>else if</strong>
 </h4>
-<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="conditional-statement.html#cb426-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(condition1){</span>
-<span id="cb426-2"><a href="conditional-statement.html#cb426-2" aria-hidden="true" tabindex="-1"></a>    action_command1</span>
-<span id="cb426-3"><a href="conditional-statement.html#cb426-3" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(condition2){</span>
-<span id="cb426-4"><a href="conditional-statement.html#cb426-4" aria-hidden="true" tabindex="-1"></a>    action_command2</span>
-<span id="cb426-5"><a href="conditional-statement.html#cb426-5" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb426-6"><a href="conditional-statement.html#cb426-6" aria-hidden="true" tabindex="-1"></a>    action_command3</span>
-<span id="cb426-7"><a href="conditional-statement.html#cb426-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb429-1"><a href="conditional-statement.html#cb429-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(condition1){</span>
+<span id="cb429-2"><a href="conditional-statement.html#cb429-2" aria-hidden="true" tabindex="-1"></a>    action_command1</span>
+<span id="cb429-3"><a href="conditional-statement.html#cb429-3" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(condition2){</span>
+<span id="cb429-4"><a href="conditional-statement.html#cb429-4" aria-hidden="true" tabindex="-1"></a>    action_command2</span>
+<span id="cb429-5"><a href="conditional-statement.html#cb429-5" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb429-6"><a href="conditional-statement.html#cb429-6" aria-hidden="true" tabindex="-1"></a>    action_command3</span>
+<span id="cb429-7"><a href="conditional-statement.html#cb429-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p><img src="images/ifelseif.png" width="450"/></p>
 <p>If the <strong>condition1</strong> is TRUE, then proceed to the <strong>action_command1</strong>; if the <strong>condition1</strong> is FALSE, test for <strong>condition2</strong>: if the <strong>condition2</strong> is TRUE, proceed to the <strong>action_command2</strong>; if neither <strong>condition1</strong> nor <strong>condition2</strong> are TRUE, then proceed to the <strong>action_command3</strong> (<em>else</em>).
 <br><br>
@@ -374,28 +374,28 @@ With <strong>else if</strong>
 <ul>
 <li>Example without <strong>else</strong></li>
 </ul>
-<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb427-1"><a href="conditional-statement.html#cb427-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">2</span></span>
-<span id="cb427-2"><a href="conditional-statement.html#cb427-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Test whether k is positive or negative or equal to 0</span></span>
-<span id="cb427-3"><a href="conditional-statement.html#cb427-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&lt;</span> <span class="dv">0</span>){</span>
-<span id="cb427-4"><a href="conditional-statement.html#cb427-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;negative&quot;</span>)</span>
-<span id="cb427-5"><a href="conditional-statement.html#cb427-5" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(k <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
-<span id="cb427-6"><a href="conditional-statement.html#cb427-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;positive&quot;</span>)</span>
-<span id="cb427-7"><a href="conditional-statement.html#cb427-7" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(k <span class="sc">==</span> <span class="dv">0</span>){</span>
-<span id="cb427-8"><a href="conditional-statement.html#cb427-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;is 0&quot;</span>)</span>
-<span id="cb427-9"><a href="conditional-statement.html#cb427-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb430"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb430-1"><a href="conditional-statement.html#cb430-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">2</span></span>
+<span id="cb430-2"><a href="conditional-statement.html#cb430-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Test whether k is positive or negative or equal to 0</span></span>
+<span id="cb430-3"><a href="conditional-statement.html#cb430-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&lt;</span> <span class="dv">0</span>){</span>
+<span id="cb430-4"><a href="conditional-statement.html#cb430-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;negative&quot;</span>)</span>
+<span id="cb430-5"><a href="conditional-statement.html#cb430-5" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(k <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb430-6"><a href="conditional-statement.html#cb430-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;positive&quot;</span>)</span>
+<span id="cb430-7"><a href="conditional-statement.html#cb430-7" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(k <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb430-8"><a href="conditional-statement.html#cb430-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;is 0&quot;</span>)</span>
+<span id="cb430-9"><a href="conditional-statement.html#cb430-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <ul>
 <li>Example with <strong>else</strong></li>
 </ul>
-<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="conditional-statement.html#cb428-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb428-2"><a href="conditional-statement.html#cb428-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb428-3"><a href="conditional-statement.html#cb428-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print if value is &lt;= 3</span></span>
-<span id="cb428-4"><a href="conditional-statement.html#cb428-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&lt;=</span> <span class="dv">3</span>){</span>
-<span id="cb428-5"><a href="conditional-statement.html#cb428-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;less than or equal to 3&quot;</span>)</span>
-<span id="cb428-6"><a href="conditional-statement.html#cb428-6" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(k <span class="sc">&gt;=</span> <span class="dv">8</span>){</span>
-<span id="cb428-7"><a href="conditional-statement.html#cb428-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;greater than or equal to 8&quot;</span>)</span>
-<span id="cb428-8"><a href="conditional-statement.html#cb428-8" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb428-9"><a href="conditional-statement.html#cb428-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;greater than 3 and less than 8&quot;</span>)</span>
-<span id="cb428-10"><a href="conditional-statement.html#cb428-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb431-1"><a href="conditional-statement.html#cb431-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb431-2"><a href="conditional-statement.html#cb431-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb431-3"><a href="conditional-statement.html#cb431-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print if value is &lt;= 3</span></span>
+<span id="cb431-4"><a href="conditional-statement.html#cb431-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(k <span class="sc">&lt;=</span> <span class="dv">3</span>){</span>
+<span id="cb431-5"><a href="conditional-statement.html#cb431-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;less than or equal to 3&quot;</span>)</span>
+<span id="cb431-6"><a href="conditional-statement.html#cb431-6" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(k <span class="sc">&gt;=</span> <span class="dv">8</span>){</span>
+<span id="cb431-7"><a href="conditional-statement.html#cb431-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;greater than or equal to 8&quot;</span>)</span>
+<span id="cb431-8"><a href="conditional-statement.html#cb431-8" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb431-9"><a href="conditional-statement.html#cb431-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;greater than 3 and less than 8&quot;</span>)</span>
+<span id="cb431-10"><a href="conditional-statement.html#cb431-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <!--chapter:end:conditional.Rmd-->
 </div>
             </section>

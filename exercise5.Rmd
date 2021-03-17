@@ -149,7 +149,7 @@ mydf3 <- mydf[mydf$Sex=="M" & mydf$Height > 170,]
 </details>
 
 
-### Exercise 5b (EXTRA: only if time allows, or to do at home!)
+### Exercise 5b
 
 **1. Create two data frames mydf1 and mydf2 as:**
 
@@ -222,7 +222,7 @@ mydf3[order(mydf3$age, decreasing = TRUE), ]
 
 </details>
 
-### Exercise 5c (EXTRA: only if time allows, or to do at home!!)
+### Exercise 5c
 
 **1- Using the download.file function, download [this file](https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData) to your current directory.** (Right click on "this file" -> Copy link location to get the full path).
 
@@ -236,6 +236,7 @@ mydf3[order(mydf3$age, decreasing = TRUE), ]
 download.file("https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData", "genes_dataframe.RData")
 ```
 
+</details>
 
 **2- The function dir() lists the files and directories present in the current directory: check if genes_dataframe.RData was copied.**
 
@@ -252,6 +253,7 @@ dir()
 
 **3- Load genes_dataframe.RData in your environment**
 Use the *load* function.
+<br> The **.RData** file format contains the environment (objects) of an R session.
 
 <details>
 <summary>
@@ -264,7 +266,7 @@ load("genes_dataframe.RData")
 
 </details>
 
-**4- genes_dataframe.RData contains the mydf_genes object: is it now present in your environment?**
+**4- genes_dataframe.RData contains the mydf_genes object (it is a data frame): is it now present in your environment?**
 
 <details>
 <summary>
