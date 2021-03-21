@@ -72,7 +72,7 @@ The file is now in your current working directory. Check with **dir()** (lists o
 2. Read in the content of **inputA.txt** using the **scan** function: save in object **z**.
 How many elements does **z** contain?
 
-3- **Sort z**: save sorted vector in a new object **zsorted** (see function **sort()**)
+3. **Sort vector z**: save sorted vector in the new object **zsorted** (see function **sort()**)
 
 4. Write zsorted content into file **outputA.txt**, using the **write()** function.
 
@@ -128,4 +128,4 @@ What are the dimensions of **pop**? What are the column names? Check the first r
 
 3. Select all states that are in the "Eurozone". What is the **total population** of the Eurozone, according to this table?
 
-4. Write to file **Eurozone.csv** States and Capitals that belong to the "Eurozone. You need to select rows as previously done, and also the State and Capital columns.
+4. Write to file **Eurozone.csv** States and Capitals that belong to the "Eurozone". You need to select rows, as previously done, and also the State and Capital columns.

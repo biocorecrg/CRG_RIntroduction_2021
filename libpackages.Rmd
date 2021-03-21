@@ -9,7 +9,7 @@
 ## R base
 
 A set a standard packages which are supplied with R by default.<br>
-Example: package base (write, table, rownames functions), package utils (read.table, str functions), package stats (var, na.omit, median functions).
+Example: package **base** (write, table, rownames functions), package **utils** (read.table, str functions), package **stats** (var, na.omit, median functions).
 
 ## R contrib
 

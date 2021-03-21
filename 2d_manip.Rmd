@@ -246,13 +246,13 @@ dfgrep <- data.frame(genes=c("CCNA1", "TP53", "CCND1", "CCNF", "A2M", "PARP2", "
                      pvalue_2=c(0.87, 0.06, 0.001, 0.4, 0.8, 0.76, 0.08, 0.99))
 ```
 
-* Select the "pvalue" columns of dfgrep:
+* Select the "pvalue" columns of **dfgrep** with grep:
 
 ```{r}
 dfgrep[, grep("pvalue", colnames(dfgrep))]
 ```
 
-* Select all tumor protein gene (TP genes) rows:
+* Select all tumor protein gene (TP genes) rows with grep:
 
 ```{r}
 dfgrep[grep("TP", dfgrep$genes), ]
@@ -263,7 +263,7 @@ For more details about grep and pattern selection, you can refer to the [dedicat
 
 **HANDS-ON**
 
-Given the previous dfgrep data frame:
+Let's take the **dfgrep** data frame again:
 
 1. What is the average "log2FC_1" and "log2FC_2" of the cyclin genes (CCN symbols)? Proceed this way:
   * Select all CCN gene rows.

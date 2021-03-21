@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-17" />
+<meta name="date" content="2021-03-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -318,23 +318,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="histograms-1" class="section level2" number="16.6">
 <h2><span class="header-section-number">16.6</span> Histograms</h2>
 <p>Simple histogram on one sample (using the df2 data frame):</p>
-<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="histograms-1.html#cb342-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb345-1"><a href="histograms-1.html#cb345-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-257-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-250-1.png" width="672" /></p>
 <p>Histogram on more samples (using df_long):</p>
-<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb344-1"><a href="histograms-1.html#cb344-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb347-1"><a href="histograms-1.html#cb347-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-258-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-251-1.png" width="672" /></p>
 <p>Split the data per sample (“variable” column that represents here the samples):</p>
-<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="histograms-1.html#cb346-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="histograms-1.html#cb349-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-259-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-252-1.png" width="672" /></p>
 <p>By default, the histograms are <strong>stacked</strong>: change to position <strong>dodge</strong> (side by side):</p>
-<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb348-1"><a href="histograms-1.html#cb348-1" aria-hidden="true" tabindex="-1"></a>phist <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
-<span id="cb348-2"><a href="histograms-1.html#cb348-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">position=</span><span class="st">&#39;dodge&#39;</span>)</span>
-<span id="cb348-3"><a href="histograms-1.html#cb348-3" aria-hidden="true" tabindex="-1"></a>phist</span></code></pre></div>
+<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb351-1"><a href="histograms-1.html#cb351-1" aria-hidden="true" tabindex="-1"></a>phist <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
+<span id="cb351-2"><a href="histograms-1.html#cb351-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">position=</span><span class="st">&#39;dodge&#39;</span>)</span>
+<span id="cb351-3"><a href="histograms-1.html#cb351-3" aria-hidden="true" tabindex="-1"></a>phist</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-260-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-253-1.png" width="672" /></p>
 </div>
             </section>
 
