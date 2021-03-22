@@ -229,6 +229,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
+<li class="chapter" data-level="12.9" data-path="workspace.html"><a href="workspace.html"><i class="fa fa-check"></i><b>12.9</b> Workspace</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -332,6 +333,8 @@ If non-numeric, you need to specify the type of data contained in the file:</p>
 <span id="cb241-4"><a href="on-vectors.html#cb241-4" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </span>
 <span id="cb241-5"><a href="on-vectors.html#cb241-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">what=</span><span class="st">&quot;character&quot;</span>)</span></code></pre></div>
 <p>Regarding paths of files:<br>
+If you don’t specify the path, the file is assumed to be located in the current working directory (<em>getwd()</em>)
+<br>
 If the file is not in the current directory, you can provide a full or relative path. For example, if located in the home directory, read it as:</p>
 <div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="on-vectors.html#cb242-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scan</span>(<span class="at">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </span>
 <span id="cb242-2"><a href="on-vectors.html#cb242-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">what=</span><span class="st">&quot;character&quot;</span>)</span></code></pre></div>
@@ -344,7 +347,8 @@ If the file is not in the current directory, you can provide a full or relative 
 <span id="cb243-4"><a href="on-vectors.html#cb243-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(<span class="at">x=</span>mygenes, </span>
 <span id="cb243-5"><a href="on-vectors.html#cb243-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;gene_list.txt&quot;</span>)</span></code></pre></div>
 <p>Regarding paths of files:<br>
-When you write a file, you can also specify a full or relative path:</p>
+When you write a file, without a path, it will be created in the current working directory.<br>
+You can also provide a full or relative path:</p>
 <div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="on-vectors.html#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write to home directory</span></span>
 <span id="cb244-2"><a href="on-vectors.html#cb244-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(<span class="at">x=</span>mygenes,</span>
 <span id="cb244-3"><a href="on-vectors.html#cb244-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">file=</span><span class="st">&quot;~/gene_list.txt&quot;</span>)</span>

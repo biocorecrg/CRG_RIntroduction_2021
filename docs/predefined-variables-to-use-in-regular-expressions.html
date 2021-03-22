@@ -229,6 +229,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
+<li class="chapter" data-level="12.9" data-path="workspace.html"><a href="workspace.html"><i class="fa fa-check"></i><b>12.9</b> Workspace</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -363,21 +364,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Remove the @ and the email provider from each address</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb420-1"><a href="predefined-variables-to-use-in-regular-expressions.html#cb420-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;@[[:lower:][:punct:]]+&quot;</span>, </span>
-<span id="cb420-2"><a href="predefined-variables-to-use-in-regular-expressions.html#cb420-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">replacement=</span><span class="st">&quot;&quot;</span>, </span>
-<span id="cb420-3"><a href="predefined-variables-to-use-in-regular-expressions.html#cb420-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span>vec_ad)</span></code></pre></div>
+<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb421-1"><a href="predefined-variables-to-use-in-regular-expressions.html#cb421-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;@[[:lower:][:punct:]]+&quot;</span>, </span>
+<span id="cb421-2"><a href="predefined-variables-to-use-in-regular-expressions.html#cb421-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">replacement=</span><span class="st">&quot;&quot;</span>, </span>
+<span id="cb421-3"><a href="predefined-variables-to-use-in-regular-expressions.html#cb421-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span>vec_ad)</span></code></pre></div>
 <ul>
 <li>Same thing but remove additionally any number(s) BEFORE the @ (if any):</li>
 </ul>
-<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb421-1"><a href="predefined-variables-to-use-in-regular-expressions.html#cb421-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;[[:digit:]]*@[[:lower:][:punct:]]+&quot;</span>,</span>
-<span id="cb421-2"><a href="predefined-variables-to-use-in-regular-expressions.html#cb421-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement=</span><span class="st">&quot;&quot;</span>,</span>
-<span id="cb421-3"><a href="predefined-variables-to-use-in-regular-expressions.html#cb421-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad)</span></code></pre></div>
+<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="predefined-variables-to-use-in-regular-expressions.html#cb422-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;[[:digit:]]*@[[:lower:][:punct:]]+&quot;</span>,</span>
+<span id="cb422-2"><a href="predefined-variables-to-use-in-regular-expressions.html#cb422-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement=</span><span class="st">&quot;&quot;</span>,</span>
+<span id="cb422-3"><a href="predefined-variables-to-use-in-regular-expressions.html#cb422-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad)</span></code></pre></div>
 <ul>
 <li>Same but simplified:</li>
 </ul>
-<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="predefined-variables-to-use-in-regular-expressions.html#cb422-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;[[:digit:]]*@[[:print:]]+&quot;</span>,</span>
-<span id="cb422-2"><a href="predefined-variables-to-use-in-regular-expressions.html#cb422-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement=</span><span class="st">&quot;&quot;</span>,</span>
-<span id="cb422-3"><a href="predefined-variables-to-use-in-regular-expressions.html#cb422-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad)</span></code></pre></div>
+<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="predefined-variables-to-use-in-regular-expressions.html#cb423-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;[[:digit:]]*@[[:print:]]+&quot;</span>,</span>
+<span id="cb423-2"><a href="predefined-variables-to-use-in-regular-expressions.html#cb423-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement=</span><span class="st">&quot;&quot;</span>,</span>
+<span id="cb423-3"><a href="predefined-variables-to-use-in-regular-expressions.html#cb423-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad)</span></code></pre></div>
 </div>
             </section>
 

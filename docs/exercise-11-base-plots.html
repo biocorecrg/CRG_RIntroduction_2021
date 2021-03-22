@@ -229,6 +229,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
+<li class="chapter" data-level="12.9" data-path="workspace.html"><a href="workspace.html"><i class="fa fa-check"></i><b>12.9</b> Workspace</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -323,55 +324,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="exercise-11-base-plots.html#cb289-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb289-2"><a href="exercise-11-base-plots.html#cb289-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module3&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="exercise-11-base-plots.html#cb293-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb293-2"><a href="exercise-11-base-plots.html#cb293-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module3&quot;</span>)</span></code></pre></div>
 </details>
 <div id="exercise-11a--scatter-plot" class="section level3" number="14.3.1">
 <h3><span class="header-section-number">14.3.1</span> Exercise 11a- scatter plot</h3>
 <p><strong>1- Create the following data frame</strong></p>
-<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="exercise-11-base-plots.html#cb290-1" aria-hidden="true" tabindex="-1"></a>genes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">sample1=</span><span class="fu">rnorm</span>(<span class="dv">300</span>),</span>
-<span id="cb290-2"><a href="exercise-11-base-plots.html#cb290-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">sample2=</span><span class="fu">rnorm</span>(<span class="dv">300</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="exercise-11-base-plots.html#cb294-1" aria-hidden="true" tabindex="-1"></a>genes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">sample1=</span><span class="fu">rnorm</span>(<span class="dv">300</span>),</span>
+<span id="cb294-2"><a href="exercise-11-base-plots.html#cb294-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">sample2=</span><span class="fu">rnorm</span>(<span class="dv">300</span>))</span></code></pre></div>
 <p><strong>2- Create a scatter plot showing sample1 (x-axis) vs sample2 (y-axis) of genes.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="exercise-11-base-plots.html#cb291-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, genes<span class="sc">$</span>sample2)</span></code></pre></div>
+<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="exercise-11-base-plots.html#cb295-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, genes<span class="sc">$</span>sample2)</span></code></pre></div>
 </details>
 <p><strong>3- Change the point type and color.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="exercise-11-base-plots.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, </span>
-<span id="cb292-2"><a href="exercise-11-base-plots.html#cb292-2" aria-hidden="true" tabindex="-1"></a>     genes<span class="sc">$</span>sample2, </span>
-<span id="cb292-3"><a href="exercise-11-base-plots.html#cb292-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
-<span id="cb292-4"><a href="exercise-11-base-plots.html#cb292-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="exercise-11-base-plots.html#cb296-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, </span>
+<span id="cb296-2"><a href="exercise-11-base-plots.html#cb296-2" aria-hidden="true" tabindex="-1"></a>     genes<span class="sc">$</span>sample2, </span>
+<span id="cb296-3"><a href="exercise-11-base-plots.html#cb296-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
+<span id="cb296-4"><a href="exercise-11-base-plots.html#cb296-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">3</span>)</span></code></pre></div>
 </details>
 <p><strong>4- Change x-axis and y-axis labels to “Sample 1” and “Sample 2,” respectively.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="exercise-11-base-plots.html#cb293-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, </span>
-<span id="cb293-2"><a href="exercise-11-base-plots.html#cb293-2" aria-hidden="true" tabindex="-1"></a>     genes<span class="sc">$</span>sample2, </span>
-<span id="cb293-3"><a href="exercise-11-base-plots.html#cb293-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
-<span id="cb293-4"><a href="exercise-11-base-plots.html#cb293-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">3</span>,</span>
-<span id="cb293-5"><a href="exercise-11-base-plots.html#cb293-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </span>
-<span id="cb293-6"><a href="exercise-11-base-plots.html#cb293-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Sample 2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="exercise-11-base-plots.html#cb297-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, </span>
+<span id="cb297-2"><a href="exercise-11-base-plots.html#cb297-2" aria-hidden="true" tabindex="-1"></a>     genes<span class="sc">$</span>sample2, </span>
+<span id="cb297-3"><a href="exercise-11-base-plots.html#cb297-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
+<span id="cb297-4"><a href="exercise-11-base-plots.html#cb297-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">3</span>,</span>
+<span id="cb297-5"><a href="exercise-11-base-plots.html#cb297-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </span>
+<span id="cb297-6"><a href="exercise-11-base-plots.html#cb297-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Sample 2&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>5- Add a title to the plot.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="exercise-11-base-plots.html#cb294-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, </span>
-<span id="cb294-2"><a href="exercise-11-base-plots.html#cb294-2" aria-hidden="true" tabindex="-1"></a>     genes<span class="sc">$</span>sample2, </span>
-<span id="cb294-3"><a href="exercise-11-base-plots.html#cb294-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
-<span id="cb294-4"><a href="exercise-11-base-plots.html#cb294-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">3</span>,</span>
-<span id="cb294-5"><a href="exercise-11-base-plots.html#cb294-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </span>
-<span id="cb294-6"><a href="exercise-11-base-plots.html#cb294-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Sample 2&quot;</span>,</span>
-<span id="cb294-7"><a href="exercise-11-base-plots.html#cb294-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;scatter plot&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="exercise-11-base-plots.html#cb298-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, </span>
+<span id="cb298-2"><a href="exercise-11-base-plots.html#cb298-2" aria-hidden="true" tabindex="-1"></a>     genes<span class="sc">$</span>sample2, </span>
+<span id="cb298-3"><a href="exercise-11-base-plots.html#cb298-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
+<span id="cb298-4"><a href="exercise-11-base-plots.html#cb298-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">3</span>,</span>
+<span id="cb298-5"><a href="exercise-11-base-plots.html#cb298-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </span>
+<span id="cb298-6"><a href="exercise-11-base-plots.html#cb298-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Sample 2&quot;</span>,</span>
+<span id="cb298-7"><a href="exercise-11-base-plots.html#cb298-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;scatter plot&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>6- Add a vertical red line that shows the median expression value of sample 1. Do it in two steps:</strong><br>
 a. calculate the median expression of genes in sample 1.<br>
@@ -380,46 +381,46 @@ b. plot a vertical line using <strong>abline()</strong>.</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="exercise-11-base-plots.html#cb295-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median expression of sample1</span></span>
-<span id="cb295-2"><a href="exercise-11-base-plots.html#cb295-2" aria-hidden="true" tabindex="-1"></a>med1 <span class="ot">&lt;-</span> <span class="fu">median</span>(genes<span class="sc">$</span>sample1)</span>
-<span id="cb295-3"><a href="exercise-11-base-plots.html#cb295-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb295-4"><a href="exercise-11-base-plots.html#cb295-4" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
-<span id="cb295-5"><a href="exercise-11-base-plots.html#cb295-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, </span>
-<span id="cb295-6"><a href="exercise-11-base-plots.html#cb295-6" aria-hidden="true" tabindex="-1"></a>     genes<span class="sc">$</span>sample2, </span>
-<span id="cb295-7"><a href="exercise-11-base-plots.html#cb295-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
-<span id="cb295-8"><a href="exercise-11-base-plots.html#cb295-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">3</span>,</span>
-<span id="cb295-9"><a href="exercise-11-base-plots.html#cb295-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </span>
-<span id="cb295-10"><a href="exercise-11-base-plots.html#cb295-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Sample 2&quot;</span>,</span>
-<span id="cb295-11"><a href="exercise-11-base-plots.html#cb295-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;scatter plot&quot;</span>)</span>
-<span id="cb295-12"><a href="exercise-11-base-plots.html#cb295-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb295-13"><a href="exercise-11-base-plots.html#cb295-13" aria-hidden="true" tabindex="-1"></a><span class="co"># vertical line</span></span>
-<span id="cb295-14"><a href="exercise-11-base-plots.html#cb295-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span>med1, <span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="exercise-11-base-plots.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median expression of sample1</span></span>
+<span id="cb299-2"><a href="exercise-11-base-plots.html#cb299-2" aria-hidden="true" tabindex="-1"></a>med1 <span class="ot">&lt;-</span> <span class="fu">median</span>(genes<span class="sc">$</span>sample1)</span>
+<span id="cb299-3"><a href="exercise-11-base-plots.html#cb299-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb299-4"><a href="exercise-11-base-plots.html#cb299-4" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
+<span id="cb299-5"><a href="exercise-11-base-plots.html#cb299-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(genes<span class="sc">$</span>sample1, </span>
+<span id="cb299-6"><a href="exercise-11-base-plots.html#cb299-6" aria-hidden="true" tabindex="-1"></a>     genes<span class="sc">$</span>sample2, </span>
+<span id="cb299-7"><a href="exercise-11-base-plots.html#cb299-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
+<span id="cb299-8"><a href="exercise-11-base-plots.html#cb299-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">3</span>,</span>
+<span id="cb299-9"><a href="exercise-11-base-plots.html#cb299-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Sample 1&quot;</span>, </span>
+<span id="cb299-10"><a href="exercise-11-base-plots.html#cb299-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Sample 2&quot;</span>,</span>
+<span id="cb299-11"><a href="exercise-11-base-plots.html#cb299-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;scatter plot&quot;</span>)</span>
+<span id="cb299-12"><a href="exercise-11-base-plots.html#cb299-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb299-13"><a href="exercise-11-base-plots.html#cb299-13" aria-hidden="true" tabindex="-1"></a><span class="co"># vertical line</span></span>
+<span id="cb299-14"><a href="exercise-11-base-plots.html#cb299-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span>med1, <span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 </details>
 </div>
 <div id="exercise-11b--bar-plot-pie-chart" class="section level3" number="14.3.2">
 <h3><span class="header-section-number">14.3.2</span> Exercise 11b- bar plot + pie chart</h3>
 <p><strong>1- Create the following vector</strong></p>
-<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="exercise-11-base-plots.html#cb296-1" aria-hidden="true" tabindex="-1"></a>genes_significance <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;enriched&quot;</span>, <span class="st">&quot;depleted&quot;</span>, <span class="st">&quot;none&quot;</span>), <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">32</span>, <span class="dv">248</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="exercise-11-base-plots.html#cb300-1" aria-hidden="true" tabindex="-1"></a>genes_significance <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;enriched&quot;</span>, <span class="st">&quot;depleted&quot;</span>, <span class="st">&quot;none&quot;</span>), <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">32</span>, <span class="dv">248</span>))</span></code></pre></div>
 <p><strong>2- The vector describes whether a gene is up- (enriched) or down- (depleted) regulated, or not regulated (none).</strong><br>
 Produce a barplot that displays this information: how many genes are enriched, depleted, or not regulated.</p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="exercise-11-base-plots.html#cb297-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_significance))</span></code></pre></div>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="exercise-11-base-plots.html#cb301-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_significance))</span></code></pre></div>
 </details>
 <p><strong>3- Color the bars of the boxplot, each in a different color (3 colors of your choice)</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="exercise-11-base-plots.html#cb298-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_significance), </span>
-<span id="cb298-2"><a href="exercise-11-base-plots.html#cb298-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>))</span>
-<span id="cb298-3"><a href="exercise-11-base-plots.html#cb298-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb298-4"><a href="exercise-11-base-plots.html#cb298-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If you want to order the bars not by the default (alphabetical) order, you need to create an ordered factor!</span></span>
-<span id="cb298-5"><a href="exercise-11-base-plots.html#cb298-5" aria-hidden="true" tabindex="-1"></a>genes_factor <span class="ot">&lt;-</span> <span class="fu">factor</span>(genes_significance, <span class="at">ordered=</span><span class="cn">TRUE</span>, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;enriched&quot;</span>, <span class="st">&quot;none&quot;</span>, <span class="st">&quot;depleted&quot;</span>))</span>
-<span id="cb298-6"><a href="exercise-11-base-plots.html#cb298-6" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_factor), </span>
-<span id="cb298-7"><a href="exercise-11-base-plots.html#cb298-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="exercise-11-base-plots.html#cb302-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_significance), </span>
+<span id="cb302-2"><a href="exercise-11-base-plots.html#cb302-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>))</span>
+<span id="cb302-3"><a href="exercise-11-base-plots.html#cb302-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb302-4"><a href="exercise-11-base-plots.html#cb302-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If you want to order the bars not by the default (alphabetical) order, you need to create an ordered factor!</span></span>
+<span id="cb302-5"><a href="exercise-11-base-plots.html#cb302-5" aria-hidden="true" tabindex="-1"></a>genes_factor <span class="ot">&lt;-</span> <span class="fu">factor</span>(genes_significance, <span class="at">ordered=</span><span class="cn">TRUE</span>, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;enriched&quot;</span>, <span class="st">&quot;none&quot;</span>, <span class="st">&quot;depleted&quot;</span>))</span>
+<span id="cb302-6"><a href="exercise-11-base-plots.html#cb302-6" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_factor), </span>
+<span id="cb302-7"><a href="exercise-11-base-plots.html#cb302-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>))</span></code></pre></div>
 </details>
 <p><strong>4- Use the argument “names.arg” in barplot() to rename the bars:</strong>
 Change depleted to “Down,” enriched to “Up,” none to “Not significant”</p>
@@ -427,9 +428,9 @@ Change depleted to “Down,” enriched to “Up,” none to “Not significant�
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="exercise-11-base-plots.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_significance), </span>
-<span id="cb299-2"><a href="exercise-11-base-plots.html#cb299-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </span>
-<span id="cb299-3"><a href="exercise-11-base-plots.html#cb299-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">names.arg=</span><span class="fu">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="exercise-11-base-plots.html#cb303-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_significance), </span>
+<span id="cb303-2"><a href="exercise-11-base-plots.html#cb303-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </span>
+<span id="cb303-3"><a href="exercise-11-base-plots.html#cb303-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">names.arg=</span><span class="fu">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>))</span></code></pre></div>
 </details>
 <p><strong>5- The “las” argument allows to rotate the x-axis labels for a better readability.</strong>
 Try value 2 for las: what happens?</p>
@@ -437,27 +438,27 @@ Try value 2 for las: what happens?</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="exercise-11-base-plots.html#cb300-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_significance), </span>
-<span id="cb300-2"><a href="exercise-11-base-plots.html#cb300-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </span>
-<span id="cb300-3"><a href="exercise-11-base-plots.html#cb300-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">names.arg=</span><span class="fu">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>), </span>
-<span id="cb300-4"><a href="exercise-11-base-plots.html#cb300-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">las=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="exercise-11-base-plots.html#cb304-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(genes_significance), </span>
+<span id="cb304-2"><a href="exercise-11-base-plots.html#cb304-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </span>
+<span id="cb304-3"><a href="exercise-11-base-plots.html#cb304-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">names.arg=</span><span class="fu">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>), </span>
+<span id="cb304-4"><a href="exercise-11-base-plots.html#cb304-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">las=</span><span class="dv">2</span>)</span></code></pre></div>
 </details>
 <p><strong>6- Create a pie chart of the same information (Enriched, Depleted, None)</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="exercise-11-base-plots.html#cb301-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(<span class="fu">table</span>(genes_significance))</span></code></pre></div>
+<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="exercise-11-base-plots.html#cb305-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(<span class="fu">table</span>(genes_significance))</span></code></pre></div>
 </details>
 <p>Change the color of the slices, modify the labels, and add a title.</p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="exercise-11-base-plots.html#cb302-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(<span class="fu">table</span>(genes_significance), </span>
-<span id="cb302-2"><a href="exercise-11-base-plots.html#cb302-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </span>
-<span id="cb302-3"><a href="exercise-11-base-plots.html#cb302-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;pie chart&quot;</span>, </span>
-<span id="cb302-4"><a href="exercise-11-base-plots.html#cb302-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels=</span><span class="fu">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="exercise-11-base-plots.html#cb306-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(<span class="fu">table</span>(genes_significance), </span>
+<span id="cb306-2"><a href="exercise-11-base-plots.html#cb306-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;grey&quot;</span>), </span>
+<span id="cb306-3"><a href="exercise-11-base-plots.html#cb306-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;pie chart&quot;</span>, </span>
+<span id="cb306-4"><a href="exercise-11-base-plots.html#cb306-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels=</span><span class="fu">c</span>(<span class="st">&quot;Down&quot;</span>, <span class="st">&quot;Up&quot;</span>, <span class="st">&quot;Not significant&quot;</span>))</span></code></pre></div>
 </details>
 </div>
 <div id="exercise-11c--histogram" class="section level3" number="14.3.3">
@@ -467,7 +468,7 @@ Try value 2 for las: what happens?</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="exercise-11-base-plots.html#cb303-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1)</span></code></pre></div>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="exercise-11-base-plots.html#cb307-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1)</span></code></pre></div>
 </details>
 <p><strong>2- Repeat the histogram but change argument “breaks” to 50.</strong><br>
 What is the difference ?</p>
@@ -475,41 +476,41 @@ What is the difference ?</p>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="exercise-11-base-plots.html#cb304-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1, </span>
-<span id="cb304-2"><a href="exercise-11-base-plots.html#cb304-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span><span class="dv">50</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="exercise-11-base-plots.html#cb308-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1, </span>
+<span id="cb308-2"><a href="exercise-11-base-plots.html#cb308-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span><span class="dv">50</span>)</span></code></pre></div>
 </details>
 <p><strong>3- Color this histogram in light blue.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="exercise-11-base-plots.html#cb305-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1, </span>
-<span id="cb305-2"><a href="exercise-11-base-plots.html#cb305-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span><span class="dv">50</span>, </span>
-<span id="cb305-3"><a href="exercise-11-base-plots.html#cb305-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb309-1"><a href="exercise-11-base-plots.html#cb309-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1, </span>
+<span id="cb309-2"><a href="exercise-11-base-plots.html#cb309-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span><span class="dv">50</span>, </span>
+<span id="cb309-3"><a href="exercise-11-base-plots.html#cb309-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>4- “Zoom in” the histogram: show only the distribution of expression values from 0 to 2 (x-axis) using the xlim argument.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="exercise-11-base-plots.html#cb306-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1, </span>
-<span id="cb306-2"><a href="exercise-11-base-plots.html#cb306-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span><span class="dv">50</span>, </span>
-<span id="cb306-3"><a href="exercise-11-base-plots.html#cb306-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>,</span>
-<span id="cb306-4"><a href="exercise-11-base-plots.html#cb306-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="exercise-11-base-plots.html#cb310-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1, </span>
+<span id="cb310-2"><a href="exercise-11-base-plots.html#cb310-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks=</span><span class="dv">50</span>, </span>
+<span id="cb310-3"><a href="exercise-11-base-plots.html#cb310-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>,</span>
+<span id="cb310-4"><a href="exercise-11-base-plots.html#cb310-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>))</span></code></pre></div>
 </details>
 <p><strong>5- Save the histogram in a pdf file.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="exercise-11-base-plots.html#cb307-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">&quot;myhistogram.pdf&quot;</span>)</span>
-<span id="cb307-2"><a href="exercise-11-base-plots.html#cb307-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb307-3"><a href="exercise-11-base-plots.html#cb307-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1, </span>
-<span id="cb307-4"><a href="exercise-11-base-plots.html#cb307-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="dv">50</span>, </span>
-<span id="cb307-5"><a href="exercise-11-base-plots.html#cb307-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
-<span id="cb307-6"><a href="exercise-11-base-plots.html#cb307-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>))</span>
-<span id="cb307-7"><a href="exercise-11-base-plots.html#cb307-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb307-8"><a href="exercise-11-base-plots.html#cb307-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb311-1"><a href="exercise-11-base-plots.html#cb311-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">&quot;myhistogram.pdf&quot;</span>)</span>
+<span id="cb311-2"><a href="exercise-11-base-plots.html#cb311-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb311-3"><a href="exercise-11-base-plots.html#cb311-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(genes<span class="sc">$</span>sample1, </span>
+<span id="cb311-4"><a href="exercise-11-base-plots.html#cb311-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="dv">50</span>, </span>
+<span id="cb311-5"><a href="exercise-11-base-plots.html#cb311-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="st">&quot;lightblue&quot;</span>, </span>
+<span id="cb311-6"><a href="exercise-11-base-plots.html#cb311-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span>))</span>
+<span id="cb311-7"><a href="exercise-11-base-plots.html#cb311-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb311-8"><a href="exercise-11-base-plots.html#cb311-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 </details>
 
 </div>

@@ -1,0 +1,33 @@
+## Workspace
+
+* You can save the **workspace** (all objects in the environment for the current session) with the **save.image** function:
+
+```{r}
+# save all objects in file "Module2.RData"
+save.image(file="Module2.RData")
+```
+
+You can then restore the environment with the **load** function:
+
+```{r}
+load(file="Module2.RData")
+```
+
+* If you want to save only selected objects, you can do it with the **save** function:
+
+```{r}
+a <- 1:10
+k <- "test"
+e <- c(10, 21, 32)
+# save object a in "objecta.RData"
+save(a, file="objecta.RData")
+# save objects a, k and e in "objects.RData"
+save(a, k, e, file="objects.RData")
+```
+
+And restore save data sets using the same **load** function:
+
+```{r}
+# load back
+load(file="objects.RData")
+```

@@ -229,6 +229,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
+<li class="chapter" data-level="12.9" data-path="workspace.html"><a href="workspace.html"><i class="fa fa-check"></i><b>12.9</b> Workspace</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -317,86 +318,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="with-the-console" class="section level2" number="14.2">
 <h2><span class="header-section-number">14.2</span> With the console</h2>
-<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="with-the-console.html#cb283-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Open the file that will contain your plot (the name is up to you)</span></span>
-<span id="cb283-2"><a href="with-the-console.html#cb283-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file=</span><span class="st">&quot;myplot.pdf&quot;</span>)</span>
-<span id="cb283-3"><a href="with-the-console.html#cb283-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb283-4"><a href="with-the-console.html#cb283-4" aria-hidden="true" tabindex="-1"></a><span class="co"># execute the plot</span></span>
-<span id="cb283-5"><a href="with-the-console.html#cb283-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb283-6"><a href="with-the-console.html#cb283-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb283-7"><a href="with-the-console.html#cb283-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Close the file that will contain the plot</span></span>
-<span id="cb283-8"><a href="with-the-console.html#cb283-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="with-the-console.html#cb287-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Open the file that will contain your plot (the name is up to you)</span></span>
+<span id="cb287-2"><a href="with-the-console.html#cb287-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file=</span><span class="st">&quot;myplot.pdf&quot;</span>)</span>
+<span id="cb287-3"><a href="with-the-console.html#cb287-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb287-4"><a href="with-the-console.html#cb287-4" aria-hidden="true" tabindex="-1"></a><span class="co"># execute the plot</span></span>
+<span id="cb287-5"><a href="with-the-console.html#cb287-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb287-6"><a href="with-the-console.html#cb287-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb287-7"><a href="with-the-console.html#cb287-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Close the file that will contain the plot</span></span>
+<span id="cb287-8"><a href="with-the-console.html#cb287-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 <h4>
 Formats
 </h4>
 <p>R supports a variety of file formats for figures: pdf, png, jpeg, tiff, bmp, svg, ps.<br>
 They all come with their own function, for example:</p>
-<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="with-the-console.html#cb284-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TIFF</span></span>
-<span id="cb284-2"><a href="with-the-console.html#cb284-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tiff</span>(<span class="at">file=</span><span class="st">&quot;myfile.tiff&quot;</span>)</span>
-<span id="cb284-3"><a href="with-the-console.html#cb284-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb284-4"><a href="with-the-console.html#cb284-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb284-5"><a href="with-the-console.html#cb284-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb284-6"><a href="with-the-console.html#cb284-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
-<span id="cb284-7"><a href="with-the-console.html#cb284-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb284-8"><a href="with-the-console.html#cb284-8" aria-hidden="true" tabindex="-1"></a><span class="co"># JPEG</span></span>
-<span id="cb284-9"><a href="with-the-console.html#cb284-9" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">file=</span><span class="st">&quot;myfile.jpeg&quot;</span>)</span>
-<span id="cb284-10"><a href="with-the-console.html#cb284-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb284-11"><a href="with-the-console.html#cb284-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb284-12"><a href="with-the-console.html#cb284-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb284-13"><a href="with-the-console.html#cb284-13" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
-<span id="cb284-14"><a href="with-the-console.html#cb284-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb284-15"><a href="with-the-console.html#cb284-15" aria-hidden="true" tabindex="-1"></a><span class="co"># etc.</span></span></code></pre></div>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="with-the-console.html#cb288-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TIFF</span></span>
+<span id="cb288-2"><a href="with-the-console.html#cb288-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tiff</span>(<span class="at">file=</span><span class="st">&quot;myfile.tiff&quot;</span>)</span>
+<span id="cb288-3"><a href="with-the-console.html#cb288-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb288-4"><a href="with-the-console.html#cb288-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb288-5"><a href="with-the-console.html#cb288-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb288-6"><a href="with-the-console.html#cb288-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
+<span id="cb288-7"><a href="with-the-console.html#cb288-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb288-8"><a href="with-the-console.html#cb288-8" aria-hidden="true" tabindex="-1"></a><span class="co"># JPEG</span></span>
+<span id="cb288-9"><a href="with-the-console.html#cb288-9" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">file=</span><span class="st">&quot;myfile.jpeg&quot;</span>)</span>
+<span id="cb288-10"><a href="with-the-console.html#cb288-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb288-11"><a href="with-the-console.html#cb288-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb288-12"><a href="with-the-console.html#cb288-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb288-13"><a href="with-the-console.html#cb288-13" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
+<span id="cb288-14"><a href="with-the-console.html#cb288-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb288-15"><a href="with-the-console.html#cb288-15" aria-hidden="true" tabindex="-1"></a><span class="co"># etc.</span></span></code></pre></div>
 <p>The size of the output file can be changed:</p>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="with-the-console.html#cb285-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Default: 7 inches (both width and height) for svg, pdf, ps.</span></span>
-<span id="cb285-2"><a href="with-the-console.html#cb285-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svg</span>(<span class="at">file=</span><span class="st">&quot;myfile.svg&quot;</span>, <span class="at">width=</span><span class="dv">8</span>, <span class="at">height=</span><span class="dv">12</span>)</span>
-<span id="cb285-3"><a href="with-the-console.html#cb285-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb285-4"><a href="with-the-console.html#cb285-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb285-5"><a href="with-the-console.html#cb285-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb285-6"><a href="with-the-console.html#cb285-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
-<span id="cb285-7"><a href="with-the-console.html#cb285-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb285-8"><a href="with-the-console.html#cb285-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Default: 480 pixels (both width and height) for jpeg, tiff, png, bmp.</span></span>
-<span id="cb285-9"><a href="with-the-console.html#cb285-9" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">file=</span><span class="st">&quot;myfile.png&quot;</span>, <span class="at">width=</span><span class="dv">500</span>, <span class="at">height=</span><span class="dv">600</span>)</span>
-<span id="cb285-10"><a href="with-the-console.html#cb285-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb285-11"><a href="with-the-console.html#cb285-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb285-12"><a href="with-the-console.html#cb285-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb285-13"><a href="with-the-console.html#cb285-13" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="with-the-console.html#cb289-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Default: 7 inches (both width and height) for svg, pdf, ps.</span></span>
+<span id="cb289-2"><a href="with-the-console.html#cb289-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svg</span>(<span class="at">file=</span><span class="st">&quot;myfile.svg&quot;</span>, <span class="at">width=</span><span class="dv">8</span>, <span class="at">height=</span><span class="dv">12</span>)</span>
+<span id="cb289-3"><a href="with-the-console.html#cb289-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb289-4"><a href="with-the-console.html#cb289-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb289-5"><a href="with-the-console.html#cb289-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb289-6"><a href="with-the-console.html#cb289-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
+<span id="cb289-7"><a href="with-the-console.html#cb289-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb289-8"><a href="with-the-console.html#cb289-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Default: 480 pixels (both width and height) for jpeg, tiff, png, bmp.</span></span>
+<span id="cb289-9"><a href="with-the-console.html#cb289-9" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">file=</span><span class="st">&quot;myfile.png&quot;</span>, <span class="at">width=</span><span class="dv">500</span>, <span class="at">height=</span><span class="dv">600</span>)</span>
+<span id="cb289-10"><a href="with-the-console.html#cb289-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb289-11"><a href="with-the-console.html#cb289-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb289-12"><a href="with-the-console.html#cb289-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb289-13"><a href="with-the-console.html#cb289-13" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 <p><em>Note that pdf is the only format that supports saving several pages</em>:</p>
-<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="with-the-console.html#cb286-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file=</span><span class="st">&quot;myfile_pages.pdf&quot;</span>)</span>
-<span id="cb286-2"><a href="with-the-console.html#cb286-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb286-3"><a href="with-the-console.html#cb286-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb286-4"><a href="with-the-console.html#cb286-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">20</span>)</span>
-<span id="cb286-5"><a href="with-the-console.html#cb286-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb286-6"><a href="with-the-console.html#cb286-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="with-the-console.html#cb290-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file=</span><span class="st">&quot;myfile_pages.pdf&quot;</span>)</span>
+<span id="cb290-2"><a href="with-the-console.html#cb290-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb290-3"><a href="with-the-console.html#cb290-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb290-4"><a href="with-the-console.html#cb290-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">20</span>)</span>
+<span id="cb290-5"><a href="with-the-console.html#cb290-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb290-6"><a href="with-the-console.html#cb290-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 <h4>
 Plot several figures in one page
 </h4>
 <p>You can output more than one plot per page using the <strong>par()</strong> function (sets graphical parameters) and the <strong>mfrow</strong> argument.</p>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="with-the-console.html#cb287-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">file=</span><span class="st">&quot;myfile_multi.jpeg&quot;</span>)</span>
-<span id="cb287-2"><a href="with-the-console.html#cb287-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb287-3"><a href="with-the-console.html#cb287-3" aria-hidden="true" tabindex="-1"></a><span class="co"># organize the plot in 1 row and 2 columns:</span></span>
-<span id="cb287-4"><a href="with-the-console.html#cb287-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># nr: number of rows</span></span>
-<span id="cb287-5"><a href="with-the-console.html#cb287-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># nc: number of columns</span></span>
-<span id="cb287-6"><a href="with-the-console.html#cb287-6" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="at">nr=</span><span class="dv">1</span>, <span class="at">nc=</span><span class="dv">2</span>))</span>
-<span id="cb287-7"><a href="with-the-console.html#cb287-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb287-8"><a href="with-the-console.html#cb287-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb287-9"><a href="with-the-console.html#cb287-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">20</span>)</span>
-<span id="cb287-10"><a href="with-the-console.html#cb287-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb287-11"><a href="with-the-console.html#cb287-11" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="with-the-console.html#cb291-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">file=</span><span class="st">&quot;myfile_multi.jpeg&quot;</span>)</span>
+<span id="cb291-2"><a href="with-the-console.html#cb291-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb291-3"><a href="with-the-console.html#cb291-3" aria-hidden="true" tabindex="-1"></a><span class="co"># organize the plot in 1 row and 2 columns:</span></span>
+<span id="cb291-4"><a href="with-the-console.html#cb291-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># nr: number of rows</span></span>
+<span id="cb291-5"><a href="with-the-console.html#cb291-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># nc: number of columns</span></span>
+<span id="cb291-6"><a href="with-the-console.html#cb291-6" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="at">nr=</span><span class="dv">1</span>, <span class="at">nc=</span><span class="dv">2</span>))</span>
+<span id="cb291-7"><a href="with-the-console.html#cb291-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb291-8"><a href="with-the-console.html#cb291-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb291-9"><a href="with-the-console.html#cb291-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">20</span>)</span>
+<span id="cb291-10"><a href="with-the-console.html#cb291-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb291-11"><a href="with-the-console.html#cb291-11" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 <p><img src="images/plots/myfile_multi.jpeg" width="350/" ></p>
-<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="with-the-console.html#cb288-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">file=</span><span class="st">&quot;myfile_multi4.jpeg&quot;</span>)</span>
-<span id="cb288-2"><a href="with-the-console.html#cb288-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb288-3"><a href="with-the-console.html#cb288-3" aria-hidden="true" tabindex="-1"></a><span class="co"># organize the plot in 2 rows and 2 columns</span></span>
-<span id="cb288-4"><a href="with-the-console.html#cb288-4" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="at">nr=</span><span class="dv">2</span>, <span class="at">nc=</span><span class="dv">2</span>))</span>
-<span id="cb288-5"><a href="with-the-console.html#cb288-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb288-6"><a href="with-the-console.html#cb288-6" aria-hidden="true" tabindex="-1"></a><span class="co"># top-left</span></span>
-<span id="cb288-7"><a href="with-the-console.html#cb288-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb288-8"><a href="with-the-console.html#cb288-8" aria-hidden="true" tabindex="-1"></a><span class="co"># top-right</span></span>
-<span id="cb288-9"><a href="with-the-console.html#cb288-9" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))))</span>
-<span id="cb288-10"><a href="with-the-console.html#cb288-10" aria-hidden="true" tabindex="-1"></a><span class="co"># bottom-left</span></span>
-<span id="cb288-11"><a href="with-the-console.html#cb288-11" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(<span class="fu">table</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))))</span>
-<span id="cb288-12"><a href="with-the-console.html#cb288-12" aria-hidden="true" tabindex="-1"></a><span class="co"># bottom-right</span></span>
-<span id="cb288-13"><a href="with-the-console.html#cb288-13" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">rnorm</span>(<span class="dv">2000</span>))</span>
-<span id="cb288-14"><a href="with-the-console.html#cb288-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb288-15"><a href="with-the-console.html#cb288-15" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="with-the-console.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">file=</span><span class="st">&quot;myfile_multi4.jpeg&quot;</span>)</span>
+<span id="cb292-2"><a href="with-the-console.html#cb292-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb292-3"><a href="with-the-console.html#cb292-3" aria-hidden="true" tabindex="-1"></a><span class="co"># organize the plot in 2 rows and 2 columns</span></span>
+<span id="cb292-4"><a href="with-the-console.html#cb292-4" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="at">nr=</span><span class="dv">2</span>, <span class="at">nc=</span><span class="dv">2</span>))</span>
+<span id="cb292-5"><a href="with-the-console.html#cb292-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb292-6"><a href="with-the-console.html#cb292-6" aria-hidden="true" tabindex="-1"></a><span class="co"># top-left</span></span>
+<span id="cb292-7"><a href="with-the-console.html#cb292-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb292-8"><a href="with-the-console.html#cb292-8" aria-hidden="true" tabindex="-1"></a><span class="co"># top-right</span></span>
+<span id="cb292-9"><a href="with-the-console.html#cb292-9" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))))</span>
+<span id="cb292-10"><a href="with-the-console.html#cb292-10" aria-hidden="true" tabindex="-1"></a><span class="co"># bottom-left</span></span>
+<span id="cb292-11"><a href="with-the-console.html#cb292-11" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(<span class="fu">table</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))))</span>
+<span id="cb292-12"><a href="with-the-console.html#cb292-12" aria-hidden="true" tabindex="-1"></a><span class="co"># bottom-right</span></span>
+<span id="cb292-13"><a href="with-the-console.html#cb292-13" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="fu">rnorm</span>(<span class="dv">2000</span>))</span>
+<span id="cb292-14"><a href="with-the-console.html#cb292-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb292-15"><a href="with-the-console.html#cb292-15" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 <p><img src="images/plots/myfile_multi4.jpeg" width="500/" ></p>
 
 </div>

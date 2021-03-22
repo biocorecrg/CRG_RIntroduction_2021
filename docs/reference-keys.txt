@@ -72,6 +72,7 @@ check-what-packages-are-currently-loaded
 list-functions-from-a-package
 rstudio-server-at-crg
 exercise-6-about-module-2
+workspace
 base-plots-in-r
 scatter-plots
 bar-plots

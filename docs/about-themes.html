@@ -229,6 +229,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
+<li class="chapter" data-level="12.9" data-path="workspace.html"><a href="workspace.html"><i class="fa fa-check"></i><b>12.9</b> Workspace</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -318,22 +319,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="about-themes" class="section level2" number="16.7">
 <h2><span class="header-section-number">16.7</span> About themes</h2>
 <p>You can change the default global <strong>theme</strong> (background color, grid lines etc. all non-data display):</p>
-<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb356-1"><a href="about-themes.html#cb356-1" aria-hidden="true" tabindex="-1"></a><span class="co"># go back to a previous plot</span></span>
-<span id="cb356-2"><a href="about-themes.html#cb356-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span>
-<span id="cb356-3"><a href="about-themes.html#cb356-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb356-4"><a href="about-themes.html#cb356-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Try different themes</span></span>
-<span id="cb356-5"><a href="about-themes.html#cb356-5" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-268-1.png" width="672" /></p>
-<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="about-themes.html#cb357-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-268-2.png" width="672" /></p>
-<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb358-1"><a href="about-themes.html#cb358-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_void</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-268-3.png" width="672" /></p>
-<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="about-themes.html#cb359-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_grey</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-268-4.png" width="672" /></p>
-<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb360-1"><a href="about-themes.html#cb360-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_dark</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-268-5.png" width="672" /></p>
-<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="about-themes.html#cb361-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_light</span>() </span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-268-6.png" width="672" /></p>
+<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="about-themes.html#cb357-1" aria-hidden="true" tabindex="-1"></a><span class="co"># go back to a previous plot</span></span>
+<span id="cb357-2"><a href="about-themes.html#cb357-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span>
+<span id="cb357-3"><a href="about-themes.html#cb357-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb357-4"><a href="about-themes.html#cb357-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Try different themes</span></span>
+<span id="cb357-5"><a href="about-themes.html#cb357-5" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-265-1.png" width="672" /></p>
+<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb358-1"><a href="about-themes.html#cb358-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-265-2.png" width="672" /></p>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="about-themes.html#cb359-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_void</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-265-3.png" width="672" /></p>
+<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb360-1"><a href="about-themes.html#cb360-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_grey</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-265-4.png" width="672" /></p>
+<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="about-themes.html#cb361-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_dark</span>()</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-265-5.png" width="672" /></p>
+<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="about-themes.html#cb362-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">theme_light</span>() </span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-265-6.png" width="672" /></p>
 </div>
             </section>
 

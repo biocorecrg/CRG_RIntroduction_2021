@@ -17,6 +17,7 @@ scan(file="file.txt")
 k <- scan(file="file.txt")
 ```
 
+
 By default, scans "double" (numeric) elements: it fails if the input contains characters.<br>
 If non-numeric, you need to specify the type of data contained in the file: 
 
@@ -29,6 +30,8 @@ scan(file="~/file.txt",
 ```
 
 Regarding paths of files:<br>
+If you don't specify the path, the file is assumed to be located in the current working directory (*getwd()*)
+<br>
 If the file is not in the current directory, you can provide a full or relative path. For example, if located in the home directory, read it as:
 
 ```{r, eval=F}
@@ -47,7 +50,8 @@ write(x=mygenes,
 ```
 
 Regarding paths of files:<br>
-When you write a file, you can also specify a full or relative path:
+When you write a file, without a path, it will be created in the current working directory.<br>
+You can also provide a full or relative path:
 
 ```{r, eval=F}
 # Write to home directory
