@@ -230,9 +230,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
 <li class="chapter" data-level="12.9" data-path="workspace.html"><a href="workspace.html"><i class="fa fa-check"></i><b>12.9</b> Workspace</a></li>
-<li class="chapter" data-level="12.10" data-path="exercise-7-.html"><a href="exercise-7-.html"><i class="fa fa-check"></i><b>12.10</b> Exercise 7.</a>
+<li class="chapter" data-level="12.10" data-path="exercise-7-input-output-and-data-selection-.html"><a href="exercise-7-input-output-and-data-selection-.html"><i class="fa fa-check"></i><b>12.10</b> Exercise 7. Input / output and data selection.</a>
 <ul>
-<li class="chapter" data-level="12.10.1" data-path="exercise-7-.html"><a href="exercise-7-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>12.10.1</b> Exercise 6a. Input / output</a></li>
+<li class="chapter" data-level="12.10.1" data-path="exercise-7-input-output-and-data-selection-.html"><a href="exercise-7-input-output-and-data-selection-.html#exercise-7"><i class="fa fa-check"></i><b>12.10.1</b> Exercise 7</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
@@ -358,10 +358,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb375-2"><a href="saving-plots-in-files.html#cb375-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
 <span id="cb375-3"><a href="saving-plots-in-files.html#cb375-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 rows and 2 columns</span></span>
 <span id="cb375-4"><a href="saving-plots-in-files.html#cb375-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-280-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-274-1.png" width="672" /></p>
 <div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="saving-plots-in-files.html#cb376-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 row and 4 columns</span></span>
 <span id="cb376-2"><a href="saving-plots-in-files.html#cb376-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-281-1.png" width="960" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-275-1.png" width="960" /></p>
 <p>Combine ggsave and grid.arrange:</p>
 <div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="saving-plots-in-files.html#cb377-1" aria-hidden="true" tabindex="-1"></a>myplots <span class="ot">&lt;-</span> <span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
 <span id="cb377-2"><a href="saving-plots-in-files.html#cb377-2" aria-hidden="true" tabindex="-1"></a></span>

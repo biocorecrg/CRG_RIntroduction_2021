@@ -230,9 +230,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
 <li class="chapter" data-level="12.9" data-path="workspace.html"><a href="workspace.html"><i class="fa fa-check"></i><b>12.9</b> Workspace</a></li>
-<li class="chapter" data-level="12.10" data-path="exercise-7-.html"><a href="exercise-7-.html"><i class="fa fa-check"></i><b>12.10</b> Exercise 7.</a>
+<li class="chapter" data-level="12.10" data-path="exercise-7-input-output-and-data-selection-.html"><a href="exercise-7-input-output-and-data-selection-.html"><i class="fa fa-check"></i><b>12.10</b> Exercise 7. Input / output and data selection.</a>
 <ul>
-<li class="chapter" data-level="12.10.1" data-path="exercise-7-.html"><a href="exercise-7-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>12.10.1</b> Exercise 6a. Input / output</a></li>
+<li class="chapter" data-level="12.10.1" data-path="exercise-7-input-output-and-data-selection-.html"><a href="exercise-7-input-output-and-data-selection-.html#exercise-7"><i class="fa fa-check"></i><b>12.10.1</b> Exercise 7</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
@@ -335,7 +335,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb410-9"><a href="volcano-plots.html#cb410-9" aria-hidden="true" tabindex="-1"></a>de <span class="ot">&lt;-</span> tmp[<span class="fu">complete.cases</span>(tmp), ]</span></code></pre></div>
 <div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="volcano-plots.html#cb411-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The basic scatter plot: x is &quot;log2FoldChange&quot;, y is &quot;pvalue&quot;</span></span>
 <span id="cb411-2"><a href="volcano-plots.html#cb411-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>de, <span class="fu">aes</span>(<span class="at">x=</span>log2FoldChange, <span class="at">y=</span>pvalue)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-307-1.png" width="672" /></p>
 <p>Doesn’t look quite like a Volcano plot…<br>
 Convert the p-value into a -log10(p-value)</p>
 <div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb412-1"><a href="volcano-plots.html#cb412-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert directly in the aes()</span></span>
@@ -379,7 +379,7 @@ Convert the p-value into a -log10(p-value)</p>
 <span id="cb417-7"><a href="volcano-plots.html#cb417-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb417-8"><a href="volcano-plots.html#cb417-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb417-9"><a href="volcano-plots.html#cb417-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>()</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-319-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-1.png" width="672" /></p>
 <div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb418-1"><a href="volcano-plots.html#cb418-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Finally, we can organize the labels nicely using the &quot;ggrepel&quot; package and the geom_text_repel() function</span></span>
 <span id="cb418-2"><a href="volcano-plots.html#cb418-2" aria-hidden="true" tabindex="-1"></a><span class="co"># load library</span></span>
 <span id="cb418-3"><a href="volcano-plots.html#cb418-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
@@ -391,7 +391,7 @@ Convert the p-value into a -log10(p-value)</p>
 <span id="cb418-9"><a href="volcano-plots.html#cb418-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;black&quot;</span>, <span class="st">&quot;red&quot;</span>)) <span class="sc">+</span></span>
 <span id="cb418-10"><a href="volcano-plots.html#cb418-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.6</span>, <span class="fl">0.6</span>), <span class="at">col=</span><span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
 <span id="cb418-11"><a href="volcano-plots.html#cb418-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">0.05</span>), <span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-320-1.png" width="672" /></p>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-314-1.png" width="672" /></p>
 
 </div>
 <!-- </div> -->

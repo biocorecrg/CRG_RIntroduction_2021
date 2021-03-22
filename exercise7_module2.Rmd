@@ -1,6 +1,6 @@
-## Exercise 7. 
+## Exercise 7. Input / output and data selection.
 
-Create the script "exercise6.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 7 in that script.
+Create the script "exercise7.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 7 in that script.
 <br>Remember you can comment the code using #.
 
 
@@ -17,7 +17,7 @@ setwd("~/Rcourse/Module2")
 
 </details>
 
-### Exercise 6a. Input / output
+### Exercise 7
 
 **1- Import the following file (use download.file() function) into your current working directory (Module2):**
 https://data.cityofnewyork.us/resource/vfnx-vebw.csv
@@ -80,7 +80,7 @@ squirrels[squirrels$primary_fur_color == "Cinnamon", ]
 
 </details>
 
-**6- Select squirrels that are both Juvenile and Cinnamon. How many squirrels are those? Write to a csv file.**
+**6- Select squirrels that are both "Juvenile" and "Cinnamon". How many squirrels do you find? Write this selection to a csv file.**
 
 <details>
 <summary>

@@ -73,8 +73,8 @@ list-functions-from-a-package
 rstudio-server-at-crg
 exercise-6-about-module-2
 workspace
-exercise-7.
-exercise-6a.-input-output
+exercise-7.-input-output-and-data-selection.
+exercise-7
 base-plots-in-r
 scatter-plots
 bar-plots
