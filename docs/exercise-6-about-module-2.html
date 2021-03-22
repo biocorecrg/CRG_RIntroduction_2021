@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-21" />
+<meta name="date" content="2021-03-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -323,19 +323,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="exercise-6-about-module-2.html#cb253-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb253-2"><a href="exercise-6-about-module-2.html#cb253-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module2&quot;</span>)</span>
-<span id="cb253-3"><a href="exercise-6-about-module-2.html#cb253-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="exercise-6-about-module-2.html#cb256-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb256-2"><a href="exercise-6-about-module-2.html#cb256-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;Rcourse/Module2&quot;</span>)</span>
+<span id="cb256-3"><a href="exercise-6-about-module-2.html#cb256-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>1- Install and load package ggplot2</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="exercise-6-about-module-2.html#cb254-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install</span></span>
-<span id="cb254-2"><a href="exercise-6-about-module-2.html#cb254-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs=</span><span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb254-3"><a href="exercise-6-about-module-2.html#cb254-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in the environment</span></span>
-<span id="cb254-4"><a href="exercise-6-about-module-2.html#cb254-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="exercise-6-about-module-2.html#cb257-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install</span></span>
+<span id="cb257-2"><a href="exercise-6-about-module-2.html#cb257-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs=</span><span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb257-3"><a href="exercise-6-about-module-2.html#cb257-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in the environment</span></span>
+<span id="cb257-4"><a href="exercise-6-about-module-2.html#cb257-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
 <p>Check with sessionInfo() that the package is indeed loaded. Was version of ggplot2 did you get?</p>
 </details>
 <p><strong>2- ggplot2 loads automatically the diamonds dataset in the working environment: you can use it as an object after ggplot2 is loaded. You can see it in “Environment -&gt; change”Global Environment" to “package:ggplot2.”</strong></p>
@@ -344,10 +344,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="exercise-6-about-module-2.html#cb255-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dimensions of diamonds</span></span>
-<span id="cb255-2"><a href="exercise-6-about-module-2.html#cb255-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(diamonds)</span>
-<span id="cb255-3"><a href="exercise-6-about-module-2.html#cb255-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Column names of diamonds</span></span>
-<span id="cb255-4"><a href="exercise-6-about-module-2.html#cb255-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(diamonds)</span></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="exercise-6-about-module-2.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dimensions of diamonds</span></span>
+<span id="cb258-2"><a href="exercise-6-about-module-2.html#cb258-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(diamonds)</span>
+<span id="cb258-3"><a href="exercise-6-about-module-2.html#cb258-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Column names of diamonds</span></span>
+<span id="cb258-4"><a href="exercise-6-about-module-2.html#cb258-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(diamonds)</span></code></pre></div>
 </details>
 <p>You can read the help page of the diamonds dataset to understand what it contains!<br></p>
 <p>Note: diamonds is a data frame: you can test it with <strong>is.data.frame(diamonds)</strong> (returns TRUE).</p>
@@ -356,53 +356,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="exercise-6-about-module-2.html#cb256-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(diamonds[diamonds<span class="sc">$</span>cut <span class="sc">==</span> <span class="st">&quot;Premium&quot;</span>,])</span></code></pre></div>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="exercise-6-about-module-2.html#cb259-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(diamonds[diamonds<span class="sc">$</span>cut <span class="sc">==</span> <span class="st">&quot;Premium&quot;</span>,])</span></code></pre></div>
 </details>
 <p><strong>4. Select diamonds that have a “Premium” cut AND an “E” color. Save in the new object diams1. How many rows does diams1 have ?</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="exercise-6-about-module-2.html#cb257-1" aria-hidden="true" tabindex="-1"></a>diams1 <span class="ot">&lt;-</span> diamonds[diamonds<span class="sc">$</span>cut <span class="sc">==</span> <span class="st">&quot;Premium&quot;</span> <span class="sc">&amp;</span> diamonds<span class="sc">$</span>color <span class="sc">==</span> <span class="st">&quot;E&quot;</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="exercise-6-about-module-2.html#cb260-1" aria-hidden="true" tabindex="-1"></a>diams1 <span class="ot">&lt;-</span> diamonds[diamonds<span class="sc">$</span>cut <span class="sc">==</span> <span class="st">&quot;Premium&quot;</span> <span class="sc">&amp;</span> diamonds<span class="sc">$</span>color <span class="sc">==</span> <span class="st">&quot;E&quot;</span>,]</span></code></pre></div>
 </details>
 <p><strong>5- Install and load the package dplyr from the R Console.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="exercise-6-about-module-2.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install package</span></span>
-<span id="cb258-2"><a href="exercise-6-about-module-2.html#cb258-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs=</span><span class="st">&quot;dplyr&quot;</span>)</span>
-<span id="cb258-3"><a href="exercise-6-about-module-2.html#cb258-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load package</span></span>
-<span id="cb258-4"><a href="exercise-6-about-module-2.html#cb258-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="exercise-6-about-module-2.html#cb261-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install package</span></span>
+<span id="cb261-2"><a href="exercise-6-about-module-2.html#cb261-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs=</span><span class="st">&quot;dplyr&quot;</span>)</span>
+<span id="cb261-3"><a href="exercise-6-about-module-2.html#cb261-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load package</span></span>
+<span id="cb261-4"><a href="exercise-6-about-module-2.html#cb261-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>6- Use the function “sample_n” from the dplyr package (check the help page for sample_n) to randomly sample 200 lines of diams1: save in the new diams object.</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="exercise-6-about-module-2.html#cb259-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset data frame</span></span>
-<span id="cb259-2"><a href="exercise-6-about-module-2.html#cb259-2" aria-hidden="true" tabindex="-1"></a>diams <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(<span class="at">tbl=</span>diams1, <span class="at">size=</span><span class="dv">200</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="exercise-6-about-module-2.html#cb262-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset data frame</span></span>
+<span id="cb262-2"><a href="exercise-6-about-module-2.html#cb262-2" aria-hidden="true" tabindex="-1"></a>diams <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(<span class="at">tbl=</span>diams1, <span class="at">size=</span><span class="dv">200</span>)</span></code></pre></div>
 </details>
 <p><strong>7- What are the minimum, average and median “carat” of the 200 diamonds in diams ?</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="exercise-6-about-module-2.html#cb260-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(diams<span class="sc">$</span>carat)</span>
-<span id="cb260-2"><a href="exercise-6-about-module-2.html#cb260-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(diams<span class="sc">$</span>carat)</span>
-<span id="cb260-3"><a href="exercise-6-about-module-2.html#cb260-3" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(diams<span class="sc">$</span>carat)</span>
-<span id="cb260-4"><a href="exercise-6-about-module-2.html#cb260-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(diams<span class="sc">$</span>carat)</span></code></pre></div>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="exercise-6-about-module-2.html#cb263-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(diams<span class="sc">$</span>carat)</span>
+<span id="cb263-2"><a href="exercise-6-about-module-2.html#cb263-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(diams<span class="sc">$</span>carat)</span>
+<span id="cb263-3"><a href="exercise-6-about-module-2.html#cb263-3" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(diams<span class="sc">$</span>carat)</span>
+<span id="cb263-4"><a href="exercise-6-about-module-2.html#cb263-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(diams<span class="sc">$</span>carat)</span></code></pre></div>
 </details>
 <p><strong>8- Save diams into a csv file (try the “write.csv” function.)</strong></p>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="exercise-6-about-module-2.html#cb261-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a csv file with csv</span></span>
-<span id="cb261-2"><a href="exercise-6-about-module-2.html#cb261-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x=</span>diams, </span>
-<span id="cb261-3"><a href="exercise-6-about-module-2.html#cb261-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;diamonds_Premium_E_200.csv&quot;</span>,</span>
-<span id="cb261-4"><a href="exercise-6-about-module-2.html#cb261-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">row.names=</span><span class="cn">FALSE</span>,</span>
-<span id="cb261-5"><a href="exercise-6-about-module-2.html#cb261-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">quote=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="exercise-6-about-module-2.html#cb264-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a csv file with csv</span></span>
+<span id="cb264-2"><a href="exercise-6-about-module-2.html#cb264-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x=</span>diams, </span>
+<span id="cb264-3"><a href="exercise-6-about-module-2.html#cb264-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span><span class="st">&quot;diamonds_Premium_E_200.csv&quot;</span>,</span>
+<span id="cb264-4"><a href="exercise-6-about-module-2.html#cb264-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">row.names=</span><span class="cn">FALSE</span>,</span>
+<span id="cb264-5"><a href="exercise-6-about-module-2.html#cb264-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">quote=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 </details>
 
 </div>

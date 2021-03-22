@@ -12,8 +12,7 @@ knitr::opts_chunk$set(eval = FALSE, echo = TRUE)
 # Create a data frame
 d <- data.frame(c("Maria", "Juan", "Alba"),
 	c(23, 25, 31),
-	c(TRUE, TRUE, FALSE),
-	stringsAsFactors = FALSE)
+	c(TRUE, TRUE, FALSE))
 # number of rows
 nrow(d)
 # number of columns
@@ -83,8 +82,7 @@ Same principle as vectors... but in 2 dimensions!
 # build data frame d
 d <- data.frame(Name=c("Maria", "Juan", "Alba"), 
         Age=c(23, 25, 31),
-        Vegetarian=c(TRUE, TRUE, FALSE),
-        stringsAsFactors = FALSE)
+        Vegetarian=c(TRUE, TRUE, FALSE))
 rownames(d) <- c("Patient1", "Patient2", "Patient3")
 
 # The following commands all output the same result:
@@ -186,8 +184,7 @@ Given the following data frame **mypatients**:
 mypatients <- data.frame(Name=c("Maria", "Juan", "Alba", "Luis", "Hector"), 
         Age=c(23, 25, 31, 18, 42),
         Weight=c(65, 72, 58, 78, 82),
-        Vegetarian=c(TRUE, TRUE, FALSE, FALSE, TRUE),
-        stringsAsFactors = FALSE)
+        Vegetarian=c(TRUE, TRUE, FALSE, FALSE, TRUE))
 ```
 
 1. What is the **average age of vegetarian patients**?
@@ -223,6 +220,8 @@ NOTE: apply is part of a family of functions. For more information, check the [d
 Given the following matrix **datam**:
 ```{r,eval=FALSE}
 # rnorm produces random numbers (here, 10000), from the normal distribution.
+# you can set the "seed" so as to be able to exactly reproduce the random selection of numbers:
+set.seed(43)
 datam <- matrix(rnorm(10000), ncol=25)
 ```
 
@@ -249,17 +248,37 @@ dfgrep <- data.frame(genes=c("CCNA1", "TP53", "CCND1", "CCNF", "A2M", "PARP2", "
 * Select the "pvalue" columns of **dfgrep** with grep:
 
 ```{r}
-dfgrep[, grep("pvalue", colnames(dfgrep))]
+# select the columns which names match "pvalue" (it does NOT have to be an exact match):
+grep(pattern="pvalue", x=colnames(dfgrep))
+# extract only those columns:
+dfgrep[, grep(pattern="pvalue", x=colnames(dfgrep))]
 ```
 
 * Select all tumor protein gene (TP genes) rows with grep:
 
 ```{r}
-dfgrep[grep("TP", dfgrep$genes), ]
+dfgrep[grep(pattern="TP", x=dfgrep$genes), ]
 ```
 
 For more details about grep and pattern selection, you can refer to the [dedicated extra section](https://biocorecrg.github.io/CRG_RIntroduction_2021/regular-expressions.html)
 
+* Useful **grep** arguments:
+
+Show the selected names (not the indices):
+```{r}
+# shows the indices of selected elements, by default:
+grep(pattern="TP", x=dfgrep$genes)
+# shows the actual selected elements
+grep(pattern="TP", x=dfgrep$genes, value=TRUE)
+```
+
+Show what does **NOT** match:
+```{r}
+# shows what matches the search:
+grep(pattern="TP", x=dfgrep$genes)
+# shows what doesn't match the search:
+grep(pattern="TP", x=dfgrep$genes, invert=TRUE)
+```
 
 **HANDS-ON**
 

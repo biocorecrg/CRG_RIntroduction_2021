@@ -39,11 +39,10 @@ And Column names: **Age, Height, Sex**.
 </summary>
 
 ```{r, eval=F}
-mydf <- data.frame(Age=c(43, 34, 22, 27), 
-                 Height=c(181, 172, 189, 167),
-                 Sex=c("M", "F", "M", "F"),
-                 row.names = c("John", "Jessica", "Steve", "Rachel"),
-                 stringsAsFactors=FALSE)
+mydf <- data.frame(Age=c(43, 34, 22, 27, 31), 
+                 Height=c(181, 172, 189, 167, 177),
+                 Sex=c("M", "F", "M", "F", "M"),
+                 row.names = c("John", "Jessica", "Steve", "Rachel", "Gary"))
 ```
 
 </details>
@@ -87,10 +86,19 @@ mean(mydf$Height)
 </summary>
 
 ```{r, eval=F}
-# we have to remove the Sex column: we can calculate the average only with numbers
+# Try with the whole data frame:
 apply(mydf[,-3], 2, mean)
+  # it doesn't work, because one of the columns ("Sex")contains characters!
+
+# we have to remove the Sex column! Here are 4 ways to do it:
+  # remove it by the index
+apply(mydf[,-3], 2, mean)
+  # keep only the remaining columns, using the indices
 apply(mydf[,1:2], 2, mean)
-apply(mydf[,-grep("Sex", colnames(mydf))], 2, mean)
+  # keep only the remaining columns, using the column names
+apply(mydf[,c("Age", "Height")], 2, mean)
+  # remove the "Sex" column using grep
+apply(mydf[,grep(pattern="Sex", x=colnames(mydf), invert=TRUE)], 2, mean)
 ```
 
 </details>
@@ -104,9 +112,9 @@ Use Patient1, Patient2, etc. instead of actual names.
 </summary>
 
 ```{r, eval=F} 
-rownames(mydf) <- c("Patient1", "Patient2", "Patient3", "Patient4")
+rownames(mydf) <- c("Patient1", "Patient2", "Patient3", "Patient4", "Patient5")
 # try also the paste function!
-rownames(mydf) <- paste("Patient", 1:4, sep="")
+rownames(mydf) <- paste("Patient", 1:5, sep="")
 ```
 
 </details>
@@ -137,10 +145,10 @@ mydf2 <- mydf[mydf$Sex=="F",]
 ```{r, eval=F}
 # which entries are males
 mydf$Sex=="M"
-# which entries are greater than 170 in column "Height"
-mydf$Sex=="M" & mydf$Height > 170
-# retrieve rows that contain the males that are taller than 170, and save in mydf3
-mydf3 <- mydf[mydf$Sex=="M" & mydf$Height > 170,]
+# which entries are greater than 180 in column "Height"
+mydf$Sex=="M" & mydf$Height > 180
+# retrieve rows that contain the males that are taller than 180, and save in mydf3
+mydf3 <- mydf[mydf$Sex=="M" & mydf$Height > 180,]
 ```
 
 </details>

@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-21" />
+<meta name="date" content="2021-03-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -331,33 +331,39 @@ All columns in a data frame:</p>
 <ul>
 <li>With the <strong>data.frame</strong> function:</li>
 </ul>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="data-frames.html#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stringsAsFactors: ensures that characters are treated as characters and not as factors</span></span>
-<span id="cb182-2"><a href="data-frames.html#cb182-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </span>
-<span id="cb182-3"><a href="data-frames.html#cb182-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</span>
-<span id="cb182-4"><a href="data-frames.html#cb182-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
-<span id="cb182-5"><a href="data-frames.html#cb182-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="data-frames.html#cb182-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </span>
+<span id="cb182-2"><a href="data-frames.html#cb182-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</span>
+<span id="cb182-3"><a href="data-frames.html#cb182-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span></code></pre></div>
+<p><strong>NOTE: if you are working with a version of R &lt; 4.0, you need to set the “stringsAsFactors” argument to FALSE ! Here is why:</strong></p>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="data-frames.html#cb183-1" aria-hidden="true" tabindex="-1"></a><span class="co"># stringsAsFactors: ensures that characters are treated as characters and not as factors</span></span>
+<span id="cb183-2"><a href="data-frames.html#cb183-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">c</span>(<span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;Alba&quot;</span>), </span>
+<span id="cb183-3"><a href="data-frames.html#cb183-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">31</span>),</span>
+<span id="cb183-4"><a href="data-frames.html#cb183-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
+<span id="cb183-5"><a href="data-frames.html#cb183-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <ul>
 <li>Example why “stringsAsFactors = FALSE” is useful</li>
 </ul>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="data-frames.html#cb183-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with default parameters</span></span>
-<span id="cb183-2"><a href="data-frames.html#cb183-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">label=</span><span class="fu">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="at">column2=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb183-3"><a href="data-frames.html#cb183-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace one value</span></span>
-<span id="cb183-4"><a href="data-frames.html#cb183-4" aria-hidden="true" tabindex="-1"></a>df[<span class="dv">2</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;yes&quot;</span></span>
-<span id="cb183-5"><a href="data-frames.html#cb183-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Throws an error and doesn&#39;t replace the value !</span></span></code></pre></div>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="data-frames.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with:</span></span>
-<span id="cb184-2"><a href="data-frames.html#cb184-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">label=</span><span class="fu">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="at">column2=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="data-frames.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with default parameters</span></span>
+<span id="cb184-2"><a href="data-frames.html#cb184-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">label=</span><span class="fu">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="at">column2=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
 <span id="cb184-3"><a href="data-frames.html#cb184-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace one value</span></span>
-<span id="cb184-4"><a href="data-frames.html#cb184-4" aria-hidden="true" tabindex="-1"></a>df2[<span class="dv">2</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;yes&quot;</span></span>
-<span id="cb184-5"><a href="data-frames.html#cb184-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Works!</span></span></code></pre></div>
+<span id="cb184-4"><a href="data-frames.html#cb184-4" aria-hidden="true" tabindex="-1"></a>df[<span class="dv">2</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;yes&quot;</span></span>
+<span id="cb184-5"><a href="data-frames.html#cb184-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Throws an error and doesn&#39;t replace the value !</span></span></code></pre></div>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="data-frames.html#cb185-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with:</span></span>
+<span id="cb185-2"><a href="data-frames.html#cb185-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">label=</span><span class="fu">rep</span>(<span class="st">&quot;test&quot;</span>,<span class="dv">5</span>), <span class="at">column2=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb185-3"><a href="data-frames.html#cb185-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace one value</span></span>
+<span id="cb185-4"><a href="data-frames.html#cb185-4" aria-hidden="true" tabindex="-1"></a>df2[<span class="dv">2</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;yes&quot;</span></span>
+<span id="cb185-5"><a href="data-frames.html#cb185-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Works!</span></span></code></pre></div>
+<p>The change in the default value is explained in <a href="https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/">this post</a>.
+<strong>END OF NOTE about stringsAsFactors</strong></p>
 <ul>
 <li>Converting a matrix into a data frame:</li>
 </ul>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="data-frames.html#cb185-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a matrix</span></span>
-<span id="cb185-2"><a href="data-frames.html#cb185-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
-<span id="cb185-3"><a href="data-frames.html#cb185-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">nrow=</span><span class="dv">3</span>,</span>
-<span id="cb185-4"><a href="data-frames.html#cb185-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ncol=</span><span class="dv">2</span>)</span>
-<span id="cb185-5"><a href="data-frames.html#cb185-5" aria-hidden="true" tabindex="-1"></a><span class="co"># convert as data frame</span></span>
-<span id="cb185-6"><a href="data-frames.html#cb185-6" aria-hidden="true" tabindex="-1"></a>b_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(b)</span></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="data-frames.html#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a matrix</span></span>
+<span id="cb186-2"><a href="data-frames.html#cb186-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">34</span>, <span class="dv">44</span>, <span class="dv">12</span>, <span class="dv">4</span>), </span>
+<span id="cb186-3"><a href="data-frames.html#cb186-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">nrow=</span><span class="dv">3</span>,</span>
+<span id="cb186-4"><a href="data-frames.html#cb186-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ncol=</span><span class="dv">2</span>)</span>
+<span id="cb186-5"><a href="data-frames.html#cb186-5" aria-hidden="true" tabindex="-1"></a><span class="co"># convert as data frame</span></span>
+<span id="cb186-6"><a href="data-frames.html#cb186-6" aria-hidden="true" tabindex="-1"></a>b_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(b)</span></code></pre></div>
 </div>
 <div id="data-frame-manipulation" class="section level3" number="9.6.2">
 <h3><span class="header-section-number">9.6.2</span> Data frame manipulation:</h3>

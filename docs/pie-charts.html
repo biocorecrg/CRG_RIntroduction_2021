@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-21" />
+<meta name="date" content="2021-03-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -321,15 +321,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Using our previous vector, build a simple pie chart:</li>
 </ul>
-<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="pie-charts.html#cb274-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector</span></span>
-<span id="cb274-2"><a href="pie-charts.html#cb274-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span>
-<span id="cb274-3"><a href="pie-charts.html#cb274-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb274-4"><a href="pie-charts.html#cb274-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Count number of occurences of each string</span></span>
-<span id="cb274-5"><a href="pie-charts.html#cb274-5" aria-hidden="true" tabindex="-1"></a>mytable <span class="ot">&lt;-</span> <span class="fu">table</span>(x)</span>
-<span id="cb274-6"><a href="pie-charts.html#cb274-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb274-7"><a href="pie-charts.html#cb274-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(mytable,</span>
-<span id="cb274-8"><a href="pie-charts.html#cb274-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;pie chart&quot;</span>,</span>
-<span id="cb274-9"><a href="pie-charts.html#cb274-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;salmon&quot;</span>, <span class="st">&quot;maroon&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="pie-charts.html#cb277-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector</span></span>
+<span id="cb277-2"><a href="pie-charts.html#cb277-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;Postdoc&quot;</span>, <span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PI&quot;</span>), <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span>
+<span id="cb277-3"><a href="pie-charts.html#cb277-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb277-4"><a href="pie-charts.html#cb277-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Count number of occurences of each string</span></span>
+<span id="cb277-5"><a href="pie-charts.html#cb277-5" aria-hidden="true" tabindex="-1"></a>mytable <span class="ot">&lt;-</span> <span class="fu">table</span>(x)</span>
+<span id="cb277-6"><a href="pie-charts.html#cb277-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb277-7"><a href="pie-charts.html#cb277-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(mytable,</span>
+<span id="cb277-8"><a href="pie-charts.html#cb277-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;pie chart&quot;</span>,</span>
+<span id="cb277-9"><a href="pie-charts.html#cb277-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;salmon&quot;</span>, <span class="st">&quot;maroon&quot;</span>))</span></code></pre></div>
 <p><img src="images/plots/pie1.png" width="450"/></p>
 </div>
             </section>

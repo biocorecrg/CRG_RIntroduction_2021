@@ -19,6 +19,14 @@ A data frame is organized by **column**: columns are **variables** and rows are 
 * With the **data.frame** function:
 
 ```{r}
+d <- data.frame(c("Maria", "Juan", "Alba"), 
+	c(23, 25, 31),
+	c(TRUE, TRUE, FALSE))
+```
+
+**NOTE: if you are working with a version of R < 4.0, you need to set the "stringsAsFactors" argument to FALSE ! Here is why:**
+
+```{r}
 # stringsAsFactors: ensures that characters are treated as characters and not as factors
 d <- data.frame(c("Maria", "Juan", "Alba"), 
 	c(23, 25, 31),
@@ -43,6 +51,8 @@ df2 <- data.frame(label=rep("test",5), column2=1:5, stringsAsFactors = FALSE)
 df2[2,1] <- "yes"
 # Works!
 ```
+The change in the default value is explained in [this post](https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/).
+**END OF NOTE about stringsAsFactors**
 
 * Converting a matrix into a data frame:
 
