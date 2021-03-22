@@ -230,6 +230,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
 <li class="chapter" data-level="12.9" data-path="workspace.html"><a href="workspace.html"><i class="fa fa-check"></i><b>12.9</b> Workspace</a></li>
+<li class="chapter" data-level="12.10" data-path="exercise-7-.html"><a href="exercise-7-.html"><i class="fa fa-check"></i><b>12.10</b> Exercise 7.</a>
+<ul>
+<li class="chapter" data-level="12.10.1" data-path="exercise-7-.html"><a href="exercise-7-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>12.10.1</b> Exercise 6a. Input / output</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -322,11 +326,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>A simple boxplot:</li>
 </ul>
-<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="box-plots.html#cb282-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix of 1000 random values from the normal distribution (4 columns, 250 rows)</span></span>
-<span id="cb282-2"><a href="box-plots.html#cb282-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="at">ncol=</span><span class="dv">4</span>)</span>
-<span id="cb282-3"><a href="box-plots.html#cb282-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb282-4"><a href="box-plots.html#cb282-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic boxplot</span></span>
-<span id="cb282-5"><a href="box-plots.html#cb282-5" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="box-plots.html#cb291-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix of 1000 random values from the normal distribution (4 columns, 250 rows)</span></span>
+<span id="cb291-2"><a href="box-plots.html#cb291-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="at">ncol=</span><span class="dv">4</span>)</span>
+<span id="cb291-3"><a href="box-plots.html#cb291-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb291-4"><a href="box-plots.html#cb291-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic boxplot</span></span>
+<span id="cb291-5"><a href="box-plots.html#cb291-5" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(x)</span></code></pre></div>
 <p><img src="images/plots/boxplot1.png" width="450"/></p>
 <ul>
 <li>Add some arguments :
@@ -336,10 +340,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>at: position of each box along the x-axis: here we skip position 3 to allow more space between boxes 1/2 and 3/4</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="box-plots.html#cb283-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(x, </span>
-<span id="cb283-2"><a href="box-plots.html#cb283-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;sample&quot;</span>,</span>
-<span id="cb283-3"><a href="box-plots.html#cb283-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;expression&quot;</span>,</span>
-<span id="cb283-4"><a href="box-plots.html#cb283-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="box-plots.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(x, </span>
+<span id="cb292-2"><a href="box-plots.html#cb292-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;sample&quot;</span>,</span>
+<span id="cb292-3"><a href="box-plots.html#cb292-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;expression&quot;</span>,</span>
+<span id="cb292-4"><a href="box-plots.html#cb292-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code></pre></div>
 <p><img src="images/plots/boxplot2.png" width="450"/></p>
 <ul>
 <li>Add an horizontal line at y=0 with <strong>abline()</strong>; arguments of abline :
@@ -350,15 +354,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>lty : line type</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="box-plots.html#cb284-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First plot the box plot as before:</span></span>
-<span id="cb284-2"><a href="box-plots.html#cb284-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(x, </span>
-<span id="cb284-3"><a href="box-plots.html#cb284-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;sample&quot;</span>,</span>
-<span id="cb284-4"><a href="box-plots.html#cb284-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;expression&quot;</span>,</span>
-<span id="cb284-5"><a href="box-plots.html#cb284-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
-<span id="cb284-6"><a href="box-plots.html#cb284-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;my boxplot&quot;</span>)</span>
-<span id="cb284-7"><a href="box-plots.html#cb284-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb284-8"><a href="box-plots.html#cb284-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Then run the abline function</span></span>
-<span id="cb284-9"><a href="box-plots.html#cb284-9" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>, <span class="at">col=</span><span class="st">&quot;red&quot;</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="st">&quot;dotdash&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="box-plots.html#cb293-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First plot the box plot as before:</span></span>
+<span id="cb293-2"><a href="box-plots.html#cb293-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(x, </span>
+<span id="cb293-3"><a href="box-plots.html#cb293-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;sample&quot;</span>,</span>
+<span id="cb293-4"><a href="box-plots.html#cb293-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;expression&quot;</span>,</span>
+<span id="cb293-5"><a href="box-plots.html#cb293-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb293-6"><a href="box-plots.html#cb293-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;my boxplot&quot;</span>)</span>
+<span id="cb293-7"><a href="box-plots.html#cb293-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb293-8"><a href="box-plots.html#cb293-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Then run the abline function</span></span>
+<span id="cb293-9"><a href="box-plots.html#cb293-9" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>, <span class="at">col=</span><span class="st">&quot;red&quot;</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="st">&quot;dotdash&quot;</span>)</span></code></pre></div>
 <p><img src="images/plots/boxplot3.png" width="450"/></p>
 <ul>
 <li>Line types in R:</li>

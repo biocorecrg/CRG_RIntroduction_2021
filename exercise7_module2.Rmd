@@ -1,6 +1,6 @@
-## Exercise 6. 
+## Exercise 7. 
 
-Create the script "exercise6.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 6 in that script.
+Create the script "exercise6.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 7 in that script.
 <br>Remember you can comment the code using #.
 
 
@@ -19,7 +19,7 @@ setwd("~/Rcourse/Module2")
 
 ### Exercise 6a. Input / output
 
-**1- Import the following file (use download.file() function: check the help page!) into your current working directyr (Module2)**
+**1- Import the following file (use download.file() function) into your current working directory (Module2):**
 https://data.cityofnewyork.us/resource/vfnx-vebw.csv
 
 
@@ -80,7 +80,7 @@ squirrels[squirrels$primary_fur_color == "Cinnamon", ]
 
 </details>
 
-**6- Finally, select squirrels that are both Juvenile and Cinnamon. How many squirrels are those?**
+**6- Select squirrels that are both Juvenile and Cinnamon. How many squirrels are those? Write to a csv file.**
 
 <details>
 <summary>
@@ -88,13 +88,52 @@ squirrels[squirrels$primary_fur_color == "Cinnamon", ]
 </summary>
 
 ```{r, eval=F}
-squirrels[squirrels$age == "Juvenile" & squirrels$primary_fur_color == "Cinnamon", ]
+sqJC <- squirrels[squirrels$age == "Juvenile" & squirrels$primary_fur_color == "Cinnamon", ]
+write.csv(sqJC, "squirrels_Juvenile_Cinnamon.csv", quote=FALSE, row.names=FALSE)
 ```
 
 </details>
 
+**7- Back to the main "squirrels" data frame: what are the most populated hectares?**
 
+<details>
+<summary>
+*Answer*
+</summary>
 
+```{r, eval=F}
+# use table to count occurrences of terms
+table(squirrels[, "hectare"])
+```
 
+</details>
 
+**8- How many squirrels are located in hectare 41B ? (see columns "hectare" and "hectare_squirrel_number")**
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+# select hectare 41B
+hect41B <- squirrels[squirrels$hectare == "41B",]
+# sum up values in the "hectare_squirrel_number" column
+sum(hect41B[, "hectare_squirrel_number"])
+```
+
+</details>
+
+**9- From the hectare 41B selected squirrels: what "primary fur color" does the squirrel found "chasing" displayed?**
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+hect41B[hect41B$chasing == "true", "primary_fur_color"]
+```
+
+</details>
 

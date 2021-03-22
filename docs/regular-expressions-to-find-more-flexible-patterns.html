@@ -230,6 +230,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
 <li class="chapter" data-level="12.8" data-path="exercise-6-about-module-2.html"><a href="exercise-6-about-module-2.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 6: about Module 2…</a></li>
 <li class="chapter" data-level="12.9" data-path="workspace.html"><a href="workspace.html"><i class="fa fa-check"></i><b>12.9</b> Workspace</a></li>
+<li class="chapter" data-level="12.10" data-path="exercise-7-.html"><a href="exercise-7-.html"><i class="fa fa-check"></i><b>12.10</b> Exercise 7.</a>
+<ul>
+<li class="chapter" data-level="12.10.1" data-path="exercise-7-.html"><a href="exercise-7-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>12.10.1</b> Exercise 6a. Input / output</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="base-plots-in-r.html"><a href="base-plots-in-r.html"><i class="fa fa-check"></i><b>13</b> “Base” plots in R</a>
 <ul>
@@ -411,26 +415,26 @@ Match your own pattern inside <strong>[]</strong>
 <ul>
 <li>Match anything contained between brackets (here either g or t) once:</li>
 </ul>
-<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb414-1"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb414-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;[gt]&quot;</span>, </span>
-<span id="cb414-2"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb414-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="fu">c</span>(<span class="st">&quot;genomics&quot;</span>, <span class="st">&quot;proteomics&quot;</span>, <span class="st">&quot;transcriptomics&quot;</span>), </span>
-<span id="cb414-3"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb414-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb423-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;[gt]&quot;</span>, </span>
+<span id="cb423-2"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb423-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="fu">c</span>(<span class="st">&quot;genomics&quot;</span>, <span class="st">&quot;proteomics&quot;</span>, <span class="st">&quot;transcriptomics&quot;</span>), </span>
+<span id="cb423-3"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb423-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <ul>
 <li>Match anything contained between brackets once AND at the start of the element:</li>
 </ul>
-<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb415-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^[gt]&quot;</span>,</span>
-<span id="cb415-2"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb415-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span><span class="fu">c</span>(<span class="st">&quot;genomics&quot;</span>, <span class="st">&quot;proteomics&quot;</span>, <span class="st">&quot;transcriptomics&quot;</span>),</span>
-<span id="cb415-3"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb415-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb424-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^[gt]&quot;</span>,</span>
+<span id="cb424-2"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb424-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span><span class="fu">c</span>(<span class="st">&quot;genomics&quot;</span>, <span class="st">&quot;proteomics&quot;</span>, <span class="st">&quot;transcriptomics&quot;</span>),</span>
+<span id="cb424-3"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb424-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <ul>
 <li><strong>Create a vector of email addresses:</strong></li>
 </ul>
-<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb416-1"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb416-1" aria-hidden="true" tabindex="-1"></a>vec_ad <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;marie.curie@yahoo.es&quot;</span>, <span class="st">&quot;albert.einstein01@hotmail.com&quot;</span>, </span>
-<span id="cb416-2"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb416-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;charles.darwin1809@gmail.com&quot;</span>, <span class="st">&quot;rosalind.franklin@aol.it&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb425-1" aria-hidden="true" tabindex="-1"></a>vec_ad <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;marie.curie@yahoo.es&quot;</span>, <span class="st">&quot;albert.einstein01@hotmail.com&quot;</span>, </span>
+<span id="cb425-2"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb425-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;charles.darwin1809@gmail.com&quot;</span>, <span class="st">&quot;rosalind.franklin@aol.it&quot;</span>)</span></code></pre></div>
 <ul>
 <li>Keep only email addresses finishing with “es”:</li>
 </ul>
-<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb417-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;es$&quot;</span>,</span>
-<span id="cb417-2"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb417-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad,</span>
-<span id="cb417-3"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb417-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb426-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;es$&quot;</span>,</span>
+<span id="cb426-2"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb426-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad,</span>
+<span id="cb426-3"><a href="regular-expressions-to-find-more-flexible-patterns.html#cb426-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 </div>
 <div class="footnotes">
 <hr />
