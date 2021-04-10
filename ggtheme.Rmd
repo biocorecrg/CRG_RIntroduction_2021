@@ -5,7 +5,7 @@ The **theme()** allows a precise control of graphical parameters such as axis te
 More details [here](https://ggplot2.tidyverse.org/reference/theme.html)
 
 ```{r, eval=T, echo=F, message=F, warning=F}
-project1 <- read.table("ex12_normalized_intensities.csv", 
+project1 <- read.table("ex9_normalized_intensities.csv", 
   sep=",", 
   header=TRUE, 
   row.names = 1)

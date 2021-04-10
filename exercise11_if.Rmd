@@ -1,6 +1,6 @@
-## Exercise 9: If statement
+## Exercise 11: If statement
 
-Create the script "exercise9.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 9 in that script.
+Create the script "exercise9.R" and save it to the "Rcourse/ExtraModule" directory: you will save all the commands of exercise 9 in that script.
 <br>Remember you can comment the code using #.
 
 
@@ -11,7 +11,7 @@ Create the script "exercise9.R" and save it to the "Rcourse/Module2" directory: 
 
 ```{r, eval=F}
 getwd()
-setwd("~/Rcourse/Module2")
+setwd("~/Rcourse/ExtraModule")
 ```
 
 </details>

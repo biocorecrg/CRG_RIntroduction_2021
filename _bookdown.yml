@@ -25,13 +25,13 @@ rmd_files: ["index.Rmd",
           "libpackages.Rmd", "exercise6_module2.Rmd",
           "workspace.Rmd",
           "exercise7_module2.Rmd",
-          "baseplot.Rmd", "io_plots.Rmd", "exercise11.Rmd", 
+          "baseplot.Rmd", "io_plots.Rmd", "exercise8_baseplot.Rmd", 
           "extraplot.Rmd", 
-          "ggplot2.Rmd", "exercise12.Rmd",
+          "ggplot2.Rmd", "exercise9_ggplot.Rmd",
           "ggtheme.Rmd", 
-          "regex.Rmd", "exercise8.Rmd", 
-          "conditional.Rmd", "exercise9.Rmd",
-          "forloop.Rmd", "exercise10.Rmd"]
+          "regex.Rmd", "exercise10_regex.Rmd", 
+          "conditional.Rmd", "exercise11_if.Rmd",
+          "forloop.Rmd", "exercise12_for.Rmd"]
 output:
   bookdown::gitbook:
     theme: cosmo

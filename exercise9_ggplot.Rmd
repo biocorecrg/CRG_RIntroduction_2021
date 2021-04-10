@@ -1,6 +1,6 @@
-## Exercise 12: ggplot2
+## Exercise 9: ggplot2
 
-Create the script "exercise12.R" and save it to the "Rcourse/Module3" directory: you will save all the commands of exercise 12 in that script.
+Create the script "exercise9.R" and save it to the "Rcourse/Module3" directory: you will save all the commands of exercise 9 in that script.
 <br>Remember you can comment the code using #.
 
 
@@ -16,7 +16,7 @@ setwd("~/Rcourse/Module3")
 
 </details>
 
-### Exercise 12a- Scatter plot
+### Exercise 9a- Scatter plot
 
 **1- Load ggplot2 package**
 
@@ -34,7 +34,7 @@ library(ggplot2)
 **2- Download the data we will use for plotting:**
 
 ```{r}
-download.file("https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/master/ex12_normalized_intensities.csv", "ex12_normalized_intensities.csv", method="curl")
+download.file("https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/master/ex9_normalized_intensities.csv", "ex9_normalized_intensities.csv", method="curl")
 ```
 
 **3- Read file into object "project1" (remember the input/output tutorial!)**
@@ -51,7 +51,7 @@ About this file:
 </summary>
 
 ```{r}
-project1 <- read.table("ex12_normalized_intensities.csv", 
+project1 <- read.table("ex9_normalized_intensities.csv", 
   sep=",", 
   header=TRUE, 
   row.names = 1)
@@ -155,7 +155,7 @@ dev.off()
 
 </details>
 
-### Exercise 12b- Box plot
+### Exercise 9b- Box plot
 
 **1- Convert "project1" from a wide format to a long format: save in the object "project_long"**
 *Note: remember melt function from reshape2 package.*
@@ -234,7 +234,7 @@ ggplot(data=project_long, mapping=aes(x=variable, y=value, color=expr_limits)) +
 </details>
 
 
-### Exercise 12c- Bar plot
+### Exercise 9c- Bar plot
 
 **1- Produce a bar plot of how many low/normal/high genes are in the column "expr_limits" of "project1".**
 
@@ -294,7 +294,7 @@ dev.off()
 </details>
 
 
-### Exercise 12d- Histogram
+### Exercise 9d- Histogram
 
 **1- Create a simple histogram using project_long (column "value").**
 

@@ -2,61 +2,14 @@
 
 We will see two additional types of plots:
 
-* Heat map (package gplots or pheatmap)
+* Heat map (from package pheatmap)
 * Venn diagram (from package VennDiagram)
 
-## heatmap.2 function from gplots package
+## pheatmap function from the pheatmap package
 
 A heatmap is a graphical representation of data where the values are represented with **colors**.
 <br>
 The **heatmap.2** function from the **gplots** package allows to produce highly customizable heatmaps.
-
-```{r, eval=F}
-# install gplots package
-install.packages("gplots")
-```
-
-```{r, eval=T}
-# load package
-library("gplots")
-
-# make matrix
-mat <- matrix(rnorm(1200), ncol=6)
-
-# heatmap with the defaults parameters
-heatmap.2(x=mat)
-```
-<img src="images/plots/heatmap1.png" width="500"/>
-
-* Useful arguments include:
-	* Rowv, Colv : process clustering of columns or rows (default TRUE to both)
-	* dendrogram : show dendrogram for row, col, both or none
-	* scale : scale data per row, column, or none
-	* col : dendrogram color palette
-	* trace : control the cyan density lines
-	* RowSideColors, ColSideColors :  block of colors that represent the columns or the rows
-	* labRow,labCol : remove or keep row or col labels
-	* main :  title
-	* xlab, ylab: x-axis or y-axis label
-
-```{r}
-heatmap.2(x=mat, 
-	Colv=FALSE, 
-	dendrogram="row",
-	scale="row",
-	col="bluered",
-	trace="none",
-	ColSideColors=rep(c("green","orange"), each=3),
-	labRow=FALSE,
-	main="my heatmap",
-	ylab="Genes",
-	xlab="Samples")
-```
-
-<img src="images/plots/heatmap2.png" width="500"/>
-
-
-## pheatmap function from the pheatmap package
 
 ```{r, eval=F}
 # install pheatmap package
@@ -65,7 +18,7 @@ install.package("pheatmap")
 
 Get started:
 
-```{r, eval=F}
+```{r, eval=T, results="hide"}
 # load package
 library(pheatmap)
 
@@ -74,34 +27,43 @@ mat <- matrix(rnorm(1200), ncol=6)
 
 # heatmap with the defaults parameters
 pheatmap(mat)
+
+# add a title
+pheatmap(mat, main="My pretty heatmap")
 ```
 
 Change the color palette / gradient
 
-```{r, eval=F}
+```{r, eval=T}
 # with "rainbow" colors
-pheatmap(mat, color=rainbow(50))
+pheatmap(mat, 
+         color=rainbow(50))
 
 # with blue to red (middle color white)
-pheatmap(mat, color=colorRampPalette(c("navy", "white", "red"))(50))
+pheatmap(mat, 
+         color=colorRampPalette(c("navy", "white", "red"))(50))
 ```
 
 Do not cluster rows or columns
 
-```{r, eval=F}
+```{r, eval=T, results="hide"}
 # remove the clustering by rows
-pheatmap(mat, cluster_rows=FALSE)
+pheatmap(mat, 
+         cluster_rows=FALSE)
 
 # remove the clustering by columns
-pheatmap(mat, cluster_cols=FALSE)
+pheatmap(mat, 
+         cluster_cols=FALSE)
 
 # remove both clusterings
-pheatmap(mat, cluster_rows=FALSE, cluster_cols=FALSE)
+pheatmap(mat, 
+         cluster_rows=FALSE, 
+         cluster_cols=FALSE)
 ```
 
 Add some **annotation colored bar(s)**:
 
-```{r, eval=F}
+```{r, eval=T}
 # add column names to mat
 colnames(mat) <- paste0("Sample", 1:6)
 
@@ -109,10 +71,11 @@ colnames(mat) <- paste0("Sample", 1:6)
 annot_cols = data.frame(
                 Group = c(rep("WT", 3), rep("KO", 3)), 
                 TimePoint = rep(c(0, 5, 10), each=2),
-		row.names = colnames(mat)
+		            row.names = colnames(mat)
                 )
 # plot
-pheatmap(mat, annotation_col = annot_cols)
+pheatmap(mat, 
+         annotation_col = annot_cols)
 ```
 
 ## venn.diagram function from VennDiagram package
@@ -121,7 +84,7 @@ pheatmap(mat, annotation_col = annot_cols)
 <br>
 The **venn.diagram** function from the **VennDiagram** package allows to create up to a 5-way Venn Diagram (i.e. 5 circles representing 5 data sets).
 
-```{r}
+```{r, eval=FALSE}
 # load package
 library(VennDiagram)
 
@@ -142,7 +105,7 @@ venn.diagram(vlist[1:2],
 
 <img src="images/plots/Venn_2way.png" width="450"/>
 
-```{r}
+```{r, eval=FALSE}
 # 3-way Venn
 venn.diagram(vlist, 
         filename="Venn_3way.png",
@@ -159,7 +122,7 @@ venn.diagram(vlist,
 	* col : color of circle lines
 	* cat.col : color of category labels
 
-```{r}
+```{r, eval=FALSE}
 venn.diagram(vlist,     
         filename="Venn_3way_more.png",
         imagetype="png",

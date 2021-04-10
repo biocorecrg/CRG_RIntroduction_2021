@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-03-22" />
+<meta name="date" content="2021-04-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -256,9 +256,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="15" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html"><i class="fa fa-check"></i><b>15</b> Plots from other packages</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="heatmap-2-function-from-gplots-package.html"><a href="heatmap-2-function-from-gplots-package.html"><i class="fa fa-check"></i><b>15.1</b> heatmap.2 function from gplots package</a></li>
-<li class="chapter" data-level="15.2" data-path="pheatmap-function-from-the-pheatmap-package.html"><a href="pheatmap-function-from-the-pheatmap-package.html"><i class="fa fa-check"></i><b>15.2</b> pheatmap function from the pheatmap package</a></li>
-<li class="chapter" data-level="15.3" data-path="venn-diagram-function-from-venndiagram-package.html"><a href="venn-diagram-function-from-venndiagram-package.html"><i class="fa fa-check"></i><b>15.3</b> venn.diagram function from VennDiagram package</a></li>
+<li class="chapter" data-level="15.1" data-path="pheatmap-function-from-the-pheatmap-package.html"><a href="pheatmap-function-from-the-pheatmap-package.html"><i class="fa fa-check"></i><b>15.1</b> pheatmap function from the pheatmap package</a></li>
+<li class="chapter" data-level="15.2" data-path="venn-diagram-function-from-venndiagram-package.html"><a href="venn-diagram-function-from-venndiagram-package.html"><i class="fa fa-check"></i><b>15.2</b> venn.diagram function from VennDiagram package</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="ggplot2-package.html"><a href="ggplot2-package.html"><i class="fa fa-check"></i><b>16</b> ggplot2 package</a>
 <ul>
@@ -323,28 +322,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="dot-plots" class="section level2" number="16.4">
 <h2><span class="header-section-number">16.4</span> Dot plots</h2>
 <p>Example of the expression of a gene in 6 samples: 2 experimental groups in triplicates.</p>
-<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb348-1"><a href="dot-plots.html#cb348-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a named vector with the expression of a gene</span></span>
-<span id="cb348-2"><a href="dot-plots.html#cb348-2" aria-hidden="true" tabindex="-1"></a>mygene <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">8.1</span>, <span class="fl">8.2</span>, <span class="fl">8.6</span>, <span class="fl">8.7</span>, <span class="fl">9.4</span>, <span class="fl">8.5</span>)</span>
-<span id="cb348-3"><a href="dot-plots.html#cb348-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb348-4"><a href="dot-plots.html#cb348-4" aria-hidden="true" tabindex="-1"></a><span class="co"># the names of each element of the vector are sample names</span></span>
-<span id="cb348-5"><a href="dot-plots.html#cb348-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(mygene) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;KO1&quot;</span>, <span class="st">&quot;KO2&quot;</span>, <span class="st">&quot;KO3&quot;</span>, <span class="st">&quot;WT1&quot;</span>, <span class="st">&quot;WT2&quot;</span>, <span class="st">&quot;WT3&quot;</span>)</span>
-<span id="cb348-6"><a href="dot-plots.html#cb348-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb348-7"><a href="dot-plots.html#cb348-7" aria-hidden="true" tabindex="-1"></a><span class="co"># transform to long format</span></span>
-<span id="cb348-8"><a href="dot-plots.html#cb348-8" aria-hidden="true" tabindex="-1"></a>mygenelong <span class="ot">&lt;-</span> <span class="fu">melt</span>(<span class="at">data=</span>mygene)</span>
-<span id="cb348-9"><a href="dot-plots.html#cb348-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb348-10"><a href="dot-plots.html#cb348-10" aria-hidden="true" tabindex="-1"></a><span class="co"># add new columns containing sample names and experimental groups</span></span>
-<span id="cb348-11"><a href="dot-plots.html#cb348-11" aria-hidden="true" tabindex="-1"></a>mygenelong<span class="sc">$</span>sample_name <span class="ot">&lt;-</span> <span class="fu">rownames</span>(mygenelong)</span>
-<span id="cb348-12"><a href="dot-plots.html#cb348-12" aria-hidden="true" tabindex="-1"></a>mygenelong<span class="sc">$</span>group <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;[1-3]{1}&quot;</span>, <span class="st">&quot;&quot;</span>, mygenelong<span class="sc">$</span>sample_name)</span>
-<span id="cb348-13"><a href="dot-plots.html#cb348-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb348-14"><a href="dot-plots.html#cb348-14" aria-hidden="true" tabindex="-1"></a><span class="co"># dot plot</span></span>
-<span id="cb348-15"><a href="dot-plots.html#cb348-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add labels with &quot;label&quot; in the aes() and layer geom_text()</span></span>
-<span id="cb348-16"><a href="dot-plots.html#cb348-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># nudge_x adjust the labels horizontally</span></span>
-<span id="cb348-17"><a href="dot-plots.html#cb348-17" aria-hidden="true" tabindex="-1"></a>pdot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>mygenelong, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>group, <span class="at">y=</span>value, <span class="at">col=</span>group, <span class="at">label=</span>sample_name)) <span class="sc">+</span> </span>
-<span id="cb348-18"><a href="dot-plots.html#cb348-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb348-19"><a href="dot-plots.html#cb348-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">nudge_x=</span><span class="fl">0.2</span>)</span>
-<span id="cb348-20"><a href="dot-plots.html#cb348-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb348-21"><a href="dot-plots.html#cb348-21" aria-hidden="true" tabindex="-1"></a>pdot</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-259-1.png" width="672" /></p>
+<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb350-1"><a href="dot-plots.html#cb350-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a named vector with the expression of a gene</span></span>
+<span id="cb350-2"><a href="dot-plots.html#cb350-2" aria-hidden="true" tabindex="-1"></a>mygene <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">8.1</span>, <span class="fl">8.2</span>, <span class="fl">8.6</span>, <span class="fl">8.7</span>, <span class="fl">9.4</span>, <span class="fl">8.5</span>)</span>
+<span id="cb350-3"><a href="dot-plots.html#cb350-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb350-4"><a href="dot-plots.html#cb350-4" aria-hidden="true" tabindex="-1"></a><span class="co"># the names of each element of the vector are sample names</span></span>
+<span id="cb350-5"><a href="dot-plots.html#cb350-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(mygene) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;KO1&quot;</span>, <span class="st">&quot;KO2&quot;</span>, <span class="st">&quot;KO3&quot;</span>, <span class="st">&quot;WT1&quot;</span>, <span class="st">&quot;WT2&quot;</span>, <span class="st">&quot;WT3&quot;</span>)</span>
+<span id="cb350-6"><a href="dot-plots.html#cb350-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb350-7"><a href="dot-plots.html#cb350-7" aria-hidden="true" tabindex="-1"></a><span class="co"># transform to long format</span></span>
+<span id="cb350-8"><a href="dot-plots.html#cb350-8" aria-hidden="true" tabindex="-1"></a>mygenelong <span class="ot">&lt;-</span> <span class="fu">melt</span>(<span class="at">data=</span>mygene)</span>
+<span id="cb350-9"><a href="dot-plots.html#cb350-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb350-10"><a href="dot-plots.html#cb350-10" aria-hidden="true" tabindex="-1"></a><span class="co"># add new columns containing sample names and experimental groups</span></span>
+<span id="cb350-11"><a href="dot-plots.html#cb350-11" aria-hidden="true" tabindex="-1"></a>mygenelong<span class="sc">$</span>sample_name <span class="ot">&lt;-</span> <span class="fu">rownames</span>(mygenelong)</span>
+<span id="cb350-12"><a href="dot-plots.html#cb350-12" aria-hidden="true" tabindex="-1"></a>mygenelong<span class="sc">$</span>group <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;[1-3]{1}&quot;</span>, <span class="st">&quot;&quot;</span>, mygenelong<span class="sc">$</span>sample_name)</span>
+<span id="cb350-13"><a href="dot-plots.html#cb350-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb350-14"><a href="dot-plots.html#cb350-14" aria-hidden="true" tabindex="-1"></a><span class="co"># dot plot</span></span>
+<span id="cb350-15"><a href="dot-plots.html#cb350-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add labels with &quot;label&quot; in the aes() and layer geom_text()</span></span>
+<span id="cb350-16"><a href="dot-plots.html#cb350-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># nudge_x adjust the labels horizontally</span></span>
+<span id="cb350-17"><a href="dot-plots.html#cb350-17" aria-hidden="true" tabindex="-1"></a>pdot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>mygenelong, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>group, <span class="at">y=</span>value, <span class="at">col=</span>group, <span class="at">label=</span>sample_name)) <span class="sc">+</span> </span>
+<span id="cb350-18"><a href="dot-plots.html#cb350-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb350-19"><a href="dot-plots.html#cb350-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">nudge_x=</span><span class="fl">0.2</span>)</span>
+<span id="cb350-20"><a href="dot-plots.html#cb350-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb350-21"><a href="dot-plots.html#cb350-21" aria-hidden="true" tabindex="-1"></a>pdot</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-261-1.png" width="672" /></p>
 <ul>
 <li>Add more layers:
 <ul>
@@ -353,12 +352,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>theme</strong> to manage the legend</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="dot-plots.html#cb349-1" aria-hidden="true" tabindex="-1"></a>pdot <span class="sc">+</span>  <span class="fu">xlab</span>(<span class="at">label=</span><span class="st">&quot;Experimental group&quot;</span>) <span class="sc">+</span></span>
-<span id="cb349-2"><a href="dot-plots.html#cb349-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="at">label=</span><span class="st">&quot;Normalized expression (log2)&quot;</span>) <span class="sc">+</span></span>
-<span id="cb349-3"><a href="dot-plots.html#cb349-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;Expression of gene 1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb349-4"><a href="dot-plots.html#cb349-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb349-5"><a href="dot-plots.html#cb349-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-260-1.png" width="672" /></p>
+<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb351-1"><a href="dot-plots.html#cb351-1" aria-hidden="true" tabindex="-1"></a>pdot <span class="sc">+</span>  <span class="fu">xlab</span>(<span class="at">label=</span><span class="st">&quot;Experimental group&quot;</span>) <span class="sc">+</span></span>
+<span id="cb351-2"><a href="dot-plots.html#cb351-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="at">label=</span><span class="st">&quot;Normalized expression (log2)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb351-3"><a href="dot-plots.html#cb351-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;Expression of gene 1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb351-4"><a href="dot-plots.html#cb351-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb351-5"><a href="dot-plots.html#cb351-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-262-1.png" width="672" /></p>
 </div>
             </section>
 

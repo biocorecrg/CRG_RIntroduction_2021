@@ -104,6 +104,9 @@ write.csv(sqJC, "squirrels_Juvenile_Cinnamon.csv", quote=FALSE, row.names=FALSE)
 ```{r, eval=F}
 # use table to count occurrences of terms
 table(squirrels[, "hectare"])
+
+# then sort to check the most populated
+sort(table(squirrels[, "hectare"]))
 ```
 
 </details>

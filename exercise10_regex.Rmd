@@ -1,6 +1,6 @@
-## Exercise 8: Regular expressions
+## Exercise 10: Regular expressions
 
-Create the script "exercise8.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 8 in that script.
+Create the script "exercise8.R" and save it to the "Rcourse/ExtraModule" directory: you will save all the commands of exercise 8 in that script.
 <br>Remember you can comment the code using #.
 
 
@@ -11,7 +11,7 @@ Create the script "exercise8.R" and save it to the "Rcourse/Module2" directory: 
 
 ```{r, eval=F}
 getwd()
-setwd("~/Rcourse/Module2")
+setwd("~/Rcourse/ExtraModule")
 ```
 
 </details>

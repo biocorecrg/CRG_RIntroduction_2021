@@ -1,6 +1,6 @@
-## Exercise 11: Base plots
+## Exercise 8: Base plots
 
-Create the script "exercise11.R" and save it to the "Rcourse/Module3" directory: you will save all the commands of exercise 11 in that script.
+Create the script "exercise8.R" and save it to the "Rcourse/Module3" directory: you will save all the commands of exercise 8 in that script.
 <br>Remember you can comment the code using #.
 
 
@@ -16,7 +16,7 @@ setwd("~/Rcourse/Module3")
 
 </details>
 
-### Exercise 11a- scatter plot
+### Exercise 8a- scatter plot
 
 **1- Create the following data frame**
 
@@ -119,7 +119,7 @@ abline(v=med1, col="red")
 
 </details>
 
-### Exercise 11b- bar plot + pie chart
+### Exercise 8b- bar plot + pie chart
 
 **1- Create the following vector**
 
@@ -223,7 +223,7 @@ pie(table(genes_significance),
 
 </details>
 
-### Exercise 11c- histogram
+### Exercise 8c- histogram
 
 **1- Use genes object from exercise 11a to create a histogram of the gene expression distribution of sample 1.**
 
