@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="exercise-9-ggplot2.html"/>
-<link rel="next" href="volcano-plots.html"/>
+<link rel="next" href="demo-volcano-plots.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -279,7 +279,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.8.4" data-path="exercise-9-ggplot2.html"><a href="exercise-9-ggplot2.html#exercise-9d--histogram"><i class="fa fa-check"></i><b>16.8.4</b> Exercise 9d- Histogram</a></li>
 </ul></li>
 <li class="chapter" data-level="16.9" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>16.9</b> More about the theme() function</a></li>
-<li class="chapter" data-level="16.10" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> Volcano plots</a></li>
+<li class="chapter" data-level="16.10" data-path="demo-volcano-plots.html"><a href="demo-volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> demo: volcano plots</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>17</b> Regular expressions</a>
 <ul>
@@ -323,35 +323,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The <strong>theme()</strong> allows a precise control of graphical parameters such as axis text, ticks and labels, or legend texts and labels, etc.
 <br>
 More details <a href="https://ggplot2.tidyverse.org/reference/theme.html">here</a></p>
-<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="more-about-the-theme-function.html#cb413-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let&#39;s the project_long object from exercise 12, and plot boxplots</span></span>
-<span id="cb413-2"><a href="more-about-the-theme-function.html#cb413-2" aria-hidden="true" tabindex="-1"></a>boxp <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
-<span id="cb413-3"><a href="more-about-the-theme-function.html#cb413-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span>
-<span id="cb413-4"><a href="more-about-the-theme-function.html#cb413-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb413-5"><a href="more-about-the-theme-function.html#cb413-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the legend title:</span></span>
-<span id="cb413-6"><a href="more-about-the-theme-function.html#cb413-6" aria-hidden="true" tabindex="-1"></a>boxp <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_blank</span>())</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-312-1.png" width="672" /></p>
-<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb414-1"><a href="more-about-the-theme-function.html#cb414-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change font of legend text</span></span>
-<span id="cb414-2"><a href="more-about-the-theme-function.html#cb414-2" aria-hidden="true" tabindex="-1"></a>boxp <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_blank</span>(), </span>
-<span id="cb414-3"><a href="more-about-the-theme-function.html#cb414-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">colour=</span><span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-312-2.png" width="672" /></p>
-<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="more-about-the-theme-function.html#cb415-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Put legend on the top of the plot</span></span>
+<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb414-1"><a href="more-about-the-theme-function.html#cb414-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let&#39;s the project_long object from exercise 12, and plot boxplots</span></span>
+<span id="cb414-2"><a href="more-about-the-theme-function.html#cb414-2" aria-hidden="true" tabindex="-1"></a>boxp <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>project_long, <span class="fu">aes</span>(<span class="at">x=</span>variable, <span class="at">y=</span>value, <span class="at">color=</span>expr_limits)) <span class="sc">+</span> </span>
+<span id="cb414-3"><a href="more-about-the-theme-function.html#cb414-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span>
+<span id="cb414-4"><a href="more-about-the-theme-function.html#cb414-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb414-5"><a href="more-about-the-theme-function.html#cb414-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the legend title:</span></span>
+<span id="cb414-6"><a href="more-about-the-theme-function.html#cb414-6" aria-hidden="true" tabindex="-1"></a>boxp <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_blank</span>())</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-1.png" width="672" /></p>
+<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="more-about-the-theme-function.html#cb415-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change font of legend text</span></span>
 <span id="cb415-2"><a href="more-about-the-theme-function.html#cb415-2" aria-hidden="true" tabindex="-1"></a>boxp <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_blank</span>(), </span>
-<span id="cb415-3"><a href="more-about-the-theme-function.html#cb415-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">colour=</span><span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
-<span id="cb415-4"><a href="more-about-the-theme-function.html#cb415-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.position=</span><span class="st">&quot;top&quot;</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-312-3.png" width="672" /></p>
-<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb416-1"><a href="more-about-the-theme-function.html#cb416-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate x-axis labels</span></span>
+<span id="cb415-3"><a href="more-about-the-theme-function.html#cb415-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">colour=</span><span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-2.png" width="672" /></p>
+<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb416-1"><a href="more-about-the-theme-function.html#cb416-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Put legend on the top of the plot</span></span>
 <span id="cb416-2"><a href="more-about-the-theme-function.html#cb416-2" aria-hidden="true" tabindex="-1"></a>boxp <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_blank</span>(), </span>
 <span id="cb416-3"><a href="more-about-the-theme-function.html#cb416-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">colour=</span><span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
-<span id="cb416-4"><a href="more-about-the-theme-function.html#cb416-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.position=</span><span class="st">&quot;top&quot;</span>,</span>
-<span id="cb416-5"><a href="more-about-the-theme-function.html#cb416-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>))</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-312-4.png" width="672" /></p>
-<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="more-about-the-theme-function.html#cb417-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a color to the plot&#39;s background</span></span>
+<span id="cb416-4"><a href="more-about-the-theme-function.html#cb416-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.position=</span><span class="st">&quot;top&quot;</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-3.png" width="672" /></p>
+<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="more-about-the-theme-function.html#cb417-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate x-axis labels</span></span>
 <span id="cb417-2"><a href="more-about-the-theme-function.html#cb417-2" aria-hidden="true" tabindex="-1"></a>boxp <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_blank</span>(), </span>
 <span id="cb417-3"><a href="more-about-the-theme-function.html#cb417-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">colour=</span><span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
 <span id="cb417-4"><a href="more-about-the-theme-function.html#cb417-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.position=</span><span class="st">&quot;top&quot;</span>,</span>
-<span id="cb417-5"><a href="more-about-the-theme-function.html#cb417-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>),</span>
-<span id="cb417-6"><a href="more-about-the-theme-function.html#cb417-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;yellow&quot;</span>))</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-312-5.png" width="672" /></p>
+<span id="cb417-5"><a href="more-about-the-theme-function.html#cb417-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>))</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-4.png" width="672" /></p>
+<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb418-1"><a href="more-about-the-theme-function.html#cb418-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a color to the plot&#39;s background</span></span>
+<span id="cb418-2"><a href="more-about-the-theme-function.html#cb418-2" aria-hidden="true" tabindex="-1"></a>boxp <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.title=</span><span class="fu">element_blank</span>(), </span>
+<span id="cb418-3"><a href="more-about-the-theme-function.html#cb418-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">colour=</span><span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">8</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb418-4"><a href="more-about-the-theme-function.html#cb418-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend.position=</span><span class="st">&quot;top&quot;</span>,</span>
+<span id="cb418-5"><a href="more-about-the-theme-function.html#cb418-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>),</span>
+<span id="cb418-6"><a href="more-about-the-theme-function.html#cb418-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;yellow&quot;</span>))</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-313-5.png" width="672" /></p>
 </div>
             </section>
 
@@ -359,7 +359,7 @@ More details <a href="https://ggplot2.tidyverse.org/reference/theme.html">here</
         </div>
       </div>
 <a href="exercise-9-ggplot2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="volcano-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="demo-volcano-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

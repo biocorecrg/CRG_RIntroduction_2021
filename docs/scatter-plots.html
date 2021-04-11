@@ -279,7 +279,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.8.4" data-path="exercise-9-ggplot2.html"><a href="exercise-9-ggplot2.html#exercise-9d--histogram"><i class="fa fa-check"></i><b>16.8.4</b> Exercise 9d- Histogram</a></li>
 </ul></li>
 <li class="chapter" data-level="16.9" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>16.9</b> More about the theme() function</a></li>
-<li class="chapter" data-level="16.10" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> Volcano plots</a></li>
+<li class="chapter" data-level="16.10" data-path="demo-volcano-plots.html"><a href="demo-volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> demo: volcano plots</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>17</b> Regular expressions</a>
 <ul>
@@ -472,7 +472,7 @@ gray
 <p><strong>HANDS-ON</strong></p>
 <p>The <strong>datasets</strong> package (included in the base installation of R) contains pre-made / built-in datasets. You can see them in <em>Environment</em> -&gt; change <em>Global Environment</em> to <em>package:datasets</em>.
 <br>
-We will use data set <strong>Loblolly</strong> (growth of Loblolly pine trees):</p>
+We will use data set <strong>Loblolly</strong> (growth of Loblolly pine trees): you can check <code>dim(Loblolly)</code>, <code>head(Loblolly)</code>:</p>
 <ul>
 <li>Plot <strong>age</strong> (x-axis) versus <strong>height</strong> (y-axis).</li>
 <li>Change the <strong>title</strong>.</li>
@@ -484,12 +484,12 @@ We will use data set <strong>Loblolly</strong> (growth of Loblolly pine trees):<
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="scatter-plots.html#cb285-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot **age** (x-axis) versus **height** (y-axis).</span></span>
+<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="scatter-plots.html#cb285-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot age (x-axis) versus height (y-axis).</span></span>
 <span id="cb285-2"><a href="scatter-plots.html#cb285-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>Loblolly<span class="sc">$</span>age, <span class="at">y=</span>Loblolly<span class="sc">$</span>height)</span>
-<span id="cb285-3"><a href="scatter-plots.html#cb285-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the **title**.</span></span>
+<span id="cb285-3"><a href="scatter-plots.html#cb285-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the title.</span></span>
 <span id="cb285-4"><a href="scatter-plots.html#cb285-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>Loblolly<span class="sc">$</span>age, <span class="at">y=</span>Loblolly<span class="sc">$</span>height,</span>
 <span id="cb285-5"><a href="scatter-plots.html#cb285-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Age and weight of Loblolly pine trees&quot;</span>)</span>
-<span id="cb285-6"><a href="scatter-plots.html#cb285-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the points type to a **full triangle**.</span></span>
+<span id="cb285-6"><a href="scatter-plots.html#cb285-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the points type to a full triangle.</span></span>
 <span id="cb285-7"><a href="scatter-plots.html#cb285-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>Loblolly<span class="sc">$</span>age, <span class="at">y=</span>Loblolly<span class="sc">$</span>height,</span>
 <span id="cb285-8"><a href="scatter-plots.html#cb285-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Age and weight of Loblolly pine trees&quot;</span>,</span>
 <span id="cb285-9"><a href="scatter-plots.html#cb285-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">17</span>)</span>
@@ -513,9 +513,9 @@ You can look up for a way to do it, or look at one possibility in the answer bel
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="scatter-plots.html#cb286-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add an extra column named **colors** to Loblolly that contains, for example, only black values (store in new data frame Loblolly2).</span></span>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="scatter-plots.html#cb286-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add an extra column named colors to Loblolly that contains, for example, only black values (store in new data frame Loblolly2).</span></span>
 <span id="cb286-2"><a href="scatter-plots.html#cb286-2" aria-hidden="true" tabindex="-1"></a>Loblolly2 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(Loblolly, <span class="at">colors=</span><span class="st">&quot;black&quot;</span>)</span>
-<span id="cb286-3"><a href="scatter-plots.html#cb286-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set column **colors** to &quot;red&quot; in the rows that correspond to age 10.</span></span>
+<span id="cb286-3"><a href="scatter-plots.html#cb286-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set column colors to &quot;red&quot; in the rows that correspond to age 10.</span></span>
 <span id="cb286-4"><a href="scatter-plots.html#cb286-4" aria-hidden="true" tabindex="-1"></a>Loblolly2<span class="sc">$</span>colors[Loblolly2<span class="sc">$</span>age <span class="sc">==</span> <span class="dv">10</span>] <span class="ot">&lt;-</span> <span class="st">&quot;red&quot;</span></span>
 <span id="cb286-5"><a href="scatter-plots.html#cb286-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Set parameter `col` of `plot()` with `Loblolly2$colors`.</span></span>
 <span id="cb286-6"><a href="scatter-plots.html#cb286-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>Loblolly2<span class="sc">$</span>age, <span class="at">y=</span>Loblolly2<span class="sc">$</span>height, </span>

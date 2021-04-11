@@ -236,6 +236,11 @@ Let's use the **CO2** dataset that represents the carbon dioxide uptake in grass
 * Split each boxplot per **Type**. *Use either the color or the fill argument*.
 * Move the legend to the bottom of the plot. You can get help from [this page](http://www.sthda.com/english/wiki/ggplot2-legend-easy-steps-to-change-the-position-and-the-appearance-of-a-graph-legend-in-r-software)
 
+<details>
+<summary>
+*Answer*
+</summary>
+
 ```{r}
 # Create a boxplot that represents the **uptake** for each **Treatment**.
 ggplot(data=CO2, mapping=aes(x=Treatment, y=uptake)) + geom_boxplot()
@@ -247,6 +252,8 @@ ggplot(data=CO2, mapping=aes(x=Treatment, y=uptake, fill=Type)) +
     geom_boxplot() +
     theme(legend.position = "bottom")
 ```
+
+</details>
 
 ## Bar plots
 
@@ -460,6 +467,37 @@ Combine ggsave and grid.arrange:
 ```{r, eval=FALSE}
 myplots <- grid.arrange(pscat, pbox_fill, pbar, phist, nrow=1, ncol=4)
 
-ggsave(filename="mygridarrange.png", plot=myplots))
+ggsave(filename="mygridarrange.png", plot=myplots)
 ```
 
+**HANDS-ON** (same as for the "base" plots!)
+
+Go back to the previous plots you created (if you didn't save commands in an R script, you can refer to the *History* tab in the top-right panel):
+
+* Save 1 plot of your choice in a **jpeg** file.
+* Save 3 plots of your choice in a **pdf** file (one plot per page).
+* Organize the same 3 plots in 1 row / 3 columns. Save the image in a **png** file. Play with the **width** (and perhaps also **height**) argument of `png()` until you are satisfied with the way the plot renders.
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r}
+# Save 1 plot of your choice in a **jpeg** file.
+phisto <- ggplot(data=df_long, mapping=aes(x=value)) + geom_histogram()
+ggsave(filename="mygridarrange.jpeg", plot=phisto)
+# Save 3 plots of your choice in a **pdf** file (one plot per page).
+pbarplot <- ggplot(data=chickwts, mapping=aes(x=feed)) + geom_bar()
+pboxplot <- ggplot(data=CO2, mapping=aes(x=Treatment, y=uptake, fill=Type)) + geom_boxplot()
+pdf("my3ggplot2.pdf")
+phisto
+pbarplot
+pboxplot
+dev.off()
+# Organize the same 3 plots in 1 row / 3 columns.
+my3ggplots <- grid.arrange(phisto, pbarplot, pboxplot, nrow=1, ncol=3)
+ggsave(filename="my3ggplots.png", plot=my3ggplots, width=12)
+```
+
+</details>

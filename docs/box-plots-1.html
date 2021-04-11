@@ -279,7 +279,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.8.4" data-path="exercise-9-ggplot2.html"><a href="exercise-9-ggplot2.html#exercise-9d--histogram"><i class="fa fa-check"></i><b>16.8.4</b> Exercise 9d- Histogram</a></li>
 </ul></li>
 <li class="chapter" data-level="16.9" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>16.9</b> More about the theme() function</a></li>
-<li class="chapter" data-level="16.10" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> Volcano plots</a></li>
+<li class="chapter" data-level="16.10" data-path="demo-volcano-plots.html"><a href="demo-volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> demo: volcano plots</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>17</b> Regular expressions</a>
 <ul>
@@ -389,6 +389,10 @@ One row <strong>per observation/value</strong>.</p>
 <li>Split each boxplot per <strong>Type</strong>. <em>Use either the color or the fill argument</em>.</li>
 <li>Move the legend to the bottom of the plot. You can get help from <a href="http://www.sthda.com/english/wiki/ggplot2-legend-easy-steps-to-change-the-position-and-the-appearance-of-a-graph-legend-in-r-software">this page</a></li>
 </ul>
+<details>
+<summary>
+<em>Answer</em>
+</summary>
 <div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb355-1"><a href="box-plots-1.html#cb355-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a boxplot that represents the **uptake** for each **Treatment**.</span></span>
 <span id="cb355-2"><a href="box-plots-1.html#cb355-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>CO2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Treatment, <span class="at">y=</span>uptake)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span>
 <span id="cb355-3"><a href="box-plots-1.html#cb355-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Split each boxplot per **Type**.</span></span>
@@ -398,6 +402,7 @@ One row <strong>per observation/value</strong>.</p>
 <span id="cb355-7"><a href="box-plots-1.html#cb355-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>CO2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Treatment, <span class="at">y=</span>uptake, <span class="at">fill=</span>Type)) <span class="sc">+</span> </span>
 <span id="cb355-8"><a href="box-plots-1.html#cb355-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
 <span id="cb355-9"><a href="box-plots-1.html#cb355-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>)</span></code></pre></div>
+</details>
 </div>
             </section>
 

@@ -279,7 +279,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.8.4" data-path="exercise-9-ggplot2.html"><a href="exercise-9-ggplot2.html#exercise-9d--histogram"><i class="fa fa-check"></i><b>16.8.4</b> Exercise 9d- Histogram</a></li>
 </ul></li>
 <li class="chapter" data-level="16.9" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>16.9</b> More about the theme() function</a></li>
-<li class="chapter" data-level="16.10" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> Volcano plots</a></li>
+<li class="chapter" data-level="16.10" data-path="demo-volcano-plots.html"><a href="demo-volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> demo: volcano plots</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>17</b> Regular expressions</a>
 <ul>
@@ -363,7 +363,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Combine ggsave and grid.arrange:</p>
 <div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="saving-plots-in-files.html#cb385-1" aria-hidden="true" tabindex="-1"></a>myplots <span class="ot">&lt;-</span> <span class="fu">grid.arrange</span>(pscat, pbox_fill, pbar, phist, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">4</span>)</span>
 <span id="cb385-2"><a href="saving-plots-in-files.html#cb385-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb385-3"><a href="saving-plots-in-files.html#cb385-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;mygridarrange.png&quot;</span>, <span class="at">plot=</span>myplots)<span class="er">)</span></span></code></pre></div>
+<span id="cb385-3"><a href="saving-plots-in-files.html#cb385-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;mygridarrange.png&quot;</span>, <span class="at">plot=</span>myplots)</span></code></pre></div>
+<p><strong>HANDS-ON</strong> (same as for the “base” plots!)</p>
+<p>Go back to the previous plots you created (if you didn’t save commands in an R script, you can refer to the <em>History</em> tab in the top-right panel):</p>
+<ul>
+<li>Save 1 plot of your choice in a <strong>jpeg</strong> file.</li>
+<li>Save 3 plots of your choice in a <strong>pdf</strong> file (one plot per page).</li>
+<li>Organize the same 3 plots in 1 row / 3 columns. Save the image in a <strong>png</strong> file. Play with the <strong>width</strong> (and perhaps also <strong>height</strong>) argument of <code>png()</code> until you are satisfied with the way the plot renders.</li>
+</ul>
+<details>
+<summary>
+<em>Answer</em>
+</summary>
+<div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb386-1"><a href="saving-plots-in-files.html#cb386-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save 1 plot of your choice in a **jpeg** file.</span></span>
+<span id="cb386-2"><a href="saving-plots-in-files.html#cb386-2" aria-hidden="true" tabindex="-1"></a>phisto <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span>
+<span id="cb386-3"><a href="saving-plots-in-files.html#cb386-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;mygridarrange.jpeg&quot;</span>, <span class="at">plot=</span>phisto)</span>
+<span id="cb386-4"><a href="saving-plots-in-files.html#cb386-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Save 3 plots of your choice in a **pdf** file (one plot per page).</span></span>
+<span id="cb386-5"><a href="saving-plots-in-files.html#cb386-5" aria-hidden="true" tabindex="-1"></a>pbarplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>chickwts, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>feed)) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span>
+<span id="cb386-6"><a href="saving-plots-in-files.html#cb386-6" aria-hidden="true" tabindex="-1"></a>pboxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>CO2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Treatment, <span class="at">y=</span>uptake, <span class="at">fill=</span>Type)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span>
+<span id="cb386-7"><a href="saving-plots-in-files.html#cb386-7" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">&quot;my3ggplot2.pdf&quot;</span>)</span>
+<span id="cb386-8"><a href="saving-plots-in-files.html#cb386-8" aria-hidden="true" tabindex="-1"></a>phisto</span>
+<span id="cb386-9"><a href="saving-plots-in-files.html#cb386-9" aria-hidden="true" tabindex="-1"></a>pbarplot</span>
+<span id="cb386-10"><a href="saving-plots-in-files.html#cb386-10" aria-hidden="true" tabindex="-1"></a>pboxplot</span>
+<span id="cb386-11"><a href="saving-plots-in-files.html#cb386-11" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
+<span id="cb386-12"><a href="saving-plots-in-files.html#cb386-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Organize the same 3 plots in 1 row / 3 columns.</span></span>
+<span id="cb386-13"><a href="saving-plots-in-files.html#cb386-13" aria-hidden="true" tabindex="-1"></a>my3ggplots <span class="ot">&lt;-</span> <span class="fu">grid.arrange</span>(phisto, pbarplot, pboxplot, <span class="at">nrow=</span><span class="dv">1</span>, <span class="at">ncol=</span><span class="dv">3</span>)</span>
+<span id="cb386-14"><a href="saving-plots-in-files.html#cb386-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;my3ggplots.png&quot;</span>, <span class="at">plot=</span>my3ggplots, <span class="at">width=</span><span class="dv">12</span>)</span></code></pre></div>
+</details>
 
 </div>
             </section>

@@ -106,7 +106,7 @@ palette("default")
 
 The **datasets** package (included in the base installation of R) contains pre-made / built-in datasets. You can see them in *Environment* -> change *Global Environment* to *package:datasets*.
 <br>
-We will use data set **Loblolly** (growth of Loblolly pine trees):
+We will use data set **Loblolly** (growth of Loblolly pine trees): you can check `dim(Loblolly)`, `head(Loblolly)`:
 
 * Plot **age** (x-axis) versus **height** (y-axis).
 * Change the **title**.
@@ -120,12 +120,12 @@ We will use data set **Loblolly** (growth of Loblolly pine trees):
 </summary>
 
 ```{r, echo=T, eval=F}
-# Plot **age** (x-axis) versus **height** (y-axis).
+# Plot age (x-axis) versus height (y-axis).
 plot(x=Loblolly$age, y=Loblolly$height)
-# Change the **title**.
+# Change the title.
 plot(x=Loblolly$age, y=Loblolly$height,
      main="Age and weight of Loblolly pine trees")
-# Change the points type to a **full triangle**.
+# Change the points type to a full triangle.
 plot(x=Loblolly$age, y=Loblolly$height,
      main="Age and weight of Loblolly pine trees",
      pch=17)
@@ -155,9 +155,9 @@ You can look up for a way to do it, or look at one possibility in the answer bel
 </summary>
 
 ```{r, echo=T, eval=F}
-# Add an extra column named **colors** to Loblolly that contains, for example, only black values (store in new data frame Loblolly2).
+# Add an extra column named colors to Loblolly that contains, for example, only black values (store in new data frame Loblolly2).
 Loblolly2 <- cbind(Loblolly, colors="black")
-# Set column **colors** to "red" in the rows that correspond to age 10.
+# Set column colors to "red" in the rows that correspond to age 10.
 Loblolly2$colors[Loblolly2$age == 10] <- "red"
 # Set parameter `col` of `plot()` with `Loblolly2$colors`.
 plot(x=Loblolly2$age, y=Loblolly2$height, 

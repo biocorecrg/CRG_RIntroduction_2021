@@ -107,7 +107,7 @@ exercise-9b--box-plot
 exercise-9c--bar-plot
 exercise-9d--histogram
 more-about-the-theme-function
-volcano-plots
+demo-volcano-plots
 regular-expressions
 find-simple-matches-with-grep
 regular-expressions-to-find-more-flexible-patterns

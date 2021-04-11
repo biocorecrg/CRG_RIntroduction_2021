@@ -51,7 +51,7 @@ boxp + theme(legend.title=element_blank(),
   plot.background = element_rect(fill = "yellow"))
 ```
 
-## Volcano plots
+## demo: volcano plots
 
 A volcano plot is a type of scatter plot represents differential expression of features (genes for example): on the x-axis we typically find the fold change and on the y-axis the p-value.
 <br>

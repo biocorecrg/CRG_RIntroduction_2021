@@ -279,7 +279,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.8.4" data-path="exercise-9-ggplot2.html"><a href="exercise-9-ggplot2.html#exercise-9d--histogram"><i class="fa fa-check"></i><b>16.8.4</b> Exercise 9d- Histogram</a></li>
 </ul></li>
 <li class="chapter" data-level="16.9" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>16.9</b> More about the theme() function</a></li>
-<li class="chapter" data-level="16.10" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> Volcano plots</a></li>
+<li class="chapter" data-level="16.10" data-path="demo-volcano-plots.html"><a href="demo-volcano-plots.html"><i class="fa fa-check"></i><b>16.10</b> demo: volcano plots</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>17</b> Regular expressions</a>
 <ul>
@@ -323,33 +323,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Find a pattern anywhere in the string (outputs the index of the element):</li>
 </ul>
-<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb427-1"><a href="find-simple-matches-with-grep.html#cb427-1" aria-hidden="true" tabindex="-1"></a><span class="co"># By default, outputs the index of the element matching the pattern</span></span>
-<span id="cb427-2"><a href="find-simple-matches-with-grep.html#cb427-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;Gen&quot;</span>, </span>
-<span id="cb427-3"><a href="find-simple-matches-with-grep.html#cb427-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">&quot;Genomics&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="find-simple-matches-with-grep.html#cb428-1" aria-hidden="true" tabindex="-1"></a><span class="co"># By default, outputs the index of the element matching the pattern</span></span>
+<span id="cb428-2"><a href="find-simple-matches-with-grep.html#cb428-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;Gen&quot;</span>, </span>
+<span id="cb428-3"><a href="find-simple-matches-with-grep.html#cb428-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">&quot;Genomics&quot;</span>)</span></code></pre></div>
 <ul>
 <li>Show actual element where the pattern is found (instead of the index only) with <strong>value=TRUE</strong>:</li>
 </ul>
-<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="find-simple-matches-with-grep.html#cb428-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set value=TRUE</span></span>
-<span id="cb428-2"><a href="find-simple-matches-with-grep.html#cb428-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;Gen&quot;</span>,</span>
-<span id="cb428-3"><a href="find-simple-matches-with-grep.html#cb428-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span><span class="st">&quot;Genomics&quot;</span>,</span>
-<span id="cb428-4"><a href="find-simple-matches-with-grep.html#cb428-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb429-1"><a href="find-simple-matches-with-grep.html#cb429-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set value=TRUE</span></span>
+<span id="cb429-2"><a href="find-simple-matches-with-grep.html#cb429-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;Gen&quot;</span>,</span>
+<span id="cb429-3"><a href="find-simple-matches-with-grep.html#cb429-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span><span class="st">&quot;Genomics&quot;</span>,</span>
+<span id="cb429-4"><a href="find-simple-matches-with-grep.html#cb429-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">value=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <ul>
 <li>Non case-sensitive search with <strong>ignore.case=TRUE</strong>:</li>
 </ul>
-<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb429-1"><a href="find-simple-matches-with-grep.html#cb429-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enter the pattern in lower-case, but case is ignored</span></span>
-<span id="cb429-2"><a href="find-simple-matches-with-grep.html#cb429-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;gen&quot;</span>,</span>
-<span id="cb429-3"><a href="find-simple-matches-with-grep.html#cb429-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span><span class="st">&quot;Genomics&quot;</span>,</span>
-<span id="cb429-4"><a href="find-simple-matches-with-grep.html#cb429-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">value=</span><span class="cn">TRUE</span>,</span>
-<span id="cb429-5"><a href="find-simple-matches-with-grep.html#cb429-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ignore.case=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-<ul>
-<li>Show if it DOESN’T match the pattern with <strong>inv=TRUE</strong>:</li>
-</ul>
-<div class="sourceCode" id="cb430"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb430-1"><a href="find-simple-matches-with-grep.html#cb430-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Shows what doesn&#39;t match</span></span>
+<div class="sourceCode" id="cb430"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb430-1"><a href="find-simple-matches-with-grep.html#cb430-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enter the pattern in lower-case, but case is ignored</span></span>
 <span id="cb430-2"><a href="find-simple-matches-with-grep.html#cb430-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;gen&quot;</span>,</span>
 <span id="cb430-3"><a href="find-simple-matches-with-grep.html#cb430-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span><span class="st">&quot;Genomics&quot;</span>,</span>
 <span id="cb430-4"><a href="find-simple-matches-with-grep.html#cb430-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">value=</span><span class="cn">TRUE</span>,</span>
-<span id="cb430-5"><a href="find-simple-matches-with-grep.html#cb430-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ignore.case=</span><span class="cn">TRUE</span>,</span>
-<span id="cb430-6"><a href="find-simple-matches-with-grep.html#cb430-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">inv=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<span id="cb430-5"><a href="find-simple-matches-with-grep.html#cb430-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ignore.case=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<ul>
+<li>Show if it DOESN’T match the pattern with <strong>inv=TRUE</strong>:</li>
+</ul>
+<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb431-1"><a href="find-simple-matches-with-grep.html#cb431-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Shows what doesn&#39;t match</span></span>
+<span id="cb431-2"><a href="find-simple-matches-with-grep.html#cb431-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;gen&quot;</span>,</span>
+<span id="cb431-3"><a href="find-simple-matches-with-grep.html#cb431-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span><span class="st">&quot;Genomics&quot;</span>,</span>
+<span id="cb431-4"><a href="find-simple-matches-with-grep.html#cb431-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">value=</span><span class="cn">TRUE</span>,</span>
+<span id="cb431-5"><a href="find-simple-matches-with-grep.html#cb431-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ignore.case=</span><span class="cn">TRUE</span>,</span>
+<span id="cb431-6"><a href="find-simple-matches-with-grep.html#cb431-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">inv=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 </div>
             </section>
 
