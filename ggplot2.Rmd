@@ -62,7 +62,7 @@ ggplot(data=dataframe, mapping=aes(x=column1, y=column2)) + geom_point()
 df1 <- data.frame(sample1=rnorm(200), sample2=rnorm(200))
 
 # Plot !
-ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) + 
+ggplot(data=df1 , mapping=aes(x=sample1, y=sample2)) + 
 	geom_point()
 ```
 
@@ -78,14 +78,18 @@ ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) +
 	geom_vline(xintercept=0)
 ```
 
-Bookmark that [ggplot2 reference](https://ggplot2.tidyverse.org/reference/) and that good [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf) for some of the ggplot2 options.
+Bookmark this [ggplot2 reference](https://ggplot2.tidyverse.org/reference/) and the [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf) for some of the ggplot2 options.
 
-* You can save the plot in an object **at any time** and add layers to that object:
+* You can save the plot **in an object** at any time and add layers to that object:
 
 ```{r, eval=TRUE}
 # Save in an object
 p <- ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) +
 	geom_point()
+
+# Show p: write p in the console and ENTER
+p
+
 # Add layers to that object
 p + ggtitle(label="my first ggplot")
 ```
@@ -106,14 +110,47 @@ ggplot(data=df1 , mapping=aes(x=sample1, y=sample2)) +
 Color the points according to another column in the data frame:
 
 ```{r, eval=TRUE}
-# Build a data frame from df1: add a column with "yes" and "no"
-df2 <- data.frame(df1, grouping=rep(c("yes", "no"), c(80, 120)))
+# Build a new data frame df2 from df1: 
+  # add a column "grouping" containing "yes" and "no" values.
+df2 <- data.frame(df1, 
+                  grouping=rep(c("yes", "no"), c(80, 120)))
 
 # Plot and add the color parameter in the aes():
 pscat <- ggplot(data=df2, mapping=aes(x=sample1, y=sample2, color=grouping)) + 
   geom_point()
 pscat
 ```
+
+Note that the legend is automatically added to the plot!
+
+**HANDS-ON**
+
+We will now use the **rock** dataset from the `datasets` package. It contains the measurements on 48 rock samples from a petroleum reservoir.
+
+* Create a scatter plot of **area** versus **peri** (perimeter).
+* Color the points according to column **perm** of **rock**
+* Create a horizontal line representing the **median perimeter**.
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r}
+# Create a scatter plot of **area** versus **peri** (perimeter).
+ggplot(data=rock, mapping=aes(x=area, y=peri)) + geom_point()
+
+# Color the points according to column **perm** of **rock**
+ggplot(data=rock, mapping=aes(x=area, y=peri, color=perm)) + 
+    geom_point()
+
+# Create a horizontal line representing the **median perimeter**.
+ggplot(data=rock, mapping=aes(x=area, y=peri, color=perm)) + 
+    geom_point() + 
+    geom_hline(yintercept=median(rock$peri))
+```
+
+</details>
 
 ## Box plots
 
@@ -123,16 +160,17 @@ pscat
 ggplot(data=df2, mapping=aes(x="", y=sample1)) + geom_boxplot()
 ```
 
-* Split the data into 2 boxes:
+* Split the data into 2 boxes, depending on the **grouping** column:
 ```{r, eval=TRUE}
 ggplot(data=df2, mapping=aes(x=grouping, y=sample1)) + geom_boxplot()
 ```
 
 * What if you want to plot both sample1 and sample2 ?<br>
-*You need to convert into a **long** format*
+*You need to convert the data from a **wide** into a **long** format*
 <br>
 
-What is the **long** format ?
+What is the **long** format ?<br>
+One row **per observation/value**.
 
 <img src="images/plots/wide2long.png" width="800">
 
@@ -157,7 +195,7 @@ ggplot(data=df_long, mapping=aes(x=variable, y=value)) +
 ```
 
 * What if now you also want to see the distribution of "yes" and "no" in both sample1 and sample2 ?<br>
-*Integrate a parameter to the **aes()***
+*Integrate a parameter to the **aes()***: either *color* or *fill*.
 
 ```{r, eval=TRUE}
 # Either color (color of the box border)
@@ -188,6 +226,26 @@ pbox_col <- ggplot(data=df_long, mapping=aes(x=variable, y=value, color=grouping
         geom_boxplot() +
         scale_color_manual(values=c("slateblue2", "chocolate"))
 pbox_col
+```
+
+**HANDS-ON**
+
+Let's use the **CO2** dataset that represents the carbon dioxide uptake in grass plants:
+
+* Create a boxplot that represents the **uptake** for each **Treatment**.
+* Split each boxplot per **Type**. *Use either the color or the fill argument*.
+* Move the legend to the bottom of the plot. You can get help from [this page](http://www.sthda.com/english/wiki/ggplot2-legend-easy-steps-to-change-the-position-and-the-appearance-of-a-graph-legend-in-r-software)
+
+```{r}
+# Create a boxplot that represents the **uptake** for each **Treatment**.
+ggplot(data=CO2, mapping=aes(x=Treatment, y=uptake)) + geom_boxplot()
+# Split each boxplot per **Type**.
+ggplot(data=CO2, mapping=aes(x=Treatment, y=uptake, fill=Type)) + 
+    geom_boxplot()
+# Move the legend to the bottom of the plot.
+ggplot(data=CO2, mapping=aes(x=Treatment, y=uptake, fill=Type)) + 
+    geom_boxplot() +
+    theme(legend.position = "bottom")
 ```
 
 ## Bar plots
@@ -224,6 +282,32 @@ p4 <- p3 + scale_fill_manual(values=c("yellow", "cyan"))
 p4
 ```
 
+**HANDS-ON**
+
+Let's use the **chickwts** dataset again:
+
+* Create a barplot of the different **feed supplements**.
+* Change the orientation of the x-axis labels (Look it up in [this post](https://rstudio-pubs-static.s3.amazonaws.com/32217_6e2c396729704050972fb84f0d58ee22.html) ).
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r}
+# Create a barplot of the different **feed supplements**.
+ggplot(data=chickwts, mapping=aes(x=feed)) + 
+  geom_bar()
+
+# Change the orientation of the x-axis labels
+ggplot(data=chickwts, mapping=aes(x=feed)) + 
+  geom_bar() +
+  theme(axis.text.x=element_text(angle=45))
+```
+
+</details>
+  
+  
 ### Bar plots with error bars
 
 We can create error bars on barplots.
@@ -281,6 +365,29 @@ phist <- ggplot(data=df_long, mapping=aes(x=value, fill=variable)) +
 	geom_histogram(position='dodge')
 phist
 ```
+
+**HANDS-ON**
+
+Going back to the **rock** dataset:
+
+* Create a histogram of the rocks **perimeter**.
+* Add a density plot to the histogram, following instructions from [this post](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization#add-mean-line-and-density-plot-on-the-histogram)
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r}
+# Create a histogram of the rocks **perimeter**.
+ggplot(data=rock, mapping=aes(x=peri)) + geom_histogram()
+# Add a density plot to the histogram
+ggplot(data=rock, mapping=aes(x=peri)) + 
+    geom_histogram(aes(y=..density..)) +
+    geom_density(alpha=.2, fill="lightblue") 
+```
+
+</details>
 
 ## About themes
 

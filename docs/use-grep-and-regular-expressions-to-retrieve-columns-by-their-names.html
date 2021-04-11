@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-04-10" />
+<meta name="date" content="2021-04-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -321,21 +321,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names" class="section level2" number="17.5">
 <h2><span class="header-section-number">17.5</span> Use grep and regular expressions to retrieve columns by their names</h2>
 <p>Example of a data frame:</p>
-<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build data frame</span></span>
-<span id="cb433-2"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-2" aria-hidden="true" tabindex="-1"></a>df_regex <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">expression1=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, </span>
-<span id="cb433-3"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">expression2=</span><span class="dv">2</span><span class="sc">:</span><span class="dv">5</span>, </span>
-<span id="cb433-4"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">expression3=</span><span class="dv">4</span><span class="sc">:</span><span class="dv">7</span>, </span>
-<span id="cb433-5"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">annotation=</span>LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], </span>
-<span id="cb433-6"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">expression4=</span><span class="dv">6</span><span class="sc">:</span><span class="dv">3</span>, </span>
-<span id="cb433-7"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">average_expression=</span><span class="fu">c</span>(<span class="fl">3.25</span>, <span class="fl">3.75</span>, <span class="fl">4.25</span>, <span class="fl">4.75</span>),</span>
-<span id="cb433-8"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span>
-<span id="cb433-9"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb433-10"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Select column names that start with &quot;expression&quot;</span></span>
-<span id="cb433-11"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-11" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^expression&quot;</span>, </span>
-<span id="cb433-12"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="fu">colnames</span>(df_regex))</span>
-<span id="cb433-13"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb433-14"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Select columns from df_regex if their names start with &quot;expression&quot;</span></span>
-<span id="cb433-15"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb433-15" aria-hidden="true" tabindex="-1"></a>df_regex[, <span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^expression&quot;</span>, <span class="fu">colnames</span>(df_regex))]</span></code></pre></div>
+<div class="sourceCode" id="cb441"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb441-1"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build data frame</span></span>
+<span id="cb441-2"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-2" aria-hidden="true" tabindex="-1"></a>df_regex <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">expression1=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, </span>
+<span id="cb441-3"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">expression2=</span><span class="dv">2</span><span class="sc">:</span><span class="dv">5</span>, </span>
+<span id="cb441-4"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">expression3=</span><span class="dv">4</span><span class="sc">:</span><span class="dv">7</span>, </span>
+<span id="cb441-5"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">annotation=</span>LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], </span>
+<span id="cb441-6"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">expression4=</span><span class="dv">6</span><span class="sc">:</span><span class="dv">3</span>, </span>
+<span id="cb441-7"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">average_expression=</span><span class="fu">c</span>(<span class="fl">3.25</span>, <span class="fl">3.75</span>, <span class="fl">4.25</span>, <span class="fl">4.75</span>),</span>
+<span id="cb441-8"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span>
+<span id="cb441-9"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb441-10"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Select column names that start with &quot;expression&quot;</span></span>
+<span id="cb441-11"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-11" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^expression&quot;</span>, </span>
+<span id="cb441-12"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="fu">colnames</span>(df_regex))</span>
+<span id="cb441-13"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb441-14"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Select columns from df_regex if their names start with &quot;expression&quot;</span></span>
+<span id="cb441-15"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html#cb441-15" aria-hidden="true" tabindex="-1"></a>df_regex[, <span class="fu">grep</span>(<span class="at">pattern=</span><span class="st">&quot;^expression&quot;</span>, <span class="fu">colnames</span>(df_regex))]</span></code></pre></div>
 
 </div>
             </section>

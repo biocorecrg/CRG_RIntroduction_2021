@@ -13,7 +13,7 @@ pdf(file="myplot.pdf")
 # execute the plot
 plot(1:10)
 
-# Close the file that will contain the plot
+# Close and save the file that will contain the plot
 dev.off()
 ```
 
@@ -70,9 +70,11 @@ pdf(file="myfile_pages.pdf")
 dev.off()
 ```
 
+* If your file is empty: **run `dev.off()` once or more to make sure there is no devices/files still open!**.
+
 <h4>Plot several figures in one page</h4>
 
-You can output more than one plot per page using the **par()** function (sets graphical parameters) and the **mfrow** argument.
+You can output more than one plot per page using the **par()** function (`par()` sets graphical parameters) and the **mfrow** argument.
 
 ```{r}
 jpeg(file="myfile_multi.jpeg")
@@ -109,3 +111,48 @@ dev.off()
 ```
 
 <img src="images/plots/myfile_multi4.jpeg" width="500/" >
+
+**HANDS-ON**
+
+Go back to the previous plots you created (if you didn't save commands in an R script, you can refer to the *History* tab in the top-right panel):
+
+* Save 1 plot of your choice in a **jpeg** file.
+* Save 3 plots of your choice in a **pdf** file (one plot per page).
+* Organize the same 3 plots in 1 row / 3 columns. Save the image in a **png** file. Play with the **width** (and perhaps also **height**) argument of `png()` until you are satisfied with the way the plot renders.
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r}
+# Save 1 plot of your choice in a **jpeg** file.
+jpeg("myboxplot.jpeg")
+boxplot(chickwts$weight ~ chickwts$feed, las=2)
+dev.off()
+
+# Save 3 plots of your choice in a **pdf** file (one plot per page).
+pdf("my3plots.pdf")
+boxplot(chickwts$weight ~ chickwts$feed, las=2)
+barplot(table(chickwts$feed))
+plot(x=Loblolly$age, y=Loblolly$height,
+     main="Age and weight of Loblolly pine trees",
+     pch=17,
+     col="red",
+     cex=0.4)
+dev.off()
+
+# Organize the same 3 plots in 1 row / 3 columns. Save the image in a **png** file. 
+png("my3plots.png", width=1000, height=350)
+par(mfrow=c(1, 3))
+boxplot(chickwts$weight ~ chickwts$feed, las=2)
+barplot(table(chickwts$feed))
+plot(x=Loblolly$age, y=Loblolly$height,
+     main="Age and weight of Loblolly pine trees",
+     pch=17,
+     col="red",
+     cex=0.4)
+dev.off()
+```
+
+</details>

@@ -110,9 +110,9 @@ We will use data set **Loblolly** (growth of Loblolly pine trees):
 
 * Plot **age** (x-axis) versus **height** (y-axis).
 * Change the **title**.
-* Change the point types to a **full triangle** (see table of codes / shapes above).
-* Change the color of the points.
-* Change the size of the points to 0.4.
+* Change the points type to a **full triangle** (see table of codes / shapes above).
+* Change the points color to the color of your choice.
+* Change the points size to 0.4.
 
 <details>
 <summary>
@@ -125,16 +125,16 @@ plot(x=Loblolly$age, y=Loblolly$height)
 # Change the **title**.
 plot(x=Loblolly$age, y=Loblolly$height,
      main="Age and weight of Loblolly pine trees")
-# Change the point types to a **full triangle**.
+# Change the points type to a **full triangle**.
 plot(x=Loblolly$age, y=Loblolly$height,
      main="Age and weight of Loblolly pine trees",
      pch=17)
-# Change the color of the points.
+# Change the points color.
 plot(x=Loblolly$age, y=Loblolly$height,
      main="Age and weight of Loblolly pine trees",
      pch=17,
      col="red")
-# Change the size of the points to 0.4.
+# Change the points size to 0.4.
 plot(x=Loblolly$age, y=Loblolly$height,
      main="Age and weight of Loblolly pine trees",
      pch=17,
@@ -146,8 +146,8 @@ plot(x=Loblolly$age, y=Loblolly$height,
 
 EXTRA: you can change the color of the points depending on the value they represent. 
 <br>
-For example, let's say we want to color the **age 10 points in red** and the other ones in black. <br>
-You can look up for a way to do it, or look at one possibility here:
+For example, let's say we want to color the **"age 10" points in red** and the other ones in black. <br>
+You can look up for a way to do it, or look at one possibility in the answer below:
 
 <details>
 <summary>
@@ -207,7 +207,7 @@ barplot(height=mytable,
 By default, the bars are organized in alphabetical order. You can change it using an **ordered factor**.
 
 ```{r}
-# Create an ordered factor out of x
+# Create an ordered factor out of mycenter: the order in which you write the "levels" is the sort in which the bars will next be plotted
 xfact <- factor(x=mycenter, 
 	levels=c("PhDstudent", "Postdoc", "Technician", "PI"), 
 	ordered=TRUE)
@@ -224,10 +224,10 @@ barplot(height=xfacttable,
 
 <img src="images/plots/barplot3.png" width="450"/>
 
-* Let's make a stacked barplot :
+* We can also produce stacked barplot :
 
-```{r}
-# Create a matrix of number of type of employees per research program :
+```{r, eval=TRUE}
+# Create a matrix containing the number and type of employees per research program :
 barmat <- matrix(c(8, 10, 9, 2, 6, 4, 5, 3, 14, 13, 16, 4, 11, 10, 8, 5),
 	nrow=4,
 	dimnames=list(c("Technician", "PhDstudent", "PostDoc", "PI"), c("BG", "CDB", "GRSCC", "SB")))
@@ -246,14 +246,24 @@ mycolors <- sample(x=colors(),
                    size=4)
 
 # plot barplot
-# ylim sets the lower and upper limit of the y-axis: here it allows us to fit the legend !
+  # ylim sets the lower and upper limit of the y-axis: here it allows us to fit the legend !
+barplot(height=barmat, 
+	col=mycolors, 
+	ylim=c(0,50),
+	main="stacked barplot")
+```
+
+* Add a legend to the plot:
+  * "x" and "y" set the legend's position in the plotting area: you can specify the position as coordinates using "x" and "y".
+  * if "x" only is used, you can set the legend position as "topleft", "bottomleft", "topright", "bottomright"
+  * Note: `barplot()` (or any other plot function) has to be called **first**
+
+```{r, eval=TRUE}
 barplot(height=barmat, 
 	col=mycolors, 
 	ylim=c(0,50),
 	main="stacked barplot")
 
-# add a legend
-# first argument is the legend position
 legend(x="topleft", 
 	legend=c("Technician", "PhDstudent", "PostDoc", "PI"),
 	fill=mycolors)
@@ -261,8 +271,44 @@ legend(x="topleft",
 
 <img src="images/plots/barplot4.png" width="450"/>
 
+**HANDS-ON**
 
+The dataset **chickwts** is also a built-in dataset from the `datasets` package: the table measures and compares the effectiveness of various feed supplements on the growth rate of chickens.
 
+* Create a barplot of the different **feed supplements**.
+* Change the orientation of the x-axis labels.
+* Try to re-organize the bars by the increasing number of feed supplements.
+
+<details>
+<summary>
+*Answer*
+</summary>
+
+```{r, eval=F}
+# Create a barplot of the different **feed supplements**.
+tablefeed <- table(chickwts$feed)
+barplot(tablefeed)
+
+# Change the orientation of the x-axis labels.
+barplot(tablefeed, las=2)
+
+# Try to re-organize the bars by the increasing number of feed supplements.
+  # check tablefeed and write the feed categories in increasing order:
+feedfactor <- factor(x=chickwts$feed, levels=c("horsebean", "meatmeal", "casein", "linseed", "sunflower", "soybean"), 
+	ordered=TRUE))
+
+  # a less "manual" way to proceed: tablefeed (the output of table() ) is a NAMED vector: sort it and retrieve its names in sorted order
+sort(tablefeed)
+names(sort(tablefeed))
+feedfactor <- factor(x=chickwts$feed, 
+    levels=names(sort(tablefeed)),
+    ordered=TRUE)
+
+# plot sorted barplot
+barplot(table(feedfactor), las=2)
+```
+
+</details>
 
 ## Pie charts
 
@@ -340,20 +386,19 @@ abline(h=0, col="red", lwd=3, lty="dotdash")
 
 <img src="images/linetypes-in-r-line-types.png" width="250"/>
 
-Going back to our **Loblolly** data frame, we can create a boxplot of the **height (y-axis) for each age (x-axis)**: one box per age group.
+* We can also create a boxplot that plots **a variable against another variable**.
+For example, going back to our **Loblolly** data frame, we can create a boxplot of the **height (y-axis) for each age (x-axis)**: one box per age group. Instead of setting parameter **x** we set parameter **formula**, as follows:
 
-```{r}
-boxplot(x=Loblolly$height ~ Loblolly$age)
+```{r, eval=TRUE}
+boxplot(formula=Loblolly$height ~ Loblolly$age)
 ```
 
 **HANDS-ON**
 
-The dataset **chickwts** is also a built-in dataset from the `datasets` package: the table measures and compares the effectiveness of various feed supplements on the growth rate of chickens.
+Let's go back to our **chickwts** dataset:
 
-
-
-* Create a boxplot of the **weight** for each type of **feed** supplement.
-* Create again the boxplot, but remove the **sunflower** and **casein** types of feed supplement (if you are creating a new data frame, call it **chickwts2**.
+* Create a boxplot that represents the chicken **weight** for each type of **feed** supplement.
+* Create again the boxplot, but without the **sunflower** and **casein** types of feed supplement (you can create a new data frame called **chickwts2**).
   * *NOTE*: you still see the groups you removed (while there is no data -> no boxes): this is because column `feed` is made of **factors**. Factors retain the original **levels** (groups) even when no data is left for those groups. You can run: `chickwts2$feed <- droplevels(chickwts2$feed)` to "drop" the levels that do not have values left, and plot again.
 * Change the boxes' colors.
 * Add a legend on the top-left corner of the plot, and remove the x-axis labels.
@@ -362,7 +407,6 @@ The dataset **chickwts** is also a built-in dataset from the `datasets` package:
 <summary>
 *Answer*
 </summary>
-
 
 ```{r, eval=F, echo=T}
 # boxplot of weight / feed supplement

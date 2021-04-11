@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-04-10" />
+<meta name="date" content="2021-04-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -476,9 +476,9 @@ We will use data set <strong>Loblolly</strong> (growth of Loblolly pine trees):<
 <ul>
 <li>Plot <strong>age</strong> (x-axis) versus <strong>height</strong> (y-axis).</li>
 <li>Change the <strong>title</strong>.</li>
-<li>Change the point types to a <strong>full triangle</strong> (see table of codes / shapes above).</li>
-<li>Change the color of the points.</li>
-<li>Change the size of the points to 0.4.</li>
+<li>Change the points type to a <strong>full triangle</strong> (see table of codes / shapes above).</li>
+<li>Change the points color to the color of your choice.</li>
+<li>Change the points size to 0.4.</li>
 </ul>
 <details>
 <summary>
@@ -489,16 +489,16 @@ We will use data set <strong>Loblolly</strong> (growth of Loblolly pine trees):<
 <span id="cb285-3"><a href="scatter-plots.html#cb285-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the **title**.</span></span>
 <span id="cb285-4"><a href="scatter-plots.html#cb285-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>Loblolly<span class="sc">$</span>age, <span class="at">y=</span>Loblolly<span class="sc">$</span>height,</span>
 <span id="cb285-5"><a href="scatter-plots.html#cb285-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Age and weight of Loblolly pine trees&quot;</span>)</span>
-<span id="cb285-6"><a href="scatter-plots.html#cb285-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the point types to a **full triangle**.</span></span>
+<span id="cb285-6"><a href="scatter-plots.html#cb285-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the points type to a **full triangle**.</span></span>
 <span id="cb285-7"><a href="scatter-plots.html#cb285-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>Loblolly<span class="sc">$</span>age, <span class="at">y=</span>Loblolly<span class="sc">$</span>height,</span>
 <span id="cb285-8"><a href="scatter-plots.html#cb285-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Age and weight of Loblolly pine trees&quot;</span>,</span>
 <span id="cb285-9"><a href="scatter-plots.html#cb285-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">17</span>)</span>
-<span id="cb285-10"><a href="scatter-plots.html#cb285-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the color of the points.</span></span>
+<span id="cb285-10"><a href="scatter-plots.html#cb285-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the points color.</span></span>
 <span id="cb285-11"><a href="scatter-plots.html#cb285-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>Loblolly<span class="sc">$</span>age, <span class="at">y=</span>Loblolly<span class="sc">$</span>height,</span>
 <span id="cb285-12"><a href="scatter-plots.html#cb285-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Age and weight of Loblolly pine trees&quot;</span>,</span>
 <span id="cb285-13"><a href="scatter-plots.html#cb285-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">17</span>,</span>
 <span id="cb285-14"><a href="scatter-plots.html#cb285-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span>
-<span id="cb285-15"><a href="scatter-plots.html#cb285-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the size of the points to 0.4.</span></span>
+<span id="cb285-15"><a href="scatter-plots.html#cb285-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the points size to 0.4.</span></span>
 <span id="cb285-16"><a href="scatter-plots.html#cb285-16" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>Loblolly<span class="sc">$</span>age, <span class="at">y=</span>Loblolly<span class="sc">$</span>height,</span>
 <span id="cb285-17"><a href="scatter-plots.html#cb285-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Age and weight of Loblolly pine trees&quot;</span>,</span>
 <span id="cb285-18"><a href="scatter-plots.html#cb285-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">17</span>,</span>
@@ -507,8 +507,8 @@ We will use data set <strong>Loblolly</strong> (growth of Loblolly pine trees):<
 </details>
 <p>EXTRA: you can change the color of the points depending on the value they represent.
 <br>
-For example, let’s say we want to color the <strong>age 10 points in red</strong> and the other ones in black. <br>
-You can look up for a way to do it, or look at one possibility here:</p>
+For example, let’s say we want to color the <strong>“age 10” points in red</strong> and the other ones in black. <br>
+You can look up for a way to do it, or look at one possibility in the answer below:</p>
 <details>
 <summary>
 <em>Answer</em>
