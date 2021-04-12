@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-04-11" />
+<meta name="date" content="2021-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -321,23 +321,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="histograms-1" class="section level2" number="16.5">
 <h2><span class="header-section-number">16.5</span> Histograms</h2>
 <p>Simple histogram on one sample (using the df2 data frame):</p>
-<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="histograms-1.html#cb365-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-272-1.png" width="672" /></p>
-<p>Histogram on more samples (using df_long):</p>
-<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="histograms-1.html#cb367-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="histograms-1.html#cb366-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-273-1.png" width="672" /></p>
-<p>Split the data per sample (“variable” column that represents here the samples):</p>
-<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="histograms-1.html#cb369-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<p>Histogram on more samples (using df_long):</p>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="histograms-1.html#cb368-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-274-1.png" width="672" /></p>
-<p>By default, the histograms are <strong>stacked</strong>: change to position <strong>dodge</strong> (side by side):</p>
-<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="histograms-1.html#cb371-1" aria-hidden="true" tabindex="-1"></a>phist <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
-<span id="cb371-2"><a href="histograms-1.html#cb371-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">position=</span><span class="st">&#39;dodge&#39;</span>)</span>
-<span id="cb371-3"><a href="histograms-1.html#cb371-3" aria-hidden="true" tabindex="-1"></a>phist</span></code></pre></div>
+<p>Split the data per sample (“variable” column that represents here the samples):</p>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="histograms-1.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-275-1.png" width="672" /></p>
+<p>By default, the histograms are <strong>stacked</strong>: change to position <strong>dodge</strong> (side by side):</p>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="histograms-1.html#cb372-1" aria-hidden="true" tabindex="-1"></a>phist <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_long, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>variable)) <span class="sc">+</span> </span>
+<span id="cb372-2"><a href="histograms-1.html#cb372-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">position=</span><span class="st">&#39;dodge&#39;</span>)</span>
+<span id="cb372-3"><a href="histograms-1.html#cb372-3" aria-hidden="true" tabindex="-1"></a>phist</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-276-1.png" width="672" /></p>
 <p><strong>HANDS-ON</strong></p>
 <p>Going back to the <strong>rock</strong> dataset:</p>
 <ul>
@@ -348,12 +348,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="histograms-1.html#cb373-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a histogram of the rocks **perimeter**.</span></span>
-<span id="cb373-2"><a href="histograms-1.html#cb373-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rock, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>peri)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span>
-<span id="cb373-3"><a href="histograms-1.html#cb373-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a density plot to the histogram</span></span>
-<span id="cb373-4"><a href="histograms-1.html#cb373-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rock, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>peri)) <span class="sc">+</span> </span>
-<span id="cb373-5"><a href="histograms-1.html#cb373-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y=</span>..density..)) <span class="sc">+</span></span>
-<span id="cb373-6"><a href="histograms-1.html#cb373-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_density</span>(<span class="at">alpha=</span>.<span class="dv">2</span>, <span class="at">fill=</span><span class="st">&quot;lightblue&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="histograms-1.html#cb374-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a histogram of the rocks **perimeter**.</span></span>
+<span id="cb374-2"><a href="histograms-1.html#cb374-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rock, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>peri)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span>
+<span id="cb374-3"><a href="histograms-1.html#cb374-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a density plot to the histogram</span></span>
+<span id="cb374-4"><a href="histograms-1.html#cb374-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rock, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>peri)) <span class="sc">+</span> </span>
+<span id="cb374-5"><a href="histograms-1.html#cb374-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y=</span>..density..)) <span class="sc">+</span></span>
+<span id="cb374-6"><a href="histograms-1.html#cb374-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_density</span>(<span class="at">alpha=</span>.<span class="dv">2</span>, <span class="at">fill=</span><span class="st">&quot;lightblue&quot;</span>) </span></code></pre></div>
 </details>
 </div>
             </section>

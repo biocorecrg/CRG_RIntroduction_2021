@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-04-11" />
+<meta name="date" content="2021-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -326,11 +326,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb457"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb457-1"><a href="exercise-11-if-statement.html#cb457-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb457-2"><a href="exercise-11-if-statement.html#cb457-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/ExtraModule&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb458-1"><a href="exercise-11-if-statement.html#cb458-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb458-2"><a href="exercise-11-if-statement.html#cb458-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/Rcourse/ExtraModule&quot;</span>)</span></code></pre></div>
 </details>
 <p><strong>1- Create vector vec2 as:</strong></p>
-<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb458-1"><a href="exercise-11-if-statement.html#cb458-1" aria-hidden="true" tabindex="-1"></a>vec2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb459"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb459-1"><a href="exercise-11-if-statement.html#cb459-1" aria-hidden="true" tabindex="-1"></a>vec2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;kiwi&quot;</span>, <span class="st">&quot;apple&quot;</span>, <span class="st">&quot;pear&quot;</span>, <span class="st">&quot;grape&quot;</span>)</span></code></pre></div>
 <ul>
 <li>Use an <strong>if</strong> statement and the <strong>%in%</strong> function to check whether “apple” is present in vec2 (in such case print “there is an apple!”)</li>
 </ul>
@@ -338,9 +338,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb459"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb459-1"><a href="exercise-11-if-statement.html#cb459-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="st">&quot;apple&quot;</span> <span class="sc">%in%</span> vec2){</span>
-<span id="cb459-2"><a href="exercise-11-if-statement.html#cb459-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;there is an apple there&quot;</span>)</span>
-<span id="cb459-3"><a href="exercise-11-if-statement.html#cb459-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb460"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb460-1"><a href="exercise-11-if-statement.html#cb460-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="st">&quot;apple&quot;</span> <span class="sc">%in%</span> vec2){</span>
+<span id="cb460-2"><a href="exercise-11-if-statement.html#cb460-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;there is an apple there&quot;</span>)</span>
+<span id="cb460-3"><a href="exercise-11-if-statement.html#cb460-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <ul>
 <li>Use an <strong>if</strong> statement and the <strong>%in%</strong> function to check whether “grapefruit” is present in vec2: if “grapefruit” is not found, test whether “pear” is found (using <strong>else if</strong>).</li>
@@ -349,28 +349,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb460"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb460-1"><a href="exercise-11-if-statement.html#cb460-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="sc">%in%</span> vec2){</span>
-<span id="cb460-2"><a href="exercise-11-if-statement.html#cb460-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</span>
-<span id="cb460-3"><a href="exercise-11-if-statement.html#cb460-3" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="sc">%in%</span> vec2){</span>
-<span id="cb460-4"><a href="exercise-11-if-statement.html#cb460-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</span>
-<span id="cb460-5"><a href="exercise-11-if-statement.html#cb460-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb461-1"><a href="exercise-11-if-statement.html#cb461-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="sc">%in%</span> vec2){</span>
+<span id="cb461-2"><a href="exercise-11-if-statement.html#cb461-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</span>
+<span id="cb461-3"><a href="exercise-11-if-statement.html#cb461-3" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="sc">%in%</span> vec2){</span>
+<span id="cb461-4"><a href="exercise-11-if-statement.html#cb461-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</span>
+<span id="cb461-5"><a href="exercise-11-if-statement.html#cb461-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 <ul>
 <li>Add an <strong>else</strong> section in case neither grapefruit nor pear is found in vec2.<br>
 Test your <strong>if</strong> statement also on <strong>vec3</strong>:</li>
 </ul>
-<div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb461-1"><a href="exercise-11-if-statement.html#cb461-1" aria-hidden="true" tabindex="-1"></a>vec3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;strawberry&quot;</span>, <span class="st">&quot;blueberry&quot;</span>, <span class="st">&quot;peach&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb462"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb462-1"><a href="exercise-11-if-statement.html#cb462-1" aria-hidden="true" tabindex="-1"></a>vec3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;cherry&quot;</span>, <span class="st">&quot;strawberry&quot;</span>, <span class="st">&quot;blueberry&quot;</span>, <span class="st">&quot;peach&quot;</span>)</span></code></pre></div>
 <details>
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb462"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb462-1"><a href="exercise-11-if-statement.html#cb462-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="sc">%in%</span> vec2){</span>
-<span id="cb462-2"><a href="exercise-11-if-statement.html#cb462-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</span>
-<span id="cb462-3"><a href="exercise-11-if-statement.html#cb462-3" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="sc">%in%</span> vec2){</span>
-<span id="cb462-4"><a href="exercise-11-if-statement.html#cb462-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</span>
-<span id="cb462-5"><a href="exercise-11-if-statement.html#cb462-5" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb462-6"><a href="exercise-11-if-statement.html#cb462-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;no grapefruit and no pear can be found&quot;</span>)</span>
-<span id="cb462-7"><a href="exercise-11-if-statement.html#cb462-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb463"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb463-1"><a href="exercise-11-if-statement.html#cb463-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="st">&quot;grapefruit&quot;</span> <span class="sc">%in%</span> vec2){</span>
+<span id="cb463-2"><a href="exercise-11-if-statement.html#cb463-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;there is a grapefruit here&quot;</span>)</span>
+<span id="cb463-3"><a href="exercise-11-if-statement.html#cb463-3" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span>(<span class="st">&quot;pear&quot;</span> <span class="sc">%in%</span> vec2){</span>
+<span id="cb463-4"><a href="exercise-11-if-statement.html#cb463-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;there is no grapefruit here, but there is a pear!&quot;</span>)</span>
+<span id="cb463-5"><a href="exercise-11-if-statement.html#cb463-5" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb463-6"><a href="exercise-11-if-statement.html#cb463-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;no grapefruit and no pear can be found&quot;</span>)</span>
+<span id="cb463-7"><a href="exercise-11-if-statement.html#cb463-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </details>
 
 </div>

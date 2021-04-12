@@ -14,15 +14,14 @@ R-base package graphics offers functions for producing many plots, for example:
 
 * Simple scatter plot
 
-```{r}
+```{r, eval=T}
 # Create 2 vectors
 dat1 <- 1:10
-dat2 <- x^2
+dat2 <- dat1^2
 
 # Plot x against y
 plot(x=dat1, y=dat2)
 ```
-<img src="images/plots/scatter1.png" width="450"/>
 
 *Notes*:
 
@@ -34,8 +33,9 @@ plot(x=dat1, y=dat2)
 	* pch: type of point
 	* type: "l" for line, "p" for point, "b" for both point and line
 	* main: title of the plot
+	* cex: size of points (default: 1)
 
-```{r}
+```{r, eval=T}
 plot(x=dat1, y=dat2, 
 	col="red", 
 	pch=2, 
@@ -43,11 +43,9 @@ plot(x=dat1, y=dat2,
 	main="a pretty scatter plot")
 ```
 
-<img src="images/plots/scatter2.png" width="450"/>
-
 * You can play a bit:
 
-```{r}
+```{r, eval=T}
 plot(x=dat1, y=dat2, 
 	col=1:10, 
 	pch=1:10, 
@@ -55,7 +53,6 @@ plot(x=dat1, y=dat2,
 	type="b", 
 	main="an even prettier scatter plot")
 ```
-<img src="images/plots/scatter3.png" width="450"/>
 
 <h4>Different type of points that you can use:</h4>
 
@@ -65,18 +62,18 @@ plot(x=dat1, y=dat2,
 
 * Color codes 1 to 8 are taken from the **palette()** function and respectively code for: 
 
-```{r, echo=FALSE, eval=TRUE}
-knitr::kable(
-  data.frame(code=1:8, color=c("black", "red", "green3", "blue", "cyan", "magenta", "yellow", "gray")), caption = 'default palette()',
-  format = "html", table.attr = "style='width:30%;'"
-)
-```
-
-
 ```{r}
 # see the 8-color palette:
 palette()
 ```
+
+```{r, echo=FALSE, eval=TRUE}
+knitr::kable(
+  data.frame(code=1:8, color=palette()), caption = 'default palette()',
+  format = "html", table.attr = "style='width:30%;'"
+)
+```
+
 
 * There is a larger set of build-in colors that you can use:
 
@@ -96,7 +93,7 @@ You can also find them [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.
 palette(grep(pattern="blue", x=colors(), value=TRUE))
 ```
 
-* change the palette back to default
+* change the palette back to default:
 
 ```{r}
 palette("default")
@@ -174,7 +171,7 @@ col=Loblolly2$colors)
 
 * A simple bar plot :
 
-```{r}
+```{r, eval=TRUE}
 # Create a vector
 mycenter <- rep(x=c("PhDstudent", "Postdoc", "Technician", "PI"), 
                 times=c(8,10,5,2))
@@ -186,27 +183,27 @@ mytable <- table(mycenter)
 barplot(height=mytable)
 ```
 
-<img src="images/plots/barplot1.png" width="450"/>
-
 * Customize a bit :
-	* col : color
-	* main : title of the plot
-	* las : orientation of x-axis labels: "2": perpendicular to axis
+  * col : color
+  * main : title of the plot
+  * las : orientation of axis labels: 
+    * 0: all labels parallel to axis
+    * 1: x-axis labels parallel / y-axis labels perpendicular
+    * 2: both labels perpendicular
+    * 3: x-axis labels perpendicular / y-axis labels parallel
 
-```{r}
+```{r, eval=T}
 barplot(height=mytable,
 	col=1:4,
 	main="bar plot",
 	las=2)
 ```
 
-<img src="images/plots/barplot2.png" width="450"/>
-
 * Customize the ordering of the bars :
 
 By default, the bars are organized in alphabetical order. You can change it using an **ordered factor**.
 
-```{r}
+```{r, eval=T}
 # Create an ordered factor out of mycenter: the order in which you write the "levels" is the sort in which the bars will next be plotted
 xfact <- factor(x=mycenter, 
 	levels=c("PhDstudent", "Postdoc", "Technician", "PI"), 
@@ -221,8 +218,6 @@ barplot(height=xfacttable,
         main="reorganized bar plot",
         las=2)
 ```
-
-<img src="images/plots/barplot3.png" width="450"/>
 
 * We can also produce stacked barplot :
 
@@ -239,7 +234,7 @@ barplot(height=barmat,
 
 * Add some parameters:
 
-```{r}
+```{r, eval=T}
 # set a random color vector
   # add set.seed(38) (or any other number) to reproduce the randomization.
 mycolors <- sample(x=colors(), 
@@ -269,7 +264,13 @@ legend(x="topleft",
 	fill=mycolors)
 ```
 
-<img src="images/plots/barplot4.png" width="450"/>
+A more automated way to do this:
+
+```{r, eval=F}
+legend(x="topleft", 
+	legend=rownames(barmat),
+	fill=mycolors)
+```
 
 **HANDS-ON**
 
@@ -337,7 +338,7 @@ pie(mytable,
 
 * A simple boxplot:
 
-```{r}
+```{r, eval=T}
 # Create a matrix of 1000 random values from the normal distribution (4 columns, 250 rows)
 mat1000 <- matrix(rnorm(1000), 
                   ncol=4)
@@ -346,21 +347,17 @@ mat1000 <- matrix(rnorm(1000),
 boxplot(x=mat1000)
 ```
 
-<img src="images/plots/boxplot1.png" width="450"/>
-
 * Add some arguments :
 	* xlab: x-axis label
 	* ylab: y-axis label
 	* at: position of each box along the x-axis: here we skip position 3 to allow more space between boxes 1/2 and 3/4
 
-```{r}
+```{r, eval=T}
 boxplot(x=mat1000, 
 	xlab="sample",
 	ylab="expression",
 	at=c(1, 2, 4, 5))
 ```
-
-<img src="images/plots/boxplot2.png" width="450"/>
 
 * Add an horizontal line at y=0 with **abline()**; arguments of abline :
 	* h : y-axis starting point of horizontal line (v for a vertical line)
@@ -368,7 +365,9 @@ boxplot(x=mat1000,
 	* lwd : line thickness
 	* lty : line type
 
-```{r}
+*NOTE*: you can create a vertical line with `abline(v=...)` (**v** insteald of **h**)
+
+```{r, eval=T}
 # First plot the box plot as before:
 boxplot(x=mat1000, 
 	xlab="sample",
@@ -379,8 +378,6 @@ boxplot(x=mat1000,
 # Then run the abline function
 abline(h=0, col="red", lwd=3, lty="dotdash")
 ```
-
-<img src="images/plots/boxplot3.png" width="450"/>
 
 * Line types in R:
 
@@ -412,20 +409,22 @@ Let's go back to our **chickwts** dataset:
 # boxplot of weight / feed supplement
 boxplot(chickwts$weight ~ chickwts$feed)
 # remove sunflower and casein 
-chickwts2 <- chickwts[chickwts$feed != "sunflower" & chickwts != "casein", ]
+chickwts2 <- chickwts[chickwts$feed != "sunflower" & chickwts$feed != "casein", ]
+boxplot(chickwts2$weight ~ chickwts2$feed)
 # drop "levels" from column "feed" containing factors
 chickwts2$feed <- droplevels(chickwts2$feed)
-# plot again
+# plot again after dropping the levels
 boxplot(chickwts2$weight ~ chickwts2$feed)
 # change colors: create a vector
-boxcols <- c("lightgreen", "purple", "maroon", "lightblue", "grey65")
-# boxplot with colors
+boxcols <- c("lightgreen", "purple", "maroon", "lightblue")
+# boxplot with colors (xaxt will remove the x-axis information)
 boxplot(chickwts2$weight ~ chickwts2$feed,
-  col=boxcols)
+  col=boxcols, xaxt="n")
 # add a legend
 legend("topleft", 
-        legend=c("Technician", "PhDstudent", "PostDoc", "PI"), 
-        fill=boxcols)
+        legend=names(table(chickwts2$feed)), 
+        fill=boxcols,
+        )
 ```
 
 </details>
@@ -437,7 +436,7 @@ legend("topleft",
 
 * A simple histogram
 
-```{r}
+```{r, eval=T}
 # Vector of 200 random values from the normal distribution
 hist200 <- rnorm(200)
 
@@ -445,15 +444,13 @@ hist200 <- rnorm(200)
 hist(x=hist200)
 ```
 
-<img src="images/plots/histogram1.png" width="450"/>
-
 * Add parameters:
 	* border: color of bar borders
 	* breaks: number of bars the data is divided into
 	* cex.main: size of title
 	* cex.lab: size of axis labels
 
-```{r}
+```{r, eval=TRUE}
 hist(x=hist200,
 	border="blue",
 	breaks=50,
@@ -462,6 +459,4 @@ hist(x=hist200,
 	cex.main=2.5,
 	cex.lab=2)
 ```
-
-<img src="images/plots/histogram2.png" width="450"/>
 

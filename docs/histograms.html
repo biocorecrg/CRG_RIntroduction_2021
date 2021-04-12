@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-04-11" />
+<meta name="date" content="2021-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -324,12 +324,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>A simple histogram</li>
 </ul>
-<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="histograms.html#cb300-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector of 200 random values from the normal distribution</span></span>
-<span id="cb300-2"><a href="histograms.html#cb300-2" aria-hidden="true" tabindex="-1"></a>hist200 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">200</span>)</span>
-<span id="cb300-3"><a href="histograms.html#cb300-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb300-4"><a href="histograms.html#cb300-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot histogram</span></span>
-<span id="cb300-5"><a href="histograms.html#cb300-5" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="at">x=</span>hist200)</span></code></pre></div>
-<p><img src="images/plots/histogram1.png" width="450"/></p>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="histograms.html#cb301-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector of 200 random values from the normal distribution</span></span>
+<span id="cb301-2"><a href="histograms.html#cb301-2" aria-hidden="true" tabindex="-1"></a>hist200 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">200</span>)</span>
+<span id="cb301-3"><a href="histograms.html#cb301-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb301-4"><a href="histograms.html#cb301-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot histogram</span></span>
+<span id="cb301-5"><a href="histograms.html#cb301-5" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="at">x=</span>hist200)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-214-1.png" width="672" /></p>
 <ul>
 <li>Add parameters:
 <ul>
@@ -339,14 +339,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>cex.lab: size of axis labels</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="histograms.html#cb301-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="at">x=</span>hist200,</span>
-<span id="cb301-2"><a href="histograms.html#cb301-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">border=</span><span class="st">&quot;blue&quot;</span>,</span>
-<span id="cb301-3"><a href="histograms.html#cb301-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="dv">50</span>,</span>
-<span id="cb301-4"><a href="histograms.html#cb301-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;Histogram&quot;</span>,</span>
-<span id="cb301-5"><a href="histograms.html#cb301-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;&quot;</span>,</span>
-<span id="cb301-6"><a href="histograms.html#cb301-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex.main=</span><span class="fl">2.5</span>,</span>
-<span id="cb301-7"><a href="histograms.html#cb301-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex.lab=</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="images/plots/histogram2.png" width="450"/></p>
+<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="histograms.html#cb302-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="at">x=</span>hist200,</span>
+<span id="cb302-2"><a href="histograms.html#cb302-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">border=</span><span class="st">&quot;blue&quot;</span>,</span>
+<span id="cb302-3"><a href="histograms.html#cb302-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="dv">50</span>,</span>
+<span id="cb302-4"><a href="histograms.html#cb302-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">main=</span><span class="st">&quot;Histogram&quot;</span>,</span>
+<span id="cb302-5"><a href="histograms.html#cb302-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;&quot;</span>,</span>
+<span id="cb302-6"><a href="histograms.html#cb302-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex.main=</span><span class="fl">2.5</span>,</span>
+<span id="cb302-7"><a href="histograms.html#cb302-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">cex.lab=</span><span class="dv">2</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-215-1.png" width="672" /></p>
 
 </div>
 <!-- </div> -->

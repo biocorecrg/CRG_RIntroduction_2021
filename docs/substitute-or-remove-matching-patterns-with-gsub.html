@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-04-11" />
+<meta name="date" content="2021-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -324,21 +324,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Remove the “@” symbol and the email provider from each address</li>
 </ul>
-<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb436-1"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb436-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;@[a-z.]+&quot;</span>,</span>
-<span id="cb436-2"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb436-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement=</span><span class="st">&quot;&quot;</span>,</span>
-<span id="cb436-3"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb436-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad)</span></code></pre></div>
+<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb437-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;@[a-z.]+&quot;</span>,</span>
+<span id="cb437-2"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb437-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement=</span><span class="st">&quot;&quot;</span>,</span>
+<span id="cb437-3"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb437-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad)</span></code></pre></div>
 <ul>
 <li>Substitute the “@” symbol with “<em>at</em>”</li>
 </ul>
-<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb437-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;@&quot;</span>,</span>
-<span id="cb437-2"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb437-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement=</span><span class="st">&quot;_at_&quot;</span>,</span>
-<span id="cb437-3"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb437-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad)</span></code></pre></div>
+<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb438-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;@&quot;</span>,</span>
+<span id="cb438-2"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb438-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement=</span><span class="st">&quot;_at_&quot;</span>,</span>
+<span id="cb438-3"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb438-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">x=</span>vec_ad)</span></code></pre></div>
 <ul>
 <li>Substitute “es” and “it” by “eu”</li>
 </ul>
-<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb438-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;es$|it$&quot;</span>, </span>
-<span id="cb438-2"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb438-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">replacement=</span><span class="st">&quot;eu&quot;</span>, </span>
-<span id="cb438-3"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb438-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span>vec_ad)</span></code></pre></div>
+<div class="sourceCode" id="cb439"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb439-1"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb439-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="at">pattern=</span><span class="st">&quot;es$|it$&quot;</span>, </span>
+<span id="cb439-2"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb439-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">replacement=</span><span class="st">&quot;eu&quot;</span>, </span>
+<span id="cb439-3"><a href="substitute-or-remove-matching-patterns-with-gsub.html#cb439-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span>vec_ad)</span></code></pre></div>
 </div>
             </section>
 

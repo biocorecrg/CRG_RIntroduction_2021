@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-04-11" />
+<meta name="date" content="2021-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -323,57 +323,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A heatmap is a graphical representation of data where the values are represented with <strong>colors</strong>.
 <br>
 The <strong>heatmap.2</strong> function from the <strong>gplots</strong> package allows to produce highly customizable heatmaps.</p>
-<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb328-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install pheatmap package</span></span>
-<span id="cb328-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb328-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.package</span>(<span class="st">&quot;pheatmap&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install pheatmap package</span></span>
+<span id="cb329-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.package</span>(<span class="st">&quot;pheatmap&quot;</span>)</span></code></pre></div>
 <p>Get started:</p>
-<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package</span></span>
-<span id="cb329-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span>
-<span id="cb329-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb329-4"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create matrix</span></span>
-<span id="cb329-5"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-5" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1200</span>), <span class="at">ncol=</span><span class="dv">6</span>)</span>
-<span id="cb329-6"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb329-7"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-7" aria-hidden="true" tabindex="-1"></a><span class="co"># heatmap with the defaults parameters</span></span>
-<span id="cb329-8"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-8" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat)</span>
-<span id="cb329-9"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb329-10"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-10" aria-hidden="true" tabindex="-1"></a><span class="co"># add a title</span></span>
-<span id="cb329-11"><a href="pheatmap-function-from-the-pheatmap-package.html#cb329-11" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, <span class="at">main=</span><span class="st">&quot;My pretty heatmap&quot;</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-242-1.png" width="672" /><img src="r-intro-crg_files/figure-html/unnamed-chunk-242-2.png" width="672" /></p>
-<p>Change the color palette / gradient</p>
-<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-1" aria-hidden="true" tabindex="-1"></a><span class="co"># with &quot;rainbow&quot; colors</span></span>
-<span id="cb330-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, </span>
-<span id="cb330-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">color=</span><span class="fu">rainbow</span>(<span class="dv">50</span>))</span>
-<span id="cb330-4"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb330-5"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-5" aria-hidden="true" tabindex="-1"></a><span class="co"># with blue to red (middle color white)</span></span>
-<span id="cb330-6"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-6" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, </span>
-<span id="cb330-7"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">color=</span><span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">&quot;navy&quot;</span>, <span class="st">&quot;white&quot;</span>, <span class="st">&quot;red&quot;</span>))(<span class="dv">50</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package</span></span>
+<span id="cb330-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span>
+<span id="cb330-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb330-4"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create matrix</span></span>
+<span id="cb330-5"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-5" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1200</span>), <span class="at">ncol=</span><span class="dv">6</span>)</span>
+<span id="cb330-6"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb330-7"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-7" aria-hidden="true" tabindex="-1"></a><span class="co"># heatmap with the defaults parameters</span></span>
+<span id="cb330-8"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-8" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat)</span>
+<span id="cb330-9"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb330-10"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-10" aria-hidden="true" tabindex="-1"></a><span class="co"># add a title</span></span>
+<span id="cb330-11"><a href="pheatmap-function-from-the-pheatmap-package.html#cb330-11" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, <span class="at">main=</span><span class="st">&quot;My pretty heatmap&quot;</span>)</span></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-243-1.png" width="672" /><img src="r-intro-crg_files/figure-html/unnamed-chunk-243-2.png" width="672" /></p>
-<p>Do not cluster rows or columns</p>
-<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remove the clustering by rows</span></span>
+<p>Change the color palette / gradient</p>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-1" aria-hidden="true" tabindex="-1"></a><span class="co"># with &quot;rainbow&quot; colors</span></span>
 <span id="cb331-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, </span>
-<span id="cb331-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span><span class="cn">FALSE</span>)</span>
+<span id="cb331-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">color=</span><span class="fu">rainbow</span>(<span class="dv">50</span>))</span>
 <span id="cb331-4"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb331-5"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-5" aria-hidden="true" tabindex="-1"></a><span class="co"># remove the clustering by columns</span></span>
+<span id="cb331-5"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-5" aria-hidden="true" tabindex="-1"></a><span class="co"># with blue to red (middle color white)</span></span>
 <span id="cb331-6"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-6" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, </span>
-<span id="cb331-7"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<span id="cb331-7"><a href="pheatmap-function-from-the-pheatmap-package.html#cb331-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">color=</span><span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">&quot;navy&quot;</span>, <span class="st">&quot;white&quot;</span>, <span class="st">&quot;red&quot;</span>))(<span class="dv">50</span>))</span></code></pre></div>
 <p><img src="r-intro-crg_files/figure-html/unnamed-chunk-244-1.png" width="672" /><img src="r-intro-crg_files/figure-html/unnamed-chunk-244-2.png" width="672" /></p>
-<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb332-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remove both clusterings</span></span>
+<p>Do not cluster rows or columns</p>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb332-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remove the clustering by rows</span></span>
 <span id="cb332-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, </span>
-<span id="cb332-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span><span class="cn">FALSE</span>, </span>
-<span id="cb332-4"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-244-3.png" width="672" /></p>
+<span id="cb332-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span><span class="cn">FALSE</span>)</span>
+<span id="cb332-4"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb332-5"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-5" aria-hidden="true" tabindex="-1"></a><span class="co"># remove the clustering by columns</span></span>
+<span id="cb332-6"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-6" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, </span>
+<span id="cb332-7"><a href="pheatmap-function-from-the-pheatmap-package.html#cb332-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-245-1.png" width="672" /><img src="r-intro-crg_files/figure-html/unnamed-chunk-245-2.png" width="672" /></p>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb333-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remove both clusterings</span></span>
+<span id="cb333-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, </span>
+<span id="cb333-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_rows=</span><span class="cn">FALSE</span>, </span>
+<span id="cb333-4"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">cluster_cols=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-245-3.png" width="672" /></p>
 <p>Add some <strong>annotation colored bar(s)</strong>:</p>
-<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb333-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add column names to mat</span></span>
-<span id="cb333-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Sample&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>)</span>
-<span id="cb333-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb333-4"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create data frame for annotation (in the case of samples, information about the experiment, for example)</span></span>
-<span id="cb333-5"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-5" aria-hidden="true" tabindex="-1"></a>annot_cols <span class="ot">=</span> <span class="fu">data.frame</span>(</span>
-<span id="cb333-6"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">Group =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;WT&quot;</span>, <span class="dv">3</span>), <span class="fu">rep</span>(<span class="st">&quot;KO&quot;</span>, <span class="dv">3</span>)), </span>
-<span id="cb333-7"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">TimePoint =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">10</span>), <span class="at">each=</span><span class="dv">2</span>),</span>
-<span id="cb333-8"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-8" aria-hidden="true" tabindex="-1"></a>                    <span class="at">row.names =</span> <span class="fu">colnames</span>(mat)</span>
-<span id="cb333-9"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-9" aria-hidden="true" tabindex="-1"></a>                )</span>
-<span id="cb333-10"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-10" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
-<span id="cb333-11"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-11" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, </span>
-<span id="cb333-12"><a href="pheatmap-function-from-the-pheatmap-package.html#cb333-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">annotation_col =</span> annot_cols)</span></code></pre></div>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb334-1"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add column names to mat</span></span>
+<span id="cb334-2"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mat) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Sample&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>)</span>
+<span id="cb334-3"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb334-4"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create data frame for annotation (in the case of samples, information about the experiment, for example)</span></span>
+<span id="cb334-5"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-5" aria-hidden="true" tabindex="-1"></a>annot_cols <span class="ot">=</span> <span class="fu">data.frame</span>(</span>
+<span id="cb334-6"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">Group =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;WT&quot;</span>, <span class="dv">3</span>), <span class="fu">rep</span>(<span class="st">&quot;KO&quot;</span>, <span class="dv">3</span>)), </span>
+<span id="cb334-7"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">TimePoint =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">10</span>), <span class="at">each=</span><span class="dv">2</span>),</span>
+<span id="cb334-8"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-8" aria-hidden="true" tabindex="-1"></a>                    <span class="at">row.names =</span> <span class="fu">colnames</span>(mat)</span>
+<span id="cb334-9"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-9" aria-hidden="true" tabindex="-1"></a>                )</span>
+<span id="cb334-10"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-10" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
+<span id="cb334-11"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-11" aria-hidden="true" tabindex="-1"></a><span class="fu">pheatmap</span>(mat, </span>
+<span id="cb334-12"><a href="pheatmap-function-from-the-pheatmap-package.html#cb334-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">annotation_col =</span> annot_cols)</span></code></pre></div>
 </div>
             </section>
 

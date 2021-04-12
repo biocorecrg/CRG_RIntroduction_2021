@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2021-04-11" />
+<meta name="date" content="2021-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -324,13 +324,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>A simple boxplot:</li>
 </ul>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="box-plots.html#cb295-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix of 1000 random values from the normal distribution (4 columns, 250 rows)</span></span>
-<span id="cb295-2"><a href="box-plots.html#cb295-2" aria-hidden="true" tabindex="-1"></a>mat1000 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), </span>
-<span id="cb295-3"><a href="box-plots.html#cb295-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ncol=</span><span class="dv">4</span>)</span>
-<span id="cb295-4"><a href="box-plots.html#cb295-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb295-5"><a href="box-plots.html#cb295-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic boxplot</span></span>
-<span id="cb295-6"><a href="box-plots.html#cb295-6" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="at">x=</span>mat1000)</span></code></pre></div>
-<p><img src="images/plots/boxplot1.png" width="450"/></p>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="box-plots.html#cb296-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix of 1000 random values from the normal distribution (4 columns, 250 rows)</span></span>
+<span id="cb296-2"><a href="box-plots.html#cb296-2" aria-hidden="true" tabindex="-1"></a>mat1000 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), </span>
+<span id="cb296-3"><a href="box-plots.html#cb296-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ncol=</span><span class="dv">4</span>)</span>
+<span id="cb296-4"><a href="box-plots.html#cb296-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb296-5"><a href="box-plots.html#cb296-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic boxplot</span></span>
+<span id="cb296-6"><a href="box-plots.html#cb296-6" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="at">x=</span>mat1000)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-209-1.png" width="672" /></p>
 <ul>
 <li>Add some arguments :
 <ul>
@@ -339,11 +339,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>at: position of each box along the x-axis: here we skip position 3 to allow more space between boxes 1/2 and 3/4</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="box-plots.html#cb296-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="at">x=</span>mat1000, </span>
-<span id="cb296-2"><a href="box-plots.html#cb296-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;sample&quot;</span>,</span>
-<span id="cb296-3"><a href="box-plots.html#cb296-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;expression&quot;</span>,</span>
-<span id="cb296-4"><a href="box-plots.html#cb296-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code></pre></div>
-<p><img src="images/plots/boxplot2.png" width="450"/></p>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="box-plots.html#cb297-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="at">x=</span>mat1000, </span>
+<span id="cb297-2"><a href="box-plots.html#cb297-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;sample&quot;</span>,</span>
+<span id="cb297-3"><a href="box-plots.html#cb297-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;expression&quot;</span>,</span>
+<span id="cb297-4"><a href="box-plots.html#cb297-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-210-1.png" width="672" /></p>
 <ul>
 <li>Add an horizontal line at y=0 with <strong>abline()</strong>; arguments of abline :
 <ul>
@@ -353,16 +353,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>lty : line type</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="box-plots.html#cb297-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First plot the box plot as before:</span></span>
-<span id="cb297-2"><a href="box-plots.html#cb297-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="at">x=</span>mat1000, </span>
-<span id="cb297-3"><a href="box-plots.html#cb297-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;sample&quot;</span>,</span>
-<span id="cb297-4"><a href="box-plots.html#cb297-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;expression&quot;</span>,</span>
-<span id="cb297-5"><a href="box-plots.html#cb297-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
-<span id="cb297-6"><a href="box-plots.html#cb297-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;my boxplot&quot;</span>)</span>
-<span id="cb297-7"><a href="box-plots.html#cb297-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb297-8"><a href="box-plots.html#cb297-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Then run the abline function</span></span>
-<span id="cb297-9"><a href="box-plots.html#cb297-9" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>, <span class="at">col=</span><span class="st">&quot;red&quot;</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="st">&quot;dotdash&quot;</span>)</span></code></pre></div>
-<p><img src="images/plots/boxplot3.png" width="450"/></p>
+<p><em>NOTE</em>: you can create a vertical line with <code>abline(v=...)</code> (<strong>v</strong> insteald of <strong>h</strong>)</p>
+<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="box-plots.html#cb298-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First plot the box plot as before:</span></span>
+<span id="cb298-2"><a href="box-plots.html#cb298-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="at">x=</span>mat1000, </span>
+<span id="cb298-3"><a href="box-plots.html#cb298-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab=</span><span class="st">&quot;sample&quot;</span>,</span>
+<span id="cb298-4"><a href="box-plots.html#cb298-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab=</span><span class="st">&quot;expression&quot;</span>,</span>
+<span id="cb298-5"><a href="box-plots.html#cb298-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb298-6"><a href="box-plots.html#cb298-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;my boxplot&quot;</span>)</span>
+<span id="cb298-7"><a href="box-plots.html#cb298-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb298-8"><a href="box-plots.html#cb298-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Then run the abline function</span></span>
+<span id="cb298-9"><a href="box-plots.html#cb298-9" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>, <span class="at">col=</span><span class="st">&quot;red&quot;</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="st">&quot;dotdash&quot;</span>)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-211-1.png" width="672" /></p>
 <ul>
 <li>Line types in R:</li>
 </ul>
@@ -371,8 +372,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>We can also create a boxplot that plots <strong>a variable against another variable</strong>.
 For example, going back to our <strong>Loblolly</strong> data frame, we can create a boxplot of the <strong>height (y-axis) for each age (x-axis)</strong>: one box per age group. Instead of setting parameter <strong>x</strong> we set parameter <strong>formula</strong>, as follows:</li>
 </ul>
-<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="box-plots.html#cb298-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="at">formula=</span>Loblolly<span class="sc">$</span>height <span class="sc">~</span> Loblolly<span class="sc">$</span>age)</span></code></pre></div>
-<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-211-1.png" width="672" /></p>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="box-plots.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="at">formula=</span>Loblolly<span class="sc">$</span>height <span class="sc">~</span> Loblolly<span class="sc">$</span>age)</span></code></pre></div>
+<p><img src="r-intro-crg_files/figure-html/unnamed-chunk-212-1.png" width="672" /></p>
 <p><strong>HANDS-ON</strong></p>
 <p>Let’s go back to our <strong>chickwts</strong> dataset:</p>
 <ul>
@@ -388,23 +389,25 @@ For example, going back to our <strong>Loblolly</strong> data frame, we can crea
 <summary>
 <em>Answer</em>
 </summary>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="box-plots.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="co"># boxplot of weight / feed supplement</span></span>
-<span id="cb299-2"><a href="box-plots.html#cb299-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(chickwts<span class="sc">$</span>weight <span class="sc">~</span> chickwts<span class="sc">$</span>feed)</span>
-<span id="cb299-3"><a href="box-plots.html#cb299-3" aria-hidden="true" tabindex="-1"></a><span class="co"># remove sunflower and casein </span></span>
-<span id="cb299-4"><a href="box-plots.html#cb299-4" aria-hidden="true" tabindex="-1"></a>chickwts2 <span class="ot">&lt;-</span> chickwts[chickwts<span class="sc">$</span>feed <span class="sc">!=</span> <span class="st">&quot;sunflower&quot;</span> <span class="sc">&amp;</span> chickwts <span class="sc">!=</span> <span class="st">&quot;casein&quot;</span>, ]</span>
-<span id="cb299-5"><a href="box-plots.html#cb299-5" aria-hidden="true" tabindex="-1"></a><span class="co"># drop &quot;levels&quot; from column &quot;feed&quot; containing factors</span></span>
-<span id="cb299-6"><a href="box-plots.html#cb299-6" aria-hidden="true" tabindex="-1"></a>chickwts2<span class="sc">$</span>feed <span class="ot">&lt;-</span> <span class="fu">droplevels</span>(chickwts2<span class="sc">$</span>feed)</span>
-<span id="cb299-7"><a href="box-plots.html#cb299-7" aria-hidden="true" tabindex="-1"></a><span class="co"># plot again</span></span>
-<span id="cb299-8"><a href="box-plots.html#cb299-8" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(chickwts2<span class="sc">$</span>weight <span class="sc">~</span> chickwts2<span class="sc">$</span>feed)</span>
-<span id="cb299-9"><a href="box-plots.html#cb299-9" aria-hidden="true" tabindex="-1"></a><span class="co"># change colors: create a vector</span></span>
-<span id="cb299-10"><a href="box-plots.html#cb299-10" aria-hidden="true" tabindex="-1"></a>boxcols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;purple&quot;</span>, <span class="st">&quot;maroon&quot;</span>, <span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;grey65&quot;</span>)</span>
-<span id="cb299-11"><a href="box-plots.html#cb299-11" aria-hidden="true" tabindex="-1"></a><span class="co"># boxplot with colors</span></span>
-<span id="cb299-12"><a href="box-plots.html#cb299-12" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(chickwts2<span class="sc">$</span>weight <span class="sc">~</span> chickwts2<span class="sc">$</span>feed,</span>
-<span id="cb299-13"><a href="box-plots.html#cb299-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span>boxcols)</span>
-<span id="cb299-14"><a href="box-plots.html#cb299-14" aria-hidden="true" tabindex="-1"></a><span class="co"># add a legend</span></span>
-<span id="cb299-15"><a href="box-plots.html#cb299-15" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topleft&quot;</span>, </span>
-<span id="cb299-16"><a href="box-plots.html#cb299-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Technician&quot;</span>, <span class="st">&quot;PhDstudent&quot;</span>, <span class="st">&quot;PostDoc&quot;</span>, <span class="st">&quot;PI&quot;</span>), </span>
-<span id="cb299-17"><a href="box-plots.html#cb299-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">fill=</span>boxcols)</span></code></pre></div>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="box-plots.html#cb300-1" aria-hidden="true" tabindex="-1"></a><span class="co"># boxplot of weight / feed supplement</span></span>
+<span id="cb300-2"><a href="box-plots.html#cb300-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(chickwts<span class="sc">$</span>weight <span class="sc">~</span> chickwts<span class="sc">$</span>feed)</span>
+<span id="cb300-3"><a href="box-plots.html#cb300-3" aria-hidden="true" tabindex="-1"></a><span class="co"># remove sunflower and casein </span></span>
+<span id="cb300-4"><a href="box-plots.html#cb300-4" aria-hidden="true" tabindex="-1"></a>chickwts2 <span class="ot">&lt;-</span> chickwts[chickwts<span class="sc">$</span>feed <span class="sc">!=</span> <span class="st">&quot;sunflower&quot;</span> <span class="sc">&amp;</span> chickwts<span class="sc">$</span>feed <span class="sc">!=</span> <span class="st">&quot;casein&quot;</span>, ]</span>
+<span id="cb300-5"><a href="box-plots.html#cb300-5" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(chickwts2<span class="sc">$</span>weight <span class="sc">~</span> chickwts2<span class="sc">$</span>feed)</span>
+<span id="cb300-6"><a href="box-plots.html#cb300-6" aria-hidden="true" tabindex="-1"></a><span class="co"># drop &quot;levels&quot; from column &quot;feed&quot; containing factors</span></span>
+<span id="cb300-7"><a href="box-plots.html#cb300-7" aria-hidden="true" tabindex="-1"></a>chickwts2<span class="sc">$</span>feed <span class="ot">&lt;-</span> <span class="fu">droplevels</span>(chickwts2<span class="sc">$</span>feed)</span>
+<span id="cb300-8"><a href="box-plots.html#cb300-8" aria-hidden="true" tabindex="-1"></a><span class="co"># plot again after dropping the levels</span></span>
+<span id="cb300-9"><a href="box-plots.html#cb300-9" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(chickwts2<span class="sc">$</span>weight <span class="sc">~</span> chickwts2<span class="sc">$</span>feed)</span>
+<span id="cb300-10"><a href="box-plots.html#cb300-10" aria-hidden="true" tabindex="-1"></a><span class="co"># change colors: create a vector</span></span>
+<span id="cb300-11"><a href="box-plots.html#cb300-11" aria-hidden="true" tabindex="-1"></a>boxcols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;lightgreen&quot;</span>, <span class="st">&quot;purple&quot;</span>, <span class="st">&quot;maroon&quot;</span>, <span class="st">&quot;lightblue&quot;</span>)</span>
+<span id="cb300-12"><a href="box-plots.html#cb300-12" aria-hidden="true" tabindex="-1"></a><span class="co"># boxplot with colors (xaxt will remove the x-axis information)</span></span>
+<span id="cb300-13"><a href="box-plots.html#cb300-13" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(chickwts2<span class="sc">$</span>weight <span class="sc">~</span> chickwts2<span class="sc">$</span>feed,</span>
+<span id="cb300-14"><a href="box-plots.html#cb300-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span>boxcols, <span class="at">xaxt=</span><span class="st">&quot;n&quot;</span>)</span>
+<span id="cb300-15"><a href="box-plots.html#cb300-15" aria-hidden="true" tabindex="-1"></a><span class="co"># add a legend</span></span>
+<span id="cb300-16"><a href="box-plots.html#cb300-16" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topleft&quot;</span>, </span>
+<span id="cb300-17"><a href="box-plots.html#cb300-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend=</span><span class="fu">names</span>(<span class="fu">table</span>(chickwts2<span class="sc">$</span>feed)), </span>
+<span id="cb300-18"><a href="box-plots.html#cb300-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">fill=</span>boxcols,</span>
+<span id="cb300-19"><a href="box-plots.html#cb300-19" aria-hidden="true" tabindex="-1"></a>        )</span></code></pre></div>
 </details>
 </div>
             </section>
